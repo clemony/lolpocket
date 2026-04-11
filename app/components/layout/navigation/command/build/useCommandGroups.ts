@@ -1,4 +1,5 @@
 import type { CommandPaletteGroup, CommandPaletteItem } from "@nuxt/ui"
+import type { AcceptableValue } from "reka-ui"
 import type { RouteRecordNormalized } from "vue-router"
 import { externalResources } from "~/domain/lp/external/externalResources"
 import ChampionCommand from "../reference-cards/ChampionCommand.vue"
@@ -13,8 +14,8 @@ interface CommandReturn {
 }
 
 export interface CommandItem extends Omit<CommandPaletteItem, "children"> {
-  value: string | number
-  id?: string | number
+  value: AcceptableValue
+  id?: string
   order?: number
   highlight?: boolean
   trailingIcon?: string
@@ -92,9 +93,8 @@ export const pageCommands = (
       order:
         typeof record.meta?.order === "number" ? record.meta.order : undefined,
       ui: {
+        label: "capitalize",
         leadingIcon: asString(record.meta?.class),
-        item: "h-9",
-        label: "font-medium text-sm capitalize ",
         prefix: "after:pl-1.5 after:pr-1 after:content-['›']",
         trailingIcon: hasChildren ? "" : "size-3.5! inline align-top"
       },
@@ -126,9 +126,7 @@ export function buildCommandGroups(
       label: "Nexus",
       description:
         "A one stop shop for the latest League news and your own data highlights",
-      items: pageItems
-        ?.find((r) => String(r.id) === "/nexus")
-        ?.flatMap((r: CommandItem) => r.children) as CommandItem[]
+      items: pageItems?.find((r) => String(r.id) === "/nexus")?.children
     },
     {
       id: "tools",
@@ -136,20 +134,18 @@ export function buildCommandGroups(
       label: "Tools",
       description:
         "Lolpocket utilities great to have handy. Share a pocket card or theorycraft.",
-      items: pageItems
-        ?.find((r) => String(r.id) === "/tools")
-        ?.flatMap((r: CommandItem) => r.children) as CommandItem[]
+      items: pageItems?.find((r) => String(r.id) === "/tools")?.children
     },
     {
       id: "backpack",
-      value: "Backpack",
+      value: "Backpack-command",
       label: "Backpack",
       description: "Hold your pockets.",
       items: pageItems?.find((r) => String(r.id) === "/backpack")?.children
     },
     {
       id: "library",
-      value: "Library",
+      value: "Library-command",
       label: "Library",
       description: "Browse and filter complete data.",
 
@@ -165,44 +161,46 @@ export function buildCommandGroups(
     },
     {
       id: "reference",
-      value: "reference-label",
+      value: "reference-command",
       label: "Reference",
       description: "Quick, detailed, information cards right in your navbar.",
 
       items: referenceItems?.value
     },
     {
-      value: "help-label",
+      value: "help-command",
       id: "help",
-      label: "Help and Resources",
+      label: "Help & Resources",
       description:
         "Find answers, research external data, and customize your lolpocket.",
+
       items: [
-        ...pageItems?.filter((i) =>
-          ["/docs", "/settings"].includes(String(i?.value))
-        ),
         {
-          value: "External Resources",
-          id: "External Resources",
+          ...pageItems?.find((r) => String(r.id) === "/docs") //?.children
+        },
+        {
+          ...pageItems?.find((r) => String(r.id) === "/settings") //?.children
+        },
+        {
+          value: "External-command",
+          id: "external",
           label: "Resources",
-          slot: "external",
           description: "Other external tools worthy of your backpack.",
-          class: "before:hidden pb-2",
           trailingIcon: "i-right",
           icon: "i-external",
           children: [
             ...externalResources.map((r) => ({
               ...r,
+              id: r?.label,
               value: r?.label,
               target: "_blank",
               external: true,
               onSelect: options.onNavigate,
-              itemTrailingIcon: "i-external",
-              slot: "link"
+              itemTrailingIcon: "i-external"
             }))
           ]
         }
-      ]
+      ] as CommandItem[]
     }
   ])
 
@@ -259,7 +257,7 @@ export function isActive(item: BaseItem) {
 }
 
 export function itemKey(item: CommandItem) {
-  return String(item.id ?? item.value ?? item.label)
+  return String(item?.id ?? item?.value ?? item?.label)
 }
 
 export function itemSuffix(item: CommandItem | null | undefined) {
@@ -267,7 +265,7 @@ export function itemSuffix(item: CommandItem | null | undefined) {
     return ""
   }
 
-  return item.suffix.replace(LEADING_DASH_RE, "")
+  return item.suffix?.replace(LEADING_DASH_RE, "")
 }
 
 export function itemTrailingIcon(item: CommandItem) {

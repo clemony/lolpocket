@@ -14,10 +14,12 @@ export const avatarTheme = defineUiTheme({
         root: "size-4 text-[8px]"
       },
       "2xs": {
-        root: "size-5 text-[10px]"
+        root: "size-5 text-[10px]",
+        icon: "size-3.25"
       },
       xs: {
-        root: "size-6 text-xs"
+        root: "size-6 text-xs",
+        icon: "size-4"
       },
       sm: {
         root: "size-7 text-sm"

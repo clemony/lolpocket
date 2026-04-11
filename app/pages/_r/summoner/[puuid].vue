@@ -4,7 +4,7 @@ import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 definePageMeta({
   name: "summoner",
   layout: false,
-  search: false,
+  search: false
 })
 
 const route = useRoute()
@@ -15,7 +15,7 @@ if (!puuid) {
 }
 
 try {
-  const store = sSummoner()
+  const store = summonerStore()
   let summoner = store.resolveByPuuid(puuid)
 
   // If cached identity is incomplete, force-refresh before redirecting.

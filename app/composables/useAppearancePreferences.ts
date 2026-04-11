@@ -1,21 +1,20 @@
+import { getEmptyAccount, getEmptySettings } from "#shared/schema"
 import type { AccountData, Settings } from "#shared/types"
-import { colorModes } from "#layers/ui/app/config/colorMode"
-import type { ThemeAccent } from "#layers/ui/app/config/themeAccent"
+import type { ThemeAccent } from "~/components/user/settings/theme/themeAccent"
 import {
   defaultThemeAccent,
   normalizeThemeAccent
-} from "#layers/ui/app/config/themeAccent"
-import { getEmptyAccount, getEmptySettings } from "#shared/schema"
+} from "~/components/user/settings/theme/themeAccent"
+import { colorModes } from "~/components/user/settings/theme/themeBase"
 import { accountUpdate } from "~/composables/account/accountUpdate"
 
 export function normalizeThemePreference(value?: string) {
   return colorModes.includes(value ?? "") ? value! : "system"
 }
-
 export function useSystemThemeValue() {
   const preferred = usePreferredColorScheme()
 
-  return computed(() => preferred.value === "dark" ? "dark" : "light")
+  return computed(() => (preferred.value === "dark" ? "dark" : "light"))
 }
 
 function ensureUserSettings() {
@@ -30,7 +29,7 @@ function ensureUserAccount() {
 
 export function useThemePreference() {
   const colorMode = useColorMode()
-
+  /*
   return computed({
     get: () =>
       normalizeThemePreference(user().settings?.theme ?? colorMode.preference),
@@ -41,7 +40,7 @@ export function useThemePreference() {
       settings.theme = preference
       colorMode.preference = preference
     }
-  })
+  }) */
 }
 
 export function useThemeAccentPreference() {
@@ -51,8 +50,7 @@ export function useThemeAccentPreference() {
       const accent = normalizeThemeAccent(value ?? defaultThemeAccent)
       const account = ensureUserAccount()
 
-      if (account.color === accent)
-        return
+      if (account.color === accent) return
 
       account.color = accent
 

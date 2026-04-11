@@ -25,9 +25,13 @@ const groupMap = computed(() => safeObject(props.groups))
 const route = useRoute()
 const routeComponent = computed(() => route.matched[0]?.meta?.command ?? null)
 
-const nexusGroup = computed(() => groupMap.value.nexus)
-const toolsGroup = computed(() => groupMap.value.tools)
-const helpGroup = computed(() => groupMap.value.help)
+const nexusToolsGroup = computed(() => [
+  groupMap.value.nexus,
+  groupMap.value.tools
+])
+
+const helpGroup = computed(() => safeObject(groupMap.value.help))
+
 const referenceGroup = computed(() => ({
   library: groupMap.value.library,
   reference: groupMap.value.reference
@@ -97,9 +101,11 @@ function goBack() {
           <component :is="routeComponent" @update:open="closeMenu" />
         </div>
 
-        <CommandGroup v-if="nexusGroup?.items" :items="nexusGroup" />
-
-        <CommandGroup v-if="toolsGroup?.items" :items="toolsGroup" />
+        <div class="w-full px-3">
+          <template v-for="(item, i) in nexusToolsGroup" :key="i">
+            <CommandGroup v-if="item" :items="item" class="border-y-0" />
+          </template>
+        </div>
         <ReferenceCommand
           v-if="referenceGroup.library || referenceGroup.reference"
           :groups="referenceGroup"
@@ -109,39 +115,17 @@ function goBack() {
           <UUser
             size="xl"
             :ui="{
-              root: cn('ml-1.25 py-2', helpGroup?.description ? 'mb-1' : ''),
+              root: cn('ml-1.25 py-2', helpGroup.description ? 'mb-1' : ''),
               name: 'mb-1',
               wrapper: 'pr-6'
             }"
-            :name="helpGroup?.label"
-            :description="helpGroup?.description ?? undefined" />
-          <UCollapsible
-            v-for="(item, i) in helpGroup?.items"
+            :name="helpGroup.label"
+            :description="helpGroup.description ?? undefined" />
+
+          <CommandCollapse
+            v-for="(group, i) in helpGroup.items"
             :key="i"
-            :ui="{
-              root: 'h-max w-full origin-bottom',
-              content:
-                'relative ml-4 max-w-full origin-bottom! overflow-x-hidden py-1 pr-8 pl-3 before:absolute before:left-0 before:my-auto before:h-[calc(100%-10px)] before:w-px before:border-l before:border-l-p3'
-            }">
-            <template #default="{ open }">
-              <CommandButton
-                :key="itemKey(item)"
-                :variant="open ? 'solid' : 'ghost'"
-                :color="open ? 'neutral' : 'primary'"
-                :ui="{
-                  trailingIcon:
-                    'transition-rotate -scale-x-100 duration-200 **:stroke-[2.4] group-open/collapse:-rotate-90'
-                }"
-                block
-                :item="item" />
-            </template>
-            <template #content>
-              <CommandButton
-                v-for="link in item.children"
-                :key="itemKey(link)"
-                :item="link" />
-            </template>
-          </UCollapsible>
+            :group />
         </div>
       </div>
     </template>
@@ -187,7 +171,8 @@ function goBack() {
             v-for="item in activeListItems"
             :key="itemKey(item)"
             :item
-            @update:open="(item) => openItem(item)" />
+            :value="item.value"
+            @update:open="(item) => openItem(item as CommandItem)" />
         </div>
       </div>
     </template>

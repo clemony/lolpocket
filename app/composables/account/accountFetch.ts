@@ -1,11 +1,14 @@
 import type { AccountData, Settings } from "#shared/types"
 //
 import { getEmptyAccount, getEmptySettings } from "#shared/schema"
+import { getSummonerIcon } from "~/domain/utils/img"
 import { sendErrorToast } from "~/utils/ui/toasts"
 
 export async function accountFetch() {
   const progress = ref<number>(0)
   const toast = useToast()
+
+  const client = useSupabaseClient()
   const { settings, account, pockets } = await $fetch<UserProfileResponse>(
     "/api/supabase/account.fetch",
     {
@@ -13,7 +16,6 @@ export async function accountFetch() {
     }
   )
 
-  console.log("🥸 - accountFetch - account:", account)
   progress.value = 40
 
   if (account) {
@@ -24,22 +26,16 @@ export async function accountFetch() {
   }
   progress.value = 50
   user().settings = (settings ?? getEmptySettings()) as Settings
-  progress.value = 60
   usePockets().pockets = pockets ?? []
-  progress.value = 70
+  progress.value = 60
 
-  // Object.assign(user().account, account)
   if (account) summonerAccounts().setAccount(account as AccountData)
-  progress.value = 80
-  console.log(
-    "🥸 - findSummoner - summonerAccounts():",
-    summonerAccounts().accounts
-  )
+  progress.value = 70
 
   let summoner: Summoner | null = null
   if (account?.puuid) {
     try {
-      summoner = await sSummoner().ensureSummoner({ puuid: account.puuid })
+      summoner = await summonerStore().ensureSummoner({ puuid: account.puuid })
     } catch (err) {
       console.warn("Failed to resolve summoner during account fetch", err)
     }
@@ -48,7 +44,61 @@ export async function accountFetch() {
   if (summoner) {
     Object.assign(user().account as AccountData, summoner)
   }
+  progress.value = 80
+
+  const authUser = await client.auth.getUser()
+  const getIdentities = await client.auth.getUserIdentities()
+
+  const identities = computed<
+    Record<ProviderKey<string>, ProviderIdentity | null>
+  >(() => {
+    const discord =
+      getIdentities.data?.identities.find((i) => i.provider === "discord") ??
+      null
+    const google = getIdentities.data?.identities.find(
+      (i) => i.provider === "google"
+    )
+
+    return {
+      email: {
+        provider: "email",
+        avatar: "",
+        name: authUser.data.user?.email ?? "",
+        description: authUser.data.user?.email_confirmed_at?.toString() ?? ""
+      },
+      riot:
+        account && summoner
+          ? {
+              provider: "riot",
+              avatar: getSummonerIcon(summoner.icon),
+              name: summoner.name,
+              description: summoner.tag ? `#${summoner.tag}` : ""
+            }
+          : null,
+      discord: discord
+        ? {
+            provider: discord?.provider,
+            avatar: discord?.identity_data?.avatar_url,
+            name:
+              discord?.identity_data?.custom_claims?.global_name ||
+              discord?.identity_data?.full_name,
+            description: discord?.identity_data?.email
+          }
+        : null,
+      google: google
+        ? {
+            provider: google?.provider,
+            avatar: google?.identity_data?.avatar_url,
+            name: google?.identity_data?.full_name,
+            description: google?.identity_data?.email
+          }
+        : null
+    }
+  })
+
   progress.value = 90
+
+  user().identities = identities.value
   progress.value = 100
 
   toast.add({

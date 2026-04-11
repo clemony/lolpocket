@@ -44,12 +44,12 @@ export const sSession = defineStore("summonerSession", () => {
         to: `${buildSummonerRootPath(summoner.value)}/pockets`
       },
       {
-        icon: "i-lucide-rss",
+        icon: "i-iconoir-antenna-signal",
         label: "Live Match",
         slot: "live" as const,
         to: `${buildSummonerRootPath(summoner.value)}/live`,
         ui: {
-          leadingIcon: "scale-92 -translate-y-[0.5px]"
+          leadingIcon: "scale-92 **:stroke-[2.2]"
         }
       }
     ],

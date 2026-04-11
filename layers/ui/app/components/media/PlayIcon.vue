@@ -21,11 +21,11 @@ const playMask = `url("data:image/svg+xml,${encodeURIComponent(playMaskSvg)}")`
   <div
     :style="{
       mask: `${playMask} center / contain no-repeat`,
-      WebkitMask: `${playMask} center / contain no-repeat`,
+      WebkitMask: `${playMask} center / contain no-repeat`
     }"
     :class="
       cn(
-        'pointer-events-none absolute z-1 size-12 place-self-center bg-nc ring drop-shadow-sm group-hover/card:bg-nc/70',
+        'pointer-events-none absolute z-1 size-12 place-self-center bg-nc ring drop-shadow-sm group-hover/card:opacity-80',
 
         className
       )

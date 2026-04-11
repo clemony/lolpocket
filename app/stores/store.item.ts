@@ -6,7 +6,6 @@ import { statToItem } from "#shared/constants/items/statToItem"
 import { tagToItem } from "#shared/constants/items/tagToItem"
 import { unpurchasableItems } from "#shared/constants/items/unpurchasableItems"
 import equal from "fast-deep-equal/es6"
-import { defineStore } from "pinia"
 import type { AcceptableValue } from "reka-ui"
 import { itemToNickname } from "~~/shared/constants/items/itemToNickname"
 

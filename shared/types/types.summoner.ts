@@ -1,8 +1,11 @@
 export interface Summoner {
-  color: string
   name: string
+  color: string
   puuid: string
   icon: string
+  region: Region
+  tag: string
+  //
   lastDataUpdate: number
   lastMatchUpdate: number
   lastUpdate: number
@@ -11,8 +14,6 @@ export interface Summoner {
     solo?: RankedEntry
     flex?: RankedEntry
   }
-  region: Region
-  tag: string
 }
 
 export interface RankedEntry {

@@ -1,15 +1,14 @@
-import { defineStore } from "pinia"
-
 export const user = defineStore(
-  "as",
+  "userStore",
   () => {
-    const user = useSupabaseUser()
     const sb = ref<Account>()
     const account = ref<AccountData>()
     const settings = ref<Settings>()
+    const identities =
+      ref<Record<ProviderKey<string>, ProviderIdentity | null>>()
     const inbox = ref<Inbox>({ messages: [], notifications: [] })
 
-    const { cache } = storeToRefs(sSummoner())
+    const { cache } = storeToRefs(summonerStore())
 
     watch(
       () =>
@@ -61,8 +60,9 @@ export const user = defineStore(
 
     function markInboxMessageRead(id: string, read = true) {
       inbox.value ??= createEmptyInbox()
-      inbox.value.messages = inbox.value.messages.map((message) =>
-        message.id === id ? { ...message, read } : message
+      inbox.value.messages = inbox.value.messages.map(
+        (message: InboxMessage) =>
+          message.id === id ? { ...message, read } : message
       )
     }
 
@@ -73,7 +73,7 @@ export const user = defineStore(
     function deleteInboxMessage(id: string) {
       inbox.value ??= createEmptyInbox()
       inbox.value.messages = inbox.value.messages.filter(
-        (message) => message.id !== id
+        (message: InboxMessage) => message.id !== id
       )
     }
 
@@ -92,7 +92,7 @@ export const user = defineStore(
       markInboxMessageRead,
       deleteInboxMessage,
       sb,
-      user,
+      identities,
       hotkeys
     }
   },

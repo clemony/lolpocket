@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-google: oklch(57% 40% 23deg);
+  --color-discord: oklch(58% 48% 273deg);
+}

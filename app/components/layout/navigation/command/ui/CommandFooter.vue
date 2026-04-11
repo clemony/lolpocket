@@ -12,7 +12,7 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
     class="min-h-8,5 flex h-8.5 items-center justify-between gap-2 border-t border-p3 px-2 pt-0.5">
     <div class="inline-flex items-center">
       <span class="px-3 text-lg font-[800] text-pc">LP</span>
-      <UPopover
+      <LazyUPopover
         :content="{
           side: 'top',
           align: 'start',
@@ -24,12 +24,12 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
           {{ patchIndex[0] }}
         </UButton>
         <template #content>
-          <PatchPost :patch="patchIndex[0]" class="max-w-100" />
+          <LazyPatchPost :patch="patchIndex[0]" class="max-w-100" />
         </template>
-      </UPopover>
+      </LazyUPopover>
     </div>
     <div class="flex items-center gap-1">
-      <UButton
+      <LazyUButton
         color="neutral"
         variant="ghost"
         label="Open Command"
@@ -40,9 +40,9 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
         <template #trailing>
           <UKbd value="enter" color="base" variant="outline" class="pt-px" />
         </template>
-      </UButton>
+      </LazyUButton>
       <LazyUSeparator orientation="vertical" class="h-4 border-p4/60!" />
-      <UPopover
+      <LazyUPopover
         v-model:open="hotkeysOpen"
         :ui="{
           content:
@@ -65,7 +65,7 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
           size="xs">
           <template #trailing>
             <div class="flex items-center gap-1.25">
-              <UKbd
+              <LazyUKbd
                 v-for="v in ['meta', 'K']"
                 :key="v"
                 square
@@ -77,9 +77,9 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
         </UButton>
 
         <template #content>
-          <HotkeyForm />
+          <LazyHotkeyForm />
         </template>
-      </UPopover>
+      </LazyUPopover>
     </div>
   </div>
 </template>

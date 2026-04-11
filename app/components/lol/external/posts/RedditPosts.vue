@@ -1,19 +1,30 @@
 <script lang="ts" setup>
-const { data: feed } = await useFetch<FeedListResponse>("/api/feed/reddit", {
-  query: {
-    limit: 25
+import type { CarouselProps } from "@nuxt/ui"
+const { data: postlist } = await useFetch<PostListResponse>(
+  "/api/feed/reddit",
+  {
+    query: {
+      limit: 25
+    }
   }
-})
+)
+
+const el = useTemplateRef("el")
+
+const { style } = useScrollShadow(el.value?.emblaRef)
 </script>
 
 <template>
   <UCarousel
-    :items="feed?.items"
+    ref="el"
+    :items="postlist?.items"
     dots
     :slides-to-scroll="1"
     wheel-gestures
     next-icon="i-right"
     prev-icon="i-left"
+    :style
+    drag-free
     arrows
     :breakpoints="{
       '(min-width: 576px)': {
@@ -40,7 +51,7 @@ const { data: feed } = await useFetch<FeedListResponse>("/api/feed/reddit", {
     }"
     orientation="horizontal">
     <template #default="{ item }">
-      <RedditPost :key="item.source_id" :post="item" />
+      <RedditPost :key="item?.source_id" :post="item" />
     </template>
   </UCarousel>
 </template>

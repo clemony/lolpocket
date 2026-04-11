@@ -1,7 +1,6 @@
 //
-import equal from "fast-deep-equal/es6"
-import { defineStore } from "pinia"
 import { patchIndex } from "#shared/constants/patch-index"
+import equal from "fast-deep-equal/es6"
 
 export const matchFilter = defineStore("match-filter", () => {
   const { summoner: s } = storeToRefs(sSession())
@@ -11,7 +10,7 @@ export const matchFilter = defineStore("match-filter", () => {
   const GLOBAL_KEYS = [
     ["participants", "championName"],
     ["participants", "name"],
-    ["participants", "tag"],
+    ["participants", "tag"]
   ]
 
   const RESTRICTED_KEYS = ["keywords"]
@@ -24,7 +23,7 @@ export const matchFilter = defineStore("match-filter", () => {
     patch: undefined,
     queue: 0,
     role: "all",
-    date: { end: undefined, start: undefined },
+    date: { end: undefined, start: undefined }
   })
 
   const DEFAULT_FILTER = structuredClone(filter.value)
@@ -70,13 +69,13 @@ export const matchFilter = defineStore("match-filter", () => {
 
         const items = [
           ...Object.values(p.items),
-          ...Object.values(p.items.slots),
+          ...Object.values(p.items.slots)
         ].flatMap((i) => itemNameById(i as number))
 
         const runes = [
           p.runes.keystone,
           ...Object.values(p.runes.primary.runes),
-          ...Object.values(p.runes.secondary.runes),
+          ...Object.values(p.runes.secondary.runes)
         ].flatMap((i) => runeNameById(i))
 
         const paths = [p.runes.primary.path, p.runes.secondary.path].map((i) =>
@@ -100,9 +99,9 @@ export const matchFilter = defineStore("match-filter", () => {
             ...runes,
             ...paths,
             ...spells,
-            ...outcome,
+            ...outcome
           ].filter(Boolean),
-          matchId: m.matchId,
+          matchId: m.matchId
         }
       })
       .filter((entry): entry is { keywords: string[]; matchId: string } =>
@@ -111,11 +110,11 @@ export const matchFilter = defineStore("match-filter", () => {
   })
 
   const globalSearch = useSearch(baseFiltered, query, {
-    keys: GLOBAL_KEYS,
+    keys: GLOBAL_KEYS
   })
 
   const playerSearch = useSearch(playerIndex, query, {
-    keys: RESTRICTED_KEYS,
+    keys: RESTRICTED_KEYS
   })
 
   const filteredMatches = computed<MatchData[]>(() => {
@@ -143,7 +142,7 @@ export const matchFilter = defineStore("match-filter", () => {
     filteredMatches,
     filterEmpty,
     query,
-    setFilter,
+    setFilter
   }
 })
 
@@ -159,7 +158,7 @@ export function matchFilters(
     ignoreRole = false,
     patch,
     queue,
-    role,
+    role
   } = filterOptions
 
   const player = match.participants.find((p) => p.puuid === puuid)

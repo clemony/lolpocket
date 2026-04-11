@@ -5,6 +5,7 @@ import type {
   InputProps,
   TooltipProps
 } from "@nuxt/ui"
+import type { AcceptableValue } from "reka-ui"
 
 export type Side = "top" | "right" | "bottom" | "left"
 export type Direction = "left" | "right" | "down" | "up"
@@ -94,12 +95,11 @@ export interface TooltipExpose {
 export type InputClearUi = Partial<
   InputProps["ui"] & Record<"clear", ButtonProps["ui"]>
 >
-export interface BaseItem extends ButtonProps {
-  value?: string
+export type BaseItem = ButtonProps & {
+  value?: AcceptableValue
   id?: string
   open?: boolean
   kbds?: string[]
-  as?: "card" | "button" | "separator"
   description?: string
   to?: string
   label?: string

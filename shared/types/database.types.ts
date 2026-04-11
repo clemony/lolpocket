@@ -363,15 +363,19 @@ export interface Database {
       }
       settings: {
         Row: {
+          blocked_users: string[] | null
+          fast_trash_message: boolean | null
+          fast_trash_pocket: boolean | null
           favorite_pockets: string[] | null
           favorite_summoners: string[] | null
-          instant_trash: boolean | null
           locale: string | null
           motion: boolean | null
           once: unknown
-          pin_sidebar: boolean | null
           ping_delete_pocket: boolean | null
+          ping_new_friend: boolean | null
+          "ping_new_message:": boolean | null
           ping_new_pocket: boolean
+          ping_pocket_comment: boolean | null
           show_allies: boolean | null
           show_flex: boolean | null
           show_solo: boolean | null
@@ -380,15 +384,19 @@ export interface Database {
           uuid: string
         }
         Insert: {
+          blocked_users?: string[] | null
+          fast_trash_message?: boolean | null
+          fast_trash_pocket?: boolean | null
           favorite_pockets?: string[] | null
           favorite_summoners?: string[] | null
-          instant_trash?: boolean | null
           locale?: string | null
           motion?: boolean | null
           once?: unknown
-          pin_sidebar?: boolean | null
           ping_delete_pocket?: boolean | null
+          ping_new_friend?: boolean | null
+          "ping_new_message:"?: boolean | null
           ping_new_pocket?: boolean
+          ping_pocket_comment?: boolean | null
           show_allies?: boolean | null
           show_flex?: boolean | null
           show_solo?: boolean | null
@@ -397,15 +405,19 @@ export interface Database {
           uuid: string
         }
         Update: {
+          blocked_users?: string[] | null
+          fast_trash_message?: boolean | null
+          fast_trash_pocket?: boolean | null
           favorite_pockets?: string[] | null
           favorite_summoners?: string[] | null
-          instant_trash?: boolean | null
           locale?: string | null
           motion?: boolean | null
           once?: unknown
-          pin_sidebar?: boolean | null
           ping_delete_pocket?: boolean | null
+          ping_new_friend?: boolean | null
+          "ping_new_message:"?: boolean | null
           ping_new_pocket?: boolean
+          ping_pocket_comment?: boolean | null
           show_allies?: boolean | null
           show_flex?: boolean | null
           show_solo?: boolean | null
@@ -478,14 +490,7 @@ export interface Database {
         }
       }
       update_account: {
-        Args: {
-          p_locale: string
-          p_peer_messages: boolean
-          p_public_pockets: boolean
-          p_puuid: string
-          p_splash: string
-          p_username: string
-        }
+        Args: { p_patch: Json }
         Returns: {
           color: string | null
           created: string | null
@@ -524,6 +529,36 @@ export interface Database {
         SetofOptions: {
           from: "*"
           to: "comments"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      update_settings: {
+        Args: { p_patch: Json }
+        Returns: {
+          blocked_users: string[] | null
+          fast_trash_message: boolean | null
+          fast_trash_pocket: boolean | null
+          favorite_pockets: string[] | null
+          favorite_summoners: string[] | null
+          locale: string | null
+          motion: boolean | null
+          once: unknown
+          ping_delete_pocket: boolean | null
+          ping_new_friend: boolean | null
+          "ping_new_message:": boolean | null
+          ping_new_pocket: boolean
+          ping_pocket_comment: boolean | null
+          show_allies: boolean | null
+          show_flex: boolean | null
+          show_solo: boolean | null
+          theme: string | null
+          updated: string
+          uuid: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "settings"
           isOneToOne: true
           isSetofReturn: false
         }

@@ -1,55 +1,61 @@
-import type { FeedLink, FeedListQuery, FeedListResponse } from "#shared/types"
-import { feedLinkSchema, feedListQuerySchema } from "#shared/schema"
+import { feedListQuerySchema, postLinkSchema } from "#shared/schema"
+import type { Post, PostListQuery, PostListResponse } from "#shared/types"
 import type { H3Event } from "h3"
 import * as v from "valibot"
 import { supabaseAdminRequest } from "~~/server/utils/supabase/admin"
 
-function normalizeFeedListQuery(event: H3Event): FeedListQuery {
+function normalizePostListQuery(event: H3Event): PostListQuery {
   const query = getQuery(event)
   const rawKeywords =
-    typeof query.keywords === "string" ?
-      query.keywords.split(",")
-    : Array.isArray(query.keywords) ?
-      query.keywords.flatMap((value) => String(value).split(","))
-    : []
+    typeof query.keywords === "string"
+      ? query.keywords.split(",")
+      : Array.isArray(query.keywords)
+        ? query.keywords.flatMap((value) => String(value).split(","))
+        : []
 
   const parsed = v.parse(feedListQuerySchema, {
     keywords:
-      rawKeywords.length > 0 ?
-        rawKeywords
-          .map((keyword) => keyword.trim().toLowerCase())
-          .filter(Boolean)
-      : undefined,
+      rawKeywords.length > 0
+        ? rawKeywords
+            .map((keyword) => keyword.trim().toLowerCase())
+            .filter(Boolean)
+        : undefined,
     limit:
-      typeof query.limit === "string" ? Number.parseInt(query.limit, 10)
-      : undefined,
+      typeof query.limit === "string"
+        ? Number.parseInt(query.limit, 10)
+        : undefined,
     offset:
-      typeof query.offset === "string" ? Number.parseInt(query.offset, 10)
-      : undefined,
+      typeof query.offset === "string"
+        ? Number.parseInt(query.offset, 10)
+        : undefined,
     keyword:
-      typeof query.keyword === "string" ? query.keyword.trim().toLowerCase()
-      : typeof query.k === "string" ? query.k.trim().toLowerCase()
-      : undefined,
+      typeof query.keyword === "string"
+        ? query.keyword.trim().toLowerCase()
+        : typeof query.k === "string"
+          ? query.k.trim().toLowerCase()
+          : undefined,
     subreddit:
-      typeof query.subreddit === "string" ? query.subreddit : "leagueoflegends",
+      typeof query.subreddit === "string" ? query.subreddit : "leagueoflegends"
   })
 
   return {
     keyword: parsed.keyword,
     keywords:
-      parsed.keywords && parsed.keywords.length > 0 ? parsed.keywords : undefined,
+      parsed.keywords && parsed.keywords.length > 0
+        ? parsed.keywords
+        : undefined,
     limit: parsed.limit ?? 25,
     offset: parsed.offset ?? 0,
-    subreddit: parsed.subreddit,
+    subreddit: parsed.subreddit
   }
 }
 
-export default defineEventHandler(async (event): Promise<FeedListResponse> => {
-  const query = normalizeFeedListQuery(event)
+export default defineEventHandler(async (event): Promise<PostListResponse> => {
+  const query = normalizePostListQuery(event)
 
   const keywordFilters = [
     ...(query.keyword ? [query.keyword] : []),
-    ...(query.keywords ?? []),
+    ...(query.keywords ?? [])
   ]
   const rangeStart = Math.max(query.offset ?? 0, 0)
   const rangeEnd = rangeStart + Math.max((query.limit ?? 25) - 1, 0)
@@ -58,34 +64,36 @@ export default defineEventHandler(async (event): Promise<FeedListResponse> => {
     offset: String(rangeStart),
     order: "source_created_at.desc",
     source: "eq.reddit",
-    subreddit: `eq.${query.subreddit ?? "leagueoflegends"}`,
+    subreddit: `eq.${query.subreddit ?? "leagueoflegends"}`
   }
 
   if (keywordFilters.length === 1) {
     params.keywords = `cs.{${keywordFilters[0]}}`
-  }
-  else if (keywordFilters.length > 1) {
+  } else if (keywordFilters.length > 1) {
     params.keywords = `ov.{${keywordFilters.join(",")}}`
   }
 
-  const { countHeader, data } = await supabaseAdminRequest<FeedLink[]>("feed_links", {
-    headers: {
-      Prefer: "count=exact",
-      Range: `${rangeStart}-${rangeEnd}`,
-    },
-    query: params,
-  })
+  const { countHeader, data } = await supabaseAdminRequest<Post[]>(
+    "feed_links",
+    {
+      headers: {
+        Prefer: "count=exact",
+        Range: `${rangeStart}-${rangeEnd}`
+      },
+      query: params
+    }
+  )
 
-  const items: FeedLink[] = []
+  const items: Post[] = []
 
   for (const item of data ?? []) {
-    const parsed = v.safeParse(feedLinkSchema, item)
+    const parsed = v.safeParse(postLinkSchema, item)
     if (parsed.success) items.push(parsed.output)
   }
 
   return {
     items,
-    total: parseCountHeader(countHeader) ?? items.length,
+    total: parseCountHeader(countHeader) ?? items.length
   }
 })
 

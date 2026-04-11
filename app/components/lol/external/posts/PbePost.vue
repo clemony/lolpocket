@@ -29,17 +29,6 @@ const delegated = reactiveOmit(props, ["class"])
 onMounted(async () => {
   execute()
 })
-
-const img = useImage()
-
-const src = computed(() =>
-  img(data.value?.metadata.image ?? "", {
-    width: 400,
-    height: 300,
-    quality: 50,
-    format: "webp"
-  })
-)
 </script>
 
 <template>
@@ -48,9 +37,9 @@ const src = computed(() =>
     v-bind="delegated"
     :badge="{
       label: data.wikiLastModified
-        ? `Update ${formatDate(new Date(data.wikiLastModified), 'MMM d, YYYY')}`
+        ? `Updated ${formatDate(new Date(data.wikiLastModified), 'MMM d, YYYY')}`
         : undefined,
-      size: 'xs',
+      size: 'sm',
       variant: 'solid',
       color: 'neutral',
       ui: {
@@ -80,9 +69,15 @@ const src = computed(() =>
       }
     ]"
     target="_blank"
-    :image="src"
+    :image="{
+      fetchpriority: 'high',
+      crossorigin: 'anonymous',
+      loading: 'eager',
+      src: data?.metadata.image ?? '',
+      preset: 'card'
+    }"
     :description="
       decode(data.metadata.description) ??
-        'It seems we lost the wiki link. We\'ll attempt to turn the router off and on.'
+      'It seems we lost the wiki link. We\'ll attempt to turn the router off and on.'
     " />
 </template>

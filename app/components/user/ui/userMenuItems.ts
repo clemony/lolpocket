@@ -1,5 +1,5 @@
 import { LazyAuthModal } from "#components"
-import type { DropdownMenuItem } from "@nuxt/ui"
+import type { ButtonProps, DropdownMenuItem } from "@nuxt/ui"
 import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 import { getSummonerIcon } from "~/domain/utils/img"
 import { testingMenu } from "../admin/testingMenu"
@@ -36,14 +36,19 @@ export const userProfileItems = computed(() => {
     },
     {
       label: "Live Match",
-      icon: "i-lucide-rss",
-      to: `${root}/champions`,
+      icon: "i-iconoir-antenna-signal",
+      ui: {
+        leadingIcon: "scale-92 **:stroke-[2.2]!  "
+      },
+      to: `${root}/live`,
       trailingIcon: "",
       value: "champion-mastery"
     }
   ]
 })
-export const userMenuItems = (command?: Record<string, () => void>) => {
+export const userMenuItems = (
+  command?: Record<string, () => void>
+): ButtonProps[][] => {
   const sbu = useSupabaseUser()
   const online = computed(() => sbu.value?.session_id)
   const overlay = useOverlay()
@@ -53,13 +58,11 @@ export const userMenuItems = (command?: Record<string, () => void>) => {
   })
 
   return [
-    [testingMenu(command)],
-    [],
     [
       {
         icon: "i-mail",
         label: "Inbox",
-        slot: "inbox" as const,
+        to: "/inbox",
         ui: {
           itemLeadingIcon: "scale-98 "
         }
@@ -82,12 +85,12 @@ export const userMenuItems = (command?: Record<string, () => void>) => {
         ui: {
           itemLeadingIcon: "scale-90! **:stroke-[2.4]"
         },
-        onSelect: () => {
+        onClick: () => {
           close()
           return login.open()
         },
         kbds: online.value ? ["shift", "meta", "Q"] : ["shift", "meta", "S"]
       }
     ]
-  ] as unknown as DropdownMenuItem[][]
+  ].filter(Boolean) as ButtonProps[][]
 }

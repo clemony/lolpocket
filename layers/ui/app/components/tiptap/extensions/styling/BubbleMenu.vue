@@ -49,13 +49,13 @@ function triggerBubbleMenu() {
   }
 }
 
-function toggleListType() {
+/* function toggleListType() {
   if (!editor) return
   const chain = editor.chain().focus()
   if (editor.isActive("bulletList")) chain.toggleOrderedList()
   else chain.toggleBulletList()
   chain.run()
-}
+} */
 </script>
 
 <template>
@@ -81,9 +81,9 @@ function toggleListType() {
     :get-reference-client-rect="virtualRect || undefined"
     :options="{ placement: 'top-start', offset: 8 }">
     <div class="bubble-menu">
-      <UButton variant="outline" on="inset" square @click="toggleListType">
+      <!--      <UButton variant="outline" on="inset" square @click="toggleListType">
         Toggle list type
-      </UButton>
+      </UButton> -->
     </div>
   </BubbleMenu>
 </template>

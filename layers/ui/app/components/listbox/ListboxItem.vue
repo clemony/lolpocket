@@ -1,25 +1,25 @@
 <script setup lang="ts">
 import type { ButtonProps } from "@nuxt/ui"
-import type { ListboxItemProps } from "reka-ui"
+import type { AcceptableValue, ListboxItemProps } from "reka-ui"
 import { ListboxItem, useForwardPropsEmits } from "reka-ui"
 
-interface Props extends ListboxItemProps {
-  class?: HTMLAttributes["class"]
-}
+const props = withDefaults(
+  defineProps<
+    ListboxItemProps & {
+      class?: HTMLAttributes["class"]
+      value: AcceptableValue
+    }
+  >(),
+  {}
+)
 
-const props = withDefaults(defineProps<Props>(), {})
-
-const delegatedProps = reactiveOmit(props)
+const delegatedProps = reactiveOmit(props, "class")
 
 const forwardedProps = useForwardPropsEmits(delegatedProps)
 </script>
 
 <template>
-  <ListboxItem
-    v-bind="forwardedProps"
-    tabindex="-1"
-    class="h-fit w-full outline-0! outline-offset-0!"
-    :autofocus="false">
-    <slot />
+  <ListboxItem v-bind="forwardedProps" tabindex="-1" :autofocus="false">
+    <slot v-bind="forwardedProps" />
   </ListboxItem>
 </template>

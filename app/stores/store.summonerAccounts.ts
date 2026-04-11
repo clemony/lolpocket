@@ -1,5 +1,3 @@
-import { defineStore } from "pinia"
-
 export const summonerAccounts = defineStore(
   "accountsStore",
   () => {
@@ -55,7 +53,7 @@ export const summonerAccounts = defineStore(
       getByUuid,
       accounts,
       clearAll,
-      setAccount,
+      setAccount
     }
   },
   {
@@ -68,16 +66,16 @@ export const summonerAccounts = defineStore(
           const parsed = JSON.parse(str)
           return {
             byPuuid: new Map(parsed.byPuuid),
-            accounts: new Map(parsed.accounts),
+            accounts: new Map(parsed.accounts)
           }
         },
         serialize: (state) => {
           return JSON.stringify({
             byPuuid: Array.from(state.byPuuid.entries()),
-            accounts: Array.from(state.accounts.entries()),
+            accounts: Array.from(state.accounts.entries())
           })
-        },
-      },
-    },
-  },
+        }
+      }
+    }
+  }
 )

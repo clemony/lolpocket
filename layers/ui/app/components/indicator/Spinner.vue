@@ -7,9 +7,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <icon
-    name="i-mingcute-loading-fill"
+  <Icon
+    name="i-lucide-loader-circle"
     role="status"
     aria-label="Loading"
-    :class="cn('size-4 animate-spin', props.class)" />
+    :class="cn('size-4 animate-spin **:stroke-[2.4]', props.class)" />
 </template>

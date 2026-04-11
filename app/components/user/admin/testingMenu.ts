@@ -1,8 +1,17 @@
-import { LazyAuthModal } from "#components"
+import type { DropdownMenuItem } from "@nuxt/ui"
 import { heyGoodJob } from "~/domain/lp/ui/good-job"
 import { useSignOut } from "../../user/auth/useAuth"
 import { createTestMessage } from "../messages/test-message"
-export const testingMenu = (command?: Record<string, () => void>) => {
+
+export const testingMenu = (
+  command?: Record<string, () => void>,
+  openLogin?: () => void
+): {
+  label: string
+  icon: string
+  ui: DropdownMenuItem["ui"]
+  children: DropdownMenuItem[]
+} => {
   console.log(
     "🥸 - findSummoner - summonerAccounts():",
     summonerAccounts().accounts
@@ -23,12 +32,6 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
     })
   }
 
-  const overlay = useOverlay()
-  const login = overlay.create(LazyAuthModal, {
-    destroyOnClose: true,
-    props: { type: "logIn" }
-  })
-
   return {
     label: "Testing",
     icon: "i-uil-flask",
@@ -40,7 +43,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
       {
         label: "Fetch User Data",
         icon: "i-lucide-helicopter",
-        onSelect: () => {
+        onClick: () => {
           if (command && command.close) command.close()
           accountFetch()
         }
@@ -48,12 +51,12 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
       {
         icon: "i-lucide-box",
         label: "Log Summoner Cache",
-        onSelect: () => console.log("summoner:", sSummoner().cache)
+        onClick: () => console.log("summoner:", summonerStore().cache)
       },
       {
         label: "Sign Out",
         icon: "i-log-out",
-        onSelect: () => {
+        onClick: () => {
           if (command && command.close) close()
           useSignOut()
         }
@@ -61,15 +64,15 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
       {
         label: "Open Login",
         icon: "i-log-in",
-        onSelect: () => {
+        onClick: () => {
           if (command && command.close) close()
-          return login.open()
+          if (openLogin) openLogin()
         }
       },
       {
         label: "Send test message",
         icon: "i-log-in",
-        onSelect: () => {
+        onClick: () => {
           if (command && command.close) close()
           user().addInboxMessage(createTestMessage())
         }
@@ -77,7 +80,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
       {
         icon: "i-tabler-bread",
         label: "Toast",
-        onSelect: () => {
+        onClick: () => {
           if (command && command.close) close()
           getToast("With breads")
         }

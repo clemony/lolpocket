@@ -1,7 +1,10 @@
-export type FeedSource = "reddit"
-export type FeedVideoProvider = "reddit" | "youtube"
+import type { UseMediaControlsReturn } from "@vueuse/core"
+import type * as v from "valibot"
 
-export interface FeedLinkMetadata {
+export type PostVideoProvider = "reddit" | "youtube"
+export type PostSource = "reddit"
+
+export interface PostMetadata {
   authorIsBlocked?: boolean
   domain?: string | null
   isSelf?: boolean
@@ -12,19 +15,20 @@ export interface FeedLinkMetadata {
   stickied?: boolean
 }
 
-export interface FeedLink {
+export interface Post {
   author: string | null
   excerpt: string | null
   fetched_at: string
   flair: string | null
   id?: string
   keywords: string[]
-  metadata: FeedLinkMetadata
+  metadata: PostMetadata
   num_comments: number
   permalink: string
   preview_image_url: string | null
   score: number
-  source: FeedSource
+  source: PostSource
+  video_provider?: PostVideoProvider | null
   source_created_at: string
   source_id: string
   subreddit: string
@@ -37,12 +41,11 @@ export interface FeedLink {
   video_height?: number | null
   video_hls_url?: string | null
   video_id?: string | null
-  video_provider?: FeedVideoProvider | null
   video_url?: string | null
   video_width?: number | null
 }
 
-export interface FeedListQuery {
+export interface PostListQuery {
   keyword?: string
   keywords?: string[]
   limit?: number
@@ -50,15 +53,22 @@ export interface FeedListQuery {
   subreddit?: string
 }
 
-export interface FeedListResponse {
-  items: FeedLink[]
+export interface PostListResponse {
+  items: Post[]
   total: number
 }
 
-export interface FeedRefreshResponse {
+export interface PostRefreshResponse {
   cleanedBefore: string
   deletedCount: number
   fetchedCount: number
   sources: string[]
   upsertedCount: number
+}
+
+export interface MediaControls extends UseMediaControlsReturn {
+  togglePlay: () => void
+  toggleMute: () => void
+  currentTimeLabel: ComputedRef<string>
+  durationLabel: ComputedRef<string>
 }

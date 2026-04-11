@@ -1,31 +1,31 @@
-export type Provider = "google" | "discord"
-export type LpProvider = Provider | "riot"
+import { getSummonerIcon } from "~/domain/utils/img"
 
-export const authProviders: Provider[] = [
-  "riot" as Provider,
-  "google",
-  "discord",
-]
+export const supabaseProviders: SbProviderKey<string>[] = ["google", "discord"]
 
 export interface ProviderType {
-  label: Provider
+  label: ProviderKey<string>
   class: string
   icon: string
+  avatar?: string | ((icon: string) => string)
 }
-export const providers: ProviderType[] = [
-  {
-    label: "riot" as Provider,
-    class: "*:!size-5.25 *:-ml-px *:!text-white !bg-neutral/90",
+export const providers: Record<
+  Exclude<ProviderKey<string>, "email">,
+  ProviderType
+> = {
+  riot: {
+    label: "riot",
+    class: "scale-90 -translate-x-[0.5px]",
     icon: "i-riot",
+    avatar: (icon: string) => getSummonerIcon(icon)
   },
-  {
+  discord: {
     label: "discord",
-    class: " *:!text-white  bg-[#747abf]",
-    icon: "i-discord",
+    class: "",
+    icon: "i-discord"
   },
-  {
+  google: {
     label: "google",
     class: "",
-    icon: "i-google",
-  },
-]
+    icon: "i-google"
+  }
+}

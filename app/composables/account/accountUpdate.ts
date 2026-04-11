@@ -7,16 +7,15 @@ export async function accountUpdate(
   account: Partial<AccountData>,
   options: {
     silent?: boolean
+    message?: string
   } = {}
 ) {
-  const toast = useToast()
   try {
     const data = await $fetch<Account | null>("/api/supabase/account.update", {
       body: account,
       headers: useRequestHeaders(["cookie"]),
       method: "POST"
     })
-    console.log("📎 - accountUpdate - data:", data)
 
     if (!data) return user().account
 
@@ -26,17 +25,21 @@ export async function accountUpdate(
       data as AccountData
     )
     user().account = next
+
+    if (data && typeof data === "object")
+      Object.assign(user().account as AccountData, data)
+
     if (!options.silent) {
+      const toast = useToast()
+
       toast.add({
         color: "neutral",
-        title: "Account updated",
-        description: `Saved changes for ${
-          user().account?.name ?? user().account?.username ?? "Summoner"
-        }.`,
-        icon: "tick"
+        orientation: "horizontal",
+        title: "Success!",
+        description: "Your account changes have been saved.",
+        icon: "i-check-fill"
       })
     }
-
     return next
   } catch (error) {
     console.error("Failed to update account", error)

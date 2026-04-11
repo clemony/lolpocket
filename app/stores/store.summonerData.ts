@@ -1,6 +1,5 @@
 //
 import { skinIndex } from "#shared/constants/champions/skin-index"
-import { defineStore } from "pinia"
 import { useTimeline } from "~/domain/match/useTimeline"
 import { aggregateAllies } from "~/domain/stats/aggregateAllies"
 import { useChampionStats } from "~/domain/stats/useChampionStats"
@@ -68,6 +67,6 @@ export const sData = defineStore("summonerData", () => {
     timelines,
 
     getMastery,
-    getTimelines,
+    getTimelines
   }
 })

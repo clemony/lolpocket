@@ -91,7 +91,7 @@
 }
 
 @utility fx-depth-* {
-  --fx-surface: var(--value(color), var(--color-base-200));
+  --fx-surface: var(--value([color]), var(--color-base-200));
   --fx-depth: var(--depth, 0.4);
   --fx-border: color-mix(
     in oklab,

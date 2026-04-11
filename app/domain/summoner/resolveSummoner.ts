@@ -4,7 +4,7 @@ export async function resolveSummoner(
 ): Promise<Summoner> {
   console.log("🥸 - resolveSummoner - identifier.puuid:", identifier.puuid)
   if (identifier.puuid) {
-    const resolved = await sSummoner().resolveOrFetch(identifier.puuid)
+    const resolved = await summonerStore().resolveOrFetch(identifier.puuid)
     if (!resolved) {
       throw new Error("Unable to resolve summoner")
     }
@@ -15,7 +15,7 @@ export async function resolveSummoner(
     throw new Error("Invalid summoner identifier")
   }
 
-  const hit = sSummoner().resolveBySlug(
+  const hit = summonerStore().resolveBySlug(
     identifier.region,
     identifier.name,
     identifier.tag
@@ -23,7 +23,7 @@ export async function resolveSummoner(
 
   if (hit) return hit
 
-  const found = await sSummoner().ensureSummoner(identifier)
+  const found = await summonerStore().ensureSummoner(identifier)
   if (!found) {
     throw new Error("Unable to resolve summoner")
   }

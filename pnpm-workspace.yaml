@@ -4,12 +4,15 @@ shellEmulator: true
 
 trustPolicy: no-downgrade
 overrides:
+  "@nuxt/ui>reka-ui": 2.9.5
   chokidar: 3.5.3
+  reka-ui: $reka-ui
   semver: 7.5.4
+  vaul-vue>reka-ui: 2.9.5
 
 onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@tailwindcss/oxide'
+  - "@parcel/watcher"
+  - "@tailwindcss/oxide"
   - esbuild
   - maplibre-gl
   - re2
@@ -19,4 +22,3 @@ onlyBuiltDependencies:
   - vue-demi
   - workerd
   - vue-chrts
-

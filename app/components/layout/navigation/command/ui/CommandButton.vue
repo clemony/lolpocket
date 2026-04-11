@@ -1,65 +1,56 @@
 <script lang="ts" setup>
+import type { BaseItem } from "#shared/types"
 import type { ButtonProps } from "@nuxt/ui"
 import { asCommandItem } from "../build/helpers"
 import type { CommandItem } from "../build/useCommandGroups"
-import {
-  isActive,
-  isExternal,
-  itemKey,
-  itemSuffix,
-  itemTarget,
-  itemTrailingIcon
-} from "../build/useCommandGroups"
-
-const props = defineProps<
-  ButtonProps & {
-    item?: Partial<CommandItem | ButtonProps>
+const { item, ui } = defineProps<
+  CommandItem & {
+    item?: CommandItem
     ui?: CommandItem["ui"]
   }
 >()
 
 const emit = defineEmits<{
-  "update:open": [item: CommandItem]
+  "update:open": [item: BaseItem]
 }>()
 
-const safeItem = computed(() => safeObject(asCommandItem(props.item ?? props)))
-
-const ui = computed<NonNullable<ButtonProps["ui"]>>(
-  () =>
-    mergeUi<NonNullable<ButtonProps["ui"]>>(
-      {
-        base: "btn-custom flex h-9! grow items-center justify-start gap-2 rounded-lg px-2 text-left",
-
-        leadingIcon: "size-4.5 shrink-0",
-
-        trailingIcon: "size-4 shrink-0 opacity-60 group-hover/btn:opacity-100"
-      },
-      props?.ui,
-      props?.item?.ui
-    ) as NonNullable<ButtonProps["ui"]>
-)
+const safeItem = computed(() => {
+  const a = safeObject(item)
+  return asCommandItem(a)
+})
 </script>
 
 <template>
   <UButton
     data-command-menu-item="true"
-    :icon="safeItem.icon"
-    :target="itemTarget(safeItem)"
-    :avatar="safeItem.avatar"
     block
-    :external="isExternal(safeItem) || undefined"
+    :external="safeItem.external || undefined"
     :variant="safeItem.variant ?? 'ghost'"
-    :color="safeItem.color ?? 'primary'"
-    :label="
-      !safeItem.prefix && !safeItem.suffix
-        ? safeItem.label || safeItem.itemLabelBase
-        : undefined
-    "
+    :color="safeItem.color ?? 'secondary'"
+    :icon="safeItem.icon"
+    :value="safeItem.value ?? safeItem.label"
+    :target="safeItem.target"
+    :avatar="safeItem.avatar"
+    :label="!safeItem.prefix && !safeItem.suffix ? safeItem.label : undefined"
     :to="safeItem.to ?? undefined"
-    :trailing-icon="itemTrailingIcon(safeItem)"
-    :ui
+    :trailing-icon="safeItem.trailingIcon"
+    :ui="{
+      ...safeItem.ui,
+      base: cn(
+        'flex grow items-center justify-start gap-2 rounded-lg px-2 text-left',
+        safeItem.ui?.base
+      ),
+
+      leadingIcon: cn('size-4.5 shrink-0', safeItem.ui?.leadingIcon),
+
+      trailingIcon: cn(
+        'size-4 shrink-0 opacity-60 group-hover/btn:opacity-100',
+        safeItem.ui?.trailingIcon
+      )
+    }"
+    no-prefetch
     @click="emit('update:open', safeItem)">
-    <slot>
+    <!-- <slot>
       <div
         v-if="safeItem.prefix || safeItem.suffix"
         :class="cn('min-w-0 grow', safeItem.ui?.label)">
@@ -92,6 +83,6 @@ const ui = computed<NonNullable<ButtonProps["ui"]>>(
           {{ itemSuffix(safeItem) }}
         </p>
       </div>
-    </slot>
+    </slot> -->
   </UButton>
 </template>

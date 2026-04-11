@@ -1,11 +1,13 @@
 <script lang="ts" setup>
+import type { ButtonProps } from "@nuxt/ui"
+
 const emit = defineEmits(["update:open"])
 const { summoner: sum, currentSummonerNav } = storeToRefs(sSession())
 
 const summoner = computed(() => safeObject(sum.value))
 const nav = computed(() => ({
   id: "summoner",
-  items: currentSummonerNav.value.children.map((item) => ({
+  items: currentSummonerNav.value.children.map((item: ButtonProps) => ({
     ...item,
     value: item.label,
     ui: {
@@ -56,10 +58,12 @@ const nav = computed(() => ({
         </div>
       </div>
       <div class="relative grid h-max items-center">
-        <CommandGroup
+        <CommandButton
+          v-for="(v, i) in nav.items"
+          :key="i"
           class="py-0!"
           :ui="{ itemLeadingIcon: 'size-4' }"
-          :items="nav" />
+          :item="v" />
       </div>
     </div>
   </div>

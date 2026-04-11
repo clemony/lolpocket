@@ -9,63 +9,63 @@ export const emptyTheme = defineUiTheme({
     description: "text-center text-balance",
     body: "flex max-w-sm flex-col items-center gap-4",
     actions: "flex shrink-0 flex-wrap justify-center gap-2",
-    footer: "flex max-w-sm flex-col items-center gap-2",
+    footer: "flex max-w-sm flex-col items-center gap-2"
   },
   variants: {
     size: {
       xs: {
         avatar: "size-8 text-base",
         title: "text-sm",
-        description: "text-xs",
+        description: "text-xs"
       },
       sm: {
         avatar: "size-9 text-lg",
         title: "text-sm",
-        description: "text-xs",
+        description: "text-xs"
       },
       md: {
         avatar: "size-10 text-xl",
-        title: "text-base",
-        description: "text-sm",
+        title: "text-md",
+        description: "text-sm"
       },
       lg: {
         avatar: "size-11 text-[22px]",
         title: "text-base",
-        description: "text-sm",
+        description: "text-sm"
       },
       xl: {
         avatar: "size-12 text-2xl",
         title: "text-lg",
-        description: "text-base",
-      },
+        description: "text-base"
+      }
     },
     variant: {
       solid: {
         root: "bg-inverted",
         title: "text-inverted",
-        description: "text-dimmed",
+        description: "text-dimmed"
       },
       outline: {
         root: "bg-p0 ring ring-p3/80",
-        description: "text-muted",
+        description: "text-muted"
       },
       soft: {
         root: "bg-elevated/50",
-        description: "text-toned",
+        description: "text-toned"
       },
       subtle: {
         root: "bg-elevated/50 ring ring-default",
-        description: "text-toned",
+        description: "text-toned"
       },
       naked: {
-        description: "text-muted",
-      },
-    },
+        description: "text-muted"
+      }
+    }
   },
   defaultVariants: {
     variant: "outline",
-    size: "md",
-  },
+    size: "md"
+  }
 })
 
 export default emptyTheme

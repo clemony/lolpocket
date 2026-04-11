@@ -4,7 +4,7 @@ import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 definePageMeta({
   name: "summoner-resolver-subroute",
   layout: false,
-  search: false,
+  search: false
 })
 
 const route = useRoute()
@@ -18,7 +18,7 @@ if (!puuid) {
 }
 
 try {
-  const store = sSummoner()
+  const store = summonerStore()
   let summoner = store.resolveByPuuid(puuid)
 
   if (!summoner?.region || !summoner?.name || !summoner?.tag) {

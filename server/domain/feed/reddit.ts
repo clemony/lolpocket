@@ -1,6 +1,10 @@
-import type { FeedLink, FeedRefreshResponse, FeedVideoProvider } from "#shared/types"
-import { Buffer } from "node:buffer"
+import type {
+  Post,
+  PostRefreshResponse,
+  PostVideoProvider
+} from "#shared/types"
 import { decode } from "html-entities"
+import { Buffer } from "node:buffer"
 import { supabaseAdminRequest } from "~~/server/utils/supabase/admin"
 import { deriveFeedKeywords } from "./keywords"
 
@@ -144,7 +148,7 @@ function createRedditExcerpt(selftext?: string | null) {
 
 function extractYouTubeVideo(url?: string | null): {
   videoId: string | null
-  videoProvider: FeedVideoProvider | null
+  videoProvider: PostVideoProvider | null
 } {
   if (!url) return { videoId: null, videoProvider: null }
 
@@ -171,8 +175,8 @@ function extractYouTubeVideo(url?: string | null): {
   }
 
   const pathParts = parsedUrl.pathname.split("/").filter(Boolean)
-  const embeddedVideoId
-    = ["embed", "shorts"].includes(pathParts[0] ?? "") && pathParts[1]
+  const embeddedVideoId =
+    ["embed", "shorts"].includes(pathParts[0] ?? "") && pathParts[1]
       ? pathParts[1]
       : null
 
@@ -190,10 +194,10 @@ function extractRedditVideo(post: RedditPost): {
   videoUrl: string | null
   videoWidth: number | null
 } {
-  const redditVideo
-    = post.secure_media?.reddit_video
-      ?? post.media?.reddit_video
-      ?? post.preview?.reddit_video_preview
+  const redditVideo =
+    post.secure_media?.reddit_video ??
+    post.media?.reddit_video ??
+    post.preview?.reddit_video_preview
 
   if (!redditVideo) {
     return {
@@ -216,7 +220,7 @@ function extractRedditVideo(post: RedditPost): {
   }
 }
 
-function shouldPersistRedditPost(item: FeedLink) {
+function shouldPersistRedditPost(item: Post) {
   return (
     item.score >= REDDIT_FEED_MIN_SCORE &&
     item.num_comments >= REDDIT_FEED_MIN_COMMENTS
@@ -269,7 +273,7 @@ async function getRedditAccessToken() {
 async function fetchRedditListing(
   subreddit: string,
   spec: RedditListingSpec
-): Promise<FeedLink[]> {
+): Promise<Post[]> {
   const config = useRuntimeConfig()
   const token = await getRedditAccessToken()
   const listing = await $fetch<RedditListingResponse>(
@@ -289,10 +293,10 @@ async function fetchRedditListing(
 
   return listing.data.children
     .map(({ data }) => normalizeRedditPost(data))
-    .filter((item): item is FeedLink => item !== null)
+    .filter((item): item is Post => item !== null)
 }
 
-function normalizeRedditPost(post: RedditPost): FeedLink | null {
+function normalizeRedditPost(post: RedditPost): Post | null {
   const permalink = decodeRedditUrl(`https://www.reddit.com${post.permalink}`)
   const url = decodeRedditUrl(post.url_overridden_by_dest ?? post.url)
   const preview = decodeRedditUrl(post.preview?.images?.[0]?.source?.url)
@@ -310,8 +314,8 @@ function normalizeRedditPost(post: RedditPost): FeedLink | null {
     videoUrl,
     videoWidth
   } = extractRedditVideo(post)
-  const resolvedVideoProvider: FeedVideoProvider | null
-    = videoProvider ?? (videoUrl || videoHlsUrl || videoDashUrl ? "reddit" : null)
+  const resolvedVideoProvider: PostVideoProvider | null =
+    videoProvider ?? (videoUrl || videoHlsUrl || videoDashUrl ? "reddit" : null)
 
   return {
     author: post.author || null,
@@ -355,8 +359,8 @@ function normalizeRedditPost(post: RedditPost): FeedLink | null {
   }
 }
 
-function dedupeFeedLinks(items: FeedLink[]) {
-  const byId = new Map<string, FeedLink>()
+function dedupePosts(items: Post[]) {
+  const byId = new Map<string, Post>()
 
   for (const item of items) {
     byId.set(`${item.source}:${item.source_id}`, item)
@@ -374,17 +378,17 @@ export async function fetchLeagueofLegendsRedditFeed() {
     fetchRedditListing(subreddit, { limit: 50, sort: "top", time: "day" })
   ])
 
-  return dedupeFeedLinks([...recent, ...top])
+  return dedupePosts([...recent, ...top])
 }
 
-export async function refreshLeagueofLegendsRedditFeed(): Promise<FeedRefreshResponse> {
+export async function refreshLeagueofLegendsRedditFeed(): Promise<PostRefreshResponse> {
   const fetchedItems = await fetchLeagueofLegendsRedditFeed()
   const items = fetchedItems.filter(shouldPersistRedditPost)
   const cleanedBefore = new Date(
     Date.now() - 90 * 24 * 60 * 60 * 1000
   ).toISOString()
 
-  await supabaseAdminRequest<FeedLink[]>("feed_links", {
+  await supabaseAdminRequest<Post[]>("feed_links", {
     body: JSON.stringify(items),
     headers: {
       Prefer: "resolution=merge-duplicates,return=minimal"

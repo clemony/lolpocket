@@ -10,15 +10,15 @@ export const kbdTheme = defineUiTheme({
     },
     variant: {
       solid: "",
-      outline: "",
+      outline: "text-pc",
       soft: "",
       subtle: ""
     },
     size: {
       sm: "h-4 min-w-[16px] text-[11px] [&[square]]:w-4 [&[square]]:min-w-4",
-      md: "h-5 w-fit min-w-[20px] text-sm [&[square]]:w-5 [&[square]]:min-w-5",
-      lg: "h-6 w-fit min-w-[24px] rounded-[4px] text-[12px] [&[square]]:w-6 [&[square]]:min-w-6",
-      xl: "h-7 w-fit min-w-6 text-[12px] [&[square]]:w-7 [&[square]]:min-w-6"
+      md: "h-5 w-fit min-w-[20px] rounded-md text-sm [&[square]]:w-5 [&[square]]:min-w-5",
+      lg: "h-6 w-fit min-w-[24px] rounded-md text-[12px] [&[square]]:w-6 [&[square]]:min-w-6",
+      xl: "h-7 w-fit min-w-6 rounded-md text-[12px] [&[square]]:w-7 [&[square]]:min-w-6"
     }
   },
   base: "inline-flex w-fit shrink items-center justify-center rounded-sm px-1 align-baseline font-sans font-medium text-pc uppercase ring-p4 [&[square]]:aspect-square [&[square]]:gap-0 [&[square]]:p-0",
@@ -26,13 +26,12 @@ export const kbdTheme = defineUiTheme({
     {
       color: "base",
       variant: "solid",
-      class: "noise bg-p1 text-n3 inset-ring inset-ring-p4/80"
+      class: "noise bg-p1 text-n3 ring ring-p4/80"
     },
     {
       color: "base",
       variant: "soft",
-      class:
-        "bg-p1/10 text-n3 shadow-xs inset-ring shadow-black/6 inset-ring-p3/80"
+      class: "bg-p1/10 text-n3 shadow-xs ring shadow-black/6 ring-p3/80"
     },
     {
       color: "base",
@@ -41,10 +40,9 @@ export const kbdTheme = defineUiTheme({
       class: "gap-0 bg-transparent px-0 !text-pc/70 ring-transparent"
     },
     {
-      color: "base",
+      /* border-r border-b border-r-p4/60 border-b-p4/60 */ color: "base",
       variant: "outline",
-      class:
-        "border-r border-b border-r-p4/60 border-b-p4/60 bg-transparent text-pc/70 ring inset-ring-0 ring-p4"
+      class: "bg-transparent text-pc/70 ring ring-p4"
     },
     {
       color: "neutral",

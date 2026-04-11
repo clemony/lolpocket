@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ButtonProps, InputProps } from "@nuxt/ui"
+import type { ButtonProps, InputProps, KbdProps } from "@nuxt/ui"
 const {
   variant = "soft",
   color = "neutral",
@@ -65,7 +65,7 @@ defineShortcuts(extractShortcuts(keybindItems))
         v-else
         :key="k"
         square
-        :color
+        :color="color as KbdProps['color']"
         :class="
           cn(
             'pointer-events-none mx-px text-xs group-focus-within/input:absolute group-focus-within/input:opacity-0',

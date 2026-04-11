@@ -1,15 +1,18 @@
 <script lang="ts" setup>
-import type { ButtonProps, DropdownMenuItem, UserProps } from "@nuxt/ui"
+import type {
+  ButtonProps,
+  DropdownMenuItem,
+  PopoverProps,
+  UserProps
+} from "@nuxt/ui"
 import { userMenuItems } from "~/components/user/ui/userMenuItems"
-import { getSummonerIcon } from "~/domain/utils/img"
-import type { CommandItem } from "../../layout/navigation/command/build/useCommandGroups"
+import { asDropdownItem } from "../../layout/navigation/command/build/helpers"
 
 type AvatarSize = ButtonProps["size"] | UserProps["size"]
 
 const props = withDefaults(
   defineProps<
-    ButtonProps & {
-      triggerStyle?: "button" | "user"
+    Omit<ButtonProps, "prefetch"> & {
       avatarSize?: AvatarSize
       class?: HTMLAttributes["class"]
       content?: DropdownMenuItem["content"]
@@ -18,61 +21,106 @@ const props = withDefaults(
   >(),
   {
     variant: "ghost",
-    activeVariant: "outline",
-    size: "sm",
+    activeVariant: "solid",
+    activeColor: "primary",
+    color: "secondary",
+    size: "md",
     avatarSize: "2xs",
-    block: true,
-    triggerStyle: "button"
+    block: true
   }
 )
 
-const delegated = reactiveOmit(props, "triggerStyle", "avatarSize", "class")
+const delegated = reactiveOmit(props, "avatarSize", "class", "content", "user")
+const subProps: { button: ButtonPropsExt; popover: PopoverProps } = {
+  button: {
+    ...delegated,
+    size: "md",
+    tabindex: -1,
+    ui: {
+      base: "max-h-9! h-9!",
+      label: "grow text-start capitalize",
+      trailingIcon:
+        "transition-translate duration-200 ease-spring-soft group-active/btn:translate-x-1 group-open/popover:translate-x-1"
+    }
+  },
+  popover: {
+    mode: "hover",
+    content: { side: "right", align: "start", sideOffset: 2, alignOffset: -2 },
+    ui: { content: "w-64 h-max rounded-xl p-0" }
+  }
+}
 
 const { account } = safeObject(storeToRefs(user()))
-const userButtonUi = computed<NonNullable<ButtonProps["ui"]>>(
-  () =>
-    mergeUi<NonNullable<ButtonProps["ui"]>>(
-      {
-        base: ""
-      },
-      props.ui
-    ) as NonNullable<ButtonProps["ui"]>
-)
+const open = shallowRef<boolean>(false)
+const command = inject<Record<string, () => void>>("command")
+const menu = computed(() => userMenuItems(command))
 </script>
 
 <template>
-  <LazyUCollapsible
-    :ui="{
-      root: 'flex flex-col p-0',
-      content: 'order-first border-y border-y-p3/80 px-3 py-1'
-    }">
-    <UButton
-      :size="props.size"
-      :variant="props.variant"
-      :active-variant="props.activeVariant"
-      :color="props.color"
+  <div class="sticky bottom-0 left-0 h-max w-full p-1">
+    <LazyUPopover
+      v-model:open="open"
+      :content="{
+        side: 'top',
+        sideOffset: 2
+      }"
       :ui="{
-        base: 'sticky bottom-0 left-0 order-last w-full justify-between border-0! bg-transparent! px-3 shadow-none ring-0! inset-ring-0! ring-offset-0! drop-shadow-none fx-0',
-        trailingIcon:
-          'transition-rotate size-4 opacity-60 duration-200 **:stroke-[2.4] group-open/btn:rotate-90 group-open/btn:opacity-100 group-hover/btn:opacity-100'
-      }"
-      :user="{
-        size: 'xl',
-        ui: {
-          name: 'text-sm!',
-          root: 'gap-2.5 size-full translate-x-2.5! grow'
-        }
-      }"
-      trailing-icon="i-left">
-      <MatchStatus
-        v-if="account && props.triggerStyle === 'user'"
-        v-bind="props?.user"
-        :ui="props.user?.ui"
-        :summoner="account"
-        variant="user" />
-    </UButton>
-    <template #content>
-      <ThemeMenu />
-    </template>
-  </LazyUCollapsible>
+        root: 'flex flex-col px-1',
+        content:
+          'pt=y-1 w-(--reka-popover-trigger-width)! space-y-px divide-y divide-p3 shadow-none drop-shadow-sm drop-shadow-black/5'
+      }">
+      <UButton
+        v-bind="delegated"
+        size="xl"
+        :active="open"
+        :ui="{
+          base: 'w-full justify-between px-2 inset-shadow-none!',
+          trailingIcon:
+            'size-4 translate-x-px opacity-60 group-open/btn:opacity-100 group-hover/btn:opacity-100'
+        }"
+        trailing-icon="i-up-down">
+        <MatchStatus
+          v-if="account"
+          v-bind="props?.user"
+          :ui="props.user?.ui"
+          :summoner="account"
+          variant="user" />
+      </UButton>
+      <template #content>
+        <AdminTestMenu v-bind="subProps" />
+
+        <div v-for="(group, i) in menu" :key="i" class="p-1">
+          <LazyThemeMenu v-if="i === 1" v-bind="subProps" />
+          <UButton
+            v-for="item in group"
+            :key="item.label"
+            v-bind="{ ...subProps.button, ...item }"
+            color="secondary"
+            :ui="{
+              ...subProps.button.ui,
+              leadingIcon: cn(
+                asDropdownItem(item)?.ui?.itemLeadingIcon,
+                item?.ui?.leadingIcon
+              )
+            }"
+            :icon="item.icon"
+            :label="item.label"
+            :to="item?.to"
+            @click="item.onClick">
+            <template v-if="asDropdownItem(item)?.kbds" #trailing>
+              <div class="flex translate-x-0.5 items-center gap-0.5">
+                <UKbd
+                  v-for="k in asDropdownItem(item)?.kbds"
+                  :key="String(k)"
+                  square
+                  size="lg"
+                  color="base"
+                  :value="String(k)" />
+              </div>
+            </template>
+          </UButton>
+        </div>
+      </template>
+    </LazyUPopover>
+  </div>
 </template>

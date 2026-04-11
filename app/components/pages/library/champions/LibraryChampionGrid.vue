@@ -9,21 +9,16 @@ const winrates = computed(() => wr)
 <template>
   <div
     v-auto-animate
-    class="grid h-fit w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-between gap-4 pt-3">
-    <div
+    class="grid h-fit w-full grid-cols-[repeat(auto-fill,minmax(64px,1fr))] grid-rows-[repeat(auto-fill,minmax(64px,1fr))] justify-between gap-4 pt-3">
+    <HoverIcon
       v-for="item in champFilter().filtered"
+      :id="champIdByKey(item)"
       :key="item"
-      class="flex size-20 grow items-center justify-center">
-      <Champion :k="item" :ui="{ root: 'size-20' }">
-        <template v-if="winrates" #content>
-          <LazyChampionWinrateTooltip
-            hydrate-on-interaction
-            :k="item"
-            :winrates="
-              winrates?.filter((w) => w.champion === champNameByKey(item))
-            " />
-        </template>
-      </Champion>
-    </div>
+      :k="item"
+      type="champion"
+      :avatar="{ ui: { root: 'size-22' } }"
+      :winrates="
+        winrates?.filter((w) => w.champion === champNameByKey(item))
+      " />
   </div>
 </template>

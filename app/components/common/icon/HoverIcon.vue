@@ -2,48 +2,52 @@
 import {
   LazyAbilityTooltip,
   LazyChampionTooltip,
+  LazyChampionWinrateTooltip,
   LazyItemTooltip,
   LazyRuneTooltip,
   LazySpellTooltip,
   MatchStatus
 } from "#components"
-import type {
-  AvatarPropsExt,
-  DomainType,
-  HoverIcon as HoverIconProps,
-  TooltipPropsExt
-} from "#shared/types"
+import type { AvatarPropsExt, DomainType, TooltipPropsExt } from "#shared/types"
+
 import { getSummonerIcon } from "~/domain/utils/img"
 
-interface ResolvedHoverIcon {
+interface ResolvedType {
   label?: string
   src?: string
-  component?: Component | null
+  component?: Record<string, Component>
   avatar?: AvatarPropsExt
   pin?: boolean
-}
-
-interface HoverIconWrapperProps {
-  id?: HoverIconProps["id"]
-  k?: HoverIconProps["k"]
-  type?: HoverIconProps["type"]
-  summoner?: HoverIconProps["summoner"]
-  tooltip?: TooltipPropsExt
-  avatar?: AvatarPropsExt
+  props?: Partial<Record<keyof IconProps, IconProps[keyof IconProps]>>
 }
 
 const {
   tooltip = {
     pin: true,
     interactive: true,
-    effects: true,
-    map: 0
+    effects: true
   },
   avatar = { round: false },
   summoner,
   type,
-  id
-} = defineProps<HoverIconWrapperProps>()
+  map,
+  id,
+  k,
+  winrates
+  // variant = "default"
+} = defineProps<IconProps>()
+
+interface IconProps {
+  id?: number
+  k?: string
+  map?: number
+  type?: DomainType
+  summoner?: Summoner
+  tooltip?: TooltipPropsExt
+  avatar?: AvatarPropsExt
+  winrates?: ChampionWinrate[]
+  //variant?: "default" | string
+}
 
 const tt = computed<TooltipPropsExt>(() => safeObject(tooltip))
 const ava = computed<AvatarPropsExt>(() => safeObject(avatar))
@@ -55,7 +59,7 @@ const invisibleBg = {
     "bg-transparent drop-shadow-sm shadow-none ring-0 inset-shadow-none noise-0"
 }
 
-const types: Record<DomainType, ResolvedHoverIcon> = {
+const types: Record<DomainType, ResolvedType> = {
   rune: {
     label: runeNameById(Number(id)) ?? "",
     component: LazyRuneTooltip,
@@ -64,12 +68,14 @@ const types: Record<DomainType, ResolvedHoverIcon> = {
   item: {
     label: itemNameById(Number(id)) ?? "",
     component: LazyItemTooltip,
-    src: `/img/item/${id}.webp`
+    src: `/img/item/${id}.webp`,
+    props: { map }
   },
   champion: {
     label: champNameById(Number(id)) ?? "",
-    component: LazyChampionTooltip,
-    src: `/img/champion/${id}.webp`
+    src: `/img/champion/${id}.webp`,
+    component: LazyChampionWinrateTooltip,
+    props: { winrates, k }
   },
   spell: {
     label: spellNameById(Number(id)) ?? "",
@@ -83,7 +89,7 @@ const types: Record<DomainType, ResolvedHoverIcon> = {
   },
   path: {
     label: pathNameById(Number(id)) ?? "",
-    component: null,
+    component: undefined,
     src: `/img/path/${id}.webp`,
     avatar: { ui: invisibleBg, round: true }
   },
@@ -97,19 +103,24 @@ const types: Record<DomainType, ResolvedHoverIcon> = {
     label: summoner?.name ?? "",
     component: MatchStatus,
     pin: false,
-    src: getSummonerIcon(summoner?.icon) ?? ""
+    src: getSummonerIcon(summoner?.icon) ?? "",
+    props: { map }
   },
   summoner: {
     label: summoner?.name ?? "",
     pin: false,
-    component: null,
-    src: getSummonerIcon(summoner?.icon) ?? ""
+    component: undefined,
+    src: getSummonerIcon(summoner?.icon) ?? "",
+    props: { summoner }
   }
 }
 
-const item = computed<ResolvedHoverIcon>(() =>
-  safeObject(types[type as DomainType])
-)
+const item = computed<ResolvedType>(() => safeObject(types[type as DomainType]))
+
+/* const resolved = computed<ResolvedType>(() => ({
+  ...item.value,
+  ...item.value[variant || "default"]
+})) */
 const mergedTooltip = computed<TooltipPropsExt>(() => ({
   ...tt.value,
   label: tt.value.label ?? item.value.label,
@@ -144,7 +155,7 @@ const mergedTooltip = computed<TooltipPropsExt>(() => ({
       <div v-for="i in 8" :key="i" />
     </template>
     <template v-if="item.component" #content>
-      <component :is="item.component" :id :map="tt?.map" :summoner />
+      <component :is="item.component" :id v-bind="item.props" />
     </template>
   </Avatar>
 </template>

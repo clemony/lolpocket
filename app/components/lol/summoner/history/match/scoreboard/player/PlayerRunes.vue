@@ -21,7 +21,7 @@ const keystone = computed(() =>
       )
     ">
     <HoverIcon
-      :id="keystone?.id ?? null"
+      :id="keystone?.id ?? undefined"
       size="sm"
       type="keystone"
       :avatar="{

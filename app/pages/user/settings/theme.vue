@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { colorModes } from "#layers/ui/app/config/colorMode"
-import { themeAccentOptions } from "#layers/ui/app/config/themeAccent"
+import { themeAccentOptions } from "~/components/user/settings/theme/themeAccent"
+import { colorModes } from "~/components/user/settings/theme/themeBase"
 definePageMeta({
   title: "Theme",
   description: "Choose your app interface colors.",
@@ -15,7 +15,7 @@ const themePreference = useThemePreference()
 const themeAccent = useThemeAccentPreference()
 
 function handleChange(theme: string) {
-  themePreference.value = theme
+  //themePreference.value = theme
 }
 </script>
 
@@ -31,13 +31,8 @@ function handleChange(theme: string) {
 
     <section class="space-y-3">
       <div class="space-y-1">
-        <h3 class="text-xl font-semibold">
-          Accent
-        </h3>
-        <p class="text-sm text-n4">
-          Pick the accent family used by badges, Daisy accent utilities, and
-          appearance previews.
-        </p>
+        <h3 class="text-xl font-semibold">Accent</h3>
+        <p class="text-sm text-n4">Customize the accent color.</p>
       </div>
 
       <div class="flex flex-wrap gap-3">

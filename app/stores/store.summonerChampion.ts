@@ -1,5 +1,4 @@
 //
-import { defineStore } from "pinia"
 import { unref } from "vue"
 import { aggregateAllies } from "~/domain/stats/aggregateAllies"
 import type { ChampionPairStats } from "~/domain/stats/aggregateDuos"
@@ -24,21 +23,23 @@ export const sChampion = defineStore("summonerChampion", () => {
   const champion = computed(() => ({
     id: champIdByKey(String(route.params.champion_key)),
     key: String(route.params.champion_key),
-    name: champNameByKey(String(route.params.champion_key)),
+    name: champNameByKey(String(route.params.champion_key))
   }))
 
   const matchData = computed<MatchPlayerData[]>(() => {
     if (!timelines.value?.length) return []
 
     return filteredMatches.value
-      .filter((m) =>
+      .filter((m: MatchData) =>
         m.participants.some(
-          (p) => p.puuid === id && p.championId === champion.value.id
+          (p: Player) => p.puuid === id && p.championId === champion.value.id
         )
       )
-      .map((m) => {
-        const player = m.participants.find((p) => p.puuid === id)
-        const timeline = timelines.value?.find((tl) => tl.matchId === m.matchId)
+      .map((m: MatchData) => {
+        const player = m.participants.find((p: Player) => p.puuid === id)
+        const timeline = timelines.value?.find(
+          (tl: PlayerTimeline) => tl.matchId === m.matchId
+        )
         if (!player || !timeline) return null
         return { match: m, player, timeline }
       })
@@ -94,6 +95,6 @@ export const sChampion = defineStore("summonerChampion", () => {
     runes,
     skills,
     spells,
-    stats,
+    stats
   }
 })

@@ -212,7 +212,7 @@ const command = inject<Record<string, () => void>>("command")
     </UDropdownMenu>
     <Grow />
     <!-- user -->
-    <UDropdownMenu
+    <!--   <UDropdownMenu
       :items="userMenuItems(command)"
       size="md"
       :content="{ side: 'top', collisionPadding: 0, sideOffset: 0 }"
@@ -244,6 +244,6 @@ const command = inject<Record<string, () => void>>("command")
           {{ user().inbox?.messages.length ?? 0 }}
         </LazyUBadge>
       </template>
-    </UDropdownMenu>
+    </UDropdownMenu> -->
   </div>
 </template>

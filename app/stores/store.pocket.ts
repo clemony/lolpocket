@@ -1,6 +1,3 @@
-//
-import { defineStore } from "pinia"
-
 export const usePockets = defineStore(
   "pocketStore",
   () => {
@@ -27,14 +24,14 @@ export const usePockets = defineStore(
 
       // helpers
       getPocket: (key: string) =>
-        pockets.value.find((pocket) => pocket.key === key),
+        pockets.value.find((pocket) => pocket.key === key)
     }
   },
 
   {
     persist: {
       key: "pocketStore",
-      storage: piniaPluginPersistedstate.localStorage(),
-    },
-  },
+      storage: piniaPluginPersistedstate.localStorage()
+    }
+  }
 )

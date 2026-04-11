@@ -7,7 +7,7 @@ const {
   fullWidth,
   variant = "none",
 
-  class: className,
+  class: className
 } = defineProps<
   PrimitiveProps & {
     class?: HTMLAttributes["class"]
@@ -17,7 +17,7 @@ const {
     fullWidth?: boolean
   }
 >()
-const s = await sSummoner().resolveByPuuid(user().account?.puuid)
+const s = await summonerStore().resolveByPuuid(user().account?.puuid)
 const summoner = computed(() => s)
 </script>
 

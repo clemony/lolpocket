@@ -4,7 +4,7 @@ const route = useRoute()
 definePageMeta({
   name: "Inbox",
   icon: "i-mail",
-  class: "**:stroke-[1.8!]",
+  class: "**:stroke-[1.8!] -translate-x-px",
   auth: true,
   order: 1,
   path: "/inbox"

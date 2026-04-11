@@ -67,7 +67,7 @@ export const sMatches = defineStore("summonerMatches", () => {
         loadMessage.value = "No new matches found!"
       }
 
-      sSummoner().patchSummoner(puuid, { lastMatchUpdate: Date.now() })
+      summonerStore().patchSummoner(puuid, { lastMatchUpdate: Date.now() })
     } finally {
       loading.value = false
     }
@@ -113,6 +113,6 @@ export const sMatches = defineStore("summonerMatches", () => {
     loadOlder,
     matches,
 
-    timelines,
+    timelines
   }
 })

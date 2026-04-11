@@ -6,7 +6,7 @@ export const inputTheme = defineUiTheme({
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
     leadingIcon: "shrink-0 text-n5/80",
-    root: "relative inline-flex items-center focus-within:outline-0 focus:outline-none focus-visible:outline-0",
+    root: "group/input relative inline-flex items-center transition-colors duration-300 focus-within:outline-0 focus:outline-none focus-visible:outline-0",
     trailing: "absolute inset-y-0 end-0 flex items-center",
     trailingIcon: "shrink-0 text-p5",
     base: [
@@ -19,14 +19,14 @@ export const inputTheme = defineUiTheme({
       error: "",
       info: "",
       neutral: "",
-      default: ""
+      base: ""
     },
     variant: {
       ghost:
         "bg-transparent text-pc hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
       none: "bg-transparent text-pc",
       outline:
-        "focus-visible:ring-unset border border-p3 bg-default text-pc ring-0! inset-shadow-xs delay-0 hover:ring-0 focus-visible:border-pc/60! focus-visible:ring-0! focus-visible:ring-offset-0! focus-visible:outline-1!",
+        "bg-transparent ring inset-shadow-xs delay-0 focus-visible:shadow-xs focus-visible:ring-offset-0",
 
       soft: "bg-p1/50 text-pc hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
       subtle: "bg-p1 text-pc ring ring-p3 ring-inset",
@@ -75,11 +75,11 @@ export const inputTheme = defineUiTheme({
         leading: "ps-2.5",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-4.5",
-        trailing: "pe-2.5",
+        trailing: "pe-2",
         trailingIcon: "size-5"
       },
       lg: {
-        base: "h-12 gap-2 px-3 py-0 text-sm",
+        base: "h-12 gap-2 rounded-xl px-3 py-0 text-sm",
         leading: "ps-3",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-4.5",
@@ -87,7 +87,7 @@ export const inputTheme = defineUiTheme({
         trailingIcon: "size-5"
       },
       xl: {
-        base: "input-xl h-14 gap-2 px-3 py-0 text-base",
+        base: "input-xl h-14 gap-2 rounded-xl px-3 py-0 text-base",
         leading: "ps-3",
         leadingAvatarSize: "xs",
         leadingIcon: "size-4.5",
@@ -105,13 +105,13 @@ export const inputTheme = defineUiTheme({
   },
   compoundVariants: [
     {
-      color: "default",
-      variant: ["outline", "subtle"],
+      color: "base",
+      variant: "outline",
       class:
-        "focus-visible:ring-inset-p0 focus-visible:ring-1! focus-visible:ring-p0/60 focus-visible:ring-offset-2 focus-visible:ring-offset-p0! focus-visible:outline-0!"
+        "text-pc ring-p3/80 focus-visible:fx-noise focus-visible:ring-1! focus-visible:inset-shadow-sm focus-visible:ring-pc/70 focus-visible:ring-offset-p3 disabled:bg-p1/40"
     },
     /*     {
-      color: "default",
+      color: "base",
       class: "ring ring-n4 ring-inset",
       highlight: true
     }, */
@@ -128,7 +128,8 @@ export const inputTheme = defineUiTheme({
     {
       color: "neutral",
       variant: "soft",
-       class: "bg-neutral/96 text-nc ring ring-nc ring-inset placeholder:text-nc/70 hover:bg-neutral/96 focus:bg-neutral/96 disabled:bg-neutral/86 *:first:[&_svg]:text-nc"
+      class:
+        "bg-neutral/96 text-nc ring ring-nc ring-inset placeholder:text-nc/70 hover:bg-neutral/96 focus:bg-neutral/96 disabled:bg-neutral/86 *:first:[&_svg]:text-nc"
     },
     {
       class: "ps-7",
@@ -197,7 +198,7 @@ export const inputTheme = defineUiTheme({
     }
   ],
   defaultVariants: {
-    color: "default",
+    color: "base",
     variant: "outline",
     size: "md"
   }

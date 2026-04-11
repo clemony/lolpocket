@@ -23,7 +23,7 @@ const author = computedAsync(async () => {
   if (!a) return null
   return {
     ...a,
-    ...(await sSummoner().resolveByPuuid(a.puuid))
+    ...(await summonerStore().resolveByPuuid(a.puuid))
   } as AccountData
 }, null)
 /* const container = useTemplateRef<HTMLElement>('container')

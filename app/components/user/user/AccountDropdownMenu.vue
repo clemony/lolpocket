@@ -48,8 +48,9 @@ function getThemeItemLabel(item: string | { label?: string; value?: string }) {
   return item.label ?? item.value ?? "system"
 }
 
-const currentThemePreview = computed(() =>
-  themePreference.value === "system" ? systemTheme.value : themePreference.value
+const currentThemePreview = computed(
+  () => 0
+  //themePreference.value === "system" ? systemTheme.value : themePreference.value
 )
 </script>
 
@@ -113,12 +114,12 @@ const currentThemePreview = computed(() =>
           variant="user" />
       </UButton>
     </template>
-
-    <template #theme="{ item }">
-      <UBadge
+    <!--
         :trailing-icon="
           getThemeItemValue(item) === themePreference ? 'i-tick' : ''
-        "
+        " -->
+    <template #theme="{ item }">
+      <!--    <UBadge
         :data-theme="previewTheme(getThemeItemValue(item))"
         :ui="{
           base: cn(
@@ -130,7 +131,7 @@ const currentThemePreview = computed(() =>
           trailingIcon: '**:stroke-[2.5]',
           label: 'font-semibold text-pc capitalize'
         }"
-        :label="getThemeItemLabel(item)" />
+        :label="getThemeItemLabel(item)" /> -->
     </template>
     <template #accent="{ item }">
       <UTooltip

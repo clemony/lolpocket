@@ -4,24 +4,25 @@ export const switchTheme = defineUiTheme({
   slots: {
     root: "group relative flex cursor-pointer items-start",
     base: "hover:focus-ring focus-visible:focus-ring inline-flex shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent data-[state=unchecked]:bg-accented",
-    container: "flex cursor-pointer items-center shadow-sm",
+    container:
+      "flex cursor-pointer items-center rounded-full shadow-sm inset-shadow-xs",
     thumb:
-      "group pointer-events-none flex items-center justify-center rounded-full bg-p0 shadow-lg ring-0 transition-transform duration-200 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0",
+      "group pointer-events-none flex items-center justify-center rounded-full bg-p0 shadow-sm ring-0 transition-transform duration-200 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0",
     icon: "absolute size-10/12 shrink-0 opacity-0 group-data-[state=unchecked]:text-dimmed",
     wrapper: "ms-2",
     label: "block cursor-pointer leading-none font-medium text-pc",
-    description: "text-muted",
+    description: "text-muted"
   },
   variants: {
     primary: {
       container: "group-hover:before:ring-pc/80",
       base: "focus-visible:outline-neutral data-[state=checked]:bg-neutral",
-      icon: "group-data-[state=checked]:text-highlighted",
+      icon: "group-data-[state=checked]:text-highlighted"
     },
     neutral: {
       base: "group-hover:before:ring-nc focus-visible:outline-inverted data-[state=checked]:bg-inverted",
-      icon: "group-data-[state=checked]:text-highlighted",
-    },
+      icon: "group-data-[state=checked]:text-highlighted"
+    }
   },
   size: {
     xs: {
@@ -29,69 +30,69 @@ export const switchTheme = defineUiTheme({
       container: "h-4",
       thumb:
         "size-3 data-[state=checked]:translate-x-3 data-[state=checked]:rtl:-translate-x-3",
-      wrapper: "text-xs",
+      wrapper: "text-xs"
     },
     sm: {
       base: "w-8",
       container: "h-4",
       thumb:
         "size-3.5 data-[state=checked]:translate-x-3.5 data-[state=checked]:rtl:-translate-x-3.5",
-      wrapper: "pb-1 text-xs",
+      wrapper: "pb-1 text-xs"
     },
     md: {
       base: "w-9",
       container: "h-5",
       thumb:
         "size-4 data-[state=checked]:translate-x-4 data-[state=checked]:rtl:-translate-x-4",
-      wrapper: "text-sm",
+      wrapper: "text-sm"
     },
     lg: {
       base: "w-10",
       container: "h-5",
       thumb:
         "size-4.5 data-[state=checked]:translate-x-4.5 data-[state=checked]:rtl:-translate-x-4.5",
-      wrapper: "text-sm",
+      wrapper: "text-sm"
     },
     xl: {
       base: "w-11",
       container: "h-6",
       thumb:
         "size-5 data-[state=checked]:translate-x-5 data-[state=checked]:rtl:-translate-x-5",
-      wrapper: "text-base",
-    },
+      wrapper: "text-base"
+    }
   },
   checked: {
     true: {
-      icon: "group-data-[state=checked]:opacity-100",
-    },
+      icon: "group-data-[state=checked]:opacity-100"
+    }
   },
   unchecked: {
     true: {
-      icon: "group-data-[state=unchecked]:opacity-100",
-    },
+      icon: "group-data-[state=unchecked]:opacity-100"
+    }
   },
   loading: {
     true: {
-      icon: "animate-spin",
-    },
+      icon: "animate-spin"
+    }
   },
   required: {
     true: {
-      label: "after:ms-0.5 after:text-error after:content-['*']",
-    },
+      label: "after:ms-0.5 after:text-error after:content-['*']"
+    }
   },
   disabled: {
     true: {
       root: "opacity-75",
       base: "cursor-not-allowed",
       label: "cursor-not-allowed",
-      description: "cursor-not-allowed",
-    },
+      description: "cursor-not-allowed"
+    }
   },
   defaultVariants: {
     color: "primary",
-    size: "md",
-  },
+    size: "md"
+  }
 })
 
 export default switchTheme

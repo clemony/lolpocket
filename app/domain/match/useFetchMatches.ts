@@ -35,7 +35,7 @@ export async function useFetchMatches(summoner: Summoner) {
             }
           )
 
-          sSummoner().mergeRanked(summoner.puuid, res.ranked)
+          summonerStore().mergeRanked(summoner.puuid, res.ranked)
         } catch (err) {
           console.error("🔥 Failed ranked refresh", err)
         }

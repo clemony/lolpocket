@@ -9,43 +9,59 @@ const { backpack } = defineProps<{
   backpack: CommandGroup
 }>()
 
-const { account } = safeObject(storeToRefs(user()))
+const { account, settings } = safeObject(storeToRefs(user()))
 const command = inject<Record<string, () => void>>("command")
 
-const menu = computed<CommandItem[]>(() => [
-  {
-    label: "Profile",
-    type: "label",
-    value: "profile-label",
-    items: userProfileItems.value
-  },
-  {
-    label: "Backpack",
-    type: "label",
-    value: "backpack-label",
-    items: [
+const menu = computed<CommandItem[]>(
+  () =>
+    [
       {
-        label: "Pockets",
-        icon: "i-folders",
-        value: "backpack-pocket",
-        trailingIcon: "",
-        to: "/backpack/pockets"
+        label: "Profile",
+        type: "label",
+        value: "profile-label",
+        items: userProfileItems.value
       },
       {
-        label: "New Pocket",
-        icon: "i-lucide-plus",
-        value: "new-pocket",
-        variant: "solid",
-        trailingIcon: "",
-        color: "neutral",
-        onSelect(event: Event) {
-          newPocket()
-          if (command && command.close) command.close()
-        }
-      }
-    ]
-  }
-])
+        label: "Backpack",
+        type: "label",
+        value: "backpack-label",
+        items: [
+          {
+            label: "Pockets",
+            icon: "i-folders",
+            value: "backpack-pocket",
+            trailingIcon: "",
+            to: "/backpack/pockets"
+          },
+          {
+            label: "New Pocket",
+            icon: "i-lucide-plus",
+            value: "new-pocket",
+            variant: "solid",
+            trailingIcon: "",
+            color: "neutral",
+            onSelect(event: Event) {
+              newPocket()
+              if (command && command.close) command.close()
+            }
+          }
+        ]
+      },
+      settings.value?.favorite_summoners
+        ? {
+            label: "Following",
+            type: "label",
+            icon: "i-heart",
+            value: "following-label",
+            items: settings.value?.favorite_summoners.map((puuid: string) => {
+              const summoner = async () =>
+                await summonerStore().resolveOrFetch(puuid)
+              return {}
+            })
+          }
+        : {}
+    ].filter(Boolean) as CommandItem[]
+)
 const { openLogin, openSignUp } = useAuthModal()
 
 const buttonProps: ButtonProps = {
@@ -126,6 +142,7 @@ const buttonProps: ButtonProps = {
             <CommandButton
               v-for="im in item.items"
               :key="im.value"
+              :value="im.value"
               :item="im" />
           </div>
         </template>

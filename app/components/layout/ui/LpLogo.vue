@@ -2,18 +2,16 @@
 import type { ButtonProps } from "@nuxt/ui"
 
 const {
-  class: className,
   variant = "ghost",
   color = "neutral",
   size = "md",
-  side = "bottom"
-} = defineProps<{
-  class?: HTMLAttributes["class"]
-  variant?: ButtonProps["variant"]
-  color?: ButtonProps["color"]
-  size?: ButtonProps["size"]
-  side?: Side
-}>()
+  side = "bottom",
+  ui
+} = defineProps<
+  ButtonProps & {
+    side?: Side
+  }
+>()
 </script>
 
 <template>
@@ -21,12 +19,13 @@ const {
     <UButton
       to="/nexus"
       :ui="{
-        base: cn('group/logo', className),
+        base: cn('group/logo grid shrink-0 place-items-center p-0', ui?.base),
         label: cn(
-          'truncate-none ellipsis-none block overflow-visible font-bold',
+          'truncate-none ellipsis-none block overflow-visible leading-none font-black',
           {
-            'text-[1.4rem]': size === 'md'
-          }
+            'text-2xl': size === 'md'
+          },
+          ui?.label
         )
       }"
       :color

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-discord: oklch(58% 52 274);
   --color-all-roles: oklch(37% 0 0);
 
   --color-mustard: oklch(75% 21% 88);

@@ -12,7 +12,7 @@ export const referenceItems = computed(() => {
 
   const items: CommandItem[] = uniqueItems.map((entry) => ({
     label: entry.name,
-    id: entry.id,
+    id: entry.id.toString(),
     value: entry.id,
     avatar: {
       src: `/img/item/${entry.id}.webp`,
@@ -26,7 +26,7 @@ export const referenceItems = computed(() => {
       {
         slot: "item-command",
         value: "item-command",
-        id: entry.id,
+        id: entry.id.toString(),
         highlight: false,
         ui: componentClass
       }
@@ -36,7 +36,7 @@ export const referenceItems = computed(() => {
     .filter((entry) => entry?.id != null && !!entry.name)
     .map((entry) => ({
       label: entry.name,
-      id: entry.id,
+      id: entry.id.toString(),
       value: entry.id,
       avatar: {
         size: "sm",
@@ -50,7 +50,7 @@ export const referenceItems = computed(() => {
         {
           slot: "champion-command",
           value: "champion-command",
-          id: entry.id,
+          id: entry.id.toString(),
           highlight: false,
           ui: componentClass
         }
@@ -61,7 +61,7 @@ export const referenceItems = computed(() => {
     .filter((entry) => entry?.id != null && !!entry.name)
     .map((entry) => ({
       label: entry.name,
-      id: entry.id,
+      id: entry.id.toString(),
       value: entry.id,
       avatar: {
         size: "sm",
@@ -75,7 +75,7 @@ export const referenceItems = computed(() => {
         {
           slot: "rune-command",
           value: "rune-command",
-          id: entry.id,
+          id: entry.id.toString(),
           highlight: false,
           ui: componentClass
         }
@@ -86,7 +86,7 @@ export const referenceItems = computed(() => {
     .filter((entry) => entry?.id != null && !!entry.name)
     .map((entry) => ({
       label: entry.name,
-      id: entry.id,
+      id: entry.id.toString(),
       value: entry.id,
       avatar: {
         size: "sm",
@@ -100,7 +100,7 @@ export const referenceItems = computed(() => {
         {
           slot: "spell-command",
           value: "spell-command",
-          id: entry.id,
+          id: entry.id.toString(),
           highlight: false,
           ui: componentClass
         }

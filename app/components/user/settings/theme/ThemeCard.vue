@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { modeQuote } from "~~/layers/ui/app/config/colorMode"
+import { modeQuote } from "~/components/user/settings/theme/themeBase"
 
 const { mode, class: className } = defineProps<{
   mode: string
@@ -40,7 +40,7 @@ const previewTheme = computed(() =>
         'group/quote hover-ring noise relative flex size-full! h-90! max-h-90 w-82 max-w-82 grow cursor-pointer flex-col items-start justify-center gap-5 overflow-hidden rounded-lg bg-p0 px-6 py-4 text-pc shadow-sm shadow-black/16 drop-shadow-xs select-none',
         {
           'border-pc group-hover/label:ring group-hover/label:ring-offset-1':
-            mode === $colorMode.preference
+            mode === user().settings?.theme
         },
         className
       )
@@ -52,9 +52,7 @@ const previewTheme = computed(() =>
       <h4 class="leading-8 font-bold capitalize">
         {{ mode }}
       </h4>
-      <p class="h-9 leading-5 text-pretty italic">
-        '{{ quote?.quote }}'
-      </p>
+      <p class="h-9 leading-5 text-pretty italic">'{{ quote?.quote }}'</p>
       <p class="pr-4 text-end text-sm/4 text-pretty italic opacity-80">
         —{{ quote?.source }}
       </p>

@@ -1,6 +1,3 @@
-// stores/cooldown.ts
-import { defineStore } from "pinia"
-
 interface CooldownEntry {
   timestamp: number
   wait: number
@@ -16,7 +13,7 @@ export const cds = defineStore(
     function set(puuid: string, action: string, wait: number) {
       cooldowns.value[getKey(puuid, action)] = {
         timestamp: Date.now(),
-        wait,
+        wait
       }
     }
 
@@ -57,10 +54,10 @@ export const cds = defineStore(
       clear,
       get,
       purgeExpired,
-      set,
+      set
     }
   },
   {
-    persist: true,
+    persist: true
   }
 )

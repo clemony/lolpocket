@@ -1,12 +1,11 @@
-import { championIndex } from "#shared/constants/champions/championIndex"
 import { champIdToRelease } from "#shared/constants/champions/champIdToRelease"
+import { championIndex } from "#shared/constants/champions/championIndex"
 import { championToTitle } from "#shared/constants/champions/championToTitle"
 import { champKeyToRole } from "#shared/constants/champions/champKeyToRole"
 import { positionToChamp } from "#shared/constants/champions/positionToChamp"
 import { rangeToChamp } from "#shared/constants/champions/rangeToChamp"
 import { resourceToChamp } from "#shared/constants/champions/resourceToChamp"
 import { roleToChamp } from "#shared/constants/champions/roleToChamp"
-import { defineStore } from "pinia"
 
 export type AttackType = "All" | "Melee" | "Ranged"
 export type AttackKey = 0 | 1 | 2
@@ -35,7 +34,9 @@ function collectLabelsById(source: Record<string, number[]>) {
 
 export const champFilter = defineStore("champ-filter", () => {
   const championSplashDropdown = ref<HTMLElement | null>(null)
-  const championMap = new Map(championIndex.map((champion) => [champion.id, champion]))
+  const championMap = new Map(
+    championIndex.map((champion) => [champion.id, champion])
+  )
   const rolesById = collectLabelsById(roleToChamp)
   const positionsById = collectLabelsById(positionToChamp)
   const rangesById = collectLabelsById(rangeToChamp)
@@ -149,13 +150,13 @@ export const champFilter = defineStore("champ-filter", () => {
       switch (filters.value.sort) {
         case "release-newest":
           return (
-            b.releaseDate.localeCompare(a.releaseDate)
-            || a.name.localeCompare(b.name)
+            b.releaseDate.localeCompare(a.releaseDate) ||
+            a.name.localeCompare(b.name)
           )
         case "release-oldest":
           return (
-            a.releaseDate.localeCompare(b.releaseDate)
-            || a.name.localeCompare(b.name)
+            a.releaseDate.localeCompare(b.releaseDate) ||
+            a.name.localeCompare(b.name)
           )
         case "alpha-desc":
         case "za":

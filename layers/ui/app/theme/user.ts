@@ -2,9 +2,9 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const userTheme = defineUiTheme({
   slots: {
-    name: "font-semibold text-pc",
+    name: "font-semibold text-pc antialiased",
     avatar: "shrink-0 **:text-pc/20",
-    description: "text-n5",
+    description: "text-n5 antialiased",
     root: "group/user relative",
     wrapper: ""
   },
@@ -72,8 +72,7 @@ export const userTheme = defineUiTheme({
         name: "text-lg",
         description: "text-pc",
         root: "gap-3"
-      },
-
+      }
     },
     to: {
       false: {

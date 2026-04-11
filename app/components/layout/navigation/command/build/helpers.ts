@@ -1,5 +1,21 @@
+import type { ButtonProps, DropdownMenuItem } from "@nuxt/ui"
 import type { ShallowRef } from "vue"
 import type { CommandItem } from "./useCommandGroups"
+
+export function asDropdownItem(
+  item: DropdownMenuItem | DropdownMenuItem[] | ButtonProps
+): DropdownMenuItem {
+  return item as DropdownMenuItem
+}
+
+export const mergeBtnUi = (
+  itemUi: ButtonPropsExt["ui"],
+  propUi: ButtonPropsExt["ui"]
+) =>
+  mergeUi<NonNullable<ButtonPropsExt["ui"]>>(
+    itemUi as NonNullable<ButtonPropsExt["ui"]>,
+    propUi as NonNullable<ButtonPropsExt["ui"]>
+  )
 
 export function asCommandItem(item: unknown) {
   return item as CommandItem

@@ -23,6 +23,20 @@ export type Region = (typeof regionKeys)[number]
 
 export type AccountData = Account & Summoner
 
+export type ProviderKey<K extends string> =
+  | "email"
+  | "google"
+  | "discord"
+  | "riot"
+export type SbProviderKey<K extends string> = "discord" | "google"
+
+export interface ProviderIdentity {
+  provider: string
+  description: string
+  avatar: string
+  name: string
+}
+
 export interface Identifier {
   name?: string
   puuid?: string

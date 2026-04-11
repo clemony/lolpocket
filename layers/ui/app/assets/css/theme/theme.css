@@ -72,6 +72,9 @@
   --radius-2xl: 0.75rem;
   --radius-3xl: 0.8rem;
   --radius-4xl: 0.85rem;
+  --radius-5xl: 0.9rem;
+  --radius-6xl: 0.95rem;
+  --radius-7xl: 1rem;
 
   --text-*: initial;
   --text-3xs: 0.78rem;

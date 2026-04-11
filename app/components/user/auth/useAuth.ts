@@ -1,13 +1,11 @@
-import type { Provider } from "~/domain/lp/external/authProviders"
-
-export async function useSignIn(provider: Provider) {
+export async function useSignIn(provider: SbProviderKey<string>) {
   const config = useRuntimeConfig()
   const client = useSupabaseClient()
   const { data, error } = await client.auth.signInWithOAuth({
     provider,
     options: {
-      redirectTo: config.public.authRedirect,
-    },
+      redirectTo: config.public.authRedirect
+    }
   })
   if (error) {
     console.error("Error logging in with Discord:", error)
@@ -31,8 +29,8 @@ export async function useSignUpNewUser(email: string, password: string) {
     email,
     password,
     options: {
-      emailRedirectTo: config.public.newUserRedirect,
-    },
+      emailRedirectTo: config.public.newUserRedirect
+    }
   })
   if (error) {
     console.error("Error logging in with Discord:", error)
@@ -44,7 +42,7 @@ export async function useResetPassword(email: string) {
   const client = useSupabaseClient()
 
   await client.auth.resetPasswordForEmail(email, {
-    redirectTo: "http://example.com/account/update-password",
+    redirectTo: "http://example.com/account/update-password"
   })
 }
 
@@ -66,8 +64,8 @@ const signInWithOtp = async (email: string) => {
   const { error } = await supabase.auth.signInWithOtp({
     email,
     options: {
-      emailRedirectTo: "http://localhost:3000/confirm",
-    },
+      emailRedirectTo: "http://localhost:3000/confirm"
+    }
   })
   if (error) console.log(error)
 }

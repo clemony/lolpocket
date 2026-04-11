@@ -1,8 +1,5 @@
-//
-import { defineStore } from "pinia"
-
-export const sSummoner = defineStore(
-  "summoner",
+export const summonerStore = defineStore(
+  "summoner-store",
   () => {
     const hydrated = ref<boolean>(false)
     const MAX_CACHE = 100
@@ -41,7 +38,7 @@ export const sSummoner = defineStore(
     async function getByRoute() {
       const route = useRoute()
       const [name, tag] = String(route.params.slug).split("_")
-      return await sSummoner().resolveBySlug(
+      return await summonerStore().resolveBySlug(
         name.toLowerCase(),
         String(route.params.region).toLowerCase(),
         tag.toLowerCase()
@@ -99,20 +96,20 @@ export const sSummoner = defineStore(
       console.log("🥸 - ensureSummoner - existing:", existing)
 
       const hasFullIdentity = Boolean(
-        existing?.puuid && existing?.region && existing?.name && existing?.tag,
+        existing?.puuid && existing?.region && existing?.name && existing?.tag
       )
       if (existing && hasFullIdentity && !force && !isStale(existing.puuid))
         return existing
 
       const base = await $fetch<Summoner>("/api/riot/summoner", {
-        params: args,
+        params: args
       })
 
       let ranked: { ranked: Summoner["ranked"] } = { ranked: {} }
       try {
         ranked = await $fetch<{ ranked: Summoner["ranked"] }>(
           "/api/riot/v4/league/entries/puuid",
-          { params: { puuid: base.puuid, region: base.region } },
+          { params: { puuid: base.puuid, region: base.region } }
         )
       } catch (err) {
         console.warn("Failed ranked lookup, continuing with base summoner", err)
@@ -120,7 +117,7 @@ export const sSummoner = defineStore(
 
       const full = {
         ...base,
-        ranked: ranked.ranked,
+        ranked: ranked.ranked
       }
       setSummoner(full)
 
@@ -138,7 +135,7 @@ export const sSummoner = defineStore(
 
     const mergeRanked = (
       puuid: Summoner["puuid"],
-      ranked: Summoner["ranked"],
+      ranked: Summoner["ranked"]
     ) => {
       const s = cache.value[puuid]
       if (!s) return
@@ -176,7 +173,7 @@ export const sSummoner = defineStore(
       // getByRoute,
       resolveBySlug,
       resolveOrFetch,
-      setSummoner,
+      setSummoner
     }
   },
   {
@@ -186,7 +183,7 @@ export const sSummoner = defineStore(
         ctx.store.rebuildIndex()
         ctx.store.hydrated = true
       },
-      storage: piniaPluginPersistedstate.localStorage(),
-    },
-  },
+      storage: piniaPluginPersistedstate.localStorage()
+    }
+  }
 )

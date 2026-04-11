@@ -1,11 +1,9 @@
-import { defineStore } from "pinia"
-
 export const session = defineStore(
   "session-store",
   () => {
     const openChampionTab = ref<string | null>(null)
     const sidebarStates = {
-      inboxDropdown: ref<boolean>(false),
+      inboxDropdown: ref<boolean>(false)
     }
     const sidebarOpen = ref(false)
     const profileSettings = ref<boolean>(false)
@@ -14,16 +12,16 @@ export const session = defineStore(
       backpack: {
         pinned: true,
         positions: true,
-        tags: true,
-      },
+        tags: true
+      }
     })
 
     const collapseStates = {
       championInfo: ref([true, true, true]),
       panel: {
         nav: ref([true, true, true, true, true, true]),
-        pocket: ref(false),
-      },
+        pocket: ref(false)
+      }
     }
     const blockDialog = ref<boolean>(false)
     return {
@@ -41,14 +39,14 @@ export const session = defineStore(
       collapseStates,
       commandOpen,
 
-      toggles,
+      toggles
     }
   },
   {
     persist: {
       key: "tempStore",
       storage: piniaPluginPersistedstate.sessionStorage(),
-      pick: ["collapseStates", "sidebarStates", "openChampionTab"],
-    },
-  },
+      pick: ["collapseStates", "sidebarStates", "openChampionTab"]
+    }
+  }
 )

@@ -1,11 +1,11 @@
 import * as v from "valibot"
 
-export const feedSourceSchema = v.picklist(["reddit"])
-export const feedVideoProviderSchema = v.picklist(["reddit", "youtube"])
+export const postSourceSchema = v.picklist(["reddit"])
+export const postVideoProviderSchema = v.picklist(["reddit", "youtube"])
 
-export const feedKeywordSchema = v.pipe(v.string(), v.trim(), v.minLength(1))
+export const postKeywordSchema = v.pipe(v.string(), v.trim(), v.minLength(1))
 
-export const feedLinkMetadataSchema = v.object({
+export const postLinkMetadataSchema = v.object({
   authorIsBlocked: v.optional(v.boolean()),
   domain: v.optional(v.nullable(v.string())),
   isSelf: v.optional(v.boolean()),
@@ -13,22 +13,22 @@ export const feedLinkMetadataSchema = v.object({
   linkFlairText: v.optional(v.nullable(v.string())),
   over18: v.optional(v.boolean()),
   postHint: v.optional(v.nullable(v.string())),
-  stickied: v.optional(v.boolean()),
+  stickied: v.optional(v.boolean())
 })
 
-export const feedLinkSchema = v.object({
+export const postLinkSchema = v.object({
   author: v.nullable(v.string()),
   excerpt: v.nullable(v.string()),
   fetched_at: v.pipe(v.string(), v.isoTimestamp()),
   flair: v.nullable(v.string()),
   id: v.optional(v.string()),
-  keywords: v.array(feedKeywordSchema),
-  metadata: feedLinkMetadataSchema,
+  keywords: v.array(postKeywordSchema),
+  metadata: postLinkMetadataSchema,
   num_comments: v.number(),
   permalink: v.pipe(v.string(), v.url()),
   preview_image_url: v.nullable(v.string()),
   score: v.number(),
-  source: feedSourceSchema,
+  source: postSourceSchema,
   source_created_at: v.pipe(v.string(), v.isoTimestamp()),
   source_id: v.pipe(v.string(), v.minLength(1)),
   subreddit: v.pipe(v.string(), v.minLength(1)),
@@ -41,17 +41,15 @@ export const feedLinkSchema = v.object({
   video_height: v.optional(v.nullable(v.number())),
   video_hls_url: v.optional(v.nullable(v.string())),
   video_id: v.optional(v.nullable(v.string())),
-  video_provider: v.optional(v.nullable(feedVideoProviderSchema)),
+  video_provider: v.optional(v.nullable(postVideoProviderSchema)),
   video_url: v.optional(v.nullable(v.string())),
-  video_width: v.optional(v.nullable(v.number())),
+  video_width: v.optional(v.nullable(v.number()))
 })
 
 export const feedListQuerySchema = v.object({
   keyword: v.optional(v.pipe(v.string(), v.trim(), v.minLength(1))),
-  keywords: v.optional(v.array(feedKeywordSchema)),
+  keywords: v.optional(v.array(postKeywordSchema)),
   limit: v.optional(v.pipe(v.number(), v.minValue(1), v.maxValue(25))),
   offset: v.optional(v.pipe(v.number(), v.minValue(0))),
-  subreddit: v.optional(v.pipe(v.string(), v.trim(), v.minLength(1))),
+  subreddit: v.optional(v.pipe(v.string(), v.trim(), v.minLength(1)))
 })
-
-export type RedditPost = v.InferOutput<typeof feedLinkSchema>

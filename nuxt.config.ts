@@ -6,8 +6,7 @@ import { colors as uiThemeColors } from "./layers/ui/app/theme/colors"
 
 const isCF = process.env.CF_PAGES === "1"
 const isProduction = process.env.NODE_ENV === "production"
-const nuxtChartsDeps = ["vue-chrts", "@unovis/ts", "@unovis/vue"] as const
-const redditFeedRefreshCron = "*/30 * * * *"
+const redditPostRefreshCron = "*/30 * * * *"
 
 export default defineNuxtConfig({
   imports: {
@@ -17,10 +16,6 @@ export default defineNuxtConfig({
 
   dir: {
     assets: "#layers/ui/app/assets"
-  },
-
-  alias: {
-    "@theme": fileURLToPath(new URL("./layers/ui/app/theme", import.meta.url))
   },
 
   modules: [
@@ -45,7 +40,7 @@ export default defineNuxtConfig({
   // app
   typescript: {
     strict: true,
-    typeCheck: !isCF
+    typeCheck: process.env.NODE_ENV === "development"
   },
 
   // UI
@@ -58,15 +53,32 @@ export default defineNuxtConfig({
   css: ["#layers/ui/app/assets/css/tailwind.css"],
   image: {
     provider: isCF ? "cloudflare" : "ipx",
-    domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"]
+    domains: [
+      "ddragon.leagueoflegends.com",
+      "cdn.communitydragon.org",
+      "lh3.googleusercontent.com",
+      "external-preview.redd.it",
+      "leagueoflegends.com",
+      "wiki.leagueoflegends.com"
+    ],
+    presets: {
+      card: {
+        modifiers: {
+          format: "webp",
+          width: 400,
+          height: 300,
+          quality: 50
+        }
+      }
+    }
   },
-  colorMode: {
+  /*  colorMode: {
     componentName: "ColorScheme",
     dataValue: "theme",
     fallback: "light",
     globalName: "__NUXT_COLOR_MODE__",
-    preference: "system"
-  },
+    preference: "light"
+  }, */
   icon: {
     provider: "iconify",
     serverBundle: false, // <- important
@@ -105,6 +117,7 @@ export default defineNuxtConfig({
   },
   ui: {
     fonts: false,
+    colorMode: false,
     experimental: {
       componentDetection: true
     },
@@ -121,7 +134,7 @@ export default defineNuxtConfig({
       tasks: true
     },
     scheduledTasks: {
-      [redditFeedRefreshCron]: ["reddit-refresh"]
+      [redditPostRefreshCron]: ["reddit-refresh"]
     },
     compatibilityDate: "2025-07-18",
     preset: "cloudflare_module",
@@ -130,7 +143,7 @@ export default defineNuxtConfig({
       nodeCompat: true,
       wrangler: {
         triggers: {
-          crons: [redditFeedRefreshCron]
+          crons: [redditPostRefreshCron]
         }
       }
     },

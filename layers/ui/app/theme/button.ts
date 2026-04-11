@@ -153,7 +153,7 @@ export const buttonTheme = defineUiTheme({
       color: "base",
       variant: "solid",
       class: {
-        base: "btn bg-base text-pc shadow-sm inset-ring shadow-black/5 inset-ring-p3/80 fx-0 depth-3 open:shadow-none open:inset-shadow-sm open:fx-1 hover:bg-p1 hover:fx-1 data-[state=active]:bg-p1"
+        base: "btn bg-base text-pc shadow-sm inset-ring shadow-black/5 inset-ring-p3/80 depth-3 noise-0 open:shadow-none open:inset-shadow-sm open:fx-1 hover:bg-p1 hover:fx-1 data-[state=active]:bg-p1"
       }
     },
     {
@@ -191,14 +191,14 @@ export const buttonTheme = defineUiTheme({
       color: "secondary",
       variant: "solid",
       class: {
-        base: "bg-p2 text-pc ring-p2"
+        base: "bg-p2 text-pc inset-ring inset-ring-p3 hover:bg-p2/70!"
       }
     },
     {
       color: "secondary",
       variant: "ghost",
       class: {
-        base: "hover:bg-p2! on:bg-p2! on:inset-ring-p3"
+        base: "text-pc hover:bg-p2! on:bg-p2! on:inset-ring-p3"
       }
     },
     /* TERTIARY */
@@ -213,7 +213,7 @@ export const buttonTheme = defineUiTheme({
       color: "tertiary",
       variant: "ghost",
       class: {
-        base: "hover:bg-p3! on:bg-p3! on:inset-ring-p4/60"
+        base: "text-pc hover:bg-p3! on:bg-p3! on:inset-ring-p4/60"
       }
     },
     /* OUTLINE */

@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "install": "pnpm i",
+    "run-patch": "tsx runPatch.ts",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "meta:riot-pbe-notes": "tsx meta/fetch-pbe.ts",
+    "meta:riot-patch-notes": "tsx meta/fetch-riot-patch-notes.ts",
+    "convert-opgg-winrates": "pnpm tsx /Users/caitlin/dev/workspaces/patch/op/convert-opgg-winrates.ts  /Users/caitlin/dev/workspaces/patch/op/raw.json"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.5.0",
+    "prettier": "^3.8.1",
+    "eslint": "^10.1.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "6.0.2",
+    "typescript-eslint": "^8.58.0"
+  },
+  "dependencies": {
+    "expr-eval": "^2.0.2",
+    "metascraper": "^5.49.25",
+    "metascraper-author": "^5.49.25",
+    "metascraper-date": "^5.49.25",
+    "metascraper-description": "^5.49.25",
+    "metascraper-image": "^5.49.25",
+    "metascraper-title": "^5.49.25",
+    "metascraper-url": "^5.49.25",
+    "ofetch": "^1.5.1",
+    "striptags": "^3.2.0"
+  }
+}

@@ -10,7 +10,7 @@ const dir = computed(() => locales[locale.value].dir)
 const colorMode = useColorMode()
 const themeAccent = useThemeAccentPreference()
 
-watch(
+/* watch(
   () => user().settings?.theme,
   (theme) => {
     const preference = normalizeThemePreference(theme ?? colorMode.preference)
@@ -21,12 +21,14 @@ watch(
     immediate: true
   }
 )
-
+ */
 useHead(() => ({
   htmlAttrs: {
     lang: "en",
     dir: "auto",
-    "data-accent": themeAccent.value
+    "data-accent": user().account?.color ?? "diminuendo",
+    "data-theme":
+      user().settings?.theme ?? usePreferredColorScheme().value ?? "light"
   }
 }))
 
@@ -55,7 +57,7 @@ const reportComment = computed(() => threads().reportComment ?? undefined)
       <NuxtPage />
     </NuxtLayout>
     <LazyReportDialog
-      v-if="user().user && user().account && reportComment"
+      v-if="user().account && reportComment"
       :comment="reportComment" />
     <!-- loading -->
     <ClientOnly>

@@ -1,22 +1,34 @@
 <script lang="ts" setup>
 import { championIndex } from "#shared/constants/champions/championIndex"
-import type { ButtonProps, ModalProps } from "@nuxt/ui"
-import { DialogDescription, DialogTitle, VisuallyHidden } from "reka-ui"
+import type { ButtonProps } from "@nuxt/ui"
 import { getSplash } from "~/domain/utils/img"
 import { offsetTooltipContent } from "~~/layers/ui/app/variants/tooltip"
 
-const { class: className } = defineProps<
-  ModalProps & {
-    class?: HTMLAttributes["class"]
+const props = withDefaults(
+  defineProps<{
+    title?: string
+    description?: string
+  }>(),
+  {
+    title: "Select a custom profile splash.",
+    description: "Glam our profile with a custom skin!"
   }
->()
+)
+const emit = defineEmits<{
+  close: [value?: string | null]
+  updateSplash: [string | ""]
+}>()
+const open = defineModel<boolean>("open", { default: false })
 
-const emit = defineEmits<{ close: [boolean]; updateSplash: [string | ""] }>()
-
-const isOpen = ref(false)
-const selectedChampion = ref<string | null>(null)
+const selectedChampion = ref<string>("")
 const searchQuery = ref<string>("")
 
+watch(
+  () => selectedChampion.value,
+  (v) => {
+    console.log("💠 - watch - newVal:", v)
+  }
+)
 const search = useSearch(championIndex, searchQuery, {
   keys: ["name", "key"]
 })
@@ -33,13 +45,13 @@ const result = computed(() => {
 
 function reset() {
   searchQuery.value = ""
-  selectedChampion.value = null
+  selectedChampion.value = ""
 }
 
 function getRandomSplash() {}
 
-watch(isOpen, (open) => {
-  if (!open) reset()
+watch(open, (isOpen) => {
+  if (!isOpen) reset()
 })
 
 const btnProps: ButtonProps & { tabindex?: string } = {
@@ -51,15 +63,23 @@ const btnProps: ButtonProps & { tabindex?: string } = {
 }
 
 const toast = useToast()
+
+function closePanel(value?: string | null) {
+  open.value = false
+  selectedChampion.value = ""
+  searchQuery.value = ""
+  emit("close", value)
+}
+
 function update(skin: Skin) {
-  console.log("🥸 - update - skin:", skin)
-  emit(
-    "updateSplash",
+  const splash =
     skin && selectedChampion.value
       ? getSplash(String(selectedChampion.value), "centered", skin)
       : ""
-  )
-  isOpen.value = false
+
+  emit("updateSplash", splash)
+  selectedChampion.value = ""
+  closePanel(splash || null)
   toast.add({
     title: "Profile splash successfully updated!",
     color: "neutral",
@@ -74,7 +94,7 @@ const utils = [
     icon: "i-refresh",
     onClick: () => {
       emit("updateSplash", "")
-      emit("close", true)
+      closePanel(null)
     }
   },
   {
@@ -86,17 +106,18 @@ const utils = [
     label: "Close",
     icon: "i-x",
     ui: {
-      leadingIcon: "**:stroke[2.2]"
+      leadingIcon: "**:stroke-[2.4] scale-110"
     },
-    onClick: () => emit("close", true)
+    onClick: () => closePanel()
   }
 ]
 </script>
 
 <template>
   <UModal
-    v-model:open="isOpen"
-    :close="{ onClick: () => emit('close', false) }"
+    v-model:open="open"
+    v-bind="props"
+    :close="{ onClick: () => closePanel() }"
     :ui="{
       body: 'rounded-[1.6rem]! bg-p1/90 px-8! pt-7! shadow-sm shadow-black/16 ring-p3/60 backdrop-blur-sm',
       header: 'flex h-24 w-full shrink-0 items-center gap-3 border-0 px-1!',
@@ -117,8 +138,11 @@ const utils = [
             <UButton
               v-bind="btnProps"
               :ui="{
-                base: 'rounded-full p-0!',
-                leadingIcon: cn('opacity-40', v?.ui?.leadingIcon)
+                base: 'anchor rounded-full! p-0!',
+                leadingIcon: cn(
+                  'text-nc! opacity-40 **:text-nc!',
+                  v?.ui?.leadingIcon
+                )
               }"
               :icon="v.icon"
               @click="v.onClick" />
@@ -127,69 +151,71 @@ const utils = [
 
         <!-- SEARCH -->
         <div class="flex w-full max-w-full items-center gap-3 overflow-hidden">
-          <UTooltip
+          <!--           <UTooltip
             class=""
             text="Back"
             as-child
-            :content="offsetTooltipContent">
-            <!-- BACK -->
-            <UButton
+            :content="offsetTooltipContent"> -->
+          <!-- BACK -->
+          <!--             <UButton
               :disabled="!selectedChampion"
               color="neutral"
               tabindex="-1"
               square
               :ui="{
-                base: 'min-h-10.5! min-w-10.5! shrink-0 rounded-full ring inset-ring-0 ring-n5/30'
+                base: 'min-h-10.5! min-w-10.5! shrink-0 rounded-full! ring inset-ring-0 ring-n5/30'
               }"
               :variant="selectedChampion ? 'soft' : 'ghost'"
               icon="i-arrow-left"
               @click="selectedChampion = null" />
-          </UTooltip>
+          </UTooltip> -->
 
           <!-- BOX -->
-          <div
+          <UInput
+            v-if="!selectedChampion.length"
+            v-model:model-value="searchQuery"
             v-auto-animate
-            class="flex min-h-11 w-full max-w-28 items-center gap-2 overflow-hidden rounded-3xl! bg-n2/30 pr-1 pl-3 inset-ring! inset-ring-n4/60 backdrop-blur-sm placeholder:text-n5 focus-visible:inset-ring-n5">
-            <Icon
-              name="i-search"
-              class="pointer-events-none ml-1 size-5 text-n5/80" />
-            <UButton
-              v-if="selectedChampion"
-              size="sm"
-              trailing-icon="i-x"
-              color="neutral"
-              :ui="{
-                base: 'bg-n2/80! hover:bg-n0/60! hover:inset-shadow-xs',
-                trailingIcon: 'size-3'
-              }"
-              variant="soft"
-              :label="champNameByKey(selectedChampion)"
-              @click="reset()" />
-            <UInput
-              v-model:model-value="searchQuery"
-              v-auto-animate
-              variant="none"
-              placeholder="Search Champions..."
-              :ui="{
-                leading: 'relative ml-1 flex items-center gap-1.5',
-                root: 'grow',
-                base: 'w-full border-0 bg-transparent ring-0 outline-0 focus-visible:ring-0 focus-visible:outline-0'
-              }"
-              size="lg">
-              <template #trailing>
-                <InputClear v-if="searchQuery" @clear-input="reset()" />
-                <div v-else class="flex">
-                  <UKbd
-                    v-for="(k, i) in user().hotkeys?.search"
-                    :key="i"
-                    square
-                    variant="subtle"
-                    :value="k"
-                    class="text-n5! **:text-n5!" />
-                </div>
-              </template>
-            </UInput>
-          </div>
+            :as="selectedChampion && selectedChampion"
+            variant="none"
+            :icon="selectedChampion ? 'i-arrow-left' : 'i-search'"
+            placeholder="Search Champions..."
+            :ui="{
+              leading:
+                'pointer-events-none relative order-first shrink-0 text-n5/80 **:text-n5/80',
+              root: cn(
+                'flex max-w-full grow items-center gap-2 overflow-hidden rounded-3xl! px-2 inset-ring! inset-ring-n4/60 focus-within:inset-ring-n5/70!',
+                !searchQuery
+                  ? ' bg-n2/30  backdrop-blur-sm '
+                  : 'bg-transparent!'
+              ),
+
+              base: 'flex min-h-11 max-w-full grow overflow-hidden pl-2! text-center text-nc/80 placeholder:text-n5',
+              trailing: ''
+            }"
+            size="lg"
+            @click="selectedChampion && selectedChampion !== '' ? reset() : ''">
+            <template #trailing>
+              <InputClear
+                v-if="searchQuery"
+                color="tertiary"
+                variant="ghost"
+                :ui="{
+                  base: 'opacity-80! **:text-nc group-hover/label:**:text-pc! group-hover/label:group-hover/btn:bg-p5/80!',
+                  label: ''
+                }"
+                @clear-input="reset()" />
+
+              <div v-else class="flex">
+                <UKbd
+                  v-for="(k, i) in user().hotkeys?.search"
+                  :key="i"
+                  square
+                  variant="subtle"
+                  :value="k"
+                  class="text-n5! **:text-n5!" />
+              </div>
+            </template>
+          </UInput>
         </div>
       </div>
     </template>
@@ -207,7 +233,8 @@ const utils = [
             v-for="item in result"
             :key="item.key"
             :value="item.key ?? ''"
-            class="flex size-24 grow cursor-pointer items-center justify-center">
+            class="flex size-24 grow cursor-pointer items-center justify-center"
+            @click="searchQuery = item.name ?? ''">
             <Champion
               :id="item.id"
               side="bottom"
@@ -217,16 +244,10 @@ const utils = [
         </ListboxContent>
       </Listbox>
 
-      <SplashSelectPicker
+      <LazySplashSelectPicker
         v-else
         :selected-champion="selectedChampion"
         @update="(e: Skin) => update(e)" />
-      <VisuallyHidden>
-        <DialogTitle>Select a custom profile splash.</DialogTitle>
-      </VisuallyHidden>
-      <VisuallyHidden>
-        <DialogDescription>Select a custom profile splash.</DialogDescription>
-      </VisuallyHidden>
     </template>
   </UModal>
 </template>

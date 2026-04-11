@@ -40,7 +40,7 @@ export const toastTheme = defineUiTheme({
         icon: "ml-18! inline",
         actions: "absolute right-11 justify-end justify-self-end",
         close:
-          "-top-4.5 right-3.25 order-last block self-center text-nc **:text-nc [&_svg]:size-5 [&_svg]:**:stroke-[1.6] group-hover:[&_svg]:**:stroke-[2.1]"
+          "-top-0 right-3.25 order-last block self-center text-nc **:text-nc [&_svg]:size-5 [&_svg]:**:stroke-[1.6] group-hover:[&_svg]:**:stroke-[2.1]"
       }
     }
   },

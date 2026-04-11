@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { ProviderType } from "~/domain/lp/external/authProviders"
-import { providers } from "~/domain/lp/external/authProviders"
+import { ListboxFilter } from "reka-ui"
+import { accountOptions } from "~/components/user/settings/account/accountOptions"
 
 definePageMeta({
   title: "Account",
-  description: "Manage your account settings and login settings.",
+  description: "Manage your account safeSettings and login safeSettings.",
   icon: "at",
   path: "/settings/account",
   auth: true,
@@ -12,92 +12,107 @@ definePageMeta({
   prefix: "Settings"
   /*   middleware: 'confirm-auth', */
 })
+const client = useSupabaseClient()
 
-const userProviders = await computedAsync(() =>
-  Object.values(user().user?.app_metadata?.providers ?? {})
-)
-const email = shallowRef<string | undefined>("")
-const username = shallowRef<string | undefined>("")
+const { account, settings, identities } = storeToRefs(user())
+
+const safeAccount = computed(() => safeObject(account.value))
+const safeSettings = computed(() => safeObject(settings.value))
+const safeId = computed(() => safeObject(identities.value))
+
+const email = shallowRef<string>(safeId.value.email?.name ?? "")
+const { history: emailHistory } = useRefHistory(email)
+
+const username = shallowRef<string>(safeAccount.value.username ?? "")
+const { history: usernameHistory } = useRefHistory(username)
+
+const blockedUsers = shallowRef<string[]>(safeSettings.value?.blocked_users)
+const { history: blockedHistory } = useRefHistory(blockedUsers)
+
+const blockInput = shallowRef<string | undefined>("")
+const filterInput = shallowRef<string | undefined>("")
+
 const isSaving = ref(false)
 
+function onCreate(item: string) {
+  blockedUsers.value.push(item)
+
+  blockInput.value = item
+}
+
 onMounted(() => {
-  email.value = user().user?.email
-  username.value = user().account?.username
+  email.value = safeId.value.email?.name ?? ""
+  username.value = safeAccount.value.username ?? ""
+  blockedUsers.value
+    ? (blockedUsers.value = safeSettings.value?.blocked_users)
+    : (blockedUsers.value = [] as string[])
 })
-
+function updateEmail() {
+  if (
+    emailHistory.value.length > 1 &&
+    emailHistory.value[0] !== identities.value?.email?.name
+  ) {
+    const client = useSupabaseClient()
+  }
+}
 async function saveAccount() {
-  const client = useSupabaseClient()
-  const nextUsername = username.value?.trim()
-  const nextEmail = email.value?.trim()
-  const currentUsername = user().account?.username ?? undefined
-  const currentEmail = user().user?.email ?? undefined
-
   isSaving.value = true
 
-  try {
-    if (nextEmail && nextEmail !== currentEmail) {
-      const { error } = await client.auth.updateUser({ email: nextEmail })
-      if (error) throw error
-    }
-
-    if (nextUsername !== currentUsername) {
-      await accountUpdate(
-        { username: nextUsername || undefined },
-        { silent: true }
-      )
-    }
-
-    username.value = user().account?.username
-    email.value = user().user?.email ?? nextEmail
-
-    useToast().add({
-      color: "neutral",
-      title: "Account updated",
-      description: "Your account changes have been saved.",
-      icon: "tick"
-    })
-  } catch (error) {
-    console.error("Failed to save account settings", error)
-    sendErrorToast()
-  } finally {
-    isSaving.value = false
+  if (
+    usernameHistory.value.length > 1 &&
+    usernameHistory.value.at(-1) !== account.value?.username
+  ) {
+    accountUpdate({ username: username.value || undefined }, { silent: true })
   }
+  isSaving.value = false
 }
 </script>
 
 <template>
-  <UForm class="flex w-full flex-col gap-6" @submit.prevent="saveAccount">
+  <UForm @submit.prevent="saveAccount">
     <!-- username -->
     <UFormField
-      title="Username"
-      description="Used to identify you and your account. Your main display name if you
-        haven't connected a Riot account.">
+      size="lg"
+      :label="accountOptions.username.label"
+      :description="accountOptions.username.description">
       <UInput
         v-model:model-value="username"
+        :model-modifiers="{ trim: true }"
+        size="md"
         icon="i-user"
-        @blur="validateField(usernameSchema)" />
+        @blur="validateField(usernameSchema)">
+        <template #trailing>
+          <LazyInputClear @clear-input="username = ''" />
+        </template>
+      </UInput>
     </UFormField>
 
     <!-- email -->
 
     <UFormField
-      title="Email"
-      description="Receive password reset and update messages."
-      icon="mail">
-      <UInput v-model:model-value="email" @blur="validateField(emailSchema)">
+      size="lg"
+      :label="accountOptions.email.label"
+      :description="accountOptions.email.description">
+      <UInput
+        v-model:model-value="email"
+        :model-modifiers="{ trim: true }"
+        icon="i-mail"
+        size="md"
+        @blur="validateField(emailSchema)">
         <template #trailing>
-          <LazyInputClear @clear-input="is().filters.query = ''" />
-          <Tooltip v-if="!user().user?.email_confirmed_at" label="Verified!">
-            <UBadge icon="i-tick" size="sm" color="neutral">
-              pending...
-            </UBadge>
+          <LazyInputClear @clear-input="email = ''" />
+          <Tooltip v-if="safeId.email?.description" label="Verified!">
+            <div
+              class="mr-1 grid size-12 shrink-0 place-items-center group-focus-within/input:hidden">
+              <Icon name="check-fill" class="dst size-4.25!" />
+            </div>
           </Tooltip>
           <Tooltip
             v-else
-            :label="`Check your inbox! Verification email sent at ${user().user?.email_change_sent_at}.`">
-            <UBadge icon="i-refresh" size="sm" variant="outline">
-              pending...
-            </UBadge>
+            :label="`Check your inbox! Verification email sent at ${'hi'}.`">
+            <div class="mr-1 grid size-12 shrink-0 place-items-center">
+              <LazySpinner class="size-4.5 opacity-80" />
+            </div>
           </Tooltip>
         </template>
       </UInput>
@@ -105,71 +120,76 @@ async function saveAccount() {
 
     <!-- connected accounts -->
 
-    <UFormField title="" description="">
-      <FieldTitle>Connected Accounts</FieldTitle>
-
-      <FieldDescription>
-        Manage the accounts used to log in to
-        <b>lolpocket.</b>
-      </FieldDescription>
-      <FieldGroup class="grid w-full grid-cols-3">
-        <Label
-          v-for="(provider, i) in providers"
-          :key="i"
-          for="toggle-provider"
-          as-child>
-          <UCard>
-            <UUser
-              size="md"
-              :name="provider.label"
-              :icon="String(provider.icon)">
-              <template #avatar>
-                <Icon
-                  :name="String(provider.icon)"
-                  :class="
-                    cn('size-10.5 ds-2xs', {
-                      'text-dom':
-                        provider.label === ('riot' as ProviderType['label']),
-                      'scale-90': provider.label === 'google'
-                    })
-                  " />
-              </template>
-            </UUser>
-
-            <USwitch
-              :ui="{ label: 'order-first' }"
-              :label="
-                userProviders?.includes(provider.label)
-                  ? 'Connected'
-                  : 'Not Connected'
-              "
-              class="switch -mt-0.25 scale-90 ds-2xs data-[state=checked]:ring data-[state=checked]:ring-white/60"
-              :model-value="userProviders?.includes(provider.label)" />
-          </UCard>
-        </Label>
-      </FieldGroup>
+    <UFormField
+      size="lg"
+      :label="accountOptions.accounts.label"
+      :description="accountOptions.accounts.description">
+      <ProviderCards />
     </UFormField>
 
-    <!-- username -->
-    <UFormField title="" description=""></UFormField>
-    <fieldset id="blocked-users" class="space-y-6">
-      <div class="leading-4">
-        <h4 class="mb-2 text-xl font-semibold" as="legend">
-          Blocked Users
-        </h4>
+    <!-- block -->
+    <div class="flex w-full flex-wrap gap-8">
+      <UFormField
+        :ui="{
+          root: 'max-w-[calc(50%-var(--spacing)*4)]',
+          help: 'px-3 text-center! text-pretty'
+        }"
+        size="lg"
+        :label="accountOptions.block.label"
+        :help="accountOptions.block.description">
+        <UInput
+          v-model:model-value="blockInput"
+          icon="i-search"
+          :model-modifiers="{ trim: true }"
+          size="md">
+          <template #trailing>
+            <LazyInputClear @clear-input="blockInput = ''" />
+          </template>
+        </UInput>
+      </UFormField>
 
-        <p class="label text-wrap">
-          This is the name that will be used throughout the site. Defers to in
-          game name if a Riot account is connected.
-        </p>
-      </div>
-      <UInput type="text" placeholder="Username" />
-    </fieldset>
-
+      <!-- block list -->
+      <UFormField
+        size="lg"
+        :ui="{
+          root: 'max-w-[calc(50%-var(--spacing)*4)]',
+          label: 'opacity-0'
+        }"
+        :label="accountOptions.blocked.label">
+        <template v-if="settings?.blocked_users.length">
+          <UInput
+            v-model:model-value="filterInput"
+            :disabled="!settings?.blocked_users.length"
+            icon="i-lucide-text-search"
+            :ui="{
+              leadingIcon: 'scale-110'
+            }"
+            :model-modifiers="{ trim: true }"
+            size="md">
+            <template #trailing>
+              <LazyInputClear @clear-input="filterInput = ''" />
+            </template>
+          </UInput>
+          <UScrollArea class="h-72" />
+        </template>
+        <UEmpty
+          v-else
+          size="md"
+          :ui="{
+            header: 'flex-row flex-wrap justify-center',
+            avatar: '-ml-4 size-max translate-y-0.75 scale-110',
+            title: 'w-max',
+            description: 'w-full'
+          }"
+          :title="accountOptions.blocked.title"
+          :description="accountOptions.blocked.description"
+          :icon="accountOptions.blocked.icon"
+          variant="outline" />
+      </UFormField>
+    </div>
+    <Separator />
     <div class="flex justify-start">
-      <UButton color="neutral" type="submit" :loading="isSaving">
-        Update account
-      </UButton>
+      <UButton color="neutral" type="submit" :loading="isSaving" label="Save" />
     </div>
   </UForm>
 </template>

@@ -1,37 +1,77 @@
 <script lang="ts" setup>
-const { src } = defineProps<{
+import type { ButtonProps } from "@nuxt/ui"
+import { useEmitAsProps } from "reka-ui"
+import type { VideoHTMLAttributes } from "vue"
+import { secondsToTime } from "~~/layers/lib/app/utils/time"
+
+interface VideoProps {
   src: string
-}>()
+  crossorigin: VideoHTMLAttributes["crossorigin"]
+  controlslist: VideoHTMLAttributes["controlslist"]
+  preload: VideoHTMLAttributes["preload"]
+  autoplay: VideoHTMLAttributes["autoplay"]
+  loop: VideoHTMLAttributes["loop"]
+  disablepictureinpicture: boolean
+  disableremoteplayback: boolean
+  muted: VideoHTMLAttributes["muted"]
+  playsinline: VideoHTMLAttributes["playsinline"]
+}
+const props = withDefaults(defineProps<Partial<VideoProps> & {}>(), {
+  autoplay: true,
+  loop: true,
+  disablepictureinpicture: true,
+  disableremoteplayback: true,
+  muted: true,
+  playsinline: true,
+  src: "",
+  crossorigin: "anonymous",
+  controlslist: "nodownload",
+  preload: "auto"
+})
 
-const videoRef = useTemplateRef<HTMLMediaElement>("videoRef")
-
+const emit = defineEmits(["ready"])
+const video = useTemplateRef("video")
 function canPlay() {
-  if (!videoRef.value) return
-
-  videoRef.value.play()
+  if (!video.value) return
+  emit("ready")
+  video.value.play()
 }
 
 function reload() {
-  if (!videoRef.value) return
+  if (!video.value) return
+  video.value.load()
+}
 
-  videoRef.value.load()
+defineExpose({ video })
+
+const emits = useEmitAsProps(emit)
+
+const controls = useMediaControls(video)
+
+onMounted(() => {
+  controls.volume.value = 0.2
+  controls.currentTime.value = 0
+})
+
+const state = {
+  ...controls,
+  togglePlay: useToggle(controls.playing),
+  toggleMute: useToggle(controls.muted),
+  currentTimeLabel: computed(() => secondsToTime(controls.currentTime.value)),
+  durationLabel: computed(() => secondsToTime(controls.duration.value))
 }
 </script>
 
 <template>
-  <video
-    ref="videoRef"
-    class="size-full overflow-hidden object-cover"
-    autoplay
-    p2
-    loop
-    disablepictureinpicture
-    disableremoteplayback
-    crossorigin="anonymous"
-    controlslist=" nodownload "
-    playsinline
-    @canplay="canPlay()"
-    @error="reload()">
-    <source :src="src" type="video/webm" />
-  </video>
+  <div class="size-full">
+    <video
+      ref="video"
+      class="z-0 size-full min-w-full overflow-hidden object-cover"
+      v-bind="props"
+      @canplay="canPlay()"
+      @error="reload()">
+      <source :src="src" type="video/webm" />
+    </video>
+    <slot :state />
+  </div>
 </template>

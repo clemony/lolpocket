@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
-const summoner = await sSummoner().resolveByPuuid(user().account?.puuid)
+const summoner = await summonerStore().resolveByPuuid(user().account?.puuid)
 const accountRoute = computed(() => {
   const account = user().account
   return buildSummonerRootPath(account)

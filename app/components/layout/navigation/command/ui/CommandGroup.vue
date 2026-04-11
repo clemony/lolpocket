@@ -35,6 +35,7 @@ const emit = defineEmits<{
         v-for="item in items.items"
         :key="itemKey(item)"
         :ui
+        :value="item.value"
         :item="item"
         @update:open="emit('update:open', item)" />
     </div>

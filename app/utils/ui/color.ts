@@ -52,7 +52,10 @@ export const twText: Record<string, string> = {
   res: "text-res-500",
   dom: "text-dom",
   onhit: "text-onhit",
-  primary: "text-n5"
+  primary: "text-n5",
+  riot: "text-neutral/90",
+  google: "text-google",
+  discord: "text-discord"
 }
 
 export const twBg: Record<string, string> = {
@@ -76,7 +79,10 @@ export const twBg: Record<string, string> = {
   whimsy: "bg-whimsy",
   cask: "bg-cask",
   onslaught: "bg-onslaught",
-  legends: "bg-legends"
+  legends: "bg-legends",
+  riot: "bg-neutral!",
+  google: "bg-google!",
+  discord: "bg-discord!"
 }
 
 export const twBorder: Record<string, string> = {

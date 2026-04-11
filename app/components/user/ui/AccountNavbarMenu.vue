@@ -68,7 +68,7 @@ const themeModel = computed({
 
     <div class="w-full px-1">
       <UButton
-        v-if="user().user"
+        v-if="user().account?.uuid"
         class="h-10"
         @click="navigateTo('/settings/account')">
         <icon name="at" />
@@ -92,7 +92,7 @@ const themeModel = computed({
 
     <USeparator />
     <div class="px-1 pb-1">
-      <UButton v-if="user().user" class="h-9">
+      <UButton v-if="user().account?.uuid" class="h-9">
         <icon name="log-out" @click="useSignOut()" />
         Log out
       </UButton>
@@ -101,6 +101,6 @@ const themeModel = computed({
         <icon name="log-in" />
         Log in
       </UButton>
-    </div>
-  </UPopover>>
+    </div> </UPopover
+  >>
 </template>

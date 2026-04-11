@@ -52,18 +52,22 @@ export const emailSchema = v.pipe(
 // Settings
 export const settingsSchema = v.object({
   locale: v.fallback(v.string(), "en"),
-  pin_sidebar: v.fallback(v.boolean(), false),
+  theme: v.fallback(v.string(), "system"),
   favorite_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_summoners: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
-  instant_trash: v.fallback(v.boolean(), false),
-  motion: v.fallback(v.boolean(), true),
-  once: v.fallback(v.record(v.string(), v.boolean()), {}), // new
+  blocked_users: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   ping_delete_pocket: v.fallback(v.boolean(), true),
   ping_new_pocket: v.fallback(v.boolean(), true),
+  ping_new_friend: v.fallback(v.boolean(), true),
+  ping_new_message: v.fallback(v.boolean(), true),
+  ping_pocket_comment: v.fallback(v.boolean(), true),
+  fast_trash_pocket: v.fallback(v.boolean(), false),
+  fast_trash_message: v.fallback(v.boolean(), false),
+  motion: v.fallback(v.boolean(), true),
+  once: v.fallback(v.record(v.string(), v.boolean()), {}), // new
   show_allies: v.fallback(v.boolean(), true),
   show_flex: v.fallback(v.boolean(), true),
   show_solo: v.fallback(v.boolean(), true),
-  theme: v.fallback(v.string(), "system"),
   updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
 })
 

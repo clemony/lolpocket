@@ -87,7 +87,7 @@ const hotkeysOpen = shallowRef(false)
       :content="content"
       :ui="{
         content:
-          'z-[120] overflow-hidden rounded-xl bg-p0/96 p-0! shadow-lg shadow-black/8 drop-shadow-none backdrop-blur-sm'
+          'z-[120] overflow-hidden rounded-xl bg-p0/94 p-0! bg-blend-screen shadow-lg shadow-black/8 drop-shadow-none backdrop-blur-lg'
       }"
       @update:open="(nextOpen) => (!nextOpen ? closeCommand() : undefined)">
       <template #content>
@@ -113,7 +113,7 @@ const hotkeysOpen = shallowRef(false)
                 :query="searchQuery"
                 @close="closeCommand()" />
             </div>
-            <CommandFooter
+            <LazyCommandFooter
               v-if="reference"
               :reference
               @update:open-hotkeys="(value) => (hotkeysOpen = value)" />
