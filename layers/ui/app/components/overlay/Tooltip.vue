@@ -16,6 +16,7 @@ const props = withDefaults(
         ui?: TooltipUi
         icon?: string
         side?: Side
+        flip?: boolean
         align?: Align
         alignOffset?: number
         sideOffset?: number
@@ -34,6 +35,7 @@ const props = withDefaults(
   {
     sideOffset: 6,
     as: "div",
+    flip: true,
     pin: true,
     arrow: false,
     disableClosingTrigger: false,
@@ -63,7 +65,7 @@ let nextX = 0
 let nextY = 0
 let currentX = 0
 let currentY = 0
-const sideSwitchHysteresis = 30
+const sideSwitchHysteresis = 60
 let openTimeoutId: ReturnType<typeof setTimeout> | undefined
 let closeTimeoutId: ReturnType<typeof setTimeout> | undefined
 const isPinned = computed(() => props?.pinned ?? pinned.value)
@@ -198,13 +200,15 @@ function setAnchorFromPointer(x: number, y: number) {
   const nextCursorSide = (Object.entries(distances).sort(
     (a, b) => a[1] - b[1]
   )[0]?.[0] ?? "bottom") as Side
-  const currentCursorSide = getOppositeSide(placement.value.side)
+  const currentCursorSide = props?.flip
+    ? getOppositeSide(placement.value.side)
+    : placement.value.side
   const cursorSide =
     distances[currentCursorSide] <=
     distances[nextCursorSide] + sideSwitchHysteresis
       ? currentCursorSide
       : nextCursorSide
-  const side = getOppositeSide(cursorSide)
+  const side = props?.flip ? getOppositeSide(cursorSide) : cursorSide
 
   if (side === "top" || side === "bottom") {
     placement.value = {

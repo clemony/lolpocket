@@ -18,6 +18,7 @@ export interface PostMetadata {
 export interface Post {
   author: string | null
   excerpt: string | null
+  text: string | null
   fetched_at: string
   flair: string | null
   id?: string
@@ -64,11 +65,4 @@ export interface PostRefreshResponse {
   fetchedCount: number
   sources: string[]
   upsertedCount: number
-}
-
-export interface MediaControls extends UseMediaControlsReturn {
-  togglePlay: () => void
-  toggleMute: () => void
-  currentTimeLabel: ComputedRef<string>
-  durationLabel: ComputedRef<string>
 }

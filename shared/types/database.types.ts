@@ -175,6 +175,7 @@ export interface Database {
           source_created_at: string
           source_id: string
           subreddit: string
+          text: string | null
           thumbnail_url: string | null
           title: string
           updated_at: string
@@ -205,6 +206,7 @@ export interface Database {
           source_created_at: string
           source_id: string
           subreddit: string
+          text?: string | null
           thumbnail_url?: string | null
           title: string
           updated_at?: string
@@ -235,6 +237,7 @@ export interface Database {
           source_created_at?: string
           source_id?: string
           subreddit?: string
+          text?: string | null
           thumbnail_url?: string | null
           title?: string
           updated_at?: string
@@ -255,18 +258,21 @@ export interface Database {
           auth_uid: string
           created_at: string | null
           metadata: Json | null
+          role: string[]
           uuid: string
         }
         Insert: {
           auth_uid: string
           created_at?: string | null
           metadata?: Json | null
+          role?: string[]
           uuid?: string
         }
         Update: {
           auth_uid?: string
           created_at?: string | null
           metadata?: Json | null
+          role?: string[]
           uuid?: string
         }
         Relationships: []
@@ -370,9 +376,11 @@ export interface Database {
           favorite_summoners: string[] | null
           locale: string | null
           motion: boolean | null
+          muted: boolean | null
           once: unknown
           ping_delete_pocket: boolean | null
           ping_new_friend: boolean | null
+          ping_new_message: boolean | null
           "ping_new_message:": boolean | null
           ping_new_pocket: boolean
           ping_pocket_comment: boolean | null
@@ -391,9 +399,11 @@ export interface Database {
           favorite_summoners?: string[] | null
           locale?: string | null
           motion?: boolean | null
+          muted?: boolean | null
           once?: unknown
           ping_delete_pocket?: boolean | null
           ping_new_friend?: boolean | null
+          ping_new_message?: boolean | null
           "ping_new_message:"?: boolean | null
           ping_new_pocket?: boolean
           ping_pocket_comment?: boolean | null
@@ -412,9 +422,11 @@ export interface Database {
           favorite_summoners?: string[] | null
           locale?: string | null
           motion?: boolean | null
+          muted?: boolean | null
           once?: unknown
           ping_delete_pocket?: boolean | null
           ping_new_friend?: boolean | null
+          ping_new_message?: boolean | null
           "ping_new_message:"?: boolean | null
           ping_new_pocket?: boolean
           ping_pocket_comment?: boolean | null
@@ -543,9 +555,11 @@ export interface Database {
           favorite_summoners: string[] | null
           locale: string | null
           motion: boolean | null
+          muted: boolean | null
           once: unknown
           ping_delete_pocket: boolean | null
           ping_new_friend: boolean | null
+          ping_new_message: boolean | null
           "ping_new_message:": boolean | null
           ping_new_pocket: boolean
           ping_pocket_comment: boolean | null
@@ -567,6 +581,7 @@ export interface Database {
     Enums: {
       permission: "admin" | "mod"
       removal_type: "mod" | "user"
+      role: "admin" | "summoner"
       user_role: "admin" | "summoner"
       vote: "-1" | "0" | "1"
     }
@@ -698,6 +713,7 @@ export const Constants = {
     Enums: {
       permission: ["admin", "mod"],
       removal_type: ["mod", "user"],
+      role: ["admin", "summoner"],
       user_role: ["admin", "summoner"],
       vote: ["-1", "0", "1"]
     }

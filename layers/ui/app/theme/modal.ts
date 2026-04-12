@@ -24,7 +24,7 @@ export const modalTheme = defineUiTheme({
     },
     overlay: {
       true: {
-        overlay: "bg-n0/70"
+        overlay: "bg-n0/80"
       }
     },
     scrollable: {

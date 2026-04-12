@@ -4,7 +4,10 @@ import type {
   PostVideoProvider
 } from "#shared/types"
 import { decode } from "html-entities"
+import MarkdownIt from "markdown-it"
+import { full as markdownItEmoji } from "markdown-it-emoji"
 import { Buffer } from "node:buffer"
+import sanitizeHtml from "sanitize-html"
 import { supabaseAdminRequest } from "~~/server/utils/supabase/admin"
 import { deriveFeedKeywords } from "./keywords"
 
@@ -20,12 +23,54 @@ const YOUTUBE_HOSTS = new Set([
   "youtube-nocookie.com",
   "www.youtube-nocookie.com"
 ])
-const MARKDOWN_LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g
-const MARKDOWN_IMAGE_RE = /!\[([^\]]*)\]\(([^)]+)\)/g
-const LEADING_FORMATTING_RE = /^[>#\s-]+/gm
-const ORDERED_LIST_RE = /^\d+\.\s+/gm
-const MARKDOWN_STYLE_RE = /[*_~`]+/g
 const WHITESPACE_RE = /\s+/g
+const REDDIT_MARKDOWN = new MarkdownIt({
+  breaks: true,
+  html: false,
+  linkify: true
+}).use(markdownItEmoji)
+const REDDIT_HTML_SANITIZE_OPTIONS = {
+  allowedAttributes: {
+    a: ["href", "rel", "target", "title"],
+    code: ["class"],
+    img: ["alt", "height", "loading", "src", "title", "width"]
+  },
+  allowedSchemes: ["http", "https", "mailto"],
+  allowedTags: [
+    "a",
+    "blockquote",
+    "br",
+    "code",
+    "em",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "hr",
+    "img",
+    "li",
+    "ol",
+    "p",
+    "pre",
+    "strong",
+    "ul"
+  ],
+  transformTags: {
+    a: sanitizeHtml.simpleTransform("a", {
+      rel: "noopener noreferrer nofollow ugc",
+      target: "_blank"
+    }),
+    img: sanitizeHtml.simpleTransform("img", {
+      loading: "lazy"
+    })
+  }
+}
+const REDDIT_TEXT_SANITIZE_OPTIONS = {
+  allowedAttributes: {},
+  allowedTags: []
+}
 
 interface RedditAccessTokenResponse {
   access_token: string
@@ -109,7 +154,7 @@ function decodeRedditUrl(url?: string | null) {
   return decodeRedditText(url)
 }
 
-function decodeRedditText(value?: string | null) {
+function decodeRedditText(value?: string) {
   if (!value) return null
 
   return decode(value)
@@ -128,22 +173,29 @@ function truncateText(value: string, maxLength: number) {
   return `${sliced.slice(0, boundary).trim()}...`
 }
 
-function createRedditExcerpt(selftext?: string | null) {
+function createTextPost(selftext?: string) {
+  if (!selftext) return null
   const decoded = decodeRedditText(selftext)
   if (!decoded) return null
 
-  const text = decoded
-    .replace(MARKDOWN_LINK_RE, "$1")
-    .replace(MARKDOWN_IMAGE_RE, "$1")
-    .replace(LEADING_FORMATTING_RE, "")
-    .replace(ORDERED_LIST_RE, "")
-    .replace(MARKDOWN_STYLE_RE, "")
+  const rendered = REDDIT_MARKDOWN.render(decoded).trim()
+  if (!rendered) return null
+
+  const sanitized = sanitizeHtml(rendered, REDDIT_HTML_SANITIZE_OPTIONS).trim()
+  return sanitized || null
+}
+
+function createExcerpt(text: string | undefined) {
+  if (!text) return null
+  const post = createTextPost(text)
+
+  if (!post) return null
+  const plainText = sanitizeHtml(post, REDDIT_TEXT_SANITIZE_OPTIONS)
     .replace(WHITESPACE_RE, " ")
     .trim()
 
-  if (!text) return null
-
-  return truncateText(text, REDDIT_EXCERPT_MAX_LENGTH)
+  if (!plainText) return null
+  return truncateText(plainText, REDDIT_EXCERPT_MAX_LENGTH)
 }
 
 function extractYouTubeVideo(url?: string | null): {
@@ -319,7 +371,8 @@ function normalizeRedditPost(post: RedditPost): Post | null {
 
   return {
     author: post.author || null,
-    excerpt: post.is_self ? createRedditExcerpt(post.selftext) : null,
+    excerpt: post.is_self ? createExcerpt(post.selftext) : null,
+    text: createTextPost(post.selftext),
     fetched_at: new Date().toISOString(),
     flair: post.link_flair_text,
     keywords: deriveFeedKeywords({

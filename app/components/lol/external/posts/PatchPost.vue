@@ -48,6 +48,7 @@ const src = computed(() =>
     v-bind="delegated"
     :badge="postBadge('riot official')"
     :ui="{
+      body: 'h-full',
       root: cn('group group/post h-full min-h-full', props?.class),
       image: '',
       title: 'cursor-pointer group-hover:underline'
@@ -78,6 +79,6 @@ const src = computed(() =>
     :image="src"
     :description="
       data.metadata.description ??
-        'It seems we lost the patch data. We\'ll attempt to turn the router off and on.'
+      'It seems we lost the patch data. We\'ll attempt to turn the router off and on.'
     " />
 </template>

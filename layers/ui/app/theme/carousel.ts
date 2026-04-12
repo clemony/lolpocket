@@ -6,10 +6,10 @@ export const carouselTheme = defineUiTheme({
     viewport: "overflow-hidden",
     container: "flex items-start",
     item: "min-w-0 shrink-0 basis-full",
-    controls: "",
-    arrows: "",
-    prev: "absolute rounded-full border-0 ring-p3/80 fx-0",
-    next: "absolute rounded-full border-0 ring-p3/80 fx-0",
+    controls: "pointer-events-none absolute inset-0 flex w-full shrink-0",
+    arrows: "inset-0 flex w-full shrink-0",
+    prev: "pointer-events-auto absolute z-5 shrink-0 rounded-full border-0 bg-p0 ring-p3/80 fx-0",
+    next: "pointer-events-auto! absolute z-5 rounded-full border-0 bg-p0 ring-p3/80 fx-0",
     dots: "absolute inset-x-0 -bottom-7 flex flex-wrap items-center justify-center gap-3",
     dot: [
       "size-3 cursor-pointer rounded-full bg-p3 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
@@ -27,8 +27,12 @@ export const carouselTheme = defineUiTheme({
       horizontal: {
         container: "-ms-4 flex-row",
         item: "ps-4",
-        prev: "start-4 top-1/2 -translate-y-1/2 sm:-start-12",
-        next: "end-4 top-1/2 -translate-y-1/2 sm:-end-12"
+        viewport: "@container/viewport",
+        arrows: "flex w-full grow items-center justify-between",
+        controls:
+          "@container/viewport:[scroll-state(scrollable:left)]:mask-x-from-92% w-full grow items-center justify-between",
+        prev: "translate-x-0 sm:-start-12",
+        next: "-translate-x-4 sm:-end-12"
       }
     },
     active: {

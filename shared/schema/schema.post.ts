@@ -19,6 +19,7 @@ export const postLinkMetadataSchema = v.object({
 export const postLinkSchema = v.object({
   author: v.nullable(v.string()),
   excerpt: v.nullable(v.string()),
+  text: v.nullable(v.string()),
   fetched_at: v.pipe(v.string(), v.isoTimestamp()),
   flair: v.nullable(v.string()),
   id: v.optional(v.string()),

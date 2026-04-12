@@ -1,16 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
-const { state } = defineProps<
-  {
-    state: MediaControls
-  } & Partial<{
-    title: string
-    author: string
-    source: string
-    to: string
-    ready: boolean
-  }>
->()
+import type { UseMediaControlsReturn } from "@vueuse/core"
 
 const button: ButtonProps = {
   size: "sm",
@@ -25,51 +15,72 @@ const open = shallowRef<boolean>(false)
 
 const {
   togglePlay,
+  toggleMute,
   playing,
-  duration,
-  currentTime,
+  waiting,
   volume,
   muted,
-  toggleMute,
+  currentTime,
+  duration,
   currentTimeLabel,
   durationLabel,
-  supportsPictureInPicture,
-  togglePictureInPicture
-} = state
+  togglePictureInPicture,
+  supportsPictureInPicture
+} = toValue(computed(() => safeObject(inject<MediaControls>("video"))))
+
+const isSeeking = shallowRef<boolean>(false)
+function handleSeek() {
+  isSeeking.value = false
+}
 </script>
 
 <template>
   <div
     :class="
       cn(
-        'group/video pointer-events-none absolute inset-0 z-2 flex size-full flex-col',
-        'after:via-neutral-70 after:absolute after:size-full after:bg-gradient-to-b after:from-neutral/90 after:via-30% after:to-neutral/0 after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100'
+        'group/video via-neutral-70 pointer-events-none absolute inset-0 z-3 flex size-full flex-col overflow-hidden bg-gradient-to-b from-neutral/90 via-30% to-neutral/0 opacity-0 transition-opacity duration-400 ease-in-out hover:opacity-100',
+        { 'opacity-100': !playing }
       )
-    ">
-    <label
+    "
+    @hover-end="open = false">
+    <button
       role="toggle"
-      class="pointer-events-auto size-full grow cursor-pointer"
-      @click="togglePlay()" />
+      class="pointer-events-auto grid size-full grow cursor-pointer place-items-center"
+      @click="togglePlay()">
+      <Spinner v-if="waiting" class="absolute z-1 size-10 text-nc/80" />
+      <Icon
+        v-else
+        :name="playing ? 'i-ion-md-pause' : 'i-ion-play'"
+        class="absolute z-1 size-18 text-nc/80" />
+    </button>
 
-    <UPageFeature :to="to ?? ''" size="xl" :title="title ?? ''">
-      <template #description> </template>
-    </UPageFeature>
-
+    <slot name="header" />
     <div
-      class="pointer-events-none absolute bottom-0 z-2 flex size-full h-12 w-full grow translate-y-22 flex-nowrap items-center gap-2.5 justify-self-end rounded-t-xl rounded-b-lg bg-n0/86! px-5 py-px shadow-md ring ring-n4/70 backdrop-blur-lg transition-all duration-300 ease-in-out *:pointer-events-auto group-hover/video:translate-y-0">
+      :class="
+        cn(
+          'pointer-events-none absolute bottom-0 z-2 flex size-full h-12 w-full grow translate-y-22 flex-nowrap items-center gap-2.5 justify-self-end rounded-t-xl rounded-b-lg bg-n0/86! px-5 py-px shadow-md ring ring-n4/70 backdrop-blur-lg transition-all duration-300 ease-in-out *:pointer-events-auto group-hover/video:translate-y-0',
+          { 'translate-y-0': !playing }
+        )
+      ">
       <UButton
         v-bind="button"
         :icon="playing ? 'i-ion-md-pause' : 'i-ion-play'"
         @click="togglePlay()" />
       <div class="mr-8 ml-6 flex grow items-center gap-2">
-        <UProgress
+        <USlider
           :ui="{
             root: 'grow',
-            base: 'grow bg-n5/80 hover:brightness-110',
-            indicator: 'bg-p4/80 duration-400 ease-linear'
+            track: 'grow cursor-pointer bg-n5/80 hover:brightness-110',
+            range: cn('bg-p4/80 duration-400 ease-linear', {
+              'duration-50': isSeeking
+            }),
+            thumb: 'opacity-0'
           }"
+          :step="1"
           :max="duration"
-          :model-value="currentTime" />
+          :model-value="currentTime"
+          @pointerdown="isSeeking = true"
+          @pointerup="handleSeek" />
         <div
           class="flex shrink-0 flex-nowrap items-center text-xs font-semibold text-nc!">
           {{ currentTimeLabel
@@ -80,10 +91,11 @@ const {
       </div>
       <UPopover
         v-model:open="open"
-        :content="{ side: 'top', align: 'start' }"
+        mode="hover"
+        :content="{ side: 'top', align: 'start', sideOffset: 6 }"
         :ui="{
           content:
-            'flex h-8 w-44! items-center gap-1.5 border-0 bg-n1/70! py-0 pr-1.5 pl-3 ring-n4/70 ring-offset-0'
+            'flex h-44! w-8 flex-col-reverse items-center gap-1.5 border-0 bg-n1/70! px-1.5 pt-1 pb-3 ring-n4/70 ring-offset-0'
         }">
         <UButton
           v-bind="button"
@@ -101,11 +113,13 @@ const {
         <template #content>
           <USlider
             v-model:model-value="volume"
+            orientation="vertical"
             size="xs"
             :max="1"
             :min="0"
+            :step="0.01"
             :ui="{
-              track: 'bg-n5',
+              track: 'cursor-pointer bg-n5',
               range: 'bg-nc',
               thumb: 'bg-transparent shadow-none ring-transparent'
             }"

@@ -1,21 +1,8 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "@nuxt/ui"
+import type { VideoProps } from "#shared/types"
 import { useEmitAsProps } from "reka-ui"
-import type { VideoHTMLAttributes } from "vue"
 import { secondsToTime } from "~~/layers/lib/app/utils/time"
 
-interface VideoProps {
-  src: string
-  crossorigin: VideoHTMLAttributes["crossorigin"]
-  controlslist: VideoHTMLAttributes["controlslist"]
-  preload: VideoHTMLAttributes["preload"]
-  autoplay: VideoHTMLAttributes["autoplay"]
-  loop: VideoHTMLAttributes["loop"]
-  disablepictureinpicture: boolean
-  disableremoteplayback: boolean
-  muted: VideoHTMLAttributes["muted"]
-  playsinline: VideoHTMLAttributes["playsinline"]
-}
 const props = withDefaults(defineProps<Partial<VideoProps> & {}>(), {
   autoplay: true,
   loop: true,
@@ -60,6 +47,8 @@ const state = {
   currentTimeLabel: computed(() => secondsToTime(controls.currentTime.value)),
   durationLabel: computed(() => secondsToTime(controls.duration.value))
 }
+
+provide("video", state)
 </script>
 
 <template>

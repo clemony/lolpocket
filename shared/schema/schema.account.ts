@@ -64,7 +64,9 @@ export const settingsSchema = v.object({
   fast_trash_pocket: v.fallback(v.boolean(), false),
   fast_trash_message: v.fallback(v.boolean(), false),
   motion: v.fallback(v.boolean(), true),
-  once: v.fallback(v.record(v.string(), v.boolean()), {}), // new
+  muted: v.fallback(v.boolean(), true),
+  //
+  once: v.fallback(v.record(v.string(), v.boolean()), {}),
   show_allies: v.fallback(v.boolean(), true),
   show_flex: v.fallback(v.boolean(), true),
   show_solo: v.fallback(v.boolean(), true),

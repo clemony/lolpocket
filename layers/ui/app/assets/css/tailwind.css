@@ -3,11 +3,12 @@
 @import "./ui/index.css";
 @import "./color/index.css";
 @import "./theme/index.css";
-/* @import "./components/index.css"; */
 @import "./custom-variants.css";
 @import "./utilities.css";
 @import "./utils.css";
 @import "./animation.css";
+
+@plugin "@tailwindcss/typography";
 
 @layer base {
   :root {
@@ -41,44 +42,5 @@
   textarea,
   .reset-input {
     @apply border-transparent ring-0 ring-offset-0 outline-0 focus:ring-0 focus:outline-0;
-  }
-}
-
-@layer components {
-  h1 {
-    @apply text-5xl;
-  }
-
-  h2 {
-    @apply text-3xl;
-  }
-
-  h3 {
-    @apply text-xxl;
-  }
-
-  h4 {
-    @apply text-xl font-semibold antialiased ds-2xs select-none;
-  }
-
-  h5 {
-    @apply text-lg antialiased select-none;
-  }
-
-  h6 {
-    @apply flex gap-3 text-sm font-semibold antialiased select-none;
-  }
-
-  h1,
-  h2,
-  h3 {
-    @apply font-bold antialiased ds-2xs select-none;
-  }
-  p {
-    @apply leading-5 antialiased;
-  }
-
-  span {
-    @apply antialiased;
   }
 }

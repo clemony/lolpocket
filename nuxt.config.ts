@@ -116,7 +116,6 @@ export default defineNuxtConfig({
     }
   },
   ui: {
-    fonts: false,
     colorMode: false,
     experimental: {
       componentDetection: true
@@ -124,6 +123,26 @@ export default defineNuxtConfig({
     theme: {
       colors: [...uiThemeColors]
     }
+  },
+
+  fonts: {
+    defaults: {
+      subsets: ["latin-ext", "latin"]
+    },
+    families: [
+      {
+        name: "Inter",
+        provider: "fontsource",
+        weights: [400, 500, 600, 700],
+        styles: ["normal", "italic"]
+      },
+      {
+        name: "DM Serif Display",
+        provider: "fontsource",
+        weight: 400,
+        styles: ["normal", "italic"]
+      }
+    ]
   },
 
   ssr: true,
@@ -398,39 +417,6 @@ export default defineNuxtConfig({
           `,
         },
       ], */
-      link: [
-        {
-          rel: "preconnect",
-          href: "https://cdn.jsdelivr.net",
-          crossorigin: ""
-        },
-
-        // Inter Variable (all weights via axis, normal + italic)
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.6/wght.css"
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.6/wght-italic.css"
-        },
-
-        // Gelasio
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-italic.woff2"
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-normal.woff2"
-        },
-
-        // Roboto Mono (variable)
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/fontsource/fonts/roboto-mono:vf@latest/latin-wght-normal.woff2"
-        }
-      ]
     }
   }
 })

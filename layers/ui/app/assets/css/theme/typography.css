@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-serif:
+    "Merriweather Variable", Charter, "Bitstream Charter", "Sitka Text",
+    Cambria, serif;
+  --font-mono:
+    "Roboto Mono Variable", SFMono-Regular, ui-monospace, "Liberation Mono",
+    "Courier New", Consolas, Menlo, Monaco, monospace;
+  --font-display:
+    "DM Serif Display", "Merriweather Variable", Charter, "Bitstream Charter",
+    "Sitka Text", Cambria, serif;
+
+  --text-*: initial;
+  --text-3xs: 0.78rem;
+  --text-2xs: 0.82rem;
+  --text-xs: 0.89rem;
+  --text-sm: 0.94rem;
+  --text-base: 0.94rem;
+  --text-md: 0.98rem;
+  --text-lg: 1.05rem;
+  --text-xl: 1.15rem;
+  --text-xxl: 1.3rem;
+  --text-3xl: 1.5rem;
+  --text-4xl: 1.675rem;
+  --text-5xl: 1.875rem;
+  --text-6xl: 2rem;
+}
+
+@layer components {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-xxl;
+  }
+
+  h4 {
+    @apply text-xl font-semibold antialiased ds-2xs select-none;
+  }
+
+  h5 {
+    @apply text-lg antialiased select-none;
+  }
+
+  h6 {
+    @apply flex gap-3 text-sm font-semibold antialiased select-none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold antialiased ds-2xs select-none;
+  }
+  p {
+    @apply leading-5 antialiased;
+  }
+
+  span {
+    @apply antialiased;
+  }
+
+  .prose {
+    h1 {
+      @apply text-5xl;
+    }
+  }
+}
