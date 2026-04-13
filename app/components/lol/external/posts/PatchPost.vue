@@ -14,9 +14,12 @@ const props = withDefaults(
   }
 )
 
+const { public: { postalBaseUrl } } = useRuntimeConfig()
+
 const { data, status, execute } = useFetch<PatchNotesMeta>(
   () => `/cdn/meta/patch-notes/${props.patch}.json`,
   {
+    baseURL: postalBaseUrl || undefined,
     server: false,
     lazy: true,
     immediate: false,

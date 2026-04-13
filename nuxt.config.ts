@@ -72,13 +72,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  /*  colorMode: {
-    componentName: "ColorScheme",
-    dataValue: "theme",
-    fallback: "light",
-    globalName: "__NUXT_COLOR_MODE__",
-    preference: "light"
-  }, */
   icon: {
     provider: "iconify",
     serverBundle: false, // <- important
@@ -237,7 +230,8 @@ export default defineNuxtConfig({
       baseUrl: "",
       newUserRedirect: "",
       supabaseKey: "",
-      supabaseUrl: ""
+      supabaseUrl: "",
+      postalBaseUrl: process.env.NUXT_PUBLIC_POSTAL_BASE_URL ?? ""
     }
   },
 

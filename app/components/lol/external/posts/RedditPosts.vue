@@ -1,17 +1,21 @@
 <script lang="ts" setup>
 import { usePostModal } from "~/components/lol/external/posts/usePostModal"
 
+const { public: { postalBaseUrl } } = useRuntimeConfig()
+
 const { data: postList } = await useFetch<PostListResponse>(
   "/api/feed/reddit",
   {
+    baseURL: postalBaseUrl || undefined,
     query: {
       limit: 25
-    }
+    },
+    server: false
   }
 )
 
 const list = computed<PostListResponse>(() => safeObject(postList.value))
-  const items = computed (() => list.value.items)
+const items = computed(() => list.value.items)
 const activeIndex = shallowRef(0)
 const carousel = useTemplateRef("carousel")
 const { openPostModal } = usePostModal()

@@ -14,9 +14,12 @@ const props = withDefaults(
   }
 )
 
+const { public: { postalBaseUrl } } = useRuntimeConfig()
+
 const { data, status, execute } = useFetch<PbeMeta>(
   () => `/cdn/meta/pbe_latest.json`,
   {
+    baseURL: postalBaseUrl || undefined,
     server: false,
     lazy: true,
     immediate: false,
