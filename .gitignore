@@ -15,6 +15,7 @@ gitignore
 .nuxtrc
 *.cpuprofile
 *.code-workspace
+nuxt-build.cpuprofile
 
 # Node dependencies
 node_modules
