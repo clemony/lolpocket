@@ -8,11 +8,11 @@
 
   exclude:
     navbar, link, toast, skeleton, steps, drawersidebar, hero, fileinput, join,
-    glass, typography, breadcrumbs, collapse, countdown, diff, divider, dock,
-    drawer, dropdown, modal, list, swap, textrotate, toast, loading, stack,
-    stat, toggle, table, kbd, label, mask, navbar, hovergallery, fab, menu,
-    fieldset, indicator, mockup, progress, chat, filter, footer, select, radio,
-    avatar, range, calendar, card, validator, carousel;
+    glass, breadcrumbs, collapse, countdown, diff, divider, dock, drawer,
+    dropdown, modal, list, swap, textrotate, toast, loading, stack, stat,
+    toggle, table, kbd, label, mask, navbar, hovergallery, fab, menu, fieldset,
+    indicator, mockup, progress, chat, filter, footer, select, radio, avatar,
+    range, calendar, card, validator, carousel;
 }
 
 @plugin "../../../../../../node_modules/daisyui/theme/index.js" {

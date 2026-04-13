@@ -10,7 +10,8 @@ const { data: postList } = await useFetch<PostListResponse>(
   }
 )
 
-const items = computed<Post[]>(() => safeObject(postList.value?.items))
+const list = computed<PostListResponse>(() => safeObject(postList.value))
+  const items = computed (() => list.value.items)
 const activeIndex = shallowRef(0)
 const carousel = useTemplateRef("carousel")
 const { openPostModal } = usePostModal()

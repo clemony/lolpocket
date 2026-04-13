@@ -16,6 +16,7 @@ gitignore
 *.cpuprofile
 *.code-workspace
 nuxt-build.cpuprofile
+vitest.config.ts
 
 # Node dependencies
 node_modules
@@ -31,7 +32,6 @@ lolpocket.code-workspace
 #notes
 .notes
 notes
-**/📌*
 
 ^prettier.config.js
 vitest.config.ts
