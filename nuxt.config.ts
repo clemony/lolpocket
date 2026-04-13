@@ -133,7 +133,7 @@ export default defineNuxtConfig({
       {
         name: "Inter",
         provider: "fontsource",
-        weights: [400, 500, 600, 700],
+        weights: [400, 500, 600, 700, 800],
         styles: ["normal", "italic"]
       },
       {

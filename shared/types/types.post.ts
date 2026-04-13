@@ -1,6 +1,3 @@
-import type { UseMediaControlsReturn } from "@vueuse/core"
-import type * as v from "valibot"
-
 export type PostVideoProvider = "reddit" | "youtube"
 export type PostSource = "reddit"
 

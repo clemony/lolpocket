@@ -22,59 +22,59 @@ const customGroups = [
       "formatters",
       "language",
       "languageOptions",
-      "settings",
-    ],
+      "settings"
+    ]
   },
   {
     groupName: "structural",
     elementValuePattern: [
       "^\\[", // array literal
-      "^\\{", // object literal
-    ],
-  },
+      "^\\{" // object literal
+    ]
+  }
 ]
 
 const semanticSizeGroups = [
   {
     groupName: "size-custom",
-    elementNamePattern: "^(?:custom|default)$",
+    elementNamePattern: "^(?:custom|default)$"
   },
   {
     groupName: "size-prefixed-xs",
     elementNamePattern: "^\\d+xs$",
     order: "desc",
-    type: "natural",
+    type: "natural"
   },
   {
     groupName: "size-xs",
-    elementNamePattern: "^xs$",
+    elementNamePattern: "^xs$"
   },
   {
     groupName: "size-sm",
-    elementNamePattern: "^sm$",
+    elementNamePattern: "^sm$"
   },
   {
     groupName: "size-md",
-    elementNamePattern: "^md$",
+    elementNamePattern: "^md$"
   },
   {
     groupName: "size-lg",
-    elementNamePattern: "^lg$",
+    elementNamePattern: "^lg$"
   },
   {
     groupName: "size-xl",
-    elementNamePattern: "^xl$",
+    elementNamePattern: "^xl$"
   },
   {
     groupName: "size-prefixed-xl",
     elementNamePattern: "^\\d+xl$",
     order: "asc",
-    type: "natural",
+    type: "natural"
   },
   {
     groupName: "size-header",
-    elementNamePattern: "^header$",
-  },
+    elementNamePattern: "^header$"
+  }
 ]
 
 export default antfu(
@@ -91,7 +91,7 @@ export default antfu(
       "./shared/records",
       "./public",
       "**/raw/**",
-      ".save.json",
+      ".save.json"
     ],
     /* ---------- JSONC ---------- */
 
@@ -101,19 +101,19 @@ export default antfu(
           "error",
           {
             pathPattern: "^$",
-            order: ["name", "version", "private", "publishConfig", "scripts"],
+            order: ["name", "version", "private", "publishConfig", "scripts"]
           },
           {
             pathPattern: "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
-            order: { type: "asc" },
+            order: { type: "asc" }
           },
           {
             pathPattern: ".*",
-            order: { type: "asc" },
-          },
+            order: { type: "asc" }
+          }
         ],
-        "jsonc/comma-dangle": "off",
-      },
+        "jsonc/comma-dangle": "off"
+      }
     },
 
     /* ---------- VUE ---------- */
@@ -125,8 +125,8 @@ export default antfu(
           {
             multiline: "never",
             singleline: "never",
-            selfClosingTag: { multiline: "never", singleline: "never" },
-          },
+            selfClosingTag: { multiline: "never", singleline: "never" }
+          }
         ],
 
         "vue/html-self-closing": "off",
@@ -140,9 +140,9 @@ export default antfu(
 
         "vue/padding-line-between-tags": "off",
         "vue/require-typed-ref": "warn",
-        "vue/padding-line-between-blocks": ["error", "always"],
-      },
-    },
+        "vue/padding-line-between-blocks": ["error", "always"]
+      }
+    }
   },
 
   /* ---------- SORT - SETTINGS.JSON ---------- */
@@ -151,30 +151,30 @@ export default antfu(
     rules: {
       "jsonc/sort-keys": [
         "error",
-        { pathPattern: "^$", order: { type: "asc" } },
-      ],
-    },
+        { pathPattern: "^$", order: { type: "asc" } }
+      ]
+    }
   },
   /* ---------- CSS & TAILWIND ---------- */
   {
     files: ["**/*.css"],
     plugins: {
-      css,
+      css
     },
     language: "css/css",
     languageOptions: {
       customSyntax: tailwind4,
-      tolerant: true,
+      tolerant: true
     },
     extends: [eslintPluginBetterTailwindcss.configs.recommended],
     settings: {
       "better-tailwindcss": {
-        entryPoint: "./layers/ui/app/assets/css/tailwind.css",
-      },
+        entryPoint: "./layers/ui/app/assets/css/tailwind.css"
+      }
     },
     rules: {
-      "better-tailwindcss/enforce-consistent-line-wrapping": "off",
-    },
+      "better-tailwindcss/enforce-consistent-line-wrapping": "off"
+    }
   },
   {
     extends: [eslintPluginBetterTailwindcss.configs.recommended],
@@ -190,7 +190,7 @@ export default antfu(
           "tw",
           "tv",
           "defineAppConfig",
-          ["defineUiTheme", [{ match: "objectValues" }]],
+          ["defineUiTheme", [{ match: "objectValues" }]]
         ],
         attributes: [
           "class",
@@ -202,15 +202,16 @@ export default antfu(
           "root",
           "trailingIcon",
           "trailing",
-          "leading",
+          "leading"
         ],
-        tags: ["style"],
-      },
+        tags: ["style"]
+      }
     },
     rules: {
       "better-tailwindcss/no-unregistered-classes": "off",
       "better-tailwindcss/enforce-consistent-line-wrapping": "off",
       "better-tailwindcss/no-unknown-classes": "off",
+      "enforce-consistent-variant-order": "warn",
       "better-tailwindcss/enforce-canonical-classes": "off" /* [
         "warn",
         {
@@ -223,13 +224,13 @@ export default antfu(
       "better-tailwindcss/enforce-shorthand-classes": "warn",
       "better-tailwindcss/enforce-consistent-variable-syntax": "warn",
       "better-tailwindcss/no-unnecessary-whitespace": "warn",
-      "better-tailwindcss/no-duplicate-classes": "warn",
+      "better-tailwindcss/no-duplicate-classes": "warn"
     },
     files: ["**/*.vue"],
 
     languageOptions: {
-      parser: eslintParserVue,
-    },
+      parser: eslintParserVue
+    }
   },
   {
     extends: [eslintPluginBetterTailwindcss.configs.recommended],
@@ -244,10 +245,10 @@ export default antfu(
           "tw",
           "tv",
           "defineAppConfig",
-          ["defineUiTheme", [{ match: "objectValues" }]],
+          ["defineUiTheme", [{ match: "objectValues" }]]
         ],
-        tags: ["style"],
-      },
+        tags: ["style"]
+      }
     },
     rules: {
       "better-tailwindcss/no-unregistered-classes": "off",
@@ -258,9 +259,9 @@ export default antfu(
       "better-tailwindcss/enforce-shorthand-classes": "warn",
       "better-tailwindcss/enforce-consistent-variable-syntax": "warn",
       "better-tailwindcss/no-unnecessary-whitespace": "warn",
-      "better-tailwindcss/no-duplicate-classes": "warn",
+      "better-tailwindcss/no-duplicate-classes": "warn"
     },
-    files: ["layers/ui/app/theme/**/*.ts"],
+    files: ["layers/ui/app/theme/**/*.ts"]
   },
   {
     files: ["layers/ui/app/theme/**/*.ts"],
@@ -272,7 +273,7 @@ export default antfu(
             allNamesMatchPattern:
               "^(?:(?:\\d+)?xs|sm|md|lg|(?:\\d+)?xl|custom|default|header)$",
             declarationMatchesPattern: "^size$",
-            objectType: "non-destructured",
+            objectType: "non-destructured"
           },
           customGroups: semanticSizeGroups,
           order: "asc",
@@ -289,21 +290,21 @@ export default antfu(
             "size-xl",
             { group: "size-prefixed-xl", order: "asc", type: "natural" },
             "size-header",
-            "unknown",
-          ],
+            "unknown"
+          ]
         },
-        { type: "unsorted" },
-      ],
-    },
-  },
+        { type: "unsorted" }
+      ]
+    }
+  }
 )
   .override(
     "antfu/perfectionist/setup",
     {
       files: ["**/*.{js,ts,jsx,tsx}"],
       rules: {
-        "perfectionist/sort-exports": "warn",
-      },
+        "perfectionist/sort-exports": "warn"
+      }
     },
     {
       rules: {
@@ -317,8 +318,8 @@ export default antfu(
             partitionByNewLine: true,
             type: "natural",
             fallbackSort: { order: "asc", type: "natural" },
-            groups: ["pinned", "unknown"],
-          },
+            groups: ["pinned", "unknown"]
+          }
         ],
         "perfectionist/sort-objects": [
           "warn",
@@ -328,11 +329,11 @@ export default antfu(
             partitionByNewLine: true,
             type: "natural",
             fallbackSort: { order: "asc", type: "natural" },
-            groups: ["pinned", "unknown", "structural"],
-          },
-        ],
-      },
-    },
+            groups: ["pinned", "unknown", "structural"]
+          }
+        ]
+      }
+    }
   )
   .overrideRules({
     "antfu/if-newline": "off",
@@ -347,19 +348,19 @@ export default antfu(
     "unused-imports/no-unused-imports": "off",
     "unused-imports/no-unused-vars": "off",
     "command/command": "off",
-    "perfectionist/sort-imports": "off",
+    "perfectionist/sort-imports": "off"
   })
   .override(
     "antfu/regexp/rules",
     {
       files: ["**/*.{js,ts,jsx,tsx}"],
       rules: {
-        "regexp/no-legacy-features": "error",
-      },
+        "regexp/no-legacy-features": "error"
+      }
     },
     {
       rules: {
-        "regexp/no-legacy-features": "off",
-      },
-    },
+        "regexp/no-legacy-features": "off"
+      }
+    }
   )

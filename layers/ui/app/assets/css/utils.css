@@ -46,6 +46,6 @@
   }
 
   .noise-none {
-    background-image: none;
+    --noise: 0;
   }
 }
