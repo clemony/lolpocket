@@ -1,4 +1,4 @@
-import patchIndex from "../../../shared/constants/patch-index.json"
+import patchIndex from "../patch/patch-index.json"
 import { decode } from "html-entities"
 import type { MetadataPayload, PatchNotesMeta, PbeMeta } from "../types"
 
