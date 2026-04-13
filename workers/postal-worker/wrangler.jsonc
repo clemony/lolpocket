@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "postal-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-13",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "POSTAL_CACHE",
+      "id": "replace-with-kv-namespace-id",
+      "preview_id": "replace-with-kv-preview-namespace-id"
+    }
+  ],
+  "triggers": {
+    "crons": ["17 * * * *", "13 14 * * *"]
+  }
+}

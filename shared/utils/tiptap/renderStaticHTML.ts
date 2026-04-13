@@ -1,4 +1,3 @@
-import StarterKit from "@nuxt/ui"
 import type { JSONContent } from "@tiptap/core"
 import Emoji, { gitHubEmojis } from "@tiptap/extension-emoji"
 import { renderToHTMLString } from "@tiptap/static-renderer"
@@ -13,9 +12,9 @@ export function renderStaticHTML(content: JSONContent) {
       Emoji.configure({
         emojis: gitHubEmojis,
         HTMLAttributes: {
-          class: "emoji",
-        },
-      }),
-    ],
+          class: "emoji"
+        }
+      })
+    ]
   })
 }
