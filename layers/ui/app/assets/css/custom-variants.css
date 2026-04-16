@@ -1,8 +1,24 @@
-@import "tailwindcss";
-
 @custom-variant light (&:where(.light, .light *, [data-theme="light"], [data-theme="light"] *));
 @custom-variant dim   (&:where(.dim, .dim *, [data-theme="dim"], [data-theme="dim"] *));
 @custom-variant dark  (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+@custom-variant stuck-top {
+  @container scroll-state(stuck: top) {
+    @slot;
+  }
+}
+
+@custom-variant scrollable-top {
+  @container scroll-state(scrollable: top) {
+    @slot;
+  }
+}
+
+@custom-variant scrollable-bottom {
+  @container scroll-state(scrollable: bottom) {
+    @slot;
+  }
+}
 
 /* Element-level data states */
 @custom-variant open (&[data-state="open"]);

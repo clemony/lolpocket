@@ -2,11 +2,11 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const blogPostTheme = defineUiTheme({
   slots: {
-    root: "group/blog-post relative flex flex-col overflow-hidden rounded-xl",
+    root: "group/post relative flex flex-col overflow-hidden rounded-xl",
     header: "pointer-events-none relative aspect-[16/9] w-full overflow-hidden",
     body: "flex min-w-0 flex-1 flex-col",
     footer: "",
-    image: "size-full object-cover object-top",
+    image: "size-full object-cover object-center",
     title: "text-xl font-semibold text-pretty text-highlighted",
     description: "mt-1 text-pretty text-base",
     authors: "mt-auto flex flex-wrap gap-x-3 gap-y-1.5 pt-4",
@@ -51,14 +51,15 @@ export const blogPostTheme = defineUiTheme({
         root: "p-0 sm:p-0",
         date: "text-toned",
         description: "text-muted",
-        header: "rounded-lg shadow-sm shadow-black/20 drop-shadow-sm"
+        header: "rounded-2xl shadow-sm shadow-black/20 drop-shadow-sm",
+        image: "rounded-2xl"
       }
     },
     to: {
       true: {
         root: "has-focus-visible:ring-2 has-focus-visible:ring-primary",
         image:
-          "transform transition-transform duration-200 group-hover/blog-post:scale-110",
+          "transform transition-transform duration-200 group-hover/post:scale-110",
         avatar:
           "transform transition-transform duration-200 hover:scale-115 focus-visible:outline-primary"
       }
@@ -94,7 +95,7 @@ export const blogPostTheme = defineUiTheme({
       to: true,
       class: {
         root: "hover:bg-elevated/50",
-        header: "group-hover/blog-post:shadow-none"
+        header: "group-hover/post:shadow-none"
       }
     },
     {
@@ -102,7 +103,7 @@ export const blogPostTheme = defineUiTheme({
       to: true,
       orientation: "vertical",
       class: {
-        header: "group-hover/blog-post:rounded-b-none"
+        header: "group-hover/post:rounded-b-none"
       }
     },
     {
@@ -110,7 +111,7 @@ export const blogPostTheme = defineUiTheme({
       to: true,
       orientation: "horizontal",
       class: {
-        header: "group-hover/blog-post:rounded-r-none"
+        header: "group-hover/post:rounded-r-none"
       }
     },
     {

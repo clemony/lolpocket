@@ -52,7 +52,7 @@ provide("video", state)
 </script>
 
 <template>
-  <div class="size-full">
+  <div v-auto-animate class="size-full">
     <video
       ref="video"
       class="z-0 size-full min-w-full overflow-hidden object-cover"

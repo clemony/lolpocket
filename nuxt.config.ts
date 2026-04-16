@@ -4,7 +4,8 @@ import process from "node:process"
 import { fileURLToPath } from "node:url"
 import { colors as uiThemeColors } from "./layers/ui/app/theme/colors"
 
-const isCF = process.env.CF_PAGES === "1"
+const isCFPages = process.env.CF_PAGES === "1"
+const nitroPreset = isCFPages ? "cloudflare_pages" : "cloudflare_module"
 const isProduction = process.env.NODE_ENV === "production"
 const redditPostRefreshCron = "*/30 * * * *"
 
@@ -52,7 +53,7 @@ export default defineNuxtConfig({
   ],
   css: ["#layers/ui/app/assets/css/tailwind.css"],
   image: {
-    provider: isCF ? "cloudflare" : "ipx",
+    provider: isCFPages ? "cloudflare" : "ipx",
     domains: [
       "ddragon.leagueoflegends.com",
       "cdn.communitydragon.org",
@@ -119,21 +120,20 @@ export default defineNuxtConfig({
   },
 
   fonts: {
+    provider: "fontsource",
     defaults: {
-      subsets: ["latin-ext", "latin"]
+      subsets: ["latin-ext", "latin"],
+      styles: ["normal", "italic"]
     },
     families: [
       {
-        name: "Inter",
-        provider: "fontsource",
-        weights: [400, 500, 600, 700, 800],
-        styles: ["normal", "italic"]
+        name: "Inter"
       },
       {
-        name: "DM Serif Display",
-        provider: "fontsource",
-        weight: 400,
-        styles: ["normal", "italic"]
+        name: "Source Code Pro"
+      },
+      {
+        name: "Playfair Display"
       }
     ]
   },
@@ -142,22 +142,11 @@ export default defineNuxtConfig({
 
   nitro: {
     sourceMap: false,
-    experimental: {
-      tasks: true
-    },
-    scheduledTasks: {
-      [redditPostRefreshCron]: ["reddit-refresh"]
-    },
     compatibilityDate: "2025-07-18",
-    preset: "cloudflare_module",
+    preset: nitroPreset,
     cloudflare: {
       deployConfig: true,
-      nodeCompat: true,
-      wrangler: {
-        triggers: {
-          crons: [redditPostRefreshCron]
-        }
-      }
+      nodeCompat: true
     },
     externals: {
       external: ["sharp"]
@@ -327,7 +316,7 @@ export default defineNuxtConfig({
   experimental: {
     // extractAsyncDataHandlers: true,
     nitroAutoImports: true,
-    typescriptPlugin: !isCF
+    typescriptPlugin: !isCFPages
     //viteEnvironmentApi: true,
   },
   future: {

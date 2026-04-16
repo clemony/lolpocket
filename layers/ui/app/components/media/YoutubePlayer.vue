@@ -280,6 +280,7 @@ function onStateChange() {}
 
   <ScriptYouTubePlayer
     ref="video"
+    v-auto-animate
     :video-id
     @ready="onLoad()"
     @state-change="onStateChange">

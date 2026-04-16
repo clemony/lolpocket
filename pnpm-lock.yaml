@@ -31,8 +31,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)
       '@nuxt/scripts':
-        specifier: 0.13.2
-        version: 0.13.2(@types/youtube@0.1.0)(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2))
+        specifier: 1.0.0
+        version: 1.0.0(@types/youtube@0.2.0)(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))
       '@nuxt/ui':
         specifier: 4.6.1
         version: 4.6.1(@tiptap/extensions@3.22.3(@tiptap/core@3.22.3(@tiptap/pm@3.22.3))(@tiptap/pm@3.22.3))(@tiptap/y-tiptap@3.0.3(prosemirror-model@1.25.4)(prosemirror-state@1.4.4)(prosemirror-view@1.41.8)(y-protocols@1.0.7(yjs@13.6.30))(yjs@13.6.30))(change-case@5.4.4)(db0@0.3.4)(embla-carousel@8.6.0)(ioredis@5.10.1)(magicast@0.5.2)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sortablejs@1.15.7)(tailwindcss@4.2.2)(typescript@6.0.2)(valibot@1.3.1(typescript@6.0.2))(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(vue-router@5.0.4(@vue/compiler-sfc@3.5.32)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2)))(vue@3.5.32(typescript@6.0.2)))(vue@3.5.32(typescript@6.0.2))(yjs@13.6.30)
@@ -125,7 +125,7 @@ importers:
         version: 4.7.1(@nuxt/kit@4.4.2(magicast@0.5.2))(@pinia/nuxt@0.11.3(magicast@0.5.2)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2))))(pinia@3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2)))
       prettier-plugin-sh:
         specifier: ^0.18.1
-        version: 0.18.1(prettier@3.8.2)
+        version: 0.18.1(prettier@3.8.3)
       random-words:
         specifier: ^2.0.1
         version: 2.0.1
@@ -171,7 +171,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: 8.2.0
-        version: 8.2.0(@prettier/plugin-xml@3.4.2(prettier@3.8.2))(@typescript-eslint/rule-tester@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@typescript-eslint/typescript-estree@8.58.2(typescript@6.0.2))(@typescript-eslint/utils@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@vue/compiler-sfc@3.5.32)(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2)(vitest@4.1.4(@types/node@25.6.0)(happy-dom@20.8.9)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)))
+        version: 8.2.0(@prettier/plugin-xml@3.4.2(prettier@3.8.3))(@typescript-eslint/rule-tester@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@typescript-eslint/typescript-estree@8.58.2(typescript@6.0.2))(@typescript-eslint/utils@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@vue/compiler-sfc@3.5.32)(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2)(vitest@4.1.4(@types/node@25.6.0)(happy-dom@20.8.9)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)))
       '@eslint/css':
         specifier: ^1.1.0
         version: 1.1.0
@@ -189,7 +189,7 @@ importers:
         version: 4.0.0(@vue/test-utils@2.4.6)(happy-dom@20.8.9)(magicast@0.5.2)(playwright-core@1.59.1)(typescript@6.0.2)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(vitest@4.1.4(@types/node@25.6.0)(happy-dom@20.8.9)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)))
       '@prettier/plugin-xml':
         specifier: ^3.4.2
-        version: 3.4.2(prettier@3.8.2)
+        version: 3.4.2(prettier@3.8.3)
       '@svgr/plugin-prettier':
         specifier: ^8.1.0
         version: 8.1.0(@svgr/core@8.1.0(typescript@6.0.2))
@@ -200,8 +200,8 @@ importers:
         specifier: ^28.0.1
         version: 28.0.1
       '@types/youtube':
-        specifier: 0.1.0
-        version: 0.1.0
+        specifier: 0.2.0
+        version: 0.2.0
       '@vitejs/plugin-vue':
         specifier: 6.0.6
         version: 6.0.6(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))
@@ -236,11 +236,11 @@ importers:
         specifier: ^1.59.1
         version: 1.59.1
       prettier:
-        specifier: ^3.8.2
-        version: 3.8.2
+        specifier: ^3.8.3
+        version: 3.8.3
       prettier-plugin-tailwindcss:
         specifier: ^0.7.2
-        version: 0.7.2(prettier@3.8.2)
+        version: 0.7.2(prettier@3.8.3)
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -1334,16 +1334,18 @@ packages:
     resolution: {integrity: sha512-/q6C7Qhiricgi+PKR7ovBnJlKTL0memCbA1CzRT+itCW/oeYzUfeMdQ35mGntlBoyRPNrMXbzuSUhfDbSCU57w==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  '@nuxt/scripts@0.13.2':
-    resolution: {integrity: sha512-aZYm60B08RoRnFVu+RiyN8UQ/xB3IWs05sh1pQ35CJ+zbWT725SZTgMI12kEXzqxAAHpiuv1ctBpLlFg+4jiew==}
+  '@nuxt/scripts@1.0.0':
+    resolution: {integrity: sha512-qTFH4N9AW2kHA3bSdbiMJnEQJ2l213qBSw6vZVSfFNjPl/9Pdbaee9Mjdyb9IP7vypj6sllVVOuFOFPZDlUCVQ==}
+    hasBin: true
     peerDependencies:
       '@googlemaps/markerclusterer': ^2.6.2
       '@paypal/paypal-js': ^8.1.2 || ^9.0.0
-      '@stripe/stripe-js': ^7.0.0 || ^8.0.0
+      '@stripe/stripe-js': ^7.0.0 || ^8.0.0 || ^9.0.0
       '@types/google.maps': ^3.58.1
       '@types/vimeo__player': ^2.18.3
       '@types/youtube': ^0.1.0
       '@unhead/vue': ^2.0.3
+      posthog-js: ^1.0.0
     peerDependenciesMeta:
       '@googlemaps/markerclusterer':
         optional: true
@@ -1356,6 +1358,8 @@ packages:
       '@types/vimeo__player':
         optional: true
       '@types/youtube':
+        optional: true
+      posthog-js:
         optional: true
 
   '@nuxt/telemetry@2.8.0':
@@ -3088,8 +3092,8 @@ packages:
   '@types/ws@8.18.1':
     resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
 
-  '@types/youtube@0.1.0':
-    resolution: {integrity: sha512-Pg33m3X2mFgdmhtvzOlAfUfgOa3341N3/2JCrVY/mXVxb4hagcqqEG6w4vGCfB64StQNWHSj/T8Eotb1Rko/FQ==}
+  '@types/youtube@0.2.0':
+    resolution: {integrity: sha512-Y+y6RKuqhurm5yWfUt3eT2QdHZNl09+OT86I2yOKGfJzTZCaR5eSf6m7zIGnlUHiUuYm4i/hUTDJ++E53OVh0g==}
 
   '@typescript-eslint/eslint-plugin@8.58.2':
     resolution: {integrity: sha512-aC2qc5thQahutKjP+cl8cgN9DWe3ZUqVko30CMSZHnFEHyhOYoZSzkGtAI2mcwZ38xeImDucI4dnqsHiOYuuCw==}
@@ -6107,8 +6111,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.8.2:
-    resolution: {integrity: sha512-8c3mgTe0ASwWAJK+78dpviD+A8EqhndQPUBpNUIPt6+xWlIigCwfN01lWr9MAede4uqXGTEKeQWTvzb3vjia0Q==}
+  prettier@3.8.3:
+    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6521,6 +6525,9 @@ packages:
 
   std-env@4.0.0:
     resolution: {integrity: sha512-zUMPtQ/HBY3/50VbpkupYHbRroTRZJPRLvreamgErJVys0ceuzMkD44J/QjqhHjOzK42GQ3QZIeFG1OYfOtKqQ==}
+
+  std-env@4.1.0:
+    resolution: {integrity: sha512-Rq7ybcX2RuC55r9oaPVEW7/xu3tj8u4GeBYHBWCychFtzMIr86A7e3PPEBPT37sHStKX3+TiX/Fr/ACmJLVlLQ==}
 
   streamx@2.25.0:
     resolution: {integrity: sha512-0nQuG6jf1w+wddNEEXCF4nTg3LtufWINB5eFEN+5TNZW7KWJp6x87+JFL43vaAUPyCfH1wID+mNVyW6OHtFamg==}
@@ -7386,7 +7393,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@antfu/eslint-config@8.2.0(@prettier/plugin-xml@3.4.2(prettier@3.8.2))(@typescript-eslint/rule-tester@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@typescript-eslint/typescript-estree@8.58.2(typescript@6.0.2))(@typescript-eslint/utils@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@vue/compiler-sfc@3.5.32)(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2)(vitest@4.1.4(@types/node@25.6.0)(happy-dom@20.8.9)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)))':
+  '@antfu/eslint-config@8.2.0(@prettier/plugin-xml@3.4.2(prettier@3.8.3))(@typescript-eslint/rule-tester@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@typescript-eslint/typescript-estree@8.58.2(typescript@6.0.2))(@typescript-eslint/utils@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@vue/compiler-sfc@3.5.32)(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2)(vitest@4.1.4(@types/node@25.6.0)(happy-dom@20.8.9)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)))':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@clack/prompts': 1.2.0
@@ -7426,7 +7433,7 @@ snapshots:
       vue-eslint-parser: 10.4.0(eslint@10.2.0(jiti@2.6.1))
       yaml-eslint-parser: 2.0.0
     optionalDependencies:
-      '@prettier/plugin-xml': 3.4.2(prettier@3.8.2)
+      '@prettier/plugin-xml': 3.4.2(prettier@3.8.3)
     transitivePeerDependencies:
       - '@eslint/json'
       - '@typescript-eslint/rule-tester'
@@ -8399,7 +8406,7 @@ snapshots:
       magic-string: 0.30.21
       nitropack: 2.13.3
       oxc-parser: 0.121.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)
-      prettier: 3.8.2
+      prettier: 3.8.3
       sirv: 3.0.2
       unplugin: 3.0.0
       unstorage: 1.17.5(db0@0.3.4)(ioredis@5.10.1)
@@ -8636,27 +8643,32 @@ snapshots:
       pkg-types: 2.3.0
       std-env: 4.0.0
 
-  '@nuxt/scripts@0.13.2(@types/youtube@0.1.0)(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2))':
+  '@nuxt/scripts@1.0.0(@types/youtube@0.2.0)(@unhead/vue@2.1.13(vue@3.5.32(typescript@6.0.2)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))':
     dependencies:
+      '@nuxt/devtools-kit': 3.2.4(magicast@0.5.2)(vite@7.3.1(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
       '@nuxt/kit': 4.4.2(magicast@0.5.2)
       '@unhead/vue': 2.1.13(vue@3.5.32(typescript@6.0.2))
       '@vueuse/core': 14.2.1(vue@3.5.32(typescript@6.0.2))
+      '@vueuse/shared': 14.2.1(vue@3.5.32(typescript@6.0.2))
       consola: 3.4.2
       defu: 6.1.7
       h3: 1.15.11
       magic-string: 0.30.21
       ofetch: 1.5.1
       ohash: 2.0.11
+      oxc-parser: 0.125.0
+      oxc-walker: 0.7.0(oxc-parser@0.125.0)
       pathe: 2.0.3
       pkg-types: 2.3.0
       sirv: 3.0.2
-      std-env: 3.10.0
+      std-env: 4.1.0
       ufo: 1.6.3
-      unplugin: 2.3.11
+      ultrahtml: 1.6.0
+      unplugin: 3.0.0
       unstorage: 1.17.5(db0@0.3.4)(ioredis@5.10.1)
       valibot: 1.3.1(typescript@6.0.2)
     optionalDependencies:
-      '@types/youtube': 0.1.0
+      '@types/youtube': 0.2.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -8679,6 +8691,7 @@ snapshots:
       - magicast
       - typescript
       - uploadthing
+      - vite
       - vue
 
   '@nuxt/telemetry@2.8.0(@nuxt/kit@4.4.2(magicast@0.5.2))':
@@ -9480,10 +9493,10 @@ snapshots:
 
   '@poppinss/exception@1.2.3': {}
 
-  '@prettier/plugin-xml@3.4.2(prettier@3.8.2)':
+  '@prettier/plugin-xml@3.4.2(prettier@3.8.3)':
     dependencies:
       '@xml-tools/parser': 1.0.11
-      prettier: 3.8.2
+      prettier: 3.8.3
 
   '@remirror/core-constants@3.0.0': {}
 
@@ -10242,7 +10255,7 @@ snapshots:
     dependencies:
       '@types/node': 25.6.0
 
-  '@types/youtube@0.1.0': {}
+  '@types/youtube@0.2.0': {}
 
   '@typescript-eslint/eslint-plugin@8.58.2(@typescript-eslint/parser@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2)':
     dependencies:
@@ -14062,19 +14075,19 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-sh@0.18.1(prettier@3.8.2):
+  prettier-plugin-sh@0.18.1(prettier@3.8.3):
     dependencies:
       '@reteps/dockerfmt': 0.5.2
-      prettier: 3.8.2
+      prettier: 3.8.3
       sh-syntax: 0.5.8
 
-  prettier-plugin-tailwindcss@0.7.2(prettier@3.8.2):
+  prettier-plugin-tailwindcss@0.7.2(prettier@3.8.3):
     dependencies:
-      prettier: 3.8.2
+      prettier: 3.8.3
 
   prettier@2.8.8: {}
 
-  prettier@3.8.2: {}
+  prettier@3.8.3: {}
 
   pretty-bytes@7.1.0: {}
 
@@ -14581,6 +14594,8 @@ snapshots:
   std-env@3.10.0: {}
 
   std-env@4.0.0: {}
+
+  std-env@4.1.0: {}
 
   streamx@2.25.0:
     dependencies:

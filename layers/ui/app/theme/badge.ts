@@ -3,7 +3,7 @@ import { defineUiTheme } from "./defineUiTheme"
 export const badgeTheme = defineUiTheme({
   slots: {
     base: "drop-shadow-tiny inline-flex w-fit items-center align-middle inset-ring",
-    leadingIcon: "inline align-middle"
+    leadingIcon: "inline align-icon"
   },
   variants: {
     color: {
@@ -75,7 +75,7 @@ export const badgeTheme = defineUiTheme({
       color: "base",
       variant: "solid",
       class:
-        "fx-depth-p1 bg-p0 fx-noise text-pc inset-ring inset-ring-p4/60 fx-1"
+        "fx-depth-p1 fx-noise bg-p0 text-pc inset-ring inset-ring-p4/60 fx-1"
     },
     {
       color: "base",
@@ -115,7 +115,7 @@ export const badgeTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class:
-        "fx-depth-neutral bg-n0/90 fx-noise text-nc inset-ring ring-n3 inset-ring-n1 backdrop-blur-sm **:text-nc"
+        "fx-depth-neutral fx-noise bg-n0/90 text-nc inset-ring ring-n3 inset-ring-n1 backdrop-blur-sm **:text-nc [&_svg]:text-nc"
     },
     {
       color: "neutral",

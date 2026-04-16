@@ -38,7 +38,7 @@ function handleSeek() {
   <div
     :class="
       cn(
-        'group/video via-neutral-70 pointer-events-none absolute inset-0 z-3 flex size-full flex-col overflow-hidden bg-gradient-to-b from-neutral/90 via-30% to-neutral/0 opacity-0 transition-opacity duration-400 ease-in-out hover:opacity-100',
+        'group/video via-neutral-70 pointer-events-none absolute inset-0 z-3 flex size-full flex-col overflow-hidden rounded-6xl bg-gradient-to-b from-neutral/90 via-30% to-transparent opacity-0 transition-opacity duration-400 ease-in-out hover:opacity-100',
         { 'opacity-100': !playing }
       )
     "
@@ -58,7 +58,7 @@ function handleSeek() {
     <div
       :class="
         cn(
-          'pointer-events-none absolute bottom-0 z-2 flex size-full h-12 w-full grow translate-y-22 flex-nowrap items-center gap-2.5 justify-self-end rounded-t-xl rounded-b-lg bg-n0/86! px-5 py-px shadow-md ring ring-n4/70 backdrop-blur-lg transition-all duration-300 ease-in-out *:pointer-events-auto group-hover/video:translate-y-0',
+          'pointer-events-none absolute bottom-0 z-2 flex size-full h-12 w-full grow translate-y-22 flex-nowrap items-center gap-2.5 justify-self-end rounded-t-xl rounded-b-none bg-n0/86! px-5 py-px shadow-md ring ring-n4/70 backdrop-blur-lg transition-all duration-300 ease-in-out *:pointer-events-auto group-hover/video:translate-y-0',
           { 'translate-y-0': !playing }
         )
       ">

@@ -19,6 +19,8 @@
   --color-master: oklch(75.18% 0.1157 325.26);
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
   --color-challenger: oklch(83.25% 0.0787 213.4);
+  --ui-link: oklch(65% 31% 34deg);
+  --ui-orange-dust: oklch(67% 25% 52deg);
 
   /* position */
   --color-top: var(--color-domination);
@@ -77,6 +79,7 @@
   --error: var(--color-error);
   --vamp: var(--color-vamp);
   --fighter: var(--color-fighter);
+  --color-link: var(--ui-link);
   --apen: var(--color-apen);
   --ad: var(--color-ad);
   --armor: var(--color-iron);

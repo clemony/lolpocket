@@ -2,7 +2,7 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const pageHeaderTheme = defineUiTheme({
   slots: {
-    root: "relative border-b border-p2 pt-8 pb-6",
+    root: "group/header relative border-b border-p2 pt-8 pb-6",
     container: "",
     wrapper:
       "flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between",

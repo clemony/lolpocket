@@ -1,36 +1,8 @@
 <script lang="ts" setup>
-import { usePostModal } from "~/components/lol/external/posts/usePostModal"
+import { usePostModalInject } from "~/components/lol/external/posts/usePostModal"
 
-const { public: { postalBaseUrl } } = useRuntimeConfig()
-
-const { data: postList } = await useFetch<PostListResponse>(
-  "/api/feed/reddit",
-  {
-    baseURL: postalBaseUrl || undefined,
-    query: {
-      limit: 25
-    },
-    server: false
-  }
-)
-
-const list = computed<PostListResponse>(() => safeObject(postList.value))
-const items = computed(() => list.value.items)
-const activeIndex = shallowRef(0)
+const { posts, activeIndex, open } = usePostModalInject()
 const carousel = useTemplateRef("carousel")
-const { openPostModal } = usePostModal()
-
-function handleOpen(i: number) {
-  if (!items.value.length) return
-
-  const target = items.value[i]
-  if (!target) return
-
-  activeIndex.value = i
-  openPostModal(i, items.value, (selectedIndex) => {
-    activeIndex.value = selectedIndex
-  })
-}
 
 watch(activeIndex, (index) => {
   carousel.value?.emblaApi?.scrollTo(index)
@@ -40,7 +12,7 @@ watch(activeIndex, (index) => {
 <template>
   <UCarousel
     ref="carousel"
-    :items="items"
+    :items="posts"
     dots
     :slides-to-scroll="1"
     wheel-gestures
@@ -85,12 +57,11 @@ watch(activeIndex, (index) => {
     orientation="horizontal">
     <template #default="{ item, index }">
       <RedditPost
-        v-if="items.length"
-        :key="item?.source_id"
+        v-if="item"
+        :key="item.source_id"
         :post="item"
-        :post-list="items"
         :index
-        @set-index="handleOpen($event)" />
+        @open-post="open" />
     </template>
-  </ucarousel>
+  </UCarousel>
 </template>

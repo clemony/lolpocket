@@ -6,8 +6,9 @@ export const buttonTheme = defineUiTheme({
     label: "grow truncate text-start text-sm font-medium",
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
-    leadingIcon: "pointer-events-none shrink-0 group-hover/btn:opacity-100",
-    trailingIcon: "pointer-events-none shrink-0",
+    leadingIcon:
+      "pointer-events-none shrink-0 align-icon group-hover/btn:opacity-100",
+    trailingIcon: "pointer-events-none shrink-0 align-icon",
     base: "group/btn ring-unset inline-flex shrink-0 cursor-pointer items-center overflow-hidden rounded-lg border-0 duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75"
   },
   variants: {

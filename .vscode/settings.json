@@ -12,6 +12,11 @@
     "*.css": "tailwindcss"
   },
 
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "prettier.documentSelectors": ["**/*.vue"],
   "typescript.tsserver.maxTsServerMemory": 4096,
   "search.exclude": {
     "**/node_modules": true
@@ -26,9 +31,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[tailwindcss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
@@ -91,5 +93,6 @@
   "iconify.position": "before",
   "iconify.customCollectionJsonPaths": [".vscode/.iconify/lol.json"],
   "iconify.customAliasesJsonPaths": [".vscode/.iconify/icon-alias.json"],
-  "code-runner.cwd": "~/lolpocket"
+  "code-runner.cwd": "~/lolpocket",
+  "prettier.requireConfig": true
 }

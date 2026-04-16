@@ -14,10 +14,12 @@ const props = withDefaults(
   }
 )
 
-const { public: { postalBaseUrl } } = useRuntimeConfig()
+const {
+  public: { postalBaseUrl }
+} = useRuntimeConfig()
 
 const { data, status, execute } = useFetch<PatchNotesMeta>(
-  () => `/cdn/meta/patch-notes/${props.patch}.json`,
+  () => `/cdn/meta/patch_latest.json`,
   {
     baseURL: postalBaseUrl || undefined,
     server: false,
@@ -32,17 +34,6 @@ const delegated = reactiveOmit(props, ["patch", "class"])
 onMounted(async () => {
   execute()
 })
-
-const img = useImage()
-
-const src = computed(() =>
-  img(data.value?.metadata.image ?? "", {
-    width: 400,
-    height: 300,
-    quality: 50,
-    format: "webp"
-  })
-)
 </script>
 
 <template>
@@ -52,7 +43,7 @@ const src = computed(() =>
     :badge="postBadge('riot official')"
     :ui="{
       body: 'h-full',
-      root: cn('group group/post h-full min-h-full', props?.class),
+      root: cn('h-full min-h-full', props?.class),
       image: '',
       title: 'cursor-pointer group-hover:underline'
     }"
@@ -79,7 +70,7 @@ const src = computed(() =>
         ui: postAuthorUi
       }
     ]"
-    :image="src"
+    :image="data?.metadata.image || undefined"
     :description="
       data.metadata.description ??
       'It seems we lost the patch data. We\'ll attempt to turn the router off and on.'

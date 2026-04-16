@@ -12,6 +12,7 @@ export const icon = {
     link: "lucide:arrow-up-right", //'i-link'
     "arrow-right": "lucide:arrow-right", //'i-arrow-right'
     "arrow-up": "lucide:arrow-up", //'i-arrow-up'
+    "arrow-up-thick": "i-typcn-arrow-up-thick",
     "caret-down": "tabler:caret-down-filled", //'i-caret-down'
     "caret-up": "tabler:caret-up-filled", //i-caret-up'
     "caret-right": "tabler:caret-right-filled", //'i-caret-right'
