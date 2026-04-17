@@ -1,6 +1,14 @@
 <script lang="ts" setup>
+import type {
+  OpenRedditPost,
+  OpenRedditPostFn
+} from "~/components/lol/external/posts/post.types"
+import {
+  buildPatchPost,
+  buildPbePost,
+  buildRedditPost
+} from "~/components/lol/external/posts/post_cards"
 import { usePostModalInject } from "~/components/lol/external/posts/usePostModal"
-import { patchIndex } from "~~/shared/constants/patch-index"
 
 definePageMeta({
   title: "News",
@@ -54,92 +62,61 @@ function pageTo(targetPage: number) {
 </script>
 
 <template>
-  <UPage class="mx-auto flex size-full max-w-5xl flex-col items-center">
+  <UPage class="mx-auto flex size-full max-w-7xl flex-col items-center">
     <UPageHeader
       title="News"
       class="w-full"
+      :ui="{
+        root: 'mb-12 w-full border-b-0 px-8 pb-0',
+        container: 'border-b border-b-p3/80 pb-6'
+      }"
       description="The latest League updates all in one place." />
-    <UPageBody class="w-full px-8">
-      <div class="h-max">
-        <h1 class="flex h-24 items-center px-3">Game Updates</h1>
-        <div class="w-full">
-          <LazyPatchPost
-            size="lg"
-            orientation="horizontal"
-            :patch="patchIndex[0]"
-            class="" />
-          <LazyPbePost orientation="horizontal" class="" />
-        </div>
-      </div>
+    <UPageBody id="updates" class="w-full px-8">
+      <section class="grid auto-rows-max gap-4">
+        <h2 class="align-center inline h-10 tracking-tight drop-shadow-xs">
+          Game Updates
+        </h2>
+        <LazyPostCard :post="buildPatchPost()" />
+        <LazyPostCard :post="buildPbePost()" />
+      </section>
 
-      <UPageSection
-        id="news-feed"
-        orientation="horizontal"
-        class="w-full scroll-mt-24"
-        :ui="{
-          container: 'w-full lg:grid-cols-1',
-          wrapper: 'w-full',
-          header: 'flex w-full items-center justify-between',
-          footer: 'mt-18 flex w-full justify-center'
-        }"
-        title="Feed">
-        <template #description>
-          <UPagination
-            v-model:page="page"
-            :sibling-count="0"
-            :items-per-page="itemsPerPage"
-            :total="total"
-            :to="pageTo"
-            size="sm"
-            :show-edges="false"
-            variant="outline"
-            color="base">
-            <template #first>
-              <span class="hidden size-px" />
-            </template>
-            <template #item>
-              <span class="hidden size-px" />
-            </template>
-            <template #last>
-              <span class="hidden size-px" />
-            </template>
-          </UPagination>
-        </template>
+      <section id="news-feed" class="grid auto-rows-max gap-4">
+        <h2 class="align-center inline h-10 tracking-tight drop-shadow-xs">
+          Feed
+        </h2>
+        <UPagination
+          v-model:page="page"
+          :sibling-count="0"
+          :items-per-page="itemsPerPage"
+          :total="total"
+          :to="pageTo"
+          size="sm"
+          :ui="{
+            list: 'last:*:hidden [&>aria-label=Last_Page]:hidden!',
+            first: 'hidden!',
+            last: 'hidden!',
+            item: 'hidden!'
+          }"
+          :show-edges="false"
+          variant="outline"
+          color="base" />
 
-        <template #features>
-          <div
-            v-for="(item, index) in pagedPosts"
-            :key="item.source_id"
-            class="w-full">
-            <LazyRedditPost
-              :post="item"
-              :index="(page - 1) * itemsPerPage + index"
-              orientation="horizontal"
-              @open-post="open" />
-          </div>
-        </template>
-        <template #footer>
-          <UPagination
-            v-model:page="page"
-            :items-per-page="itemsPerPage"
-            :total="total"
-            size="sm"
-            :to="pageTo"
-            variant="outline"
-            active-variant="solid"
-            color="base"
-            :ui="{
-              list: 'gap-1.5',
-              item: 'disabled:hidden [&_svg]:opacity-60 [&_svg]:active:opacity-100',
-              next: 'disabled:hidden [&_svg]:opacity-60 [&_svg]:hover:opacity-100',
-              prev: 'disabled:hidden [&_svg]:opacity-60 [&_svg]:hover:opacity-100',
-              first:
-                'disabled:hidden! [&_svg]:opacity-60 [&_svg]:hover:opacity-100',
-              last: 'disabled:hidden [&_svg]:opacity-60 [&_svg]:hover:opacity-100'
-            }"
-            active-color="neutral" />
-        </template>
-      </UPageSection>
+        <LazyPostCard
+          v-for="(item, index) in pagedPosts"
+          :key="item.source_id"
+          :post="buildRedditPost(item)"
+          :index="(page - 1) * itemsPerPage + index"
+          orientation="horizontal"
+          @open-reddit-post="
+            (post: Post, index: number) => open(post, index)
+          " />
+
+        <Pagination
+          v-model:page="page"
+          :items-per-page="itemsPerPage"
+          :total="total"
+          :to="pageTo" />
+      </section>
     </UPageBody>
   </UPage>
 </template>

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { BlogPostProps } from "@nuxt/ui"
-import { postAuthorUi, postBadge } from "./postProps"
+import { postAuthorUi, postBadge } from "./post_props"
 
 const props = withDefaults(
   defineProps<
@@ -40,7 +40,7 @@ onMounted(async () => {
   <UBlogPost
     v-if="data"
     v-bind="delegated"
-    :badge="postBadge('riot official')"
+    :badge="postBadge('Official')"
     :ui="{
       body: 'h-full',
       root: cn('h-full min-h-full', props?.class),

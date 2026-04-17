@@ -13,6 +13,7 @@ export const postLinkMetadataSchema = v.object({
   linkFlairText: v.optional(v.nullable(v.string())),
   over18: v.optional(v.boolean()),
   postHint: v.optional(v.nullable(v.string())),
+  spoiler: v.optional(v.boolean()),
   stickied: v.optional(v.boolean())
 })
 

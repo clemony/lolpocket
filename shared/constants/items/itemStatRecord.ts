@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/03/2026 04:30:45 PM CDT
+// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
 
 export interface StatRecord {
   "abilityHaste"?: number;
@@ -328,7 +328,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "3039": {
     "health": 700,
-    "criticalStrikeChance": 0.2
+    "criticalStrikeChance": 20
   },
   "3040": {
     "abilityPower": 70,
@@ -471,7 +471,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "percentMovespeed": 4
   },
   "3095": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 50,
     "attackSpeed": 20
   },
@@ -943,7 +943,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 250,
     "abilityPower": 120,
     "armor": 30,
-    "criticalStrikeChance": 0.3,
+    "criticalStrikeChance": 30,
     "attackDamage": 70,
     "attackSpeed": 50,
     "lifesteal": 10,
@@ -1138,10 +1138,10 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "criticalStrikeChance": 20
   },
   "6671": {
-    "criticalStrikeChance": 0.2,
+    "criticalStrikeChance": 20,
     "attackDamage": 50,
     "attackSpeed": 15,
-    "percentMovespeed": 7.000000000000001
+    "percentMovespeed": 7
   },
   "6672": {
     "attackDamage": 45,
@@ -1232,7 +1232,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "123430": {
     "abilityPower": 55,
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
   "124011": {
@@ -1259,7 +1259,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "221053": {
     "attackDamage": 15,
-    "lifesteal": 7.000000000000001
+    "lifesteal": 7
   },
   "221057": {
     "magicResistance": 30
@@ -1293,7 +1293,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackSpeed": 25
   },
   "222512": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackSpeed": 40,
     "percentMovespeed": 4
   },
@@ -1305,7 +1305,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityPower": 90
   },
   "222523": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 50
   },
   "222524": {
@@ -1363,7 +1363,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackDamage": 55
   },
   "223031": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 55
   },
   "223032": {
@@ -1371,11 +1371,11 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackSpeed": 40
   },
   "223033": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 30
   },
   "223036": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 30
   },
   "223039": {
@@ -1391,7 +1391,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackDamage": 40
   },
   "223046": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackSpeed": 60,
     "percentMovespeed": 8
   },
@@ -1455,7 +1455,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 700
   },
   "223085": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackSpeed": 45,
     "percentMovespeed": 4
   },
@@ -1472,12 +1472,12 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackSpeed": 50
   },
   "223094": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
   "223095": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 50,
     "attackSpeed": 20
   },
@@ -1631,13 +1631,13 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "percentMovespeed": 6
   },
   "223508": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 50
   },
   "223742": {
     "health": 300,
     "armor": 40,
-    "percentMovespeed": 7.000000000000001
+    "percentMovespeed": 7
   },
   "223748": {
     "health": 400,
@@ -1790,27 +1790,27 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "armor": 30
   },
   "226671": {
-    "criticalStrikeChance": 0.2,
+    "criticalStrikeChance": 20,
     "attackDamage": 50,
     "attackSpeed": 15,
-    "percentMovespeed": 7.000000000000001
+    "percentMovespeed": 7
   },
   "226672": {
     "attackDamage": 40,
     "attackSpeed": 35,
-    "percentMovespeed": 7.000000000000001
+    "percentMovespeed": 7
   },
   "226673": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 55
   },
   "226675": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackSpeed": 35,
     "percentMovespeed": 4
   },
   "226676": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 45
   },
   "226691": {
@@ -1853,7 +1853,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityHaste": 20
   },
   "228003": {
-    "criticalStrikeChance": 0.2,
+    "criticalStrikeChance": 20,
     "attackDamage": 150
   },
   "228004": {
@@ -1875,7 +1875,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 600,
     "abilityPower": 85,
     "armor": 50,
-    "criticalStrikeChance": 0.2,
+    "criticalStrikeChance": 20,
     "attackDamage": 65,
     "attackSpeed": 30,
     "percentMovespeed": 10
@@ -2203,7 +2203,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "663039": {
     "health": 500,
-    "criticalStrikeChance": 0.2
+    "criticalStrikeChance": 20
   },
   "663058": {
     "health": 250,
@@ -2214,7 +2214,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 250
   },
   "663060": {
-    "criticalStrikeChance": 0.5
+    "criticalStrikeChance": 50
   },
   "663146": {
     "abilityPower": 90,
@@ -2239,7 +2239,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 250,
     "abilityPower": 125,
     "armor": 10,
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 90,
     "attackSpeed": 30,
     "lifesteal": 10
@@ -2261,7 +2261,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 500
   },
   "667666": {
-    "criticalStrikeChance": 0.25,
+    "criticalStrikeChance": 25,
     "attackDamage": 50
   },
   "994403": {
@@ -2270,7 +2270,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 200,
     "abilityPower": 110,
     "armor": 20,
-    "criticalStrikeChance": 0.15,
+    "criticalStrikeChance": 15,
     "attackDamage": 90,
     "attackSpeed": 40,
     "lifesteal": 10,

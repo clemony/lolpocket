@@ -1,26 +1,6 @@
 import { LazyPostModal } from "#components"
-
-export const PostModalKey = Symbol("PostModal")
-
-export interface UsePostModalReturn {
-  posts: ComputedRef<Post[]>
-  activeIndex: Ref<number>
-  activePost: ComputedRef<Post | null>
-  prev: (e?: MouseEvent) => void
-  next: (e?: MouseEvent) => void
-  ctrls: PostControl[]
-  open: (post: Post, index: number) => void
-  close: () => void
-}
-
-interface PostControl {
-  disabled?: ComputedRef<boolean>
-  icon: string
-  onClick: (e?: MouseEvent) => void
-  label: string
-}
-
-type PostSource = Ref<Post[] | undefined> | ComputedRef<Post[] | undefined> | Post[]
+import type { PostControl, PostSource, UsePostModalReturn } from "./post.types"
+import { PostModalKey } from "./post.types"
 
 export const usePostModal = (sourcePosts?: PostSource): UsePostModalReturn => {
   const posts = computed<Post[]>(() => toValue(sourcePosts) ?? [])
@@ -48,7 +28,7 @@ export const usePostModal = (sourcePosts?: PostSource): UsePostModalReturn => {
     if (posts.value[index]?.source_id === post.source_id) return index
 
     const matchedIndex = posts.value.findIndex(
-      item => item.source_id === post.source_id
+      (item) => item.source_id === post.source_id
     )
 
     if (matchedIndex >= 0) return matchedIndex
@@ -91,14 +71,18 @@ export const usePostModal = (sourcePosts?: PostSource): UsePostModalReturn => {
     }
   })
 
-  watch(posts, (items) => {
-    if (!items.length) {
-      activeIndex.value = 0
-      return
-    }
+  watch(
+    posts,
+    (items) => {
+      if (!items.length) {
+        activeIndex.value = 0
+        return
+      }
 
-    setActiveIndex(activeIndex.value)
-  }, { immediate: true })
+      setActiveIndex(activeIndex.value)
+    },
+    { immediate: true }
+  )
 
   watch(activePost, (post) => {
     if (!post) return

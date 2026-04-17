@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import type { BlogPostProps } from "@nuxt/ui"
 import { formatDate } from "@vueuse/core"
-import { decode } from "html-entities"
-
 const props = withDefaults(
   defineProps<
     BlogPostProps & {
@@ -16,21 +14,6 @@ const props = withDefaults(
   }
 )
 
-const {
-  public: { postalBaseUrl }
-} = useRuntimeConfig()
-
-const { data, status, execute } = useFetch<PbeMeta>(
-  () => `/cdn/meta/pbe_latest.json`,
-  {
-    baseURL: postalBaseUrl || undefined,
-    server: false,
-    lazy: true,
-    immediate: false,
-    key: () => `pbe-latest`
-  }
-)
-
 const delegated = reactiveOmit(props, ["class"])
 
 const sizes: Record<string, Record<string, HTMLAttributes["class"]>> = {
@@ -39,35 +22,13 @@ const sizes: Record<string, Record<string, HTMLAttributes["class"]>> = {
     header: "max-w-120"
   }
 }
-
-onMounted(async () => {
-  execute()
-})
-
-const devIcon = /Development_nav_icon/
-
-const isDevIcon = computed(() => {
-  return data.value?.metadata.image
-    ? devIcon.test(data.value.metadata.image)
-    : false
-})
-
-const src = computed<string | undefined>(
-  () =>
-    (!isDevIcon.value ? data.value?.metadata.image : undefined) as
-      | string
-      | undefined
-)
 </script>
 
 <template>
-  <UBlogPost
+  <!--  <UBlogPost
     v-if="data"
     v-bind="delegated"
     :badge="{
-      label: data.wikiLastModified
-        ? `Updated ${formatDate(new Date(data.wikiLastModified), 'MMM d, YYYY')}`
-        : undefined,
       size: 'sm',
       variant: 'solid',
       color: 'neutral',
@@ -77,30 +38,18 @@ const src = computed<string | undefined>(
       }
     }"
     :ui="{
-      root: cn('group group/post h-full min-h-full max-w-260', props?.class),
-      header: cn(
-        sizes[props.size]?.header,
-        isDevIcon || !src ? 'grid place-items-center bg-neutral!' : ''
+      root: cn(
+        'pointer-events-auto! flex! h-full min-h-full max-w-320 cursor-pointer flex-row! flex-nowrap items-center px-1! py-4! **:text-start'
       ),
-      image: isDevIcon || !src ? 'scale-50 group-hover/post:scale-80' : ''
+      title: 'mb-2! tracking-tight group-hover/post:underline',
+      image:
+        'transition-scale duration-200 ease-out group-hover/post:scale-110',
+      header: cn('mt-0 w-120 max-w-120 overflow-hidden rounded-3xl'),
+      body: cn('max-h-70 justify-start')
     }"
-    title="PBE Changes"
+    title=
     :to="data.url"
     external
-    :authors="[
-      {
-        name: 'Official Lol Wiki',
-        description: 'contributors',
-        size: 'xs',
-        avatar: {
-          src: '/img/logos/wiki.webp',
-          ui: {
-            image: 'scale-80',
-            root: 'bg-[#0a323d]'
-          }
-        }
-      }
-    ]"
     target="_blank"
     :image="{
       fetchpriority: 'high',
@@ -108,15 +57,6 @@ const src = computed<string | undefined>(
       loading: 'eager',
       src,
       preset: 'card'
-    }"
-    :description="
-      decode(data.metadata.description) ??
-      'It seems we lost the wiki link. We\'ll attempt to turn the router off and on.'
-    ">
-    <template v-if="isDevIcon || !src" #header>
-      <Icon
-        name="i-lp-dev-icon"
-        class="transition-scale z-2! size-40 text-nc duration-200 ease-out group-hover/post:scale-140" />
-    </template>
-  </UBlogPost>
+    }">
+  </UBlogPost> -->d
 </template>

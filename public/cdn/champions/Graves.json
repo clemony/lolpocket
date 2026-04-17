@@ -303,7 +303,7 @@
     "attackRange": 425,
     "hpRegen": 8,
     "mpRegen": 8,
-    "attackDamage": 68,
+    "attackDamage": 66,
     "attackSpeed": 0.5
   },
   "statsPerLevel": {

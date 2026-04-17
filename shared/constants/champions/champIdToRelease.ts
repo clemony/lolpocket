@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/03/2026 09:49:39 AM CDT
+// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
 
 export const champIdToRelease: Record<string,string> = {
   "1": "2009-02-21",

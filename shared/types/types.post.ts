@@ -9,6 +9,7 @@ export interface PostMetadata {
   linkFlairText?: string | null
   over18?: boolean
   postHint?: string | null
+  spoiler?: boolean
   stickied?: boolean
 }
 

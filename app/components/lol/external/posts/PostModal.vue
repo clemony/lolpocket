@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { UsePostModalReturn } from "./usePostModal"
+import type { UsePostModalReturn } from "./post.types"
 
 defineOptions({
   inheritAttrs: false

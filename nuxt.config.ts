@@ -56,6 +56,8 @@ export default defineNuxtConfig({
     provider: isCFPages ? "cloudflare" : "ipx",
     domains: [
       "ddragon.leagueoflegends.com",
+      "cmsassets.rgpub.io",
+      "preview.redd.it",
       "cdn.communitydragon.org",
       "lh3.googleusercontent.com",
       "external-preview.redd.it",

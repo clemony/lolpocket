@@ -133,6 +133,7 @@
   filter: drop-shadow(--value(--drop-shadow-*));
 }
 
+
 @utility text-last-* {
   text-align-last: --value("start", "end", "center", "justify");
 }

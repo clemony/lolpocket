@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { BlogPostProps } from "@nuxt/ui"
 import { uiRedditAvatar } from "~~/layers/ui/app/assets/objects/avatar"
-import { postAuthorUi } from "./postProps"
+import { postAuthorUi } from "./post_props"
 
 const { post, class: className } = defineProps<{
   post: Post
