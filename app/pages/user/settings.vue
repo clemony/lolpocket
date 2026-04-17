@@ -3,7 +3,7 @@ definePageMeta({
   title: "Settings",
   order: 10,
   icon: "i-gear",
-  class: "**:stroke-[2.2] -translate-x-1!",
+  class: "**:stroke-[2.2] ",
   path: "/settings"
 })
 
@@ -27,11 +27,15 @@ const route = useRoute()
 
 const settingsRoutes = computed(
   () =>
-    ["app", "account", "profile", "messaging", "theme"].map((c) => ({
-      to: `/settings/${c}`,
-      label: c
-    })) ?? []
+    router
+      .getRoutes()
+      .find((r) => r.path === "/settings")
+      ?.children.map((c) => ({
+        to: c.path,
+        label: String(c.meta?.title)
+      })) ?? []
 )
+console.log("🥸 - settingsRoutes:", settingsRoutes)
 </script>
 
 <template>

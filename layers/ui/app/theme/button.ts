@@ -93,7 +93,7 @@ export const buttonTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class: {
-        base: "bg-neutral font-semibold btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-n1 disabled:shadow-none on:text-nc on:btn-neutral",
+        base: "fbg-neutral font-semibold inset-ring inset-ring-n1 btn-neutral depth-5 focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-n1 disabled:shadow-none on:text-nc on:btn-neutral",
         leadingIcon: "text-nc!",
         trailingIcon: "text-nc!"
       }
@@ -161,7 +161,7 @@ export const buttonTheme = defineUiTheme({
       color: "base",
       variant: "ghost",
       class: {
-        base: "on:btn-active on:bg-p0/40! on:ring on:ring-p0"
+        base: "text-pc on:btn-active on:bg-p0/40! on:ring on:ring-p0"
       }
     },
     /* TRANSPARENT */
@@ -177,14 +177,14 @@ export const buttonTheme = defineUiTheme({
       color: "primary",
       variant: "solid",
       class: {
-        base: "btn border-p3/60 bg-p1 text-pc ring-0! inset-ring inset-ring-p3/80 depth-3 open:shadow-none hover:bg-p2 hover:shadow-xs hover:inset-shadow-xs"
+        base: "btn bg-p1 text-pc ring-0! inset-ring inset-ring-p3 depth-3 open:shadow-none hover:bg-p2/80 hover:shadow-xs hover:inset-shadow-xs disabled:bg-p1!"
       }
     },
     {
       color: "primary",
       variant: "ghost",
       class: {
-        base: "hover:bg-p1 hover:inset-ring-p3/40! on:bg-p1"
+        base: "text-pc hover:bg-p1 hover:shadow-sm hover:inset-ring hover:shadow-black/4 hover:inset-ring-p3/40! hover:drop-shadow-xs on:bg-p1"
       }
     },
     /* SECONDARY */

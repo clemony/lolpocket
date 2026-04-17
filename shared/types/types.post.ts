@@ -64,3 +64,13 @@ export interface PostRefreshResponse {
   sources: string[]
   upsertedCount: number
 }
+
+export const feedKeys: string[] = [
+  "Discussion",
+  "RiotOfficial",
+  "Esports",
+  "Gameplay",
+  "News"
+]
+
+export type FeedKey = (typeof feedKeys)[number]

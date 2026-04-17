@@ -19,7 +19,7 @@ definePageMeta({
   order: 0
 })
 
-const { posts, open } = usePostModalInject()
+const { posts, open: openModal } = usePostModalInject()
 
 const route = useRoute()
 const router = useRouter()
@@ -71,36 +71,31 @@ function pageTo(targetPage: number) {
         container: 'border-b border-b-p3/80 pb-6'
       }"
       description="The latest League updates all in one place." />
-    <UPageBody id="updates" class="w-full px-8">
-      <section class="grid auto-rows-max gap-4">
-        <h2 class="align-center inline h-10 tracking-tight drop-shadow-xs">
-          Game Updates
-        </h2>
+    <UPageBody id="updates" class="relative w-full overflow-y-auto px-8">
+      <section class="z-auto grid auto-rows-max gap-4">
+        <div class="sticky top-0 flex h-10 w-full items-center bg-p0">
+          <h2 class="align-center inline tracking-tight">Game Updates</h2>
+        </div>
         <LazyPostCard :post="buildPatchPost()" />
         <LazyPostCard :post="buildPbePost()" />
       </section>
-
-      <section id="news-feed" class="grid auto-rows-max gap-4">
-        <h2 class="align-center inline h-10 tracking-tight drop-shadow-xs">
-          Feed
-        </h2>
-        <UPagination
-          v-model:page="page"
-          :sibling-count="0"
-          :items-per-page="itemsPerPage"
-          :total="total"
-          :to="pageTo"
-          size="sm"
-          :ui="{
-            list: 'last:*:hidden [&>aria-label=Last_Page]:hidden!',
-            first: 'hidden!',
-            last: 'hidden!',
-            item: 'hidden!'
-          }"
-          :show-edges="false"
-          variant="outline"
-          color="base" />
-
+      <Separator class="mt-6 mb-12" />
+      <section id="news-feed" class="z-auto grid auto-rows-max gap-4">
+        <div
+          class="align-center sticky top-30 z-10 inline-flex h-10 w-full items-center justify-between">
+          <h2 class="align-center inline h-10 tracking-tight drop-shadow-xs">
+            Feed
+          </h2>
+          <Pagination
+            v-model:page="page"
+            :items-per-page="itemsPerPage"
+            :total="total"
+            :first="false"
+            :sibling-count="0"
+            :last="false"
+            :show-edges="false"
+            :to="pageTo" />
+        </div>
         <LazyPostCard
           v-for="(item, index) in pagedPosts"
           :key="item.source_id"
@@ -108,11 +103,13 @@ function pageTo(targetPage: number) {
           :index="(page - 1) * itemsPerPage + index"
           orientation="horizontal"
           @open-reddit-post="
-            (post: Post, index: number) => open(post, index)
+            (post: Post, index: number) => openModal(post, index)
           " />
 
+        <Separator class="mt-8 mb-6" />
         <Pagination
           v-model:page="page"
+          :ui="{ root: 'justify-self-center' }"
           :items-per-page="itemsPerPage"
           :total="total"
           :to="pageTo" />

@@ -1,14 +1,4 @@
-<script lang="ts" setup>
-definePageMeta({
-  title: "Messaging",
-  description: "Manage in app-notifications, messaging, and email preferences.",
-  icon: "i-chat-dots",
-  path: "/settings/messaging",
-  auth: true,
-  order: 3,
-  prefix: "Settings"
-})
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <form class="w-full space-y-12">
@@ -26,9 +16,7 @@ definePageMeta({
     </fieldset>
 
     <div class="flex justify-start">
-      <UButton color="neutral">
-        Update account
-      </UButton>
+      <UButton color="neutral"> Update account </UButton>
     </div>
   </form>
 </template>

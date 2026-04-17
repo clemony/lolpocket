@@ -18,12 +18,12 @@ export interface QuoteData {
 export const modeQuote: Record<string, QuoteData> = {
   system: {
     quote: "I do not care at all.",
-    lpQuote: "There are two pockets within you.",
+    lpQuote: "Pocket Picked.",
     source: "Orrn"
   },
   light: {
     quote: "If you can smile, you can be the light.",
-    lpQuote: "Please, keep it in your pocket.",
+    lpQuote: "Keep it in your pocket.",
     source: "Lux"
   },
   dawn: {
@@ -37,7 +37,7 @@ export const modeQuote: Record<string, QuoteData> = {
   },
   dark: {
     quote: "The truth lies in darkness.",
-    lpQuote: "The lolpocat comes at night.",
+    lpQuote: "lolpocat comes at night.",
     source: "Zed"
   },
   frost: {

@@ -1,12 +1,24 @@
 import { $fetch } from "ofetch"
 
-const config = useRuntimeConfig()
-const RIOT_API: string = config.RIOT_API_KEY! as string
+function getRiotApiKey() {
+  const config = useRuntimeConfig()
+  const riotApiKey = config.RIOT_API_KEY
+
+  if (!riotApiKey) {
+    throw createError({
+      statusCode: 500,
+      statusMessage: "Missing RIOT_API_KEY runtime config",
+    })
+  }
+
+  return riotApiKey
+}
 
 async function rawRiotFetch<T>(url: string, params?: any): Promise<T> {
   return scheduleJob(async () => {
+    const riotApiKey = getRiotApiKey()
     const result = await $fetch<any>(url, {
-      headers: { "X-Riot-Token": RIOT_API },
+      headers: { "X-Riot-Token": riotApiKey },
       ...(params ? { params } : {}),
     })
 
