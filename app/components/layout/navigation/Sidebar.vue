@@ -1,9 +1,16 @@
 <script lang="ts" setup>
+import type { SidebarProps } from "@nuxt/ui"
 import { userMenuItems } from "../../user/ui/userMenuItems"
+const {
+  variant = "sidebar",
+  collapsible = "offcanvas",
+  side = "left"
+} = defineProps<SidebarProps>()
+
 const emit = defineEmits(["openSearch", "closeSidebar"])
 
+const open = defineModel<boolean>("open", { default: false })
 const { account } = storeToRefs(user())
-
 const items = [
   {
     icon: "i-external",
@@ -97,7 +104,7 @@ const command = inject<Record<string, () => void>>("command")
 
       <!-- backpack -->
       <UCollapsible as="div" class="w-full" :default-open="true">
-        <template #default="{ open }">
+        <template #default="{}">
           <UButton
             size="md"
             trailing-icon="down"
@@ -186,64 +193,48 @@ const command = inject<Record<string, () => void>>("command")
       </template>
     </UCollapsible>
 
-    <UDropdownMenu
-      :items="resourceNav"
-      :content="{
-        side: 'left',
-        align: 'start',
-        sideOffset: 0,
-        alignOffset: -2
-      }"
-      :ui="{ content: 'w-64 pt-1' }">
-      <template #default="{ open }">
-        <UButton
-          variant="ghost"
-          size="xl"
-          trailing-icon="right"
-          :ui="{
-            trailingIcon: cn(
-              'transition-rotate duration-200',
-              open ? 'rotate-180' : ''
-            )
-          }"
-          leading-icon="i-external"
-          label="Resources" />
-      </template>
-    </UDropdownMenu>
-    <Grow />
-    <!-- user -->
-    <!--   <UDropdownMenu
-      :items="userMenuItems(command)"
-      size="md"
-      :content="{ side: 'top', collisionPadding: 0, sideOffset: 0 }"
+    <USidebar
+      v-model:open="open"
+      :variant="variant"
+      :collapsible="collapsible"
+      :side="side"
       :ui="{
-        itemLeadingAvatarSize: 'sm',
-        itemLeadingAvatar: '-ml-1.5',
-        content: 'w-(--reka-dropdown-menu-trigger-width)',
-        itemLeadingIcon: 'size-4.5',
-        itemTrailingIcon: 'opacity-70 group-hover:opacity-100'
+        container: 'h-full'
       }">
-      <UButton
-        :ui="{
-          base: 'btn-custom sticky bottom-0 h-20 w-full gap-3 rounded-none border-x-0 border-b-0',
-          trailingIcon: 'size-4 opacity-50 group-hover/btn:opacity-100'
-        }"
-        variant="outline">
-        <MatchStatus variant="user" :summoner="user().account" />
-        <div class="flex grow flex-col items-start gap-0">
-          <span class="truncate text-md! font-bold">{{}}</span>
-          <span
-            class="align-center inline-flex items-center gap-2 justify-self-start text-xs opacity-50">
-            {{
-          }}</span>
-        </div>
-      </UButton>
-
-      <template #inbox-trailing>
-        <LazyUBadge size="md" variant="outline">
-          {{ user().inbox?.messages.length ?? 0 }}
-        </LazyUBadge>
+      <template #header>
+        <UIcon name="i-logos-nuxt-icon" class="size-8" />
       </template>
-    </UDropdownMenu> -->
+
+      <UNavigationMenu
+        :items="items"
+        orientation="vertical"
+        :ui="{ link: 'overflow-hidden p-1.5' }" />
+      <template #footer>
+        <UDropdownMenu
+          :items="resourceNav"
+          :content="{
+            side: 'left',
+            align: 'start',
+            sideOffset: 0,
+            alignOffset: -2
+          }"
+          :ui="{ content: 'w-64 pt-1' }">
+          <template #default="{ open: openDropdown }">
+            <UButton
+              variant="ghost"
+              size="xl"
+              trailing-icon="right"
+              :ui="{
+                trailingIcon: cn(
+                  'transition-rotate duration-200',
+                  openDropdown ? 'rotate-180' : ''
+                )
+              }"
+              leading-icon="i-external"
+              label="Resources" />
+          </template>
+        </UDropdownMenu>
+      </template>
+    </USidebar>
   </div>
 </template>

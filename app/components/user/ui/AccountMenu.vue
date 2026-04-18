@@ -25,7 +25,7 @@ const props = withDefaults(
     activeColor: "primary",
     color: "secondary",
     size: "md",
-    avatarSize: "2xs",
+    avatarSize: "md",
     block: true
   }
 )
@@ -74,7 +74,10 @@ const menu = computed(() => userMenuItems(command))
         size="xl"
         :active="open"
         :ui="{
-          base: 'w-full justify-between px-2 inset-shadow-none!',
+          base: cn(
+            'w-full justify-between px-2 inset-shadow-none!',
+            props.ui?.base
+          ),
           trailingIcon:
             'size-4 translate-x-px opacity-60 group-open/btn:opacity-100 group-hover/btn:opacity-100'
         }"

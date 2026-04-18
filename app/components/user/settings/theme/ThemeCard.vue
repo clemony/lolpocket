@@ -37,9 +37,9 @@ const previewTheme = computed(() =>
     :ui="{
       body: 'h-32 w-full grow pt-7!',
       root: cn(
-        'group/quote hover-ring relative flex size-full! h-74! w-66 max-w-66 grow cursor-pointer flex-col items-start justify-center gap-5 overflow-hidden rounded-xl bg-p0 px-6 text-pc shadow-sm shadow-black/16 drop-shadow-xs select-none',
+        'group/quote hover-ring relative flex size-full! h-74! w-66 max-w-66 grow cursor-pointer flex-col items-start justify-center gap-5 overflow-hidden rounded-xl bg-p0 px-6 text-pc shadow-sm shadow-black/16 drop-shadow-sm select-none',
         {
-          'border-pc group-hover/label:ring group-hover/label:ring-offset-1':
+          'ring-p4 ring-offset-n2 ring-1 ring-offset-3':
             mode === user().settings?.theme
         },
         className
@@ -49,14 +49,14 @@ const previewTheme = computed(() =>
     @click="emit('select', mode)"
     @keydown.enter.prevent="emit('select', mode)"
     @keydown.space.prevent="emit('select', mode)">
-    <h4 class="pl-0.5 text-2xl leading-10 font-black capitalize">
+    <h4 class="pl-0.5 text-xl leading-10 font-black capitalize">
       {{ mode }}
     </h4>
     <p
-      class="mt-1 h-9 pl-1 -indent-2! leading-6 font-medium text-pretty italic">
+      class="mt-1 h-9 pl-1 -indent-2! leading-6 font-medium text-pretty italic opacity-80">
       "{{ quote?.quote }}"
     </p>
-    <p class="text-end text-sm/4 font-medium text-pretty italic opacity-80">
+    <p class="text-end text-sm/4 font-semibold text-pretty italic opacity-60">
       —{{ quote?.source }}
     </p>
 

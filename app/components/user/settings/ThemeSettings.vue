@@ -39,12 +39,13 @@ function handleChange(theme: string) {
           color="base"
           :ui="{
             base: cn(
-              'gap-2 rounded-xl px-3',
+              'gap-2 rounded-xl border-0! px-3 inset-ring-black/6! ring-offset-black!',
               themeAccent === accent.value
                 ? 'ring ring-accent ring-offset-1 ring-offset-p0'
                 : '',
               twBg[accent.value]
-            )
+            ),
+            label: 'font-bold text-white'
           }"
           :label="accent.label"
           @click="themeAccent = accent.value">

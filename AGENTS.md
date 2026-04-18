@@ -1,5 +1,10 @@
 # Codex Rules
 
+### Session handoff
+
+- At the start of a new session, read `docs/handoff/current-state.md` first.
+- Use `docs/handoff/workspace-map.md` when work crosses into sibling repos.
+
 ### Project structure
 
 - Nuxt UI theme files live in `layers/ui/app/theme`

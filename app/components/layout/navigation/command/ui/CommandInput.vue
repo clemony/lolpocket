@@ -49,9 +49,9 @@ function handleClear() {
     :autofocus="false"
     aria-describedby="app-command-search"
     :ui="{
-      root: 'group/i',
+      root: 'group/i flex w-200 max-w-200 shrink-0 grow',
       base: cn(
-        '3 h-10 w-180 rounded-xl! bg-p0/70 px-4 pr-16 text-center ring inset-shadow-sm ring-p3/80 placeholder:text-pc/60 hover:ring-n0/50 focus-visible:ring-1 focus-visible:ring-p3/80! focus-visible:placeholder:opacity-0!',
+        'h-10 w-full grow rounded-xl! bg-p0/70 px-4 pr-16 text-center ring inset-shadow-sm ring-p3/80 placeholder:text-pc/60 hover:ring-n0/50 focus-visible:ring-1 focus-visible:ring-p3/80! focus-visible:placeholder:opacity-0!',
         {
           '': open
         }
@@ -79,7 +79,7 @@ function handleClear() {
         <LazyInputClear
           variant="ghost"
           :ui="{
-            base: 'rounded-lg border border-transparent hover:border-p5 hover:shadow-xs hover:[&_svg]:opacity-60'
+            base: 'rounded-lg border border-transparent hover:border-p5 hover:shadow-xs [&_svg]:hover:opacity-60'
           }"
           color="transparent"
           @clear-input="handleClear()" />

@@ -13,13 +13,14 @@ import { usePostModalInject } from "~/components/lol/external/posts/usePostModal
 definePageMeta({
   title: "News",
   layout: "default",
-  class: "scale-96",
-  icon: "i-streamline-news-paper", //i-hugeicons-news
+  class: "scale-110 **:stroke-[2.2]", //"scale-96 **:stroke-[1.2]",
+  icon: "i-iconamoon-news", //"i-hugeicons-news", //"i-streamline-news-paper",
   description: "The latest.",
   order: 0
 })
 
 const { posts, open: openModal } = usePostModalInject()
+console.log("🥸 - posts:", posts)
 
 const route = useRoute()
 const router = useRouter()
@@ -41,6 +42,7 @@ const page = computed<number>({
     })
   }
 })
+console.log("🥸 - page:", page)
 
 const total = computed(() => posts.value.length)
 
@@ -49,6 +51,7 @@ const pagedPosts = computed(() => {
   const end = start + itemsPerPage
   return posts.value.slice(start, end)
 })
+console.log("🥸 - pagedPosts:", pagedPosts)
 
 function pageTo(targetPage: number) {
   return {

@@ -16,7 +16,9 @@ gitignore
 *.cpuprofile
 *.code-workspace
 nuxt-build.cpuprofile
-vitest.config.ts
+*/vitest.config.ts
+test
+docs
 
 # Node dependencies
 node_modules

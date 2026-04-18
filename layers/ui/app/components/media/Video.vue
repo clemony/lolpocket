@@ -17,6 +17,7 @@ const props = withDefaults(defineProps<Partial<VideoProps> & {}>(), {
 })
 
 const emit = defineEmits(["ready"])
+
 const video = useTemplateRef("video")
 function canPlay() {
   if (!video.value) return
@@ -36,7 +37,7 @@ const emits = useEmitAsProps(emit)
 const controls = useMediaControls(video)
 
 onMounted(() => {
-  controls.volume.value = 0.2
+  controls.volume.value = 0
   controls.currentTime.value = 0
 })
 

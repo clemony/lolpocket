@@ -69,7 +69,8 @@ const buttonProps: ButtonProps = {
   size: "xs",
   ui: {
     base: "pointer-events-auto normal-case! drop-shadow-lg! drop-shadow-p0",
-    label: "text-xs drop-shadow-xs drop-shadow-p0 text-shadow-p0 text-shadow-xs"
+    label:
+      "text-md! drop-shadow-xs drop-shadow-p0 text-shadow-p0 text-shadow-xs"
   }
 }
 </script>
@@ -98,7 +99,7 @@ const buttonProps: ButtonProps = {
       <div class="flex flex-col items-center">
         <!-- name and tag -->
         <h1
-          class="font-serif text-2xl leading-none font-bold normal-case! drop-shadow-lg! drop-shadow-p0!">
+          class="font-serif text-2xl leading-none font-semibold! normal-case! drop-shadow-lg! drop-shadow-p0!">
           {{ account?.name || account?.username || "Hello." }}
         </h1>
         <div
@@ -153,6 +154,18 @@ const buttonProps: ButtonProps = {
         trigger-style="user"
         :content="{
           side: 'top'
+        }"
+        :user="{
+          size: 'lg',
+          ui: {
+            name: 'text-lg! leading-4.5 font-bold!',
+            description: 'text-xs! mb-px leading-4',
+            wrapper: 'justify-center align-center flex flex-col'
+          }
+        }"
+        :ui="{
+          base: 'pr-2.5',
+          trailingIcon: 'size-5'
         }"
         size="xl"
         block />

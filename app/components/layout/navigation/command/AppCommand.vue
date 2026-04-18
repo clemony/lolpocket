@@ -93,12 +93,12 @@ const hotkeysOpen = shallowRef(false)
       <template #content>
         <div
           ref="panelRoot"
-          class="w-179 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
+          class="w-198 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
           :style="panelStyle">
-          <div ref="panelMeasure" class="w-179">
+          <div ref="panelMeasure" class="w-198">
             <LazyCommandHeader :backpack />
             <div class="relative flex max-h-180 w-full">
-              <div class="relative max-h-[inherit] w-64 border-r border-p3/80">
+              <div class="relative max-h-[inherit] w-68 border-r border-p3/80">
                 <LazyCommandSidebar :backpack />
               </div>
 

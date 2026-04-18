@@ -49,9 +49,9 @@ const buttonProps: ButtonProps & { tabindex?: string } = {
       side: 'bottom',
       align: 'end',
       sideOffset: 2,
-      alignOffset: -8
+      alignOffset: -5
     }"
-    :ui="{ content: 'w-115 border-0 px-0!' }">
+    :ui="{ content: 'w-130 border-0 px-0!' }">
     <template #default="{ open }">
       <MailIndicatorButton :open :unread />
     </template>

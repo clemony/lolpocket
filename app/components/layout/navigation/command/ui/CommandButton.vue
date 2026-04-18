@@ -40,7 +40,10 @@ const safeItem = computed(() => {
         'flex grow items-center justify-start gap-2 rounded-lg px-2 text-left',
         safeItem.ui?.base
       ),
-
+      label: cn(
+        'truncate text-md font-medium capitalize',
+        safeItem.ui?.itemLabelBase
+      ),
       leadingIcon: cn('size-4.5 shrink-0', safeItem.ui?.leadingIcon),
 
       trailingIcon: cn(

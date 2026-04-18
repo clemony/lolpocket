@@ -29,7 +29,7 @@ const buttonProps: ButtonPropsExt = {
       class="flex w-full shrink-0 flex-nowrap items-center justify-start transition-all duration-300 ease-in-out group-has-[.trigger:hover]/msg:-translate-x-12">
       <div class="flex max-h-20 w-max shrink-0 flex-nowrap">
         <div
-          class="flex w-full max-w-106 shrink-0 flex-nowrap overflow-hidden pr-2">
+          class="flex w-full max-w-120 shrink-0 flex-nowrap overflow-hidden pr-2">
           <UAvatar
             :src="getSummonerIcon(message.from.icon)"
             size="xl"
@@ -38,21 +38,21 @@ const buttonProps: ButtonPropsExt = {
             <div class="w-full grow flex-nowrap overflow-hidden text-start">
               <div
                 class="inline-flex w-full grow items-center justify-between gap-1 pr-2 align-middle text-nowrap">
-                <span class="truncate text-xs font-bold">
+                <span class="truncate text-sm font-bold">
                   {{ message.title }}
                 </span>
-                <span class="text-2xs text-pc/60">
+                <span class="text-xs text-pc/60">
                   {{ formatTimeAgo(message.date) }}
                 </span>
               </div>
-              <div class="truncate text-2xs! italic opacity-50">
+              <div class="truncate text-xs! italic opacity-50">
                 {{ `${message.from.username}@lolpocket.com` }}
               </div>
             </div>
 
             <div class="flex h-full max-h-20 gap-1.5 overflow-hidden">
               <p
-                class="line-clamp-2 max-h-10 truncate overflow-hidden text-start text-xs whitespace-break-spaces text-n1">
+                class="line-clamp-2 max-h-10 truncate overflow-hidden text-start text-sm whitespace-break-spaces text-n1">
                 {{ message.content }}
               </p>
             </div>

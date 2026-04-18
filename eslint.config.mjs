@@ -211,7 +211,7 @@ export default antfu(
       "better-tailwindcss/no-unregistered-classes": "off",
       "better-tailwindcss/enforce-consistent-line-wrapping": "off",
       "better-tailwindcss/no-unknown-classes": "off",
-      "better-tailwindcss/enforce-consistent-variant-order": "warn",
+      "better-tailwindcss/enforce-consistent-variant-order": "off",
       "better-tailwindcss/enforce-canonical-classes": "off" /* [
         "warn",
         {

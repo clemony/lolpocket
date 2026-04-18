@@ -6,7 +6,7 @@
     "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
   --font-serif:
-    "Playfair Display", Charter, "Bitstream Charter", "Sitka Text", Cambria,
+    "Zodiak Variable", Charter, "Bitstream Charter", "Sitka Text", Cambria,
     serif;
   --font-mono:
     "Source Code Pro", SFMono-Regular, ui-monospace, "Liberation Mono",
@@ -114,4 +114,25 @@
       @apply text-link! underline! decoration-dotted brightness-84 saturate-80;
     }
   }
+}
+
+/**
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: "Zodiak Variable";
+  src: url("/fonts/Zodiak/Zodiak-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: "Zodiak Variable";
+  src: url("/fonts/Zodiak/Zodiak-VariableItalic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
 }

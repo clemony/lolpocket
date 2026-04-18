@@ -43,6 +43,30 @@ const btnUi = {
   leadingIcon:
     "scale-130 text-p0/30 text-shadow-p0 text-shadow-sm group-hover/btn:text-pc/80"
 }
+
+const videoComponent = computed(() => {
+  if (!currentPost.value || !hasVideo(currentPost.value)) return null
+  const reddit = defineAsyncComponent(
+    () => import("~~/layers/ui/app/components/media/Video.vue")
+  )
+  const youtube = defineAsyncComponent(
+    () => import("~~/layers/ui/app/components/media/YoutubePlayer.vue")
+  )
+
+  if (
+    currentPost.value.video_provider === "youtube" &&
+    currentPost.value.video_id
+  )
+    return youtube
+  else if (
+    (currentPost.value.video_provider === "reddit" &&
+      currentPost.value.video_url) ||
+    currentPost.value.video_hls_url
+  )
+    return reddit
+
+  return null
+})
 </script>
 
 <template>
@@ -94,30 +118,16 @@ const btnUi = {
             )
           ">
           <template v-if="currentPost && hasVideo(currentPost)">
-            <LazyYoutubePlayer
-              v-if="
-                open &&
-                currentPost.video_provider === 'youtube' &&
-                currentPost.video_id
-              "
-              :key="String(currentPost.video_id)"
-              ref="video"
-              :video-id="String(currentPost.video_id)"
-              :title="currentPost.title" />
-
-            <LazyVideo
-              v-else-if="
-                (open &&
-                  currentPost.video_provider === 'reddit' &&
-                  currentPost.video_url) ||
-                currentPost.video_hls_url
-              "
+            <component
+              :is="videoComponent"
+              v-if="open && videoComponent"
               v-slot="{ state }"
               ref="video"
               :key="
                 String(
                   currentPost.video_url ||
                     currentPost.video_hls_url ||
+                    String(currentPost.video_id) ||
                     undefined
                 )
               "
@@ -129,9 +139,14 @@ const btnUi = {
                     currentPost.video_hls_url ||
                     undefined
                 )
-              ">
+              "
+              :video-id="String(currentPost.video_id)"
+              :title="currentPost.title">
               <VideoControls
                 :state
+                :thumbnail-src="
+                  currentPost.preview_image_url ?? currentPost.thumbnail_url
+                "
                 :title="currentPost.title"
                 :source="`${currentPost.source} /r/${currentPost.subreddit}`"
                 :author="currentPost.author ?? ''"
@@ -140,16 +155,11 @@ const btnUi = {
                   <VideoHeader :post="currentPost" />
                 </template>
               </VideoControls>
-            </LazyVideo>
+            </component>
           </template>
           <TextPost v-else-if="currentPost" :post="currentPost" />
         </div>
       </div>
-      <!--         <template #placeholder>
-          <VideoPlaceholder
-            v-if="(!ready && post?.preview_image_url) || post?.thumbnail_url"
-            :thumbnail-src="post?.preview_image_url || post?.thumbnail_url" />
-        </template>  -->
     </template>
   </UModal>
 </template>

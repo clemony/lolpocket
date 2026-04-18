@@ -2,6 +2,9 @@
 import type { ButtonProps } from "@nuxt/ui"
 import type { UseMediaControlsReturn } from "@vueuse/core"
 
+const { thumbnail } = defineProps<{
+  thumbnail?: HTMLImageElement["src"]
+}>()
 const button: ButtonProps = {
   size: "sm",
   ui: {
@@ -43,6 +46,7 @@ function handleSeek() {
       )
     "
     @hover-end="open = false">
+    <!-- <VideoPlaceholder v-if="waiting && thumbnail" :thumbnail-src="thumbnail" /> -->
     <button
       role="toggle"
       class="pointer-events-auto grid size-full grow cursor-pointer place-items-center"

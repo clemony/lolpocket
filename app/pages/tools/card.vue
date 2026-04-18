@@ -12,6 +12,7 @@ definePageMeta({
 
   prefix: "Tools",
   icon: "lucide:square-pen",
+  class: "**:stroke-[2.2]"
 })
 
 // todo nuxt bg here
@@ -42,7 +43,7 @@ onMounted(() => {
 const img = useImage()
 const splash = computed(
   () =>
-    "https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg",
+    "https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg"
 )
 console.log("💠 - card.splash:", card.splash)
 </script>
@@ -93,7 +94,7 @@ console.log("💠 - card.splash:", card.splash)
         ref="pocketCardRef"
         class="shadow-smooth relative aspect-square size-300 rounded-xl border border-p3/70 object-contain inset-shadow-sm"
         :style="{
-          backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
+          backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`
         }">
         <div
           class="mask-right-100 size-full overflow-hidden rounded-2xl transition-all duration-500"
@@ -103,7 +104,7 @@ console.log("💠 - card.splash:", card.splash)
             alt="pocket-card-bg"
             :style="{
               backgroundImage: `url(${img(splash, { quality: 100 })})`,
-              backgroundPositionX: `${card.align}%`,
+              backgroundPositionX: `${card.align}%`
             }" />
         </div>
 
@@ -131,11 +132,11 @@ console.log("💠 - card.splash:", card.splash)
                 <template
                   v-if="
                     set &&
-                      set !== undefined &&
-                      card.items.length &&
-                      set !== null &&
-                      card.items[0] !== undefined &&
-                      card.items[0] !== null
+                    set !== undefined &&
+                    card.items.length &&
+                    set !== null &&
+                    card.items[0] !== undefined &&
+                    card.items[0] !== null
                   ">
                   <!-- CompleteItemSets
                     :set="card.items[i]"
