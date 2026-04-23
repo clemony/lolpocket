@@ -27,7 +27,7 @@ export const formFieldTheme = defineUiTheme({
     },
     required: {
       true: {
-        label: `after:ms-0.5 after:text-error after:content-['*']`
+        label: `after:ms-0.5 after:hidden after:text-pc/60`
       }
     },
     orientation: {

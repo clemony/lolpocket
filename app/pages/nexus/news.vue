@@ -1,14 +1,13 @@
 <script lang="ts" setup>
-import type {
-  OpenRedditPost,
-  OpenRedditPostFn
-} from "~/components/lol/external/posts/post.types"
 import {
   buildPatchPost,
   buildPbePost,
   buildRedditPost
 } from "~/components/lol/external/posts/post_cards"
-import { usePostModalInject } from "~/components/lol/external/posts/usePostModal"
+import {
+  providePostModal,
+  usePostModal
+} from "~/components/lol/external/posts/usePostModal"
 
 definePageMeta({
   title: "News",
@@ -19,8 +18,9 @@ definePageMeta({
   order: 0
 })
 
-const { posts, open: openModal } = usePostModalInject()
-console.log("🥸 - posts:", posts)
+const {
+  public: { postalBaseUrl }
+} = useRuntimeConfig()
 
 const route = useRoute()
 const router = useRouter()
@@ -42,16 +42,39 @@ const page = computed<number>({
     })
   }
 })
-console.log("🥸 - page:", page)
 
-const total = computed(() => posts.value.length)
+const offset = computed(() => (page.value - 1) * itemsPerPage)
 
-const pagedPosts = computed(() => {
-  const start = (page.value - 1) * itemsPerPage
-  const end = start + itemsPerPage
-  return posts.value.slice(start, end)
+const { data: postList, refresh } = await useFetch<PostListResponse>(
+  "/api/feed/reddit",
+  {
+    baseURL: postalBaseUrl || undefined,
+    default: () => ({
+      items: [],
+      total: 0
+    }),
+    key: () => `nexus-news-${page.value}`,
+    query: computed(() => ({
+      limit: itemsPerPage,
+      offset: offset.value
+    })),
+    server: false
+  }
+)
+const newsPosts = computed<Post[]>(() => postList.value?.items ?? [])
+const total = computed(() => postList.value?.total ?? 0)
+const maxPage = computed(() =>
+  Math.max(1, Math.ceil(total.value / itemsPerPage))
+)
+
+watchEffect(() => {
+  if (page.value > maxPage.value) {
+    page.value = maxPage.value
+  }
 })
-console.log("🥸 - pagedPosts:", pagedPosts)
+
+const postState = usePostModal(newsPosts)
+providePostModal(postState)
 
 function pageTo(targetPage: number) {
   return {
@@ -77,9 +100,7 @@ function pageTo(targetPage: number) {
     <UPageBody id="updates" class="relative w-full overflow-y-auto px-8">
       <section class="z-auto grid auto-rows-max gap-4">
         <div class="sticky top-0 flex h-10 w-full items-center bg-p0">
-          <h2 class="align-center inline tracking-tight">
-            Game Updates
-          </h2>
+          <h2 class="align-center inline tracking-tight">Game Updates</h2>
         </div>
         <LazyPostCard :post="buildPatchPost()" />
         <LazyPostCard :post="buildPbePost()" />
@@ -102,13 +123,13 @@ function pageTo(targetPage: number) {
             :to="pageTo" />
         </div>
         <LazyPostCard
-          v-for="(item, index) in pagedPosts"
+          v-for="(item, index) in newsPosts"
           :key="item.source_id"
           :post="buildRedditPost(item)"
-          :index="(page - 1) * itemsPerPage + index"
+          :index="index"
           orientation="horizontal"
           @open-reddit-post="
-            (post: Post, index: number) => openModal(post, index)
+            (post: Post, index: number) => postState.open(post, index)
           " />
 
         <Separator class="mt-8 mb-6" />

@@ -1,10 +1,15 @@
 <script lang="ts" setup>
+import {
+  LazyCommandHotkeys,
+  LazyCommandInbox,
+  LazyCommandMenu,
+  LazyCommandPalette
+} from "#components"
 import type { PopoverProps } from "@nuxt/ui"
 import { focusTrigger, onContentInteractOutside } from "./build/helpers"
 import { useCommandFocusNavigation } from "./build/useCommandFocusNavigation"
 import type { CommandGroup } from "./build/useCommandGroups"
 import { useCommandGroups } from "./build/useCommandGroups"
-
 const route = useRoute()
 
 const open = ref(false)
@@ -55,6 +60,13 @@ function closeCommand() {
   if (!command) return
   command.open.value = false
 }
+const activeComponent = shallowRef<string | null>("menu")
+const component: Record<string, Component> = {
+  inbox: LazyCommandInbox,
+  hotkeys: LazyCommandHotkeys,
+  menu: LazyCommandMenu,
+  search: LazyCommandPalette
+}
 
 watch(
   () => route.fullPath,
@@ -70,7 +82,11 @@ const groupMap = computed<Record<string, CommandGroup | undefined>>(() =>
 
 const backpack = computed(() => safeObject(groupMap.value.backpack))
 
-const hotkeysOpen = shallowRef(false)
+const handleUpdate = (id: string) => {
+  return activeComponent.value === id
+    ? (activeComponent.value = "menu")
+    : (activeComponent.value = id)
+}
 </script>
 
 <template>
@@ -87,35 +103,30 @@ const hotkeysOpen = shallowRef(false)
       :ui="{
         content:
           'z-[120] overflow-hidden rounded-xl bg-p0/94 p-0! bg-blend-screen shadow-lg shadow-black/8 drop-shadow-none backdrop-blur-lg'
-      }"
-      @update:open="(nextOpen) => (!nextOpen ? closeCommand() : undefined)">
+      }">
       <template #content>
         <div
           ref="panelRoot"
-          class="w-198 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
+          class="w-188 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
           :style="panelStyle">
-          <div ref="panelMeasure" class="w-198">
-            <LazyCommandHeader :backpack />
+          <div ref="panelMeasure" class="w-188">
+            <!--      <LazyCommandHeader :backpack /> -->
             <div class="relative flex max-h-180 w-full">
-              <div class="relative max-h-[inherit] w-68 border-r border-p3/80">
+              <div class="relative max-h-[inherit] w-58 border-r border-p3/80">
                 <LazyCommandSidebar :backpack />
               </div>
 
-              <LazyCommandMenu
-                v-if="!hasQuery"
+              <component
+                :is="component[activeComponent ?? 'menu']"
                 :groups="groupMap"
-                :reference="panelMeasure"
-                @close="closeCommand()" />
-              <LazyCommandPalette
-                v-else
-                :reference="panelMeasure"
                 :query="searchQuery"
+                :reference="panelMeasure"
                 @close="closeCommand()" />
             </div>
             <LazyCommandFooter
               v-if="reference"
               :reference
-              @update:open-hotkeys="(value) => (hotkeysOpen = value)" />
+              @update:open="(e) => handleUpdate(e)" />
           </div>
         </div>
       </template>

@@ -29,6 +29,8 @@ function onAddBlock(item: string) {
 
   blockInput.value = item
 }
+//
+//     i-mynaui-asterisk-circle
 </script>
 
 <template>
@@ -38,11 +40,19 @@ function onAddBlock(item: string) {
     :label="accountOptions.username.label"
     name="username"
     :required="true"
+    :ui="{
+      label: 'flex w-full grow items-center justify-between'
+    }"
     :help="
       orientation === 'horizontal'
         ? accountOptions.username.description
         : undefined
     ">
+    <template #label>
+      {{ accountOptions.username.label }}
+      <Icon name="" class="size-3.5 justify-self-end" />
+      <HintTooltip type="required" arrow />
+    </template>
     <template v-if="orientation === 'vertical'" #hint>
       <HintTooltip :label="accountOptions.username.description" />
     </template>

@@ -6,7 +6,7 @@ import {
   LazyProfileSettings,
   LazyThemeSettings
 } from "#components"
-import type { TabsItem, TabsProps } from "@nuxt/ui"
+import type { SwitchProps, TabsItem } from "@nuxt/ui"
 import type { UseRefHistoryReturn } from "@vueuse/core"
 import type { CommandItem } from "../../../layout/navigation/command/build/useCommandGroups"
 import { useCommandGroups } from "../../../layout/navigation/command/build/useCommandGroups"
@@ -55,7 +55,17 @@ export const items = computed(() => {
       ?.children?.map((i: CommandItem) => ({
         label: i.label,
         value: i.label,
-        icon: i.icon
+        icon: i.icon,
+        ui: { leadingIcon: i.ui.leadingIcon }
       })) as TabsItem[]) ?? []
   )
 })
+
+export interface SwitchGroup {
+  legend?: string
+  items: SwitchGroup[] | SwitchProps[] | Record<string, SwitchProps>
+  description?: string
+  type?: "group" | "items"
+  icon?: string
+  class?: HTMLAttributes["class"]
+}

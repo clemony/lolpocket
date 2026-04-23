@@ -1,21 +1,23 @@
 <script lang="ts" setup>
 import { uiRedditAvatar } from "~~/layers/ui/app/assets/objects/avatar"
 
-const { post } = defineProps<{
+const { post, class: className } = defineProps<{
   post: Post
+  class?: HTMLAttributes["class"]
 }>()
 const emit = defineEmits(["close"])
 </script>
 
 <template>
-  <article
+  <UPage
     v-auto-animate
     :class="
       cn(
-        'pointer-events-auto relative mx-auto max-h-[inherit] w-full max-w-4xl grow overflow-x-hidden overflow-y-auto bg-p0/90'
+        'pointer-events-auto relative mx-auto max-h-[inherit] w-full grow overflow-x-hidden **:[&_img]:overflow-hidden!',
+        className
       )
     ">
-    <div class="px-0">
+    <div class="border-b border-b-pc px-0">
       <UPageHeader
         :title="post.title"
         :ui="{
@@ -23,7 +25,7 @@ const emit = defineEmits(["close"])
             'inline-flex h-4 w-full! grow items-center justify-between align-baseline',
           description: 'font-medium',
           container: '',
-          root: 'border-b-pc px-12 pt-10'
+          root: 'mx-auto max-w-4xl border-0 px-12 pt-10'
         }">
         <template #headline>
           <ULink
@@ -96,15 +98,15 @@ const emit = defineEmits(["close"])
       </div>
     </div>
 
-    <UPageBody class="px-12 pt-4 pb-12">
-      <NuxtImg
-        v-if="post.preview_image_url || post.thumbnail_url"
-        :src="(post.preview_image_url || post.thumbnail_url) ?? undefined"
-        :alt="post.title"
-        fetchpriority="high"
-        class="w-full rounded-3xl object-cover shadow-md drop-shadow-md"
-        crossorigin="anonymous"
-        loading="eager" />
+    <UPageBody class="mx-auto max-w-4xl px-12 pt-4 pb-12">
+      <!--       <NuxtImg
+          v-if="post.preview_image_url || post.thumbnail_url"
+          :src="(post.preview_image_url || post.thumbnail_url) ?? undefined"
+          :alt="post.title"
+          fetchpriority="high"
+          class="w-full rounded-3xl object-cover shadow-md drop-shadow-md"
+          crossorigin="anonymous"
+          loading="eager" /> -->
       <div
         v-if="post?.text"
         class="prose w-full! max-w-full space-y-0 text-lg text-pc select-text"
@@ -133,22 +135,5 @@ const emit = defineEmits(["close"])
         }"
         :label="`View ${post.num_comments} comments on Reddit`" />
     </div>
-  </article>
+  </UPage>
 </template>
-
-<style scoped>
-@reference "#layers/ui/app/assets/css/tailwind.css";
-
-.prose {
-  :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    @apply my-0! mb-0!;
-  }
-  @apply my-0!;
-  blockquote {
-    @apply my-0! bg-p3;
-    p {
-      @apply my-0!;
-    }
-  }
-}
-</style>

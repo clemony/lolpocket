@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { SidebarProps } from "@nuxt/ui"
-import { items, tabContent } from "./data/settingsTabs"
+import { items, tabContent } from "./data/settingsProps"
 const {
   variant = "sidebar",
   collapsible = "offcanvas",
@@ -18,7 +18,7 @@ const tab = defineModel<string>("tab", { default: "App" })
     :collapsible="collapsible"
     :side="side"
     :ui="{
-      root: 'p-0! [--sidebar-width:30rem]',
+      root: 'p-0! [--sidebar-width:26rem]',
       body: 'flex-1 flex-row! gap-0 p-0'
     }">
     <UCard
@@ -67,11 +67,8 @@ const tab = defineModel<string>("tab", { default: "App" })
                   :name="item.icon"
                   :class="
                     cn(
-                      'size-4.5 text-pc/70 group-active:text-nc',
-                      {
-                        'scale-116': item.label === 'Profile'
-                      },
-                      item.class
+                      'size-4.5 text-pc/70 **:stroke-[2.2] group-active:text-nc',
+                      item.ui?.leadingIcon
                     )
                   " />
               </div>
@@ -88,6 +85,7 @@ const tab = defineModel<string>("tab", { default: "App" })
             },
             formField: {
               root: 'w-full max-w-full min-w-87 grow',
+              label: 'capitalize',
               container: 'flex flex-col gap-4',
               labelWrapper: '',
               wrapper: ''

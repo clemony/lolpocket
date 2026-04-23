@@ -21,7 +21,7 @@ const card = {
     orientation === "horizontal" ? "max-w-120 gap-8!" : "max-w-full grow gap-4"
   ),
   wrapper: cn(
-    "flex w-full max-w-full flex-col overflow-hidden pt-3",
+    "flex w-full max-w-full flex-col justify-between overflow-hidden pt-3",
     orientation === "horizontal" ? "h-36" : "h-28"
   ),
   title: "text-lg font-bold",

@@ -25,7 +25,8 @@ export const badgeTheme = defineUiTheme({
       solid: "",
       outline: "",
       soft: "",
-      subtle: ""
+      subtle: "",
+      ghost: "bg-transparent inset-ring-transparent drop-shadow-none"
     },
     size: {
       xs: {
@@ -201,6 +202,19 @@ export const badgeTheme = defineUiTheme({
       color: "res",
       variant: "solid",
       class: "bg-res text-white inset-ring-res"
+    },
+
+    //ghost
+    {
+      color: "base",
+      variant: "ghost",
+      class: "text-pc"
+    },
+
+    {
+      color: "neutral",
+      variant: "ghost",
+      class: "text-nc"
     }
   ],
   defaultVariants: {

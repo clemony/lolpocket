@@ -2,9 +2,9 @@
 definePageMeta({
   title: "App",
   description: "Manage general app utilities and settings.",
-  icon: "i-mingcute-settings-2-line",
+  icon: "i-gear",
   path: "/settings/app",
-  class: "scale-115",
+  class: "**:stroke-[2.4]!",
   prefix: "Settings",
   order: 0
 })

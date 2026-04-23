@@ -8,8 +8,9 @@ export const selectTheme = defineUiTheme({
     placeholder: "truncate text-n5",
     arrow: "fill-p0 text-p0",
     content:
-      "pointer-events-auto z-[120] flex max-h-60 w-(--reka-select-trigger-width) origin-(--reka-select-content-transform-origin) flex-col overflow-hidden rounded-lg bg-p0/96 shadow-lg ring shadow-black/8 ring-p3/60 drop-shadow-none backdrop-blur-sm",
-    viewport: "relative flex-1 scroll-py-1 divide-y divide-p3 overflow-y-auto",
+      "pointer-events-auto z-[120] flex max-h-60 w-(--reka-select-trigger-width) origin-(--reka-select-content-transform-origin) flex-col overflow-hidden rounded-lg bg-p0/90 shadow-lg ring shadow-black/8 ring-p3/60 drop-shadow-none backdrop-blur-sm",
+    viewport:
+      "relative flex-1 scroll-py-1 divide-y divide-p3 overflow-y-auto bg-transparent",
     group: "isolate p-1",
     empty: "text-center text-n5",
     label: "font-semibold text-pc",
@@ -52,14 +53,14 @@ export const selectTheme = defineUiTheme({
         empty: "p-1.5 text-xs"
       },
       md: {
-        base: "h-10",
+        base: "h-10 rounded-xl",
         label: "gap-1.5 p-1.5 text-xs",
         item: "gap-1.5 p-1.5 text-sm",
         itemLeadingIcon: "size-5",
         itemLeadingAvatarSize: "2xs",
         itemLeadingChip: "size-5",
         itemLeadingChipSize: "md",
-        itemTrailingIcon: "size-5",
+        itemTrailingIcon: "size-4",
         empty: "p-1.5 text-sm"
       },
       lg: {
@@ -70,7 +71,7 @@ export const selectTheme = defineUiTheme({
         itemLeadingAvatarSize: "2xs",
         itemLeadingChip: "size-5",
         itemLeadingChipSize: "md",
-        itemTrailingIcon: "size-5",
+        itemTrailingIcon: "size-4",
         empty: "p-2 text-sm"
       },
       xl: {
@@ -81,7 +82,7 @@ export const selectTheme = defineUiTheme({
         itemLeadingAvatarSize: "xs",
         itemLeadingChip: "size-6",
         itemLeadingChipSize: "lg",
-        itemTrailingIcon: "size-6",
+        itemTrailingIcon: "size-4",
         empty: "p-2 text-base"
       }
     },

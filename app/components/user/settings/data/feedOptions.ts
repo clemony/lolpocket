@@ -11,7 +11,8 @@ export const feedCategories: Record<FeedKey, FeedProps> = {
   Discussion: {
     label: "Discussion",
     id: "Discussion",
-    trailingIcon: "i-flowbite-quote-outline"
+    trailingIcon: "i-flowbite-quote-outline",
+    ui: { trailingIcon: "scale-116" }
   },
   RiotOfficial: {
     label: "Riot Official",
@@ -21,24 +22,24 @@ export const feedCategories: Record<FeedKey, FeedProps> = {
   Esports: {
     label: "Esports",
     id: "Esports",
-    trailingIcon: "i-ion-trophy-outline",
-    ui: { leadingIcon: "**:stroke-[42]" }
+    trailingIcon: "i-proicons-trophy",
+    ui: { trailingIcon: "**:stroke-[1.8] scale-110" }
   },
   Gameplay: {
     label: "Gameplay",
     id: "Gameplay",
     trailingIcon: "i-cil-gamepad",
-    ui: { leadingIcon: "**:stroke-[8.4] **:stroke-[currentColor]" }
+    ui: { trailingIcon: "**:stroke-[9.4] **:stroke-[currentColor]" }
   },
   News: {
     label: "News",
     id: "News",
-    trailingIcon: "i-trailingIconamoon-news"
+    trailingIcon: "i-iconamoon-news"
   },
   Humor: {
     label: "Humor",
     id: "Humor",
-    trailingIcon: "i-protrailingIcons-emoji-laughter",
-    ui: { leadingIcon: "scale-110" }
+    trailingIcon: "i-proicons-emoji-laughter",
+    ui: { trailingIcon: "scale-110 **:stroke-[1.8] " }
   }
 }

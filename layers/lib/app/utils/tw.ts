@@ -1,7 +1,6 @@
 import type { ClassValue } from "clsx"
 import { clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
-import type { st } from "vue-router/dist/index-BzEKChPW.js"
 
 export type TwRecord = Record<string, string>
 

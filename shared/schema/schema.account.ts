@@ -14,10 +14,7 @@ export const usernameSchema = v.union([
 export const titleSchema = v.nullable(
   v.pipe(
     v.string(),
-    v.picklist(
-      pocketTitleIndex.map((t) => t.title),
-      "Not a valid title!"
-    ),
+    v.picklist(Object.keys(pocketTitleIndex), "Not a valid title!"),
     v.trim()
   )
 )
@@ -70,6 +67,7 @@ export const settingsSchema = v.object({
   //
   feed_categories: feedCategorySchema,
   feed_spoilers: v.fallback(v.boolean(), true),
+  feed_spoiler_safeguard: v.fallback(v.boolean(), true),
   //
   once: v.fallback(v.record(v.string(), v.boolean()), {}),
   show_allies: v.fallback(v.boolean(), true),

@@ -80,10 +80,11 @@ const buttonProps: ButtonProps = {
     <div
       :class="
         cn(
-          'command-sidebar-hero pointer-events-none absolute top-0 left-0 z-2 flex h-50 w-full flex-col items-center gap-3 overflow-hidden py-6 pr-px',
+          'command-sidebar-hero pointer-events-none absolute top-0 left-0 z-2 flex h-50 w-full flex-col items-center overflow-hidden pr-px pb-6',
           ''
         )
       ">
+      <CommandHeader />
       <!-- history link and icon -->
       <div class="pointer-events-auto">
         <HoverIcon
@@ -95,42 +96,43 @@ const buttonProps: ButtonProps = {
             ui: { root: 'cursor-pointer size-21 rounded-full' }
           }" />
       </div>
-      <div class="flex flex-col items-center">
+      <div
+        class="my-3 inline-flex items-center justify-center gap-px align-baseline normal-case!">
         <!-- name and tag -->
         <h1
-          class="font-serif text-2xl leading-none font-semibold! normal-case! drop-shadow-lg! drop-shadow-p0!">
+          class="inline align-baseline font-serif text-2xl leading-none font-semibold! drop-shadow-lg! drop-shadow-p0!">
           {{ account?.name || account?.username || "Hello." }}
         </h1>
-        <div
-          class="flex items-center justify-center gap-px text-sm font-medium normal-case!">
-          <span v-if="account?.tag" class="py-1">
-            <Icon name="i-hash" class="inline size-3!" />{{ account?.tag }}
-          </span>
+        <span
+          v-if="account?.tag"
+          class="inline translate-y-[0.05em] text-sm font-medium">
+          <Icon name="i-hash" class="inline size-3!" />{{ account?.tag }}
+        </span>
 
-          <!-- connect -->
+        <!-- connect -->
+        <UButton
+          v-else-if="account?.uuid && !account?.puuid"
+          v-bind="buttonProps"
+          label="Connect Riot Account"
+          @click="closeFn(emit('close'), openLogin)" />
+
+        <!-- log in-->
+        <div v-else class="flex items-center justify-center">
           <UButton
-            v-else-if="account?.uuid && !account?.puuid"
             v-bind="buttonProps"
-            label="Connect Riot Account"
+            label="Log in"
             @click="closeFn(emit('close'), openLogin)" />
-
-          <!-- log in-->
-          <div v-else class="flex items-center justify-center">
-            <UButton
-              v-bind="buttonProps"
-              label="Log in"
-              @click="closeFn(emit('close'), openLogin)" />
-            <Icon name="i-slash" class="size-4" />
-            <UButton
-              v-bind="buttonProps"
-              label="Sign up"
-              @click="closeFn(emit('close'), openSignUp)" />
-          </div>
+          <Icon name="i-slash" class="size-4" />
+          <UButton
+            v-bind="buttonProps"
+            label="Sign up"
+            @click="closeFn(emit('close'), openSignUp)" />
         </div>
       </div>
     </div>
+    <CommandHeader />
 
-    <div class="z-0 flex w-full grow flex-col items-center pt-43">
+    <div class="z-0 flex w-full grow flex-col items-center pt-33">
       <div class="w-full space-y-1 p-3">
         <template v-for="item in menu" :key="item.value">
           <h6

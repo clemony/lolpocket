@@ -93,7 +93,7 @@ function goBack() {
 </script>
 
 <template>
-  <div class="flex max-h-180 min-h-0 grow flex-col">
+  <div class="flex max-h-190 min-h-0 grow flex-col">
     <template v-if="!activeState">
       <div
         class="grid min-h-0 flex-1 divide-y divide-p3 overflow-x-hidden overflow-y-auto overscroll-contain">

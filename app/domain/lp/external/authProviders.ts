@@ -1,6 +1,10 @@
 import { getSummonerIcon } from "~/domain/utils/img"
 
-export const supabaseProviders: SbProviderKey<string>[] = ["google", "discord"]
+export const supabaseProviders: SbProviderKey<string>[] = [
+  "google",
+  "discord",
+  "twitch"
+]
 
 export interface ProviderType {
   label: ProviderKey<string>
@@ -27,5 +31,10 @@ export const providers: Record<
     label: "google",
     class: "",
     icon: "i-google"
+  },
+  twitch: {
+    label: "twitch",
+    class: "",
+    icon: "i-twitch"
   }
 }

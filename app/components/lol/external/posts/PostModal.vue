@@ -9,8 +9,9 @@ const { post, ctrls } = defineProps<{
   post: Post | null
   ctrls: UsePostModalReturn["ctrls"]
 }>()
-
 const emit = defineEmits<{ close: [boolean] }>()
+
+console.log("🥸 - post:", post)
 
 const open = defineModel<boolean>("open", { default: false })
 const currentPost = computed(() => post)
@@ -24,6 +25,9 @@ function closeModal() {
   open.value = false
   emit("close", false)
 }
+
+const textOpen = shallowRef<boolean>(false)
+const openPost = useToggle(textOpen)
 
 const style = computed(() => ({
   aspectRatio:
@@ -109,19 +113,13 @@ const videoComponent = computed(() => {
     <template #body>
       <div :key="String(currentPost?.id ?? currentPost?.source_id ?? '')">
         <div
-          :class="
-            cn(
-              'relative size-full max-h-[88vh] overflow-hidden rounded-6xl shadow-sm drop-shadow-md',
-              hasVideo(currentPost)
-                ? 'aspect-video inset-ring inset-ring-neutral'
-                : ''
-            )
-          ">
-          <template v-if="currentPost && hasVideo(currentPost)">
+          class="scrollbar-none relative size-full max-h-[88vh] overflow-x-hidden overflow-y-auto rounded-6xl">
+          <div
+            v-if="currentPost && hasVideo(currentPost)"
+            class="aspect-video rounded-6xl shadow-sm inset-ring inset-ring-neutral drop-shadow-md">
             <component
               :is="videoComponent"
               v-if="open && videoComponent"
-              v-slot="{ state }"
               ref="video"
               :key="
                 String(
@@ -143,7 +141,6 @@ const videoComponent = computed(() => {
               :video-id="String(currentPost.video_id)"
               :title="currentPost.title">
               <VideoControls
-                :state
                 :thumbnail-src="
                   currentPost.preview_image_url ?? currentPost.thumbnail_url
                 "
@@ -156,8 +153,40 @@ const videoComponent = computed(() => {
                 </template>
               </VideoControls>
             </component>
-          </template>
-          <TextPost v-else-if="currentPost" :post="currentPost" />
+          </div>
+          <UCollapsible
+            v-if="hasVideo(currentPost) && currentPost?.text"
+            v-model:open="textOpen"
+            :ui="{
+              root: 'z-auto mt-5 flex w-full grow flex-col gap-6',
+              content:
+                'order-first rounded-6xl bg-p0/90 shadow-sm drop-shadow-md'
+            }">
+            <template #content>
+              <TextPost :post="currentPost" />
+            </template>
+          </UCollapsible>
+
+          <TextPost
+            v-else-if="!hasVideo(currentPost) && currentPost"
+            :post="currentPost"
+            class="bg-p0/90 shadow-sm drop-shadow-md" />
+        </div>
+
+        <div
+          v-if="hasVideo(currentPost) && currentPost?.text"
+          class="flex h-12 min-h-12 w-full shrink-0">
+          <UButton
+            leading-icon="i-right"
+            :ui="{
+              base: 'w-fit rounded-xl px-6',
+              leadingIcon: cn('transition-all duration-200', {
+                '-rotate-90': textOpen
+              })
+            }"
+            color="neutral"
+            :label="!textOpen ? 'Read Post...' : 'Collapse Post'"
+            @click="openPost()" />
         </div>
       </div>
     </template>

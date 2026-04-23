@@ -123,6 +123,7 @@ export const icon = {
     chats: "lucide:messages-square", //'i-chats'
     mail: "lucide:mail", //'i-mail'
     "mail-all": "lucide:mails", //'i-mail-all'
+    notification: "mynaui:notification-solid", // i-mynaui:notification-solid"
     "mail-fill": "fluent:mail-32-filled", //'i-mail-fill'
     "mail-open": "lucide:mail-open", //'i-mail-open'
     inbox: "lucide:inbox",
@@ -150,6 +151,7 @@ export const icon = {
     discord: "bi:discord", //'i-discord'
     github: "ph:github-logo", //'i-github'
     google: "fe:google", //'i-google'
+    twitch: "i-streamline-logos-twitch-logo-solid",
     riot: "streamline-logos:riot-games-logo-solid", //'i-riot'
 
     "exit-fullscreen": "lucide:scan-line", //'i-exit-fullscreen'

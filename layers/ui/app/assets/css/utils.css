@@ -15,11 +15,11 @@
   .focus-ring {
     @apply relative before:absolute;
     &::before {
-      @apply inset-0 top-0 left-0 size-[calc(100%+6px)] shrink-0 -translate-x-[3px] -translate-y-[3px] self-center rounded-[inherit] border border-current/60 ds-2xs transition-all duration-200;
+      @apply inset-0 top-0 left-0 size-[calc(100%+6px)] shrink-0 translate-[-3px] self-center rounded-[inherit] border border-current/60 ds-2xs transition-all duration-200;
     }
     &[role="switch"] {
       &::before {
-        @apply size-[calc(100%+10px)] -translate-x-[5px] -translate-y-[5px];
+        @apply size-[calc(100%+10px)] translate-[-5px];
       }
     }
   }

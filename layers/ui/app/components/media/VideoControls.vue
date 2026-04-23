@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
-import type { UseMediaControlsReturn } from "@vueuse/core"
+import { toValue } from "vue"
+import type { MediaControlState } from "./mediaControls"
+import { mediaControlsKey } from "./mediaControls"
 
-const { thumbnail } = defineProps<{
+const props = defineProps<{
   thumbnail?: HTMLImageElement["src"]
+  state?: MediaControlState
 }>()
 const button: ButtonProps = {
   size: "sm",
@@ -15,25 +18,38 @@ const button: ButtonProps = {
 }
 
 const open = shallowRef<boolean>(false)
+const injectedState = inject(mediaControlsKey, null)
+const state = computed(() => props.state ?? injectedState)
 
-const {
-  togglePlay,
-  toggleMute,
-  playing,
-  waiting,
-  volume,
-  muted,
-  currentTime,
-  duration,
-  currentTimeLabel,
-  durationLabel,
-  togglePictureInPicture,
-  supportsPictureInPicture
-} = toValue(computed(() => safeObject(inject<MediaControls>("video"))))
+const playing = computed(() => state.value?.playing.value ?? false)
+const waiting = computed(() => state.value?.waiting.value ?? false)
+const volume = computed(() => state.value?.volume.value ?? 0)
+const muted = computed(() => state.value?.muted.value ?? false)
+const currentTime = computed(() => state.value?.currentTime.value ?? 0)
+const duration = computed(() => state.value?.duration.value ?? 0)
+const currentTimeLabel = computed(
+  () => state.value?.currentTimeLabel.value ?? "0:00"
+)
+const durationLabel = computed(() => state.value?.durationLabel.value ?? "0:00")
+const supportsPictureInPicture = computed(() =>
+  Boolean(toValue(state.value?.supportsPictureInPicture ?? false))
+)
 
 const isSeeking = shallowRef<boolean>(false)
-function handleSeek() {
+
+function handleSeek(value?: number) {
+  if (typeof value === "number") state.value?.seekTo(value)
   isSeeking.value = false
+}
+
+function updateSeek(value: number | number[] | undefined) {
+  const next = Array.isArray(value) ? value[0] : value
+  if (typeof next === "number") state.value?.seekTo(next)
+}
+
+function updateVolume(value: number | number[] | undefined) {
+  const next = Array.isArray(value) ? value[0] : value
+  if (typeof next === "number") state.value?.setVolume(next)
 }
 </script>
 
@@ -50,7 +66,7 @@ function handleSeek() {
     <button
       role="toggle"
       class="pointer-events-auto grid size-full grow cursor-pointer place-items-center"
-      @click="togglePlay()">
+      @click="state?.togglePlay()">
       <Spinner v-if="waiting" class="absolute z-1 size-10 text-nc/80" />
       <Icon
         v-else
@@ -69,7 +85,7 @@ function handleSeek() {
       <UButton
         v-bind="button"
         :icon="playing ? 'i-ion-md-pause' : 'i-ion-play'"
-        @click="togglePlay()" />
+        @click="state?.togglePlay()" />
       <div class="mr-8 ml-6 flex grow items-center gap-2">
         <USlider
           :ui="{
@@ -84,7 +100,8 @@ function handleSeek() {
           :max="duration"
           :model-value="currentTime"
           @pointerdown="isSeeking = true"
-          @pointerup="handleSeek" />
+          @pointerup="handleSeek()"
+          @update:model-value="updateSeek" />
         <div
           class="flex shrink-0 flex-nowrap items-center text-xs font-semibold text-nc!">
           {{ currentTimeLabel
@@ -114,7 +131,7 @@ function handleSeek() {
           " />
         <template #content>
           <USlider
-            v-model:model-value="volume"
+            :model-value="volume"
             orientation="vertical"
             size="xs"
             :max="1"
@@ -125,9 +142,7 @@ function handleSeek() {
               range: 'bg-nc',
               thumb: 'bg-transparent shadow-none ring-transparent'
             }"
-            @update:model-value="
-              (e: number | undefined) => (volume = e ?? 0)
-            " />
+            @update:model-value="updateVolume" />
           <UButton
             v-bind="button"
             size="xs"
@@ -140,14 +155,14 @@ function handleSeek() {
               leadingIcon: 'scale-120'
             }"
             icon="i-ion-md-volume-off"
-            @click="toggleMute()" />
+            @click="state?.toggleMute()" />
         </template>
       </UPopover>
       <UButton
         v-if="supportsPictureInPicture"
         v-bind="button"
         icon="i-ri-picture-in-picture-fill"
-        @click="togglePictureInPicture()" />
+        @click="state?.togglePictureInPicture()" />
       <UButton v-bind="button" icon="i-lucide-maximize" />
     </div>
   </div>

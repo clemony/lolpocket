@@ -4,9 +4,9 @@ const emit = defineEmits(["error"])
 definePageMeta({
   name: "Sign up",
   alias: "/sign-up",
-  description: "Login with your Riot, Google, or Discord account.",
+  description: "Login with a connected account or email.",
   icon: "gear",
-  search: false,
+  search: false
 })
 
 const client = useSupabaseClient()

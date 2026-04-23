@@ -12,7 +12,15 @@ function save() {
     <slot />
     <Separator />
     <div class="flex justify-start">
-      <UButton color="neutral" type="submit" :loading="isSaving" label="Save" />
+      <UButton
+        block
+        color="neutral"
+        type="submit"
+        :ui="{
+          label: 'grow-0'
+        }"
+        :loading="isSaving"
+        label="Save" />
     </div>
   </UForm>
 </template>

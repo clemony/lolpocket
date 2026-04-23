@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Theme",
   description: "Choose your app interface colors.",
-  icon: "swatch",
+  icon: "i-swatch",
   order: 5,
   path: "/settings/theme",
   prefix: "Settings"

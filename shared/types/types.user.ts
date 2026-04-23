@@ -27,8 +27,9 @@ export type ProviderKey<K extends string> =
   | "email"
   | "google"
   | "discord"
+  | "twitch"
   | "riot"
-export type SbProviderKey<K extends string> = "discord" | "google"
+export type SbProviderKey<K extends string> = "discord" | "google" | "twitch"
 
 export interface ProviderIdentity {
   provider: string

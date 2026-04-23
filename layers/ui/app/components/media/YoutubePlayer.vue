@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { useScriptYouTubePlayer } from "#imports"
-import { useEmitAsProps } from "reka-ui"
-import type * as YT from "youtube"
+import type * as YouTube from "youtube"
 import { secondsToTime } from "~~/layers/lib/app/utils/time"
+import type { MediaControlState } from "./mediaControls"
+import { mediaControlsKey } from "./mediaControls"
 
 const props = withDefaults(
   defineProps<{
@@ -21,67 +22,176 @@ const props = withDefaults(
 )
 
 const emit = defineEmits(["ready"])
-const video = useTemplateRef<YT.PlayerEvent>("video")
-defineExpose({ video })
 
-const { proxy } = useScriptYouTubePlayer({
-  scriptOptions: {
-    trigger: "manual"
+interface LoadedYouTubeApi {
+  Player: new (
+    elt: HTMLElement | string,
+    options?: YouTube.PlayerOptions
+  ) => YouTube.Player
+  PlayerState: typeof YouTube.PlayerState
+  ready: (handler: () => void) => void
+}
+
+const { onLoaded } = useScriptYouTubePlayer({
+  videoId: props.videoId
+})
+
+const video = useTemplateRef<HTMLDivElement>("video")
+const player = ref<YouTube.Player | null>(null)
+const youtubeApi = shallowRef<LoadedYouTubeApi | null>(null)
+const playing = ref(false)
+const waiting = ref(true)
+const muted = ref(props.muted)
+const volume = ref(props.muted ? 0 : 1)
+const currentTime = ref(0)
+const duration = ref(0)
+
+let syncTimer: ReturnType<typeof setInterval> | null = null
+
+function stopSync() {
+  if (syncTimer) {
+    clearInterval(syncTimer)
+    syncTimer = null
   }
-})
-const { YT: youtube } = await proxy
-console.log("🥸 - YT:", youtube)
-
-console.log("🥸 - props:", props)
-
-function canPlay() {
-  if (!video?.value) return
-  emit("ready")
-  video.value?.target?.playVideo()
 }
 
-function reload() {
-  if (!video?.value) return
-  video.value?.target?.loadVideoById(props.videoId)
+function syncFromPlayer() {
+  const instance = player.value
+  const api = youtubeApi.value
+
+  if (!instance || !api) return
+
+  currentTime.value = instance.getCurrentTime?.() ?? 0
+  duration.value = instance.getDuration?.() ?? 0
+  muted.value = instance.isMuted?.() ?? false
+  volume.value = (instance.getVolume?.() ?? 0) / 100
+
+  const state = instance.getPlayerState?.()
+  playing.value = state === api.PlayerState.PLAYING
+  waiting.value =
+    state === api.PlayerState.BUFFERING || state === api.PlayerState.UNSTARTED
 }
 
-const emits = useEmitAsProps(emit)
-
-const state = computed(() => video.value?.target?.getPlayerState())
-console.log("🥸 - state:", state)
-const controls = reactive({
-  play: video.value?.target?.playVideo,
-  pause: video.value?.target?.pauseVideo
-})
-/*
-onMounted(() => {
-  controls.value.volume.value = 0
-  controls.value.currentTime.value = 0
-})
-
-const state = {
-  ...controls,
-  togglePlay: useToggle(controls.value.playing),
-  toggleMute: useToggle(controls.value.muted),
-  currentTimeLabel: computed(() =>
-    secondsToTime(controls.value.currentTime.value)
-  ),
-  durationLabel: computed(() => secondsToTime(controls.value.duration.value))
+function startSync() {
+  if (syncTimer) return
+  syncFromPlayer()
+  syncTimer = setInterval(syncFromPlayer, 250)
 }
- */
-provide("video", state)
+
+function togglePlay(value?: boolean) {
+  const next = value ?? !playing.value
+  const instance = player.value
+
+  if (!instance) return next
+
+  if (next) instance.playVideo()
+  else instance.pauseVideo()
+
+  playing.value = next
+  syncFromPlayer()
+  return next
+}
+
+function toggleMute(value?: boolean) {
+  const next = value ?? !muted.value
+  const instance = player.value
+
+  if (!instance) return next
+
+  if (next) instance.mute()
+  else instance.unMute()
+
+  muted.value = next
+  syncFromPlayer()
+  return next
+}
+
+function seekTo(value: number) {
+  player.value?.seekTo(value, true)
+  currentTime.value = value
+}
+
+function setVolume(value: number) {
+  const next = Math.min(1, Math.max(0, value))
+  const instance = player.value
+
+  volume.value = next
+
+  if (!instance) return
+
+  instance.setVolume(Math.round(next * 100))
+
+  if (next <= 0) instance.mute()
+  else if (instance.isMuted()) instance.unMute()
+
+  syncFromPlayer()
+}
+
+const state: MediaControlState = {
+  currentTime,
+  currentTimeLabel: computed(() => secondsToTime(currentTime.value)),
+  duration,
+  durationLabel: computed(() => secondsToTime(duration.value)),
+  muted,
+  playing,
+  seekTo,
+  setVolume,
+  supportsPictureInPicture: false,
+  toggleMute,
+  togglePictureInPicture: () => {},
+  togglePlay,
+  volume,
+  waiting
+}
+
+provide(mediaControlsKey, state)
+
+onLoaded(async ({ YT: api }) => {
+  youtubeApi.value = (await api) as unknown as LoadedYouTubeApi
+
+  if (!video.value) return
+
+  await new Promise<void>((resolve) => {
+    if (typeof youtubeApi.value?.Player === "undefined")
+      youtubeApi.value?.ready(resolve)
+    else resolve()
+  })
+
+  const apiRef = youtubeApi.value
+  if (!apiRef) return
+
+  player.value = new apiRef.Player(video.value, {
+    host: props.cookies ? undefined : "https://www.youtube-nocookie.com",
+    videoId: props.videoId,
+    playerVars: {
+      autoplay: props.autoplay ? 1 : 0,
+      controls: 0,
+      playsinline: 1,
+      rel: 0
+    },
+    events: {
+      onReady(event) {
+        if (props.muted) event.target.mute()
+        else event.target.unMute()
+
+        event.target.setVolume(props.muted ? 0 : Math.round(volume.value * 100))
+
+        startSync()
+        syncFromPlayer()
+        emit("ready")
+      },
+      onStateChange() {
+        syncFromPlayer()
+      }
+    }
+  })
+})
+onUnmounted(stopSync)
 </script>
 
 <template>
-  <div v-auto-animate class="size-full">
-    <ScriptYouTubePlayer
-      ref="video"
-      class="z-0 size-full min-w-full overflow-hidden object-cover"
-      v-bind="props"
-      :video-id
-      @ready="canPlay()"
-      @error="reload()">
-    </ScriptYouTubePlayer>
-    <slot :state />
+  <div v-auto-animate class="size-full overflow-hidden rounded-6xl">
+    <div ref="video" class="size-full object-cover" />
+    <slot :state="state" />
   </div>
 </template>

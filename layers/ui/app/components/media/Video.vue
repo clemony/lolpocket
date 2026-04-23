@@ -2,6 +2,8 @@
 import type { VideoProps } from "#shared/types"
 import { useEmitAsProps } from "reka-ui"
 import { secondsToTime } from "~~/layers/lib/app/utils/time"
+import type { MediaControlState } from "./mediaControls"
+import { mediaControlsKey } from "./mediaControls"
 
 const props = withDefaults(defineProps<Partial<VideoProps> & {}>(), {
   autoplay: true,
@@ -41,15 +43,21 @@ onMounted(() => {
   controls.currentTime.value = 0
 })
 
-const state = {
+const state: MediaControlState = {
   ...controls,
   togglePlay: useToggle(controls.playing),
   toggleMute: useToggle(controls.muted),
   currentTimeLabel: computed(() => secondsToTime(controls.currentTime.value)),
-  durationLabel: computed(() => secondsToTime(controls.duration.value))
+  durationLabel: computed(() => secondsToTime(controls.duration.value)),
+  seekTo(value: number) {
+    controls.currentTime.value = value
+  },
+  setVolume(value: number) {
+    controls.volume.value = value
+  }
 }
 
-provide("video", state)
+provide(mediaControlsKey, state)
 </script>
 
 <template>

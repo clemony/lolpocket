@@ -14,14 +14,26 @@ export const switchTheme = defineUiTheme({
     description: "text-muted"
   },
   variants: {
-    primary: {
-      container: "group-hover:before:ring-pc/80",
-      base: "focus-visible:outline-neutral data-[state=checked]:bg-neutral",
-      icon: "group-data-[state=checked]:text-highlighted"
-    },
-    neutral: {
-      base: "group-hover:before:ring-nc focus-visible:outline-inverted data-[state=checked]:bg-inverted",
-      icon: "group-data-[state=checked]:text-highlighted"
+    color: {
+      primary: {
+        container: "group-hover:before:ring-pc/80",
+        base: "focus-visible:outline-neutral data-[state=checked]:bg-neutral",
+        icon: "group-data-[state=checked]:text-highlighted"
+      },
+      neutral: {
+        base: "group-hover:before:ring-nc focus-visible:outline-inverted data-[state=checked]:bg-inverted",
+        icon: "group-data-[state=checked]:text-highlighted"
+      },
+      card: {
+        root: "flex items-center gap-2 rounded-xl px-4 py-3 shadow-xs inset-ring shadow-black/5 inset-ring-p3/60 hover:fx-noise hover:bg-p1 hover:shadow-none hover:inset-ring-pc/70",
+        base: "focus-visible:outline-neutral data-[state=checked]:bg-neutral",
+        wrapper: "w-full grow",
+        icon: "group-data-[state=checked]:text-highlighted",
+        label:
+          "inline-flex size-full grow items-center justify-between gap-2 text-md leading-7 font-semibold! capitalize",
+        container: "mt-2 self-start group-hover:before:ring-pc/80",
+        description: "text-sm text-n5"
+      }
     }
   },
   size: {

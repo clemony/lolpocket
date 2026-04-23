@@ -6,8 +6,8 @@ definePageMeta({
   order: 2,
   description:
     "Set your public profile display settings and hide your annoyances.",
-  icon: "i-mingcute-badge-line",
-  class: "scale-110 ",
+  icon: "i-lucide-circle-user-round",
+  class: "",
   path: "/settings/profile",
   auth: true,
   prefix: "Settings"

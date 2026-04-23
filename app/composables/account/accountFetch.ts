@@ -59,6 +59,10 @@ export async function accountFetch() {
       (i) => i.provider === "google"
     )
 
+    const twitch = getIdentities.data?.identities.find(
+      (i) => i.provider === "twitch"
+    )
+
     return {
       email: {
         provider: "email",
@@ -83,6 +87,14 @@ export async function accountFetch() {
               discord?.identity_data?.custom_claims?.global_name ||
               discord?.identity_data?.full_name,
             description: discord?.identity_data?.email
+          }
+        : null,
+      twitch: twitch
+        ? {
+            provider: twitch?.provider,
+            avatar: twitch?.identity_data?.avatar_url,
+            name: twitch?.identity_data?.full_name,
+            description: twitch?.identity_data?.email
           }
         : null,
       google: google

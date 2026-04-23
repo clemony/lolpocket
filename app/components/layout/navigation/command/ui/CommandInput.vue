@@ -49,7 +49,7 @@ function handleClear() {
     :autofocus="false"
     aria-describedby="app-command-search"
     :ui="{
-      root: 'group/i flex w-200 max-w-200 shrink-0 grow',
+      root: 'group/i flex w-190 max-w-190 shrink-0 grow',
       base: cn(
         'h-10 w-full grow rounded-xl! bg-p0/70 px-4 pr-16 text-center ring inset-shadow-sm ring-p3/80 placeholder:text-pc/60 hover:ring-n0/50 focus-visible:ring-1 focus-visible:ring-p3/80! focus-visible:placeholder:opacity-0!',
         {

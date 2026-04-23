@@ -4,6 +4,8 @@ import { patchIndex } from "~~/shared/constants/patch-index"
 const { reference } = defineProps<{
   reference: HTMLElement | null
 }>()
+const emit = defineEmits(["update:open"])
+
 const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
 </script>
 
@@ -42,44 +44,27 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
         </template>
       </LazyUButton>
       <LazyUSeparator orientation="vertical" class="h-4 border-p4/60!" />
-      <LazyUPopover
-        v-model:open="hotkeysOpen"
-        :ui="{
-          content:
-            'z-1 rounded-b-none border-0 shadow-none ring-0 drop-shadow-none'
-        }"
-        :content="{
-          side: 'top',
-          align: 'center',
-          sideOffset: 4,
-          collisionBoundary: reference,
-          collisionPadding: 0,
-          sideFlip: false
-        }">
-        <UButton
-          variant="ghost"
-          label="Hotkeys"
-          :ui="{
-            base: 'gap-3'
-          }"
-          size="xs">
-          <template #trailing>
-            <div class="flex items-center gap-1.25">
-              <LazyUKbd
-                v-for="v in ['meta', 'K']"
-                :key="v"
-                square
-                :value="v"
-                color="base"
-                variant="outline" />
-            </div>
-          </template>
-        </UButton>
 
-        <template #content>
-          <LazyHotkeyForm />
+      <UButton
+        variant="ghost"
+        label="Hotkeys"
+        :ui="{
+          base: 'gap-3'
+        }"
+        size="xs"
+        @click="emit('update:open', 'hotkeys')">
+        <template #trailing>
+          <div class="flex items-center gap-1.25">
+            <LazyUKbd
+              v-for="v in ['meta', 'K']"
+              :key="v"
+              square
+              :value="v"
+              color="base"
+              variant="outline" />
+          </div>
         </template>
-      </LazyUPopover>
+      </UButton>
     </div>
   </div>
 </template>

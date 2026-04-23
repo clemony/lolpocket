@@ -2,8 +2,9 @@
 definePageMeta({
   title: "Communication",
   description: "Manage in app-notifications, messaging, and email preferences.",
-  icon: "i-chat-dots",
+  icon: "i-chat",
   path: "/settings/communication",
+  class: "**:stroke-[2.3]",
   auth: true,
   order: 3,
   prefix: "Settings"

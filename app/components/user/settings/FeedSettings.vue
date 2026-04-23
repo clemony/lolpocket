@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { feedCategories } from "./data/feedTabs"
+import { feedCategories } from "./data/feedOptions"
 
 const { orientation } = defineProps<{
   orientation?: "vertical" | "horizontal"
@@ -28,9 +28,10 @@ const spoilerDescriptions: Record<string, string> = {
   false: "Spoilers will be visible in news feed previews."
 }
 
-const categoryRegistry = computed(() =>
-  feedKeys.map((f) => ({ value: f, label: f }))
-)
+const spoilerSafeguard: Record<string, string> = {
+  true: "No posts containing spoilers will be displayed in your feed at all.",
+  false: "Posts containing spoilers will be included in your feed."
+}
 </script>
 
 <template>
@@ -39,68 +40,95 @@ const categoryRegistry = computed(() =>
     size="lg"
     label="Categories"
     description="Show only the types of news you want to see.">
-    <UCheckboxGroup
-      v-model:model-value="categories"
-      :items="Object.values(feedCategories)"
-      variant="card"
+    <USwitch
+      v-for="item in feedCategories"
+      :key="item.label"
+      as="label"
+      v-bind="item"
+      :default-value="true"
+      size="sm"
+      color="card"
       :ui="{
-        fieldset: 'gap-1.5',
-        item: 'flex h-12 items-center',
-        base: 'rounded-full',
-        label: 'flex! items-center justify-between'
-      }"
-      size="lg"
-      @update:model-value="validateField(usernameSchema)">
-      <template #label="{ item }">
+        root: 'py-4!',
+        container: 'mt-0'
+      }">
+      <template #label>
         {{ item.label }}
 
         <Icon
           :name="item.trailingIcon"
-          :class="cn('size-4.5', item.ui?.leadingIcon)" />
+          :class="cn('size-4.5', item.ui?.trailingIcon)" />
       </template>
-    </UCheckboxGroup>
+    </USwitch>
   </UFormField>
 
-  <!-- email -->
+  <!-- spiolers -->
 
-  <UFormField
-    size="lg"
-    label="Hide Spoilers"
-    :ui="{
-      description: ''
-    }">
-    <template #description>
-      <div class="relative min-h-10 w-full">
-        <Transition
-          appear
-          enter-active-class="transition duration-150 ease-out"
-          enter-from-class="-translate-x-1 opacity-0"
-          enter-to-class="translate-x-0 opacity-100"
-          leave-active-class="absolute inset-0 transition duration-100 ease-in"
-          leave-from-class="translate-x-0 opacity-100"
-          leave-to-class="-translate-x-1 opacity-0">
-          <p
-            v-show="spoilers"
-            class="block w-full text-pretty whitespace-pre-wrap">
-            {{ spoilerDescriptions.true }}
-          </p>
-        </Transition>
-        <Transition
-          appear
-          enter-active-class="transition duration-150 ease-out"
-          enter-from-class="translate-x-1 opacity-0"
-          enter-to-class="translate-x-0 opacity-100"
-          leave-active-class="absolute inset-0 transition duration-100 ease-in"
-          leave-from-class="translate-x-0 opacity-100"
-          leave-to-class="translate-x-1 opacity-0">
-          <p
-            v-show="!spoilers"
-            class="block w-full text-pretty whitespace-pre-wrap">
-            {{ spoilerDescriptions.false }}
-          </p>
-        </Transition>
-      </div>
-    </template>
-    <USwitch v-model:model-value="spoilers" size="lg" />
-  </UFormField>
+  <UCard as-child>
+    <UFormField
+      size="lg"
+      label="Hide Spoilers"
+      :ui="{
+        root: 'px-4 py-4.5'
+      }">
+      <template #description>
+        <div class="relative min-h-10 w-full">
+          <TransitionSlideText
+            :model-value="spoilers"
+            :label-true="spoilerDescriptions.true"
+            :label-false="spoilerDescriptions.false" />
+        </div>
+      </template>
+      <USwitch
+        v-model:model-value="spoilers"
+        :ui="{
+          root: 'w-full items-center justify-between pl-0',
+          label: '-translate-x-1 italic',
+          container: 'order-last'
+        }"
+        size="md">
+        <template #label>
+          <TransitionSlideText
+            label-true="Spoilers marked"
+            label-false="Spoilers visible"
+            class="italic"
+            :model-value="spoilers" />
+        </template>
+      </USwitch>
+    </UFormField>
+  </UCard>
+
+  <UCard as-child>
+    <UFormField
+      size="lg"
+      label="Anti-Spoiler Safeguard"
+      :ui="{
+        root: 'px-4 py-4.5'
+      }">
+      <template #description>
+        <div class="relative min-h-10 w-full">
+          <TransitionSlideText
+            :model-value="spoilers"
+            :label-true="spoilerDescriptions.true"
+            :label-false="spoilerDescriptions.false" />
+        </div>
+      </template>
+      <USwitch
+        v-model:model-value="spoilers"
+        :ui="{
+          root: 'w-full items-center justify-between pl-0',
+          label: '-translate-x-1 italic',
+          container: 'order-last'
+        }"
+        size="md">
+        <template #label>
+          <TransitionSlideText
+            label-true="Spoilers marked"
+            label-false="Spoilers visible"
+            class="italic"
+            :model-value="spoilers" />
+        </template>
+      </USwitch>
+    </UFormField>
+  </UCard>
 </template>
