@@ -18,11 +18,11 @@ const safeSum = computed(() => safeObject(summoner.value))
     :avatar="{ src: getSummonerIcon(safeSum.icon) }"
     :ui="{
       name: cn(
-        'overflow-y-visible font-serif text-[36px]/15 font-bold! text-pc/94 drop-shadow-sm',
+        'h-12 overflow-y-visible font-serif text-8xl! font-semibold! text-pc/94 drop-shadow-sm',
         { 'opacity-40': !summoner?.name }
       ),
       description:
-        'inline-flex translate-y-3 items-center gap-4 px-0.5 align-baseline font-medium text-pc',
+        'inline-flex h-8 items-center gap-4 px-0.5 align-baseline leading-8 font-medium text-pc',
       root: 'gap-4',
       avatar: 'size-20 translate-y-1'
     }"

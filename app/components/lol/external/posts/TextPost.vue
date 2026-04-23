@@ -107,7 +107,7 @@ const emit = defineEmits(["close"])
         loading="eager" />
       <div
         v-if="post?.text"
-        class="prose w-full! max-w-full -space-y-1! text-lg leading-7.5 whitespace-pre-line text-pc"
+        class="prose w-full! max-w-full space-y-0 text-lg text-pc select-text"
         v-html="post.text" />
 
       <p v-else-if="post?.excerpt">
@@ -135,3 +135,20 @@ const emit = defineEmits(["close"])
     </div>
   </article>
 </template>
+
+<style scoped>
+@reference "#layers/ui/app/assets/css/tailwind.css";
+
+.prose {
+  :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-0! mb-0!;
+  }
+  @apply my-0!;
+  blockquote {
+    @apply my-0! bg-p3;
+    p {
+      @apply my-0!;
+    }
+  }
+}
+</style>

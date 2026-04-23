@@ -67,10 +67,11 @@ export interface PostRefreshResponse {
 
 export const feedKeys: string[] = [
   "Discussion",
-  "RiotOfficial",
+  "Riot Official",
   "Esports",
   "Gameplay",
-  "News"
+  "News",
+  "Humor"
 ]
 
 export type FeedKey = (typeof feedKeys)[number]

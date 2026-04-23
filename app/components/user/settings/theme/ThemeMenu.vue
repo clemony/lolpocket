@@ -20,7 +20,6 @@ const settings = computed(() => safeObject(sett.value))
 
 const themePreference = useThemePreference()
 const systemTheme = useSystemThemeValue()
-const command = inject<Record<string, () => void>>("command")
 
 const themeAccent = useThemeAccentPreference()
 const currentAccent = computed(() => getThemeAccentOption(themeAccent.value))
@@ -88,7 +87,9 @@ function setAccent(accent?: string) {
       <!--  -->
     </UButton>
     <template #content>
-      <h6 class="flex h-8 items-center px-3 opacity-50">Theme</h6>
+      <h6 class="flex h-8 items-center px-3 opacity-50">
+        Theme
+      </h6>
       <div class="grid w-full grid-cols-2 place-items-center gap-2 px-3">
         <!--
             -->
@@ -109,7 +110,9 @@ function setAccent(accent?: string) {
           @click="setTheme(item.value)" />
       </div>
       <Separator class="mt-4 mb-2" />
-      <h6 class="mb-1 flex h-8 items-center px-3 opacity-50">Accent</h6>
+      <h6 class="mb-1 flex h-8 items-center px-3 opacity-50">
+        Accent
+      </h6>
       <div class="grid w-full grid-cols-5 place-items-center gap-1.5 px-3">
         <UTooltip
           v-for="(item, i) in accentItems"

@@ -77,7 +77,9 @@ function pageTo(targetPage: number) {
     <UPageBody id="updates" class="relative w-full overflow-y-auto px-8">
       <section class="z-auto grid auto-rows-max gap-4">
         <div class="sticky top-0 flex h-10 w-full items-center bg-p0">
-          <h2 class="align-center inline tracking-tight">Game Updates</h2>
+          <h2 class="align-center inline tracking-tight">
+            Game Updates
+          </h2>
         </div>
         <LazyPostCard :post="buildPatchPost()" />
         <LazyPostCard :post="buildPbePost()" />

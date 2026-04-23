@@ -234,7 +234,9 @@ const masterworkUpgradeId = computed(() => {
       }"
       title="Item not found.">
       <template #description>
-        <ULink class="inline" underline> Clem </ULink> may have moved this from
+        <ULink class="inline" underline>
+          Clem
+        </ULink> may have moved this from
         it's previous location. Try refreshing to see if we've found it.
       </template>
     </LazyUEmpty>

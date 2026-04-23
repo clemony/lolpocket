@@ -58,7 +58,7 @@ const currentThemePreview = computed(
   <LazyUDropdownMenu
     :highlight="false"
     :content="{ align: 'start', sideOffset: 6, side: props?.content?.side }"
-    :items="userMenuItems(command)"
+    :items="userMenuItems()"
     active-variant="outline"
     :ui="{
       content: 'min-w-(--reka-dropdown-menu-trigger-width) drop-shadow-sm'
@@ -166,8 +166,7 @@ const currentThemePreview = computed(
             </p>
             <div class="mb-1 flex items-center justify-end gap-2 text-end">
               <span class="text-xs font-normal! italic opacity-70">
-                —{{ item.champion }} </span
-              ><UAvatar
+                —{{ item.champion }} </span><UAvatar
                 icon="i-riot"
                 :ui="{
                   icon: 'size-3.5 text-nc'

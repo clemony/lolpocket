@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @layer utilities {
+  .filter-grayscale {
+    @apply opacity-80 brightness-120 contrast-110 grayscale;
+  }
   .top-banner-toast-viewport [data-slot="base"][data-expanded="true"] {
     --translate: calc(var(--offset) * 1px - var(--before) * 16px) !important;
   }

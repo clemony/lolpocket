@@ -1,16 +1,19 @@
 <script setup lang="ts">
-const sidebarOpen = shallowRef<boolean>(false)
+const { settings } = safeObject(inject<UiController>("sidebar"))
+
+function toggleSettings() {
+  if (!settings) return
+  settings.toggle()
+}
 </script>
 
 <template>
   <UHeader
-    v-model:open="sidebarOpen"
     mode="slideover"
     title="LP"
-    :toggle="{ ui: { leadingIcon: 'text-pc' } }"
+    :toggle="false"
     :ui="{
-      root: 'z-101 translate-3d transform-gpu',
-      content: 'max-h-screen w-120',
+      root: 'z-50 translate-3d transform-gpu',
       title: 'hidden'
     }">
     <template #left>
@@ -21,8 +24,8 @@ const sidebarOpen = shallowRef<boolean>(false)
       <LazyAppCommand />
     </div>
 
-    <template #content>
-      <LazySidebar />
+    <template #right>
+      <UButton icon="i-menu" @click="toggleSettings" />
     </template>
   </UHeader>
 </template>

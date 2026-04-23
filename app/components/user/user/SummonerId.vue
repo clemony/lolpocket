@@ -58,8 +58,7 @@ const id = computed(() => {
       "
       :name="types[t]?.icon" />
     <template v-else-if="types[t]?.label">
-      {{ types[t]?.label }}&#x202F;</template
-    ><template v-if="summoner?.tag">
+      {{ types[t]?.label }}&#x202F;</template><template v-if="summoner?.tag">
       {{ id }}
     </template>
     <template v-else>{{ types[t]?.placeholder }}</template>

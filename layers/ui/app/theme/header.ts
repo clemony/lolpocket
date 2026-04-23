@@ -2,9 +2,9 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const headerTheme = defineUiTheme({
   slots: {
-    root: "sticky top-0 flex h-(--ui-header-height) shrink-0 items-end justify-start border-b border-groove border-p3/70 bg-p0/60 px-8 backdrop-blur-md backdrop-contrast-110 backdrop-saturate-90",
+    root: "sticky top-0 flex h-(--ui-header-height) w-full shrink-0 items-end justify-start border-b border-groove border-p3/70 bg-p0/60 px-8 backdrop-blur-md backdrop-contrast-110 backdrop-saturate-90",
     container:
-      "mx-0! flex max-w-screen! items-center justify-between gap-3 rounded-xl",
+      "mx-0! flex max-w-full! items-center justify-between gap-3 rounded-xl",
     left: "flex items-center gap-1.5 lg:flex-1",
     center: "hidden lg:flex",
     right: "flex items-center justify-end gap-1.5 lg:flex-1",

@@ -9,7 +9,7 @@ const searchOpen = shallowRef<boolean>(false)
   <UPage
     v-auto-animate
     :ui="{
-      root: 'flex h-max w-screen flex-row pb-20 lg:flex lg:gap-0 lg:pl-18',
+      root: 'flex h-max w-full flex-row pb-20 lg:flex lg:gap-0 lg:pl-18',
       left: 'min-h-max w-106 min-w-90 pt-8',
       center: cn(
         'z-auto mx-auto flex min-h-max w-full max-w-(--ui-container) flex-col justify-self-center',

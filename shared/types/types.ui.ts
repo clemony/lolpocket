@@ -6,6 +6,7 @@ import type {
   TooltipProps
 } from "@nuxt/ui"
 import type { AcceptableValue } from "reka-ui"
+import type { ShallowRef } from "vue"
 
 export type Side = "top" | "right" | "bottom" | "left"
 export type Direction = "left" | "right" | "down" | "up"
@@ -17,6 +18,16 @@ export type LoadingStyle = "none" | "default" | "spinner" | null
 export type TooltipSize = "sm" | "md" | "lg"
 export type DataOrientation = "vertical" | "horizontal"
 export type DataAlign = "top" | "middle" | "bottom"
+
+export type ControlKey = "sidebar" | "command" | "settings"
+
+export interface UiControl {
+  open: ShallowRef<boolean>
+  toggle: () => void
+  value: ShallowRef<string | number>
+}
+
+export type UiController = Partial<Record<ControlKey, UiControl>>
 
 export type ClassKey =
   | "root"

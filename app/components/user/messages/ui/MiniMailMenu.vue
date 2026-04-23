@@ -59,7 +59,9 @@ const buttonProps: ButtonProps & { tabindex?: string } = {
       <!-- MESSAGES -->
       <div
         class="inline-flex h-9 w-full items-center justify-between border-b border-b-p3 px-2 py-0.5 text-sm">
-        <h6 class="text-sm font-bold opacity-60">Unread Messages</h6>
+        <h6 class="text-sm font-bold opacity-60">
+          Unread Messages
+        </h6>
         <UTooltip
           as-child
           text="View all messages 🡪"
@@ -99,7 +101,9 @@ const buttonProps: ButtonProps & { tabindex?: string } = {
       <!-- NOTIFICATIONS -->
       <div
         class="inline-flex h-9 w-full items-center justify-between border-y border-y-p3 px-2 py-0.5 text-sm">
-        <h6 class="text-sm font-bold opacity-60">Notifications</h6>
+        <h6 class="text-sm font-bold opacity-60">
+          Notifications
+        </h6>
         <UTooltip as-child text="Clear all" :content="offsetTooltipContent">
           <UButton v-bind="buttonProps">
             <Icon name="i-reset" class="size-4 **:stroke-[2.2]" />

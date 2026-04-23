@@ -28,7 +28,7 @@ watch(
 </script>
 
 <template>
-  <div class="relative size-full max-w-screen">
+  <div class="relative size-full max-w-full">
     <div class="fixed top-0 left-15 z-12 flex h-15 w-56 items-center">
       <icon class="-mx-1 size-6.5 stroke-2" name="" />
       <PocketMenubar />
@@ -61,7 +61,7 @@ watch(
       ref="el"
       :class="
         cn(
-          'absolute inset-0 top-0 max-w-screen overflow-x-hidden overflow-y-auto pt-[70vh]',
+          'absolute inset-0 top-0 max-w-full overflow-x-hidden overflow-y-auto pt-[70vh]',
           {}
         )
       ">
@@ -73,7 +73,7 @@ watch(
       </div>
 
       <!-- Context wrapper -->
-      <div class="relative z-1 -mt-px min-h-screen w-screen max-w-screen bg-p0">
+      <div class="relative z-1 -mt-px min-h-full w-full max-w-full bg-p0">
         <CoreContent />
 
         <!--    <div class="mt-12 flex w-full flex-col items-center pb-54">

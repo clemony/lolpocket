@@ -85,11 +85,11 @@ function openPost() {
     :image="
       hasImage
         ? {
-            fetchpriority: 'high',
-            crossorigin: 'anonymous',
-            loading: 'eager',
-            src: post.preview_image_url || post.thumbnail_url || undefined
-          }
+          fetchpriority: 'high',
+          crossorigin: 'anonymous',
+          loading: 'eager',
+          src: post.preview_image_url || post.thumbnail_url || undefined
+        }
         : undefined
     "
     @click.stop.prevent="openPost">

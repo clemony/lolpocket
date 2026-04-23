@@ -13,7 +13,7 @@ export const toasterTheme = defineUiTheme({
       },
       "top-center": {
         viewport:
-          "top-banner-toast-viewport inset-x-0! left-0! w-screen! origin-top! translate-x-0! translate-y-11 flex-row! gap-0! overflow-hidden",
+          "top-banner-toast-viewport inset-x-0! left-0! w-full! origin-top! translate-x-0! translate-y-11 flex-row! gap-0! overflow-hidden",
         base: "flex items-center"
       },
       "top-right": {
@@ -24,7 +24,7 @@ export const toasterTheme = defineUiTheme({
       },
       "bottom-center": {
         viewport:
-          "top-banner-toast-viewport inset-x-0! left-0! w-screen! origin-top! translate-y-11 flex-row! gap-0! overflow-hidden"
+          "top-banner-toast-viewport inset-x-0! left-0! w-full! origin-top! translate-y-11 flex-row! gap-0! overflow-hidden"
       },
       "bottom-right": {
         viewport: "right-4"

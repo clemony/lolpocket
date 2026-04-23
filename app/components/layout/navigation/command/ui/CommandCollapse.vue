@@ -27,7 +27,7 @@ const merge = computed(() =>
         'relative ml-4 max-w-full overflow-x-hidden py-1 pr-8 pl-3 before:absolute before:left-0 before:my-auto before:h-[calc(100%-10px)] before:w-px before:border-l before:border-l-p3'
     }">
     <CommandButton
-      :value="group.value ?? group.label"
+      :value="group?.value ?? group.label"
       :item="{
         ...group,
         variant: open ? 'solid' : 'ghost',

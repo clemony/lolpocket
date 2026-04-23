@@ -13,7 +13,7 @@ definePageMeta({
   title: "Match History",
   description: "Browse through your matches with deep search tools.",
   icon: "history",
-  listClass: "**:stroke-[1.6]",
+  listClass: "**:stroke-[1.6] scale-106",
   order: 0,
   search: false,
   prefix: "summoner"

@@ -14,6 +14,9 @@ const panelRoot = useTemplateRef<HTMLElement>("panelRoot")
 const commandInput = useTemplateRef<{ inputRef: HTMLInputElement | null }>(
   "commandInput"
 )
+
+const { command } = safeObject(inject<UiController>("app"))
+
 const reference = computed(() => commandInput.value?.inputRef ?? undefined)
 const searchQuery = computed(() => query.value.trim())
 const hasQuery = computed(() => searchQuery.value.length > 0)
@@ -35,14 +38,6 @@ const content: PopoverProps["content"] = {
   onInteractOutside: (e: Event) => onContentInteractOutside(e, reference.value)
 }
 
-function closeCommand(resetQuery = true) {
-  open.value = false
-
-  if (resetQuery) {
-    query.value = ""
-  }
-}
-
 useCommandFocusNavigation({
   open,
   panel: panelRoot,
@@ -56,10 +51,16 @@ defineShortcuts({
   }
 })
 
+function closeCommand() {
+  if (!command) return
+  command.open.value = false
+}
+
 watch(
   () => route.fullPath,
-  () => {
+  (newVal, oldVal) => {
     closeCommand()
+    if (oldVal !== newVal) query.value = ""
   }
 )
 const { groups } = useCommandGroups()
@@ -68,8 +69,6 @@ const groupMap = computed<Record<string, CommandGroup | undefined>>(() =>
 )
 
 const backpack = computed(() => safeObject(groupMap.value.backpack))
-
-provide("command", { close: () => closeCommand() })
 
 const hotkeysOpen = shallowRef(false)
 </script>

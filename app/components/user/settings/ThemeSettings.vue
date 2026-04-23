@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { themeAccentOptions } from "~/components/user/settings/theme/themeAccent"
 import { colorModes } from "~/components/user/settings/theme/themeBase"
+
+const { orientation } = defineProps<{
+  orientation?: "vertical" | "horizontal"
+}>()
+
 const mode = useColorMode()
 const themePreference = useThemePreference()
 const themeAccent = useThemeAccentPreference()

@@ -69,49 +69,80 @@
   }
 
   .prose {
-    @apply -space-y-1;
-
     p {
       @apply mt-0! w-full -space-y-1 text-lg/7.5 font-medium text-pretty;
     }
 
-    ul {
+    .prose-ul {
       @apply my-0! -space-y-1 py-0! leading-none font-medium marker:text-p5!;
       li {
         @apply my-0! leading-7;
       }
     }
-    table {
+    .prose-table {
       @apply w-fit! max-w-full;
-      th {
+      .prose-th {
         @apply w-fit! px-5! text-md;
       }
-      tr {
+      .prose-tr {
         @apply w-fit! even:bg-p3/80;
-        td {
+        .prose-td {
           @apply w-fit! px-5! text-md font-medium text-nowrap not-first:justify-self-center not-first:text-center;
         }
       }
     }
 
-    blockquote {
+    .prose-blockquote {
       @apply border-l-p4;
     }
 
-    hr {
-      @apply my-1! border-p5! bg-p5! text-p5!;
+    .prose-hr {
+      @apply my-1! border-p3! bg-p3;
     }
 
-    h1 {
+    .prose-h1 {
       @apply text-5xl;
     }
 
-    a {
+    .prose-a {
       @apply text-link! no-underline! saturate-110 hover:underline!;
+      &:visited {
+        @apply text-link! underline! decoration-dotted brightness-84 saturate-80;
+      }
     }
 
-    a:visited {
-      @apply text-link! underline! decoration-dotted brightness-84 saturate-80;
+    prose-headings,
+    prose-lead,
+    prose-h1,
+    prose-h2,
+    prose-h3,
+    prose-h4,
+    prose-p,
+    prose-a,
+    prose-blockquote,
+    prose-figure,
+    prose-figcaption,
+    prose-strong,
+    prose-em,
+    prose-kbd,
+    prose-code,
+    prose-pre,
+    prose-ol,
+    prose-ul,
+    prose-li,
+    prose-dl,
+    prose-dt,
+    prose-dd,
+    prose-table,
+    prose-thead,
+    prose-tr,
+    prose-th,
+    prose-td,
+    prose-img,
+    prose-picture,
+    prose-video,
+    prose-hr {
+      @apply my-0!;
     }
   }
 }

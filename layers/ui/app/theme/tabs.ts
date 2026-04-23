@@ -4,11 +4,11 @@ export const tabsTheme = defineUiTheme({
   slots: {
     indicator:
       "absolute shrink-0 grow transform-gpu transition-transform duration-200 will-change-transform",
-    list: "group relative flex rounded-xl p-1 ring-0 inset-shadow-black/3 group-active:ring-0",
+    list: "group relative flex rounded-xl p-1 inset-ring-0 inset-shadow-black/3 group-active:inset-ring-0",
     trigger:
       "group text-2 relative inline-flex min-w-0 shrink-0 grow cursor-pointer items-center rounded-lg font-medium disabled:cursor-not-allowed disabled:opacity-30",
 
-    root: "flex items-center gap-0 ring-0",
+    root: "flex items-center gap-0 inset-ring-0",
     leadingIcon: "shrink-0",
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
@@ -30,7 +30,7 @@ export const tabsTheme = defineUiTheme({
       link: {
         list: "border-b-0 border-b-transparent",
         indicator:
-          "grid -translate-y-1 ds-2xs after:absolute after:h-0.5 after:w-[75%] after:justify-self-center after:border-b after:border-pc/60 after:bg-p3",
+          "grid -translate-y-1 after:absolute after:h-0.5 after:w-[75%] after:justify-self-center after:border-b",
         trigger: "focus:outline-none on:text-pc"
       },
       outline: {}
@@ -86,8 +86,19 @@ export const tabsTheme = defineUiTheme({
       color: "base",
       variant: "pill",
       class: {
-        indicator: "bg-p0 ring-p3",
-        list: "noise bg-p1 ring inset-shadow-xs ring-p3/80 inset-shadow-black/4",
+        indicator: "bg-p0 inset-ring-p3",
+        list: "noise bg-p1 inset-shadow-xs inset-ring inset-shadow-black/4 inset-ring-p3/80",
+        trigger:
+          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc"
+      }
+    },
+
+    {
+      color: "base",
+      variant: "link",
+      class: {
+        indicator: "after:border-pc/60 after:bg-pc",
+        list: "",
         trigger:
           "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc"
       }
@@ -96,8 +107,8 @@ export const tabsTheme = defineUiTheme({
       color: "transparent",
       variant: "pill",
       class: {
-        indicator: "bg-transparent shadow-none ring-0",
-        list: "bg-transparent shadow-none ring-0",
+        indicator: "bg-transparent shadow-none inset-ring-0",
+        list: "bg-transparent shadow-none inset-ring-0",
         trigger:
           "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc"
       }
@@ -107,8 +118,8 @@ export const tabsTheme = defineUiTheme({
       variant: "pill",
       class: {
         indicator:
-          "noise bg-neutral/90 shadow-xs ring inset-shadow-xs ring-n4 inset-shadow-p1/10",
-        list: "noise bg-p2/70 ring ring-p3/60",
+          "noise bg-neutral/90 shadow-xs inset-shadow-xs inset-ring inset-shadow-p1/10 inset-ring-n4",
+        list: "noise bg-p2/70 inset-ring inset-ring-p3/60",
         trigger:
           "text-pc hover:text-pc! focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-p1 active:hover:**:text-nc data-[state=active]:text-nc data-[state=active]:**:text-nc"
       }
@@ -148,14 +159,13 @@ export const tabsTheme = defineUiTheme({
           root: hClass
         }
       },
-      {
+      /* {
         size: k,
         orientation: "vertical",
         class: {
           root: wClass
         }
-      },
-      {
+      },*/ {
         size: k,
         class: {
           trigger: recClass

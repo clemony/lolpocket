@@ -46,9 +46,7 @@ export const userProfileItems = computed(() => {
     }
   ]
 })
-export const userMenuItems = (
-  command?: Record<string, () => void>
-): ButtonProps[][] => {
+export const userMenuItems = (): ButtonProps[][] => {
   const sbu = useSupabaseUser()
   const online = computed(() => sbu.value?.session_id)
   const overlay = useOverlay()

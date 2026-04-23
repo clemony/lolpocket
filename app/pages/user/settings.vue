@@ -72,7 +72,7 @@ console.log("🥸 - settingsRoutes:", settingsRoutes)
             },
             input: { root: 'w-full' }
           }">
-          <NuxtPage />
+          <FormWrapper><NuxtPage /></FormWrapper>
         </UTheme>
       </UPageBody>
     </UPage>

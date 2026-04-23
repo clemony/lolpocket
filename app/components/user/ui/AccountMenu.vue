@@ -52,8 +52,7 @@ const subProps: { button: ButtonPropsExt; popover: PopoverProps } = {
 
 const { account } = safeObject(storeToRefs(user()))
 const open = shallowRef<boolean>(false)
-const command = inject<Record<string, () => void>>("command")
-const menu = computed(() => userMenuItems(command))
+const menu = computed(() => userMenuItems())
 </script>
 
 <template>

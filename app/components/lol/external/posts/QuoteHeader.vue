@@ -9,7 +9,7 @@ const fontClass =
 
 <template>
   <div
-    class="absolute bottom-4 flex translate-y-0 flex-col justify-end gap-1 overflow-hidden px-4 transition-all ease-spring-soft not-group-hover/post:duration-300 group-hover/post:-translate-y-full group-hover/post:opacity-0 group-hover/post:duration-15">
+    class="absolute bottom-4 left-4 flex w-5/6 translate-y-0 flex-col items-start justify-end gap-1 overflow-hidden transition-all ease-spring-soft not-group-hover/post:duration-300 group-hover/post:-translate-y-full group-hover/post:opacity-0 group-hover/post:duration-15">
     <Grow />
     <Icon name="i-mingcute-quote-left-fill" class="size-7 text-nc" />
     <h2 :class="cn('line-clamp-3 grow justify-self-end', fontClass)">
@@ -24,7 +24,7 @@ const fontClass =
       {{ title }}
       <Icon
         name="i-mingcute-quote-right-fill"
-        class="inline size-7 self-end text-end align-icon text-nc" />
+        class="inline size-7 justify-end self-end text-end align-icon text-nc" />
     </h2>
   </div>
 </template>

@@ -1,98 +1,86 @@
 <script lang="ts" setup>
-import type { SidebarProps } from "@nuxt/ui"
+import {
+  LazyAccountSettings,
+  LazyAppSettings,
+  LazyCommunicationSettings,
+  LazyFeedSettings,
+  LazyProfileSettings,
+  LazyThemeSettings
+} from "#components"
+import type { SidebarProps, TabsItem } from "@nuxt/ui"
 import { userMenuItems } from "../../user/ui/userMenuItems"
+import type { CommandItem } from "./command/build/useCommandGroups"
+import { useCommandGroups } from "./command/build/useCommandGroups"
 const {
   variant = "sidebar",
   collapsible = "offcanvas",
-  side = "left"
+  side = "right"
 } = defineProps<SidebarProps>()
 
-const emit = defineEmits(["openSearch", "closeSidebar"])
+const emit = defineEmits(["search", "open"])
 
-const open = defineModel<boolean>("open", { default: false })
 const { account } = storeToRefs(user())
-const items = [
-  {
-    icon: "i-external",
-    label: "Resources",
-    ui: {
-      content: "w-54",
-      leadingIcon: "scale-100"
-    }
-  },
-  {
-    label: "Support",
-    icon: "i-lucide-circle-question-mark",
-    children: helpNav.filter((i) => i !== undefined),
-    ui: {
-      content: "w-54"
-    }
-  }
-]
 
-const command = inject<Record<string, () => void>>("command")
+const { groups } = useCommandGroups()
+console.log("🥸 - groups:", groups)
+const items = computed(
+  () =>
+    (groups.value
+      .find((i) => i.id === "help")
+      ?.items?.find((i) => i.id === "/settings")
+      ?.children?.map((i: CommandItem) => ({
+        label: i.label,
+        value: i.label,
+        icon: i.icon
+      })) as TabsItem[]) ?? []
+)
+console.log("🥸 - items:", items)
+
+const tab = defineModel<string>("tab", { default: "App" })
+const tabs = {
+  App: LazyAppSettings
+}
 </script>
 
 <template>
-  <div class="absolute inset-0 flex flex-col gap-6">
-    <div
-      class="sticky top-0 w-full space-y-4 bg-p0/90 px-3 pt-4 pb-2 backdrop-blur-sm">
-      <!-- header -->
-      <div class="flex items-center justify-between gap-4">
-        <ULink class="grow cursor-pointer" to="/">
-          <h3>lolpocket</h3>
-        </ULink>
+  <USidebar
+    :variant="variant"
+    :collapsible="collapsible"
+    :side="side"
+    :ui="{
+      root: 'p-0! [--sidebar-width:28rem]',
+      body: 'flex-1 flex-row! p-0'
+    }">
+    <UCard
+      variant="ghost"
+      :ui="{
+        root: 'h-screen max-h-screen grow overflow-hidden',
+        body: 'flex grow flex-col'
+      }">
+      <template #header>
+        <!-- header -->
+        <div class="flex items-center justify-between gap-4">
+          <ULink class="grow cursor-pointer" to="/">
+            <h3>lolpocket</h3>
+          </ULink>
+        </div>
+      </template>
 
-        <UButton
-          icon="x"
-          size="sm"
-          :ui="{
-            base: '',
-            leadingIcon: '**:stroke-[2.4]'
-          }"
-          variant="ghost" />
-      </div>
+      <!-- nexus -->
+      <!--       <ul class="w-full space-y-2 px-2">
+        <li v-for="item in nexusNav.concat(userNav)" :key="item.label">
+          <UButton
+            variant="link"
+            size="xl"
+            :to="item.to"
+            :ui="{ base: 'w-full px-2.5 hover:underline' }">
+            <h1>{{ item.label }}</h1>
+          </UButton>
+        </li>
+      </ul> -->
 
-      <!-- search -->
-      <UButton
-        variant="subtle"
-        label="Search"
-        icon="i-search"
-        :ui="{
-          base: 'w-full cursor-text border border-p4/60 inset-shadow-sm hover:bg-p0! hover:noise-0',
-          label: 'grow text-pc/40',
-          leadingIcon: 'text-pc/50 drop-shadow-2xs **:stroke-[2.2]'
-        }"
-        @click="emit('openSearch', true)">
-        <template #trailing>
-          <div class="mr-1 flex items-center gap-1">
-            <UKbd
-              v-for="k in ['meta', 'K']"
-              :key="k"
-              square
-              size="md"
-              :value="k" />
-          </div>
-        </template>
-      </UButton>
-    </div>
-
-    <!-- nexus -->
-    <ul class="w-full space-y-2 px-2">
-      <li v-for="item in nexusNav.concat(userNav)" :key="item.label">
-        <UButton
-          variant="link"
-          size="xl"
-          :to="item.to"
-          :ui="{ base: 'w-full px-2.5 hover:underline' }">
-          <h1>{{ item.label }}</h1>
-        </UButton>
-      </li>
-    </ul>
-
-    <!-- pockets -->
-    <ul class="flex flex-col gap-1 px-2">
-      <NewPocketButton
+      <!-- pockets -->
+      <!--     <NewPocketButton
         :kbd="{
           ui: { wrapper: 'mr-1' },
           size: 'md',
@@ -100,141 +88,55 @@ const command = inject<Record<string, () => void>>("command")
         }"
         :ui="{ base: 'pl-4.5', label: 'text-md font-semibold' }"
         as="li"
-        size="lg" />
+        size="lg" /> -->
 
-      <!-- backpack -->
-      <UCollapsible as="div" class="w-full" :default-open="true">
-        <template #default="{}">
-          <UButton
-            size="md"
-            trailing-icon="down"
-            variant="link"
-            label="Backpack"
-            :ui="{
-              base: 'w-full px-3 hover:underline',
-              label: 'font-semibold opacity-50 group-hover/btn:opacity-100',
-              trailingIcon: cn(
-                'size-4.5 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100',
-                open ? 'rotate-180' : ''
-              )
-            }" />
-        </template>
-
-        <template #content>
-          <ul class="pr-6 pl-2">
-            <BackpackNav
-              as="li"
-              size="lg"
-              :ui="{
-                label: 'text-md font-semibold',
-                trailingIcon: 'size-4'
-              }" />
-          </ul>
-        </template>
-      </UCollapsible>
-
-      <!-- tools -->
-      <UCollapsible as="div" class="w-full" :default-open="true">
-        <template #default="{ open }">
-          <UButton
-            size="md"
-            trailing-icon="down"
-            variant="link"
-            label="Tools"
-            :ui="{
-              base: 'w-full px-3 hover:underline',
-              label: 'font-semibold opacity-50 group-hover/btn:opacity-100',
-              trailingIcon: cn(
-                'size-4.5 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100',
-                open ? 'rotate-180' : ''
-              )
-            }" />
-        </template>
-
-        <template #content>
-          <ul class="pr-6 pl-2">
-            <ToolsNav
-              as="li"
-              :ui="{
-                base: 'px-3.5',
-                leadingIcon: 'size-5',
-                label: '*:first:text-md *:first:leading-7 *:last:text-sm'
-              }" />
-          </ul>
-        </template>
-      </UCollapsible>
-    </ul>
-
-    <!-- Library -->
-    <UCollapsible as="div" class="w-full px-2" :default-open="true">
-      <template #default="{ open }">
-        <UButton
-          size="md"
-          trailing-icon="down"
-          variant="link"
-          label="Library"
-          :ui="{
-            base: 'w-full px-3 hover:underline',
-            label: 'font-semibold opacity-50 group-hover/btn:opacity-100',
-            trailingIcon: cn(
-              'size-4.5 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100',
-              open ? 'rotate-180' : ''
-            )
+      <template #footer>
+        <AccountMenu
+          avatar-size="xl"
+          :user="{
+            size: 'xl'
           }" />
       </template>
-
-      <template #content>
-        <ul class="pr-6 pl-2">
-          <LibraryNav
-            as="li"
-            size="lg"
-            :ui="{ label: 'text-md font-semibold' }" />
-        </ul>
-      </template>
-    </UCollapsible>
-
-    <USidebar
-      v-model:open="open"
-      :variant="variant"
-      :collapsible="collapsible"
-      :side="side"
-      :ui="{
-        container: 'h-full'
-      }">
-      <template #header>
-        <UIcon name="i-logos-nuxt-icon" class="size-8" />
-      </template>
-
-      <UNavigationMenu
-        :items="items"
+    </UCard>
+    <div
+      class="flex h-full w-15.5 flex-col items-center justify-start border-l border-l-p3/80 py-3 pr-0.5">
+      <UButton
+        icon="x"
+        size="sm"
+        :ui="{
+          base: '',
+          leadingIcon: '**:stroke-[2.4]'
+        }"
+        variant="ghost"
+        @click="emit('open', false)" />
+      <UTabs
+        v-model:model-value="tab"
+        :items
+        variant="pill"
         orientation="vertical"
-        :ui="{ link: 'overflow-hidden p-1.5' }" />
-      <template #footer>
-        <UDropdownMenu
-          :items="resourceNav"
-          :content="{
-            side: 'left',
-            align: 'start',
-            sideOffset: 0,
-            alignOffset: -2
-          }"
-          :ui="{ content: 'w-64 pt-1' }">
-          <template #default="{ open: openDropdown }">
-            <UButton
-              variant="ghost"
-              size="xl"
-              trailing-icon="right"
-              :ui="{
-                trailingIcon: cn(
-                  'transition-rotate duration-200',
-                  openDropdown ? 'rotate-180' : ''
-                )
-              }"
-              leading-icon="i-external"
-              label="Resources" />
-          </template>
-        </UDropdownMenu>
-      </template>
-    </USidebar>
-  </div>
+        size="md"
+        color="neutral"
+        :ui="{
+          root: '',
+          label: 'hidden',
+          list: 'gap-2 rounded-4xl bg-transparent py-1.5 ring-0 inset-shadow-none',
+          trigger: 'size-10',
+          indicator: 'rounded-xl'
+        }">
+        <template #leading="{ item }">
+          <UTooltip :text="item.label" as="div" :content="{ side: 'left' }">
+            <div class="absolute inset-0 grid size-full place-items-center">
+              <Icon
+                :name="item.icon"
+                :class="
+                  cn('size-5 text-pc/70 group-active:text-nc', {
+                    'scale-116': item.label === 'Profile'
+                  })
+                " />
+            </div>
+          </UTooltip>
+        </template>
+      </UTabs>
+    </div>
+  </USidebar>
 </template>

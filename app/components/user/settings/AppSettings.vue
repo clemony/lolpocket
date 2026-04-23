@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+const { orientation } = defineProps<{
+  orientation?: "vertical" | "horizontal"
+}>()
+
 const settingsData = [
   {
     title: "Reduce Motion",
@@ -24,63 +28,25 @@ const username = computed({
     if (account) account.username = value
   }
 })
-
-const isSaving = ref(false)
-
-async function saveAccount() {
-  isSaving.value = true
-
-  try {
-    await accountUpdate(
-      {
-        username: username.value.trim() || undefined
-      },
-      { silent: true }
-    )
-
-    useToast().add({
-      color: "neutral",
-      title: "Account updated",
-      description: "Your username has been saved.",
-      icon: "tick"
-    })
-  } catch (error) {
-    console.error("Failed to save username", error)
-    sendErrorToast()
-  } finally {
-    isSaving.value = false
-  }
-}
 </script>
 
 <template>
-  <form
-    v-if="user().account"
-    class="w-full space-y-12"
-    @submit.prevent="saveAccount">
-    <!-- username -->
-    <UFormField title="" description=""></UFormField>
-    <fieldset id="username" class="space-y-6">
-      <div class="leading-4">
-        <Label class="text-xlfont-semibold mb-2" as="legend">Username</Label>
+  <!-- username -->
+  <UFormField title="" description=""></UFormField>
+  <fieldset id="username" class="space-y-6">
+    <div class="leading-4">
+      <Label class="text-xlfont-semibold mb-2" as="legend">Username</Label>
 
-        <p class="label text-wrap">
-          This is the name that will be used throughout the site. Defers to in
-          game name if a Riot account is connected.
-        </p>
-      </div>
-      <UInput
-        v-model="username"
-        class="validator"
-        type="text"
-        placeholder="Username"
-        @clear-input="username = ''" />
-    </fieldset>
-
-    <div class="flex justify-start">
-      <UButton color="neutral" type="submit" :loading="isSaving">
-        Update account
-      </UButton>
+      <p class="label text-wrap">
+        This is the name that will be used throughout the site. Defers to in
+        game name if a Riot account is connected.
+      </p>
     </div>
-  </form>
+    <UInput
+      v-model="username"
+      class="validator"
+      type="text"
+      placeholder="Username"
+      @clear-input="username = ''" />
+  </fieldset>
 </template>

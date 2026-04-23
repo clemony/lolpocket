@@ -14,7 +14,7 @@ const route = useRoute()
 const scrollRef = useState<HTMLElement>("scrollRef")
 const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -100 })
 const isSummonerRoute = computed(() =>
-  Boolean(route.params.region && route.params.slug),
+  Boolean(route.params.region && route.params.slug)
 )
 
 const bg = computed(() =>
@@ -24,7 +24,7 @@ const bg = computed(() =>
       ? pocket.icon
       : champion
         ? getSplash(champion.key, "uncentered")
-        : getRandomBg(),
+        : getRandomBg()
 )
 </script>
 
@@ -37,7 +37,7 @@ const bg = computed(() =>
     </Navbar>
     <!-- bg -->
     <div
-      class="pointer-events-none relative z-0 -mt-15 grid h-95 w-screen overflow-hidden border-b border-p4/60">
+      class="pointer-events-none relative z-0 -mt-15 grid h-95 w-full overflow-hidden border-b border-p4/60">
       <BgSplash :src="bg" />
       <UContainer class="z-0 grid items-center px-25! py-16">
         <LazySummonerHeader v-if="isSummonerRoute" />
@@ -47,7 +47,7 @@ const bg = computed(() =>
     </div>
     <!-- Sticky Tabs  -->
     <div
-      class="pointer-events-none sticky top-0 z-11 -mt-15 flex h-15 w-screen items-end justify-start gap-4 overflow-hidden pl-20">
+      class="pointer-events-none sticky top-0 z-11 -mt-15 flex h-15 w-full items-end justify-start gap-4 overflow-hidden pl-20">
       <UContainer>
         <ClientOnly>
           <LazySummonerChampionNavTabs v-if="isSummonerRoute" />

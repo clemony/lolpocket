@@ -9,9 +9,8 @@ const { backpack } = defineProps<{
   backpack: CommandGroup
 }>()
 
+const emit = defineEmits(["close"])
 const { account, settings } = safeObject(storeToRefs(user()))
-const command = inject<Record<string, () => void>>("command")
-
 const menu = computed<CommandItem[]>(
   () =>
     [
@@ -42,7 +41,7 @@ const menu = computed<CommandItem[]>(
             color: "neutral",
             onSelect(event: Event) {
               newPocket()
-              if (command && command.close) command.close()
+              emit("close")
             }
           }
         ]
@@ -113,19 +112,19 @@ const buttonProps: ButtonProps = {
             v-else-if="account?.uuid && !account?.puuid"
             v-bind="buttonProps"
             label="Connect Riot Account"
-            @click="closeFn(command, openLogin)" />
+            @click="closeFn(emit('close'), openLogin)" />
 
           <!-- log in-->
           <div v-else class="flex items-center justify-center">
             <UButton
               v-bind="buttonProps"
               label="Log in"
-              @click="closeFn(command, openLogin)" />
+              @click="closeFn(emit('close'), openLogin)" />
             <Icon name="i-slash" class="size-4" />
             <UButton
               v-bind="buttonProps"
               label="Sign up"
-              @click="closeFn(command, openSignUp)" />
+              @click="closeFn(emit('close'), openSignUp)" />
           </div>
         </div>
       </div>

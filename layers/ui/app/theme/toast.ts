@@ -31,7 +31,7 @@ export const toastTheme = defineUiTheme({
     },
     orientation: {
       horizontal: {
-        root: "data-[state=open]:animate-in data-[state=open]:slide-in-from-top! data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top! inset-x-0 m-0! -mt-[0px]! -mb-[16px] h-(--ui-header-height)! max-h-(--ui-header-height)! min-h-(--ui-header-height)! w-screen origin-top! flex-row! items-center! justify-center gap-3! rounded-none p-0! ring-1",
+        root: "data-[state=open]:animate-in data-[state=open]:slide-in-from-top! data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top! inset-x-0 m-0! -mt-[0px]! -mb-[16px] h-(--ui-header-height)! max-h-(--ui-header-height)! min-h-(--ui-header-height)! w-full origin-top! flex-row! items-center! justify-center gap-3! rounded-none p-0! ring-1",
         wrapper:
           "inline-flex! max-w-(--ui-container) flex-row! items-center! gap-4 pb-1 align-baseline",
         title:

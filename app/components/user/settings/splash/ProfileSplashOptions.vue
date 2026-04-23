@@ -3,9 +3,27 @@ import { LazySplashSelectPanel } from "#components"
 import { useChampions } from "~/domain/summoner/champions/useChampions"
 import { skinNameFromUrl } from "~/domain/utils/img"
 
+const { orientation } = defineProps<{
+  orientation?: "vertical" | "horizontal"
+}>()
+
+const currentSplash = computed(
+  () => user().account?.splash?.replace("uncentered", "tile") ?? ""
+)
+
+const active = ""
+
+const inactive = ""
+
 const card = {
-  base: "flex pointer-events-auto !px-4 items-center group/photo-button rounded-xl hover:bg-p3/60! cursor-pointer group/photo active:ring! active:ring-pc/60 !gap-8 photo max-w-120 shrink-0 justify-start **:text-start h-max! py-4",
-  wrapper: "flex h-36  max-w-full overflow-hidden w-full flex-col pt-3",
+  base: cn(
+    "group/photo-button group/photo pointer-events-auto flex h-max! shrink-0 basis-1/2 cursor-pointer items-center justify-start rounded-xl px-4! py-4 inset-shadow-sm! **:text-start hover:bg-p3/60! active:ring-1! active:ring-pc/50! active:ring-offset-1! active:ring-offset-p4 active:drop-shadow-sm",
+    orientation === "horizontal" ? "max-w-120 gap-8!" : "max-w-full grow gap-4"
+  ),
+  wrapper: cn(
+    "flex w-full max-w-full flex-col overflow-hidden pt-3",
+    orientation === "horizontal" ? "h-36" : "h-28"
+  ),
   title: "text-lg font-bold",
   description: "grow",
   header: "flex items-center justify-between w-full max-w-full",
@@ -16,12 +34,11 @@ const card = {
     icon: "size-4.5 **:stroke-[2.3] text-pc",
     base: "border-p4  inset-shadow-xs"
   },
-  avatar: "size-36 rounded-lg"
+  avatar: cn(
+    "group-not-active/btn:filter-grayscale rounded-lg",
+    orientation === "horizontal" ? "size-36" : "size-28"
+  )
 }
-
-const currentSplash = computed(
-  () => user().account?.splash?.replace("uncentered", "tile") ?? ""
-)
 
 const chosenLabel = computed(
   () => skinNameFromUrl(user().account?.splash ?? "") ?? ""
@@ -55,9 +72,10 @@ async function openSplashSelect() {
 </script>
 
 <template>
-  <div class="grid w-max grid-cols-2 gap-x-8 pt-3 *:shrink-0">
+  <div class="flex max-w-full flex-1 flex-wrap gap-x-8 gap-y-6 pt-3 *:shrink-0">
     <UButton
       :active="!currentSplash"
+      :variant="!currentSplash ? 'solid' : 'outline'"
       :avatar="{
         src: top()
           ?.splash?.replace('uncentered', 'tile')
@@ -65,12 +83,9 @@ async function openSplashSelect() {
         class: card.avatar,
         alt: `${user().account?.name ?? null}'s Most Played`
       }"
-      :class="
-        cn(card.base, {
-          'ring-1! inset-shadow-sm! ring-pc/50! ring-offset-1! ring-offset-p4 drop-shadow-sm':
-            !currentSplash
-        })
-      "
+      :ui="{
+        base: card.base
+      }"
       @click="handleSplash(null)">
       <div :class="card.wrapper">
         <div :class="card.header">
@@ -83,8 +98,7 @@ async function openSplashSelect() {
           <UBadge
             :class="card.name"
             :label="top()?.name ?? ''"
-            :color="currentSplash !== null ? 'base' : 'neutral'"
-            :variant="currentSplash !== null ? 'outline' : 'solid'" />
+            :color="currentSplash !== null ? 'primary' : 'neutral'" />
           <UBadge
             v-if="!currentSplash"
             color="base"
@@ -107,7 +121,7 @@ async function openSplashSelect() {
       }"
       :class="
         cn(card.base, {
-          'ring-1! inset-shadow-sm! ring-pc/50! ring-offset-1! ring-offset-p4 drop-shadow-sm *:pointer-events-none':
+          'basis-1/2 ring-1! inset-shadow-sm! ring-pc/50! ring-offset-1! ring-offset-p4 drop-shadow-sm *:pointer-events-none':
             currentSplash !== null
         })
       "

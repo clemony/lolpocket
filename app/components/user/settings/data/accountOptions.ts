@@ -1,5 +1,3 @@
-import { description } from "valibot"
-
 export const accountOptions = {
   username: {
     label: "Username",
@@ -26,11 +24,5 @@ export const accountOptions = {
     icon: "i-mingcute-empty-box-line",
     description:
       "Any users you block will show up here. They'll be unallowed to contact you through lolpocket."
-  },
-  clearLocal: {
-    label: "Clear Local Match Data",
-    description:
-      "Remove stored data from your browser's cache. If you're having issues updating matches, you can try this or contact me.",
-    text: "Match data is cached in your browser's internal database to limit strain on Riot's API servers. This data is not permanent. Most modern browsers automatically clear data as it becomes stale or unused over time."
   }
 }

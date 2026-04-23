@@ -88,9 +88,7 @@ function handleSeek() {
         <div
           class="flex shrink-0 flex-nowrap items-center text-xs font-semibold text-nc!">
           {{ currentTimeLabel
-          }}<span class="opacity-50"
-            >&nbsp;&nbsp;/&nbsp;&nbsp;{{ durationLabel }}</span
-          >
+          }}<span class="opacity-50">&nbsp;&nbsp;/&nbsp;&nbsp;{{ durationLabel }}</span>
         </div>
       </div>
       <UPopover

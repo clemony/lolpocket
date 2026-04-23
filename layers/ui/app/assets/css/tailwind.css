@@ -32,7 +32,7 @@
   html,
   body,
   #app {
-    scrollbar-color: var(--color-p1) transparent;
+    scrollbar-color: var(--color-neutral-200) transparent !important;
     @apply text-md text-pc selection:bg-neutral/80 selection:text-nc;
   }
 

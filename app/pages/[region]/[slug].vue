@@ -8,8 +8,8 @@ definePageMeta({
   name: "summoner-profile",
   command: defineAsyncComponent(
     () =>
-      import("~/components/layout/navigation/command/route/SummonerCommand.vue"),
-  ),
+      import("~/components/layout/navigation/command/route/SummonerCommand.vue")
+  )
 })
 
 const route = useRoute()
@@ -19,7 +19,6 @@ const session = sSession()
 const lastResolvedKey = ref<string>("")
 
 function extractIdentifierFromPath(path: string): Identifier | null {
-  // eslint-disable-next-line e18e/prefer-static-regex
   const matched = path.match(/^\/([^/]+)\/([^/]+)(?:\/|$)/)
   if (!matched) return null
 
@@ -37,7 +36,7 @@ function extractIdentifierFromPath(path: string): Identifier | null {
   return {
     region: region.toLowerCase(),
     name: name.toLowerCase(),
-    tag: tag.toLowerCase(),
+    tag: tag.toLowerCase()
   }
 }
 
@@ -71,7 +70,7 @@ watch(
   async () => {
     await resolveFromRoute()
   },
-  { immediate: true },
+  { immediate: true }
 )
 
 onBeforeMount(async () => {
@@ -80,7 +79,7 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <div class="w-screen">
+  <div class="w-full">
     <NuxtLayout name="tab">
       <!--       <template #center-leading>
         <UpdateSummoner

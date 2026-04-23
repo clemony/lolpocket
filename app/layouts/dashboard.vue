@@ -4,7 +4,7 @@
   <UDashboardGroup
     id="library-dashboard"
     v-auto-animate
-    class="z-auto flex w-screen flex-col overflow-y-auto"
+    class="z-auto flex w-full flex-col overflow-y-auto"
     unit="px">
     <Navbar />
     <div class="flex flex-1">
@@ -20,7 +20,7 @@
     </div>
 
     <!-- FOOTER -->
-    <UDashboardPanel class="h-120 max-h-120 min-h-120 w-screen overflow-hidden">
+    <UDashboardPanel class="h-120 max-h-120 min-h-120 w-full overflow-hidden">
       <SiteFooter />
     </UDashboardPanel>
   </UDashboardGroup>

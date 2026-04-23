@@ -5,7 +5,7 @@ const video = heroDisplays[0] ?? { url: "", class: "" }
 </script>
 
 <template>
-  <UPageSection class="relative h-screen w-screen overflow-hidden">
+  <UPageSection class="relative h-screen w-full overflow-hidden">
     <ClientOnly>
       <div class="relative h-screen">
         <Video

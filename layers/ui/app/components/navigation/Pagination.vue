@@ -78,11 +78,11 @@ const forwarded = useForwardPropsEmits(delegated, emits)
           !props.item || (props.siblingCount === 0 && it.value !== model)
             ? hidden
             : {
-                base: cn(
-                  'data-[selected=true]:inset-shadow-sm data-[selected=true]:inset-shadow-black/5!',
-                  ui?.base
-                )
-              }
+              base: cn(
+                'data-[selected=true]:inset-shadow-sm data-[selected=true]:inset-shadow-black/5!',
+                ui?.base
+              )
+            }
         "
         :label="it.value.toString()" />
     </template>
