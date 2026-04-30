@@ -3,7 +3,7 @@ import type { BaseItem } from "#shared/types"
 import type { ButtonProps } from "@nuxt/ui"
 import { asCommandItem } from "../build/helpers"
 import type { CommandItem } from "../build/useCommandGroups"
-const { item, ui } = defineProps<
+const props = defineProps<
   CommandItem & {
     item?: CommandItem
     ui?: CommandItem["ui"]
@@ -15,9 +15,10 @@ const emit = defineEmits<{
 }>()
 
 const safeItem = computed(() => {
-  const a = safeObject(item)
+  const a = safeObject(props?.item || props)
   return asCommandItem(a)
 })
+console.log("🥸 - safeItem:", safeItem.value.to)
 </script>
 
 <template>
@@ -32,7 +33,6 @@ const safeItem = computed(() => {
     :target="safeItem.target"
     :avatar="safeItem.avatar"
     :label="!safeItem.prefix && !safeItem.suffix ? safeItem.label : undefined"
-    :to="safeItem.to ?? undefined"
     :trailing-icon="safeItem.trailingIcon"
     :ui="{
       ...safeItem.ui,
@@ -52,8 +52,9 @@ const safeItem = computed(() => {
       )
     }"
     no-prefetch
-    @click="emit('update:open', safeItem)">
+    @click="safeItem.to ? navigateTo(safeItem.to) : null">
     <!-- <slot>
+    @click="emit('update:open', safeItem)"
       <div
         v-if="safeItem.prefix || safeItem.suffix"
         :class="cn('min-w-0 grow', safeItem.ui?.label)">
@@ -87,5 +88,8 @@ const safeItem = computed(() => {
         </p>
       </div>
     </slot> -->
+    <template #trailing>
+      <slot name="trailing" />
+    </template>
   </UButton>
 </template>

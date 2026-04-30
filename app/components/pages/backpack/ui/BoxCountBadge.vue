@@ -6,11 +6,11 @@ console.log("🌱 - name:", name)
 
 const box = computed(() =>
   name === "pockets"
-    ? usePockets().pockets.length
+    ? pocketStore().pockets.length
     : name === "archive"
-      ? usePockets().archive.length
+      ? pocketStore().archive.length
       : name === "archive"
-        ? usePockets().trash.length
+        ? pocketStore().trash.length
         : null
 )
 console.log("🌱 - box:", box)

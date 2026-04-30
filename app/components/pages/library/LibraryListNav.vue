@@ -1,14 +1,13 @@
 <script lang="ts" setup>
+const { library } = useRoutes()
 const nav = computed(() =>
-  libraryNav.value.filter((l) => l.label !== useRoute().meta?.title)
+  library?.filter((l) => l.label !== useRoute().meta?.title)
 )
 </script>
 
 <template>
   <div class="w-full items-center justify-between gap-2 pr-2">
-    <div class="mb-2 text-sm font-medium opacity-60">
-      Collections
-    </div>
+    <div class="mb-2 text-sm font-medium opacity-60">Collections</div>
     <div class="w-full pl-1">
       <UButton
         v-for="(link, i) in nav"

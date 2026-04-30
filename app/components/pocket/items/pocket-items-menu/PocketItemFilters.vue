@@ -3,7 +3,7 @@ import { newItemSet } from "~/domain/pocket/addPocketModules"
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 </script>
 

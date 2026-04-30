@@ -48,7 +48,7 @@ console.log("🥸 - bind:", post.source)
         root: 'group/root pointer-events-auto size-max w-full opacity-70 drop-shadow-sm transition-opacity duration-200 ease-in-out hover:opacity-100',
         body: 'w-full',
         title:
-          'pointer-events-none line-clamp-2 text-2xl text-wrap text-nc group-hover/root:underline',
+          'pointer-events-none line-clamp-2 text-3xl text-wrap text-nc group-hover/root:underline',
         authors: 'inline-flex items-center text-nc',
         badge: 'text-nc'
       }">

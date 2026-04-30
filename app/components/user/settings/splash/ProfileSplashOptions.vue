@@ -45,7 +45,9 @@ const chosenLabel = computed(
 )
 
 const { getMatchesForSummoner } = useIndexedDB()
-const accountPuuid = computed(() => user().account?.puuid ?? "")
+const accountPuuid = computed(
+  () => user().summoner?.puuid ?? user().account?.puuid ?? ""
+)
 const matchData = accountPuuid.value
   ? await getMatchesForSummoner(accountPuuid.value)
   : []
@@ -81,7 +83,7 @@ async function openSplashSelect() {
           ?.splash?.replace('uncentered', 'tile')
           .replace('centered', 'tile'),
         class: card.avatar,
-        alt: `${user().account?.name ?? null}'s Most Played`
+        alt: `${user().summoner?.name ?? user().account?.username ?? null}'s Most Played`
       }"
       :ui="{
         base: card.base

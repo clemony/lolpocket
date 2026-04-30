@@ -6,14 +6,15 @@ import { pathRecord } from "#shared/constants/runes/pathRecord"
 import {
   newItemSet,
   newRuneSet,
-  newSpellSet,
+  newSpellSet
 } from "~/domain/pocket/addPocketModules"
+import { finalizePocket } from "~/domain/pocket/finalizePocket"
 import { generateName } from "~/domain/pocket/generateStrings"
 import { getSplash } from "~/domain/utils/img"
 import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 //
-export function newRandomPocket(): Pocket {
+export function newRandomPocket(options?: { location: LocationKey }) {
   const itemSet = computed(() => {
     const a = newItemSet()
     const i = itemIndex.map((i) => i.id)
@@ -23,7 +24,7 @@ export function newRandomPocket(): Pocket {
       getRandom(i),
       getRandom(i),
       getRandom(i),
-      getRandom(i),
+      getRandom(i)
     ]
     return a
   }).value
@@ -46,7 +47,7 @@ export function newRandomPocket(): Pocket {
     a.primary.runes = [
       getRandom(path1.slots?.[1]?.runes.map((k) => k.id) ?? []),
       getRandom(path1.slots?.[2]?.runes.map((k) => k.id) ?? []),
-      getRandom(path1.slots?.[3]?.runes.map((k) => k.id) ?? []),
+      getRandom(path1.slots?.[3]?.runes.map((k) => k.id) ?? [])
     ]
     if (!path2) return a
     a.secondary.path = path2.name
@@ -54,11 +55,9 @@ export function newRandomPocket(): Pocket {
     if (s0 == null || s1 == null) return a
     a.secondary.runes = [
       getRandom(
-        path2.slots?.[s0]?.runes.map((k: { id: number }) => k.id) ?? [],
+        path2.slots?.[s0]?.runes.map((k: { id: number }) => k.id) ?? []
       ),
-      getRandom(
-        path2.slots?.[s1]?.runes.map((k: { id: number }) => k.id) ?? [],
-      ),
+      getRandom(path2.slots?.[s1]?.runes.map((k: { id: number }) => k.id) ?? [])
     ]
     return a
   }).value
@@ -71,7 +70,7 @@ export function newRandomPocket(): Pocket {
     a.f = getRandom(
       Object.values(spellIndex)
         .map((s) => s.id)
-        .filter((s) => s !== b),
+        .filter((s) => s !== b)
     )
     return a
   }).value
@@ -85,13 +84,13 @@ export function newRandomPocket(): Pocket {
     const key = getKeyByValue(skinIndex, a)
     return key ? getSplash(key, "tile", b) : ""
   })
-  return {
+  const p = {
     guide: [],
     key: crypto.randomUUID(),
     name: generateName(),
     ouuid: user().account?.uuid ?? "",
     uuid: user().account?.uuid ?? "",
-    icon: "",
+    icon: icon.value,
 
     //
     _champion: champion,
@@ -116,5 +115,9 @@ export function newRandomPocket(): Pocket {
     // time
     created: new Date().toISOString(),
     updated: new Date().toISOString(),
+    location: options?.location || "pockets",
+    order: 0
   }
+
+  finalizePocket(p)
 }

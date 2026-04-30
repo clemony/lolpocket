@@ -1,10 +1,9 @@
-import type { AccountData } from "#shared/types"
 //
 import { getEmptyAccount } from "#shared/schema"
 import { sendErrorToast } from "~/utils/ui/toasts"
 
 export async function accountUpdate(
-  account: Partial<AccountData>,
+  account: Partial<Account>,
   options: {
     silent?: boolean
     message?: string
@@ -19,15 +18,11 @@ export async function accountUpdate(
 
     if (!data) return user().account
 
-    user().account ??= getEmptyAccount() as unknown as AccountData
-    const next = Object.assign(
-      user().account as AccountData,
-      data as AccountData
-    )
-    user().account = next
-
-    if (data && typeof data === "object")
-      Object.assign(user().account as AccountData, data)
+    user().account = {
+      ...(getEmptyAccount() as unknown as Account),
+      ...(user().account ?? {}),
+      ...data
+    }
 
     if (!options.silent) {
       const toast = useToast()
@@ -40,7 +35,7 @@ export async function accountUpdate(
         icon: "i-check-fill"
       })
     }
-    return next
+    return user().account
   } catch (error) {
     console.error("Failed to update account", error)
     sendErrorToast()

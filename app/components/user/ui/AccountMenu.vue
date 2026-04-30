@@ -50,9 +50,20 @@ const subProps: { button: ButtonPropsExt; popover: PopoverProps } = {
   }
 }
 
-const { account } = safeObject(storeToRefs(user()))
+const { summoner } = safeObject(storeToRefs(user()))
 const open = shallowRef<boolean>(false)
 const menu = computed(() => userMenuItems())
+
+const session = useSupabaseSession()
+const client = useSupabaseClient()
+const role = await client.auth.getClaims()
+console.log("🥸 - role:", role)
+
+const isAdmin = computed(() => {
+  const token = !!session.value?.access_token
+  return token && role.data?.claims.role === "admin"
+})
+console.log("🥸 - isAdmin:", isAdmin)
 </script>
 
 <template>
@@ -82,14 +93,14 @@ const menu = computed(() => userMenuItems())
         }"
         trailing-icon="i-up-down">
         <MatchStatus
-          v-if="account"
+          v-if="summoner"
           v-bind="props?.user"
           :ui="props.user?.ui"
-          :summoner="account"
+          :summoner="summoner"
           variant="user" />
       </UButton>
       <template #content>
-        <AdminTestMenu v-bind="subProps" />
+        <LazyAdminTestMenu v-if="isAdmin" v-bind="subProps" />
 
         <div v-for="(group, i) in menu" :key="i" class="p-1">
           <LazyThemeMenu v-if="i === 1" v-bind="subProps" />

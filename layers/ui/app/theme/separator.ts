@@ -2,13 +2,13 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const separatorTheme = defineUiTheme({
   slots: {
-    avatar: "shrink-0",
-    avatarSize: "2xs",
-    border: "n",
+    root: "align-center flex items-center text-center",
+    border: "",
     container: "flex font-medium text-default",
     icon: "size-5 shrink-0",
-    label: "text-sm",
-    root: "align-center flex items-center rounded-md text-center"
+    avatar: "shrink-0",
+    avatarSize: "2xs",
+    label: "text-sm"
   },
   variants: {
     color: {
@@ -16,7 +16,7 @@ export const separatorTheme = defineUiTheme({
         border: "border-neutral"
       },
       base: {
-        border: "bg-p0"
+        border: "border-p0"
       },
       primary: {
         border: "border-p1"
@@ -25,21 +25,116 @@ export const separatorTheme = defineUiTheme({
         border: "border-p2"
       },
       tertiary: {
-        border: "bg-p3/80"
+        border: "border-p3/80"
+      }
+    },
+    orientation: {
+      horizontal: {
+        root: "w-full flex-row",
+        border: "w-full",
+        container: "mx-3 whitespace-nowrap"
       },
-      n3: {
-        border: "border-n3/70"
+      vertical: {
+        root: "h-full flex-col",
+        border: "h-full",
+        container: "my-2"
       }
     },
     size: {
-      sm: "border-1",
-      md: "border-2",
-      lg: "border-3"
+      xs: "",
+      sm: "",
+      md: "",
+      lg: "",
+      xl: ""
+    },
+    type: {
+      solid: {
+        border: "border-solid"
+      },
+      dashed: {
+        border: "border-dashed"
+      },
+      dotted: {
+        border: "border-dotted"
+      }
     }
   },
+  compoundVariants: [
+    {
+      orientation: "horizontal",
+      size: "xs",
+      class: {
+        border: "border-t"
+      }
+    },
+    {
+      orientation: "horizontal",
+      size: "sm",
+      class: {
+        border: "border-t-[2px]"
+      }
+    },
+    {
+      orientation: "horizontal",
+      size: "md",
+      class: {
+        border: "border-t-[3px]"
+      }
+    },
+    {
+      orientation: "horizontal",
+      size: "lg",
+      class: {
+        border: "border-t-[4px]"
+      }
+    },
+    {
+      orientation: "horizontal",
+      size: "xl",
+      class: {
+        border: "border-t-[5px]"
+      }
+    },
+    {
+      orientation: "vertical",
+      size: "xs",
+      class: {
+        border: "border-s"
+      }
+    },
+    {
+      orientation: "vertical",
+      size: "sm",
+      class: {
+        border: "border-s-[2px]"
+      }
+    },
+    {
+      orientation: "vertical",
+      size: "md",
+      class: {
+        border: "border-s-[3px]"
+      }
+    },
+    {
+      orientation: "vertical",
+      size: "lg",
+      class: {
+        border: "border-s-[4px]"
+      }
+    },
+    {
+      orientation: "vertical",
+      size: "xl",
+      class: {
+        border: "border-s-[5px]"
+      }
+    }
+  ],
   defaultVariants: {
-    color: "secondary",
-    size: "sm"
+    color: "tertiary",
+    size: "xs",
+    type: "solid"
   }
 })
 

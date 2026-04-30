@@ -4,7 +4,7 @@ import { vDraggable } from "vue-draggable-plus"
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 const champions = computed(() => pocket.value?.champions ?? [])
 
@@ -24,7 +24,7 @@ function onSpill(e: DraggableEvent) {
           group: {
             name: 'champions',
             pull: 'clone',
-            put: true,
+            put: true
           },
           direction: 'horizontal',
           ghostClass: 'champion-card-ghost-class',
@@ -36,8 +36,8 @@ function onSpill(e: DraggableEvent) {
           invertedSwapThreshold: 6,
           ease: 'ease-in-out',
           filter: 'undraggable',
-          onSpill,
-        },
+          onSpill
+        }
       ]"
       class="absolute inset-0 grid h-36 grid-cols-[repeat(auto-fill,minmax(170px,1fr))] grid-rows-1 items-center overflow-x-scroll overflow-y-hidden py-2">
       <template v-if="champions.length">

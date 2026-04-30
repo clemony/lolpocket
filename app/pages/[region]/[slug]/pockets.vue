@@ -6,7 +6,7 @@ definePageMeta({
   listClass: "**:stroke-[1.8]",
   order: 3,
   search: false,
-  prefix: "summoner",
+  prefix: "summoner"
 })
 
 const { summoner } = storeToRefs(sSession())
@@ -14,7 +14,7 @@ watch(
   () => summoner.value,
   (v) => {
     console.log("💠 - watch - newVal:", v)
-  },
+  }
 )
 </script>
 
@@ -22,13 +22,13 @@ watch(
   <div class="grid w-full justify-center">
     <div class="">
       <LazyBackpackBoxCard
-        v-for="pocket in usePockets().pockets.filter(
-          (p) =>
+        v-for="pocket in pocketStore().pockets.filter(
+          (p: Pocket) =>
             !(
-              usePockets().pinned.includes(p.key) ||
-              usePockets().trash.includes(p.key) ||
-              usePockets().archive.includes(p.key)
-            ),
+              pocketStore().pinned.includes(p.key) ||
+              pocketStore().trash.includes(p.key) ||
+              pocketStore().archive.includes(p.key)
+            )
         )"
         :key="pocket.key"
         :pocket

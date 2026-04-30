@@ -60,9 +60,9 @@ const bg = computed(() =>
       <UContainer>
         <slot />
       </UContainer>
-      <div class="fixed right-24 bottom-24 z-4 grid gap-4">
+      <div class="absolute right-24 bottom-24 z-4 grid gap-4">
         <!--    <LazyFloatingSummonerUtilities v-if="isSummonerRoute" /> -->
-        <ToTop />
+        <!--         <ToTop /> -->
       </div>
     </UMain>
     <SiteFooter />

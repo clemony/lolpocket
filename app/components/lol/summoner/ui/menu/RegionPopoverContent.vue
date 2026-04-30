@@ -10,7 +10,7 @@ const { class: className } = defineProps<{
 }>()
 
 const emit = defineEmits(["update:model-value"])
-const modelValue = ref(user().account?.region)
+const modelValue = ref(user().summoner?.region)
 const regions = Object.keys(regionIndex) as Array<keyof typeof regionIndex>
 </script>
 

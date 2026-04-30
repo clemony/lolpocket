@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import type { TreeItemExt } from "~/domain/pocket/ui/treeItems"
+const { items } = defineProps<{
+  items: ComputedRef<TreeItemExt[]>
+}>()
 definePageMeta({
   title: "Pockets",
   icon: "lucide:folder",
@@ -11,13 +15,5 @@ const selected = ref<Pocket | null>(null)
 </script>
 
 <template>
-  <!--     <LazyBackpackBoxCard
-            <UButton label="'Add Pocket'" class="h-38 w-full" variant="ghost">
-              <icon class="size-7 **:stroke-[1.5]" name="add" />
-  <PocketDetailMenu :pocket-key="selected?.key ?? null" />
-            </UButton>  -->
-  <div class="flex flex-1 bg-p1">
-    <UDashboardPanel />
-    <UDashboardPanel />
-  </div>
+  <BackpackColumns :items />
 </template>

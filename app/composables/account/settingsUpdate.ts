@@ -1,4 +1,3 @@
-import type { Settings } from "#shared/types"
 import { sendErrorToast } from "~/utils/ui/toasts"
 
 export async function settingsUpdate(

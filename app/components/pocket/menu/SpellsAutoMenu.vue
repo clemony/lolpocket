@@ -3,7 +3,7 @@ import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 const route = useRoute()
 const pocket = ref<Pocket | undefined>(
-  usePockets().getPocket(String(route.params.pocket_key)),
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 </script>
 

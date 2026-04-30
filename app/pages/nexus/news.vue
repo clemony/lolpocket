@@ -11,11 +11,12 @@ import {
 
 definePageMeta({
   title: "News",
-  layout: "default",
-  class: "scale-110 **:stroke-[2.2]", //"scale-96 **:stroke-[1.2]",
+  layout: "nexus-layout",
+  path: "/nexus/news",
+  class: "scale-107 **:stroke-[2.2] translate-x-px", //"scale-96 **:stroke-[1.2]",
   icon: "i-iconamoon-news", //"i-hugeicons-news", //"i-streamline-news-paper",
   description: "The latest.",
-  order: 0
+  order: 1
 })
 
 const {

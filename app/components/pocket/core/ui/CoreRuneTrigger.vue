@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 const mainSet = computed(() =>
-  pocket.value?.runes?.find((s) => s.id === pocket.value?._runes)
+  pocket.value?.runes?.find((s: RuneSet) => s.id === pocket.value?._runes)
 )
 </script>
 

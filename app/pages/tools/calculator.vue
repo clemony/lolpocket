@@ -4,8 +4,9 @@ import { SplitterPanel as ResizablePanel } from "reka-ui"
 definePageMeta({
   name: "calculator",
   prefix: "Tools",
-  icon: "teenyicons:calculator-outline",
-  class: "scale-96 **:stroke-[1.6]",
+  icon: "i-ui-calc",
+  description: "Min-max your builds with stat analysis.",
+  class: "scale-99 **:stroke-[1.6]"
 })
 
 console.log("💠 - is().calculatorSets:", is().calculatorSet)

@@ -86,7 +86,7 @@ const s = safeObject(summoner)
 
     <div class="mt-3 flex flex-col items-center">
       <div class="inline items-center align-baseline">
-        <span class="font-serif text-2xl leading-none font-bold normal-case!">
+        <span class="font-serif text-3xl leading-none font-bold normal-case!">
           {{ s?.name }}
         </span>
         <span
@@ -100,6 +100,6 @@ const s = safeObject(summoner)
 
     <template #footer>
       <SummonerCommunicationMenu />
-    </template>
-  </UCard><!--    :disabled="s?.puuid === user().account?.puuid"  -->
+    </template> </UCard
+  ><!--    :disabled="s?.puuid === user().account?.puuid"  -->
 </template>

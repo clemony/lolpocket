@@ -4,6 +4,10 @@ interface Ui {
   labelTrue?: string
   labelFalse?: string
 }
+defineOptions({
+  inheritAttrs: false
+})
+
 const { modelValue, labelTrue, labelFalse } = defineProps<{
   modelValue: boolean
   labelTrue?: string

@@ -10,17 +10,17 @@ watch(
   () => tags.value,
   (newVal) => {
     console.log("💠 - watch - newVal:", newVal)
-    console.log("💠 - watch - newVajljljljl:", usePockets().tags)
+    console.log("💠 - watch - newVajljljljl:", pocketStore().tags)
   }
 )
 
 function deleteTag(tag: string) {
-  const a = usePockets().tags.findIndex((t) => t === tag)
+  const a = pocketStore().tags.findIndex((t) => t === tag)
 
   if (a !== -1) {
-    usePockets().tags.splice(a, 1)
-    usePockets()
-      .pockets.map((p) => p.tags)
+    pocketStore().tags.splice(a, 1)
+    pocketStore()
+      .pockets.map((p: Pocket) => p.tags)
       .forEach((set) => {
         if (!set) return
         const a = set.findIndex((t) => t === tag)
@@ -59,7 +59,7 @@ function deleteTag(tag: string) {
         <CollapsibleContent class="CollapsibleContent space-y-1" menu>
           <ListboxGroup class="relative flex flex-col justify-start gap-y-1">
             <div
-              v-for="item in usePockets().tags"
+              v-for="item in pocketStore().tags"
               :key="item"
               class="group/tag grid h-9! w-full grid-cols-[1fr_min-content] items-center justify-self-start p-0 pr-2">
               <!-- list item -->
@@ -108,7 +108,7 @@ function deleteTag(tag: string) {
               placeholder="create new tag..."
               @keydown.enter="
                 () => {
-                  ;(usePockets().tags.push(newTag), (newTag = ''))
+                  ;(pocketStore().tags.push(newTag), (newTag = ''))
                 }
               " />
 

@@ -1,4 +1,4 @@
-import type { Account } from "."
+import type { Inbox } from "."
 
 export const regionKeys = [
   "br1",
@@ -54,5 +54,6 @@ export interface Identity {
 export interface UserProfileResponse {
   settings: Settings | null
   account: Account | null
+  inbox?: Inbox | null
   pockets: Pocket[] | null
 }

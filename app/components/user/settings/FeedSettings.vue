@@ -9,18 +9,21 @@ const { settings } = storeToRefs(user())
 
 const safeSettings = computed(() => safeObject(settings.value))
 
-const categories = shallowRef<string[]>(
+const categoryKeys = shallowRef<string[]>(
   safeSettings.value.feed_categories ?? feedKeys
 )
-const { history: categoryHistory } = useRefHistory(categories)
+const categories = useRefHistory(categoryKeys, { deep: true })
 
 //hide spoilers?
-const spoilers = shallowRef<boolean>(safeSettings.value?.feed_spoilers)
-const { history: spoilerHistory } = useRefHistory(spoilers)
+const preview = useRefHistory(ref<boolean>(safeSettings.value?.feed_spoilers))
+const safeguard = useRefHistory(
+  ref<boolean>(safeSettings.value?.feed_spoiler_safeguard)
+)
 
 onMounted(() => {
-  categories.value = safeSettings.value.feed_categories ?? feedKeys
-  spoilers.value = safeSettings.value.feed_spoilers ?? true
+  categoryKeys.value = safeSettings.value.feed_categories ?? feedKeys
+  preview.source.value = safeSettings.value.feed_spoilers ?? true
+  safeguard.source.value = safeSettings.value.feed_spoiler_safeguard ?? false
 })
 
 const spoilerDescriptions: Record<string, string> = {
@@ -50,7 +53,8 @@ const spoilerSafeguard: Record<string, string> = {
       color="card"
       :ui="{
         root: 'py-4!',
-        container: 'mt-0'
+        container: 'mt-0 self-center',
+        label: 'pr-2'
       }">
       <template #label>
         {{ item.label }}
@@ -74,13 +78,13 @@ const spoilerSafeguard: Record<string, string> = {
       <template #description>
         <div class="relative min-h-10 w-full">
           <TransitionSlideText
-            :model-value="spoilers"
+            :model-value="preview.source.value"
             :label-true="spoilerDescriptions.true"
             :label-false="spoilerDescriptions.false" />
         </div>
       </template>
       <USwitch
-        v-model:model-value="spoilers"
+        v-model:model-value="preview.source.value"
         :ui="{
           root: 'w-full items-center justify-between pl-0',
           label: '-translate-x-1 italic',
@@ -92,7 +96,7 @@ const spoilerSafeguard: Record<string, string> = {
             label-true="Spoilers marked"
             label-false="Spoilers visible"
             class="italic"
-            :model-value="spoilers" />
+            :model-value="preview.source.value" />
         </template>
       </USwitch>
     </UFormField>
@@ -108,13 +112,13 @@ const spoilerSafeguard: Record<string, string> = {
       <template #description>
         <div class="relative min-h-10 w-full">
           <TransitionSlideText
-            :model-value="spoilers"
-            :label-true="spoilerDescriptions.true"
-            :label-false="spoilerDescriptions.false" />
+            :model-value="safeguard.source.value"
+            :label-true="spoilerSafeguard.true"
+            :label-false="spoilerSafeguard.false" />
         </div>
       </template>
       <USwitch
-        v-model:model-value="spoilers"
+        v-model:model-value="safeguard.source.value"
         :ui="{
           root: 'w-full items-center justify-between pl-0',
           label: '-translate-x-1 italic',
@@ -123,10 +127,10 @@ const spoilerSafeguard: Record<string, string> = {
         size="md">
         <template #label>
           <TransitionSlideText
-            label-true="Spoilers marked"
-            label-false="Spoilers visible"
+            label-true="Spoilers posts hidden"
+            label-false="Spoiler posts visible"
             class="italic"
-            :model-value="spoilers" />
+            :model-value="safeguard.source.value" />
         </template>
       </USwitch>
     </UFormField>

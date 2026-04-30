@@ -46,7 +46,7 @@ const pocket = computed(() => props.pocket)
         side="right"
         align="start">
         <UButton
-          v-for="friendlyPocket in usePockets().pockets.filter(
+          v-for="friendlyPocket in pocketStore().pockets.filter(
             (p) => p.key !== pocket?.key
           )"
           :key="friendlyPocket.key"

@@ -6,11 +6,13 @@
     "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
   --font-serif:
-    "Zodiak Variable", Charter, "Bitstream Charter", "Sitka Text", Cambria,
+    "Playfair Display", Charter, "Bitstream Charter", "Sitka Text", Cambria,
     serif;
   --font-mono:
     "Source Code Pro", SFMono-Regular, ui-monospace, "Liberation Mono",
     "Courier New", Consolas, Menlo, Monaco, monospace;
+  --font-pixel-square: "GeistPixelSquare", monospace;
+  --font-pixel-line: "GeistPixelLine", monospace;
 
   --text-*: initial;
   --text-3xs: 0.78rem;
@@ -21,7 +23,7 @@
   --text-md: 0.98rem;
   --text-lg: 1.05rem;
   --text-xl: 1.15rem;
-  --text-xxl: 1.3rem;
+  --text-2xl: 1.3rem;
   --text-3xl: 1.5rem;
   --text-4xl: 1.675rem;
   --text-5xl: 1.875rem;
@@ -40,7 +42,7 @@
   }
 
   h3 {
-    @apply text-xxl;
+    @apply text-2xl;
   }
 
   h4 {
@@ -152,4 +154,20 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
+}
+
+@font-face {
+  font-family: "GeistPixelSquare";
+  src: url("/fonts/GeistPixel/GeistPixel-Square.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeistPixelLine";
+  src: url("/fonts/GeistPixel/GeistPixel-Line.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
 }

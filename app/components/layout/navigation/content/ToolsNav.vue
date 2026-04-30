@@ -10,11 +10,13 @@ const {
   variant?: ButtonProps["variant"]
   ui?: ButtonProps["ui"]
 }>()
+
+const { tools } = useRoutes()
 </script>
 
 <template>
   <UButton
-    v-for="item in toolsNav"
+    v-for="item in tools"
     :key="item.label"
     :as
     :icon="item.icon"

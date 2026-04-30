@@ -48,9 +48,7 @@ const error = shallowRef<string>("")
             error =
               'There was an error logging you in. Please try again later and maybe get a new internet because this one is not the best one. It is bad.'
           ">
-          <h2 class="drop-shadow-2xs">
-            lolpocket
-          </h2>
+          <h2 class="drop-shadow-2xs">lolpocket</h2>
         </NuxtLink>
       </div>
       <!--  to="/" -->
@@ -64,7 +62,7 @@ const error = shallowRef<string>("")
             'text-center text-xs text-balance text-pc/60 [&_a]:underline [&_a]:underline-offset-1 [&_a]:hover:text-pc'
         }">
         <template #header>
-          <h2 class="text-2xl">
+          <h2 class="text-3xl">
             {{ title || route.meta?.title || route.name }}
           </h2>
           <p v-if="route.meta?.description" class="mt-2">

@@ -1,15 +1,25 @@
 <script lang="ts" setup>
-import type { SidebarProps } from "@nuxt/ui"
-import { items, tabContent } from "./data/settingsProps"
+import type { SidebarProps, TabsItem } from "@nuxt/ui"
+import { tabContent } from "./data/settingsProps"
 const {
   variant = "sidebar",
   collapsible = "offcanvas",
   side = "right"
 } = defineProps<SidebarProps>()
-
 const emit = defineEmits(["search", "open"])
 
 const tab = defineModel<string>("tab", { default: "App" })
+const session = useSupabaseSession()
+const { settings } = useRoutes()
+console.log("🥸 - settings:", settings)
+const settingsTabs = computed<TabsItem[]>(() => {
+  if (!settings) return [] as TabsItem[]
+  return settings.map((i) => ({
+    ...i,
+    disabled: i.auth && !!session.value?.access_token,
+    ui: { leadingIcon: cn(String(i.class)) }
+  }))
+})
 </script>
 
 <template>
@@ -18,7 +28,7 @@ const tab = defineModel<string>("tab", { default: "App" })
     :collapsible="collapsible"
     :side="side"
     :ui="{
-      root: 'p-0! [--sidebar-width:26rem]',
+      root: 'top-(--ui-header-height) h-[calc(100vh-var(--ui-header-height)]! max-h-[calc(100vh-var(--ui-header-height)]! overflow-hidden p-0! [--sidebar-width:26rem]',
       body: 'flex-1 flex-row! gap-0 p-0'
     }">
     <UCard
@@ -40,12 +50,12 @@ const tab = defineModel<string>("tab", { default: "App" })
         class="flex h-13 w-full shrink-0 items-center justify-start border-b border-b-p3/80">
         <UTabs
           v-model:model-value="tab"
-          :items
+          :items="settingsTabs"
           variant="pill"
           size="md"
           color="neutral"
           :ui="{
-            root: '',
+            root: 'px-3',
             label: 'hidden',
             list: 'gap-2 rounded-4xl border-0 bg-transparent px-2 ring-0 inset-shadow-none inset-ring-0',
             trigger:

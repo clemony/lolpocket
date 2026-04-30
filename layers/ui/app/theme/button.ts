@@ -83,7 +83,7 @@ export const buttonTheme = defineUiTheme({
         "btn border-0 ring ring-p3 btn-outline hover:bg-p1 hover:inset-shadow-xs",
       subtle:
         "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      link: "inline-flex px-0 text-pc [&>[data-slot=label]]:text-start [&>[data-slot=label]]:font-medium [&>[data-slot=label]]:decoration-[inherit] hover:[&>[data-slot=label]]:underline",
+      link: "inline-flex px-0 text-pc",
       soft: "btn border-0 shadow-sm ring-0"
     }
   },
@@ -93,7 +93,7 @@ export const buttonTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class: {
-        base: "fbg-neutral font-semibold inset-ring inset-ring-n1 btn-neutral depth-5 focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-n1 disabled:shadow-none on:text-nc on:btn-neutral",
+        base: "bg-neutral font-semibold inset-ring inset-ring-n1 btn-neutral depth-5 focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-n1 disabled:shadow-none on:text-nc on:btn-neutral",
         leadingIcon: "text-nc!",
         trailingIcon: "text-nc!"
       }
@@ -146,9 +146,12 @@ export const buttonTheme = defineUiTheme({
     },
     /* BASE */
     {
-      color: "base",
+      color: ["base", "primary", "secondary", "tertiary"],
       variant: "link",
-      class: {}
+      class: {
+        label:
+          "text-start font-medium decoration-[inherit] group-hover/btn:underline"
+      }
     },
     {
       color: "base",
@@ -177,7 +180,7 @@ export const buttonTheme = defineUiTheme({
       color: "primary",
       variant: "solid",
       class: {
-        base: "btn bg-p1 text-pc ring-0! inset-ring inset-ring-p3 depth-3 open:shadow-none hover:bg-p2/80 hover:shadow-xs hover:inset-shadow-xs disabled:bg-p1!"
+        base: "btn bg-p1 text-pc ring-0! inset-ring inset-ring-p3 depth-3 open:shadow-none hover:bg-p3! hover:shadow-xs hover:inset-shadow-xs hover:inset-ring-p4/60 disabled:bg-p1!"
       }
     },
     {

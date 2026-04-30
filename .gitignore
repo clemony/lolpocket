@@ -18,7 +18,6 @@ gitignore
 nuxt-build.cpuprofile
 */vitest.config.ts
 test
-docs
 
 # Node dependencies
 node_modules

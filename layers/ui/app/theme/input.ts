@@ -28,6 +28,8 @@ export const inputTheme = defineUiTheme({
       outline:
         "bg-transparent ring inset-shadow-xs delay-0 focus-visible:shadow-xs focus-visible:ring-offset-0",
 
+      solid:
+        "fx-depth fx-noise bg-p1 text-pc inset-ring inset-ring-p2 hover:bg-p2 focus:bg-p2 disabled:bg-p1/50",
       soft: "bg-p1/50 text-pc hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
       subtle: "bg-p1 text-pc ring ring-p3 ring-inset",
       "ghost-outline":

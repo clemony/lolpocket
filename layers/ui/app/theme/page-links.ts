@@ -6,7 +6,7 @@ export const pageLinksTheme = defineUiTheme({
     title: "flex items-center gap-1.5 text-sm font-semibold antialiased",
     list: "flex flex-col gap-2",
     item: "relative",
-    link: "group flex items-center gap-1.5 text-sm focus-visible:outline-primary",
+    link: "group group/link flex items-center gap-1.5 text-sm focus-visible:outline-primary",
     linkLeadingIcon: "size-5 shrink-0",
     linkLabel: "truncate",
     linkLabelExternalIcon: "absolute top-0 size-3 text-dimmed"

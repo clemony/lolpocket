@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 definePageMeta({
-  title: "Live Match",
-  icon: "i-lucide-rss",
+  title: "Live",
+  description: "Real time match data.",
+  icon: "i-majesticons-video-line", // "i-ic-outline-stream",
   order: 4,
   search: false,
-  prefix: "summoner",
+  prefix: "summoner"
 })
 </script>
 

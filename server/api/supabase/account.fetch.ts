@@ -1,10 +1,10 @@
-import type { Account, Settings } from "#shared/types"
 import {
   accountSchema,
   getEmptyAccount,
   getEmptySettings,
+  inboxSchema,
   pocketSchema,
-  settingsSchema,
+  settingsSchema
 } from "#shared/schema"
 import * as v from "valibot"
 import { createSupabaseClient } from "../client.supabase"
@@ -15,8 +15,9 @@ export default defineEventHandler(
     if (!user) {
       return {
         account: null,
+        inbox: null,
         pockets: [],
-        settings: null,
+        settings: null
       }
     }
 
@@ -29,47 +30,47 @@ export default defineEventHandler(
         throw createError({
           data: error,
           statusCode: 500,
-          statusMessage: "RPC failed",
+          statusMessage: "RPC failed"
         })
       }
 
       if (!data) {
         throw createError({
           statusCode: 404,
-          statusMessage: "Profile not found",
+          statusMessage: "Profile not found"
         })
       }
 
       const accountParse = v.safeParse(accountSchema, data.account)
+      const inboxParse = v.safeParse(inboxSchema, data.inbox)
       const settingsParse = v.safeParse(settingsSchema, data.settings)
 
       const userPockets: Pocket[] = []
-      ;(data.pockets ?? []).forEach((pocket) => {
+      ;(data.pockets ?? []).forEach((pocket: Pocket) => {
         const p = v.safeParse(pocketSchema, pocket)
         if (p.success) userPockets.push(p.output)
         else console.log(p.issues)
       })
 
-      const userAccount: Account =
-        accountParse.success ?
-          accountParse.output
+      const userAccount: Account = accountParse.success
+        ? accountParse.output
         : (getEmptyAccount() as unknown as Account)
 
-      const userSettings: Settings =
-        settingsParse.success
-          ? settingsParse.output
-          : (getEmptySettings() as unknown as Settings)
+      const userSettings: Settings = settingsParse.success
+        ? settingsParse.output
+        : (getEmptySettings() as unknown as Settings)
 
       return {
         settings: userSettings,
         account: userAccount,
-        pockets: userPockets,
+        inbox: inboxParse.success ? inboxParse.output : undefined,
+        pockets: userPockets
       }
     } catch (err) {
       console.error("Unexpected error in hydrateUser:", err)
       throw createError({
         statusCode: 500,
-        statusMessage: "Unexpected server error",
+        statusMessage: "Unexpected server error"
       })
     }
   }

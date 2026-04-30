@@ -15,13 +15,15 @@ import {
 
 const props = defineProps<{
   reference: HTMLElement | null
-  groups: Record<string, CommandGroup | undefined>
+  activeComponent: string | null
 }>()
 
 const emit = defineEmits<{
   close: []
 }>()
-const groupMap = computed(() => safeObject(props.groups))
+
+const routes = useRoutes()
+const groupMap = useCommandGroups(routes)
 const route = useRoute()
 const routeComponent = computed(() => route.matched[0]?.meta?.command ?? null)
 
@@ -30,7 +32,11 @@ const nexusToolsGroup = computed(() => [
   groupMap.value.tools
 ])
 
-const helpGroup = computed(() => safeObject(groupMap.value.help))
+const helpGroup = computed(() => [
+  groupMap.value.docs,
+  groupMap.value.external,
+  groupMap.value.settings
+])
 
 const referenceGroup = computed(() => ({
   library: groupMap.value.library,
@@ -96,8 +102,8 @@ function goBack() {
   <div class="flex max-h-190 min-h-0 grow flex-col">
     <template v-if="!activeState">
       <div
-        class="grid min-h-0 flex-1 divide-y divide-p3 overflow-x-hidden overflow-y-auto overscroll-contain">
-        <div v-if="routeComponent" class="border-b border-p3 py-2">
+        class="grid min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain px-2">
+        <div v-if="routeComponent" class="py-2">
           <component :is="routeComponent" @update:open="closeMenu" />
         </div>
 
@@ -115,17 +121,14 @@ function goBack() {
           <UUser
             size="xl"
             :ui="{
-              root: cn('ml-1.25 py-2', helpGroup.description ? 'mb-1' : ''),
+              root: cn('mb-1 ml-1.25 py-2'),
               name: 'mb-1',
               wrapper: 'pr-6'
             }"
-            :name="helpGroup.label"
-            :description="helpGroup.description ?? undefined" />
+            name="Help & Resources"
+            description="Find answers, research external data, and customize your lolpocket." />
 
-          <CommandCollapse
-            v-for="(group, i) in helpGroup.items"
-            :key="i"
-            :group />
+          <CommandCollapse v-for="(group, i) in helpGroup" :key="i" :group />
         </div>
       </div>
     </template>

@@ -5,7 +5,7 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <li
+  <span
     role="tab"
     :class="
       cn(
@@ -14,5 +14,5 @@ const { class: className } = defineProps<{
       )
     ">
     <slot />
-  </li>
+  </span>
 </template>

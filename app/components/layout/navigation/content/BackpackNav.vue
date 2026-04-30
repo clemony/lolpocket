@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
-import { backpackNav } from "~/utils/routes"
 
 const {
   size = "md",

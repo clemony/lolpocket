@@ -1,8 +1,12 @@
 import type {
-  InboxItemSchema,
-  InboxMessageSchema,
-  InboxSchema
+  inboxMessageRecordSchema,
+  inboxMessageSchema,
+  inboxNotificationRecordSchema,
+  inboxParticipantSchema,
+  inboxSchema
 } from "#shared/schema"
+import type { AvatarProps, ButtonProps } from "@nuxt/ui"
+import type { DateLike } from "@vueuse/core"
 import type * as v from "valibot"
 
 export interface InboxBadge {
@@ -25,21 +29,25 @@ export interface InboxType {
   value?: number
 }
 
-export type Inbox = v.InferOutput<typeof InboxSchema>
-export type InboxItem = v.InferOutput<typeof InboxItemSchema>
-export type InboxMessage = v.InferOutput<typeof InboxMessageSchema>
+export type Inbox = v.InferOutput<typeof inboxSchema>
+export type InboxMessageRecord = v.InferOutput<typeof inboxMessageRecordSchema>
+export type InboxMessage = v.InferOutput<typeof inboxMessageSchema>
+export type InboxNotification = v.InferOutput<
+  typeof inboxNotificationRecordSchema
+>
+export type InboxParticipant = v.InferOutput<typeof inboxParticipantSchema>
+export type InboxItem = InboxNotification
+export type SenderReceiver = InboxParticipant
 
 export type InboxTemplateFactory = (
   vars: Record<string, string>
 ) => InboxTemplate
 
 export interface InboxTemplate {
-  title: string
-  action?: {
-    type: string
-    function: any
-    text?: string
-    icon?: IconObject
-  }
-  badge?: InboxBadge
+  action?: ButtonProps
+  avatar?: AvatarProps
+  date?: DateLike
+  header?: string
+  text?: string
+  footer?: string
 }

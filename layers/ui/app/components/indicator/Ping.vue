@@ -3,12 +3,14 @@ const {
   class: className,
   color,
   size = "md",
-  inset
+  inset,
+  inline = false
 } = defineProps<{
   class?: HTMLAttributes["class"]
   color: string
   size?: string
   inset?: boolean
+  inline?: boolean
 }>()
 </script>
 
@@ -16,11 +18,12 @@ const {
   <div
     :class="
       cn(
-        'absolute z-2 inline-grid place-items-center rounded-full *:[grid-area:1/1]',
+        'z-2 inline-grid place-items-center rounded-full *:[grid-area:1/1]',
         {
           'before:absolute before:z-0 before:size-full before:scale-160 before:place-self-center before:rounded-full before:bg-p0':
             inset
         },
+        inline ? 'relative' : 'absolute',
         className
       )
     ">

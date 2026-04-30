@@ -27,7 +27,10 @@ export const sSession = defineStore("summonerSession", () => {
       {
         icon: "i-history",
         label: "Match History",
-        to: buildSummonerRootPath(summoner.value)
+        to: buildSummonerRootPath(summoner.value),
+        ui: {
+          leadingIcon: " scale-90"
+        }
       },
       {
         icon: "i-lp-champ-circle",
@@ -35,21 +38,24 @@ export const sSession = defineStore("summonerSession", () => {
         slot: "champions" as const,
         to: `${buildSummonerRootPath(summoner.value)}/champions`,
         ui: {
-          leadingIcon: "scale-105 **:stroke-[1.2] opacity-80"
+          leadingIcon: "**:stroke-[1.6] "
         }
       },
       {
         icon: "i-folder",
         label: "Pockets",
-        to: `${buildSummonerRootPath(summoner.value)}/pockets`
+        to: `${buildSummonerRootPath(summoner.value)}/pockets`,
+        ui: {
+          leadingIcon: " scale-90"
+        }
       },
       {
-        icon: "i-iconoir-antenna-signal",
-        label: "Live Match",
+        icon: "i-bx-play-circle",
+        label: "Live",
         slot: "live" as const,
         to: `${buildSummonerRootPath(summoner.value)}/live`,
         ui: {
-          leadingIcon: "scale-92 **:stroke-[2.2]"
+          leadingIcon: " scale-105"
         }
       }
     ],

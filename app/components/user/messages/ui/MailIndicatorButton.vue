@@ -1,75 +1,75 @@
 <script lang="ts" setup>
-import type { BadgeProps, ButtonProps } from "@nuxt/ui"
+import type { InboxMessage } from "#shared/types"
+import type { ButtonProps } from "@nuxt/ui"
 
-const props = withDefaults(defineProps<ButtonProps & {}>(), {
-  variant: "ghost",
-  size: "sm",
-  square: true
-})
-
-const emit = defineEmits(["update:open"])
+const props = defineProps<
+  ButtonProps & {
+    activeComponent: string | null
+  }
+>()
+const emit = defineEmits(["update:component"])
 
 const { inbox } = storeToRefs(user())
+const inboxMessages = computed<InboxMessage[]>(
+  () => (inbox.value?.messages ?? []) as InboxMessage[]
+)
 const unread = computed(() => {
-  const unread = inbox.value?.messages.filter((m) => !m.read).length
+  const unread = inboxMessages.value.filter(
+    (m: InboxMessage) => !m.read_at
+  ).length
   return {
     messages: unread ?? 0,
-    notifications: inbox.value?.notifications?.length ?? 0
+    notifications:
+      inbox.value?.notifications?.filter(
+        (notification) => !notification.read_at
+      ).length ?? 0
   }
 })
 
-const buttonProps: ButtonProps & { tabindex?: string } = {
-  size: "sm",
-  tabindex: "-1",
-  variant: "ghost",
-  ui: {
-    base: "max-h-7.5",
-    label: "text-2xs group-hover/btn:underline text-n4 group-hover/btn:text-pc"
+const items = computed(() => [
+  {
+    value: "inbox",
+    leadingIcon: "i-lucide-mail",
+    label: "Messages",
+    unread: unread.value.messages ? unread.value.messages : "0",
+    ui: { leadingIcon: "**:stroke-[2.2]" }
+  },
+  {
+    value: "notifications",
+    leadingIcon: "i-ui-notification",
+    label: "notifications",
+    unread: unread.value.notifications
+      ? unread.value.notifications.toString()
+      : "0",
+    ui: { leadingIcon: "**:stroke-[1.1]", trailing: "flex gap-1.5" }
   }
-}
-
-const badge: BadgeProps = {
-  size: "md",
-  variant: "solid",
-  ui: {
-    base: "pl-0 pr-6 py-0 gap-2.5",
-    label: "text-sm!",
-    leadingIcon: "scale-110"
-  }
-}
-
-const { account } = safeObject(storeToRefs(user()))
+])
 </script>
 
 <template>
   <UButton
-    tabindex="-1"
-    size="sm"
-    :ui="{ base: 'translate-x-1 gap-1.5 px-3!' }"
+    v-for="item in items"
+    :key="item.value"
+    v-bind="item"
+    block
+    :active="props.activeComponent === item.value"
+    active-variant="solid"
     variant="ghost"
-    color="tertiary"
-    @click="emit('update:open', 'inbox')">
-    <UBadge
-      v-bind="badge"
-      icon="i-lucide-mail"
-      color="base"
-      variant="ghost"
-      :label="unread.messages ? unread.messages.toString() : '0'">
-      <template #chip>
-        <LazyPing :color="account?.color ?? 'insp'" />
-      </template>
-    </UBadge>
-
-    <UBadge
-      icon="i-ui-notification"
-      v-bind="badge"
-      color="base"
-      :ui="{ ...badge?.ui, leadingIcon: '**:stroke-[1.1]' }"
-      variant="ghost"
-      :label="unread.notifications ? unread.notifications.toString() : '0'">
-      <template #chip>
-        <LazyPing :color="account?.color ?? 'insp'" />
-      </template>
-    </UBadge>
+    :item
+    :ui="{
+      base: cn('h-9! capitalize')
+    }"
+    @click="emit('update:component', item.value)">
+    <template v-if="Number(item.unread)" #trailing>
+      <UBadge
+        size="xs"
+        :label="item.unread"
+        :ui="{
+          base: 'h-5.5! rounded-lg px-2.25!',
+          label: 'text-sm font-semibold'
+        }"
+        color="neutral">
+      </UBadge>
+    </template>
   </UButton>
 </template>

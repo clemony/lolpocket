@@ -36,10 +36,7 @@ export const sData = defineStore("summonerData", () => {
     mastery.value = await getOrFetchAllMastery(id.value, region.value)
   }
 
-  const champions = computed<ChampionStats[] | null>(() => {
-    if (!id.value) return null
-    return useChampionStats(matches, filteredMatches, id.value).value
-  })
+  const champions = useChampionStats(matches, filteredMatches, id)
 
   const allies = computed<AllyStatDetail[] | null>(() => {
     if (!id.value) return null

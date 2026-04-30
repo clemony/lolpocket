@@ -1,39 +1,56 @@
 import * as v from "valibot"
 
-// InboxItem
-export const InboxItemSchema = v.object({
-  id: v.string(),
-  date: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
-  read: v.optional(v.boolean()), // optional default = undefined
+const uuidSchema = v.pipe(v.string(), v.uuid("invalid user uuid"))
+const timestampSchema = v.pipe(
+  v.string(),
+  v.isoTimestamp("incorrect date format")
+)
+
+export const inboxParticipantSchema = v.object({
+  uuid: uuidSchema,
+  name: v.nullable(v.string()),
+  username: v.nullable(v.string()),
+  icon: v.nullable(v.string())
+})
+
+export const inboxNotificationRecordSchema = v.object({
+  id: v.pipe(v.string(), v.uuid("invalid notification id")),
+  recipient_uuid: uuidSchema,
+  // actor_uuid: v.nullable(uuidSchema),
   template: v.string(),
-  vars: v.record(v.string(), v.string())
+  vars: v.fallback(v.record(v.string(), v.string()), {}),
+  related_type: v.nullable(v.string()),
+  related_id: v.nullable(v.string()),
+  created_at: timestampSchema,
+  read_at: v.nullable(timestampSchema),
+  dismissed_at: v.nullable(timestampSchema)
 })
 
-// InboxMessage (extends InboxItem)
-export const InboxMessageSchema = v.object({
-  ...InboxItemSchema.entries,
+export const inboxMessageRecordSchema = v.object({
+  id: v.pipe(v.string(), v.uuid("invalid message id")),
+  recipient_uuid: uuidSchema,
+  sender_uuid: uuidSchema,
   title: v.string(),
-  content: v.string(),
-  dateTrashed: v.optional(v.nullable(v.number())),
-  from: v.object({
-    id: v.string(),
-    name: v.string(),
-    username: v.nullable(v.string()),
-    icon: v.string()
-  }),
-  to: v.optional(v.string()),
-  trash: v.optional(v.pipe(v.string(), v.isoTimestamp("incorrect date format")))
+  content: v.any(),
+  preview: v.fallback(v.string(), ""),
+  can_reply: v.fallback(v.boolean(), false),
+  created_at: timestampSchema,
+  read_at: v.nullable(timestampSchema),
+  archived_at: v.nullable(timestampSchema),
+  trashed_at: v.nullable(timestampSchema),
+  deleted_at: v.nullable(timestampSchema)
 })
 
-// Inbox
+export const inboxMessageSchema = v.object({
+  ...inboxMessageRecordSchema.entries,
+  from: inboxParticipantSchema,
+  to: inboxParticipantSchema
+})
 
-export const InboxSchema = v.fallback(
+export const inboxSchema = v.fallback(
   v.object({
-    messages: v.fallback(v.array(InboxMessageSchema), []),
-    notifications: v.fallback(v.array(InboxItemSchema), [])
+    messages: v.fallback(v.array(inboxMessageSchema), []),
+    notifications: v.fallback(v.array(inboxNotificationRecordSchema), [])
   }),
   { messages: [], notifications: [] }
 )
-
-// --- Helpers ---
-// export const getEmptyInbox = () => <Account>getDeepDefaults(InboxSchema)

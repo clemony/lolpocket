@@ -2,8 +2,7 @@
 import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 const summoner = await summonerStore().resolveByPuuid(user().account?.puuid)
 const accountRoute = computed(() => {
-  const account = user().account
-  return buildSummonerRootPath(account)
+  return buildSummonerRootPath(summoner)
 })
 </script>
 
@@ -16,7 +15,7 @@ const accountRoute = computed(() => {
 
       <div class="flex w-full flex-col justify-end gap-px">
         <div class="flex items-end gap-3 *:leading-none">
-          <h1 class="font-serif text-xxl! font-bold text-pc/94 drop-shadow-sm">
+          <h1 class="font-serif text-2xl! font-bold text-pc/94 drop-shadow-sm">
             {{ summoner?.name }}
           </h1>
           <SummonerId :summoner="summoner ?? undefined" type="tag" />

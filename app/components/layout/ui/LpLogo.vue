@@ -23,7 +23,7 @@ const {
         label: cn(
           'truncate-none ellipsis-none block overflow-visible leading-none font-black',
           {
-            'text-2xl': size === 'md'
+            'text-3xl': size === 'md'
           },
           ui?.label
         )

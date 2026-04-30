@@ -1,21 +1,18 @@
 export function buildSummonerRootPath(
-  input?: {
-    name?: string | null
-    puuid?: string | null
-    region?: string | null
-    tag?: string | null
-  } | null
+  summoner: Partial<Summoner> | null | undefined
 ) {
-  const region = input?.region?.toLowerCase()
-  const name = input?.name?.toLowerCase()
-  const tag = input?.tag?.toLowerCase()
+  if (!summoner) return "/summoner/afk"
+
+  const region = summoner?.region?.toLowerCase()
+  const name = summoner?.name?.toLowerCase()
+  const tag = summoner?.tag?.toLowerCase()
 
   if (region && name && tag) {
     return `/${region}/${name}_${tag}`
   }
 
-  if (input?.puuid) {
-    return `/_r/summoner/${input.puuid}`
+  if (summoner?.puuid) {
+    return `/_r/summoner/${summoner.puuid}`
   }
 
   return "/"

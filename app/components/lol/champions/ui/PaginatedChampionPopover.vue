@@ -4,7 +4,7 @@ import { getSplash } from "~/domain/utils/img"
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 const pocketChampions = computed(() => pocket.value?.champions ?? [])
 

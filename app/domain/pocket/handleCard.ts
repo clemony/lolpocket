@@ -1,5 +1,5 @@
 /* export async function downloadPocketPng(pocket) {
-  await usePockets().pocketCardRef
+  await pocketStore().pocketCardRef
 
   const cardName = computed (() => {
     const c = pocket.champions[0] && pocket.champions[0] ? `${pocket.champions[0]}-` : ''
@@ -8,7 +8,7 @@
     return `${(c + r + n).toLowerCase().replace(' ', '-')}pocket`
   })
 
-  htmlToImage.toPng(usePockets().pocketCardRef, { quality: 0.95, backgroundColor: '#FFFFFF' })
+  htmlToImage.toPng(pocketStore().pocketCardRef, { quality: 0.95, backgroundColor: '#FFFFFF' })
     .then(dataUrl => download(dataUrl, `${cardName}.png`))
 }
  */

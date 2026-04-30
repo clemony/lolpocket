@@ -8,12 +8,12 @@ definePageMeta({
   title: "items",
   order: 2,
   path: "/pocket/:pocket_key/items",
-  search: false,
+  search: false
 })
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key)),
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 
 const tabs = ref("items")
@@ -22,14 +22,14 @@ const tabValues = [
   {
     name: "items",
     icon: "bow",
-    value: "items",
+    value: "items"
   },
 
   {
     name: "calculator",
     icon: "calc",
-    value: "calculator",
-  },
+    value: "calculator"
+  }
 ]
 </script>
 

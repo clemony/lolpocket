@@ -4,25 +4,25 @@ import * as v from "valibot"
 export const itemSetSchema = v.object({
   id: v.pipe(v.string(), v.uuid("item set uuid malformed")),
   name: v.fallback(v.string(), ""),
-  items: v.fallback(MinMaxArray(v.number(), 0, 20), []),
+  items: v.fallback(MinMaxArray(v.number(), 0, 20), [])
 })
 
 // Runes
 export const runesPrimarySchema = v.object({
   path: v.fallback(v.string(), ""),
-  runes: v.fallback(FixedArray(v.number(), 3), [0, 0, 0]),
+  runes: v.fallback(FixedArray(v.number(), 3), [0, 0, 0])
 })
 
 export const runesSecondarySchema = v.object({
   path: v.fallback(v.string(), ""),
-  runes: v.fallback(FixedArray(v.number(), 2), [0, 0]),
+  runes: v.fallback(FixedArray(v.number(), 2), [0, 0])
 })
 
 // Spells (always 2 slots)
 export const spellSetSchema = v.object({
   id: v.pipe(v.string(), v.uuid("spell set uuid malformed")),
   d: v.fallback(v.number(), 0),
-  f: v.fallback(v.number(), 0),
+  f: v.fallback(v.number(), 0)
 })
 
 // Rune Set
@@ -32,7 +32,7 @@ export const runeSetSchema = v.object({
   keystone: v.nullable(v.number()),
   primary: runesPrimarySchema,
   secondary: runesSecondarySchema,
-  shards: v.fallback(FixedArray(v.number(), 3), [0, 0, 0]),
+  shards: v.fallback(FixedArray(v.number(), 3), [0, 0, 0])
 })
 
 // --- Pocket Schema ---
@@ -41,13 +41,13 @@ export const pocketSchema = v.object({
   name: v.optional(v.string()),
   ouuid: v.fallback(
     v.pipe(v.string(), v.uuid("original author uuid malformed")),
-    "mysterious pocket",
+    "mysterious pocket"
   ),
   uuid: v.pipe(v.string(), v.uuid("author uuid malformed")),
 
   //
   guide: v.nullable(v.array(v.string())),
-  icon: v.nullable(v.string("icon not a string")),
+  icon: v.fallback(v.string("icon not a string"), ""),
 
   // main set
   _champion: v.nullish(v.string("champion key not a string")),
@@ -72,4 +72,20 @@ export const pocketSchema = v.object({
   //
   created: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
   updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
+  archived_at: v.optional(
+    v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
+  ),
+  trashed_at: v.optional(
+    v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
+  ),
+  location: v.fallback(v.string(), "pockets"),
+  order: v.fallback(v.number(), 0)
 })
+
+export type RuneSet = v.InferOutput<typeof runeSetSchema>
+
+export type ItemSet = v.InferOutput<typeof itemSetSchema>
+export type SpellSet = v.InferOutput<typeof spellSetSchema>
+export type RunesPrimary = v.InferOutput<typeof runesPrimarySchema>
+export type RunesSecondary = v.InferOutput<typeof runesSecondarySchema>
+export type Pocket = v.InferOutput<typeof pocketSchema>

@@ -3,13 +3,13 @@ import { defineUiTheme } from "./defineUiTheme"
 export const contextMenuTheme = defineUiTheme({
   slots: {
     content:
-      "flex min-w-32 origin-(--reka-context-menu-content-transform-origin) flex-col overflow-hidden rounded-md bg-default shadow-lg ring ring-default data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",
+      "flex min-w-32 origin-(--reka-context-menu-content-transform-origin) flex-col overflow-hidden rounded-lg bg-p0/90 shadow-lg ring ring-p0/60 ring-offset-1 ring-offset-p3 backdrop-blur-sm data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",
     viewport:
       "relative flex-1 scroll-py-1 divide-y divide-default overflow-y-auto",
-    group: "isolate p-1",
+    group: "isolate p-0.5",
     label: "flex w-full items-center font-semibold text-highlighted",
     separator: "-mx-1 my-1 h-px bg-border",
-    item: "group relative flex w-full items-start outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
+    item: "group relative flex w-full items-center! outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md before:duration-0! data-disabled:cursor-not-allowed data-disabled:opacity-75",
     itemLeadingIcon: "shrink-0",
     itemLeadingAvatar: "shrink-0",
     itemLeadingAvatarSize: "",
@@ -20,27 +20,27 @@ export const contextMenuTheme = defineUiTheme({
     itemWrapper: "flex min-w-0 flex-1 flex-col text-start",
     itemLabel: "truncate",
     itemDescription: "truncate text-muted",
-    itemLabelExternalIcon: "inline-block size-3 align-top text-dimmed",
+    itemLabelExternalIcon: "inline-block size-3 align-top text-dimmed"
   },
   variants: {
     active: {
       true: {
         item: "text-highlighted before:bg-elevated",
-        itemLeadingIcon: "text-default",
+        itemLeadingIcon: "text-default"
       },
       false: {
         item: [
-          "text-default data-highlighted:text-highlighted data-highlighted:before:bg-elevated/50 data-[state=open]:text-highlighted data-[state=open]:before:bg-elevated/50",
+          "text-default data-highlighted:text-highlighted data-highlighted:before:bg-elevated/50 data-[state=open]:text-highlighted data-[state=open]:before:bg-elevated/50"
         ],
         itemLeadingIcon: [
-          "text-dimmed group-data-highlighted:text-default group-data-[state=open]:text-default",
-        ],
-      },
+          "text-dimmed group-data-highlighted:text-default group-data-[state=open]:text-default"
+        ]
+      }
     },
     loading: {
       true: {
-        itemLeadingIcon: "animate-spin",
-      },
+        itemLeadingIcon: "animate-spin"
+      }
     },
     size: {
       xs: {
@@ -50,25 +50,25 @@ export const contextMenuTheme = defineUiTheme({
         itemLeadingAvatarSize: "3xs",
         itemTrailingIcon: "size-4",
         itemTrailingKbds: "gap-0.5",
-        itemTrailingKbdsSize: "sm",
+        itemTrailingKbdsSize: "sm"
       },
       sm: {
-        label: "gap-1.5 p-1.5 text-xs",
-        item: "gap-1.5 p-1.5 text-xs",
-        itemLeadingIcon: "size-4",
+        label: "gap-1.5 p-1.5 text-sm",
+        item: "gap-1.5 p-1.5 text-sm",
+        itemLeadingIcon: "**;stroke-[2.3] size-4.25",
         itemLeadingAvatarSize: "3xs",
         itemTrailingIcon: "size-4",
         itemTrailingKbds: "gap-0.5",
-        itemTrailingKbdsSize: "sm",
+        itemTrailingKbdsSize: "sm"
       },
       md: {
         label: "gap-1.5 p-1.5 text-sm",
         item: "gap-1.5 p-1.5 text-sm",
-        itemLeadingIcon: "size-5",
+        itemLeadingIcon: "size-4.5",
         itemLeadingAvatarSize: "2xs",
-        itemTrailingIcon: "size-5",
+        itemTrailingIcon: "size-4.5",
         itemTrailingKbds: "gap-0.5",
-        itemTrailingKbdsSize: "md",
+        itemTrailingKbdsSize: "md"
       },
       lg: {
         label: "gap-2 p-2 text-sm",
@@ -77,7 +77,7 @@ export const contextMenuTheme = defineUiTheme({
         itemLeadingAvatarSize: "2xs",
         itemTrailingIcon: "size-5",
         itemTrailingKbds: "gap-1",
-        itemTrailingKbdsSize: "md",
+        itemTrailingKbdsSize: "md"
       },
       xl: {
         label: "gap-2 p-2 text-base",
@@ -86,14 +86,14 @@ export const contextMenuTheme = defineUiTheme({
         itemLeadingAvatarSize: "xs",
         itemTrailingIcon: "size-6",
         itemTrailingKbds: "gap-1",
-        itemTrailingKbdsSize: "lg",
-      },
-    },
+        itemTrailingKbdsSize: "lg"
+      }
+    }
   },
   compoundVariants: [],
   defaultVariants: {
-    size: "md",
-  },
+    size: "md"
+  }
 })
 
 export default contextMenuTheme

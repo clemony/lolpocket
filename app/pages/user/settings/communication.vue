@@ -5,6 +5,7 @@ definePageMeta({
   icon: "i-chat",
   path: "/settings/communication",
   class: "**:stroke-[2.3]",
+  layout: "settings-layout",
   auth: true,
   order: 3,
   prefix: "Settings"

@@ -3,7 +3,7 @@ import { championToTitle } from "#shared/constants/champions/championToTitle"
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 const championKey = computed(() => pocket.value?._champion ?? null)
 const championTitle = computed(() =>
@@ -48,9 +48,7 @@ const championTitle = computed(() =>
     </div>
     <div class="flex w-full flex-col gap-4 pt-22">
       <div class="h-16">
-        <h2 class="leading-10 tracking-tight drop-shadow-2xs">
-          Pocket Stats
-        </h2>
+        <h2 class="leading-10 tracking-tight drop-shadow-2xs">Pocket Stats</h2>
         <div class="text-lg font-medium italic" />
       </div>
       <div class="grid grid-cols-3 gap-8"></div>

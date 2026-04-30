@@ -1,4 +1,3 @@
-import type { Settings } from "#shared/types"
 import { getEmptySettings, settingsSchema } from "#shared/schema"
 import * as v from "valibot"
 import { requireUser } from "../client.supabase"
@@ -26,7 +25,8 @@ export default defineEventHandler(async (event): Promise<Settings> => {
   const requestedSettings = body.settings ?? {}
 
   const unsupportedKeys = Object.keys(requestedSettings).filter(
-    (key) => !RPC_SETTING_KEYS.includes(key as (typeof RPC_SETTING_KEYS)[number])
+    (key) =>
+      !RPC_SETTING_KEYS.includes(key as (typeof RPC_SETTING_KEYS)[number])
   )
 
   if (unsupportedKeys.length) {

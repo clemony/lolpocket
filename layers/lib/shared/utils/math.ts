@@ -2,6 +2,14 @@ export function isEven(n: number) {
   return n % 2 === 0
 }
 
+export function isNumber(value: string | number | null | undefined) {
+  return (
+    typeof value === "string" &&
+    !Number.isNaN(value) &&
+    !Number.isNaN(Number.parseFloat(value))
+  )
+}
+
 export function isOdd(n: number) {
   return globalThis.Math.abs(n % 2) === 1
 }
@@ -39,8 +47,8 @@ export function mode(nums: number[]): number | null {
 }
 
 export function coerceNumber(v: unknown, fallback = 0) {
-  if (typeof v === 'number' && Number.isFinite(v)) return v
-  if (typeof v === 'string' && Number.isFinite(Number(v))) return Number(v)
+  if (typeof v === "number" && Number.isFinite(v)) return v
+  if (typeof v === "string" && Number.isFinite(Number(v))) return Number(v)
   return fallback
 }
 
@@ -75,10 +83,10 @@ export function wilsonLowerBound(wins: number, games: number, z = 1.96) {
 
   const p = wins / games
   const denom = 1 + (z * z) / games
-  const num
-    = p
-      + (z * z) / (2 * games)
-      - z * globalThis.Math.sqrt((p * (1 - p) + (z * z) / (4 * games)) / games)
+  const num =
+    p +
+    (z * z) / (2 * games) -
+    z * globalThis.Math.sqrt((p * (1 - p) + (z * z) / (4 * games)) / games)
 
   return num / denom
 }

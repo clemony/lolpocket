@@ -6,7 +6,7 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
-export interface Database {
+export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
@@ -61,7 +61,7 @@ export interface Database {
             isOneToOne: true
             referencedRelation: "internal_users"
             referencedColumns: ["uuid"]
-          }
+          },
         ]
       }
       comment_votes: {
@@ -97,7 +97,7 @@ export interface Database {
             isOneToOne: false
             referencedRelation: "internal_users"
             referencedColumns: ["uuid"]
-          }
+          },
         ]
       }
       comments: {
@@ -154,7 +154,36 @@ export interface Database {
             isOneToOne: false
             referencedRelation: "internal_users"
             referencedColumns: ["uuid"]
-          }
+          },
+        ]
+      }
+      content: {
+        Row: {
+          created_at: string
+          inbox: Json | null
+          notifications: Json | null
+          uuid: string
+        }
+        Insert: {
+          created_at?: string
+          inbox?: Json | null
+          notifications?: Json | null
+          uuid?: string
+        }
+        Update: {
+          created_at?: string
+          inbox?: Json | null
+          notifications?: Json | null
+          uuid?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "content_uuid_fkey"
+            columns: ["uuid"]
+            isOneToOne: true
+            referencedRelation: "account"
+            referencedColumns: ["uuid"]
+          },
         ]
       }
       feed_links: {
@@ -252,6 +281,117 @@ export interface Database {
           video_width?: number | null
         }
         Relationships: []
+      }
+      inbox_messages: {
+        Row: {
+          archived_at: string | null
+          content: Json
+          created_at: string
+          deleted_at: string | null
+          id: string
+          preview: string
+          read_at: string | null
+          recipient_uuid: string
+          sender_uuid: string
+          title: string
+          trashed_at: string | null
+        }
+        Insert: {
+          archived_at?: string | null
+          content?: Json
+          created_at?: string
+          deleted_at?: string | null
+          id?: string
+          preview?: string
+          read_at?: string | null
+          recipient_uuid: string
+          sender_uuid: string
+          title: string
+          trashed_at?: string | null
+        }
+        Update: {
+          archived_at?: string | null
+          content?: Json
+          created_at?: string
+          deleted_at?: string | null
+          id?: string
+          preview?: string
+          read_at?: string | null
+          recipient_uuid?: string
+          sender_uuid?: string
+          title?: string
+          trashed_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "inbox_messages_recipient_uuid_fkey"
+            columns: ["recipient_uuid"]
+            isOneToOne: false
+            referencedRelation: "internal_users"
+            referencedColumns: ["uuid"]
+          },
+          {
+            foreignKeyName: "inbox_messages_sender_uuid_fkey"
+            columns: ["sender_uuid"]
+            isOneToOne: false
+            referencedRelation: "internal_users"
+            referencedColumns: ["uuid"]
+          },
+        ]
+      }
+      inbox_notifications: {
+        Row: {
+          actor_uuid: string | null
+          created_at: string
+          dismissed_at: string | null
+          id: string
+          read_at: string | null
+          recipient_uuid: string
+          related_id: string | null
+          related_type: string | null
+          template: string
+          vars: Json
+        }
+        Insert: {
+          actor_uuid?: string | null
+          created_at?: string
+          dismissed_at?: string | null
+          id?: string
+          read_at?: string | null
+          recipient_uuid: string
+          related_id?: string | null
+          related_type?: string | null
+          template: string
+          vars?: Json
+        }
+        Update: {
+          actor_uuid?: string | null
+          created_at?: string
+          dismissed_at?: string | null
+          id?: string
+          read_at?: string | null
+          recipient_uuid?: string
+          related_id?: string | null
+          related_type?: string | null
+          template?: string
+          vars?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "inbox_notifications_actor_uuid_fkey"
+            columns: ["actor_uuid"]
+            isOneToOne: false
+            referencedRelation: "internal_users"
+            referencedColumns: ["uuid"]
+          },
+          {
+            foreignKeyName: "inbox_notifications_recipient_uuid_fkey"
+            columns: ["recipient_uuid"]
+            isOneToOne: false
+            referencedRelation: "internal_users"
+            referencedColumns: ["uuid"]
+          },
+        ]
       }
       internal_users: {
         Row: {
@@ -364,7 +504,7 @@ export interface Database {
             isOneToOne: false
             referencedRelation: "internal_users"
             referencedColumns: ["uuid"]
-          }
+          },
         ]
       }
       settings: {
@@ -374,6 +514,9 @@ export interface Database {
           fast_trash_pocket: boolean | null
           favorite_pockets: string[] | null
           favorite_summoners: string[] | null
+          feed_categories: boolean[] | null
+          feed_spoiler_safeguard: boolean | null
+          feed_spoilers: boolean | null
           locale: string | null
           motion: boolean | null
           muted: boolean | null
@@ -397,6 +540,9 @@ export interface Database {
           fast_trash_pocket?: boolean | null
           favorite_pockets?: string[] | null
           favorite_summoners?: string[] | null
+          feed_categories?: boolean[] | null
+          feed_spoiler_safeguard?: boolean | null
+          feed_spoilers?: boolean | null
           locale?: string | null
           motion?: boolean | null
           muted?: boolean | null
@@ -420,6 +566,9 @@ export interface Database {
           fast_trash_pocket?: boolean | null
           favorite_pockets?: string[] | null
           favorite_summoners?: string[] | null
+          feed_categories?: boolean[] | null
+          feed_spoiler_safeguard?: boolean | null
+          feed_spoilers?: boolean | null
           locale?: string | null
           motion?: boolean | null
           muted?: boolean | null
@@ -444,7 +593,7 @@ export interface Database {
             isOneToOne: true
             referencedRelation: "internal_users"
             referencedColumns: ["uuid"]
-          }
+          },
         ]
       }
     }
@@ -452,16 +601,80 @@ export interface Database {
       [_ in never]: never
     }
     Functions: {
+      archive_inbox_message: { Args: { p_message_id: string }; Returns: Json }
+      create_inbox_notification: {
+        Args: {
+          p_actor_uuid?: string
+          p_recipient_uuid: string
+          p_related_id?: string
+          p_related_type?: string
+          p_template: string
+          p_vars?: Json
+        }
+        Returns: {
+          actor_uuid: string | null
+          created_at: string
+          dismissed_at: string | null
+          id: string
+          read_at: string | null
+          recipient_uuid: string
+          related_id: string | null
+          related_type: string | null
+          template: string
+          vars: Json
+        }
+        SetofOptions: {
+          from: "*"
+          to: "inbox_notifications"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      dismiss_inbox_notification: {
+        Args: { p_notification_id: string }
+        Returns: {
+          actor_uuid: string | null
+          created_at: string
+          dismissed_at: string | null
+          id: string
+          read_at: string | null
+          recipient_uuid: string
+          related_id: string | null
+          related_type: string | null
+          template: string
+          vars: Json
+        }
+        SetofOptions: {
+          from: "*"
+          to: "inbox_notifications"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
       get_internal_id: { Args: never; Returns: string }
       get_thread: { Args: { p_thread_id: string }; Returns: Json }
-      "get_thread-old": { Args: { p_thread_id: string }; Returns: Json }
       get_user_account: {
+        Args: { p_uuid?: string }
+        Returns: {
+          account: Json
+          inbox: Json
+          pockets: Json
+          settings: Json
+        }[]
+      }
+      "get_user_account-old": {
         Args: { p_uuid?: string }
         Returns: {
           account: Json
           pockets: Json
           settings: Json
         }[]
+      }
+      hydrate_inbox_message: {
+        Args: {
+          p_message: Database["public"]["Tables"]["inbox_messages"]["Row"]
+        }
+        Returns: Json
       }
       insert_comment: {
         Args: {
@@ -472,6 +685,31 @@ export interface Database {
           p_thread_id?: string
         }
         Returns: Json
+      }
+      mark_inbox_message_read: {
+        Args: { p_message_id: string; p_read?: boolean }
+        Returns: Json
+      }
+      mark_inbox_notification_read: {
+        Args: { p_notification_id: string; p_read?: boolean }
+        Returns: {
+          actor_uuid: string | null
+          created_at: string
+          dismissed_at: string | null
+          id: string
+          read_at: string | null
+          recipient_uuid: string
+          related_id: string | null
+          related_type: string | null
+          template: string
+          vars: Json
+        }
+        SetofOptions: {
+          from: "*"
+          to: "inbox_notifications"
+          isOneToOne: true
+          isSetofReturn: false
+        }
       }
       remove_comment: {
         Args: {
@@ -501,6 +739,16 @@ export interface Database {
           isSetofReturn: false
         }
       }
+      send_inbox_message: {
+        Args: {
+          p_content: Json
+          p_preview?: string
+          p_recipient_uuid: string
+          p_title: string
+        }
+        Returns: Json
+      }
+      trash_inbox_message: { Args: { p_message_id: string }; Returns: Json }
       update_account: {
         Args: { p_patch: Json }
         Returns: {
@@ -553,6 +801,9 @@ export interface Database {
           fast_trash_pocket: boolean | null
           favorite_pockets: string[] | null
           favorite_summoners: string[] | null
+          feed_categories: boolean[] | null
+          feed_spoiler_safeguard: boolean | null
+          feed_spoilers: boolean | null
           locale: string | null
           motion: boolean | null
           muted: boolean | null
@@ -604,7 +855,7 @@ export type Tables<
   }
     ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never
+    : never = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -632,7 +883,7 @@ export type TablesInsert<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never
+    : never = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -657,7 +908,7 @@ export type TablesUpdate<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never
+    : never = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -682,7 +933,7 @@ export type Enums<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never
+    : never = never,
 > = DefaultSchemaEnumNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -699,7 +950,7 @@ export type CompositeTypes<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never
+    : never = never,
 > = PublicCompositeTypeNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -715,7 +966,7 @@ export const Constants = {
       removal_type: ["mod", "user"],
       role: ["admin", "summoner"],
       user_role: ["admin", "summoner"],
-      vote: ["-1", "0", "1"]
-    }
-  }
+      vote: ["-1", "0", "1"],
+    },
+  },
 } as const

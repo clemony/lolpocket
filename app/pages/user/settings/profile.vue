@@ -7,6 +7,7 @@ definePageMeta({
   description:
     "Set your public profile display settings and hide your annoyances.",
   icon: "i-lucide-circle-user-round",
+  layout: "settings-layout",
   class: "",
   path: "/settings/profile",
   auth: true,

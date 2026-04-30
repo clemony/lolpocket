@@ -12,13 +12,13 @@ console.log("🥸 - identities:", identities)
 const safeAccount = computed(() => safeObject(account.value))
 const safeSettings = computed(() => safeObject(settings.value))
 const safeId = computed(() => safeObject(identities.value))
-const email = useRefHistory(shallowRef(safeId.value.email?.name || ""))
+const email = useRefHistory(shallowRef<string>(safeId.value.email?.name ?? ""))
 
 const username = useRefHistory(
   shallowRef<string>(safeAccount.value.username ?? "")
 )
 
-const blockedUsers = shallowRef<string[]>(safeSettings.value?.blocked_users)
+const blockedUsers = shallowRef<string[]>(safeSettings.value?.blocked_users ?? [])
 const { history: blockedHistory } = useRefHistory(blockedUsers)
 
 const blockInput = shallowRef<string | undefined>("")

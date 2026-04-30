@@ -3,9 +3,10 @@ import { defineUiTheme } from "./defineUiTheme"
 export const modalTheme = defineUiTheme({
   slots: {
     title: "text-bc font-semibold",
-    body: "bg-b1 flex-1 p-4 sm:p-6",
-    close: "absolute end-4 top-4",
-    content: "divide-b3 flex flex-col divide-y focus:outline-none",
+    body: "bg-b1 flex-1 px-3 py-4 sm:p-6",
+    close: "",
+    content:
+      "divide-b3 active-dialog flex flex-col divide-y focus:outline-none",
     description: "mt-1 text-sm text-n4",
     footer: "flex items-center gap-1.5 p-4 sm:px-6",
     header: "flex min-h-16 items-center gap-1.5 p-4 sm:px-6",

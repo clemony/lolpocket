@@ -70,8 +70,8 @@ export const twSize: TwRecord = {
 }
 
 export const twStatusSize: TwRecord = {
-  xs: "status-xs",
-  sm: "status-sm",
+  xs: "size-1",
+  sm: "size-1.5",
   md: "status-md",
   lg: "status-lg",
   xl: "status-xl"

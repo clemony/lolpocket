@@ -1,37 +1,37 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
 const h1Variants = {
   animate: {
     maxWidth: 0,
-    letterSpacing: '-0.5em',
-    opacity: 0,
+    letterSpacing: "-0.5em",
+    opacity: 0
   },
   initial: {
-    maxWidth: '100%',
-    opacity: 1,
-  },
+    maxWidth: "100%",
+    opacity: 1
+  }
 }
 
 const h1Visibility = {
   animate: {
     opacity: 0,
-    transform: 'translate(0, 10px)',
+    transform: "translate(0, 10px)",
     transition: {
       delay: 1.5,
       duration: 0.4,
-      ease: 'linear',
-    },
+      ease: "linear"
+    }
   },
   initial: {
     opacity: 1,
-    transform: 'translate(0, 0px)',
+    transform: "translate(0, 0px)",
     transition: {
       delay: 1.5,
       duration: 0.4,
-      ease: 'linear',
-    },
-  },
+      ease: "linear"
+    }
+  }
 }
 </script>
 
@@ -49,7 +49,7 @@ const h1Visibility = {
           :transition="{
             duration: 0.4,
             delay: 2,
-            ease: 'linear',
+            ease: 'linear'
           }">
           ol
         </motion.h1>
@@ -62,7 +62,7 @@ const h1Visibility = {
           :transition="{
             duration: 0.4,
             delay: 2,
-            ease: 'linear',
+            ease: 'linear'
           }"
           animate="animate">
           ocket
@@ -76,16 +76,12 @@ const h1Visibility = {
       :animate="{ opacity: 1, transform: 'translateY(0)' }"
       :transition="{ duration: 0.5, delay: 2, ease: 'easeInOut' }">
       <div class="flex items-center gap-2 drop-shadow-sm">
-        <h1 class="text-5xl!">
-          lolpocket
-        </h1>
+        <h1 class="text-5xl!">lolpocket</h1>
 
         <span class="font-serif text-xl italic">noun</span>
       </div>
 
-      <p class="o mb-3 px-1">
-        [ lohl - pok - it ]
-      </p>
+      <p class="o mb-3 px-1">[ lohl - pok - it ]</p>
 
       <div class="mt-6 flex flex-col gap-4 font-serif text-xl drop-shadow-sm">
         <p class="">
@@ -96,7 +92,7 @@ const h1Visibility = {
 
         <p>
           so you can focus on the
-          <span class="mt-4 ml-1 text-xxl font-bold">win.</span>
+          <span class="mt-4 ml-1 text-3xl font-bold">win.</span>
         </p>
       </div>
 

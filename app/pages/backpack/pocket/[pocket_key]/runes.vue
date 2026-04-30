@@ -12,7 +12,7 @@ definePageMeta({
 
 const route = useRoute("pocket-runes")
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 function handleAdd() {
   const runes = pocket.value?.runes

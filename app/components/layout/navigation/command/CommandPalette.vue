@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { asCommandItem } from "./build/helpers"
 import type { CommandItem } from "./build/useCommandGroups"
-import { useCommandGroups } from "./build/useCommandGroups"
+import { commandResultGroups, useCommandGroups } from "./build/useCommandGroups"
 import ChampionCommand from "./reference-cards/ChampionCommand.vue"
 import ItemCommand from "./reference-cards/ItemCommand.vue"
 import RuneCommand from "./reference-cards/RuneCommand.vue"
@@ -17,9 +17,8 @@ const emit = defineEmits<{
 }>()
 
 const hotkeysOpen = shallowRef(false)
-const { resultGroups } = useCommandGroups({
-  onNavigate: () => emit("close")
-})
+
+const routes = useRoutes()
 </script>
 
 <template>
@@ -48,7 +47,7 @@ const { resultGroups } = useCommandGroups({
         base: 'btn-2xs'
       }
     }"
-    :groups="resultGroups"
+    :groups="commandResultGroups"
     :ui="{
       root: 'max-h-180 w-full',
       back: 'm-2 mb-0 rounded-full p-0 pl-px opacity-60 hover:opacity-100 [&_svg]:box-content [&_svg]:size-4 [&_svg]:rounded-full [&_svg]:border [&_svg]:border-transparent [&_svg]:ring [&_svg]:ring-transparent [&_svg]:**:stroke-[2.4] hover:[&_svg]:border-neutral hover:[&_svg]:bg-neutral hover:[&_svg]:text-nc hover:[&_svg]:shadow-xs hover:[&_svg]:ring-neutral',

@@ -1,12 +1,13 @@
-export function deletePocket(pocket: Pocket | string) {
+export function deletePocket(pocket: Pocket) {
   const key = typeof pocket === "string" ? pocket : pocket.key
   if (!key) return
 
-  if (!usePockets().trash.includes(key)) usePockets().trash.push(key)
+  pocket.location = "trash"
+  pocket.trashed_at = new Date().toISOString()
 
-  const pinnedIndex = usePockets().pinned.indexOf(key)
-  if (pinnedIndex !== -1) usePockets().pinned.splice(pinnedIndex, 1)
+  const pinnedIndex = pocketStore().pinned.indexOf(key)
+  if (pinnedIndex !== -1) pocketStore().pinned.splice(pinnedIndex, 1)
 
-  const archiveIndex = usePockets().archive.indexOf(key)
-  if (archiveIndex !== -1) usePockets().archive.splice(archiveIndex, 1)
+  const archiveIndex = pocketStore().archive.indexOf(key)
+  if (archiveIndex !== -1) pocketStore().archive.splice(archiveIndex, 1)
 }

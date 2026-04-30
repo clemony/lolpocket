@@ -2,7 +2,7 @@ export interface Summoner {
   name: string
   color: string
   puuid: string
-  icon: string
+  icon: string | number
   region: Region
   tag: string
   //

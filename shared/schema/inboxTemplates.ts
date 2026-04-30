@@ -1,6 +1,6 @@
 export const inboxTemplateRegistry: Record<string, InboxTemplateFactory> = {
   deletePocket: createInboxTemplateDeletePocket,
-  newPocket: createInboxTemplateNewPocket,
+  newPocket: createInboxTemplateNewPocket
   // more...
 }
 
@@ -10,7 +10,7 @@ export function getInboxTemplate(item: InboxItem): InboxTemplate {
   if (!factory) {
     console.warn(`Unknown inbox template: ${item.template}`)
     return {
-      title: item.template ?? "Notification",
+      text: item.template ?? "Notification"
     }
   }
 
@@ -21,24 +21,16 @@ function createInboxTemplateNewPocket(
   vars: Record<string, string>
 ): InboxTemplate {
   return {
-    title: `Pocket <i class="font-semibold text-shade-insp/8">${vars.pocketName}</i> created!`,
+    text: `Pocket <i class="font-semibold text-shade-insp/8">${vars.pocketName}</i> created!`,
     action: {
-      function: `pocket/${vars.pocketKey}`,
-      text: "Open Pocket",
-      type: "navigate",
+      to: `pocket/${vars.pocketKey}`,
+      label: "Open Pocket",
       icon: {
         name: "chain",
-        class: "size-3.5  mb-0.5",
-      },
+        class: "size-3.5  mb-0.5"
+      }
     },
-    badge: {
-      class: "",
-      text: "Add Pocket",
-      icon: {
-        name: "add-sm",
-        class: " size-4 **:stroke-[1.6] -top-2 -left-2",
-      },
-    },
+    avatar: { icon: "i-add" }
   }
 }
 
@@ -46,23 +38,17 @@ function createInboxTemplateDeletePocket(
   vars: Record<string, string>
 ): InboxTemplate {
   return {
-    title: `Pocket <i class="font-semibold text-shade-domination/6">${vars.pocketName}</i> sent to trash.`,
+    text: `Pocket <i class="font-semibold text-shade-domination/6">${vars.pocketName}</i> sent to trash.`,
     action: {
-      function: `backpack/trash`,
-      text: "Go to trash",
-      type: "navigate",
+      to: `/backpack/trash`,
+      label: "Go to trash",
       icon: {
         name: "open",
-        class: "size-3.5  mb-0.5 ds-2xs mr-1 ",
-      },
+        class: "size-3.5  mb-0.5 ds-2xs mr-1 "
+      }
     },
-    badge: {
-      class: "",
-      text: "Delete Pocket",
-      icon: {
-        name: "minus-sm",
-        class: " size-4 **:stroke-[1.6] -top-2 -left-2",
-      },
-    },
+    avatar: {
+      icon: "minus"
+    }
   }
 }

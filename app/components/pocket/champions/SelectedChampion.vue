@@ -17,7 +17,9 @@ const pocketChampions = computed({
 const open = ref<boolean>(false)
 
 function handleRemove() {
-  const champ = pocketChampions.value.findIndex((c) => c === champion.key)
+  const champ = pocketChampions.value.findIndex(
+    (c: string) => c === champion.key
+  )
   if (champ >= 0) pocketChampions.value.splice(champ, 1)
 }
 </script>

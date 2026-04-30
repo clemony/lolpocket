@@ -176,6 +176,7 @@ export const icon = {
     square: "lucide:square", //'i-square'
     star: "ph:star", //'i-star'
     "star-fill": "ph:star-fill", //'i-star-fill'
+    sparkle: "meteor-icons:sparkles", //i-meteor-icons-sparkles
 
     key: "lucide:key-round", //'i-key'
     "pin-solid": "iconoir:pin-solid", //'i-pin-solid'

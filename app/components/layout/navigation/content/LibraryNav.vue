@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
-import { libraryNav } from "~/utils/routes"
 
 const {
   size = "md",
@@ -13,11 +12,13 @@ const {
   as?: ButtonProps["as"]
   variant?: ButtonProps["variant"]
 }>()
+
+const { library } = useRoutes()
 </script>
 
 <template>
   <UButton
-    v-for="item in libraryNav"
+    v-for="item in library"
     :key="item.label"
     :size
     :as

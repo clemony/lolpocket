@@ -7,57 +7,12 @@
   styled: true;
   /* skeleton */
   exclude:
-    navbar,
-    link,
-    toast,
-    ,
-    steps,
-    drawersidebar,
-    typography,
-    hero,
-    fileinput,
-    join,
-    glass,
-    breadcrumbs,
-    collapse,
-    countdown,
-    diff,
-    divider,
-    dock,
-    drawer,
-    dropdown,
-    modal,
-    list,
-    swap,
-    textrotate,
-    toast,
-    loading,
-    stack,
-    stat,
-    toggle,
-    table,
-    kbd,
-    label,
-    mask,
-    navbar,
-    hovergallery,
-    fab,
-    menu,
-    fieldset,
-    indicator,
-    mockup,
-    progress,
-    chat,
-    filter,
-    footer,
-    select,
-    radio,
-    avatar,
-    range,
-    calendar,
-    card,
-    validator,
-    carousel;
+    navbar, link, toast, steps, drawersidebar, typography, hero, fileinput,
+    join, glass, breadcrumbs, collapse, countdown, diff, divider, dock, drawer,
+    dropdown, modal, list, swap, textrotate, toast, loading, stack, stat,
+    toggle, table, kbd, label, mask, navbar, hovergallery, fab, menu, fieldset,
+    indicator, mockup, progress, filter, footer, select, radio, avatar, range,
+    calendar, card, validator, carousel;
 }
 
 @plugin "../../../../../../node_modules/daisyui/theme/index.js" {
@@ -264,17 +219,17 @@
 
   /* chat */
 
-  .chat-header {
+  /*   .chat-header {
     @apply translate-y-0.75 px-2 text-xs leading-0!;
   }
   .chat-footer {
     @apply -translate-y-2.75 px-2 text-xs! leading-0!;
   }
-
+ */
   .chat-bubble {
     @apply bg-p2;
     &::before {
-      @apply translate-x-1 -translate-y-[6.5px] scale-x-200 scale-y-250;
+      @apply -translate-x-px; /*  translate-y-[-6.5px] scale-x-200 scale-y-250; */
     }
   }
 }

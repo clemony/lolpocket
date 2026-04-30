@@ -10,7 +10,7 @@ definePageMeta({
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 
 const el = useTemplateRef<HTMLElement>("el")

@@ -1,11 +1,19 @@
 <script lang="ts" setup>
 import { mapPositions } from "#shared/constants/misc/positions"
+import type { SelectProps, TabsProps } from "@nuxt/ui"
 import { useMatchRoles } from "~/domain/match/useMatchRoles"
 
-const { class: className, orientation = "horizontal" } = defineProps<{
+interface QueueFiltersProps {
+  type?: "tabs" | "select"
   class?: HTMLAttributes["class"]
-  orientation?: DataOrientation
-}>()
+  tabs?: Pick<TabsProps, "size" | "ui">
+  select?: Pick<SelectProps, "size" | "ui" | "placeholder">
+}
+
+const props = withDefaults(defineProps<QueueFiltersProps>(), {
+  size: "md",
+  type: "tabs"
+})
 
 const { summoner } = storeToRefs(sSession())
 const store = matchFilter()
@@ -20,6 +28,7 @@ const roles = computed(() => {
     const find = matchRoles?.find((r) => r.name === p.label)
     return {
       ...p,
+      value: p.label,
       icon: `i-lp-${p.label.toLowerCase()}`,
       disabled: p.label === "all" ? false : !find?.games
     }
@@ -34,6 +43,7 @@ const roleModel = computed({
 
 <template>
   <UTabs
+    v-if="props.type === 'tabs'"
     v-model:model-value="roleModel"
     size="md"
     :ui="{
@@ -43,7 +53,6 @@ const roleModel = computed({
       leadingIcon: 'size-5'
     }"
     :items="roles"
-    value-key="label"
     default-value="all">
     <template #leading="{ item }">
       <UTooltip
@@ -58,37 +67,11 @@ const roleModel = computed({
     </template>
   </UTabs>
 
-  <!--   <URadioGroup
+  <USelect
+    v-else-if="props.type === 'select'"
+    v-bind="select"
     v-model:model-value="roleModel"
-    :ui="{
-      root: String(className),
-      fieldset: 'gap-5',
-      item: cn(
-        'hover:inset-shadow-morphic-sm relative h-10 basis-1/4 cursor-pointer items-center rounded-lg border transition-all duration-0 hover:border-p3! hover:bg-p1 has-not-checked:border-transparent',
-
-        'has-checked:border-p3 has-checked:shadow-sm has-checked:drop-shadow-sm has-checked:drop-shadow-black/5 has-checked:duration-300',
-
-        'has-checked:hover:border-p3! has-checked:hover:bg-transparent! has-checked:hover:shadow-sm! has-checked:hover:inset-shadow-none! has-checked:hover:drop-shadow-sm!',
-
-        'has-disabled:hover:border-transparent! has-disabled:hover:bg-transparent! has-disabled:hover:inset-shadow-none!',
-      ),
-    }"
-    orientation="horizontal"
-    variant="card"
-    size="sm"
-    indicator="hidden"
-    class="w-full"
-    :items="roles"
-    value-key="label"
-    default-value="all">
-    <template #label="{ item }">
-      <Tooltip
-        :side="item.disabled ? 'top' : 'bottom'"
-        class="absolute inset-0 grid size-full place-items-center"
-        :ui="{ content: 'capitalize' }"
-        :label="item.label">
-        <Icon :name="item.icon" :class="{ 'opacity-20': item.disabled }" />
-      </Tooltip>
-    </template>
-  </URadioGroup> -->
+    :icon="`i-lp-${roleModel?.toLowerCase()}`"
+    :content="{ position: 'item-aligned' }"
+    :items="roles" />
 </template>

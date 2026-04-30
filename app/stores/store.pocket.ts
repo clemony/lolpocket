@@ -1,7 +1,8 @@
-export const usePockets = defineStore(
+export const pocketStore = defineStore(
   "pocketStore",
   () => {
     const pockets = ref<Pocket[]>([])
+
     const tags = ref<string[]>([])
     // In your usePocketStore
 
@@ -12,19 +13,26 @@ export const usePockets = defineStore(
     const archive = ref<string[]>([])
     const pinned = ref<string[]>([])
 
+    function updatePocketName(pocketKey: string, newName: string) {
+      if (!pockets.value) return
+      pockets.value = pockets.value.map((p) =>
+        p.key === pocketKey ? { ...p, label: newName } : p
+      )
+    }
     return {
       archive,
       //
       downloadCard,
       pinned,
       pocketCardRef,
+      updatePocketName,
       pockets,
       tags,
       trash,
 
       // helpers
       getPocket: (key: string) =>
-        pockets.value.find((pocket) => pocket.key === key)
+        pockets.value.find((pocket: Pocket) => pocket.key === key)
     }
   },
 

@@ -20,7 +20,7 @@ const commandInput = useTemplateRef<{ inputRef: HTMLInputElement | null }>(
   "commandInput"
 )
 
-const { command } = safeObject(inject<UiController>("app"))
+const { command } = safeObject(inject<UiController>("command"))
 
 const reference = computed(() => commandInput.value?.inputRef ?? undefined)
 const searchQuery = computed(() => query.value.trim())
@@ -63,6 +63,7 @@ function closeCommand() {
 const activeComponent = shallowRef<string | null>("menu")
 const component: Record<string, Component> = {
   inbox: LazyCommandInbox,
+  notifications: LazyCommandInbox,
   hotkeys: LazyCommandHotkeys,
   menu: LazyCommandMenu,
   search: LazyCommandPalette
@@ -75,18 +76,21 @@ watch(
     if (oldVal !== newVal) query.value = ""
   }
 )
-const { groups } = useCommandGroups()
-const groupMap = computed<Record<string, CommandGroup | undefined>>(() =>
-  Object.fromEntries(groups.value.map((group) => [group.id, group]))
-)
-
-const backpack = computed(() => safeObject(groupMap.value.backpack))
 
 const handleUpdate = (id: string) => {
   return activeComponent.value === id
     ? (activeComponent.value = "menu")
     : (activeComponent.value = id)
 }
+
+const modalOpen = shallowRef<boolean>(false)
+
+watch(
+  () => modalOpen.value,
+  (v) => {
+    console.log("💠 - watch - newVal:", v)
+  }
+)
 </script>
 
 <template>
@@ -101,8 +105,13 @@ const handleUpdate = (id: string) => {
       :reference="reference"
       :content="content"
       :ui="{
-        content:
-          'z-[120] overflow-hidden rounded-xl bg-p0/94 p-0! bg-blend-screen shadow-lg shadow-black/8 drop-shadow-none backdrop-blur-lg'
+        content: cn(
+          'overflow-hidden bg-p0/94 p-0! bg-blend-screen shadow-lg shadow-black/8 drop-shadow-none backdrop-blur-lg duration-300',
+          {
+            'opacity-0 pointer-events-none duration-50! shadow-none backdrop-blur-none z-0':
+              modalOpen
+          }
+        )
       }">
       <template #content>
         <div
@@ -110,17 +119,19 @@ const handleUpdate = (id: string) => {
           class="w-188 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
           :style="panelStyle">
           <div ref="panelMeasure" class="w-188">
-            <!--      <LazyCommandHeader :backpack /> -->
             <div class="relative flex max-h-180 w-full">
               <div class="relative max-h-[inherit] w-58 border-r border-p3/80">
-                <LazyCommandSidebar :backpack />
+                <LazyCommandSidebar
+                  :active-component
+                  @update:component="handleUpdate($event)" />
               </div>
 
               <component
                 :is="component[activeComponent ?? 'menu']"
-                :groups="groupMap"
                 :query="searchQuery"
+                :active-component
                 :reference="panelMeasure"
+                @update-modal="modalOpen = $event"
                 @close="closeCommand()" />
             </div>
             <LazyCommandFooter

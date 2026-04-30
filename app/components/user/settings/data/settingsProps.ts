@@ -46,26 +46,20 @@ export const tabContent: Record<string, SettingsContent> = {
   }
 }
 
-export const items = computed(() => {
-  const { groups } = useCommandGroups()
-  return (
-    (groups.value
-      .find((i) => i.id === "help")
-      ?.items?.find((i) => i.id === "/settings")
-      ?.children?.map((i: CommandItem) => ({
-        label: i.label,
-        value: i.label,
-        icon: i.icon,
-        ui: { leadingIcon: i.ui.leadingIcon }
-      })) as TabsItem[]) ?? []
-  )
-})
-
 export interface SwitchGroup {
   legend?: string
-  items: SwitchGroup[] | SwitchProps[] | Record<string, SwitchProps>
+  items: SwitchGroup[] | Switch[]
   description?: string
   type?: "group" | "items"
   icon?: string
   class?: HTMLAttributes["class"]
+}
+
+export interface Switch {
+  icon?: string
+  label?: string
+  description?: string
+  id: OptionKey<string>
+  defaultValue?: boolean
+  ui?: SwitchProps["ui"]
 }

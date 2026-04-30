@@ -28,3 +28,7 @@ export function isDesktop() {
   const device = getDevice()
   return ["MacOS", "Windows", "Linux"].includes(device)
 }
+
+export function isMobile() {
+  return getDevice() === "Mobile"
+}

@@ -1,12 +1,15 @@
+import * as v from "valibot"
+
 export const user = defineStore(
   "userStore",
   () => {
-    const sb = ref<Account>()
-    const account = ref<AccountData>()
+    const account = ref<Account>()
     const settings = ref<Settings>()
+    const summoner = ref<Summoner>()
+    const inbox = ref<Inbox>(createEmptyInbox())
+
     const identities =
       ref<Record<ProviderKey<string>, ProviderIdentity | null>>()
-    const inbox = ref<Inbox>({ messages: [], notifications: [] })
 
     const { cache } = storeToRefs(summonerStore())
 
@@ -16,13 +19,13 @@ export const user = defineStore(
           account.value?.puuid ?? ""
         ],
       (update) => {
-        if (!update || !account.value) return
+        if (!update || !summoner.value) return
 
         if (
-          !account.value.lastDataUpdate ||
-          update.lastDataUpdate > account.value.lastDataUpdate
+          !summoner.value.lastDataUpdate ||
+          update.lastDataUpdate > summoner.value.lastDataUpdate
         ) {
-          Object.assign(account.value, update)
+          Object.assign(summoner.value, update)
         }
       }
     )
@@ -37,7 +40,9 @@ export const user = defineStore(
     }
 
     function clearAccount() {
-      account.value = getEmptyAccount() as unknown as AccountData
+      account.value = getEmptyAccount() as unknown as Account
+      summoner.value = undefined
+      setInbox()
     }
 
     function createEmptyInbox(): Inbox {
@@ -54,15 +59,34 @@ export const user = defineStore(
     }
 
     function addInboxMessage(message: InboxMessage) {
-      inbox.value ??= createEmptyInbox()
       inbox.value.messages = [...inbox.value.messages, message]
     }
 
+    function addInboxNotification(notification: InboxNotification) {
+      inbox.value.notifications = [
+        notification,
+        ...inbox.value.notifications
+      ].slice(0, 20)
+    }
+
     function markInboxMessageRead(id: string, read = true) {
-      inbox.value ??= createEmptyInbox()
       inbox.value.messages = inbox.value.messages.map(
         (message: InboxMessage) =>
-          message.id === id ? { ...message, read } : message
+          message.id === id
+            ? { ...message, read_at: read ? new Date().toISOString() : null }
+            : message
+      )
+    }
+
+    function markInboxNotificationRead(id: string, read = true) {
+      inbox.value.notifications = inbox.value.notifications.map(
+        (notification: InboxNotification) =>
+          notification.id === id
+            ? {
+                ...notification,
+                read_at: read ? new Date().toISOString() : null
+              }
+            : notification
       )
     }
 
@@ -71,9 +95,11 @@ export const user = defineStore(
      * @param id the id of the message to delete
      */
     function deleteInboxMessage(id: string) {
-      inbox.value ??= createEmptyInbox()
-      inbox.value.messages = inbox.value.messages.filter(
-        (message: InboxMessage) => message.id !== id
+      inbox.value.messages = inbox.value.messages.map(
+        (message: InboxMessage) =>
+          message.id === id
+            ? { ...message, trashed_at: new Date().toISOString() }
+            : message
       )
     }
 
@@ -81,17 +107,67 @@ export const user = defineStore(
       subSearch: ["meta", "shift", "K"]
     })
 
+    /*     FOLDERS */
+
+    const folderKeys = computed(() => {
+      const userFolders =
+        settings.value && settings?.value.folders
+          ? settings?.value.folders.map((f) => f.id)
+          : []
+      return ["pockets", "archive", "trash", ...(userFolders || "")].filter(
+        Boolean
+      )
+    })
+
+    const folderLocationSchema = v.fallback(
+      v.picklist(folderKeys.value ?? []),
+      "pockets"
+    )
+
+    function newPocketFolder(options?: { label?: string; location?: string }) {
+      const folder = {
+        label: options?.label || "",
+        id: crypto.randomUUID(),
+        icon: "i-folder",
+        location: options?.location || "",
+        order: settings.value?.folders.length || 0
+      }
+
+      if (!settings.value)
+        settings.value = getEmptySettings() as unknown as Settings
+      settings.value.folders = [...settings.value.folders, folder]
+
+      return folder
+    }
+
+    function updateFolderName(folderId: string, newLabel: string) {
+      console.log("🥸 - updateFolderName - newName:", newLabel)
+      if (!settings.value) return
+      settings.value.folders = settings.value.folders.map((f) =>
+        f.id === folderId ? { ...f, label: newLabel } : f
+      )
+      console.log(
+        "🥸 - updateFolderName - settings.value.folders:",
+        settings.value.folders
+      )
+    }
     return {
       settings,
       keybinds,
+      summoner,
       account,
       clearAccount,
       inbox,
       setInbox,
       addInboxMessage,
+      addInboxNotification,
       markInboxMessageRead,
+      markInboxNotificationRead,
       deleteInboxMessage,
-      sb,
+      newPocketFolder,
+      folderLocationSchema,
+      updateFolderName,
+      folderKeys,
       identities,
       hotkeys
     }

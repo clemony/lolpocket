@@ -1,5 +1,5 @@
 // shared/schemas/user.ts
-import type { Account, Settings } from "#shared/types"
+
 import { feedKeys } from "#shared/types"
 import * as v from "valibot"
 import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
@@ -32,7 +32,6 @@ export const accountSchema = v.object({
   peer_messages: v.fallback(v.boolean(), false),
   public_pockets: v.nullable(v.array(v.pipe(v.string(), v.uuid()))),
   splash: v.nullable(v.string()),
-  locale: v.nullable(v.string()),
   color: v.fallback(v.string(), "insp"),
   updated: v.nullable(
     v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
@@ -48,9 +47,19 @@ export const emailSchema = v.pipe(
 )
 
 const feedCategorySchema = v.fallback(v.array(v.string()), feedKeys)
+
+export const folderSchema = v.object({
+  id: v.pipe(v.string(), v.uuid("folder uuid malformed")),
+  label: v.fallback(v.string(), ""),
+  icon: v.fallback(v.string(), ""),
+  location: v.fallback(v.string(), ""),
+  order: v.fallback(v.number(), 0)
+})
+
 // Settings
 export const settingsSchema = v.object({
   locale: v.fallback(v.string(), "en"),
+  folders: v.fallback(v.array(folderSchema), []),
   theme: v.fallback(v.string(), "system"),
   favorite_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_summoners: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
@@ -76,5 +85,23 @@ export const settingsSchema = v.object({
   updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
 })
 
-export const getEmptyAccount = () => v.getDefaults(accountSchema)
+export const getEmptyAccount = (): Partial<Account> =>
+  v.getDefaults(accountSchema)
 export const getEmptySettings = () => v.getDefaults(settingsSchema)
+
+export type Settings = v.InferOutput<typeof settingsSchema>
+export type OptionKey<T extends string> = Partial<
+  keyof Omit<Settings, "updated"> & keyof Omit<Account, "updated">
+>
+export type OptionValue = Partial<
+  Settings[OptionKey<string>] & Account[OptionKey<string>]
+>
+
+export type UsernameSchema = v.InferOutput<typeof usernameSchema>
+export type EmailSchema = v.InferOutput<typeof emailSchema>
+export type Account = v.InferOutput<typeof accountSchema>
+export type FolderSchema = v.InferOutput<typeof folderSchema>
+export interface Folder extends FolderSchema {
+  openIcon?: string
+  to?: string
+}

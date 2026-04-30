@@ -86,7 +86,7 @@ export const tabsTheme = defineUiTheme({
       color: "base",
       variant: "pill",
       class: {
-        indicator: "bg-p0 inset-ring-p3",
+        indicator: "fx-depth bg-p0 shadow-xs inset-ring inset-ring-p3 depth-3",
         list: "noise bg-p1 inset-shadow-xs inset-ring inset-shadow-black/4 inset-ring-p3/80",
         trigger:
           "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc"

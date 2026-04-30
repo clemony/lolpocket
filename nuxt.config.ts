@@ -7,7 +7,6 @@ import { colors as uiThemeColors } from "./layers/ui/app/theme/colors"
 const isCFPages = process.env.CF_PAGES === "1"
 const nitroPreset = isCFPages ? "cloudflare_pages" : "cloudflare_module"
 const isProduction = process.env.NODE_ENV === "production"
-const redditPostRefreshCron = "*/30 * * * *"
 
 export default defineNuxtConfig({
   imports: {
@@ -77,7 +76,7 @@ export default defineNuxtConfig({
   },
   icon: {
     provider: "iconify",
-    serverBundle: false, // <- important
+    //serverBundle: false, // <- important
     fallbackToApi: "client-only",
     size: "18px",
     customCollections: [
@@ -129,7 +128,8 @@ export default defineNuxtConfig({
     },
     families: [
       {
-        name: "Inter"
+        name: "Inter",
+        weights: [300, 400, 500, 600, 700, 800, 900]
       },
       {
         name: "Source Code Pro"
@@ -268,16 +268,6 @@ export default defineNuxtConfig({
     }
   },
   vite: {
-    server: {
-      watch: {
-        // Coalesce noisy editor/extension write bursts to reduce duplicate HMR triggers.
-        awaitWriteFinish: {
-          stabilityThreshold: 180,
-          pollInterval: 30
-        },
-        ignored: ["**/.vscode/.iconify/**", "**/.DS_Store"]
-      }
-    },
     optimizeDeps: {
       include: [
         "valibot",

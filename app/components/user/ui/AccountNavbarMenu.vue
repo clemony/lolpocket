@@ -1,8 +1,9 @@
 <script lang="ts" setup>
+import type { InboxMessage } from "#shared/types"
 import { themes } from "~/domain/lp/ui/theme"
 import { useSignOut } from "../auth/useAuth"
 
-const summoner = computed(() => user().account)
+const summoner = computed(() => user().summoner)
 
 const open = shallowRef<boolean>(false)
 
@@ -39,7 +40,7 @@ const themeModel = computed({
           <SummonerIcon class="size-11 rounded-lg" />
           <div class="flex flex-col">
             <h1
-              class="truncate pl-1 text-xxl! leading-none font-semibold text-pc/90 drop-shadow-2xs">
+              class="truncate pl-1 text-3xl! leading-none font-semibold text-pc/90 drop-shadow-2xs">
               {{ summoner?.name }}
             </h1>
             <SummonerId
@@ -59,7 +60,11 @@ const themeModel = computed({
         <span
           v-if="user().inbox?.messages?.length"
           class="absolute right-4 font-mono text-sm opacity-60">
-          {{ user().inbox?.messages?.filter((m) => !m.read).length ?? 0 }}
+          {{
+            ((user().inbox?.messages ?? []) as InboxMessage[]).filter(
+              (m: InboxMessage) => !m.read_at
+            ).length
+          }}
         </span>
       </UButton>
     </div>
@@ -101,6 +106,6 @@ const themeModel = computed({
         <icon name="log-in" />
         Log in
       </UButton>
-    </div>
-  </UPopover>>
+    </div> </UPopover
+  >>
 </template>

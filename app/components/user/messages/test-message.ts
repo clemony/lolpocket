@@ -1,23 +1,77 @@
+import type { AvatarProps } from "@nuxt/ui"
+
 export function createTestMessage(): InboxMessage {
+  const currentUserId = user().account?.uuid ?? crypto.randomUUID()
+  const preview =
+    "Lorem ipsum dolor sit amet, maybe dinner time consectetur adipiscing elit. Phasellus et viverra justo, a vulputate orci."
+
   return {
     id: crypto.randomUUID(),
-    title: "A test message for you.",
-    content:
-      "Lorem ipsum dolor sit amet, maybe dinner time consectetur adipiscing elit. Phasellus et viverra justo, a vulputate orci. Nullam varius tempor massa, ut eleifend est porttitor ac. Aenean aliquet ut sapien nec dapibus. Pellentesque ultricies viverra lacinia. Nunc sed tincidunt nisi. Nullam quis auctor lectus. Nunc auctor fringilla tristique. Proin purus mauris, vestibulum a imperdiet at, tristique id felis. Nulla facilisi. Vivamus vestibulum porta massa, et efficitur nisl imperdiet quis. Suspendisse sagittis, mauris et luctus placerat, odio ante ornare risus, vitae lacinia enim diam quis orci. Quisque bibendum nisl nec augue ornare, sit amet pellentesque magna pretium. Sed eros eros, semper id purus ut, hendrerit dictum nunc. In ornare odio erat, in volutpat velit laoreet eu. Suspendisse in odio turpis.",
-    date: new Date().toISOString(),
-    read: false,
-    template: "",
-    vars: {},
+    recipient_uuid: currentUserId,
+    sender_uuid: currentUserId,
+    title: "A system message from clem.",
+    content: {
+      type: "doc",
+      content: [
+        {
+          type: "paragraph",
+          content: [{ type: "text", text: preview }]
+        }
+      ]
+    } as unknown as InboxMessage["content"],
+    preview,
+    created_at: new Date().toISOString(),
+    read_at: null,
+    archived_at: null,
+    trashed_at: null,
+    deleted_at: null,
+    can_reply: false,
     from: {
-      id: String(user().account?.uuid),
-      name: String(user().account?.name),
-      username: String(user().account?.username ?? ""),
-      icon: String(user().account?.icon)
+      uuid: currentUserId,
+      name: "lolpocket",
+      //usertag: "pocat",//user().summoner?.name ?? user().account?.username ?? null,
+      username: "clem", //user().account?.username ?? null,
+      icon: "/img/cat/clemicon.webp" //String(user().summoner?.icon ?? "")
+    },
+    to: {
+      uuid: currentUserId,
+      name: user().summoner?.name ?? user().account?.username ?? null,
+      username: user().account?.username ?? null,
+      icon: String(user().summoner?.icon ?? "")
     }
-    /* {
-      id: "clem@lolpocket.com",
-      name: "clem",
-      icon: "solar:cat-linear"
-    } */
   }
 }
+
+export function createTestNotification(): Partial<InboxNotification> {
+  const currentUserId = user().account?.uuid ?? crypto.randomUUID()
+  return {
+    id: crypto.randomUUID(),
+    recipient_uuid: currentUserId,
+    template: "testTemplate",
+    vars: {
+      sender: "clem",
+      adj: "p arrogant"
+    },
+    /*     icon: "",
+    header: '',
+    footer: '', */
+    created_at: new Date().toISOString()
+  }
+}
+
+const lpAvatar: AvatarProps = {
+  src: "/img/lp/48.webp",
+  size: "xl"
+}
+
+const clemAvatar: AvatarProps = {
+  src: "/img/cat/clemicon-2.webp",
+  size: "xl"
+}
+
+export const expandTestTemplate = (n: Partial<InboxNotification>) => ({
+  text: `This is a ${n.vars?.adj} test notification from ${n?.vars?.sender}.`,
+  avatar: clemAvatar,
+  header: "system clembot",
+  date: n.created_at
+})

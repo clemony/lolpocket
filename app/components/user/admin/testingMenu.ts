@@ -1,7 +1,10 @@
 import type { DropdownMenuItem } from "@nuxt/ui"
 import { heyGoodJob } from "~/domain/lp/ui/good-job"
 import { useSignOut } from "../../user/auth/useAuth"
-import { createTestMessage } from "../messages/test-message"
+import {
+  createTestMessage,
+  createTestNotification
+} from "../messages/test-message"
 
 export const testingMenu = (
   command?: Record<string, () => void>,
@@ -75,6 +78,16 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         onClick: () => {
           if (command && command.close) close()
           user().addInboxMessage(createTestMessage())
+        }
+      },
+      {
+        label: "Send test notification",
+        icon: "i-alert",
+        onClick: () => {
+          if (command && command.close) close()
+          user().addInboxNotification(
+            createTestNotification() as InboxNotification
+          )
         }
       },
       {

@@ -4,7 +4,7 @@ import type { ButtonProps } from "@nuxt/ui"
 const {
   class: className,
   pocket: p,
-  size = "2xs",
+  size = "2xs"
 } = defineProps<{
   class?: HTMLAttributes["class"]
   pocket: Pocket
@@ -19,7 +19,7 @@ const pocket = computed(() => p)
     v-if="pocket"
     label="{
       content:
-        usePockets().pinned.includes(pocket.key) === true ? 'Unpin' : 'Pin',
+        pocketStore().pinned.includes(pocket.key) === true ? 'Unpin' : 'Pin',
       theme: 'neutral',
       placement: 'bottom',
     }"
@@ -34,7 +34,7 @@ const pocket = computed(() => p)
       )
     ">
     <!--     <input
-      v-model="usePockets().pinned"
+      v-model="pocketStore().pinned"
       type="checkbox"
       class="peer hidden" /> -->
 

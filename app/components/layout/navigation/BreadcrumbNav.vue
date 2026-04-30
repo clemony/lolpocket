@@ -55,9 +55,9 @@ const chain = computed(() => getRouteChain(route.fullPath))
                     link.name === "champion_key"
                       ? champNameByKey(String(route.params.champion_key))
                       : link.name === "pocket_key"
-                        ? usePockets().getPocket(
-                          String(route.params.pocket_key)
-                        )?.name
+                        ? pocketStore().getPocket(
+                            String(route.params.pocket_key)
+                          )?.name
                         : link.meta?.title || link.name
                   }}
                 </span>

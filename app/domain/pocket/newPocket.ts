@@ -1,13 +1,14 @@
 import {
   newItemSet,
   newRuneSet,
-  newSpellSet,
+  newSpellSet
 } from "~/domain/pocket/addPocketModules"
+import { finalizePocket } from "~/domain/pocket/finalizePocket"
 import { generateName } from "~/domain/pocket/generateStrings"
 
 //
-export function newPocket(): Pocket {
-  return {
+export async function newPocket(options?: { location: LocationKey }) {
+  const p = {
     // data
     key: crypto.randomUUID(),
     name: generateName(),
@@ -41,5 +42,9 @@ export function newPocket(): Pocket {
     // time
     created: new Date().toISOString(),
     updated: new Date().toISOString(),
+    location: options?.location || "pockets",
+    order: 0
   }
+
+  finalizePocket(p)
 }

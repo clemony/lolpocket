@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { deletePocket } from "~/domain/pocket/deletePocket";
-import { duplicatePocket } from "~/domain/pocket/duplicate";
+import { deletePocket } from "~/domain/pocket/deletePocket"
+import { duplicatePocket } from "~/domain/pocket/duplicate"
 
 const props = defineProps<{
   pocket: Pocket
@@ -30,9 +30,7 @@ const pocket = ref(props.pocket)
 
   <USeparator />
 
-  <DropdownMenuItem
-    class="text-md! font-medium"
-    @click="deletePocket(pocket.key)">
+  <DropdownMenuItem class="text-md! font-medium" @click="deletePocket(pocket)">
     <icon class="size-5" name="x-folder" />
     Send to Trash
   </DropdownMenuItem>

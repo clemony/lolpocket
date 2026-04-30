@@ -30,26 +30,26 @@ export const badgeTheme = defineUiTheme({
     },
     size: {
       xs: {
-        base: "h-5 gap-1 rounded-[0.39rem] px-1.5 text-2xs/3",
+        base: "h-5 gap-1 rounded-[0.5rem] px-2 text-2xs/3",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-3.5 **:stroke-[2.4]",
         trailingIcon: "size-3.5 **:stroke-[2.4]"
       },
       sm: {
-        base: "h-6 gap-1.5 rounded-[0.47rem] px-2 align-middle text-xs/3.5",
+        base: "h-6 gap-1.5 rounded-[0.52rem] px-2.5 align-middle text-xs/3.5",
         leadingAvatarSize: "3xs",
         label: "align-middle",
         leadingIcon: "size-3.5 align-middle **:stroke-[2.4]",
         trailingIcon: "size-3.5 align-middle **:stroke-[2.4]"
       },
       md: {
-        base: "h-7 gap-1.5 rounded-[0.55rem] px-2 text-xs/4",
+        base: "h-7 gap-1.5 rounded-[0.55rem] px-2.5 text-xs/4",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-3.5 **:stroke-[2.4]",
         trailingIcon: "size-3.5 **:stroke-[2.4]"
       },
       lg: {
-        base: "gap-1 rounded-lg px-2 py-1 text-xs",
+        base: "gap-1 rounded-lg px-3 py-1 text-xs",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
         trailingIcon: "size-4"
@@ -94,7 +94,7 @@ export const badgeTheme = defineUiTheme({
       class: "bg-p2 font-semibold text-pc inset-ring-p3"
     },
     {
-      color: "tertiary",
+      color: ["primary", "secondary", "base", "tertiary"],
       variant: "outline",
       class: "text-pc inset-ring-p3"
     },

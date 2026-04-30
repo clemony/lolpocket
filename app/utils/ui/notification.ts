@@ -3,22 +3,21 @@ export function saveNotification(
   template: string,
   vars: Record<string, string>
 ) {
-  const item: InboxItem = {
+  const recipientId = user().account?.uuid
+  if (!recipientId) return
+
+  const item: InboxNotification = {
     id: crypto.randomUUID(),
-    date: Date.now().toLocaleString(),
-    read: false,
+    recipient_uuid: recipientId,
     template,
     vars,
+    related_type: null,
+    related_id: null,
+    created_at: new Date().toISOString(),
+    read_at: null,
+    dismissed_at: null
   }
 
-  const list = user().inbox?.notifications
-  if (!list) return item
-
-  list.unshift(item)
-
-  if (list.length > 20) list.pop()
-
+  user().addInboxNotification(item)
   return item
 }
-
-/* delete */

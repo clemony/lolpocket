@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { CommandItem } from "../build/useCommandGroups"
+import type { CommandGroup, CommandItem } from "../build/useCommandGroups"
 const props = defineProps<{
-  group: CommandItem
+  group: CommandGroup | undefined
 }>()
 
 const open = shallowRef<boolean>(false)
@@ -27,7 +27,7 @@ const merge = computed(() =>
         'relative ml-4 max-w-full overflow-x-hidden py-1 pr-8 pl-3 before:absolute before:left-0 before:my-auto before:h-[calc(100%-10px)] before:w-px before:border-l before:border-l-p3'
     }">
     <CommandButton
-      :value="group?.value ?? group.label"
+      :value="group.label"
       :item="{
         ...group,
         variant: open ? 'solid' : 'ghost',
@@ -36,7 +36,7 @@ const merge = computed(() =>
       }" />
     <template #content>
       <CommandButton
-        v-for="item in group.children"
+        v-for="item in group.items"
         :key="item.id"
         :value="item.value"
         :item="item" />

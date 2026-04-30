@@ -38,7 +38,7 @@ defineExpose({ onKeyDown }) */
         tabindex="0"
         :class="
           cn(
-            'rounded-md text-xxl focus:bg-p2/80 focus:ring focus:ring-p3',
+            'rounded-md text-2xl focus:bg-p2/80 focus:ring focus:ring-p3',
             `index-${index}`
           )
         "

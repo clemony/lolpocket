@@ -1,5 +1,4 @@
 import { getEmptyAccount, getEmptySettings } from "#shared/schema"
-import type { AccountData, Settings } from "#shared/types"
 import type { ThemeAccent } from "~/components/user/settings/theme/themeAccent"
 import {
   defaultThemeAccent,
@@ -23,8 +22,8 @@ function ensureUserSettings() {
 }
 
 function ensureUserAccount() {
-  user().account ??= getEmptyAccount() as unknown as AccountData
-  return user().account as AccountData
+  user().account ??= getEmptyAccount() as unknown as Account
+  return user().account as Account
 }
 
 export function useThemePreference() {

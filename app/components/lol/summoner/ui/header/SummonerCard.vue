@@ -9,7 +9,7 @@ const { mastery, splash } = storeToRefs(sData())
 const { summoner } = storeToRefs(sSession())
 const img = useImage()
 const bg = computed(
-  () => splash?.value?.replace("uncentered", "tile") ?? getRandomBg(),
+  () => splash?.value?.replace("uncentered", "tile") ?? getRandomBg()
 )
 const top = computed(() => {
   if (!mastery.value) return
@@ -27,7 +27,7 @@ console.log("🥸 - top:", top)
         background: `url(${img(bg)})`,
         backgroundSize: '100%',
         backgroundPositionY: '15%',
-        backgroundRepeat: 'no-repeat',
+        backgroundRepeat: 'no-repeat'
       }"
       class="relative z-0 mb-10 h-22 w-full overflow-hidden rounded-t-lg"
       :alt="`${summoner?.name}'s Splash`">
@@ -53,7 +53,7 @@ console.log("🥸 - top:", top)
       </div>
 
       <div class="inline items-center gap-3 px-2 pb-2 align-baseline">
-        <span class="font-serif text-xxl! leading-6 font-black drop-shadow-2xs">
+        <span class="font-serif text-3xl! leading-6 font-black drop-shadow-2xs">
           {{ summoner?.name || "Summoner" }}
         </span>
         <span v-if="summoner?.tag" class="ml-2 leading-6">

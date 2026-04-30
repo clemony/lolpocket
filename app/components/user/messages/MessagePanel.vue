@@ -1,11 +1,15 @@
 <script lang="ts" setup>
+import type { InboxMessage } from "#shared/types"
 import { markRead, sortedMessages, toggleRead } from "./inbox-management"
 
 defineOptions({
   meta: {
     name: "Inbox",
     badge: computed(
-      () => (user().inbox?.messages ?? []).filter((m) => !m.read).length
+      () =>
+        ((user().inbox?.messages ?? []) as InboxMessage[]).filter(
+          (m: InboxMessage) => !m.read_at
+        ).length
     ).value,
     class: "**:stroke-1.5",
     icon: "lucide:mail"

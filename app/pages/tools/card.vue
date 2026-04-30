@@ -8,7 +8,8 @@ const { card } = defineProps<{
 
 definePageMeta({
   name: "card",
-  title: "Card Builder",
+  title: "Card Creator",
+  description: "Create a sharable pocket snapshot card.", //send your friends a pocket shot.
 
   prefix: "Tools",
   icon: "lucide:square-pen",
@@ -37,7 +38,7 @@ const isSettingsOpen = ref<boolean>(true)
 const pocketCardRef = ref<HTMLDivElement | null>(null)
 
 onMounted(() => {
-  usePockets().pocketCardRef = pocketCardRef.value
+  pocketStore().pocketCardRef = pocketCardRef.value
 })
 // getSplash(card.splash) ||
 const img = useImage()
@@ -132,11 +133,11 @@ console.log("💠 - card.splash:", card.splash)
                 <template
                   v-if="
                     set &&
-                      set !== undefined &&
-                      card.items.length &&
-                      set !== null &&
-                      card.items[0] !== undefined &&
-                      card.items[0] !== null
+                    set !== undefined &&
+                    card.items.length &&
+                    set !== null &&
+                    card.items[0] !== undefined &&
+                    card.items[0] !== null
                   ">
                   <!-- CompleteItemSets
                     :set="card.items[i]"

@@ -13,12 +13,14 @@ export const cardSchema = v.nullable(
     align: v.nullable(v.string()),
     filter: v.fallback(
       v.union([v.literal("color"), v.literal("grayscale")]),
-      "grayscale",
+      "grayscale"
     ),
     font: v.strictTuple([
       v.fallback(v.string(), "var(--font-serif)"),
-      v.fallback(v.string(), "var(--font-sans)"),
+      v.fallback(v.string(), "var(--font-sans)")
     ]),
-    splash: v.nullable(v.string()),
-  }),
+    splash: v.nullable(v.string())
+  })
 )
+
+export type Card = v.InferOutput<typeof cardSchema>

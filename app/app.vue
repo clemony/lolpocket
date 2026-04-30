@@ -14,6 +14,9 @@ useHead(() => ({
     "data-accent": user().account?.color ?? "diminuendo",
     "data-theme":
       user().settings?.theme ?? usePreferredColorScheme().value ?? "light"
+  },
+  bodyAttrs: {
+    class: "group/body"
   }
 }))
 
@@ -35,7 +38,12 @@ const sidebar: UiController = {
   }
 }
 
+const routes = buildRoutes()
+console.log("🥸 - routes:", routes)
+
+provide("command", commandOpen)
 provide("sidebar", sidebar)
+provide("routes", routes)
 </script>
 
 <template>

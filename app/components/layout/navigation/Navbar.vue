@@ -9,11 +9,11 @@ function toggleSettings() {
 
 <template>
   <UHeader
-    mode="slideover"
     title="LP"
     :toggle="false"
     :ui="{
-      root: 'z-50 translate-3d transform-gpu',
+      root: 'z-50 translate-3d transform-gpu px-0',
+      container: 'px-0',
       title: 'hidden'
     }">
     <template #left>

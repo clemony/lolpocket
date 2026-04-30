@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
   title: "Docs",
-  icon: "lucide:square-terminal",
-  order: 5,
+  icon: "",
+  order: 5
 })
 </script>
 

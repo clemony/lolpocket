@@ -36,7 +36,7 @@ const summoner = computed(() => s)
     <div class="flex size-full flex-col justify-center gap-0.5">
       <div class="flex items-center justify-between">
         <h1
-          class="font-serif text-xxl leading-none font-bold text-pc/94 drop-shadow-sm">
+          class="font-serif text-2xl leading-none font-bold text-pc/94 drop-shadow-sm">
           {{ summoner?.name }}
         </h1>
         <slot />

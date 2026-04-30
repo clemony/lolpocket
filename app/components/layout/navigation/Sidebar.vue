@@ -8,7 +8,6 @@ import {
   LazyThemeSettings
 } from "#components"
 import type { SidebarProps, TabsItem } from "@nuxt/ui"
-import { userMenuItems } from "../../user/ui/userMenuItems"
 import type { CommandItem } from "./command/build/useCommandGroups"
 import { useCommandGroups } from "./command/build/useCommandGroups"
 const {
@@ -21,20 +20,8 @@ const emit = defineEmits(["search", "open"])
 
 const { account } = storeToRefs(user())
 
-const { groups } = useCommandGroups()
-console.log("🥸 - groups:", groups)
-const items = computed(
-  () =>
-    (groups.value
-      .find((i) => i.id === "help")
-      ?.items?.find((i) => i.id === "/settings")
-      ?.children?.map((i: CommandItem) => ({
-        label: i.label,
-        value: i.label,
-        icon: i.icon
-      })) as TabsItem[]) ?? []
-)
-console.log("🥸 - items:", items)
+const routes = useRoutes()
+const groups = useCommandGroups(routes)
 
 const tab = defineModel<string>("tab", { default: "App" })
 const tabs = {
@@ -111,7 +98,7 @@ const tabs = {
         @click="emit('open', false)" />
       <UTabs
         v-model:model-value="tab"
-        :items
+        :items="groups.settings?.items"
         variant="pill"
         orientation="vertical"
         size="md"

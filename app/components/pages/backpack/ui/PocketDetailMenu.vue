@@ -8,11 +8,13 @@ const isDisabled = computed(() => pocketKey === null)
 const pocket = computed(() => {
   if (!pocketKey) return
 
-  return pocketKey ? usePockets().getPocket(pocketKey) : null
+  return pocketKey ? pocketStore().getPocket(pocketKey) : null
 })
 
 const pocketKeySafe = computed(() => pocket.value?.key ?? "")
-const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
+const pinned = computed(() =>
+  pocketStore().pinned.includes(pocketKeySafe.value)
+)
 </script>
 
 <template>
@@ -32,7 +34,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
         ">
         <input
           v-if="pocket && pocket?.key"
-          v-model="usePockets().pinned"
+          v-model="pocketStore().pinned"
           class="peer hidden"
           :value="pocket.key"
           type="checkbox" />
@@ -46,7 +48,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
         label="'Move to archive'"
         base="btn"
         :variant="
-          usePockets().archive.includes(pocketKeySafe) ? 'outline' : 'ghost'
+          pocketStore().archive.includes(pocketKeySafe) ? 'outline' : 'ghost'
         "
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
@@ -55,7 +57,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
         ">
         <input
           v-if="pocket && pocket?.key"
-          v-model="usePockets().pinned"
+          v-model="pocketStore().pinned"
           class="peer hidden"
           :value="pocket.key"
           type="checkbox" />
@@ -67,7 +69,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
         label="'Move to trash'"
         base="btn"
         :variant="
-          usePockets().trash.includes(pocketKeySafe) ? 'outline' : 'ghost'
+          pocketStore().trash.includes(pocketKeySafe) ? 'outline' : 'ghost'
         "
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {

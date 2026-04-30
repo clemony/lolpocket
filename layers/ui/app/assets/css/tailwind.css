@@ -36,6 +36,7 @@
     @apply text-md text-pc selection:bg-neutral/80 selection:text-nc;
   }
 
+
   input,
   input:where(:not([type="button"], [type="reset"], [type="submit"])),
   select,

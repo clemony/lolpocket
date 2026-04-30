@@ -1,4 +1,3 @@
-import type { Account } from "#shared/types"
 import { readBody } from "h3"
 import { requireUser } from "../client.supabase" // assuming you export it
 
@@ -18,7 +17,6 @@ export default defineEventHandler(async (event): Promise<Account | null> => {
       username: body.username,
       peer_messages: body.peer_messages,
       public_pockets: body.public_pockets,
-      locale: body.locale,
       color: body.color
     }).filter(([, v]) => v !== undefined)
   )

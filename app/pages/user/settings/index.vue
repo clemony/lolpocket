@@ -3,10 +3,11 @@ definePageMeta({
   title: "App",
   description: "Manage general app utilities and settings.",
   icon: "i-gear",
-  path: "/settings/app",
+  path: "/settings",
+  layout: "settings-layout",
   class: "**:stroke-[2.4]!",
   prefix: "Settings",
-  order: 0
+  order: 1
 })
 </script>
 

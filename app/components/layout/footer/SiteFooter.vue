@@ -1,21 +1,20 @@
 <script lang="ts" setup>
-import type { ArrayOrNested, NavigationMenuItem, PageLink } from "@nuxt/ui"
+import type {
+  ArrayOrNested,
+  FooterColumn,
+  NavigationMenuItem,
+  PageLink
+} from "@nuxt/ui"
 import { contactInfo } from "~/domain/lp/contact/contactInfo"
 import { riotDisclaimer } from "~/domain/riot/riot-disclaimer"
-import { backpackNav, libraryNav } from "~/utils/routes"
 
 const { copied, copy, isSupported, text } = useClipboard({
-  source: String(contactInfo.support?.to )?? ""
+  source: String(contactInfo.support?.to) ?? ""
 })
 
 const copyMsg = computed(() => {
   return copied ? "Copied!" : "Copy"
 })
-
-const router = useRouter()
-const links = computed(() =>
-  router.getRoutes().filter((r) => r.name === "docs")
-)
 
 const contactLinks = computed(() =>
   [contactInfo.github, contactInfo.discord].filter(
@@ -23,19 +22,25 @@ const contactLinks = computed(() =>
   )
 )
 
-/* const right = computed(() =>
-  backpackNav
-    .filter((c: PageLink) => c?.label === "")
-    .map((l: PageLink) => ({
-      label: l.label,
+const { tools, library, nexus, backpack } = useRoutes()
+console.log("🥸 - nexus:", nexus)
+
+const links = computed(() => [
+  {
+    title: "Base",
+    links: nexus?.map((v) => ({
+      ...v,
+      ui: { linkLeadingIcon: cn("size-4.5", v.class) }
     }))
-) */
-const right = computed(() =>
-  ["champions", "items", "runes", "spells"].map((p) => ({
-    label: p,
-    to: `/${p}`
-  }))
-)
+  },
+  {
+    title: "Tools",
+    links: tools?.map((v) => ({
+      ...v,
+      ui: { linkLeadingIcon: v.class }
+    }))
+  }
+])
 </script>
 
 <template>
@@ -48,8 +53,40 @@ const right = computed(() =>
     }">
     <template #top>
       <UFooterColumns
-        :ui="{ root: 'mx-auto w-(--ui-container)' }"
-        :links="[right]" />
+        :ui="{
+          root: 'mx-auto flex w-(--ui-container)',
+          left: 'basis-2/3 space-y-6'
+        }">
+        <template #left>
+          <div class="grid w-full grid-cols-2">
+            <div>
+              <UPageLinks
+                v-for="(v, i) in links"
+                :key="i"
+                v-bind="v"
+                :ui="{
+                  list: 'flex flex-col items-start gap-4',
+                  linkLabel:
+                    'justify-start font-medium text-pc capitalize group-hover/link:underline'
+                }" />
+            </div>
+            <div>
+              <UPageLinks
+                v-for="(v, i) in links"
+                :key="i"
+                v-bind="v"
+                :ui="{
+                  list: 'flex flex-col items-start gap-4',
+                  linkLabel:
+                    'justify-start font-medium text-pc capitalize group-hover/link:underline'
+                }" />
+            </div>
+          </div>
+        </template>
+        <template #right>
+          <UInput />
+        </template>
+      </UFooterColumns>
     </template>
     <template #bottom>
       <ULink
@@ -65,8 +102,8 @@ const right = computed(() =>
       </p>
       <Grow />
 
-      <ul class="flex">
-        <li
+      <!--     <ul class="flex">
+       <li
           v-for="(link, i) in links"
           :key="link.name"
           class="flex items-center gap-1.5">
@@ -80,7 +117,7 @@ const right = computed(() =>
             class="size-4 text-nc opacity-70"
             name="slash" />
         </li>
-      </ul>
+      </ul> -->
       <ul
         class="flex shrink-0 items-center justify-end gap-2 justify-self-end *:grid *:place-items-center">
         <UButton

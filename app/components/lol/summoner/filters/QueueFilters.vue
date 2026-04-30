@@ -1,7 +1,16 @@
 <script setup lang="ts">
-const { class: className } = defineProps<{
+import type { SelectProps, TabsProps } from "@nuxt/ui"
+interface QueueFiltersProps {
+  type?: "tabs" | "select"
   class?: HTMLAttributes["class"]
-}>()
+  tabs?: Pick<TabsProps, "size" | "ui">
+  select?: Pick<SelectProps, "size" | "ui" | "placeholder">
+}
+
+const props = withDefaults(defineProps<QueueFiltersProps>(), {
+  size: "md",
+  type: "tabs"
+})
 const store = matchFilter()
 const { filter } = storeToRefs(store)
 
@@ -11,7 +20,7 @@ const queueModel = computed({
 })
 const queues = [
   {
-    label: "All",
+    label: props.type === "tabs" ? "All" : "All Queues",
     value: 0
   },
   {
@@ -30,35 +39,21 @@ const queues = [
 </script>
 
 <template>
-  <UTabs
+  <USelect
+    v-if="props.type === 'select'"
+    v-bind="select"
     v-model:model-value="queueModel"
-    size="md"
+    :content="{ position: 'item-aligned' }"
+    :items="queues" />
+  <UTabs
+    v-else-if="props.type === 'tabs'"
+    v-bind="tabs"
+    v-model:model-value="queueModel"
     :ui="{
-      trigger: 'text-pc! opacity-100'
+      ...props.tabs?.ui,
+      root: cn('w-full min-w-54', props.tabs?.ui?.root, props.class),
+      trigger: cn('text-pc! opacity-100', props.tabs?.ui?.trigger)
     }"
-    class="w-full"
     :default-value="0"
     :items="queues" />
-
-  <!--   <URadioGroup
-    v-model:model-value="queueModel"
-    :ui="{
-      root: String(className),
-      item: cn(
-        'hover:inset-shadow-morphic-sm relative h-10 basis-1/4 cursor-pointer items-center rounded-lg border transition-all duration-0 hover:border-p3! hover:bg-p1 has-not-checked:border-transparent',
-
-        'has-checked:border-p3 has-checked:shadow-sm has-checked:drop-shadow-sm has-checked:drop-shadow-black/5 has-checked:duration-300',
-
-        'has-checked:hover:border-p3! has-checked:hover:bg-transparent! has-checked:hover:shadow-sm! has-checked:hover:inset-shadow-none! has-checked:hover:drop-shadow-sm!',
-
-        'has-disabled:hover:border-transparent! has-disabled:hover:bg-transparent! has-disabled:hover:inset-shadow-none!',
-      ),
-    }"
-    orientation="horizontal"
-    variant="card"
-    size="sm"
-    indicator="hidden"
-    class="w-full"
-    :default-value="0"
-  :items="queues" />-->
 </template>

@@ -36,7 +36,7 @@ export const toastTheme = defineUiTheme({
           "inline-flex! max-w-(--ui-container) flex-row! items-center! gap-4 pb-1 align-baseline",
         title:
           "m-0! inline self-end! p-0! align-baseline text-md leading-none!",
-        description: "inline align-baseline leading-none",
+        description: "inline align-baseline text-md! leading-none",
         icon: "ml-18! inline",
         actions: "absolute right-11 justify-end justify-self-end",
         close:

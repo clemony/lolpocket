@@ -33,8 +33,8 @@ const matches = computed(() =>
 
 const filteredTags = computed(() => {
   const q = newTag.value.trim().toLowerCase()
-  if (!q) return usePockets().tags
-  return usePockets().tags.filter((tag) => tag.toLowerCase().includes(q))
+  if (!q) return pocketStore().tags
+  return pocketStore().tags.filter((tag) => tag.toLowerCase().includes(q))
 })
 const open = ref(false)
 
@@ -73,8 +73,8 @@ watch(
                 const tags = ensurePocketTags()
                 if (tag && tags && !tags.includes(tag)) {
                   tags.push(tag)
-                  if (!usePockets().tags.includes(tag))
-                    usePockets().tags.push(tag)
+                  if (!pocketStore().tags.includes(tag))
+                    pocketStore().tags.push(tag)
                 }
                 newTag = '' // reset → shows full list again
               }

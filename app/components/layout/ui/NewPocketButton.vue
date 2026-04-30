@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps, KbdProps } from "@nuxt/ui"
-import { addPocket } from "~/domain/pocket/addPocket"
+import { newPocket } from "~/domain/pocket/newPocket"
 
 type KbdUi = KbdProps["ui"] & { wrapper?: HTMLAttributes["class"] }
 type Kbd = KbdProps & { ui?: KbdUi }
@@ -33,7 +33,7 @@ const {
     label="New Pocket"
     icon="add"
     color="neutral"
-    @click="addPocket()">
+    @click="newPocket()">
     <template #trailing>
       <div class="flex items-center gap-2" :class="kbd?.ui?.wrapper">
         <UKbd

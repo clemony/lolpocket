@@ -1,103 +1,56 @@
 <script lang="ts" setup>
-import type { TreeItem } from "@nuxt/ui"
-import { useSortable } from "@vueuse/integrations/useSortable"
-
+import { useBackpackProvider } from "~/domain/backpack/useBackpack"
+import { items } from "~/domain/pocket/ui/treeItems"
 definePageMeta({
   title: "Backpack",
   icon: "i-ui-pack",
   class: " scale-94",
-  layout: false,
+  layout: "default",
   order: 2
 })
 
-const items = shallowRef<TreeItem[]>([
-  {
-    label: "app/",
-    defaultExpanded: true,
-    children: [
-      {
-        label: "composables/",
-        children: [
-          { label: "useAuth.ts", icon: "i-vscode-icons-file-type-typescript" },
-          { label: "useUser.ts", icon: "i-vscode-icons-file-type-typescript" }
-        ]
-      },
-      {
-        label: "components/",
-        defaultExpanded: true,
-        children: [
-          { label: "Card.vue", icon: "i-vscode-icons-file-type-vue" },
-          { label: "Button.vue", icon: "i-vscode-icons-file-type-vue" }
-        ]
-      }
-    ]
-  },
-  { label: "app.vue", icon: "i-vscode-icons-file-type-vue" },
-  { label: "nuxt.config.ts", icon: "i-vscode-icons-file-type-nuxt" }
-])
+const { backpack } = useRoutes()
 
-function flatten(
-  items: TreeItem[],
-  parent = items
-): { item: TreeItem; parent: TreeItem[]; index: number }[] {
-  return items.flatMap((item, index) => [
-    { item, parent, index },
-    ...(item.children?.length && item.defaultExpanded
-      ? flatten(item.children, item.children)
-      : [])
-  ])
-}
-
-function moveItem(oldIndex: number, newIndex: number) {
-  if (oldIndex === newIndex) return
-
-  const flat = flatten(items.value)
-  const source = flat[oldIndex]
-  const target = flat[newIndex]
-
-  if (!source || !target) return
-
-  const [moved] = source.parent.splice(source.index, 1)
-  if (!moved) return
-
-  const updatedFlat = flatten(items.value)
-  const updatedTarget = updatedFlat.find(({ item }) => item === target.item)
-  if (!updatedTarget) return
-
-  const insertIndex =
-    oldIndex < newIndex ? updatedTarget.index + 1 : updatedTarget.index
-  updatedTarget.parent.splice(insertIndex, 0, moved)
-}
-
-const tree = useTemplateRef<HTMLElement>("tree")
-
-useSortable(tree, items, {
-  animation: 150,
-  ghostClass: "opacity-50",
-  onUpdate: (e: any) => moveItem(e.oldIndex, e.newIndex)
-})
-const isCollapsed = ref(false)
-const route = useRoute()
-const pinned = computed(() =>
-  usePockets().pockets.filter((p) => usePockets().pinned.includes(p.key))
-)
+const { collapsed } = useBackpackProvider()
 </script>
 
 <template>
-  <!--
-          <PinnedPocketsNav
-            :pinned
-            :is-collapsed />
-                <PocketTagsInput />
-                <BackpackRoleFilter />-->
+  <UDashboardGroup
+    unit="rem"
+    class="top-(--ui-header-height) max-h-[calc(100vh-var(--ui-header-height)] flex-1 overflow-hidden">
+    <BackpackSidebar :items="computed(() => items)" />
+    <UDashboardPanel>
+      <UDashboardNavbar
+        :toggle="false"
+        :ui="{ title: 'font-serif text-4xl font-bold ds-2xs' }"
+        :icon="$route.meta?.icon || ''"
+        :title="String($route.meta?.title || $route.name)">
+        <template #leading>
+          <UDashboardSidebarCollapse
+            :variant="collapsed ? 'solid' : 'outline'"
+            :color="collapsed ? 'neutral' : 'primary'"
+            :icon="
+              collapsed
+                ? 'i-icon-park-outline-left-expand'
+                : 'i-icon-park-outline-left-bar'
+            " />
+        </template>
 
-  <NuxtLayout name="dashboard-tabs">
-    <template #dashboard-left>
-      <UTree
-        ref="tree"
-        :nested="false"
-        :unmount-on-hide="false"
-        :items="items" />
-    </template>
-  </NuxtLayout>
+        <template #trailing>
+          <UBadge size="sm" label="4" color="neutral" />
+        </template>
+
+        <template #right>
+          <UTabs
+            :items="backpack"
+            :default-value="$route.path"
+            label-key="label"
+            size="sm"
+            class="w-40"
+            :content="false" />
+        </template>
+      </UDashboardNavbar>
+      <NuxtPage :items="computed(() => items)" />
+    </UDashboardPanel>
+  </UDashboardGroup>
 </template>

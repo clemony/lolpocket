@@ -6,7 +6,8 @@ export const blogPostTheme = defineUiTheme({
     header: "pointer-events-none relative aspect-[16/9] w-full overflow-hidden",
     body: "flex min-w-0 flex-1 flex-col",
     footer: "",
-    image: "size-full object-cover object-center",
+    image:
+      "size-full object-cover object-center inset-ring inset-ring-black/10",
     title: "text-xl font-semibold text-pretty text-highlighted",
     description: "mt-1 text-pretty text-base",
     authors: "mt-auto flex flex-wrap gap-x-3 gap-y-1.5 pt-4",

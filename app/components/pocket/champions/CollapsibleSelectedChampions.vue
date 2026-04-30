@@ -7,7 +7,7 @@ const open = ref<boolean>(false)
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 
 const champions = computed(() => pocket.value?.champions ?? [])

@@ -4,6 +4,7 @@ definePageMeta({
   description: "Choose your app interface colors.",
   icon: "i-swatch",
   order: 5,
+  layout: "settings-layout",
   path: "/settings/theme",
   prefix: "Settings"
 })

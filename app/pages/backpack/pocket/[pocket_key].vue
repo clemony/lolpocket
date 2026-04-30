@@ -2,18 +2,18 @@
 definePageMeta({
   layout: false,
   props: true,
-  search: false,
+  search: false
 })
 
 const route = useRoute("pocket")
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key)),
+  pocketStore().getPocket(String(route.params.pocket_key))
 )
 
 const mainSet = computed(() => {
   const runes = pocket.value?.runes
   if (!runes || !pocket.value?._runes) return null
-  return runes.find((s) => s.id === pocket.value?._runes) ?? null
+  return runes.find((s: RuneSet) => s.id === pocket.value?._runes) ?? null
 })
 
 const selectedSet = computed(() => {

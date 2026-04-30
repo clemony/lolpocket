@@ -18,23 +18,29 @@ export const inboxBox: InboxType[] = [
 export const openBox = shallowRef<string>("Messages")
 export const inboxUnreadFilter = shallowRef<boolean>(false)
 
-export const sortedMessages = computed(() => {
-  let box = [...(user().inbox?.messages || [])]
+const messages = () => (user().inbox?.messages ?? []) as InboxMessage[]
+
+export const sortedMessages = computed<InboxMessage[]>(() => {
+  let box = [...messages()]
   box =
     openBox.value === "Messages"
-      ? box.filter((m) => !m.trash)
+      ? box.filter((m: InboxMessage) => !m.trashed_at)
       : openBox.value === "Trash"
-        ? box.filter((m) => m.trash)
+        ? box.filter((m: InboxMessage) => m.trashed_at)
         : []
-  box = inboxUnreadFilter.value ? box.filter((m) => !m.read) : box
+  box =
+    inboxUnreadFilter.value ?
+      box.filter((m: InboxMessage) => !m.read_at)
+    : box
 
   return box.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) =>
+      new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
   )
 })
 
 export function matchMsg(msgId: string): InboxMessage | undefined {
-  return user().inbox?.messages?.find((m) => m.id === msgId)
+  return messages().find((m: InboxMessage) => m.id === msgId)
 }
 
 export function markRead(msgId: string) {
@@ -44,21 +50,17 @@ export function markRead(msgId: string) {
 export function toggleRead(msgId: string) {
   const msg = matchMsg(msgId)
 
-  if (msg) user().markInboxMessageRead(msgId, !msg.read)
+  if (msg) user().markInboxMessageRead(msgId, !msg.read_at)
 }
 
 export function trashMsg(msgId: string) {
   const msg = matchMsg(msgId)
-  /*  fixme
-if (msg) {
-msg.trash
-    msg.dateTrashed = Date.now()
-  } */
+  if (msg) user().deleteInboxMessage(msgId)
 }
 
 export function trashAllRead() {
-  const a = user().inbox?.messages?.filter((m) => m.read === true) ?? []
-  a.forEach((m) => {
+  const a = messages().filter((m: InboxMessage) => Boolean(m.read_at))
+  a.forEach((m: InboxMessage) => {
     trashMsg(m.id)
   })
 }
