@@ -14,9 +14,9 @@ export default defineNuxtConfig({
     dirs: ["#shared/schema", "~/stores"]
   },
 
-  dir: {
+  /*   dir: {
     assets: "#layers/ui/app/assets"
-  },
+  }, */
 
   modules: [
     "@pinia/nuxt",
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
       pathPrefix: false
     }
   ],
-  css: ["#layers/ui/app/assets/css/tailwind.css"],
+  css: ["./layers/ui/app/css/tailwind.css"],
   image: {
     provider: isCFPages ? "cloudflare" : "ipx",
     domains: [
@@ -81,17 +81,17 @@ export default defineNuxtConfig({
     size: "18px",
     customCollections: [
       {
-        dir: "./layers/ui/app/assets/icons/lp",
+        dir: "./app/assets/icons/lp",
         prefix: "lp",
         normalizeIconName: false
       },
       {
-        dir: "./layers/ui/app/assets/icons/stat",
+        dir: "./app/assets/icons/stat",
         prefix: "stat",
         normalizeIconName: false
       },
       {
-        dir: "./layers/ui/app/assets/icons/rune",
+        dir: "./assets/icons/rune",
         prefix: "rune",
         normalizeIconName: false
       },
@@ -99,12 +99,12 @@ export default defineNuxtConfig({
         dir: "./layers/ui/app/assets/icons/ui",
         prefix: "ui",
         normalizeIconName: false
-      },
-      {
+      }
+      /*       {
         dir: "./layers/ui/app/assets/icons/i18n",
         prefix: "i18n",
         normalizeIconName: false
-      }
+      } */
     ],
     clientBundle: {
       includeCustomCollections: true

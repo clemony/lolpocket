@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "#layers/lib": ["layers/lib"],
+      "#layers/lib/*": ["layers/lib/*"],
+      "#layers/ui": ["layers/ui"],
+      "#layers/ui/*": ["layers/ui/*"],
+      "#shared": ["shared"],
+      "#shared/*": ["shared/*"],
+      "~/*": ["app/*"],
+      "~~/*": ["*"]
+    }
+  }
+}

@@ -31,7 +31,7 @@ function getChildren(id: string) {
       pocket: p,
       label: p.name,
       avatar: {
-        src: p.icon,
+        src: p.splash,
         size: "xs",
         ui: {
           image: "scale-180 translate-y-1",

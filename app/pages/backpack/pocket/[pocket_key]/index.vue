@@ -34,10 +34,10 @@ watch(
       <PocketMenubar />
     </div>
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
-      <BgSplash size="full" :src="pocket?.icon" />
+      <BgSplash size="full" :src="pocket?.splash" />
     </div>
 
-    <BgSplash size="full" :src="pocket?.icon" />
+    <BgSplash size="full" :src="pocket?.splash" />
 
     <!-- Header block -->
     <div

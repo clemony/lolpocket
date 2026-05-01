@@ -1,12 +1,16 @@
 <script lang="ts" setup>
+import type { AvatarProps } from "@nuxt/ui"
+
 const {
   champions: c,
   class: className,
   list,
+  avatar
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   champions: string[]
   list?: boolean
+  avatar?: AvatarProps
 }>()
 
 const championsTxt = computed(() => {
@@ -22,7 +26,7 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
     :class="
       cn(
         'line-clamp-1 flex grow items-center gap-1 text-sm opacity-80',
-        className,
+        className
       )
     ">
     <template v-if="c?.length">
@@ -33,42 +37,26 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
         {{ champNameByKey(champion) }}
         <span class="group-last/champion:hidden">,&thinsp;</span>
       </span>
-      <span
-        v-if="c.length > 5"
-        class="tracking-wider">
+      <span v-if="c.length > 5" class="tracking-wider">
         +{{ c.length - 4 }}...
       </span>
     </template>
-    <span
-      v-else
-      class="text-pc/60 italic">No champions</span>
+    <span v-else class="text-pc/60 italic">No champions</span>
   </div>
 
-  <div
-    v-else
-    :class="cn('avatar-group -space-x-5', className)">
+  <UAvatarGroup v-else :class="cn('avatar-group -space-x-5', className)">
     <template v-if="champions?.length">
-      <template
+      <UAvatar
         v-for="(champion, i) in champions"
-        :key="champion">
-        <div
-          v-if="i < 3"
-          class="avatar size-fit bg-p0">
-          <Champion
-            :id="champIdByKey(champion)"
-            class="size-11 rounded-full border-pc shadow-sm shadow-black" />
-        </div>
-      </template>
+        :key="champion"
+        :size="avatar?.size || 'sm'"
+        :src="`/img/champion/${champIdByKey(champion)}.webp`" />
     </template>
-    <Placeholder
-      v-else
-      class="mr-1 size-11 rounded-full" />
-    <div
-      v-if="champions?.length > 3"
-      class="avatar avatar-placeholder">
+    <div v-else class="mr-1 size-11 rounded-full" />
+    <div v-if="champions?.length > 3" class="avatar avatar-placeholder">
       <div class="w-11 bg-neutral text-sm text-neutral-content">
         <span>+99</span>
       </div>
     </div>
-  </div>
+  </UAvatarGroup>
 </template>

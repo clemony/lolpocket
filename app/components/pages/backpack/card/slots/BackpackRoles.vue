@@ -7,8 +7,8 @@ const pocket = computed(() => {
   return props.pocket
 })
 
-const roles = computed(() => {
-  const a = (props.pocket.roles ?? []).filter(
+const positions = computed(() => {
+  const a = (props.pocket.positions ?? []).filter(
     (r: string) => r !== "" && r !== null
   )
   const b = a.join(", ")
@@ -19,9 +19,9 @@ const roles = computed(() => {
 <template>
   <p
     class="divider divider-start divider-neutral mt-0 mb-3 grow flex-nowrap text-nowrap after:opacity-40"
-    :class="{ 'opacity-20': !roles.length }">
-    <span class="group/role capitalize">
-      {{ roles }}
+    :class="{ 'opacity-20': !positions.length }">
+    <span class="group/position capitalize">
+      {{ positions }}
     </span>
   </p>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import "#layers/ui/app/assets/css/plugins/embla.css"
+import "#layers/ui/app/css/plugins/embla.css"
 import { skinIndex } from "#shared/constants/champions/skin-index"
 import { getSplash } from "~/domain/utils/img"
 //import { setupTweenParallax } from "~~/layers/ui/app/config/embla-tween-parallax"

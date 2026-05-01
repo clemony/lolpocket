@@ -1,0 +1,96 @@
+
+
+&[data-color="lethality"],
+&[data-color="attackDamage"],
+&[data-color="armorPenetration"] {
+  @apply text-ad! **:text-ad!;
+}
+
+&[data-color="armor"],
+&[data-color="attackSpeed"],
+&[data-color="goldPer10"] {
+  @apply text-(--color-pre)! **:text-(--color-pre)!;
+}
+
+&[data-color="criticalStrikeChance"],
+&[data-color="criticalStrikeDamage"],
+&[data-color="lifesteal"] {
+  @apply text-(--color-dom)! **:text-(--color-dom)!;
+}
+
+&[data-color="abilityPower"],
+&[data-color="percentMagicPenetration"],
+&[data-color="flatMagicPenetration"] {
+  @apply text-(--color-sorc)! **:text-(--color-sorc)!;
+}
+
+&[data-color="healAndShieldPower"],
+&[data-color="abilityHaste"] {
+  @apply text-hsp! **:text-hsp!;
+}
+
+&[data-color="health"],
+&[data-color="healthRegen"] {
+  @apply text-hp! **:text-hp!;
+}
+
+&[data-color="mana"],
+&[data-color="manaRegen"] {
+  @apply text-mana! **:text-mana!;
+}
+
+&[data-color="magicResistance"] {
+  @apply text-mr! **:text-mr!;
+}
+
+&[data-color="flatMovespeed"],
+&[data-color="percentMovespeed"],
+&[data-color="tenacity"] {
+  @apply text-silver! **:text-silver!;
+}
+
+&[data-color="omnivamp"] {
+  @apply text-vamp! **:text-vamp!;
+}
+
+[data-role="support"] {
+  &.role-bg {
+    @apply bg-(--color-insp);
+  }
+}
+
+[data-role="middle"] {
+  &.role-bg {
+    @apply bg-(--color-sorc);
+  }
+}
+
+[data-role="bottom"] {
+  @apply bg-(--color-pre)!;
+}
+[data-role="top"] {
+  &.role-bg {
+    @apply bg-(--color-dom);
+  }
+}
+[data-role="jungle"] {
+  &.role-bg {
+    @apply bg-(--color-res);
+  }
+}
+
+&[data-color="5001"],
+&[data-color="5011"],
+&[data-color="5013"] {
+  @apply **:text-(--color-res);
+}
+&[data-color="5005"] {
+  @apply **:text-(--color-pre);
+}
+&[data-color="5007"],
+&[data-color="5010"] {
+  @apply **:text-(--color-insp)!;
+}
+&[data-color="5008"] {
+  @apply text-(--color-sorc)!;
+}

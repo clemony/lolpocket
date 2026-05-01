@@ -1,17 +1,19 @@
 <script lang="ts" setup>
 import type { InputProps } from "@nuxt/ui"
 
-const props = defineProps<InputProps>()
+const props = defineProps<Omit<InputProps, "defaultValue">>()
 const search = defineModel<string>("search", { default: "" })
 </script>
 
 <template>
   <UInput
+    v-bind="props"
     v-model:model-value="search"
-    :ui="{ base: 'w-full', root: 'w-full' }"
+    placeholder="Search backpack..."
+    :ui="{ base: 'w-full bg-p0', root: 'w-full' }"
     icon="i-search">
     <template #trailing>
-      <InputClear v-if="search" @click="search = ''" />
+      <LazyInputClear v-if="search" @click="search = ''" />
       <span v-else />
     </template>
   </UInput>

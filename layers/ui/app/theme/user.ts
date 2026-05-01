@@ -25,10 +25,10 @@ export const userTheme = defineUiTheme({
         wrapper: "flex items-center gap-1"
       },
       "2xs": {
-        name: "text-xs",
+        name: "text-sm",
         description: "text-xs",
-        root: "gap-1.5",
-        wrapper: "flex items-center gap-1.5"
+        root: "gap-1",
+        wrapper: "flex items-center gap-1"
       },
       xs: {
         name: "text-xs",

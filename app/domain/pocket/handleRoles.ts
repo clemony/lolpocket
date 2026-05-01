@@ -1,14 +1,16 @@
-export function handleRoles(pocket: Pocket, role?: string) {
-  if (!pocket.roles) return
+export function handlepositions(pocket: Pocket, position?: string) {
+  if (!pocket.positions) return
 
-  if (pocket.roles.length > 1 && pocket.roles.includes('All')) {
-    const a = pocket.roles.findIndex(r => r === 'All')
-    pocket.roles.splice(a, 1)
+  if (pocket.positions.length > 1 && pocket.positions.includes("all")) {
+    const a = pocket.positions.findIndex((r) => r === "all")
+    pocket.positions.splice(a, 1)
   }
-  if ((role && role === 'All' && pocket) || pocket.roles.length === 5) {
-    pocket.roles = ['All']
-  }
-  else if (pocket.roles.length <= 0) {
-    pocket.roles.push('All')
+  if (
+    (position && position === "all" && pocket) ||
+    pocket.positions.length === 5
+  ) {
+    pocket.positions = ["all"]
+  } else if (pocket.positions.length <= 0) {
+    pocket.positions.push("all")
   }
 }

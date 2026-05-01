@@ -21,7 +21,7 @@ const {
       :ui="{
         base: cn('group/logo grid shrink-0 place-items-center p-0', ui?.base),
         label: cn(
-          'truncate-none ellipsis-none block overflow-visible leading-none font-black',
+          'truncate-none ellipsis-none block overflow-visible leading-none font-black!',
           {
             'text-3xl': size === 'md'
           },

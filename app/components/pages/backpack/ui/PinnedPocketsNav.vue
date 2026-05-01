@@ -37,7 +37,7 @@ const { isCollapsed, pinned } = defineProps<{
             <PocketIcon
               class="size-6 rounded-full"
               size="sm"
-              :src="link.icon" />
+              :src="link.splash" />
 
             <span v-show="!isCollapsed" class="font-medium capitalize">
               {{ link.name }}
@@ -72,7 +72,7 @@ const { isCollapsed, pinned } = defineProps<{
       class="size-12"
       :to="`/${link.key}`"
       variant="ghost">
-      <PocketIcon class="size-9 rounded-full" size="sm" :src="link.icon" />
+      <PocketIcon class="size-9 rounded-full" size="sm" :src="link.splash" />
     </UButton>
   </nav>
 </template>

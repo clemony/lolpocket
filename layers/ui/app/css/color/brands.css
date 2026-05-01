@@ -1,0 +1,7 @@
+
+
+@theme inline {
+  --color-google: oklch(57% 40% 23deg);
+  --color-discord: oklch(58% 48% 273deg);
+  --color-twitch: oklch(57% 56% 297deg);
+}

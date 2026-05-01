@@ -169,7 +169,7 @@ export default antfu(
     extends: [eslintPluginBetterTailwindcss.configs.recommended],
     settings: {
       "better-tailwindcss": {
-        entryPoint: "./layers/ui/app/assets/css/tailwind.css"
+        entryPoint: "./layers/ui/app/css/tailwind.css"
       }
     },
     rules: {
@@ -182,7 +182,7 @@ export default antfu(
     settings: {
       "better-tailwindcss": {
         detectComponentClasses: true,
-        entryPoint: "./layers/ui/app/assets/css/tailwind.css",
+        entryPoint: "./layers/ui/app/css/tailwind.css",
         callees: [
           "cn",
           "clsx",
@@ -237,7 +237,7 @@ export default antfu(
     settings: {
       "better-tailwindcss": {
         detectComponentClasses: true,
-        entryPoint: "./layers/ui/app/assets/css/tailwind.css",
+        entryPoint: "./layers/ui/app/css/tailwind.css",
         callees: [
           "cn",
           "clsx",

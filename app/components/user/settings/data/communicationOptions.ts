@@ -43,7 +43,7 @@ export const communicationOptions: SwitchGroup[][] = [
           defaultValue: true
         },
         {
-          icon: "i-ui-pocket-plus",
+          icon: "i-lp-pocket-plus",
           label: "Pocket creation",
           description: "Notify  when a pocket is created.",
           ui: { icon: "**:stroke-[3.3]! inline align-icon scale-90" },
@@ -51,7 +51,7 @@ export const communicationOptions: SwitchGroup[][] = [
           defaultValue: true
         },
         {
-          icon: "i-ui-pocket-minus",
+          icon: "i-lp-pocket-minus",
           label: "Pocket deletion",
           ui: { icon: "**:stroke-[3.3]! scale-90 inline align-icon" },
           description: "Notify when a pocket is deleted.",

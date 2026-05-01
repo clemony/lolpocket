@@ -1,0 +1,174 @@
+
+
+@theme {
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica",
+    "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --font-serif:
+    "Playfair Display", Charter, "Bitstream Charter", "Sitka Text", Cambria,
+    serif;
+  --font-mono:
+    "Source Code Pro", SFMono-Regular, ui-monospace, "Liberation Mono",
+    "Courier New", Consolas, Menlo, Monaco, monospace;
+  --font-pixel-square: "GeistPixelSquare", monospace;
+  --font-pixel-line: "GeistPixelLine", monospace;
+
+  --text-*: initial;
+  --text-3xs: 0.78rem;
+  --text-2xs: 0.82rem;
+  --text-xs: 0.89rem;
+  --text-sm: 0.94rem;
+  --text-base: 0.94rem;
+  --text-md: 0.98rem;
+  --text-lg: 1.05rem;
+  --text-xl: 1.15rem;
+  --text-2xl: 1.3rem;
+  --text-3xl: 1.5rem;
+  --text-4xl: 1.675rem;
+  --text-5xl: 1.875rem;
+  --text-6xl: 2rem;
+  --text-7xl: 2.2rem;
+  --text-8xl: 2.4rem;
+}
+
+@layer components {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl font-semibold antialiased drop-shadow-2xs select-none;
+  }
+
+  h5 {
+    @apply text-lg antialiased select-none;
+  }
+
+  h6 {
+    @apply flex gap-3 text-sm font-semibold antialiased select-none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold antialiased drop-shadow-2xs select-none;
+  }
+
+  p {
+    @apply leading-5 antialiased;
+  }
+
+  span {
+    @apply antialiased;
+  }
+
+  .prose {
+    p {
+      @apply w-9/10 text-lg/9 font-medium text-pretty;
+    }
+
+    ul {
+      @apply space-y-4! marker:text-p5!;
+    }
+
+    li {
+      @apply w-9/10 leading-6.5;
+    }
+
+    blockquote ul li {
+      @apply first:mt-0!;
+    }
+
+    /* table */
+
+    table {
+      @apply w-fit! max-w-full;
+    }
+
+    th {
+      @apply w-fit! px-5! text-md;
+    }
+
+    tr {
+      @apply w-fit! even:bg-p3/80;
+    }
+
+    td {
+      @apply w-fit! px-5! text-md font-medium text-nowrap not-first:justify-self-center not-first:text-center;
+    }
+
+    /* misc */
+
+    blockquote {
+      @apply w-9/10 rounded-3xl border-l-p4 bg-p3 px-1.5 py-1 inset-ring inset-ring-p4/40 *:first:before:hidden *:last:after:hidden;
+    }
+    blockquote p {
+      @apply ml-4;
+    }
+
+    hr {
+      @apply border-p4/50! bg-p4/50;
+    }
+
+    /* headings */
+    h1 {
+      @apply text-4xl!;
+    }
+
+    h2 {
+      @apply text-2xl!;
+    }
+    a {
+      @apply hover:decoration-n5! hover:decoration-2!;
+    }
+    a:visited {
+      @apply text-n4! decoration-dotted! hover:decoration-1!;
+    }
+  }
+}
+
+/**
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: "Zodiak Variable";
+  src: url("/fonts/Zodiak/Zodiak-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: "Zodiak Variable";
+  src: url("/fonts/Zodiak/Zodiak-VariableItalic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GeistPixelSquare";
+  src: url("/fonts/GeistPixel/GeistPixel-Square.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeistPixelLine";
+  src: url("/fonts/GeistPixel/GeistPixel-Line.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}

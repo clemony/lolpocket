@@ -9,8 +9,8 @@ const championsLength = computed(() => {
   return pocket.value.champions?.length ?? 0
 })
 
-const rolesLength = computed(() => {
-  return pocket.value.roles?.length ?? 0
+const positionsLength = computed(() => {
+  return pocket.value.positions?.length ?? 0
 })
 
 const spellsLength = computed(() => {
@@ -72,11 +72,11 @@ const itemsLength = computed(() => {
     </div>
 
     <div
-      label="`${rolesLength ? rolesLength : 'no'} selected roles`"
+      label="`${positionsLength ? positionsLength : 'no'} selected positions`"
       class="flex items-center gap-3">
-      <i-roles-all class="size-5 opacity-80 drop-shadow-2xs" />
+      <i-positions-all class="size-5 opacity-80 drop-shadow-2xs" />
 
-      <span class="font-medium drop-shadow-2xs">{{ rolesLength }}</span>
+      <span class="font-medium drop-shadow-2xs">{{ positionsLength }}</span>
     </div>
 
     <div

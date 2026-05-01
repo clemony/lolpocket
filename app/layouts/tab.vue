@@ -21,7 +21,7 @@ const bg = computed(() =>
   isSummonerRoute.value
     ? sData().splash
     : pocket
-      ? pocket.icon
+      ? pocket.splash
       : champion
         ? getSplash(champion.key, "uncentered")
         : getRandomBg()

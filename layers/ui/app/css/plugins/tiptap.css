@@ -1,0 +1,138 @@
+
+
+@utility tiptap {
+  @apply
+    focus-within:outline-0
+    hover:border-p3! hover:ring-0! hover:outline-0!
+  ;
+  p {
+    @apply
+      leading-6.5 text-pretty
+      focus-within:outline-0
+    ;
+  }
+}
+
+/*       */
+@layer utilities {
+  .tiptap {
+    [data-type="deleted-comment"] {
+      @apply text-pc/40 italic!;
+    }
+    [data-type="champion"] {
+      @apply text-pc/80 italic;
+    }
+
+    [data-role="mod"],
+    [data-type="champion"],
+    [data-type="item"],
+    [data-type="spell"],
+    [data-type="rune"] {
+      @apply my-px px-2 shadow-xs inset-shadow-[-1px_-1px_0px_rgba(0,0,0,0.06)];
+    }
+
+    /* data labels */
+
+    [data-tier="legendary"] {
+      @apply
+        bg-(--color-ad)/36
+        hover:bg-(--color-ad)/70
+      ;
+    }
+
+    [data-type="spell"],
+    [data-tier="basic"],
+    [data-tier="boots"],
+    [data-tier="consumable"],
+    [data-tier="special"],
+    [data-tier="starter"] {
+      @apply
+        bg-(--color-silver)/15
+        hover:bg-(--color-silver)/55
+      ;
+    }
+
+    [data-path="precision"] {
+      @apply
+        bg-(--color-pre)/34
+        hover:bg-(--color-pre)/70
+      ;
+    }
+
+    [data-tier="epic"],
+    [data-path="inspiration"] {
+      @apply
+        bg-(--color-insp)/33
+        hover:bg-(--color-insp)/70
+      ;
+    }
+
+    [data-path="sorcery"] {
+      @apply
+        bg-(--color-sorc)/28
+        hover:bg-(--color-sorc)/70
+      ;
+    }
+
+    [data-path="domination"] {
+      @apply
+        bg-(--color-dom)/26
+        hover:bg-(--color-dom)/70
+      ;
+    }
+
+    [data-path="resolve"] {
+      @apply
+        bg-(--color-res)/30
+        hover:bg-(--color-res)/70
+      ;
+    }
+
+    [data-role="top"] {
+      @apply
+        bg-(--color-dom)/33
+        hover:bg-(--color-dom)/70
+      ;
+    }
+    [data-role="middle"] {
+      @apply
+        bg-(--color-sorc)/33
+        hover:bg-(--color-sorc)/70
+      ;
+    }
+
+    [data-role="mod"],
+    [data-role="bottom"] {
+      @apply
+        bg-(--color-g)/34
+        hover:bg-(--color-g)/70
+      ;
+    }
+
+    [data-role="jungle"] {
+      @apply
+        bg-(--color-res)/32
+        hover:bg-(--color-res)/70
+      ;
+    }
+    [data-role="support"] {
+      @apply
+        bg-(--color-insp)/36
+        hover:bg-(--color-insp)/70
+      ;
+    }
+  }
+}
+.emoji {
+  @apply align-bottom text-3xl!;
+}
+.tiptap .mention,
+.mention {
+  @apply
+    inline-flex w-max flex-nowrap items-center gap-1 rounded-lg align-bottom
+    text-md font-medium whitespace-nowrap
+  ;
+  img {
+    @apply inline-block size-5 rounded-full align-[-0.25em] shadow-xs;
+  }
+}

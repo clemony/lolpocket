@@ -71,10 +71,11 @@ function setName() {
       block
       :ui="{
         ...buttonProps?.ui,
-        root: cn('m-0! h-9! max-h-9! w-full grow! border-0!'),
+        root: cn('m-0! w-full grow! border-0!'),
         base: cn(
-          'm-0! h-9! max-h-9! w-full grow! flex-nowrap justify-start border-0! px-2.5',
-          {}
+          'm-0! h-9! max-h-9! w-full grow! flex-nowrap justify-start border-0! px-3.5 shadow-none! drop-shadow-none!',
+          {},
+          type === 'folder' ? 'h-10! max-h-10!' : 'h-9! max-h-9!'
         ),
         trailing: editing ? '' : ''
       }"

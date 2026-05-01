@@ -12,7 +12,7 @@ const config = {
   singleAttributePerLine: false,
   tailwindPreserveDuplicates: false,
   tailwindPreserveWhitespace: false,
-  tailwindStylesheet: "./layers/ui/app/assets/css/tailwind.css",
+  tailwindStylesheet: "./layers/ui/app/css/tailwind.css",
   trailingComma: "none",
   overrides: [
     {

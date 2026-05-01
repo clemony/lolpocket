@@ -17,19 +17,17 @@ export async function newPocket(options?: { location: LocationKey }) {
 
     // info
     guide: [],
-    icon: "",
+    splash: "",
 
     //
-    _champion: null,
-    _items: null,
-    _role: "All",
-    _runes: null,
-    _spells: null,
+    _role: "all" as RoleKey,
+    _map: 0 as MapKey,
+    _position: "all" as PositionKey,
 
     // sets
     champions: [],
     items: [newItemSet()],
-    roles: ["all"],
+    positions: ["all"] as PositionKey[],
     runes: [newRuneSet()],
     spells: [newSpellSet()],
 

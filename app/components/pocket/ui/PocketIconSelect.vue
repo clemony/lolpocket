@@ -9,16 +9,16 @@ const { class: className, pocket: p } = defineProps<{
 const pocket = computed(() => p).value
 const isOpen = shallowRef<boolean>(false)
 function handleSplash(e: string) {
-  pocket.icon = e.replace("centered", "tile")
+  pocket.splash = e.replace("centered", "tile")
   isOpen.value = false
 }
 
 onMounted(() => {
-  if (!pocket.icon && pocket._champion)
-    pocket.icon = getSplash(pocket._champion, "tile")
+  if (!pocket.splash && pocket._champion)
+    pocket.splash = getSplash(pocket._champion, "tile")
 })
-if (pocket.icon) {
-  pocket.icon = pocket.icon.replace("centered", "tile")
+if (pocket.splash) {
+  pocket.splash = pocket.splash.replace("centered", "tile")
 } /*
     v-model:open="isOpen"
     @update:splash="(e) => handleSplash(e)" */
@@ -32,7 +32,7 @@ if (pocket.icon) {
       <!-- TODO todo  default splash -->
       <PocketIcon
         class="pointer-events-none z-1 size-22! rounded-full transition-all duration-500 ease-in-out group-hover/icon:brightness-50 group-data-[state=open]/icon:brightness-50"
-        :src="pocket ? pocket?.icon : ''"
+        :src="pocket ? pocket?.splash : ''"
         alt="pocket icon" />
 
       <icon

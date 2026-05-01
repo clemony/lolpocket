@@ -1,5 +1,38 @@
 import * as v from "valibot"
 
+// role schema
+export const roleSchema = v.fallback(
+  v.picklist(
+    [
+      "assassin",
+      "mage",
+      "marksman",
+      "tank",
+      "fighter",
+      "specialist",
+      "enchanter",
+      "all"
+    ],
+    "Not a valid position!"
+  ),
+  "all"
+)
+
+//Position
+export const positionSchema = v.fallback(
+  v.picklist(
+    ["top", "jungle", "mid", "bot", "support", "all"],
+    "Not a valid position!"
+  ),
+  "all"
+)
+
+//Position
+export const mapSchema = v.fallback(
+  v.picklist([0, 11, 12, 21, 30, 35], "Not a real map!"),
+  0
+)
+
 // Items
 export const itemSetSchema = v.object({
   id: v.pipe(v.string(), v.uuid("item set uuid malformed")),
@@ -43,31 +76,33 @@ export const pocketSchema = v.object({
     v.pipe(v.string(), v.uuid("original author uuid malformed")),
     "mysterious pocket"
   ),
-  uuid: v.pipe(v.string(), v.uuid("author uuid malformed")),
+  uuid: v.pipe(v.string(), v.uuid("author puuid malformed")),
 
   //
   guide: v.nullable(v.array(v.string())),
-  icon: v.fallback(v.string("icon not a string"), ""),
+  splash: v.fallback(v.string("icon not a string"), ""),
 
-  // main set
-  _champion: v.nullish(v.string("champion key not a string")),
-  _items: v.nullish(v.pipe(v.string(), v.uuid("item set uuid malformed"))),
-  _role: v.fallback(v.string("role missing"), "All"),
-  _runes: v.nullish(v.pipe(v.string(), v.uuid("rune set uuid malformed"))),
-  _spells: v.nullish(v.pipe(v.string(), v.uuid("spell set uuid malformed"))),
+  // main picks
+  _champion: v.optional(v.string("champion key not a string")),
+  _items: v.optional(v.pipe(v.string(), v.uuid("item set uuid malformed"))),
+  _role: roleSchema,
+  _runes: v.optional(v.pipe(v.string(), v.uuid("rune set uuid malformed"))),
+  _spells: v.optional(v.pipe(v.string(), v.uuid("spell set uuid malformed"))),
+  _position: positionSchema,
+  _map: mapSchema,
 
   // arrays
-  champions: v.nullish(v.array(v.string())),
-  items: v.nullish(v.array(itemSetSchema)),
-  roles: v.nullish(v.array(v.string())),
-  runes: v.nullish(v.array(runeSetSchema)),
-  spells: v.nullish(v.array(spellSetSchema)),
+  champions: v.optional(v.array(v.string())),
+  items: v.optional(v.array(itemSetSchema)),
+  positions: v.optional(v.array(positionSchema)),
+  runes: v.optional(v.array(runeSetSchema)),
+  spells: v.optional(v.array(spellSetSchema)),
 
   //
   comments: v.fallback(v.boolean(), false),
   likes: v.fallback(v.number(), 1),
   public: v.fallback(v.boolean(), false),
-  tags: v.nullish(v.array(v.string())),
+  tags: v.optional(v.array(v.string())),
 
   //
   created: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
@@ -89,3 +124,6 @@ export type SpellSet = v.InferOutput<typeof spellSetSchema>
 export type RunesPrimary = v.InferOutput<typeof runesPrimarySchema>
 export type RunesSecondary = v.InferOutput<typeof runesSecondarySchema>
 export type Pocket = v.InferOutput<typeof pocketSchema>
+export type RoleKey = v.InferOutput<typeof roleSchema>
+export type PositionKey = v.InferOutput<typeof positionSchema>
+export type MapKey = v.InferOutput<typeof mapSchema>

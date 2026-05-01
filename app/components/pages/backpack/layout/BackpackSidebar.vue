@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { UCollapsible, UPopover } from "#components"
-import { toolbarButtons } from "~/domain/pocket/ui/toolbarButtons"
+import { toolbarItems } from "~/domain/pocket/ui/toolbarItems"
 import type { TreeItemExt } from "~/domain/pocket/ui/treeItems"
 
+import type { ButtonProps } from "@nuxt/ui"
 import { VueDraggable } from "vue-draggable-plus"
 import { useBackpack } from "~/domain/backpack/useBackpack"
 import { defaultPocketLinks } from "~/domain/pocket/manage/defaultFolders"
@@ -16,8 +17,6 @@ const list = shallowRef<number[]>([])
 
 const selected = shallowRef<TreeItemExt | undefined>()
 const search = shallowRef<string>("")
-
-//pocketStore().pockets = []
 
 const open = ref<boolean[]>([])
 
@@ -40,25 +39,43 @@ const folderContent = computed(() => (open.value ? UCollapsible : UPopover))
     collapsible
     resizable
     :ui="{
-      header: 'mb-2',
-      root: 'relative h-[calc(100vh-var(--ui-header-height))] min-h-[calc(100vh-var(--ui-header-height))] divide-y divide-p3 duration-200 ease-out',
-      footer: cn(
-        'mb-1! flex h-auto w-full flex-wrap gap-1.5 px-3',
+      footer: 'h-18 px-3',
+      root: 'group/sidebar relative h-[calc(100vh-var(--ui-header-height))] min-h-[calc(100vh-var(--ui-header-height))] data-[dragging=false]:duration-200 data-[dragging=false]:ease-out',
+      header: cn(
+        'flex h-18 flex-wrap gap-1.5 px-3',
         collapsed ? 'flex-col justify-center' : 'items-center'
       ),
-      body: 'flex flex-col gap-1 px-3'
+      body: 'flex flex-col gap-1 px-0 pt-0'
     }"
-    :collapsed-size="4.4"
+    :collapsed-size="4"
+    :max-size="30"
     :default-collapsed="false"
     :default-size="22">
     <template #header>
+      <UFieldGroup :orientation="!collapsed ? 'horizontal' : 'vertical'">
+        <Tooltip :label="toolbarItems?.new?.label" :disabled="!collapsed">
+          <UButton v-bind="toolbarItems.new" />
+        </Tooltip>
+        <Tooltip :label="toolbarItems?.random?.label">
+          <UButton v-bind="toolbarItems.random" :square="collapsed">
+            <template #leading>
+              <SparkleIcon
+                class="absolute size-4 text-nc opacity-0 transition-opacity duration-500 group-hover/btn:scale-110 group-hover/btn:text-p0 group-hover/btn:opacity-100" />
+            </template>
+          </UButton>
+        </Tooltip>
+      </UFieldGroup>
+      <Tooltip :label="toolbarItems?.folder?.label">
+        <UButton v-bind="toolbarItems.folder" />
+      </Tooltip>
+    </template>
+    <div class="flex items-center gap-1.5 border-y border-y-p3 px-3 py-2">
       <LazyUPopover v-if="collapsed">
         <UButton variant="ghost" icon="i-search" square />
       </LazyUPopover>
-      <LazyBackpackPocketSearch v-else />
-    </template>
-
-    <VueDraggable :model-value="list" class="w-full py-4">
+      <LazyBackpackPocketSearch v-else size="lg" />
+    </div>
+    <VueDraggable :model-value="list" class="w-full px-3 py-2">
       <div
         v-for="(item, i) in items.value"
         :key="i"
@@ -111,7 +128,7 @@ const folderContent = computed(() => (open.value ? UCollapsible : UPopover))
       :ui="{ base: 'h-9 max-h-9' }"
       variant="ghost"
       :to="item.to"></UButton>
-    <template #footer>
+    <!--     <template #footer>
       <Tooltip
         v-for="(button, i) in toolbarButtons"
         :key="i"
@@ -119,7 +136,7 @@ const folderContent = computed(() => (open.value ? UCollapsible : UPopover))
         :label="button.label">
         <UButton v-bind="button" />
       </Tooltip>
-    </template>
+    </template> -->
 
     <UDashboardResizeHandle
       :ui="{

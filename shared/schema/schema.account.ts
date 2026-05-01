@@ -18,12 +18,16 @@ export const titleSchema = v.nullable(
     v.trim()
   )
 )
-
+const  newTag = () => {
+  const array = new Int8Array(5)
+  return crypto.getRandomValues(array)
+}
 // Account
 export const accountSchema = v.object({
   puuid: v.nullable(v.string()),
   title: titleSchema,
   username: usernameSchema,
+  tag: v.fallback(v.pipe(v.string(), v.minLength(3), v.maxLength(5)), newTag().toString()),
   uuid: v.pipe(v.string(), v.uuid("invalid uuid")),
   //
   created: v.nullable(

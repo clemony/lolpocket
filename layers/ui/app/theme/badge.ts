@@ -81,7 +81,7 @@ export const badgeTheme = defineUiTheme({
     {
       color: "base",
       variant: "outline",
-      class: "text-pc inset-ring inset-ring-p4/60"
+      class: "text-pc ring ring-p4/60"
     },
     {
       color: "primary",
@@ -184,12 +184,12 @@ export const badgeTheme = defineUiTheme({
     {
       color: "gold",
       variant: "solid",
-      class: "bg-g/80 font-semibold text-white inset-ring-g **:text-white"
+      class: "bg-g/80 inset-ring-g font-semibold text-white **:text-white"
     },
     {
       color: "gold",
       variant: "soft",
-      class: "bg-g/40 font-semibold text-pc/70 inset-ring-g/50"
+      class: "bg-g/40 inset-ring-g/50 font-semibold text-pc/70"
     },
 
     // res

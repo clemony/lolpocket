@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import { useBackpackProvider } from "~/domain/backpack/useBackpack"
+import {
+  defaultPocketFolder,
+  defaultPocketLinks
+} from "~/domain/pocket/manage/defaultFolders"
 import { items } from "~/domain/pocket/ui/treeItems"
 definePageMeta({
   title: "Backpack",
@@ -10,6 +14,7 @@ definePageMeta({
 })
 
 const { backpack } = useRoutes()
+console.log("🥸 - backpack:", backpack)
 
 const { collapsed } = useBackpackProvider()
 </script>
@@ -22,13 +27,18 @@ const { collapsed } = useBackpackProvider()
     <UDashboardPanel>
       <UDashboardNavbar
         :toggle="false"
-        :ui="{ title: 'font-serif text-4xl font-bold ds-2xs' }"
+        :ui="{
+          // root: 'border-b-p0/60',
+          root: 'h-18',
+          title: 'ml-4 text-4xl font-bold tracking-tight ds-2xs',
+          left: 'gap-2'
+        }"
         :icon="$route.meta?.icon || ''"
         :title="String($route.meta?.title || $route.name)">
         <template #leading>
           <UDashboardSidebarCollapse
             :variant="collapsed ? 'solid' : 'outline'"
-            :color="collapsed ? 'neutral' : 'primary'"
+            :color="collapsed ? 'secondary' : 'primary'"
             :icon="
               collapsed
                 ? 'i-icon-park-outline-left-expand'
@@ -37,17 +47,18 @@ const { collapsed } = useBackpackProvider()
         </template>
 
         <template #trailing>
-          <UBadge size="sm" label="4" color="neutral" />
+          <UBadge size="sm" :label="4" color="neutral" class="font-semibold" />
         </template>
 
         <template #right>
           <UTabs
-            :items="backpack"
+            :items="[defaultPocketFolder, ...defaultPocketLinks]"
             :default-value="$route.path"
-            label-key="label"
-            size="sm"
-            class="w-40"
-            :content="false" />
+            value-key="to"
+            size="md"
+            class="w-80"
+            :ui="{ list: 'rounded-xl' }"
+            color="neutral" />
         </template>
       </UDashboardNavbar>
       <NuxtPage :items="computed(() => items)" />

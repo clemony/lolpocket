@@ -162,5 +162,5 @@ function handlePointerLeave() {
 </template>
 
 <style scoped>
-@import "#layers/ui/app/assets/css/animation/foil.css";
+@import "#layers/ui/app/css/animation/foil.css";
 </style>

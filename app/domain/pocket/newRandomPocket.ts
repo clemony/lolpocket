@@ -12,6 +12,7 @@ import { finalizePocket } from "~/domain/pocket/finalizePocket"
 import { generateName } from "~/domain/pocket/generateStrings"
 import { getSplash } from "~/domain/utils/img"
 import { spellIndex } from "~~/shared/constants/misc/spell-index"
+import { positionSchema, roleSchema } from "~~/shared/schema"
 
 //
 export function newRandomPocket(options?: { location: LocationKey }) {
@@ -75,7 +76,7 @@ export function newRandomPocket(options?: { location: LocationKey }) {
     return a
   }).value
 
-  const role = getRandom(mapPositions.map((p) => p.label))
+  const role = getRandom(positionSchema.options)
   const icon = computed(() => {
     const skinSets = Object.values(skinIndex)
     const a = skinSets[getRandomInt(skinSets.length)]
@@ -90,7 +91,7 @@ export function newRandomPocket(options?: { location: LocationKey }) {
     name: generateName(),
     ouuid: user().account?.uuid ?? "",
     uuid: user().account?.uuid ?? "",
-    icon: icon.value,
+    splash: icon.value,
 
     //
     _champion: champion,
@@ -98,6 +99,8 @@ export function newRandomPocket(options?: { location: LocationKey }) {
     _role: role,
     _runes: runeSet.id,
     _spells: spellSet.id,
+    _position: getRandom(positionSchema.options),
+    _map: getRandom(mapSchema.options),
 
     // sets
     champions: [champion],

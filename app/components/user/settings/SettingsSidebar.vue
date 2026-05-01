@@ -28,7 +28,7 @@ const settingsTabs = computed<TabsItem[]>(() => {
     :collapsible="collapsible"
     :side="side"
     :ui="{
-      root: 'top-(--ui-header-height) h-[calc(100vh-var(--ui-header-height)]! max-h-[calc(100vh-var(--ui-header-height)]! overflow-hidden p-0! [--sidebar-width:26rem]',
+      root: 'top-(--ui-header-height) z-10! h-[calc(100vh-var(--ui-header-height)]! max-h-[calc(100vh-var(--ui-header-height)]! overflow-hidden bg-p0 p-0! [--sidebar-width:26rem]',
       body: 'flex-1 flex-row! gap-0 p-0'
     }">
     <UCard
