@@ -2,7 +2,7 @@ import { championIndex } from "#shared/constants/champions/championIndex"
 import { itemIndex } from "#shared/constants/items/itemIndex"
 
 const leadingArticles = ["My", "This", "The"]
-const middleArticles = ["the", "my", "this"]
+const middleArticles = ["the", "my", "this", "your", "their"]
 const vowelSound = /^[aeiou]/i
 
 const modifiers = [
@@ -13,6 +13,7 @@ const modifiers = [
   "Boosted",
   "Budget",
   "Calculated",
+  "Cancelled",
   "Certified",
   "Chatbanned",
   "Clapped",
@@ -21,6 +22,7 @@ const modifiers = [
   "Cooked",
   "Cosmic",
   "Cracked",
+  "Cringe",
   "Cursed",
   "Delusional",
   "Desperate",
@@ -47,11 +49,13 @@ const modifiers = [
   "Perma Ban",
   "Premium",
   "Questionable",
+  "Ragequitting",
   "Roaming",
   "Scaling",
   "Secret",
   "Shameless",
   "Sigma",
+  "Smooth-brain",
   "Smurf",
   "Sweaty",
   "Tilted",
@@ -74,11 +78,15 @@ const suffixes = [
   "Department",
   "Diary",
   "Diff",
+  "Donger",
   "Era",
   "Experiment",
   "Factory",
   "Fiesta",
+  "Flamer",
+  "Gamer",
   "Gap",
+  "Gooner",
   "Incident",
   "Institute",
   "Main",
@@ -90,11 +98,14 @@ const suffixes = [
   "Plan",
   "Power",
   "Protocol",
+  "Rager",
   "Score",
   "Simulator",
   "Situation",
   "Spike",
   "Steal",
+  "Strat",
+  "Strategy",
   "Support Group",
   "Therapy",
   "Theory",
@@ -174,6 +185,7 @@ const moreWords = [
   "GOAT",
   "GOATED",
   "Gold",
+  "Gooner",
   "Funnel",
   "HAM",
   "Hopium",
@@ -184,7 +196,6 @@ const moreWords = [
   "Inting",
   "Invade",
   "Jungle",
-  "Keyboard Diff",
   "Gap",
   "KDA",
   "Farmer",
@@ -222,9 +233,10 @@ const moreWords = [
   "Poggers",
   "Power",
   "Proxy",
+  "Ragequit",
   "Rage",
   "Quit",
-  "Alt + F4",
+  "Alt+F4",
   "Recall",
   "Reportable",
   "Reset",
@@ -291,10 +303,14 @@ function titleCase(value: string): string {
 }
 
 function getLeagueWords(): string[] {
-  const championWords = championIndex.map((item) => cleanWords(item.name).join(" "))
+  const championWords = championIndex.map((item) =>
+    cleanWords(item.name).join(" ")
+  )
   const itemWords = itemIndex.map((item) => cleanWords(item.name).join(" "))
 
-  return [...championWords, ...itemWords, ...moreWords].map(titleCase).filter(Boolean)
+  return [...championWords, ...itemWords, ...moreWords]
+    .map(titleCase)
+    .filter(Boolean)
 }
 
 function getLeadingArticle(nextWord: string): string {
@@ -309,7 +325,9 @@ function buildTitle(): string {
   const modifier = getRandomElement(modifiers)
   const article = getLeadingArticle(modifier)
   const leagueWord = getRandomElement(leagueWords)
-  const secondLeagueWord = getRandomElement(leagueWords.filter((word) => word !== leagueWord))
+  const secondLeagueWord = getRandomElement(
+    leagueWords.filter((word) => word !== leagueWord)
+  )
   const suffix = getRandomElement(suffixes)
 
   const formats = [

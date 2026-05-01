@@ -5,11 +5,11 @@ import type { ContextMenuItemProps } from "reka-ui"
 import type { ShallowRef } from "vue"
 import { generateName } from "~/domain/pocket/generateStrings"
 import { folderActions, pocketActions } from "~/domain/pocket/ui/contextActions"
-import type { TreeItemExt } from "~/domain/pocket/ui/treeItems"
+import type { PocketButton } from "~/domain/pocket/ui/pocketFolderItems"
 
 const props = withDefaults(
   defineProps<{
-    item: TreeItemExt
+    item: PocketButton
     open?: boolean
     type?: "button" | "folder"
   }>(),
@@ -25,7 +25,7 @@ const emit = defineEmits<{
 }>()
 
 const buttonProps = computed(() => {
-  const { children, contextItems, ...rest } = props.item
+  const { children, ...rest } = props.item
   return rest
 })
 
@@ -47,8 +47,8 @@ const component = computed(() => (editing.value ? UInput : UButton))
 
 const actions = computed<ContextMenuItemProps[]>(() =>
   props.type === "folder"
-    ? (folderActions(props.item, toggleEdit).value as ContextMenuItemProps[])
-    : (pocketActions(props.item, toggleEdit).value as ContextMenuItemProps[])
+    ? (folderActions(props.item, toggleEdit)?.value as ContextMenuItemProps[])
+    : (pocketActions(props.item, toggleEdit)?.value as ContextMenuItemProps[])
 )
 
 function setName() {
@@ -88,7 +88,7 @@ function setName() {
             :name="props.item.icon"
             :class="
               cn(
-                props.item?.ui?.linkLeadingIcon,
+                props.item?.ui?.leadingIcon,
                 'absolute size-4.5',
                 props.open && props.item?.openIcon && 'opacity-0'
               )
@@ -98,7 +98,7 @@ function setName() {
             :class="
               cn(
                 'absolute size-4.5 opacity-0',
-                props.item?.ui?.linkLeadingIcon,
+                props.item?.ui?.leadingIcon,
                 props.open && 'opacity-100'
               )
             " />

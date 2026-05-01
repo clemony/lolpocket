@@ -1,13 +1,16 @@
-import type { AvatarProps, TreeItem } from "@nuxt/ui"
+import type { AvatarProps, ButtonProps, TreeItem } from "@nuxt/ui"
 import { defaultPocketFolder } from "~/domain/pocket/manage/defaultFolders"
 import { folderActions, pocketActions } from "~/domain/pocket/ui/contextActions"
 
-export interface TreeItemExt extends TreeItem {
-  avatar?: AvatarProps
+export interface PocketButton extends Omit<ButtonProps, "type"> {
+  id?: string
   pocket?: Pocket
+  children?: PocketButton[]
+  openIcon?: string
+  type?: "button" | "folder"
 }
 
-export function asTreeItem(item: TreeItemExt): TreeItemExt {
+export function asTreeItem(item: PocketButton): PocketButton {
   return item
 }
 
@@ -16,7 +19,7 @@ function mapFolder(f: Folder) {
     ...f,
     ui: {
       label: "font-medium grow"
-    } as TreeItemExt["ui"],
+    } as PocketButton["ui"],
     trailingIcon: "i-up",
 
     label: f.label ?? "",
@@ -32,7 +35,7 @@ function getChildren(id: string) {
       label: p.name,
       avatar: {
         src: p.splash,
-        size: "xs",
+        size: "xs" as AvatarProps["size"],
         ui: {
           image: "scale-180 translate-y-1",
           root: "overflow-hidden shadow-xs drop-shadow-xs"
@@ -42,7 +45,7 @@ function getChildren(id: string) {
       getKey: () => p.key
     }))
 }
-export const items = computed<TreeItemExt[]>(() => {
+export const items = computed<PocketButton[]>(() => {
   const { settings } = storeToRefs(user())
   const folders = safeObject(settings.value?.folders).map((f) => ({
     ...f,
@@ -54,21 +57,3 @@ export const items = computed<TreeItemExt[]>(() => {
     ...folders.map((f) => mapFolder(f)).filter(Boolean)
   ]
 })
-
-export function moveItem(oldIndex: number, newIndex: number) {
-  if (oldIndex === newIndex) return
-
-  const source = items.value[oldIndex]
-  const target = items.value[newIndex]
-  if (!source || !target) return
-
-  const [moved] = source.parent.splice(source.index, 1)
-  if (!moved) return
-
-  const updatedTarget = items.value.find(({ item }) => item === target.item)
-  if (!updatedTarget) return
-
-  const insertIndex =
-    oldIndex < newIndex ? updatedTarget.index + 1 : updatedTarget.index
-  updatedTarget.parent.splice(insertIndex, 0, moved)
-}

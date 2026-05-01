@@ -4,7 +4,7 @@ import {
   defaultPocketFolder,
   defaultPocketLinks
 } from "~/domain/pocket/manage/defaultFolders"
-import { items } from "~/domain/pocket/ui/treeItems"
+import { items } from "~/domain/pocket/ui/pocketFolderItems"
 definePageMeta({
   title: "Backpack",
   icon: "i-ui-pack",

@@ -1,10 +1,11 @@
 import { deletePocket } from "~/domain/pocket/deletePocket"
 import { duplicatePocket } from "~/domain/pocket/duplicate"
 import { defaultPocketFolder } from "~/domain/pocket/manage/defaultFolders"
-import type { TreeItemExt } from "~/domain/pocket/ui/treeItems"
+import type { PocketButton } from "~/domain/pocket/ui/pocketFolderItems"
 
-export function pocketActions(p: TreeItemExt, toggleEdit: () => void) {
-  const pinned = pocketStore().pinned.includes(p.key)
+export function pocketActions(p: PocketButton, toggleEdit: () => void) {
+  if (!p.pocket) return
+  const pinned = pocketStore().pinned.includes(p.pocket.key)
   const { settings } = storeToRefs(user())
   return computed(() =>
     [
@@ -51,7 +52,8 @@ export function pocketActions(p: TreeItemExt, toggleEdit: () => void) {
   )
 }
 
-export function folderActions(folder: TreeItemExt, toggleEdit: () => void) {
+export function folderActions(folder: PocketButton, toggleEdit: () => void) {
+  if (!folder || !folder.id) return
   const { settings } = storeToRefs(user())
   return computed(() =>
     [
@@ -68,7 +70,7 @@ export function folderActions(folder: TreeItemExt, toggleEdit: () => void) {
           }
         : undefined,
 
-      ...(Object.keys(defaultPocketFolder).includes(folder.id)
+      ...(Object.keys(defaultPocketFolder).includes(String(folder.id))
         ? []
         : [
             {

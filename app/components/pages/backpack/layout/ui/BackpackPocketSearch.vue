@@ -1,20 +1,27 @@
 <script lang="ts" setup>
-import type { InputProps } from "@nuxt/ui"
-
-const props = defineProps<Omit<InputProps, "defaultValue">>()
-const search = defineModel<string>("search", { default: "" })
+const { collapsed } = defineProps<{
+  collapsed: boolean
+}>()
 </script>
 
 <template>
-  <UInput
-    v-bind="props"
-    v-model:model-value="search"
-    placeholder="Search backpack..."
-    :ui="{ base: 'w-full bg-p0', root: 'w-full' }"
-    icon="i-search">
-    <template #trailing>
-      <LazyInputClear v-if="search" @click="search = ''" />
-      <span v-else />
+  <LazyUPopover v-if="collapsed" :content="{ side: 'right' }">
+    <template #default="{ open }">
+      <UButton
+        :variant="open ? 'solid' : 'outline'"
+        :color="open ? 'neutral' : 'primary'"
+        :active="open"
+        icon="i-search"
+        square />
     </template>
-  </UInput>
+    <template #content>
+      <LazyBackpackSearchInput
+        :size="asInputSize('md')"
+        :autofocus="true"
+        :ui="{
+          base: 'shadow-none ring-0 inset-shadow-none inset-ring-0 drop-shadow-none'
+        }" />
+    </template>
+  </LazyUPopover>
+  <LazyBackpackSearchInput v-else :size="asInputSize('lg')" />
 </template>

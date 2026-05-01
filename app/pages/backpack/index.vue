@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { TreeItemExt } from "~/domain/pocket/ui/treeItems"
+import type { PocketButton } from "~/domain/pocket/ui/pocketFolderItems"
 const { items } = defineProps<{
-  items: ComputedRef<TreeItemExt[]>
+  items: ComputedRef<PocketButton[]>
 }>()
 definePageMeta({
   title: "Pockets",

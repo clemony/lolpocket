@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+import {
+  buildPatchPost,
+  buildPbePost,
+  buildRedditPost
+} from "~/components/lol/external/posts/post_cards"
 import { patchIndex } from "~~/shared/constants/patch-index"
 definePageMeta({
   title: "Nexus",
@@ -23,11 +28,8 @@ definePageMeta({
         <h1 class="flex h-24 items-center px-3">Game Updates</h1>
         <div class="w-full">
           <div class="grid grid-cols-2 gap-10 px-4">
-            <LazyPatchPost
-              orientation="horizontal"
-              :patch="patchIndex[0]"
-              class="" />
-            <LazyPbePost orientation="horizontal" class="" />
+            <LazyPostCard :post="buildPatchPost()" />
+            <LazyPostCard :post="buildPbePost()" />
           </div>
         </div>
       </div>

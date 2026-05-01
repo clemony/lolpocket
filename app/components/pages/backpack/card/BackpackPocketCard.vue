@@ -30,7 +30,7 @@ function toggleEdit() {
 }
 
 const actions = computed(
-  () => pocketActions(pocket, toggleEdit).value as ContextMenuItemProps[]
+  () => pocketActions(pocket.value, toggleEdit)?.value as ContextMenuItemProps[]
 )
 
 const role = computed(() => pocket.value._role || pocket.value.positions?.[0])

@@ -61,6 +61,12 @@ const menu = computed<CommandItem[]>(
         : {}
     ].filter(Boolean) as CommandItem[]
 )
+
+function navigate(to: string) {
+  if (!to) return
+  navigateTo(to)
+  emit("close")
+}
 </script>
 
 <template>
@@ -82,13 +88,14 @@ const menu = computed<CommandItem[]>(
             <UButton
               v-for="ix in item.items"
               :key="ix.value"
+              v-bind="ix"
               block
               variant="ghost"
               :ui="{
                 ...ix.ui,
                 base: 'h-9! max-h-9! min-h-9! capitalize'
               }"
-              v-bind="ix">
+              @click.stop.prevent="navigate(ix.to)">
               <template v-if="ix?.badge" #trailing>
                 <UBadge v-bind="ix.badge" />
               </template>

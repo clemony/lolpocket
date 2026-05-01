@@ -4,7 +4,7 @@ definePageMeta({
   title: "Home",
   icon: "i-lucide-house",
   keys: ["home", "landing", "testimonials"],
-  search: false,
+  search: false
 })
 </script>
 

@@ -31,8 +31,7 @@ providePostModal(postState)
 </script>
 
 <template>
-  <!--   <Layout>
+  <Layout>
     <slot />
-  </Layout> -->
-  <slot />
+  </Layout>
 </template>

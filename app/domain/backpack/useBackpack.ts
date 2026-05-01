@@ -1,17 +1,18 @@
-export function useBackpackProvider() {
+const [useBackpackProvider, useBackpackInject] = createInjectionState(() => {
   const collapsed = shallowRef<boolean>(false)
   const toggleCollapsed = useToggle(collapsed)
-  provide("backpackCommands", { collapsed, toggleCollapsed })
-
   return {
     collapsed,
     toggleCollapsed
   }
-}
+})
+export { useBackpackProvider }
 
 export function useBackpack() {
-  const state =
-    inject<ReturnType<typeof useBackpackProvider>>("backpackCommands")
-  if (!state) throw new Error("No backpack provider found")
-  return state
+  return (
+    useBackpackInject() ?? {
+      collapsed: shallowRef<boolean>(false),
+      toggleCollapsed: () => {}
+    }
+  )
 }

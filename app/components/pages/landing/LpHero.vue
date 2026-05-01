@@ -5,7 +5,7 @@ const video = heroDisplays[0] ?? { url: "", class: "" }
 </script>
 
 <template>
-  <UPageSection class="relative h-screen w-full overflow-hidden">
+  <div class="relative h-screen w-full overflow-hidden">
     <ClientOnly>
       <div class="relative h-screen">
         <Video
@@ -56,5 +56,5 @@ const video = heroDisplays[0] ?? { url: "", class: "" }
           :is-visible="isVisible"
           @restart-timer="start()" /> -->
     </UPageHero>
-  </UPageSection>
+  </div>
 </template>
