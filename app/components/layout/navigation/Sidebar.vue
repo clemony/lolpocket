@@ -20,7 +20,7 @@ const emit = defineEmits(["search", "open"])
 
 const { account } = storeToRefs(user())
 
-const routes = useRoutes()
+const routes = useApp().routes
 const groups = useCommandGroups(routes)
 
 const tab = defineModel<string>("tab", { default: "App" })

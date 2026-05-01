@@ -26,24 +26,8 @@ useSeoMeta({
 })
 const reportComment = computed(() => threads().reportComment ?? undefined)
 
-const sidebarOpen = shallowRef<boolean>(false)
 const settingsOpen = shallowRef<boolean>(false)
-const commandOpen = shallowRef<boolean>(false)
-
-const sidebar: UiController = {
-  settings: {
-    open: settingsOpen,
-    toggle: useToggle(settingsOpen),
-    value: shallowRef<string>("App")
-  }
-}
-
-const routes = buildRoutes()
-console.log("🥸 - routes:", routes)
-
-provide("command", commandOpen)
-provide("sidebar", sidebar)
-provide("routes", routes)
+const app = useAppProvider()
 </script>
 
 <template>
@@ -74,8 +58,8 @@ provide("routes", routes)
             " />
         </NuxtLayout>
       </div>
-      <LazySidebar v-model:open="sidebarOpen" />
-      <LazySettingsSidebar v-model:open="settingsOpen" />
+      <!--       <LazySidebar /> -->
+      <LazySettingsSidebar />
       <LazyReportDialog
         v-if="user().account && reportComment"
         :comment="reportComment" />

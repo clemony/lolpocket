@@ -22,7 +22,7 @@ const contactLinks = computed(() =>
   )
 )
 
-const { tools, library, nexus, backpack } = useRoutes()
+const { tools, library, nexus, backpack } = useApp().routes
 console.log("🥸 - nexus:", nexus)
 
 const links = computed(() => [

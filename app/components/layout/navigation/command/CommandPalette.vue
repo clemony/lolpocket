@@ -18,7 +18,7 @@ const emit = defineEmits<{
 
 const hotkeysOpen = shallowRef(false)
 
-const routes = useRoutes()
+const routes = useApp().routes
 </script>
 
 <template>

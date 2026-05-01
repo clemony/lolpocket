@@ -85,7 +85,9 @@ function handlePointerLeave() {
     ref="root"
     v-bind="props"
     :style="rootStyle"
-    :class="cn('relative isolate', props.class, props.ui?.root)"
+    :class="
+      cn('group/hover-card relative isolate', props.class, props.ui?.root)
+    "
     @pointermove="handlePointerMove"
     @pointerleave="handlePointerLeave">
     <div

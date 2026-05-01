@@ -29,9 +29,11 @@ export const emptyTheme = defineUiTheme({
         description: "text-sm"
       },
       lg: {
+        root: "rounded-xl!",
         avatar: "size-11 text-[22px]",
-        title: "text-base",
-        description: "text-sm"
+        title: "text-xl font-semibold text-pc/90",
+        description: "text-md",
+        actions: "mt-2"
       },
       xl: {
         avatar: "size-12 text-2xl",
@@ -50,7 +52,7 @@ export const emptyTheme = defineUiTheme({
         description: "text-muted"
       },
       soft: {
-        root: "bg-elevated/50",
+        root: "bg-p0 shadow-sm ring shadow-black/2 ring-p3/60 drop-shadow-sm drop-shadow-black/4",
         description: "text-toned"
       },
       subtle: {

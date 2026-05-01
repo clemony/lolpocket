@@ -45,7 +45,8 @@ function getChildren(id: string) {
       getKey: () => p.key
     }))
 }
-export const items = computed<PocketButton[]>(() => {
+
+const [usePocketFolderProvider, usePocketFolders] = createInjectionState(() => {
   const { settings } = storeToRefs(user())
   const folders = safeObject(settings.value?.folders).map((f) => ({
     ...f,
@@ -57,3 +58,5 @@ export const items = computed<PocketButton[]>(() => {
     ...folders.map((f) => mapFolder(f)).filter(Boolean)
   ]
 })
+
+export { usePocketFolderProvider, usePocketFolders }

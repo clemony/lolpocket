@@ -44,19 +44,18 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
     <span v-else class="text-pc/60 italic">No champions</span>
   </div>
 
-  <UAvatarGroup v-else :class="cn('avatar-group -space-x-5', className)">
-    <template v-if="champions?.length">
+  <UAvatarGroup
+    v-else
+    size="sm"
+    :max="4"
+    :ui="{ root: cn('', className), base: 'shrink-0' }">
+    <template v-if="champions.length">
       <UAvatar
-        v-for="(champion, i) in champions"
+        v-for="champion in champions"
         :key="champion"
         :size="avatar?.size || 'sm'"
         :src="`/img/champion/${champIdByKey(champion)}.webp`" />
     </template>
-    <div v-else class="mr-1 size-11 rounded-full" />
-    <div v-if="champions?.length > 3" class="avatar avatar-placeholder">
-      <div class="w-11 bg-neutral text-sm text-neutral-content">
-        <span>+99</span>
-      </div>
-    </div>
+    <UAvatar v-else :size="avatar?.size || 'sm'" icon="i-lp-champ" />
   </UAvatarGroup>
 </template>

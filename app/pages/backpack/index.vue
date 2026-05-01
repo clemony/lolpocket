@@ -4,11 +4,11 @@ const { items } = defineProps<{
   items: ComputedRef<PocketButton[]>
 }>()
 definePageMeta({
-  title: "Pockets",
+  title: "Backpack",
+  layout: "backpack-layout",
   icon: "lucide:folder",
   prefix: "Backpack",
-  order: 1,
-  path: "/backpack/pockets"
+  order: 1
 })
 
 const selected = ref<Pocket | null>(null)

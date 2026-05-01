@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const { settings } = safeObject(inject<UiController>("sidebar"))
-
-function toggleSettings() {
-  if (!settings) return
-  settings.toggle()
-}
+const { toggle } = useApp().settings
 </script>
 
 <template>
@@ -25,7 +20,7 @@ function toggleSettings() {
     </div>
 
     <template #right>
-      <UButton icon="i-menu" @click="toggleSettings" />
+      <UButton icon="i-menu" @click="toggle()" />
     </template>
   </UHeader>
 </template>

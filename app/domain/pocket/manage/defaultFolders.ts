@@ -3,7 +3,7 @@ export const defaultPocketFolder: Folder = {
   id: "pockets",
   icon: "i-folder",
   openIcon: "i-folder-open",
-  to: "/backpack/pockets",
+  to: "/backpack",
   location: "",
   order: 0
 }

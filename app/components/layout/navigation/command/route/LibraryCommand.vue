@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const route = useRoute()
-const { library } = useRoutes()
+const { library } = useApp().routes
 </script>
 
 <template>

@@ -13,7 +13,7 @@ const {
   variant?: ButtonProps["variant"]
 }>()
 
-const { library } = useRoutes()
+const { library } = useApp().routes
 </script>
 
 <template>

@@ -135,10 +135,14 @@ function handlePointerLeave() {
       <div
         :class="
           cn(
-            'grid h-full overflow-hidden rounded-md transition-transform delay-(--delay) duration-(--duration) ease-(--easing) will-change-transform group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]',
+            'grid h-full overflow-hidden rounded-md transition-transform delay-(--delay) duration-(--duration) ease-(--easing) will-change-transform',
             {
               'origin-center transform-[rotateY(var(--r-x))_rotateX(var(--r-y))]':
-                !props.syncPerspective
+                !props.syncPerspective,
+              'group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]':
+                !props.syncPerspective,
+              'group-hover/hover-card:filter-none group-hover/hover-card:[--duration:200ms] group-hover/hover-card:[--easing:linear] group-hover/hover-card:[--opacity:0.6]':
+                props.syncPerspective
             }
           )
         ">
@@ -147,9 +151,7 @@ function handlePointerLeave() {
             v-if="src"
             :class="cn('z-0 size-full', props.ui?.image)"
             :alt
-            :src="
-              src.replace('uncentered', 'tile').replace('centered', 'tile')
-            " />
+            :src />
         </div>
         <div
           class="transition-background will-change-background grid size-full opacity-(--opacity) mix-blend-soft-light transition-opacity delay-(--delay) duration-(--duration) ease-(--easing) [background:radial-gradient(farthest-corner_circle_at_var(--m-x)_var(--m-y),rgba(255,255,255,0.8)_10%,rgba(255,255,255,0.65)_20%,rgba(255,255,255,0)_90%)] [clip-path:inset(0_0_1px_0_round_var(--radius))] [grid-area:1/1]" />

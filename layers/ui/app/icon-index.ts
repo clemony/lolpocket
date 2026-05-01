@@ -30,6 +30,7 @@ export const icon = {
     "up-down": "lucide:chevrons-up-down", //'i-up-down'
     "up-to-line": "lucide:arrow-up-to-line", //'i-up-to-line'
     "up-up": "lucide:chevrons-up", //'i-up-up'
+    "collapse-all": "lucide:list-collapse", //'i-lucide-list-collapse'
     shuffle: "lucide:shuffle", //'i-shuffle'
     swap: "lucide:arrow-right-left", //'i-swap'
     refresh: "lucide:refresh-ccw", //'i-refresh'

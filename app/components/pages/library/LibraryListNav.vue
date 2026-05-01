@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { library } = useRoutes()
+const { library } = useApp().routes
 const nav = computed(() =>
   library?.filter((l) => l.label !== useRoute().meta?.title)
 )

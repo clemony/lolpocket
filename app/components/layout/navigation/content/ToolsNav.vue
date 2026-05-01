@@ -11,7 +11,7 @@ const {
   ui?: ButtonProps["ui"]
 }>()
 
-const { tools } = useRoutes()
+const { tools } = useApp().routes
 </script>
 
 <template>

@@ -22,7 +22,7 @@ const emit = defineEmits<{
   close: []
 }>()
 
-const routes = useRoutes()
+const routes = useApp().routes
 const groupMap = useCommandGroups(routes)
 const route = useRoute()
 const routeComponent = computed(() => route.matched[0]?.meta?.command ?? null)

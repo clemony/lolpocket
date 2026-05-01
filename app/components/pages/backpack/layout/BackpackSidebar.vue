@@ -1,16 +1,16 @@
 <script lang="ts" setup>
 import { UCollapsible, UPopover } from "#components"
 import type { PocketButton } from "~/domain/pocket/ui/pocketFolderItems"
+import { usePocketFolders } from "~/domain/pocket/ui/pocketFolderItems"
 import { toolbarItems } from "~/domain/pocket/ui/toolbarItems"
 
 import type { ButtonProps } from "@nuxt/ui"
 import { VueDraggable } from "vue-draggable-plus"
 import { useBackpack } from "~/domain/backpack/useBackpack"
-import { defaultPocketLinks } from "~/domain/pocket/manage/defaultFolders"
-
-const { items } = defineProps<{
-  items: ComputedRef<PocketButton[]>
-}>()
+import {
+  defaultPocketFolder,
+  defaultPocketLinks
+} from "~/domain/pocket/manage/defaultFolders"
 
 const { collapsed } = useBackpack()
 const list = shallowRef<number[]>([])
@@ -20,17 +20,16 @@ const search = shallowRef<string>("")
 
 const open = ref<boolean[]>([])
 
-watchEffect(() => {
+/* watchEffect(() => {
   open.value = items.value.map(
     (item, index) => open.value[index] ?? !!item.children?.length
   )
-})
+}) */
 
 const setOpen = (index: number, value: boolean) => {
   open.value[index] = value
 }
-
-const folderContent = computed(() => (open.value ? UCollapsible : UPopover))
+const folders = usePocketFolders()
 </script>
 
 <template>
@@ -52,30 +51,41 @@ const folderContent = computed(() => (open.value ? UCollapsible : UPopover))
     :default-collapsed="false"
     :default-size="22">
     <template #header>
-      <UFieldGroup :orientation="!collapsed ? 'horizontal' : 'vertical'">
-        <Tooltip :label="toolbarItems?.new?.label" :disabled="!collapsed">
-          <UButton v-bind="toolbarItems.new" />
-        </Tooltip>
-        <Tooltip :label="toolbarItems?.random?.label">
-          <UButton v-bind="toolbarItems.random" :square="collapsed">
-            <SparkleIcon
-              class="absolute size-4 text-nc opacity-0 transition-opacity duration-500 group-hover/btn:scale-110 group-hover/btn:text-p0 group-hover/btn:opacity-100" />
-          </UButton>
-        </Tooltip>
-      </UFieldGroup>
-      <Tooltip :label="toolbarItems?.folder?.label">
-        <UButton v-bind="toolbarItems.folder" />
-      </Tooltip>
+      <UTabs
+        :items="[defaultPocketFolder, ...defaultPocketLinks]"
+        :default-value="$route.path"
+        value-key="to"
+        size="md"
+        class="w-80"
+        :ui="{ list: 'rounded-xl' }"
+        color="neutral" />
     </template>
-    <div class="flex items-center gap-1.5 border-y border-y-p3 px-3 py-2">
+    <div class="flex items-center gap-1.5 border-y border-y-p0 px-3 py-2">
       <LazyBackpackPocketSearch :collapsed />
     </div>
-    <VueDraggable :model-value="list" class="w-full p-2">
-      <div
-        v-for="(item, i) in items.value"
-        :key="i"
-        :value="item"
-        class="w-full">
+    <div class="flex items-center justify-between px-3">
+      <h6>Backpack</h6>
+
+      <div class="flex items-center -space-x-px">
+        <Tooltip v-for="(item, i) in toolbarItems" :key="i" :label="item.label">
+          <UButton
+            v-bind="item"
+            size="sm"
+            :label="undefined"
+            variant="link"
+            :ui="{
+              ...item.ui,
+              leadingIcon: cn(
+                '**:text-n4 group-hover/btn:**:text-pc **:[.plus-icon]:bg-p0!',
+                item.ui?.leadingIcon,
+                item.label !== 'New Pocket' ? '' : ''
+              )
+            }" />
+        </Tooltip>
+      </div>
+    </div>
+    <VueDraggable v-if="folders" :model-value="list" class="w-full p-2">
+      <div v-for="(item, i) in folders" :key="i" :value="item" class="w-full">
         <template v-if="!collapsed">
           <PocketFolderButton
             type="folder"

@@ -12,7 +12,6 @@ import type { CommandGroup } from "./build/useCommandGroups"
 import { useCommandGroups } from "./build/useCommandGroups"
 const route = useRoute()
 
-const open = ref(false)
 const query = shallowRef<string>("")
 const panelMeasure = useTemplateRef<HTMLElement>("panelMeasure")
 const panelRoot = useTemplateRef<HTMLElement>("panelRoot")
@@ -20,7 +19,7 @@ const commandInput = useTemplateRef<{ inputRef: HTMLInputElement | null }>(
   "commandInput"
 )
 
-const { command } = safeObject(inject<UiController>("command"))
+const { open, toggle } = useApp().command
 
 const reference = computed(() => commandInput.value?.inputRef ?? undefined)
 const searchQuery = computed(() => query.value.trim())
@@ -57,8 +56,8 @@ defineShortcuts({
 })
 
 function closeCommand() {
-  if (!command) return
-  command.open.value = false
+  if (!open.value) return
+  open.value = false
 }
 const activeComponent = shallowRef<string | null>("menu")
 const component: Record<string, Component> = {

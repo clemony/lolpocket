@@ -3,8 +3,9 @@ definePageMeta({
   title: "Trash",
   icon: "trash",
   prefix: "Backpack",
+  layout: "backpack-layout",
   order: 3,
-  path: "/backpack/trash",
+  path: "/backpack/trash"
 })
 
 /*
