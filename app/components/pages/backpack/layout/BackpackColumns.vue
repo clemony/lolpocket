@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { vDraggable } from "vue-draggable-plus"
-import type { PocketButton } from "~/domain/pocket/ui/pocketFolderItems"
 import { usePocketFolders } from "~/domain/pocket/ui/pocketFolderItems"
 import { toolbarItems } from "~/domain/pocket/ui/toolbarItems"
 
@@ -26,7 +25,7 @@ const folders = usePocketFolders()
             }
           ]"
           class="transition-all duration-300 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <div v-for="item in folder.children" :key="item.pocket.key">
+          <div v-for="item in folder.children" :key="toValue(item).key">
             <LazyBackpackPocketCard v-if="item.pocket" :pocket="item.pocket" />
           </div>
         </UPageGrid>

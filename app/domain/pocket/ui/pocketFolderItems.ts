@@ -31,22 +31,25 @@ function mapFolder(f: Folder) {
 }
 
 function getChildren(id: string) {
-  return pocketStore()
-    .pockets.filter((p: Pocket) => !p.location || p.location === id)
-    .map((p: Pocket) => ({
-      pocket: p,
-      label: p.name,
-      avatar: {
-        src: getSplashFromSkinKey(p.skin, "tile"),
-        size: "xs" as AvatarProps["size"],
-        ui: {
-          image: "scale-180 translate-y-1",
-          root: "overflow-hidden shadow-xs drop-shadow-xs"
-        }
-      },
-      to: `/pocket/${p.key}`,
-      getKey: () => p.key
-    }))
+  const store = pocketStore()
+  return computed(() =>
+    store.pockets
+      .filter((p: Pocket) => !p.location || p.location === id)
+      .map((p: Pocket) => ({
+        pocket: p,
+        label: p.name,
+        avatar: {
+          src: getSplashFromSkinKey(p.skin, "tile"),
+          size: "xs" as AvatarProps["size"],
+          ui: {
+            image: "scale-180 translate-y-1",
+            root: "overflow-hidden shadow-xs drop-shadow-xs"
+          }
+        },
+        to: `/pocket/${p.key}`,
+        getKey: () => p.key
+      }))
+  )
 }
 
 const [usePocketFolderProvider, usePocketFolders] = createInjectionState(() => {
