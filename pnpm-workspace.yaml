@@ -9,16 +9,15 @@ overrides:
   reka-ui: $reka-ui
   semver: 7.5.4
   vaul-vue>reka-ui: 2.9.5
-
-onlyBuiltDependencies:
-  - "@parcel/watcher"
-  - "@tailwindcss/oxide"
-  - esbuild
-  - maplibre-gl
-  - re2
-  - sharp
-  - supabase
-  - unrs-resolver
-  - vue-demi
-  - workerd
-  - vue-chrts
+allowBuilds:
+  '@parcel/watcher': true
+  '@tailwindcss/oxide': true
+  esbuild: true
+  maplibre-gl: true
+  re2: true
+  sharp: true
+  supabase: true
+  unrs-resolver: true
+  vue-demi: true
+  workerd: true
+  vue-chrts: true

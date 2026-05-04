@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { duplicateItemSet } from "~/domain/pocket/duplicate"
 import {
   copyItemSetToPocket,
   deleteItemSet,
   resetItems
 } from "~/domain/pocket/handleItems"
+import { duplicateItemSet } from "~/domain/pocket/manage/duplicate"
 
 const props = defineProps<{
   set?: ItemSet

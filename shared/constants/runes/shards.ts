@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/03/2026 04:46:25 PM CDT
 import type { ShardRegistry } from "#shared/types"
 
 export const shardRegistry: ShardRegistry[] = [

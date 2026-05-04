@@ -8,14 +8,14 @@ export function newItemSet(): ItemSet {
   return {
     id: crypto.randomUUID(),
     name: generateName(),
-    items: [],
+    items: []
   }
 }
 export function newSpellSet(): SpellSet {
   return {
     id: crypto.randomUUID(),
     d: 0,
-    f: 0,
+    f: 0
   }
 }
 
@@ -25,13 +25,13 @@ export function newRuneSet(): RuneSet {
     keystone: null,
     primary: {
       path: "",
-      runes: [0, 0, 0],
+      runes: [0, 0, 0]
     },
     secondary: {
       path: "",
-      runes: [0, 0],
+      runes: [0, 0]
     },
-    shards: [0, 0, 0],
+    shards: [0, 0, 0]
   }
 }
 
@@ -44,7 +44,8 @@ export function resetRuneSet(set: RuneSet): RuneSet {
 
 export function addSpellSet(pocket: Pocket | string) {
   let set = <SpellSet[]>[]
-  const p = pType(pocket)
+  const p: Pocket | undefined =
+    typeof pocket === "string" ? toValue(pType(pocket)) : toValue(pocket)
   if (!p?.spells) return
   set = p.spells
   const a = getDeepDefaults(spellSetSchema)
@@ -53,7 +54,8 @@ export function addSpellSet(pocket: Pocket | string) {
 }
 
 export function addRuneSet(pocket: Pocket | string) {
-  const p = pType(pocket)
+  const p: Pocket | undefined =
+    typeof pocket === "string" ? toValue(pType(pocket)) : toValue(pocket)
   if (!p?.runes) return
   if (p.runes.length >= 10) return "Max amount of rune sets reached!"
 

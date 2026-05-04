@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useScrollProvider } from "#layers/lib/app/composables/navigation/useElementScroll"
 import type { NavigationMenuItem } from "@nuxt/ui"
-import { getRandomBg, getSplash } from "~/domain/utils/img"
+import { getRandomBg, getSplash, getSplashFromSkinKey } from "~/domain/utils/img"
 
 const { champion, pocket } = defineProps<{
   pocket?: Pocket
@@ -16,12 +16,18 @@ const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -100 })
 const isSummonerRoute = computed(() =>
   Boolean(route.params.region && route.params.slug)
 )
+const pocketSplash = computed(() => {
+  if (!pocket) return ""
+  if (pocket.skin) return getSplashFromSkinKey(pocket.skin, "uncentered")
+  if (pocket._champion) return getSplash(pocket._champion, "uncentered")
+  return ""
+})
 
 const bg = computed(() =>
   isSummonerRoute.value
     ? sData().splash
     : pocket
-      ? pocket.splash
+      ? pocketSplash.value
       : champion
         ? getSplash(champion.key, "uncentered")
         : getRandomBg()

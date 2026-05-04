@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { getSplashFromSkinKey } from "~/domain/utils/img"
 import { useScrollProvider } from "~~/layers/lib/app/composables/navigation/useElementScroll"
 
 definePageMeta({
@@ -9,18 +10,21 @@ definePageMeta({
 })
 
 const route = useRoute()
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
+
+const splash = computed(() =>
+  getSplashFromSkinKey(pocket.value?.skin, "uncentered")
 )
 
 const el = useTemplateRef<HTMLElement>("el")
 useScrollProvider(el)
 
 console.log(threads().threads)
-console.log(summonerAccounts().accounts)
+console.log(publicUsers().cache)
 
 watch(
-  () => summonerAccounts().accounts,
+  () => publicUsers().cache,
   (newVal) => {
     console.log("💠 - watch - newVal:", newVal)
   }
@@ -34,10 +38,10 @@ watch(
       <PocketMenubar />
     </div>
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
-      <BgSplash size="full" :src="pocket?.splash" />
+      <BgSplash size="full" :src="splash" />
     </div>
 
-    <BgSplash size="full" :src="pocket?.splash" />
+    <BgSplash size="full" :src="splash" />
 
     <!-- Header block -->
     <div
@@ -87,7 +91,7 @@ watch(
               clear comments
             </UButton>
 
-            <UButton @click="console.log('ass bad: ', summonerAccounts().accounts)">
+            <UButton @click="console.log('ass bad: ', publicUsers().accounts)">
               logggg accs
             </UButton>
           </div>

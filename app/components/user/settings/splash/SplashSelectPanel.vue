@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { championIndex } from "#shared/constants/champions/championIndex"
 import type { ButtonProps } from "@nuxt/ui"
-import { getSplash } from "~/domain/utils/img"
+import { getSkinKey } from "~/domain/utils/img"
 import { offsetTooltipContent } from "~~/layers/ui/app/variants/tooltip"
 
 const props = withDefaults(
@@ -16,7 +16,7 @@ const props = withDefaults(
 )
 const emit = defineEmits<{
   close: [value?: string | null]
-  updateSplash: [string | ""]
+  updateSkin: [string | null]
 }>()
 const open = defineModel<boolean>("open", { default: false })
 
@@ -72,14 +72,14 @@ function closePanel(value?: string | null) {
 }
 
 function update(skin: Skin) {
-  const splash =
+  const skinKey =
     skin && selectedChampion.value
-      ? getSplash(String(selectedChampion.value), "centered", skin)
-      : ""
+      ? getSkinKey(String(selectedChampion.value), skin)
+      : null
 
-  emit("updateSplash", splash)
+  emit("updateSkin", skinKey)
   selectedChampion.value = ""
-  closePanel(splash || null)
+  closePanel(skinKey)
   toast.add({
     title: "Profile splash successfully updated!",
     color: "neutral",
@@ -93,7 +93,7 @@ const utils = [
     label: "Reset",
     icon: "i-refresh",
     onClick: () => {
-      emit("updateSplash", "")
+      emit("updateSkin", null)
       closePanel(null)
     }
   },

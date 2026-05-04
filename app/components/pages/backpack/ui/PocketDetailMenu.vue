@@ -5,11 +5,8 @@ const { pocketKey } = defineProps<{
 
 const isDisabled = computed(() => pocketKey === null)
 
-const pocket = computed(() => {
-  if (!pocketKey) return
-
-  return pocketKey ? pocketStore().getPocket(pocketKey) : null
-})
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(pocketKey)))
 
 const pocketKeySafe = computed(() => pocket.value?.key ?? "")
 const pinned = computed(() =>
@@ -47,9 +44,7 @@ const pinned = computed(() =>
       <Label
         label="'Move to archive'"
         base="btn"
-        :variant="
-          pocketStore().archive.includes(pocketKeySafe) ? 'outline' : 'ghost'
-        "
+        :variant="pocket?.location === 'archive' ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
             'bg-p2/30': pinned
@@ -68,9 +63,7 @@ const pinned = computed(() =>
       <UButton
         label="'Move to trash'"
         base="btn"
-        :variant="
-          pocketStore().trash.includes(pocketKeySafe) ? 'outline' : 'ghost'
-        "
+        :variant="pocket?.location === 'trash' ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
             'bg-p2/30': pinned

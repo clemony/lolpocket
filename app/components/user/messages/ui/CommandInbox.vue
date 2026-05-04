@@ -7,6 +7,7 @@ import {
   UButton
 } from "#components"
 import type { InboxMessage, InboxNotification } from "#shared/types"
+import { nowInstantString } from "#shared/utils"
 import type { ButtonProps, EmptyProps, TooltipProps } from "@nuxt/ui"
 import type { TooltipContentProps } from "reka-ui"
 
@@ -63,7 +64,7 @@ async function openModal(message: InboxMessage) {
   try {
     await modal.open({ message })
     if (!modal.isOpen && !message.read_at)
-      message.read_at = new Date().toISOString()
+      message.read_at = nowInstantString()
   } finally {
     emit("updateModal", false)
   }

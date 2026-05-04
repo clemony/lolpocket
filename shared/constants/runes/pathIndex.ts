@@ -1,30 +1,40 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/03/2026 04:46:25 PM CDT
 import type { Path } from '#shared/types'
 
-export const pathIndex: Path[] = [
-  {
-    "id": 8400,
-    "name": "Resolve",
-    "tooltip": "Durability and crowd control"
+export const pathIndex: Record<number, Path> = {
+  8000: {
+    id: 8000,
+    name: "Precision",
+    tooltip: "Improved attacks and sustained damage",
+    icon: "i-rune-8000",
+    color: "pre"
   },
-  {
-    "id": 8100,
-    "name": "Domination",
-    "tooltip": "Burst damage and target access "
+  8100: {
+    id: 8100,
+    name: "Domination",
+    tooltip: "Burst damage and target access ",
+    icon: "i-rune-8100",
+    color: "dom"
   },
-  {
-    "id": 8000,
-    "name": "Precision",
-    "tooltip": "Improved attacks and sustained damage"
+  8200: {
+    id: 8200,
+    name: "Sorcery",
+    tooltip: "Empowered abilities and resource manipulation",
+    icon: "i-rune-8200",
+    color: "sorc"
   },
-  {
-    "id": 8200,
-    "name": "Sorcery",
-    "tooltip": "Empowered abilities and resource manipulation"
+  8300: {
+    id: 8300,
+    name: "Inspiration",
+    tooltip: "Creative tools and rule bending ",
+    icon: "i-rune-8300",
+    color: "res"
   },
-  {
-    "id": 8300,
-    "name": "Inspiration",
-    "tooltip": "Creative tools and rule bending "
+  8400: {
+    id: 8400,
+    name: "Resolve",
+    tooltip: "Durability and crowd control",
+    icon: "i-rune-8400",
+    color: "insp"
   }
-]
+}

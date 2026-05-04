@@ -1,4 +1,6 @@
 import * as v from "valibot"
+import { skinKeyFromUrl } from "#shared/utils/img-url"
+import { nowInstantString } from "#shared/utils"
 
 export const user = defineStore(
   "userStore",
@@ -45,6 +47,19 @@ export const user = defineStore(
       setInbox()
     }
 
+    function migrateAccountSplashUrlToSkinKey() {
+      if (!account.value || account.value.skin) return null
+
+      const { splash, ...nextAccount } = account.value as Account & {
+        splash?: string
+      }
+      const skin = splash ? skinKeyFromUrl(splash) : null
+      if (!skin) return null
+
+      account.value = { ...nextAccount, skin }
+      return skin
+    }
+
     function createEmptyInbox(): Inbox {
       return { messages: [], notifications: [] }
     }
@@ -73,7 +88,7 @@ export const user = defineStore(
       inbox.value.messages = inbox.value.messages.map(
         (message: InboxMessage) =>
           message.id === id
-            ? { ...message, read_at: read ? new Date().toISOString() : null }
+            ? { ...message, read_at: read ? nowInstantString() : null }
             : message
       )
     }
@@ -84,7 +99,7 @@ export const user = defineStore(
           notification.id === id
             ? {
                 ...notification,
-                read_at: read ? new Date().toISOString() : null
+                read_at: read ? nowInstantString() : null
               }
             : notification
       )
@@ -98,7 +113,7 @@ export const user = defineStore(
       inbox.value.messages = inbox.value.messages.map(
         (message: InboxMessage) =>
           message.id === id
-            ? { ...message, trashed_at: new Date().toISOString() }
+            ? { ...message, trashed_at: nowInstantString() }
             : message
       )
     }
@@ -156,6 +171,7 @@ export const user = defineStore(
       keybinds,
       summoner,
       account,
+      migrateAccountSplashUrlToSkinKey,
       clearAccount,
       inbox,
       setInbox,

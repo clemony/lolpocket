@@ -29,7 +29,7 @@ export const positionSchema = v.fallback(
 
 //Position
 export const mapSchema = v.fallback(
-  v.picklist([0, 11, 12, 21, 30, 35], "Not a real map!"),
+  v.picklist([0, 11, 12, 30], "Not a real map!"),
   0
 )
 
@@ -71,6 +71,7 @@ export const runeSetSchema = v.object({
 // --- Pocket Schema ---
 export const pocketSchema = v.object({
   key: v.pipe(v.string(), v.uuid("pocket uuid malformed")),
+  okey: v.pipe(v.string(), v.uuid("pocket uuid malformed")),
   name: v.optional(v.string()),
   ouuid: v.fallback(
     v.pipe(v.string(), v.uuid("original author uuid malformed")),
@@ -80,7 +81,7 @@ export const pocketSchema = v.object({
 
   //
   guide: v.nullable(v.array(v.string())),
-  splash: v.fallback(v.string("icon not a string"), ""),
+  skin: v.fallback(v.nullable(v.string()), null),
 
   // main picks
   _champion: v.optional(v.string("champion key not a string")),
@@ -127,3 +128,8 @@ export type Pocket = v.InferOutput<typeof pocketSchema>
 export type RoleKey = v.InferOutput<typeof roleSchema>
 export type PositionKey = v.InferOutput<typeof positionSchema>
 export type MapKey = v.InferOutput<typeof mapSchema>
+export type KeyType = RoleKey | PositionKey | MapKey
+
+export function asKeyType(key: string): KeyType {
+  return key as KeyType
+}

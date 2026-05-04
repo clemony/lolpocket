@@ -79,9 +79,11 @@ export async function accountFetch() {
   if (account) user().setInbox(inbox)
   user().settings = (settings ?? getEmptySettings()) as Settings
   pocketStore().pockets = pockets ?? []
+  user().migrateAccountSplashUrlToSkinKey()
+  pocketStore().migrateSplashUrlsToSkinKeys()
   progress.value = 60
 
-  if (account) summonerAccounts().setAccount(account)
+  if (account) publicUsers().setAccount(account)
   progress.value = 70
 
   let summoner: Summoner | null = null

@@ -19,7 +19,7 @@ const renderedHtml = computed(() => {
 })
 const author = computedAsync(async () => {
   if (comment.removed) return null
-  const a = summonerAccounts().getByUuid(comment.uuid)
+  const a = publicUsers().getByUuid(comment.uuid)
   if (!a) return null
   return {
     ...a,

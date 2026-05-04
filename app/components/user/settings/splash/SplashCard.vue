@@ -8,20 +8,23 @@ interface CardProps {
     root?: HTMLAttributes["class"]
     container?: HTMLAttributes["class"]
     image?: HTMLAttributes["class"]
+    imageWrapper?: HTMLAttributes["class"]
   }
   alt?: string
   src?: string | null
   text?: string
   as?: "div" | "button" | "a"
   syncPerspective?: boolean
+  foil?: boolean
 }
 
 const props = withDefaults(defineProps<CardProps>(), {
-  alt: String((src: string) => skinNameFromUrl(src ?? "") ?? "Champion splash"),
-  as: "div"
+  alt: " splash",
+  as: "div",
+  foil: true
 })
 
-const delegated = reactiveOmit(props, "src", "alt", "text")
+const delegated = reactiveOmit(props, "src", "alt", "text", "foil")
 
 const isPointerInside = ref(false)
 const refElement = ref<HTMLElement | null>(null)
@@ -34,7 +37,7 @@ const state = ref({
 
 const foilStyle = computed(
   (): CSSProperties =>
-    props.syncPerspective
+    props.syncPerspective || !props.foil
       ? {}
       : {
           "--m-x": `${state.value.glare.x}%`,
@@ -55,7 +58,8 @@ function resolveElement(target: unknown): HTMLElement | null {
 }
 
 function handlePointerMove(event: PointerEvent) {
-  if (props.syncPerspective) return
+  if (props.syncPerspective || !props.foil || user().settings?.reduce_motion)
+    return
   const rotateFactor = 0.4
   const rect = resolveElement(refElement.value)?.getBoundingClientRect()
   if (rect) {
@@ -81,7 +85,8 @@ function handlePointerMove(event: PointerEvent) {
 }
 
 function handlePointerEnter() {
-  if (props.syncPerspective) return
+  if (props.syncPerspective || !props.foil || user().settings?.reduce_motion)
+    return
   isPointerInside.value = true
   useTimeoutFn(() => {
     const el = resolveElement(refElement.value)
@@ -92,7 +97,8 @@ function handlePointerEnter() {
 }
 
 function handlePointerLeave() {
-  if (props.syncPerspective) return
+  if (props.syncPerspective || !props.foil || user().settings?.reduce_motion)
+    return
   isPointerInside.value = false
   const el = resolveElement(refElement.value)
   if (el) {
@@ -142,20 +148,29 @@ function handlePointerLeave() {
               'group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]':
                 !props.syncPerspective,
               'group-hover/hover-card:filter-none group-hover/hover-card:[--duration:200ms] group-hover/hover-card:[--easing:linear] group-hover/hover-card:[--opacity:0.6]':
-                props.syncPerspective
+                props.syncPerspective && props.foil
             }
           )
         ">
-        <div class="grid size-full mix-blend-soft-light [grid-area:1/1]">
+        <div
+          :class="
+            cn(
+              'grid size-full mix-blend-soft-light [grid-area:1/1]',
+              props.ui?.imageWrapper
+            )
+          ">
           <NuxtImg
             v-if="src"
             :class="cn('z-0 size-full', props.ui?.image)"
             :alt
             :src />
+          <slot name="foil" />
         </div>
         <div
+          v-if="props.foil"
           class="transition-background will-change-background grid size-full opacity-(--opacity) mix-blend-soft-light transition-opacity delay-(--delay) duration-(--duration) ease-(--easing) [background:radial-gradient(farthest-corner_circle_at_var(--m-x)_var(--m-y),rgba(255,255,255,0.8)_10%,rgba(255,255,255,0.65)_20%,rgba(255,255,255,0)_90%)] [clip-path:inset(0_0_1px_0_round_var(--radius))] [grid-area:1/1]" />
         <div
+          v-if="props.foil"
           class="background-style will-change-background after:grid-area-[inherit] after:bg-repeat-[inherit] after:bg-attachment-[inherit] after:bg-origin-[inherit] after:bg-clip-[inherit] relative grid size-full opacity-(--opacity) [background-blend-mode:hue_hue_hue_overlay] mix-blend-color-dodge transition-opacity [background:var(--pattern),var(--rainbow),var(--diagonal),var(--shade)] [clip-path:inset(0_0_1px_0_round_var(--radius))] [grid-area:1/1] after:bg-inherit after:bg-size-[var(--foil-size),200%_400%,800%,200%] after:bg-position-[center,0%_var(--bg-y),calc(var(--bg-x)*-1)_calc(var(--bg-y)*-1),var(--bg-x)_var(--bg-y)] after:[background-blend-mode:soft-light,hue,hard-light] after:mix-blend-exclusion after:content-[\'\']" />
       </div>
     </div>

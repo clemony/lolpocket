@@ -5,10 +5,10 @@ const { isVisible } = defineProps<{
 
 const isPlaying = ref(true)
 const motion = computed({
-  get: () => user().settings?.motion ?? false,
+  get: () => user().settings?.reduce_motion ?? false,
   set: (v: boolean) => {
     const settings = user().settings
-    if (settings) settings.motion = v
+    if (settings) settings.reduce_motion = v
   }
 })
 </script>

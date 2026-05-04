@@ -22,7 +22,7 @@ export type Database = {
           peer_messages: boolean
           public_pockets: string[] | null
           puuid: string | null
-          splash: string | null
+          skin: string | null
           title: string | null
           updated: string | null
           username: string | null
@@ -35,7 +35,7 @@ export type Database = {
           peer_messages?: boolean
           public_pockets?: string[] | null
           puuid?: string | null
-          splash?: string | null
+          skin?: string | null
           title?: string | null
           updated?: string | null
           username?: string | null
@@ -48,7 +48,7 @@ export type Database = {
           peer_messages?: boolean
           public_pockets?: string[] | null
           puuid?: string | null
-          splash?: string | null
+          skin?: string | null
           title?: string | null
           updated?: string | null
           username?: string | null
@@ -437,6 +437,7 @@ export type Database = {
           public: boolean
           roles: string[] | null
           runes: Json | null
+          skin: string | null
           spells: Json | null
           tags: string[] | null
           updated: string
@@ -461,6 +462,7 @@ export type Database = {
           public?: boolean
           roles?: string[] | null
           runes?: Json | null
+          skin?: string | null
           spells?: Json | null
           tags?: string[] | null
           updated?: string
@@ -485,6 +487,7 @@ export type Database = {
           public?: boolean
           roles?: string[] | null
           runes?: Json | null
+          skin?: string | null
           spells?: Json | null
           tags?: string[] | null
           updated?: string
@@ -758,7 +761,7 @@ export type Database = {
           peer_messages: boolean
           public_pockets: string[] | null
           puuid: string | null
-          splash: string | null
+          skin: string | null
           title: string | null
           updated: string | null
           username: string | null

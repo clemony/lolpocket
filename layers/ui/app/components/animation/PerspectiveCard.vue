@@ -24,8 +24,9 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const root = ref<HTMLElement | null>(null)
-const pointer = ref({ x: 0, y: 0 })
-const rotate = ref({ x: 0, y: 0 })
+const container = ref<HTMLElement | null>(null)
+let animationFrame = 0
+let rect: DOMRect | null = null
 
 function resolveElement(target: unknown): HTMLElement | null {
   if (target instanceof HTMLElement) return target
@@ -38,46 +39,74 @@ function resolveElement(target: unknown): HTMLElement | null {
 const rootStyle = computed(
   (): CSSProperties => ({
     perspective: `${props.perspective}px`,
-    "--m-x": `${50 + pointer.value.x / 2}%`,
-    "--m-y": `${50 + pointer.value.y / 2}%`,
-    "--bg-x": `${50 + pointer.value.x / 4}%`,
-    "--bg-y": `${50 + pointer.value.y / 3}%`,
-    "--r-x": `${rotate.value.y}deg`,
-    "--r-y": `${rotate.value.x}deg`,
+    "--m-x": "50%",
+    "--m-y": "50%",
+    "--bg-x": "50%",
+    "--bg-y": "50%",
+    "--r-x": "0deg",
+    "--r-y": "0deg",
     ...props.style
   })
 )
 
-const containerStyle = computed(
-  (): CSSProperties => ({
-    transform: `rotateX(${rotate.value.x}deg) rotateY(${rotate.value.y}deg)`
+const containerStyle: CSSProperties = {
+  transform: "rotateX(0deg) rotateY(0deg)"
+}
+
+function writeMotion(x: number, y: number, rotateX: number, rotateY: number) {
+  const rootEl = resolveElement(root.value)
+  const containerEl = resolveElement(container.value)
+  if (!rootEl || !containerEl) return
+
+  rootEl.style.setProperty("--m-x", `${50 + x * 25}%`)
+  rootEl.style.setProperty("--m-y", `${50 + y * 25}%`)
+  rootEl.style.setProperty("--bg-x", `${50 + x * 12.5}%`)
+  rootEl.style.setProperty("--bg-y", `${50 + y * 16.67}%`)
+  rootEl.style.setProperty("--r-x", `${rotateY}deg`)
+  rootEl.style.setProperty("--r-y", `${rotateX}deg`)
+  containerEl.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+}
+
+function scheduleMotion(
+  x: number,
+  y: number,
+  rotateX: number,
+  rotateY: number
+) {
+  if (animationFrame) cancelAnimationFrame(animationFrame)
+  animationFrame = requestAnimationFrame(() => {
+    animationFrame = 0
+    writeMotion(x, y, rotateX, rotateY)
   })
-)
+}
+
+function handlePointerEnter() {
+  rect = resolveElement(root.value)?.getBoundingClientRect() ?? null
+}
 
 function handlePointerMove(event: PointerEvent) {
-  if (props.disabled) return
+  if (props.disabled || user().settings?.reduce_motion) return
 
-  const rect = resolveElement(root.value)?.getBoundingClientRect()
+  rect ??= resolveElement(root.value)?.getBoundingClientRect() ?? null
   if (!rect) return
+  if (!rect.width || !rect.height) return
 
   const x = ((event.clientX - rect.left) / rect.width) * 2 - 1
   const y = ((event.clientY - rect.top) / rect.height) * 2 - 1
+  const rotateX = -(y * props.rotateXMax)
+  const rotateY = x * props.rotateYMax
 
-  pointer.value = {
-    x: x * 50,
-    y: y * 50
-  }
-
-  rotate.value = {
-    x: -(y * props.rotateXMax),
-    y: x * props.rotateYMax
-  }
+  scheduleMotion(x, y, rotateX, rotateY)
 }
 
 function handlePointerLeave() {
-  pointer.value = { x: 0, y: 0 }
-  rotate.value = { x: 0, y: 0 }
+  rect = null
+  scheduleMotion(0, 0, 0, 0)
 }
+
+onBeforeUnmount(() => {
+  if (animationFrame) cancelAnimationFrame(animationFrame)
+})
 </script>
 
 <template>
@@ -88,9 +117,11 @@ function handlePointerLeave() {
     :class="
       cn('group/hover-card relative isolate', props.class, props.ui?.root)
     "
+    @pointerenter="handlePointerEnter"
     @pointermove="handlePointerMove"
     @pointerleave="handlePointerLeave">
     <div
+      ref="container"
       :style="containerStyle"
       :class="
         cn(

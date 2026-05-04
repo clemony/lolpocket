@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/03/2026 04:46:25 PM CDT
 
 export const keystoneIndex: number[] = [
   8437,
@@ -14,6 +14,7 @@ export const keystoneIndex: number[] = [
   8214,
   8229,
   8230,
+  8992,
   8351,
   8360,
   8369

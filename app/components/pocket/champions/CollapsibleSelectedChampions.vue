@@ -6,9 +6,8 @@ const target = useTemplateRef<HTMLElement>("target")
 const open = ref<boolean>(false)
 
 const route = useRoute()
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
-)
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 
 const champions = computed(() => pocket.value?.champions ?? [])
 const l = computed(() => champions.value.length > 5)

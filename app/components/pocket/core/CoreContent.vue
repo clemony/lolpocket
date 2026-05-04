@@ -2,9 +2,9 @@
 import { championToTitle } from "#shared/constants/champions/championToTitle"
 
 const route = useRoute()
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
-)
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
+
 const championKey = computed(() => pocket.value?._champion ?? null)
 const championTitle = computed(() =>
   championKey.value ? championToTitle[championKey.value] : undefined

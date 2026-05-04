@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSplashFromSkinKey } from "~/domain/utils/img"
+
 const { isCollapsed, pinned } = defineProps<{
   isCollapsed: boolean
   pinned: Pocket[]
@@ -37,7 +39,7 @@ const { isCollapsed, pinned } = defineProps<{
             <PocketIcon
               class="size-6 rounded-full"
               size="sm"
-              :src="link.splash" />
+              :src="getSplashFromSkinKey(link.skin, 'tile')" />
 
             <span v-show="!isCollapsed" class="font-medium capitalize">
               {{ link.name }}
@@ -72,7 +74,10 @@ const { isCollapsed, pinned } = defineProps<{
       class="size-12"
       :to="`/${link.key}`"
       variant="ghost">
-      <PocketIcon class="size-9 rounded-full" size="sm" :src="link.splash" />
+      <PocketIcon
+        class="size-9 rounded-full"
+        size="sm"
+        :src="getSplashFromSkinKey(link.skin, 'tile')" />
     </UButton>
   </nav>
 </template>

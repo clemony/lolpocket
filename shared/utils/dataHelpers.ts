@@ -88,11 +88,11 @@ export function pathColorByName(name: string) {
 }
 
 export function pathNameById(id: number) {
-  return pathIndex.find((p) => p.id === id)?.name
+  return pathIndex[id]?.name
 }
 
 export function pathIdByName(name: string) {
-  return pathIndex.find((p) => p.name === name)?.id
+  return Object.values(pathIndex).find((p) => p.name === name)?.id
 }
 
 // misc

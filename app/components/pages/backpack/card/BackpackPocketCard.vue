@@ -2,18 +2,20 @@
 import { parseAbsoluteToLocal } from "@internationalized/date"
 import type { ContextMenuItemProps } from "reka-ui"
 import { pocketActions } from "~/domain/pocket/ui/contextActions"
-import { getSplash, tileSplash } from "~/domain/utils/img"
+import { getSplash, getSplashFromSkinKey } from "~/domain/utils/img"
+import { pathIndex } from "~~/shared/constants/runes/pathIndex"
 
 const props = defineProps<{
   pocket: Pocket
 }>()
 
-const pocket = computed(() => safeObject(props.pocket))
+const pocket = computed(() => {
+  return safeObject(props.pocket)
+})
 
 const { account, summoner } = storeToRefs(user())
 const acc = safeObject(account.value)
 const sum = safeObject(summoner.value)
-
 const date = computedOnce(() => {
   const dateValue = parseAbsoluteToLocal(
     String(pocket.value.updated || pocket.value.created)
@@ -33,11 +35,9 @@ const actions = computed(
   () => pocketActions(pocket.value, toggleEdit)?.value as ContextMenuItemProps[]
 )
 
-const role = computed(() => pocket.value._role || pocket.value.positions?.[0])
-
 const image = computed(() => {
   if (
-    !pocket.value.splash &&
+    !pocket.value.skin &&
     !pocket.value._champion &&
     !pocket.value.champions?.[0]
   )
@@ -50,52 +50,65 @@ const image = computed(() => {
           ? getSplash(String(pocket.value.champions?.[0]), type)
           : null
     }
-    const splash = pocket.value.splash
-      ? pocket.value.splash.replace("tile", "centered")
-      : champion("uncentered")
+    const splash = pocket.value.skin
+      ? getSplashFromSkinKey(pocket.value.skin, "centered")
+      : champion("centered")
     return {
       splash,
       champion: champion("tile")
     }
   }
 })
-console.log("🥸 - image:", image)
 </script>
 
 <template>
-  <PerspectiveCard class="w-full hover-3d-shine">
+  <PerspectiveCard class="w-full">
     <UContextMenu
       size="sm"
+      disabled
       :items="actions"
       :ui="{ content: 'min-w-44', itemLeadingIcon: '**:stroke-[2.3]' }">
       <UCard
         :ui="{
           root: 'divide w-full divide-y drop-shadow-md transition-transform duration-200 ease-out',
           header: 'min-h-28 p-0!',
-          body: 'px-4! pt-10! pb-6!'
+          body: 'relative pt-10! pb-6!'
         }">
         <template #header>
           <div class="relative size-full grow bg-p2">
-            <div class="aspect-20/9 size-full overflow-hidden object-cover">
-              <SplashCard
-                v-if="image?.splash"
-                :src="image.splash"
-                sync-perspective
-                :ui="{
-                  root: 'z-0 size-full',
-                  image:
-                    'translate-y-5 scale-180 transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-200!',
-                  container: 'rounded-none! *:rounded-none'
-                }" />
+            <div
+              class="relative isolate aspect-20/9 size-full overflow-hidden object-cover">
+              <FoilLayer>
+                <UAvatar
+                  v-if="image?.splash"
+                  :src="image.splash"
+                  :ui="{
+                    root: 'z-0 size-full rounded-none',
+                    image:
+                      'translate-y-5 scale-180 rounded-none transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-190!'
+                  }" />
+              </FoilLayer>
             </div>
             <div
-              class="absolute -bottom-8 left-3 z-2 size-max rounded-full bg-p0 px-1.25 py-1">
+              class="absolute -bottom-8 left-4 z-2 size-max rounded-lg bg-p0 px-1.25 py-1">
+              <div
+                v-if="image?.champion"
+                class="relative isolate size-20 overflow-hidden rounded-lg">
+                <FoilLayer>
+                  <UAvatar
+                    icon="i-lp-champ"
+                    :src="image?.champion ?? undefined"
+                    :ui="{
+                      root: 'z-0 size-full rounded-none! *:rounded-none',
+                      image:
+                        'translate-y-5 scale-180 transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-190!'
+                    }" />
+                </FoilLayer>
+              </div>
               <UAvatar
-                :src="image?.champion ?? undefined"
-                icon="i-lp-champ"
+                v-else
                 :ui="{
-                  root: 'size-22 overflow-hidden',
-                  image: 'translate-y-4 scale-180'
+                  root: 'size-20 overflow-hidden rounded-lg'
                 }" />
             </div>
           </div>
@@ -106,46 +119,40 @@ console.log("🥸 - image:", image)
           variant="naked"
           :title="pocket.name"
           :ui="{
-            root: 'w-full items-start! gap-4! p-0',
-            description: 'mt-0',
+            root: 'w-full grow items-start! gap-4! px-5! py-0',
+            description: 'mt-1 flex w-full grow justify-between',
             header: 'overflow-visible',
-            body: 'h-full grow justify-between! gap-y-0.5 pt-1! pb-1.5',
-            date: 'justify-bewtween flex items-center',
-            meta: 'mb-0',
-            title: '',
-            authors: 'px-px pt-1'
+            body: 'size-full grow justify-between! gap-y-0.5 pt-1! pb-1.5',
+            date: 'inline-flex w-full items-center justify-between',
+            meta: 'mb-0 w-full',
+            title: 'truncate text-nowrap',
+            authors: 'px-px pt-0.5'
           }">
           <template #date>
-            <span class="text-xs font-semibold">
+            <span class="text-xs font-semibold text-nowrap">
               Patch {{ date ?? "Hazy" }}
             </span>
-            <Icon
-              :name="`i-lp-${role.toLowerCase() || 'i-hexagon'}`"
-              class="" />
+          </template>
 
-            <Icon
-              :name="`i-lp-${pocket._position.toLowerCase() || 'i-hexagon'}`"
-              class="" />
+          <template #description>
+            <PocketItemSet :pocket />
+            <Grow />
+            <PocketRunes :pocket />
           </template>
           <template #authors>
-            <UUser
-              v-if="pocket.ouuid !== acc.uuid"
-              size="xs"
-              :name="sum.name || acc.username"
-              :avatar="{ src: tileSplash(acc.splash) }" />
-            <div v-else class="flex flex-nowrap items-center gap-1">
-              <span class="text-xs italic">pocket picked from</span>
-
-              <UUser
-                size="2xs"
-                :name="sum.name || acc.username"
-                :to="`/${acc.username}_${acc.tag}/pockets/${pocket.key}`"
-                :ui="{
-                  root: 'cursor-pointer',
-                  name: 'pointer-events-auto! group-hover/user:underline hover:underline',
-                  wrapper: 'gap-0!'
-                }"
-                :avatar="{ src: tileSplash(acc.splash) }" />
+            <div
+              class="inline-flex flex-nowrap items-center gap-1 align-middle text-xs">
+              <PocketAuthor
+                :pocket="pocket"
+                :author-id="user().account?.uuid" />
+              <template
+                v-if="
+                  user().account?.uuid && pocket.ouuid !== user().account?.uuid
+                ">
+                picked
+                <PocketAuthor :pocket="pocket" :author-id="pocket.ouuid" />
+              </template>
+              pocket
             </div>
           </template>
         </UBlogPost>

@@ -1,3 +1,5 @@
+import { compareInstantStrings } from "#shared/utils"
+
 export const threads = defineStore(
   "threadStore",
   () => {
@@ -84,7 +86,7 @@ export const threads = defineStore(
       } else if (sortBy === "new") {
         items.sort(
           (a, b) =>
-            new Date(b.created).getTime() - new Date(a.created).getTime()
+            compareInstantStrings(b.created, a.created)
         )
       }
 

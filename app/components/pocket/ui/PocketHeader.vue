@@ -2,9 +2,8 @@
 import { generateName } from "~/domain/pocket/generateStrings"
 
 const route = useRoute()
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
-).value
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 </script>
 
 <template>

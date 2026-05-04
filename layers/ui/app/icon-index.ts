@@ -68,13 +68,13 @@ export const icon = {
     gear: "solar:settings-linear", //'i-gear'
     "gear-solid": "i-solar-settings-bold", //'i-gear-solid'
     handle: "radix-icons:button", //'i-handle:"radix-icons'
-    lines: "teenyicons:align-text-justify-outline", //'i-lines'
     menu: "lucide:menu", //'i-menu'
     more: "ri:more-line", //'i-ri-more-line'
     "more-vertical": "ri:more-line-vertical", //'i-ri-more-line-vertical'
     radio: "formkit:radio", //'i-radio:"formkit'
     settings: "lucide:settings-2", //'i-settings'
 
+    "square-list": "lucide:layout-list", // i-lucide-layout-list
     archive: "lucide:archive", //'i-archive'
     bold: "lucide:bold", //'i-bold'
     clear: "tabler:circle-half-vertical", //'i-clear'
@@ -158,6 +158,7 @@ export const icon = {
     "exit-fullscreen": "lucide:scan-line", //'i-exit-fullscreen'
     "fast-forward": "material:symbols-light-fast-forward-outline-rounded", //'i-fast-forward'
     fullscreen: "lucide:maximize", //'i-fullscreen'
+
     image: "lucide:image", //'i-image'
     images: "entypo:images", //'i-images'
     next: "teenyicons:next-solid", //'i-next'

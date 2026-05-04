@@ -5,7 +5,9 @@ const { selectedChampion } = defineProps<{
   selectedChampion: string
 }>()
 
-const emit = defineEmits(["updateSplash"])
+const emit = defineEmits<{
+  update: [skin: Skin]
+}>()
 </script>
 
 <template>
@@ -37,7 +39,7 @@ const emit = defineEmits(["updateSplash"])
               'basis-[calc(100%/var(--cols)-var(--gap)/var(--cols)*(var(--cols)-1))]'
             )
           "
-          @click="emit('updateSplash', skin)">
+          @click="emit('update', skin)">
           <PerspectiveCard
             :ui="{
               root: 'pb-1',

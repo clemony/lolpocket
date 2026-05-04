@@ -260,6 +260,16 @@ export default defineNuxtConfig({
     types: "~~/shared/types/database.types.ts",
     url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: true,
+    cookieOptions: {
+      maxAge: 60 * 60 * 8,
+      sameSite: "lax",
+      secure: isProduction
+    },
+    clientOptions: {
+      auth: {
+        detectSessionInUrl: false
+      }
+    },
     redirectOptions: {
       callback: "/auth/redirect",
       login: "/auth/login",

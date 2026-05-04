@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/02/2026 05:23:40 PM CDT
 
 export const runeToTier: Record<number, number> = {
   "8005": 0,
@@ -56,6 +56,7 @@ export const runeToTier: Record<number, number> = {
   "8463": 1,
   "8465": 0,
   "8473": 2,
+  "8992": 0,
   "9101": 1,
   "9103": 2,
   "9104": 2,

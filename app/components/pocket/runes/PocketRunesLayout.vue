@@ -9,12 +9,11 @@ const { set: s } = defineProps<{
 
 const emit = defineEmits(["update:slide"])
 const route = useRoute()
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
-)
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 
 const set = computed(() => s).value
-const pathList = pathIndex.map((p) => p.name)
+const pathList = Object.values(pathIndex).map((p) => p.name)
 
 const primaryRunes = computed(() => pathRecord[set.primary?.path])
 const secondaryRunes = computed(() => pathRecord[set.secondary?.path])
@@ -23,7 +22,7 @@ function handlePath1() {
   // set.primary.runes = []
   set.keystone = null
 
-  const index = pathList.findIndex((p) => p === set.secondary?.path)
+  const index = Object.keys(pathIndex).indexOf(set.secondary?.path)
   if (set.primary?.path === set.secondary.path)
     set.secondary.path =
       pathList[index === 4 ? 0 : index + 1] ?? set.secondary.path

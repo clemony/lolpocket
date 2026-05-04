@@ -11,7 +11,7 @@ const { id } = defineProps<{
 const rune = computed(() => runeIndex.find((entry) => entry.id === id) ?? null)
 const path = computed(() => {
   const pathId = Number(runeToPath[id])
-  return pathIndex.find((entry) => entry.id === pathId) ?? null
+  return pathIndex[pathId] ?? null
 })
 const tierLabel = computed(() => {
   const tier = runeToTier[id]

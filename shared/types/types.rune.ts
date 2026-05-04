@@ -9,16 +9,18 @@ export interface Rune {
   tierSlot: number
 }
 
-export type PathName
-  = | 'Precision'
-    | 'Domination'
-    | 'Sorcery'
-    | 'Resolve'
-    | 'Inspiration'
+export type PathName =
+  | "Precision"
+  | "Domination"
+  | "Sorcery"
+  | "Resolve"
+  | "Inspiration"
 
 export interface Path {
   id: number
   name: string
+  icon?: string
+  color?: string
   slots?: PathSlot[]
   tooltip: string
 }

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
   title: "Pockets",
-  description: "Configure your publically available pockets in one spot.",
+  description: "Configure all of your public pockets in one spot.",
   icon: "lucide:folder",
   listClass: "**:stroke-[1.8]",
   order: 3,
@@ -25,9 +25,9 @@ watch(
         v-for="pocket in pocketStore().pockets.filter(
           (p: Pocket) =>
             !(
-              pocketStore().pinned.includes(p.key) ||
+              pocketStore().pinned.includes(p.key) /*  ||
               pocketStore().trash.includes(p.key) ||
-              pocketStore().archive.includes(p.key)
+              pocketStore().archive.includes(p.key) */
             )
         )"
         :key="pocket.key"

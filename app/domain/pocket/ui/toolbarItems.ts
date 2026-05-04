@@ -14,7 +14,7 @@ export const toolbarItems: Record<string, ButtonProps> = {
     label: "New Pocket",
     onClick: () => newPocket(),
     ui: {
-      leadingIcon: "**:stroke-[2.3] in-group/sidebar:scale-106"
+      leadingIcon: "**:stroke-[2] in-group/sidebar:scale-106"
     }
   },
   random: {
@@ -23,7 +23,7 @@ export const toolbarItems: Record<string, ButtonProps> = {
     label: "New Random Pocket",
     ui: {
       base: "p-0 anchor  ",
-      leadingIcon: "size-4! ",
+      leadingIcon: "size-4.5! ",
       label: "hidden "
     },
     onClick: () => newRandomPocket()
@@ -44,7 +44,7 @@ export const toolbarItems: Record<string, ButtonProps> = {
     ui: {
       base: "p-0",
       label: "hidden",
-      leadingIcon: "scale-94 **:stroke-[2.3] group-hover/btn:**:stroke-[2.5]"
+      leadingIcon: "scale-94 **:stroke-[2] group-hover/btn:**:stroke-[2.5]"
     },
     label: "Collapse all",
     onClick: () => {}

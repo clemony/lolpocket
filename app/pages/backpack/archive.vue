@@ -1,9 +1,12 @@
 <script setup lang="ts">
+const { backpackViewMode } = defineProps<{
+  backpackViewMode: "gallery" | "list"
+}>()
+
 definePageMeta({
   title: "Archive",
   icon: "lucide:archive",
   prefix: "Backpack",
-  layout: "backpack-layout",
   order: 2,
   path: "/backpack/archive"
 })

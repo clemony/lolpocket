@@ -1,4 +1,6 @@
 //
+import { nowInstantString } from "#shared/utils"
+
 export function saveNotification(
   template: string,
   vars: Record<string, string>
@@ -13,7 +15,7 @@ export function saveNotification(
     vars,
     related_type: null,
     related_id: null,
-    created_at: new Date().toISOString(),
+    created_at: nowInstantString(),
     read_at: null,
     dismissed_at: null
   }

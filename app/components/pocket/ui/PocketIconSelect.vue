@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getSplash } from "~/domain/utils/img"
+import { getSplash, getSplashFromSkinKey } from "~/domain/utils/img"
 
 const { class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -7,23 +7,18 @@ const { class: className, pocket: p } = defineProps<{
 }>()
 
 const pocket = computed(() => p).value
-const isOpen = shallowRef<boolean>(false)
-function handleSplash(e: string) {
-  pocket.splash = e.replace("centered", "tile")
-  isOpen.value = false
-}
-
-onMounted(() => {
-  if (!pocket.splash && pocket._champion)
-    pocket.splash = getSplash(pocket._champion, "tile")
-})
-if (pocket.splash) {
-  pocket.splash = pocket.splash.replace("centered", "tile")
-} /*
+/*
     v-model:open="isOpen"
     @update:splash="(e) => handleSplash(e)" */
 
 // todo uimodal
+const src = computed(() =>
+  pocket.skin
+    ? getSplashFromSkinKey(pocket.skin, "tile")
+    : pocket._champion
+      ? getSplash(pocket._champion, "tile")
+      : ""
+)
 </script>
 
 <template>
@@ -32,7 +27,7 @@ if (pocket.splash) {
       <!-- TODO todo  default splash -->
       <PocketIcon
         class="pointer-events-none z-1 size-22! rounded-full transition-all duration-500 ease-in-out group-hover/icon:brightness-50 group-data-[state=open]/icon:brightness-50"
-        :src="pocket ? pocket?.splash : ''"
+        :src="src"
         alt="pocket icon" />
 
       <icon

@@ -1,3 +1,5 @@
+import { compareInstantStrings } from "#shared/utils"
+
 export const inboxBox: InboxType[] = [
   {
     name: "Messages",
@@ -35,7 +37,7 @@ export const sortedMessages = computed<InboxMessage[]>(() => {
 
   return box.sort(
     (a, b) =>
-      new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      compareInstantStrings(b.created_at, a.created_at)
   )
 })
 

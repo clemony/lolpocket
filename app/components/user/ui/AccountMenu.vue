@@ -49,21 +49,18 @@ const subProps: { button: ButtonPropsExt; popover: PopoverProps } = {
     ui: { content: "w-64 h-max rounded-xl p-0" }
   }
 }
-
+const { close } = useApp().command
 const { summoner } = safeObject(storeToRefs(user()))
 const open = shallowRef<boolean>(false)
-const menu = computed(() => userMenuItems())
+const menu = computed(() => userMenuItems(close))
 
 const session = useSupabaseSession()
-const client = useSupabaseClient()
-const role = await client.auth.getClaims()
-console.log("🥸 - role:", role)
+const supabaseUser = useSupabaseUser()
 
 const isAdmin = computed(() => {
   const token = !!session.value?.access_token
-  return token && role.data?.claims.role === "admin"
+  return token && supabaseUser.value?.app_metadata?.user_role === "admin"
 })
-console.log("🥸 - isAdmin:", isAdmin)
 </script>
 
 <template>
@@ -77,7 +74,7 @@ console.log("🥸 - isAdmin:", isAdmin)
       :ui="{
         root: 'flex flex-col px-1',
         content:
-          'pt=y-1 w-(--reka-popover-trigger-width)! space-y-px divide-y divide-p3 shadow-none drop-shadow-sm drop-shadow-black/5'
+          'w-(--reka-popover-trigger-width)! space-y-px divide-y divide-p3 shadow-none drop-shadow-sm drop-shadow-black/5'
       }">
       <UButton
         v-bind="delegated"

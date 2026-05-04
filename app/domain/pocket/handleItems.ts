@@ -1,4 +1,4 @@
-import { deepCopy } from "~/domain/pocket/duplicate"
+import { deepCopy } from "~/domain/pocket/manage/duplicate"
 
 //
 export function removeItemFromSet(

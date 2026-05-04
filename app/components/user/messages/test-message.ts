@@ -1,4 +1,5 @@
 import type { AvatarProps } from "@nuxt/ui"
+import { nowInstantString } from "#shared/utils"
 
 export function createTestMessage(): InboxMessage {
   const currentUserId = user().account?.uuid ?? crypto.randomUUID()
@@ -20,7 +21,7 @@ export function createTestMessage(): InboxMessage {
       ]
     } as unknown as InboxMessage["content"],
     preview,
-    created_at: new Date().toISOString(),
+    created_at: nowInstantString(),
     read_at: null,
     archived_at: null,
     trashed_at: null,
@@ -55,7 +56,7 @@ export function createTestNotification(): Partial<InboxNotification> {
     /*     icon: "",
     header: '',
     footer: '', */
-    created_at: new Date().toISOString()
+    created_at: nowInstantString()
   }
 }
 

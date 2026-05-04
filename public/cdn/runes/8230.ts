@@ -1,10 +1,10 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/02/2026 05:23:40 PM CDT
 import type { Rune } from '#shared/types'
 
 const rune: Rune = {
   "id": 8230,
-  "name": "Phase Rush",
-  "description": "Hitting an enemy champion with 3 attacks or <b>separate</b> abilities within 4s grants <speed>25 - 50% Move Speed</speed> based on level and <status>50% Slow Resistance</status> for 3s. Move Speed is 50% effective for ranged champions.<br>Cooldown: 30s - 10s",
+  "name": "Stormraider's Surge",
+  "description": "Dealing 25% of a champion's maximum health within 3s grants <speed>40% Move Speed</speed> and <status>50% Slow Resistance</status> for 3s. Move Speed is 75% effective for ranged champions.<br>Cooldown: 20s - 10s",
   "path": "Sorcery",
   "pathId": 8200,
   "tier": 0,

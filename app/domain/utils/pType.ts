@@ -1,4 +1,6 @@
 export function pType(pocket: Pocket | string) {
-  if (typeof pocket === "string") return pocketStore().getPocket(pocket)
-  else return pocket as unknown as Pocket
+  if (typeof pocket === "string") {
+    const store = pocketStore()
+    return computed(() => store.getPocket(pocket))
+  } else return pocket as unknown as Pocket
 }

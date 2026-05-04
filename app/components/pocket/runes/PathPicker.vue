@@ -56,11 +56,11 @@ const titleVariants = {
 
 const tooltipVariants = {}
 
-function handleSet(p1: string, p2: string) {
+function handleSet(p1: number, p2: number) {
   emit("update:paths", { primary: p1, secondary: p2 })
 }
 
-const pathHovered = ref("")
+const pathHovered = ref<number | null>(null)
 </script>
 
 <template>
@@ -89,7 +89,7 @@ const pathHovered = ref("")
               'animate-out fade-out': !pathHovered
             })
           ">
-          {{ pathIndex.find((r) => r.name === pathHovered)?.tooltip }}
+          {{ pathIndex[pathHovered]?.tooltip }}
         </p>
       </div>
       <div v-else class="absolute size-full items-center justify-between gap-3">
@@ -121,7 +121,7 @@ const pathHovered = ref("")
         delayChildren: 0.2
       }">
       <motion.button
-        v-for="(path, i) in pathIndex"
+        v-for="(path, i) in Object.values(pathIndex)"
         :key="path.name"
         class="after:backdrop-blur-px relative my-auto flex aspect-2/3 max-h-140 grow basis-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-black bg-center shadow-sm drop-shadow-sm *:opacity-0 after:absolute after:z-1 after:size-full after:bg-black/70 after:opacity-0 after:transition-all after:duration-400 hover:*:opacity-100 hover:after:opacity-100"
         :variants="variants"
@@ -139,12 +139,14 @@ const pathHovered = ref("")
         }"
         @click="
           handleSet(
-            path.name,
-            pathIndex[i === 4 ? 0 : i + 1]?.name ?? path.name
+            path.id,
+            (Object.keys(pathIndex) as unknown as number[])[
+              i === 4 ? 0 : i + 1
+            ] ?? path.id
           )
         "
-        @hover-start="pathHovered = path.name"
-        @hover-end="pathHovered = ''">
+        @hover-start="pathHovered = path.id"
+        @hover-end="pathHovered = null">
         <Icon
           class="z-2 size-20! text-white/30!"
           :name="`i-rune-${path.name.toLowerCase()}`" />

@@ -1,6 +1,6 @@
+import { useEventListener } from "@vueuse/core"
 import type { MaybeRefOrGetter, Ref } from "vue"
 import { nextTick, toValue } from "vue"
-import { useEventListener } from "@vueuse/core"
 
 const ITEM_SELECTOR =
   '[data-slot="item"][role="option"], [data-command-menu-item="true"]'
@@ -51,17 +51,19 @@ function isCustomMenuItem(element: Element | null) {
 }
 
 export function useCommandFocusNavigation(options: {
-  open: Ref<boolean>
+  state: Ref<boolean>
   panel: Ref<HTMLElement | null>
   trigger: MaybeRefOrGetter<HTMLInputElement | null | undefined>
 }) {
   const onTriggerKeydown = (event: KeyboardEvent) => {
-    if (!options.open.value) return
+    if (!options.state.value) return
 
     const panel = options.panel.value
     const key = event.key
-    const canMoveForward = key === "ArrowDown" || (key === "Tab" && !event.shiftKey)
-    const canMoveBackward = key === "ArrowUp" || (key === "Tab" && event.shiftKey)
+    const canMoveForward =
+      key === "ArrowDown" || (key === "Tab" && !event.shiftKey)
+    const canMoveBackward =
+      key === "ArrowUp" || (key === "Tab" && event.shiftKey)
 
     if (!canMoveForward && !canMoveBackward) return
 
@@ -74,7 +76,7 @@ export function useCommandFocusNavigation(options: {
   }
 
   const onPanelKeydown = (event: KeyboardEvent) => {
-    if (!options.open.value) return
+    if (!options.state.value) return
 
     const panel = options.panel.value
     const trigger = toValue(options.trigger)
@@ -141,11 +143,7 @@ export function useCommandFocusNavigation(options: {
     }
   }
 
-  useEventListener(
-    () => toValue(options.trigger),
-    "keydown",
-    onTriggerKeydown
-  )
+  useEventListener(() => toValue(options.trigger), "keydown", onTriggerKeydown)
 
   useEventListener(options.panel, "keydown", onPanelKeydown)
 }

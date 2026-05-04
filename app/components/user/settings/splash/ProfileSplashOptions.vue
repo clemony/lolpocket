@@ -1,19 +1,16 @@
 <script lang="ts" setup>
 import { LazySplashSelectPanel } from "#components"
 import { useChampions } from "~/domain/summoner/champions/useChampions"
-import { skinNameFromUrl } from "~/domain/utils/img"
+import { getSplashFromSkinKey, skinNameFromKey } from "~/domain/utils/img"
 
 const { orientation } = defineProps<{
   orientation?: "vertical" | "horizontal"
 }>()
 
-const currentSplash = computed(
-  () => user().account?.splash?.replace("uncentered", "tile") ?? ""
+const currentSkin = computed(() => user().account?.skin ?? null)
+const currentSplash = computed(() =>
+  currentSkin.value ? getSplashFromSkinKey(currentSkin.value, "tile") : ""
 )
-
-const active = ""
-
-const inactive = ""
 
 const card = {
   base: cn(
@@ -41,7 +38,7 @@ const card = {
 }
 
 const chosenLabel = computed(
-  () => skinNameFromUrl(user().account?.splash ?? "") ?? ""
+  () => skinNameFromKey(currentSkin.value) ?? ""
 )
 
 const { getMatchesForSummoner } = useIndexedDB()
@@ -59,16 +56,16 @@ const splashSelect = overlay.create(LazySplashSelectPanel, {
   destroyOnClose: true
 })
 
-function handleSplash(e: string | null) {
+function handleSkin(e: string | null) {
   const account = user().account
-  if (account) account.splash = e
+  if (account) account.skin = e
 }
 
 async function openSplashSelect() {
-  const nextSplash = await splashSelect.open()
+  const nextSkin = await splashSelect.open()
 
-  if (nextSplash !== undefined) {
-    handleSplash(nextSplash)
+  if (nextSkin !== undefined) {
+    handleSkin(nextSkin)
   }
 }
 </script>
@@ -88,10 +85,12 @@ async function openSplashSelect() {
       :ui="{
         base: card.base
       }"
-      @click="handleSplash(null)">
+      @click="handleSkin(null)">
       <div :class="card.wrapper">
         <div :class="card.header">
-          <h4 :class="card.title">Automatic</h4>
+          <h4 :class="card.title">
+            Automatic
+          </h4>
         </div>
         <p :class="card.description">
           Displays your most played champion in recent games.
@@ -100,7 +99,7 @@ async function openSplashSelect() {
           <UBadge
             :class="card.name"
             :label="top()?.name ?? ''"
-            :color="currentSplash !== null ? 'primary' : 'neutral'" />
+            :color="!currentSkin ? 'primary' : 'neutral'" />
           <UBadge
             v-if="!currentSplash"
             color="base"
@@ -113,18 +112,16 @@ async function openSplashSelect() {
     <!--
     <SplashSelectPanel @update-splash="(e) => handleSplash(e)"> -->
     <UButton
-      :active="currentSplash !== null"
+      :active="Boolean(currentSkin)"
       :avatar="{
-        src: user()
-          .account?.splash?.replace('uncentered', 'tile')
-          .replace('centered', 'tile'),
+        src: currentSplash,
         class: card.avatar,
         alt: chosenLabel
       }"
       :class="
         cn(card.base, {
           'basis-1/2 ring-1! inset-shadow-sm! ring-pc/50! ring-offset-1! ring-offset-p4 drop-shadow-sm *:pointer-events-none':
-            currentSplash !== null
+            currentSkin
         })
       "
       @click="openSplashSelect()">
@@ -132,17 +129,21 @@ async function openSplashSelect() {
      -->
       <div :class="card.wrapper">
         <div :class="card.header">
-          <h4 :class="card.title">Custom</h4>
+          <h4 :class="card.title">
+            Custom
+          </h4>
         </div>
-        <p :class="card.description">Pick your favorite. No more Yuumi.</p>
+        <p :class="card.description">
+          Pick your favorite. No more Yuumi.
+        </p>
         <div :class="card.footer">
           <UBadge
-            :color="currentSplash === null ? 'transparent' : 'neutral'"
-            :variant="currentSplash === null ? 'outline' : 'solid'"
+            :color="!currentSkin ? 'transparent' : 'neutral'"
+            :variant="!currentSkin ? 'outline' : 'solid'"
             :class="card.name"
             :label="chosenLabel" />
           <UBadge
-            v-if="currentSplash"
+            v-if="currentSkin"
             color="base"
             size="md"
             icon="i-tick"

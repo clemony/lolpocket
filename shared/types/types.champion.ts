@@ -75,6 +75,7 @@ export interface Modifier {
 export type ChampionRecord = Record<string, Champion>
 export type ChampionLiteRecord = Record<string, ChampionLite>
 export type SplashType = "tile" | "centered" | "load" | "uncentered"
+export type SkinKey = `${string}:${string}:${string}`
 export type SkinRecord = Record<string, Skin>
 
 export interface ChampionLite {

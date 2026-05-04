@@ -15,10 +15,7 @@ export const testingMenu = (
   ui: DropdownMenuItem["ui"]
   children: DropdownMenuItem[]
 } => {
-  console.log(
-    "🥸 - findSummoner - summonerAccounts():",
-    summonerAccounts().accounts
-  )
+  console.log("🥸 - findSummoner - publicUsers():", publicUsers().cache)
 
   const toast = useToast()
   function toasty() {

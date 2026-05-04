@@ -1,3 +1,4 @@
+import { nowInstantString } from "#shared/utils"
 import {
   newItemSet,
   newRuneSet,
@@ -8,16 +9,18 @@ import { generateName } from "~/domain/pocket/generateStrings"
 
 //
 export async function newPocket(options?: { location: LocationKey }) {
+  const now = nowInstantString()
+  const key = crypto.randomUUID()
   const p = {
-    // data
-    key: crypto.randomUUID(),
+    key,
+    okey: key,
     name: generateName(),
     ouuid: user().account?.uuid ?? "",
     uuid: user().account?.uuid ?? "",
 
     // info
     guide: [],
-    splash: "",
+    skin: null,
 
     //
     _role: "all" as RoleKey,
@@ -38,8 +41,8 @@ export async function newPocket(options?: { location: LocationKey }) {
     tags: [],
 
     // time
-    created: new Date().toISOString(),
-    updated: new Date().toISOString(),
+    created: now,
+    updated: now,
     location: options?.location || "pockets",
     order: 0
   }

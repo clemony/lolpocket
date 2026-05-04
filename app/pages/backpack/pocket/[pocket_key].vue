@@ -6,9 +6,8 @@ definePageMeta({
 })
 
 const route = useRoute("pocket")
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
-)
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 
 const mainSet = computed(() => {
   const runes = pocket.value?.runes

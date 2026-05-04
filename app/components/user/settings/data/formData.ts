@@ -42,7 +42,7 @@ export async function saveProfile(
   try {
     await accountUpdate(
       {
-        splash: user().account?.splash ?? null,
+        skin: user().account?.skin ?? null,
         title: user().account?.title ?? null
       },
       { silent: true }

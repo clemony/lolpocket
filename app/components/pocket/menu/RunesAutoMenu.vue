@@ -3,9 +3,8 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 const route = useRoute()
-const pocket = ref<Pocket | undefined>(
-  pocketStore().getPocket(String(route.params.pocket_key))
-)
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 </script>
 
 <template>

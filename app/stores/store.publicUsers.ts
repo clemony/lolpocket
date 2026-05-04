@@ -1,16 +1,16 @@
-export const summonerAccounts = defineStore(
-  "accountsStore",
+export const publicUsers = defineStore(
+  "public-users",
   () => {
     // maps instead of objects
-    const accounts = ref(new Map<string, Account>())
+    const cache = ref(new Map<string, Account>())
     const byPuuid = ref(new Map<string, string>()) // puuid → uuid
 
     const setAccount = (acc: Account) => {
-      accounts.value.set(acc.uuid, acc)
+      cache.value.set(acc.uuid, acc)
       if (acc.puuid) byPuuid.value.set(acc.puuid, acc.uuid)
     }
 
-    const getByUuid = (uuid: string) => accounts.value.get(uuid) ?? null
+    const getByUuid = (uuid: string) => cache.value.get(uuid) ?? null
 
     const getByPuuid = (puuid: string) => {
       const uuid = byPuuid.value.get(puuid)
@@ -40,9 +40,9 @@ export const summonerAccounts = defineStore(
     }
 
     const clearAll = () => {
-      accounts.value.clear()
+      cache.value.clear()
       byPuuid.value.clear()
-      localStorage.removeItem("accountsStore")
+      sessionStorage.removeItem("users-store")
     }
 
     return {
@@ -51,28 +51,28 @@ export const summonerAccounts = defineStore(
       ensureByUuid,
       getByPuuid,
       getByUuid,
-      accounts,
+      cache,
       clearAll,
       setAccount
     }
   },
   {
     persist: {
-      key: "accountsStore",
-      storage: piniaPluginPersistedstate.localStorage(),
+      key: "public-users",
+      storage: piniaPluginPersistedstate.sessionStorage(),
       // optional custom serializer for Maps
       serializer: {
         deserialize: (str) => {
           const parsed = JSON.parse(str)
           return {
             byPuuid: new Map(parsed.byPuuid),
-            accounts: new Map(parsed.accounts)
+            users: new Map(parsed.users)
           }
         },
         serialize: (state) => {
           return JSON.stringify({
             byPuuid: Array.from(state.byPuuid.entries()),
-            accounts: Array.from(state.accounts.entries())
+            users: Array.from(state.users.entries())
           })
         }
       }

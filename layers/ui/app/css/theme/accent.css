@@ -47,17 +47,17 @@
   --color-dom-900: oklch(0.353 0.069 15.91);
   --color-dom-950: oklch(0.327 0.066 15.74);
 
-  --color-pre-50: oklch(0.975 0.011 54.56);
-  --color-pre-100: oklch(0.949 0.023 61.24);
-  --color-pre-200: oklch(0.89 0.054 63.37);
-  --color-pre-300: oklch(0.84 0.089 67.24);
-  --color-pre-400: oklch(0.789 0.114 70.26);
-  --color-pre-500: oklch(0.735 0.107 70.28);
-  --color-pre-600: oklch(0.669 0.098 70.39);
-  --color-pre-700: oklch(0.59 0.086 70.18);
-  --color-pre-800: oklch(0.52 0.075 69.76);
-  --color-pre-900: oklch(0.451 0.065 69.9);
-  --color-pre-950: oklch(0.416 0.061 70.36);
+  --color-pre-50: oklch(0.974 0.015 70.89);
+  --color-pre-100: oklch(0.949 0.032 78.15);
+  --color-pre-200: oklch(0.906 0.064 79.29);
+  --color-pre-300: oklch(0.856 0.116 83.61);
+  --color-pre-400: oklch(0.805 0.113 83.75);
+  --color-pre-500: oklch(0.69 0.097 83.54);
+  --color-pre-600: oklch(0.579 0.082 84.01);
+  --color-pre-700: oklch(0.475 0.067 84.22);
+  --color-pre-800: oklch(0.362 0.051 82.42);
+  --color-pre-900: oklch(0.25 0.035 82.06);
+  --color-pre-950: oklch(0.187 0.027 83.08);
 }
 
 :root,

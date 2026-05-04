@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { vDraggable } from "vue-draggable-plus"
 import type { PocketButton } from "~/domain/pocket/ui/pocketFolderItems"
 import { usePocketFolders } from "~/domain/pocket/ui/pocketFolderItems"
 import { toolbarItems } from "~/domain/pocket/ui/toolbarItems"
@@ -10,17 +11,25 @@ const folders = usePocketFolders()
   <UPage class="size-full">
     <UPageBody class="mx-auto size-full max-w-(--ui-container)">
       <template v-if="folders">
-        <UPageColumns
-          v-for="(item, i) in folders"
-          :id="item.id"
+        <UPageGrid
+          v-for="(folder, i) in folders"
+          :id="folder.id"
           :key="i"
-          class="md:columns-2 lg:columns-3 xl:columns-4">
-          <template v-for="child in item.children" :key="child.pocket.key">
-            <LazyBackpackPocketCard
-              v-if="child.pocket"
-              :pocket="child.pocket" />
-          </template>
-        </UPageColumns>
+          v-draggable="[
+            folder,
+            {
+              group: 'pocket',
+              ghostClass: 'bg-p3 rounded-lg',
+              animation: 1,
+              sort: true,
+              ease: 'ease-in-out'
+            }
+          ]"
+          class="transition-all duration-300 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div v-for="item in folder.children" :key="item.pocket.key">
+            <LazyBackpackPocketCard v-if="item.pocket" :pocket="item.pocket" />
+          </div>
+        </UPageGrid>
       </template>
       <div v-else class="relative grid size-full place-items-center">
         <UEmpty

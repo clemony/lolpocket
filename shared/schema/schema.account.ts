@@ -18,7 +18,7 @@ export const titleSchema = v.nullable(
     v.trim()
   )
 )
-const  newTag = () => {
+const newTag = () => {
   const array = new Int8Array(5)
   return crypto.getRandomValues(array)
 }
@@ -27,7 +27,10 @@ export const accountSchema = v.object({
   puuid: v.nullable(v.string()),
   title: titleSchema,
   username: usernameSchema,
-  tag: v.fallback(v.pipe(v.string(), v.minLength(3), v.maxLength(5)), newTag().toString()),
+  tag: v.fallback(
+    v.pipe(v.string(), v.minLength(3), v.maxLength(5)),
+    newTag().toString()
+  ),
   uuid: v.pipe(v.string(), v.uuid("invalid uuid")),
   //
   created: v.nullable(
@@ -35,7 +38,7 @@ export const accountSchema = v.object({
   ),
   peer_messages: v.fallback(v.boolean(), false),
   public_pockets: v.nullable(v.array(v.pipe(v.string(), v.uuid()))),
-  splash: v.nullable(v.string()),
+  skin: v.fallback(v.nullable(v.string()), null),
   color: v.fallback(v.string(), "insp"),
   updated: v.nullable(
     v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
@@ -75,7 +78,7 @@ export const settingsSchema = v.object({
   ping_pocket_comment: v.fallback(v.boolean(), true),
   fast_trash_pocket: v.fallback(v.boolean(), false),
   fast_trash_message: v.fallback(v.boolean(), false),
-  motion: v.fallback(v.boolean(), true),
+  reduce_motion: v.fallback(v.boolean(), true),
   muted: v.fallback(v.boolean(), true),
   //
   feed_categories: feedCategorySchema,

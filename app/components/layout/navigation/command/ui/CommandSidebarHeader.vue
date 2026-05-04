@@ -38,7 +38,7 @@ const buttonProps: ButtonProps = {
     <div class="flex flex-col items-center">
       <!-- name and tag -->
       <h1
-        class="font-serif text-3xl leading-none font-semibold! normal-case! drop-shadow-lg! drop-shadow-p0!">
+        class="font-serif text-3xl leading-none font-black! normal-case! drop-shadow-2xs! drop-shadow-p0!">
         {{ summoner?.name || account?.username || "Hello." }}
       </h1>
       <div

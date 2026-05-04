@@ -3,6 +3,7 @@ import type { ButtonProps, DropdownMenuItem } from "@nuxt/ui"
 import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 import { getSummonerIcon } from "~/domain/utils/img"
 import { testingMenu } from "../admin/testingMenu"
+import { useSignOut } from "../auth/useAuth"
 export const userAccountItem = computed(() => {
   const { summoner, account } = storeToRefs(user())
   return {
@@ -14,7 +15,7 @@ export const userAccountItem = computed(() => {
     itemTrailingIcon: "i-gear"
   }
 })
-export const userMenuItems = (): ButtonProps[][] => {
+export const userMenuItems = (close: () => void): ButtonProps[][] => {
   const sbu = useSupabaseUser()
   const online = computed(() => sbu.value?.session_id)
   const overlay = useOverlay()
@@ -43,10 +44,24 @@ export const userMenuItems = (): ButtonProps[][] => {
         },
         onClick: () => {
           close()
+          if (online.value) useSignOut()
           return login.open()
         },
         kbds: online.value ? ["shift", "meta", "Q"] : ["shift", "meta", "S"]
       }
     ]
+    /*     [
+      {
+        icon: online.value ? "i-lucide-log-out" : "i-lucide-log-in",
+        label: "Log out",
+        ui: {
+          itemLeadingIcon: "scale-90! **:stroke-[2.4]"
+        },
+        onClick: () => {
+          useSignOut()
+        },
+        kbds: online.value ? ["shift", "meta", "Q"] : ["shift", "meta", "S"]
+      }
+    ] */
   ].filter(Boolean) as ButtonProps[][]
 }

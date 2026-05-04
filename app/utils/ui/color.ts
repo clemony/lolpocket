@@ -82,7 +82,46 @@ export const twBg: Record<string, string> = {
   legends: "bg-legends",
   riot: "bg-neutral!",
   google: "bg-google!",
-  discord: "bg-discord!"
+  discord: "bg-discord!",
+  support: "bg-insp",
+  mid: "bg-sorc",
+  jungle: "bg-res",
+  bot: "bg-pre",
+  top: "bg-dom",
+  fighter: "bg-ad",
+  mage: "bg-sorc",
+  marksman: "bg-pre",
+  assassin: "bg-dom",
+  tank: "bg-res",
+  enchanter: "bg-insp"
+}
+
+export const twBg90: Record<string, string> = {
+  support: "bg-insp/90",
+  mid: "bg-sorc/90",
+  jungle: "bg-res/90",
+  bot: "bg-pre/90",
+  top: "bg-dom/90",
+  fighter: "bg-ad/90",
+  mage: "bg-sorc/90",
+  marksman: "bg-pre/90",
+  assassin: "bg-dom/90",
+  tank: "bg-res/90",
+  enchanter: "bg-insp/90"
+}
+
+export const twBg80: Record<string, string> = {
+  support: "bg-insp/80",
+  mid: "bg-sorc/80",
+  jungle: "bg-res/80",
+  bot: "bg-pre/80",
+  top: "bg-dom/80",
+  fighter: "bg-ad/80",
+  mage: "bg-sorc/80",
+  marksman: "bg-pre/80",
+  assassin: "bg-dom/80",
+  tank: "bg-res/80",
+  enchanter: "bg-insp/80"
 }
 
 export const twBorder: Record<string, string> = {

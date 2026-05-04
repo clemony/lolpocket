@@ -3,11 +3,11 @@ export async function fetchThread(thread_id: string) {
     "/api/supabase/fetch/thread",
     {
       method: "POST",
-      body: { thread_id },
+      body: { thread_id }
     }
   )
 
-  const accs = summonerAccounts()
+  const accs = publicUsers()
 
   for (const acc of Object.values(authors)) {
     accs.setAccount(acc as Account)

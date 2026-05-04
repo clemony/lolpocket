@@ -1,0 +1,7 @@
+.card-shine {
+    @apply transition-all duration-300 ease-spring-soft group-hover/hover-card:brightness-115 group-hover/hover-card:saturate-125;
+}
+
+.card-scale {
+    @apply transition-all duration-300 ease-spring-soft group-hover/card:scale-140;
+}

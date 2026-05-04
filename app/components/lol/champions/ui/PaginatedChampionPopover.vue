@@ -3,9 +3,9 @@ import { championIndex } from "#shared/constants/champions/championIndex"
 import { getSplash } from "~/domain/utils/img"
 
 const route = useRoute()
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
-)
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
+
 const pocketChampions = computed(() => pocket.value?.champions ?? [])
 
 const searchQuery = ref<string>("")

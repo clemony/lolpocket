@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSplashFromSkinKey } from "~/domain/utils/img"
+
 const props = withDefaults(
   defineProps<{
     class?: HTMLAttributes["class"]
@@ -14,11 +16,7 @@ const user = await useSupabaseUser()
 const isAdmin = computed(() => user?.value?.app_metadata?.user_role === "admin")
 const img = useImage()
 const splash = computed(() =>
-  img(
-    props.author?.splash
-      ? props.author.splash.replace("centered", "uncentered")
-      : ""
-  )
+  img(getSplashFromSkinKey(props.author?.skin, "uncentered"))
 )
 const tag = ref(false)
 </script>

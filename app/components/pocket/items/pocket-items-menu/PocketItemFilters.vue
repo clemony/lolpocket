@@ -2,9 +2,8 @@
 import { newItemSet } from "~/domain/pocket/addPocketModules"
 
 const route = useRoute()
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
-)
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 </script>
 
 <template>

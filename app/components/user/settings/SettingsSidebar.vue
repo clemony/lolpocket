@@ -8,12 +8,11 @@ const props = withDefaults(defineProps<SidebarProps>(), {
 })
 const emit = defineEmits(["search", "open"])
 
-const { open, toggle } = useApp().settings
+const { close, toggle, state } = useApp().settings
 const tab = defineModel<string>("tab", { default: "App" })
 
 const session = useSupabaseSession()
 const { settings } = useApp().routes
-console.log("🥸 - settings:", settings)
 const settingsTabs = computed<TabsItem[]>(() => {
   if (!settings) return [] as TabsItem[]
   return settings.map((i) => ({
@@ -24,14 +23,14 @@ const settingsTabs = computed<TabsItem[]>(() => {
 })
 const sidebar = shallowRef<HTMLElement>()
 onClickOutside(sidebar, () => {
-  if (open.value) open.value = false
+  if (close) close()
 })
 </script>
 
 <template>
   <USidebar
     ref="sidebar"
-    v-model:open="open"
+    v-model:open="state"
     v-bind="props"
     :ui="{
       header:

@@ -1,16 +1,9 @@
 <script lang="ts" setup>
 const route = useRoute()
-const pocket = computed(() =>
-  pocketStore().getPocket(String(route.params.pocket_key))
-).value
-const isOpen = shallowRef(false)
+const store = pocketStore()
+const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 
-watch(
-  () => isOpen.value,
-  (newVal) => {
-    console.log("💠 - watch - newVal:", newVal)
-  }
-)
+const isOpen = shallowRef(false)
 </script>
 
 <template>

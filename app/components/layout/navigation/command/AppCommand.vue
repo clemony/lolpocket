@@ -19,7 +19,7 @@ const commandInput = useTemplateRef<{ inputRef: HTMLInputElement | null }>(
   "commandInput"
 )
 
-const { open, toggle } = useApp().command
+const { state, toggle, close } = useApp().command
 
 const reference = computed(() => commandInput.value?.inputRef ?? undefined)
 const searchQuery = computed(() => query.value.trim())
@@ -28,7 +28,7 @@ const { height: panelHeight } = useElementSize(panelMeasure)
 const panelStyle = computed(() => {
   const height = Math.ceil(panelHeight.value)
 
-  if (!open.value || height <= 0) {
+  if (!state.value || height <= 0) {
     return undefined
   }
 
@@ -43,7 +43,7 @@ const content: PopoverProps["content"] = {
 }
 
 useCommandFocusNavigation({
-  open,
+  state,
   panel: panelRoot,
   trigger: reference
 })
@@ -51,14 +51,10 @@ useCommandFocusNavigation({
 defineShortcuts({
   meta_k: {
     usingInput: true,
-    handler: () => focusTrigger(open, reference.value)
+    handler: () => focusTrigger(state, reference.value)
   }
 })
 
-function closeCommand() {
-  if (!open.value) return
-  open.value = false
-}
 const activeComponent = shallowRef<string | null>("menu")
 const component: Record<string, Component> = {
   inbox: LazyCommandInbox,
@@ -71,7 +67,7 @@ const component: Record<string, Component> = {
 watch(
   () => route.fullPath,
   (newVal, oldVal) => {
-    closeCommand()
+    close()
     if (oldVal !== newVal) query.value = ""
   }
 )
@@ -96,11 +92,11 @@ watch(
   <div class="relative">
     <CommandInput
       ref="commandInput"
-      v-model:open="open"
+      v-model:open="state"
       @update:model-value="(value: string) => (query = value)" />
 
     <UPopover
-      v-model:open="open"
+      v-model:open="state"
       :reference="reference"
       :content="content"
       :ui="{
@@ -131,7 +127,7 @@ watch(
                 :active-component
                 :reference="panelMeasure"
                 @update-modal="modalOpen = $event"
-                @close="closeCommand()" />
+                @close="close()" />
             </div>
             <LazyCommandFooter
               v-if="reference"

@@ -4,15 +4,7 @@ const { name } = defineProps<{
 }>()
 console.log("🌱 - name:", name)
 
-const box = computed(() =>
-  name === "pockets"
-    ? pocketStore().pockets.length
-    : name === "archive"
-      ? pocketStore().archive.length
-      : name === "archive"
-        ? pocketStore().trash.length
-        : null
-)
+const box = computed(() => name === "pockets")
 console.log("🌱 - box:", box)
 </script>
 

@@ -30,7 +30,7 @@ const menu = computed<CommandItem[]>(
             icon: "i-folders",
             value: "backpack-pocket",
             trailingIcon: "",
-            to: "/backpack/pockets"
+            to: "/backpack"
           },
           {
             label: "New Pocket",
@@ -104,7 +104,7 @@ function navigate(to: string) {
         </template>
       </div>
     </div>
-    <div class="absolute bottom-0 left-0 z-3 w-full bg-p0">
+    <div class="absolute bottom-0 left-0 z-3 w-full">
       <AccountMenu
         trigger-style="user"
         :content="{

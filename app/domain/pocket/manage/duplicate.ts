@@ -1,5 +1,6 @@
 //
 // duplicate
+import { nowInstantString } from "#shared/utils"
 
 export function deepCopy<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj))
@@ -12,6 +13,9 @@ export function duplicatePocket(original: Pocket): Pocket {
   newPocket.name = `${original.name} (copy)`
 
   newPocket.ouuid = user().account?.uuid ?? ""
+  const now = nowInstantString()
+  newPocket.created = now
+  newPocket.updated = now
 
   pocketStore().pockets.push(newPocket)
   return newPocket
@@ -19,19 +23,21 @@ export function duplicatePocket(original: Pocket): Pocket {
 
 export function duplicateRuneSet(original: RuneSet, target: string): RuneSet {
   const newSet = deepCopy(original)
-  const pocket = <Pocket>pocketStore().getPocket(target)
+  const store = pocketStore()
+  const pocket = computed(() => store.getPocket(target))
 
   newSet.id = crypto.randomUUID()
-  if (pocket?.runes) pocket.runes.push(newSet)
+  if (pocket?.value?.runes) pocket.value.runes.push(newSet)
   return newSet
 }
 
 export function duplicateItemSet(original: ItemSet, target: string): ItemSet {
   const newSet = deepCopy(original)
-  const pocket = <Pocket>pocketStore().getPocket(target)
+  const store = pocketStore()
+  const pocket = computed(() => store.getPocket(target))
 
   newSet.name = `${original.name} (copy)`
   newSet.id = crypto.randomUUID()
-  if (pocket?.items) pocket.items.push(newSet)
+  if (pocket.value?.items) pocket.value.items.push(newSet)
   return newSet
 }

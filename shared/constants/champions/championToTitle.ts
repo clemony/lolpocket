@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/02/2026 05:23:40 PM CDT
 
 export const championToTitle: Record<string, string> = {
   "Aatrox": "The Darkin Blade",

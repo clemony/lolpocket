@@ -1,20 +1,19 @@
-import { parseAbsoluteToLocal } from "@internationalized/date"
+import { instantEpochMilliseconds, toInstantString } from "#shared/utils"
 
 export function parseDate(
   input: Date | string | null | undefined
 ): Date | null {
   if (!input) return null
-  return typeof input === "string" ? new Date(input) : input
+  const instant = toInstantString(input)
+  return instant ? new Date(instant) : null
 }
 
 export function parseISOStringToRelative(ISO: string) {
-  const a = parseAbsoluteToLocal(ISO).toAbsoluteString()
-  return useTimeAgo(a)
+  return useTimeAgo(toInstantString(ISO) ?? ISO)
 }
 
 export function parseISOStringToDate(ISO: string) {
-  const a = parseAbsoluteToLocal(ISO).toAbsoluteString()
-  return useDateFormat(a, "M/D/YY h:MM a")
+  return useDateFormat(toInstantString(ISO) ?? ISO, "M/D/YY h:MM a")
 }
 
 export function getISOWeek(date: Date): number {
@@ -90,14 +89,10 @@ export function msToMinutesAndSeconds(ms: number) {
 export function isStale(date?: number | string | Date | null, maxMinutes = 30) {
   if (!date) return true
 
-  const updated =
-    typeof date === "number"
-      ? new Date(date)
-      : typeof date === "string"
-        ? new Date(date)
-        : date
+  const updated = instantEpochMilliseconds(date)
+  if (Number.isNaN(updated)) return true
 
-  const diff = (Date.now() - updated.getTime()) / 1000 / 60
+  const diff = (Date.now() - updated) / 1000 / 60
   return diff > maxMinutes
 }
 

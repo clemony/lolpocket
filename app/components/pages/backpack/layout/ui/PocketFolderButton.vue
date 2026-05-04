@@ -61,7 +61,7 @@ function setName() {
   <UContextMenu
     size="sm"
     :items="actions"
-    :ui="{ content: 'min-w-44', itemLeadingIcon: '**:stroke-[2.3]' }">
+    :ui="{ content: 'min-w-44', itemLeadingIcon: '**:stroke-[2.3]!' }">
     <component
       :is="component"
       ref="button"
@@ -108,7 +108,7 @@ function setName() {
 
       <span
         v-if="!editing"
-        class="w-full truncate text-start text-md text-nowrap"
+        class="w-full truncate text-start text-sm font-medium text-nowrap"
         >{{ props.item.label ?? "" }}</span
       >
 

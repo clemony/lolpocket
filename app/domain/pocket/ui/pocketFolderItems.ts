@@ -1,6 +1,8 @@
 import type { AvatarProps, ButtonProps, TreeItem } from "@nuxt/ui"
+import type { HtmlHTMLAttributes } from "vue"
 import { defaultPocketFolder } from "~/domain/pocket/manage/defaultFolders"
 import { folderActions, pocketActions } from "~/domain/pocket/ui/contextActions"
+import { getSplashFromSkinKey } from "~/domain/utils/img"
 
 export interface PocketButton extends Omit<ButtonProps, "type"> {
   id?: string
@@ -8,6 +10,7 @@ export interface PocketButton extends Omit<ButtonProps, "type"> {
   children?: PocketButton[]
   openIcon?: string
   type?: "button" | "folder"
+  leadingIcon?: HtmlHTMLAttributes["class"]
 }
 
 export function asTreeItem(item: PocketButton): PocketButton {
@@ -34,7 +37,7 @@ function getChildren(id: string) {
       pocket: p,
       label: p.name,
       avatar: {
-        src: p.splash,
+        src: getSplashFromSkinKey(p.skin, "tile"),
         size: "xs" as AvatarProps["size"],
         ui: {
           image: "scale-180 translate-y-1",

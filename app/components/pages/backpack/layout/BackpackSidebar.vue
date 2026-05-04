@@ -41,8 +41,10 @@ const folders = usePocketFolders()
       footer: 'h-18 px-3',
       root: 'group/sidebar relative h-[calc(100vh-var(--ui-header-height))] min-h-[calc(100vh-var(--ui-header-height))] data-[dragging=false]:duration-200 data-[dragging=false]:ease-out',
       header: cn(
-        'flex h-18 flex-wrap gap-2 px-3',
-        collapsed ? 'flex-col justify-center h-max! py-4' : 'items-center'
+        'flex h-16 flex-wrap gap-2 px-3',
+        collapsed
+          ? 'flex-col justify-center h-max! py-4'
+          : 'items-center border-b border-[3]'
       ),
       body: 'flex flex-col gap-1 px-0 pt-0'
     }"
@@ -60,29 +62,8 @@ const folders = usePocketFolders()
         :ui="{ list: 'rounded-xl' }"
         color="neutral" />
     </template>
-    <div class="flex items-center gap-1.5 border-y border-y-p0 px-3 py-2">
+    <div class="flex items-center gap-0.5 px-2.5 pt-3">
       <LazyBackpackPocketSearch :collapsed />
-    </div>
-    <div class="flex items-center justify-between px-3">
-      <h6>Backpack</h6>
-
-      <div class="flex items-center -space-x-px">
-        <Tooltip v-for="(item, i) in toolbarItems" :key="i" :label="item.label">
-          <UButton
-            v-bind="item"
-            size="sm"
-            :label="undefined"
-            variant="link"
-            :ui="{
-              ...item.ui,
-              leadingIcon: cn(
-                '**:text-n4 group-hover/btn:**:text-pc **:[.plus-icon]:bg-p0!',
-                item.ui?.leadingIcon,
-                item.label !== 'New Pocket' ? '' : ''
-              )
-            }" />
-        </Tooltip>
-      </div>
     </div>
     <VueDraggable v-if="folders" :model-value="list" class="w-full p-2">
       <div v-for="(item, i) in folders" :key="i" :value="item" class="w-full">
@@ -144,6 +125,45 @@ const folders = usePocketFolders()
           :to="item.to" />
       </HintTooltip>
     </div>
+    <template #footer>
+      <div class="flex items-center">
+        <UFieldGroup :orientation="!collapsed ? 'horizontal' : 'vertical'">
+          <Tooltip :label="toolbarItems?.new?.label" :disabled="!collapsed">
+            <UButton
+              v-bind="toolbarItems.new"
+              color="neutral"
+              class="border-r border-r-p3" />
+          </Tooltip>
+          <Tooltip :label="toolbarItems?.random?.label">
+            <UButton
+              v-bind="toolbarItems.random"
+              color="neutral"
+              :ui="{
+                ...toolbarItems.random?.ui,
+                base: 'border-l border-l-p3 p-0 **:[.inactive-icon]:text-nc!',
+                label: 'hidden'
+              }"
+              class="" />
+          </Tooltip>
+        </UFieldGroup>
+        <Tooltip v-for="(item, i) in toolbarItems" :key="i" :label="item.label">
+          <UButton
+            v-bind="item"
+            size="sm"
+            :label="undefined"
+            variant="outline"
+            :ui="{
+              ...item.ui,
+              base: 'w-8! max-w-8 rounded-md',
+              leadingIcon: cn(
+                'size-4.5 **:[.boplus-icon]:bg-p0!',
+                item.ui?.leadingIcon,
+                item.label !== 'New Pocket' ? '' : ''
+              )
+            }" />
+        </Tooltip>
+      </div>
+    </template>
     <UDashboardResizeHandle
       :ui="{
         base: 'absolute inset-y-0 right-0 border-r border-r-p3 after:absolute after:inset-y-0 after:w-px after:border-r after:border-r-p3'

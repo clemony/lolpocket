@@ -1,19 +1,21 @@
 const [useAppProvider, useAppInject] = createInjectionState(() => {
   const routes = buildRoutes()
-  const settingsOpen = shallowRef<boolean>(false)
-  const commandOpen = shallowRef<boolean>(false)
+  const settingsState = shallowRef<boolean>(false)
+  const commandState = shallowRef<boolean>(false)
 
-  const toggleSettings = useToggle(settingsOpen)
-  const toggleCommand = useToggle(commandOpen)
+  const toggleSettings = useToggle(settingsState)
+  const toggleCommand = useToggle(commandState)
   return {
     routes,
     settings: {
-      open: settingsOpen,
-      toggle: toggleSettings
+      state: settingsState,
+      toggle: toggleSettings,
+      close: () => (settingsState.value = false)
     },
     command: {
-      open: commandOpen,
-      toggle: toggleCommand
+      state: commandState,
+      toggle: toggleCommand,
+      close: () => (commandState.value = false)
     }
   }
 })
@@ -24,12 +26,14 @@ export function useApp() {
     useAppInject() ?? {
       routes: {} as RouteReturn,
       settings: {
-        open: shallowRef<boolean>(false),
-        toggle: () => {}
+        state: shallowRef<boolean>(false),
+        toggle: () => {},
+        close: () => {}
       },
       command: {
-        open: shallowRef<boolean>(false),
-        toggle: () => {}
+        state: shallowRef<boolean>(false),
+        toggle: () => {},
+        close: () => {}
       }
       /*     sidebar: {
         open: shallowRef<boolean>(false),

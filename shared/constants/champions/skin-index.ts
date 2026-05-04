@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/02/2026 05:23:51 PM CDT
 import type { Skin } from "#shared/types"
 
 type CompactSkin = readonly [
@@ -45,7 +45,7 @@ const compactSkinIndex = {
     ["21", "Lunar Eclipse"],
     ["30", "DRX"],
     ["31", "Prestige DRX"],
-    ["33", "Primordian", "aatrox_splash_<type>_33.skins_aatrox_skin33", "aatroxloadscreen_33.skins_aatrox_skin33"],
+    ["33", "Primordian", undefined, "aatroxloadscreen_33.skins_aatrox_skin33"],
   ],
   Ahri: [
     ["0", "Original", undefined, "ahriloadscreen_0"],
@@ -66,9 +66,9 @@ const compactSkinIndex = {
     ["65", "Prestige KDA (2022)", undefined, "ahriloadscreen_65_le"],
     ["66", "Arcana"],
     ["76", "Snow Moon"],
-    ["85", "Risen Legend", "ahri_splash_<type>_85.skins_ahri_hol", "ahriloadscreen_85.skins_ahri_hol"],
-    ["88", "Spirit Blossom Springs", "ahri_splash_<type>_88.skins_ahri_skin88", "ahriloadscreen_88.skins_ahri_skin88"],
-    ["89", "After Hours Spirit Blossom Springs", "ahri_splash_<type>_89.skins_ahri_skin89", "ahriloadscreen_89.skins_ahri_skin89"],
+    ["85", "Risen Legend", undefined, "ahriloadscreen_85.skins_ahri_hol"],
+    ["88", "Spirit Blossom Springs", undefined, "ahriloadscreen_88.skins_ahri_skin88"],
+    ["89", "After Hours Spirit Blossom Springs", undefined, "ahriloadscreen_89.skins_ahri_skin89"],
   ],
   Akali: [
     ["0", "Original"],
@@ -92,7 +92,7 @@ const compactSkinIndex = {
     ["70", "Coven"],
     ["71", "Prestige Coven"],
     ["82", "Empyrean"],
-    ["92", "Spirit Blossom", "akali_splash_<type>_92.skins_akali_skin92", "akaliloadscreen_92.skins_akali_skin92"],
+    ["92", "Spirit Blossom", undefined, "akaliloadscreen_92.skins_akali_skin92"],
   ],
   Akshan: [
     ["0", "Original"],
@@ -116,7 +116,7 @@ const compactSkinIndex = {
     ["20", "Conqueror"],
     ["22", "Blackfrost"],
     ["29", "Lunar Beast"],
-    ["40", "Elderwood", "alistar_splash_<type>_40.skins_alistar_skin40", "alistarloadscreen_40.skins_alistar_skin40"],
+    ["40", "Elderwood", undefined, "alistarloadscreen_40.skins_alistar_skin40"],
   ],
   Ambessa: [
     ["0", "Original", "ambessa_splash_<type>_0.domina", "ambessaloadscreen_0.domina"],
@@ -137,7 +137,7 @@ const compactSkinIndex = {
     ["24", "Pumpkin Prince"],
     ["34", "Porcelain"],
     ["44", "Heartache"],
-    ["53", "Dumpling Darlings", "amumu_splash_<type>_53.skins_amumu_skin53", "amumuloadscreen_53.skins_amumu_skin53"],
+    ["53", "Dumpling Darlings", undefined, "amumuloadscreen_53.skins_amumu_skin53"],
   ],
   Anivia: [
     ["0", "Original"],
@@ -172,7 +172,7 @@ const compactSkinIndex = {
     ["22", "Cafe Cuties"],
     ["31", "Fright Night"],
     ["40", "Winterblessed"],
-    ["50", "Battle Princess", "annie_splash_<type>_50.skins_annie_skin50", "annieloadscreen_50.skins_annie_skin50"],
+    ["50", "Battle Princess", undefined, "annieloadscreen_50.skins_annie_skin50"],
   ],
   Aphelios: [
     ["0", "Original"],
@@ -202,8 +202,8 @@ const compactSkinIndex = {
     ["52", "Lunar Empress"],
     ["63", "DRX"],
     ["65", "Crystalis Motus"],
-    ["67", "Infernal", "ashe_splash_<type>_67.skins_ashe_skin67", "asheloadscreen_67.skins_ashe_skin67"],
-    ["76", "Spirit Blossom", "ashe_splash_<type>_76.skins_ashe_skin76", "asheloadscreen_76.skins_ashe_skin76"],
+    ["67", "Infernal", undefined, "asheloadscreen_67.skins_ashe_skin67"],
+    ["76", "Spirit Blossom", undefined, "asheloadscreen_76.skins_ashe_skin76"],
     ["84", "Firecracker", "ashe_splash_<type>_84.skins_ashe_skin84", "asheloadscreen_84.skins_ashe_skin84"],
   ],
   AurelionSol: [
@@ -218,7 +218,7 @@ const compactSkinIndex = {
   Aurora: [
     ["0", "Original", "aurora_splash_<type>_0.aurora", "auroraloadscreen_0.aurora"],
     ["1", "Battle Bunny", "aurora_splash_<type>_1.aurora", "auroraloadscreen_1.aurora"],
-    ["11", "Arcana", "aurora_splash_<type>_11.skins_aurora_skin11", "auroraloadscreen_11.skins_aurora_skin11"],
+    ["11", "Arcana", undefined, "auroraloadscreen_11.skins_aurora_skin11"],
   ],
   Azir: [
     ["0", "Original"],
@@ -228,7 +228,7 @@ const compactSkinIndex = {
     ["4", "Warring Kingdoms"],
     ["5", "Elderwood"],
     ["14", "Worlds 2022"],
-    ["19", "Attorney", "azir_splash_<type>_19.skins_azir_skin19", "azirloadscreen_19.skins_azir_skin19"],
+    ["19", "Attorney", undefined, "azirloadscreen_19.skins_azir_skin19"],
   ],
   Bard: [
     ["0", "Original"],
@@ -238,14 +238,14 @@ const compactSkinIndex = {
     ["8", "Astronaut"],
     ["17", "Cafe Cuties"],
     ["26", "Shan Hai Scrolls"],
-    ["35", "T1", "bard_splash_<type>_35.skins_bard_skin35", "bardloadscreen_35.skins_bard_skin35"],
-    ["37", "Spirit Blossom", "bard_splash_<type>_37.skins_bard_skin37", "bardloadscreen_37.skins_bard_skin37"],
+    ["35", "T1", undefined, "bardloadscreen_35.skins_bard_skin35"],
+    ["37", "Spirit Blossom", undefined, "bardloadscreen_37.skins_bard_skin37"],
   ],
   Belveth: [
     ["0", "Original", undefined, "belvethloadscreen_0"],
     ["1", "Battle Boss"],
     ["10", "Cosmic Matriarch"],
-    ["19", "Primordian", "belveth_splash_<type>_19.skins_belveth_skin19", "belvethloadscreen_19.skins_belveth_skin19"],
+    ["19", "Primordian", undefined, "belvethloadscreen_19.skins_belveth_skin19"],
   ],
   Blitzcrank: [
     ["0", "Original"],
@@ -290,14 +290,14 @@ const compactSkinIndex = {
     ["11", "Crime City"],
     ["24", "Sugar Rush"],
     ["33", "Pool Party"],
-    ["42", "Grill Master", "braum_splash_<type>_42.skins_braum_skin42", "braumloadscreen_42.skins_braum_skin42"],
+    ["42", "Grill Master", undefined, "braumloadscreen_42.skins_braum_skin42"],
     ["51", "Victorious", "braum_splash_<type>_51.skins_braum_skin51", "braumloadscreen_51.skins_braum_skin51"],
   ],
   Briar: [
     ["0", "Original", undefined, "briarloadscreen_0"],
     ["1", "Street Demons"],
-    ["10", "Primordian", "briar_splash_<type>_10.skins_briar_skin10", "briarloadscreen_10.skins_briar_skin10"],
-    ["20", "Battle Academia", "briar_splash_<type>_20.skins_briar_skin20", "briarloadscreen_20.skins_briar_skin20"],
+    ["10", "Primordian", undefined, "briarloadscreen_10.skins_briar_skin10"],
+    ["20", "Battle Academia", undefined, "briarloadscreen_20.skins_briar_skin20"],
   ],
   Caitlyn: [
     ["0", "Original", undefined, "caitlynloadscreen_0"],
@@ -318,8 +318,8 @@ const compactSkinIndex = {
     ["30", "Snow Moon"],
     ["39", "Heartthrob"],
     ["48", "DRX"],
-    ["50", "Arcane Commander", "caitlyn_splash_<type>_50.skins_caitlyn_skin50", "caitlynloadscreen_50.skins_caitlyn_skin50"],
-    ["51", "Prestige Arcane Commander", "caitlyn_splash_<type>_51.skins_caitlyn_skin51", "caitlynloadscreen_51.skins_caitlyn_skin51"],
+    ["50", "Arcane Commander", undefined, "caitlynloadscreen_50.skins_caitlyn_skin50"],
+    ["51", "Prestige Arcane Commander", undefined, "caitlynloadscreen_51.skins_caitlyn_skin51"],
     ["54", "Firecracker", "caitlyn_splash_<type>_54.skins_caitlyn_skin54", "caitlynloadscreen_54.skins_caitlyn_skin54"],
   ],
   Camille: [
@@ -343,7 +343,7 @@ const compactSkinIndex = {
     ["9", "Spirit Blossom"],
     ["18", "Coven"],
     ["28", "Bewitching"],
-    ["38", "Prestige Mythmaker", "cassiopeia_splash_<type>_38.skins_cassiopeia_skin38", "cassiopeialoadscreen_38.skins_cassiopeia_skin38"],
+    ["38", "Prestige Mythmaker", undefined, "cassiopeialoadscreen_38.skins_cassiopeia_skin38"],
   ],
   Chogath: [
     ["0", "Original"],
@@ -357,7 +357,7 @@ const compactSkinIndex = {
     ["14", "Shan Hai Scrolls"],
     ["23", "Broken Covenant"],
     ["32", "Toy Terror"],
-    ["41", "Petricite", "chogath_splash_<type>_41.skins_chogath_skin41", "chogathloadscreen_41.skins_chogath_skin41"],
+    ["41", "Petricite", undefined, "chogathloadscreen_41.skins_chogath_skin41"],
   ],
   Corki: [
     ["0", "Original"],
@@ -371,7 +371,7 @@ const compactSkinIndex = {
     ["8", "Arcade"],
     ["18", "Corgi"],
     ["26", "Astronaut"],
-    ["36", "Brick Toy", "corki_splash_<type>_36.skins_corki_skin36", "corkiloadscreen_36.skins_corki_skin36"],
+    ["36", "Brick Toy", undefined, "corkiloadscreen_36.skins_corki_skin36"],
   ],
   Darius: [
     ["0", "Original"],
@@ -387,9 +387,9 @@ const compactSkinIndex = {
     ["33", "Crime City Nightmare"],
     ["43", "Spirit Blossom"],
     ["54", "Porcelain"],
-    ["64", "Divine God-King", "darius_splash_<type>_64.skins_darius_skin64", "dariusloadscreen_64.skins_darius_skin64"],
-    ["65", "Prestige Triumphant General", "darius_splash_<type>_65.skins_darius_skin65", "dariusloadscreen_65.skins_darius_skin65"],
-    ["67", "Mecha Kingdoms", "darius_splash_<type>_67.skins_darius_skin67", "dariusloadscreen_67.skins_darius_skin67"],
+    ["64", "Divine God-King", undefined, "dariusloadscreen_64.skins_darius_skin64"],
+    ["65", "Prestige Triumphant General", undefined, "dariusloadscreen_65.skins_darius_skin65"],
+    ["67", "Mecha Kingdoms", undefined, "dariusloadscreen_67.skins_darius_skin67"],
   ],
   Diana: [
     ["0", "Original"],
@@ -405,8 +405,8 @@ const compactSkinIndex = {
     ["37", "Firecracker"],
     ["47", "Winterblessed"],
     ["54", "Heavenscale"],
-    ["64", "Dark Cosmic", "diana_splash_<type>_64.skins_diana_skin64", "dianaloadscreen_64.skins_diana_skin64"],
-    ["65", "Prestige Dark Cosmic", "diana_splash_<type>_65.skins_diana_skin65", "dianaloadscreen_65.skins_diana_skin65"],
+    ["64", "Dark Cosmic", undefined, "dianaloadscreen_64.skins_diana_skin64"],
+    ["65", "Prestige Dark Cosmic", undefined, "dianaloadscreen_65.skins_diana_skin65"],
   ],
   DrMundo: [
     ["0", "Original", undefined, "drmundoloadscreen_0"],
@@ -436,8 +436,8 @@ const compactSkinIndex = {
     ["29", "Debonair"],
     ["39", "Fright Night"],
     ["48", "La Ilusión"],
-    ["58", "Grand Reckoning", "draven_splash_<type>_58.skins_draven_skin58", "dravenloadscreen_58.skins_draven_skin58"],
-    ["68", "Victorious", "draven_splash_<type>_68.skins_draven_skin68", "dravenloadscreen_68.skins_draven_skin68"],
+    ["58", "Grand Reckoning", undefined, "dravenloadscreen_58.skins_draven_skin58"],
+    ["68", "Victorious", undefined, "dravenloadscreen_68.skins_draven_skin68"],
   ],
   Ekko: [
     ["0", "Original"],
@@ -452,7 +452,7 @@ const compactSkinIndex = {
     ["45", "Star Guardian"],
     ["46", "Prestige Star Guardian"],
     ["56", "Breakout True Damage"],
-    ["57", "Arcane Last Stand", "ekko_splash_<type>_57.skins_ekko_skin57", "ekkoloadscreen_57.skins_ekko_skin57"],
+    ["57", "Arcane Last Stand", undefined, "ekkoloadscreen_57.skins_ekko_skin57"],
   ],
   Elise: [
     ["0", "Original"],
@@ -464,7 +464,7 @@ const compactSkinIndex = {
     ["6", "Bewitching"],
     ["15", "Withered Rose"],
     ["24", "Coven"],
-    ["34", "Masque of the Black Rose", "elise_splash_<type>_34.skins_elise_care_skin34", "eliseloadscreen_34.skins_elise_care_skin34"],
+    ["34", "Masque of the Black Rose", undefined, "eliseloadscreen_34.skins_elise_care_skin34"],
   ],
   Evelynn: [
     ["0", "Original"],
@@ -483,7 +483,7 @@ const compactSkinIndex = {
     ["42", "Soul Fighter"],
     ["52", "High Noon"],
     ["53", "Prestige High Noon"],
-    ["64", "Nightbringer", "evelynn_splash_<type>_64.skins_evelynn_skin64", "evelynnloadscreen_64.skins_evelynn_skin64"],
+    ["64", "Nightbringer", undefined, "evelynnloadscreen_64.skins_evelynn_skin64"],
   ],
   Ezreal: [
     ["0", "Original"],
@@ -507,7 +507,7 @@ const compactSkinIndex = {
     ["43", "HEARTSTEEL"],
     ["44", "Heavenscale"],
     ["54", "Prestige Heavenscale"],
-    ["65", "Masque of the Black Rose", "ezreal_splash_<type>_65.skins_ezreal_skin65", "ezrealloadscreen_65.skins_ezreal_skin65"],
+    ["65", "Masque of the Black Rose", undefined, "ezrealloadscreen_65.skins_ezreal_skin65"],
   ],
   Fiddlesticks: [
     ["0", "Original"],
@@ -522,7 +522,7 @@ const compactSkinIndex = {
     ["9", "Praetorian"],
     ["27", "Star Nemesis"],
     ["37", "Blood Moon"],
-    ["46", "Flora Fatalis", "fiddlesticks_splash_<type>_46.skins_fiddlesticks_skin46", "fiddlesticksloadscreen_46.skins_fiddlesticks_skin46"],
+    ["46", "Flora Fatalis", undefined, "fiddlesticksloadscreen_46.skins_fiddlesticks_skin46"],
   ],
   Fiora: [
     ["0", "Original"],
@@ -540,8 +540,8 @@ const compactSkinIndex = {
     ["60", "Bewitching"],
     ["69", "Faerie Court"],
     ["80", "Dragonmancer"],
-    ["89", "Battle Queen", "fiora_splash_<type>_89.skins_fiora_skin89", "fioraloadscreen_89.skins_fiora_skin89"],
-    ["98", "Victorious", "fiora_splash_<type>_98.skins_fiora_skin98", "fioraloadscreen_98.skins_fiora_skin98"],
+    ["89", "Battle Queen", undefined, "fioraloadscreen_89.skins_fiora_skin89"],
+    ["98", "Victorious", undefined, "fioraloadscreen_98.skins_fiora_skin98"],
   ],
   Fizz: [
     ["0", "Original"],
@@ -557,7 +557,7 @@ const compactSkinIndex = {
     ["16", "Little Devil"],
     ["15", "Prestige Fuzz (2022)", undefined, "fizzloadscreen_25"],
     ["26", "Astronaut"],
-    ["35", "Rain Shepherd", "fizz_splash_<type>_35.skins_fizz_skin35", "fizzloadscreen_35.skins_fizz_skin35"],
+    ["35", "Rain Shepherd", undefined, "fizzloadscreen_35.skins_fizz_skin35"],
   ],
   Galio: [
     ["0", "Original"],
@@ -570,7 +570,7 @@ const compactSkinIndex = {
     ["13", "Infernal"],
     ["19", "Dragon Guardian"],
     ["28", "Mythmaker"],
-    ["40", "Aegis Frame", "galio_splash_<type>_40.skins_galio_skin40", "galioloadscreen_40.skins_galio_skin40"],
+    ["40", "Aegis Frame", undefined, "galioloadscreen_40.skins_galio_skin40"],
   ],
   Gangplank: [
     ["0", "Original"],
@@ -603,9 +603,9 @@ const compactSkinIndex = {
     ["23", "Prestige Mecha Kingdoms"],
     ["24", "Battle Academia"],
     ["33", "Mythmaker"],
-    ["44", "Fallen God-King", "garen_splash_<type>_44.skins_garen_skin44", "garenloadscreen_44.skins_garen_skin44"],
+    ["44", "Fallen God-King", undefined, "garenloadscreen_44.skins_garen_skin44"],
     ["43", "Pengu", "garen_splash_<type>_43.pengugaren", "garenloadscreen_43.pengugaren"],
-    ["46", "Visions of the Fallen", "garen_splash_<type>_46.skins_garen_skin46", "garenloadscreen_46.skins_garen_skin46"],
+    ["46", "Visions of the Fallen", undefined, "garenloadscreen_46.skins_garen_skin46"],
   ],
   Gnar: [
     ["0", "Original"],
@@ -618,7 +618,7 @@ const compactSkinIndex = {
     ["15", "Astronaut"],
     ["22", "Elderwood"],
     ["31", "La Ilusión"],
-    ["41", "T1", "gnar_splash_<type>_41.skins_gnar_skin41", "gnarloadscreen_41.skins_gnar_skin41"],
+    ["41", "T1", undefined, "gnarloadscreen_41.skins_gnar_skin41"],
   ],
   Gragas: [
     ["0", "Original"],
@@ -635,7 +635,7 @@ const compactSkinIndex = {
     ["11", "Warden"],
     ["20", "Space Groove"],
     ["29", "High Noon"],
-    ["39", "Music Fan", "gragas_splash_<type>_39.skins_gragas_skin39", "gragasloadscreen_39.skins_gragas_skin39"],
+    ["39", "Music Fan", undefined, "gragasloadscreen_39.skins_gragas_skin39"],
   ],
   Graves: [
     ["0", "Original"],
@@ -658,8 +658,8 @@ const compactSkinIndex = {
     ["1", "Space Groove"],
     ["11", "Cafe Cuties"],
     ["20", "Soul Fighter"],
-    ["30", "Battle Queen", "gwen_splash_<type>_30.skins_gwen_skin30", "gwenloadscreen_30.skins_gwen_skin30"],
-    ["39", "Rain Shepherd", "gwen_splash_<type>_39.skins_gwen_skin39", "gwenloadscreen_39.skins_gwen_skin39"],
+    ["30", "Battle Queen", undefined, "gwenloadscreen_30.skins_gwen_skin30"],
+    ["39", "Rain Shepherd", undefined, "gwenloadscreen_39.skins_gwen_skin39"],
   ],
   Hecarim: [
     ["0", "Original", undefined, "hecarimloadscreen_0"],
@@ -674,7 +674,7 @@ const compactSkinIndex = {
     ["14", "Cosmic Charger"],
     ["22", "Arcana"],
     ["31", "Winterblessed"],
-    ["41", "Nightbringer", "hecarim_splash_<type>_41.skins_hecarim_skin41", "hecarimloadscreen_41.skins_hecarim_skin41"],
+    ["41", "Nightbringer", undefined, "hecarimloadscreen_41.skins_hecarim_skin41"],
   ],
   Heimerdinger: [
     ["0", "Original"],
@@ -686,12 +686,12 @@ const compactSkinIndex = {
     ["6", "Dragon Trainer"],
     ["15", "Pool Party"],
     ["24", "Heimerstinger"],
-    ["33", "Arcane Professor", "heimerdinger_splash_<type>_33.skins_heimerdinger_skin33", "heimerdingerloadscreen_33.skins_heimerdinger_skin33"],
+    ["33", "Arcane Professor", undefined, "heimerdingerloadscreen_33.skins_heimerdinger_skin33"],
   ],
   Hwei: [
     ["0", "Original", undefined, "hweiloadscreen_0"],
     ["1", "Winterblessed"],
-    ["11", "Spirit Blossom", "hwei_splash_<type>_11.skins_hwei_skin11", "hweiloadscreen_11.skins_hwei_skin11"],
+    ["11", "Spirit Blossom", undefined, "hweiloadscreen_11.skins_hwei_skin11"],
   ],
   Illaoi: [
     ["0", "Original"],
@@ -699,7 +699,7 @@ const compactSkinIndex = {
     ["2", "Resistance"],
     ["10", "Cosmic Invoker"],
     ["18", "Snow Moon"],
-    ["27", "Battle Bear", "illaoi_splash_<type>_27.skins_illaoi_skin27", "illaoiloadscreen_27.skins_illaoi_skin27"],
+    ["27", "Battle Bear", undefined, "illaoiloadscreen_27.skins_illaoi_skin27"],
   ],
   Irelia: [
     ["0", "Original"],
@@ -717,7 +717,7 @@ const compactSkinIndex = {
     ["17", "Prestige PROJECT (2022)", undefined, "irelialoadscreen_36"],
     ["37", "Mythmaker"],
     ["45", "Porcelain"],
-    ["55", "Spirit Blossom", "irelia_splash_<type>_55.skins_irelia_skin55", "irelialoadscreen_55.skins_irelia_skin55"],
+    ["55", "Spirit Blossom", undefined, "irelialoadscreen_55.skins_irelia_skin55"],
   ],
   Ivern: [
     ["0", "Original"],
@@ -725,7 +725,7 @@ const compactSkinIndex = {
     ["2", "Dunkmaster"],
     ["11", "Old God"],
     ["20", "Astronaut"],
-    ["30", "Spirit Blossom", "ivern_splash_<type>_30.skins_ivern_skin30", "ivernloadscreen_30.skins_ivern_skin30"],
+    ["30", "Spirit Blossom", undefined, "ivernloadscreen_30.skins_ivern_skin30"],
   ],
   Janna: [
     ["0", "Original"],
@@ -744,7 +744,7 @@ const compactSkinIndex = {
     ["45", "Cyber Halo"],
     ["46", "Prestige Cyber Halo"],
     ["56", "Heavenscale"],
-    ["66", "Dawnbringer", "janna_splash_<type>_66.skins_janna_skin66", "jannaloadscreen_66.skins_janna_skin66"],
+    ["66", "Dawnbringer", undefined, "jannaloadscreen_66.skins_janna_skin66"],
   ],
   JarvanIV: [
     ["0", "Original"],
@@ -761,8 +761,8 @@ const compactSkinIndex = {
     ["21", "Lunar Beast"],
     ["30", "Worlds 2021"],
     ["35", "Nightbringer"],
-    ["44", "Mythmaker", "jarvaniv_splash_<type>_44.skins_jarvaniv_skin44", "jarvanivloadscreen_44.skins_jarvaniv_skin44"],
-    ["54", "Prestige Visions of the Fallen", "jarvaniv_splash_<type>_54.skins_jarvaniv_skin54", "jarvanivloadscreen_54.skins_jarvaniv_skin54"],
+    ["44", "Mythmaker", undefined, "jarvanivloadscreen_44.skins_jarvaniv_skin44"],
+    ["54", "Prestige Visions of the Fallen", undefined, "jarvanivloadscreen_54.skins_jarvaniv_skin54"],
   ],
   Jax: [
     ["0", "Original", undefined, "jaxloadscreen_0"],
@@ -793,9 +793,9 @@ const compactSkinIndex = {
     ["15", "Resistance"],
     ["24", "Arcane Inventor"],
     ["25", "Zenith Games"],
-    ["34", "T1", "jayce_splash_<type>_34.skins_jayce_skin34", "jayceloadscreen_34.skins_jayce_skin34"],
+    ["34", "T1", undefined, "jayceloadscreen_34.skins_jayce_skin34"],
     ["36", "Prestige T1", "jayce_splash_<type>_36.prestige2_worldswinners_jayce", "jayceloadscreen_36.prestige2_worldswinners_jayce"],
-    ["35", "Arcane Survivor", "jayce_splash_<type>_35.skins_jayce_skin35", "jayceloadscreen_35.skins_jayce_skin35"],
+    ["35", "Arcane Survivor", undefined, "jayceloadscreen_35.skins_jayce_skin35"],
     ["38", "Petals of Spring", "jayce_splash_<type>_38.skins_jayce_skin38", "jayceloadscreen_38.skins_jayce_skin38"],
   ],
   Jhin: [
@@ -810,8 +810,8 @@ const compactSkinIndex = {
     ["25", "Empyrean"],
     ["36", "Soul Fighter"],
     ["37", "Dark Cosmic Erasure"],
-    ["47", "Mythmaker", "jhin_splash_<type>_47.skins_jhin_skin47", "jhinloadscreen_47.skins_jhin_skin47"],
-    ["55", "Arcana", "jhin_splash_<type>_55.skins_jhin_skin55", "jhinloadscreen_55.skins_jhin_skin55"],
+    ["47", "Mythmaker", undefined, "jhinloadscreen_47.skins_jhin_skin47"],
+    ["55", "Arcana", undefined, "jhinloadscreen_55.skins_jhin_skin55"],
   ],
   Jinx: [
     ["0", "Original"],
@@ -827,8 +827,8 @@ const compactSkinIndex = {
     ["38", "Battle Cat"],
     ["40", "Prestige Battle Cat"],
     ["51", "Cafe Cuties"],
-    ["62", "T1", "jinx_splash_<type>_62.skins_jinx_skin62", "jinxloadscreen_62.skins_jinx_skin62"],
-    ["60", "Arcane Fractured", "jinx_splash_<type>_60.skins_jinx_skin60_projectcare", "jinxloadscreen_60.skins_jinx_skin60_projectcare"],
+    ["62", "T1", undefined, "jinxloadscreen_62.skins_jinx_skin62"],
+    ["60", "Arcane Fractured", undefined, "jinxloadscreen_60.skins_jinx_skin60_projectcare"],
   ],
   KSante: [
     ["0", "Original", undefined, "ksanteloadscreen_0"],
@@ -850,8 +850,8 @@ const compactSkinIndex = {
     ["40", "Star Guardian"],
     ["48", "Inkshadow"],
     ["59", "Heavenscale"],
-    ["69", "Dark Star", "kaisa_splash_<type>_69.skins_kaisa_skin69", "kaisaloadscreen_69.skins_kaisa_skin69"],
-    ["70", "Risen Legend", "kaisa_splash_<type>_70.skins_kaisa_hol", "kaisaloadscreen_70.skins_kaisa_hol"],
+    ["69", "Dark Star", undefined, "kaisaloadscreen_69.skins_kaisa_skin69"],
+    ["70", "Risen Legend", undefined, "kaisaloadscreen_70.skins_kaisa_hol"],
   ],
   Kalista: [
     ["0", "Original"],
@@ -860,7 +860,7 @@ const compactSkinIndex = {
     ["3", "SKT T1"],
     ["5", "Marauder"],
     ["14", "Faerie Court"],
-    ["24", "Dawnbringer", "kalista_splash_<type>_24.skins_kalista_skin24", "kalistaloadscreen_24.skins_kalista_skin24"],
+    ["24", "Dawnbringer", undefined, "kalistaloadscreen_24.skins_kalista_skin24"],
   ],
   Karma: [
     ["0", "Original"],
@@ -877,8 +877,8 @@ const compactSkinIndex = {
     ["27", "Ruined"],
     ["44", "Tranquility Dragon"],
     ["54", "Faerie Queen"],
-    ["61", "Infernal", "karma_splash_<type>_61.skins_karma_skin61", "karmaloadscreen_61.skins_karma_skin61"],
-    ["70", "Spirit Blossom", "karma_splash_<type>_70.skins_karma_skin70", "karmaloadscreen_70.skins_karma_skin70"],
+    ["61", "Infernal", undefined, "karmaloadscreen_61.skins_karma_skin61"],
+    ["70", "Spirit Blossom", undefined, "karmaloadscreen_70.skins_karma_skin70"],
   ],
   Karthus: [
     ["0", "Original"],
@@ -891,7 +891,7 @@ const compactSkinIndex = {
     ["10", "Infernal"],
     ["17", "Pentakill Lost Chapter"],
     ["26", "Elderwood"],
-    ["35", "Arcana", "karthus_splash_<type>_35.skins_karthus_skin35", "karthusloadscreen_35.skins_karthus_skin35"],
+    ["35", "Arcana", undefined, "karthusloadscreen_35.skins_karthus_skin35"],
   ],
   Kassadin: [
     ["0", "Original", undefined, "kassadinloadscreen_0"],
@@ -923,8 +923,8 @@ const compactSkinIndex = {
     ["37", "High Noon"],
     ["47", "Faerie Court"],
     ["48", "Prestige Faerie Court"],
-    ["59", "Chosen of the Wolf", "katarina_splash_<type>_59.skins_katarina_skin59", "katarinaloadscreen_59.skins_katarina_skin59"],
-    ["60", "Prestige Masque of the Black Rose", "katarina_splash_<type>_60.skins_katarina_skin60", "katarinaloadscreen_60.skins_katarina_skin60"],
+    ["59", "Chosen of the Wolf", undefined, "katarinaloadscreen_59.skins_katarina_skin59"],
+    ["60", "Prestige Masque of the Black Rose", undefined, "katarinaloadscreen_60.skins_katarina_skin60"],
     ["70", "Petals of Spring", "katarina_splash_<type>_70.skins_katarina_skin70", "katarinaloadscreen_70.skins_katarina_skin70"],
   ],
   Kayle: [
@@ -945,7 +945,7 @@ const compactSkinIndex = {
     ["57", "Immortal Journey"],
     ["66", "Empyrean"],
     ["67", "Prestige Empyrean"],
-    ["78", "Spirit Blossom", "kayle_splash_<type>_78.skins_kayle_skin78", "kayleloadscreen_78.skins_kayle_skin78"],
+    ["78", "Spirit Blossom", undefined, "kayleloadscreen_78.skins_kayle_skin78"],
   ],
   Kayn: [
     ["0", "Original"],
@@ -955,7 +955,7 @@ const compactSkinIndex = {
     ["9", "Prestige Nightbringer"],
     ["15", "Snow Moon"],
     ["20", "HEARTSTEEL"],
-    ["26", "Battle Academia", "kayn_splash_<type>_26.skins_kayn_skin26", "kaynloadscreen_26.skins_kayn_skin26"],
+    ["26", "Battle Academia", undefined, "kaynloadscreen_26.skins_kayn_skin26"],
   ],
   Kennen: [
     ["0", "Original"],
@@ -990,7 +990,7 @@ const compactSkinIndex = {
     ["22", "Woof and Lamb"],
     ["23", "DRX"],
     ["33", "Prestige Porcelain"],
-    ["34", "Chosen of the Wolf", "kindred_splash_<type>_34.skins_kindred_skin34", "kindredloadscreen_34.skins_kindred_skin34"],
+    ["34", "Chosen of the Wolf", undefined, "kindredloadscreen_34.skins_kindred_skin34"],
   ],
   Kled: [
     ["0", "Original"],
@@ -1015,7 +1015,7 @@ const compactSkinIndex = {
     ["28", "Bee'Maw"],
     ["37", "Zap'Maw"],
     ["46", "Shan Hai Scrolls"],
-    ["55", "Victorious", "kogmaw_splash_<type>_55.skins_kogmaw_skin55", "kogmawloadscreen_55.skins_kogmaw_skin55"],
+    ["55", "Victorious", undefined, "kogmawloadscreen_55.skins_kogmaw_skin55"],
   ],
   Leblanc: [
     ["0", "Original", "leblanc_splash_<type>_0.leblanc_rework", "leblancloadscreen_0.leblanc_rework"],
@@ -1052,8 +1052,8 @@ const compactSkinIndex = {
     ["41", "Zenith Games"],
     ["51", "Heavenscale"],
     ["52", "Divine Heavenscale"],
-    ["68", "T1", "leesin_splash_<type>_68.skins_leesin_skin68", "leesinloadscreen_68.skins_leesin_skin68"],
-    ["72", "Inkshadow", "leesin_splash_<type>_72.skins_leesin_skin72", "leesinloadscreen_72.skins_leesin_skin72"],
+    ["68", "T1", undefined, "leesinloadscreen_68.skins_leesin_skin68"],
+    ["72", "Inkshadow", undefined, "leesinloadscreen_72.skins_leesin_skin72"],
   ],
   Leona: [
     ["0", "Original"],
@@ -1072,7 +1072,7 @@ const compactSkinIndex = {
     ["33", "Debonair"],
     ["34", "High Noon"],
     ["50", "Crystalis Motus"],
-    ["52", "Battle Lion", "leona_splash_<type>_52.skins_leona_skin52", "leonaloadscreen_52.skins_leona_skin52"],
+    ["52", "Battle Lion", undefined, "leonaloadscreen_52.skins_leona_skin52"],
     ["53", "Prestige Battle Lion", "leona_splash_<type>_53.prestige2_animasquad_leona", "leonaloadscreen_53.prestige2_animasquad_leona"],
   ],
   Lillia: [
@@ -1081,7 +1081,7 @@ const compactSkinIndex = {
     ["10", "Nightbringer"],
     ["19", "Shan Hai Scrolls"],
     ["28", "Faerie Court"],
-    ["37", "Bowling League", "lillia_splash_<type>_37.skins_lillia_skin37", "lillialoadscreen_37.skins_lillia_skin37"],
+    ["37", "Bowling League", undefined, "lillialoadscreen_37.skins_lillia_skin37"],
     ["46", "Petals of Spring", "lillia_splash_<type>_46.skins_lillia_skin46", "lillialoadscreen_46.skins_lillia_skin46"],
   ],
   Lissandra: [
@@ -1094,7 +1094,7 @@ const compactSkinIndex = {
     ["23", "Porcelain"],
     ["34", "Space Groove"],
     ["33", "Prestige Porcelain"],
-    ["43", "Flora Fatalis", "lissandra_splash_<type>_43.skins_lissandra_skin43", "lissandraloadscreen_43.skins_lissandra_skin43"],
+    ["43", "Flora Fatalis", undefined, "lissandraloadscreen_43.skins_lissandra_skin43"],
   ],
   Lucian: [
     ["0", "Original"],
@@ -1110,8 +1110,8 @@ const compactSkinIndex = {
     ["31", "Arcana"],
     ["40", "Strike Paladin"],
     ["52", "Winterblessed"],
-    ["62", "Masked Justice", "lucian_splash_<type>_62.skins_lucian_skin62", "lucianloadscreen_62.skins_lucian_skin62"],
-    ["72", "Sunken Shadows", "lucian_splash_<type>_72.skins_lucian_skin72", "lucianloadscreen_72.skins_lucian_skin72"],
+    ["62", "Masked Justice", undefined, "lucianloadscreen_62.skins_lucian_skin62"],
+    ["72", "Sunken Shadows", undefined, "lucianloadscreen_72.skins_lucian_skin72"],
   ],
   Lulu: [
     ["0", "Original"],
@@ -1127,7 +1127,7 @@ const compactSkinIndex = {
     ["27", "Prestige Space Groove"],
     ["37", "Monster Tamer"],
     ["46", "Cafe Cuties"],
-    ["55", "Arcana", "lulu_splash_<type>_55.skins_lulu_skin55", "lululoadscreen_55.skins_lulu_skin55"],
+    ["55", "Arcana", undefined, "lululoadscreen_55.skins_lulu_skin55"],
   ],
   Lux: [
     ["0", "Original"],
@@ -1151,8 +1151,8 @@ const compactSkinIndex = {
     ["42", "Empyrean"],
     ["38", "Soul Fighter"],
     ["61", "Faerie Court"],
-    ["70", "Prestige Spirit Blossom", "lux_splash_<type>_70.skins_lux_skin70", "luxloadscreen_70.skins_lux_skin70"],
-    ["72", "Panda Pal", "lux_splash_<type>_72.skins_lux_skin72", "luxloadscreen_72.skins_lux_skin72"],
+    ["70", "Prestige Spirit Blossom", undefined, "luxloadscreen_70.skins_lux_skin70"],
+    ["72", "Panda Pal", undefined, "luxloadscreen_72.skins_lux_skin72"],
   ],
   Malphite: [
     ["0", "Original"],
@@ -1169,7 +1169,7 @@ const compactSkinIndex = {
     ["25", "FPX"],
     ["27", "Old God"],
     ["37", "Lunar Guardian"],
-    ["48", "Pool Party", "malphite_splash_<type>_48.skins_malphite_skin48", "malphiteloadscreen_48.skins_malphite_skin48"],
+    ["48", "Pool Party", undefined, "malphiteloadscreen_48.skins_malphite_skin48"],
   ],
   Malzahar: [
     ["0", "Original"],
@@ -1185,7 +1185,7 @@ const compactSkinIndex = {
     ["28", "Debonair"],
     ["38", "Three Honors"],
     ["39", "Empyrean"],
-    ["49", "Fatebreaker", "malzahar_splash_<type>_49.skins_malzahar_skin49", "malzaharloadscreen_49.skins_malzahar_skin49"],
+    ["49", "Fatebreaker", undefined, "malzaharloadscreen_49.skins_malzahar_skin49"],
   ],
   Maokai: [
     ["0", "Original"],
@@ -1219,19 +1219,19 @@ const compactSkinIndex = {
     ["53", "Prestige Spirit Blossom"],
     ["89", "Inkshadow"],
     ["96", "Heavenscale"],
-    ["106", "Victorious", "masteryi_splash_<type>_106.skins_masteryi_skin106", "masteryiloadscreen_106.skins_masteryi_skin106"],
+    ["106", "Victorious", undefined, "masteryiloadscreen_106.skins_masteryi_skin106"],
     ["116", "PROJECT Command Line Yi", "masteryi_splash_<type>_116.skins_masteryi_skin116", "masteryiloadscreen_116.skins_masteryi_skin116"],
   ],
   Mel: [
     ["0", "Original", "mel_splash_<type>_0.mel", "melloadscreen_0.mel"],
     ["1", "Arcane Councilor", "mel_splash_<type>_1.mel", "melloadscreen_1.mel"],
-    ["10", "Prestige Winterblessed", "mel_splash_<type>_10.skins_mel_skin10", "melloadscreen_10.skins_mel_skin10"],
+    ["10", "Prestige Winterblessed", undefined, "melloadscreen_10.skins_mel_skin10"],
   ],
   Milio: [
     ["0", "Original", undefined, "milioloadscreen_0"],
     ["1", "Faerie Court"],
-    ["11", "Rain Shepherd", "milio_splash_<type>_11.skins_milio_skin11", "milioloadscreen_11.skins_milio_skin11"],
-    ["20", "Winter Wonder", "milio_splash_<type>_20.skins_milio_skin20", "milioloadscreen_20.skins_milio_skin20"],
+    ["11", "Rain Shepherd", undefined, "milioloadscreen_11.skins_milio_skin11"],
+    ["20", "Winter Wonder", undefined, "milioloadscreen_20.skins_milio_skin20"],
   ],
   MissFortune: [
     ["0", "Original"],
@@ -1255,8 +1255,8 @@ const compactSkinIndex = {
     ["40", "Broken Covenant"],
     ["41", "Prestige Broken Covenant"],
     ["50", "Porcelain"],
-    ["32", "Admiral Battle Bunny", "missfortune_splash_<type>_32.skins_missfortune_skin32", "missfortuneloadscreen_32.skins_missfortune_skin32"],
-    ["60", "Battle Queen", "missfortune_splash_<type>_60.skins_missfortune_skin60", "missfortuneloadscreen_60.skins_missfortune_skin60"],
+    ["32", "Admiral Battle Bunny", undefined, "missfortuneloadscreen_32.skins_missfortune_skin32"],
+    ["60", "Battle Queen", undefined, "missfortuneloadscreen_60.skins_missfortune_skin60"],
   ],
   Mordekaiser: [
     ["0", "Original"],
@@ -1271,7 +1271,7 @@ const compactSkinIndex = {
     ["32", "High Noon"],
     ["42", "Ashen Graveknight"],
     ["44", "Old God"],
-    ["54", "Sahn-Uzal", "mordekaiser_splash_<type>_54.skins_mordekaiser_skin54", "mordekaiserloadscreen_54.skins_mordekaiser_skin54"],
+    ["54", "Sahn-Uzal", undefined, "mordekaiserloadscreen_54.skins_mordekaiser_skin54"],
     ["55", "Prestige Money Miser", "mordekaiser_splash_<type>_55.skins_mordekaiser_skin55", "mordekaiserloadscreen_55.skins_mordekaiser_skin55"],
   ],
   Morgana: [
@@ -1291,14 +1291,14 @@ const compactSkinIndex = {
     ["50", "Star Nemesis"],
     ["60", "Snow Moon"],
     ["70", "Porcelain"],
-    ["80", "Spirit Blossom", "morgana_splash_<type>_80.skins_morgana_skin80", "morganaloadscreen_80.skins_morgana_skin80"],
-    ["81", "Prestige Veiled Lady", "morgana_splash_<type>_81.skins_morgana_skin81", "morganaloadscreen_81.skins_morgana_skin81"],
+    ["80", "Spirit Blossom", undefined, "morganaloadscreen_80.skins_morgana_skin80"],
+    ["81", "Prestige Veiled Lady", undefined, "morganaloadscreen_81.skins_morgana_skin81"],
   ],
   Naafiri: [
     ["0", "Original", undefined, "naafiriloadscreen_0"],
     ["1", "Soul Fighter"],
     ["11", "PROJECT"],
-    ["20", "Glizzy", "naafiri_splash_<type>_20.skins_naafiri_skin20", "naafiriloadscreen_20.skins_naafiri_skin20"],
+    ["20", "Glizzy", undefined, "naafiriloadscreen_20.skins_naafiri_skin20"],
     ["29", "Warhound", "naafiri_splash_<type>_29.skins_naafiri_skin29", "naafiriloadscreen_29.skins_naafiri_skin29"],
   ],
   Nami: [
@@ -1315,8 +1315,8 @@ const compactSkinIndex = {
     ["41", "Space Groove"],
     ["42", "Prestige Space Groove"],
     ["51", "Coven"],
-    ["58", "Mythmaker", "nami_splash_<type>_58.skins_nami_skin58", "namiloadscreen_58.skins_nami_skin58"],
-    ["68", "Sunken Shadows", "nami_splash_<type>_68.skins_nami_skin68", "namiloadscreen_68.skins_nami_skin68"],
+    ["58", "Mythmaker", undefined, "namiloadscreen_58.skins_nami_skin58"],
+    ["68", "Sunken Shadows", undefined, "namiloadscreen_68.skins_nami_skin68"],
   ],
   Nasus: [
     ["0", "Original"],
@@ -1332,7 +1332,7 @@ const compactSkinIndex = {
     ["25", "Space Groove"],
     ["35", "Armored Titan"],
     ["45", "Nightbringer"],
-    ["54", "Fatemaker", "nasus_splash_<type>_54.skins_nasus_skin54", "nasusloadscreen_54.skins_nasus_skin54"],
+    ["54", "Fatemaker", undefined, "nasusloadscreen_54.skins_nasus_skin54"],
   ],
   Nautilus: [
     ["0", "Original"],
@@ -1345,8 +1345,8 @@ const compactSkinIndex = {
     ["9", "Shan Hai Scrolls"],
     ["18", "Fright Night"],
     ["27", "Cosmic Paladin"],
-    ["36", "Crystalis Indomitus", "nautilus_splash_<type>_36.skins_nautilus_skin36", "nautilusloadscreen_36.skins_nautilus_skin36"],
-    ["39", "Petricite", "nautilus_splash_<type>_39.skins_nautilus_skin39", "nautilusloadscreen_39.skins_nautilus_skin39"],
+    ["36", "Crystalis Indomitus", undefined, "nautilusloadscreen_36.skins_nautilus_skin36"],
+    ["39", "Petricite", undefined, "nautilusloadscreen_39.skins_nautilus_skin39"],
   ],
   Neeko: [
     ["0", "Original"],
@@ -1357,8 +1357,8 @@ const compactSkinIndex = {
     ["11", "Prestige Star Guardian (2022)", undefined, "neekoloadscreen_21"],
     ["22", "Bewitching"],
     ["31", "Street Demons"],
-    ["40", "Cosplayer", "neeko_splash_<type>_40.skins_neeko_skin40", "neekoloadscreen_40.skins_neeko_skin40"],
-    ["49", "Beeko", "neeko_splash_<type>_49.skins_neeko_skin49", "neekoloadscreen_49.skins_neeko_skin49"],
+    ["40", "Cosplayer", undefined, "neekoloadscreen_40.skins_neeko_skin40"],
+    ["49", "Beeko", undefined, "neekoloadscreen_49.skins_neeko_skin49"],
   ],
   Nidalee: [
     ["0", "Original"],
@@ -1377,13 +1377,13 @@ const compactSkinIndex = {
     ["29", "Ocean Song"],
     ["39", "Kittalee"],
     ["48", "La Ilusión"],
-    ["58", "Spirit Blossom", "nidalee_splash_<type>_58.skins_nidalee_skin58", "nidaleeloadscreen_58.skins_nidalee_skin58"],
+    ["58", "Spirit Blossom", undefined, "nidaleeloadscreen_58.skins_nidalee_skin58"],
   ],
   Nilah: [
     ["0", "Original", undefined, "nilahloadscreen_0"],
     ["1", "Star Guardian"],
     ["11", "Coven"],
-    ["21", "Inkshadow", "nilah_splash_<type>_21.skins_nilah_skin21", "nilahloadscreen_21.skins_nilah_skin21"],
+    ["21", "Inkshadow", undefined, "nilahloadscreen_21.skins_nilah_skin21"],
   ],
   Nocturne: [
     ["0", "Original"],
@@ -1411,7 +1411,7 @@ const compactSkinIndex = {
     ["16", "Space Groove"],
     ["26", "Nunu & Beelump"],
     ["35", "Cosmic Paladins"],
-    ["44", "Fright Night", "nunu_splash_<type>_44.skins_nunu_skin44", "nunuloadscreen_44.skins_nunu_skin44"],
+    ["44", "Fright Night", undefined, "nunuloadscreen_44.skins_nunu_skin44"],
   ],
   Olaf: [
     ["0", "Original"],
@@ -1425,7 +1425,7 @@ const compactSkinIndex = {
     ["16", "Dragonslayer"],
     ["25", "Sentinel"],
     ["35", "Pentakill Lost Chapter"],
-    ["44", "Infernal", "olaf_splash_<type>_44.skins_olaf_skin44", "olafloadscreen_44.skins_olaf_skin44"],
+    ["44", "Infernal", undefined, "olafloadscreen_44.skins_olaf_skin44"],
   ],
   Orianna: [
     ["0", "Original"],
@@ -1440,7 +1440,7 @@ const compactSkinIndex = {
     ["11", "Pool Party"],
     ["20", "Orbeeanna"],
     ["29", "Star Guardian"],
-    ["38", "T1", "orianna_splash_<type>_38.skins_orianna_skin38", "oriannaloadscreen_38.skins_orianna_skin38"],
+    ["38", "T1", undefined, "oriannaloadscreen_38.skins_orianna_skin38"],
   ],
   Ornn: [
     ["0", "Original"],
@@ -1448,7 +1448,7 @@ const compactSkinIndex = {
     ["2", "Elderwood"],
     ["11", "Space Groove"],
     ["20", "Choo-Choo"],
-    ["29", "Aegis Frame", "ornn_splash_<type>_29.skins_ornn_skin29", "ornnloadscreen_29.skins_ornn_skin29"],
+    ["29", "Aegis Frame", undefined, "ornnloadscreen_29.skins_ornn_skin29"],
   ],
   Pantheon: [
     ["0", "Original"],
@@ -1464,7 +1464,7 @@ const compactSkinIndex = {
     ["25", "Ruined"],
     ["26", "Prestige Ascended"],
     ["36", "Ashen Conqueror"],
-    ["38", "Chosen of the Wolf", "pantheon_splash_<type>_38.skins_pantheon_skin38", "pantheonloadscreen_38.skins_pantheon_skin38"],
+    ["38", "Chosen of the Wolf", undefined, "pantheonloadscreen_38.skins_pantheon_skin38"],
   ],
   Poppy: [
     ["0", "Original"],
@@ -1493,9 +1493,9 @@ const compactSkinIndex = {
     ["45", "Empyrean"],
     ["53", "Soul Fighter"],
     ["54", "Prestige Soul Fighter"],
-    ["64", "Fright Night", "pyke_splash_<type>_64.skins_pyke_skin64", "pykeloadscreen_64.skins_pyke_skin64"],
-    ["74", "Inkshadow", "pyke_splash_<type>_74.skins_pyke_skin74", "pykeloadscreen_74.skins_pyke_skin74"],
-    ["75", "T1", "pyke_splash_<type>_75.skins_pyke_skin75", "pykeloadscreen_75.skins_pyke_skin75"],
+    ["64", "Fright Night", undefined, "pykeloadscreen_64.skins_pyke_skin64"],
+    ["74", "Inkshadow", undefined, "pykeloadscreen_74.skins_pyke_skin74"],
+    ["75", "T1", undefined, "pykeloadscreen_75.skins_pyke_skin75"],
   ],
   Qiyana: [
     ["0", "Original"],
@@ -1507,7 +1507,7 @@ const compactSkinIndex = {
     ["10", "Prestige True Damage (2022)", undefined, "qiyanaloadscreen_21"],
     ["30", "Lunar Empress"],
     ["40", "La Ilusión"],
-    ["50", "Prestige Battle Academia", "qiyana_splash_<type>_50.skins_qiyana_skin50", "qiyanaloadscreen_50.skins_qiyana_skin50"],
+    ["50", "Prestige Battle Academia", undefined, "qiyanaloadscreen_50.skins_qiyana_skin50"],
   ],
   Quinn: [
     ["0", "Original"],
@@ -1531,7 +1531,7 @@ const compactSkinIndex = {
     ["36", "Redeemed Star Guardian"],
     ["37", "Dragonmancer"],
     ["38", "Prestige Dragonmancer"],
-    ["47", "Battle Academia", "rakan_splash_<type>_47.skins_rakan_skin47", "rakanloadscreen_47.skins_rakan_skin47"],
+    ["47", "Battle Academia", undefined, "rakanloadscreen_47.skins_rakan_skin47"],
   ],
   Rammus: [
     ["0", "Original"],
@@ -1553,14 +1553,14 @@ const compactSkinIndex = {
     ["2", "Pool Party"],
     ["9", "Blackfrost"],
     ["17", "Elderwood"],
-    ["26", "Primordian", "reksai_splash_<type>_26.skins_reksai_skin26", "reksailoadscreen_26.skins_reksai_skin26"],
+    ["26", "Primordian", undefined, "reksailoadscreen_26.skins_reksai_skin26"],
   ],
   Rell: [
     ["0", "Original"],
     ["1", "Battle Queen"],
     ["10", "Star Guardian"],
     ["20", "High Noon"],
-    ["30", "Grand Reckoning", "rell_splash_<type>_30.skins_rell_skin30", "rellloadscreen_30.skins_rell_skin30"],
+    ["30", "Grand Reckoning", undefined, "rellloadscreen_30.skins_rell_skin30"],
   ],
   Renata: [
     ["0", "Original", undefined, "renataloadscreen_0"],
@@ -1568,7 +1568,7 @@ const compactSkinIndex = {
     ["10", "Fright Night"],
     ["20", "La Ilusión"],
     ["21", "Prestige La Ilusión"],
-    ["31", "Masque of the Black Rose", "renata_splash_<type>_31.skins_renata_care_skin31", "renataloadscreen_31.skins_renata_care_skin31"],
+    ["31", "Masque of the Black Rose", undefined, "renataloadscreen_31.skins_renata_care_skin31"],
   ],
   Renekton: [
     ["0", "Original"],
@@ -1586,7 +1586,7 @@ const compactSkinIndex = {
     ["26", "PROJECT"],
     ["33", "Dawnbringer"],
     ["42", "Worlds 2023"],
-    ["48", "Inkshadow", "renekton_splash_<type>_48.skins_renekton_skin48", "renektonloadscreen_48.skins_renekton_skin48"],
+    ["48", "Inkshadow", undefined, "renektonloadscreen_48.skins_renekton_skin48"],
   ],
   Rengar: [
     ["0", "Original"],
@@ -1643,7 +1643,7 @@ const compactSkinIndex = {
     ["11", "Worlds 2019"],
     ["13", "Guardian of the Sands"],
     ["20", "Arcana"],
-    ["29", "Blood Moon", "ryze_splash_<type>_29.skins_ryze_skin29", "ryzeloadscreen_29.skins_ryze_skin29"],
+    ["29", "Blood Moon", undefined, "ryzeloadscreen_29.skins_ryze_skin29"],
   ],
   Samira: [
     ["0", "Original"],
@@ -1651,8 +1651,8 @@ const compactSkinIndex = {
     ["10", "Space Groove"],
     ["20", "High Noon"],
     ["30", "Soul Fighter"],
-    ["33", "Masque of the Black Rose", "samira_splash_<type>_33.skins_samira_care_skin33", "samiraloadscreen_33.skins_samira_care_skin33"],
-    ["35", "Battle Professor", "samira_splash_<type>_35.skins_samira_skin35", "samiraloadscreen_35.skins_samira_skin35"],
+    ["33", "Masque of the Black Rose", undefined, "samiraloadscreen_33.skins_samira_care_skin33"],
+    ["35", "Battle Professor", undefined, "samiraloadscreen_35.skins_samira_skin35"],
   ],
   Sejuani: [
     ["0", "Original"],
@@ -1681,7 +1681,7 @@ const compactSkinIndex = {
     ["36", "Bewitching"],
     ["46", "Star Guardian"],
     ["56", "Winterblessed"],
-    ["63", "Masked Justice", "senna_splash_<type>_63.skins_senna_skin63", "sennaloadscreen_63.skins_senna_skin63"],
+    ["63", "Masked Justice", undefined, "sennaloadscreen_63.skins_senna_skin63"],
     ["72", "Warhound", "senna_splash_<type>_72.skins_senna_skin72", "sennaloadscreen_72.skins_senna_skin72"],
   ],
   Seraphine: [
@@ -1692,8 +1692,8 @@ const compactSkinIndex = {
     ["15", "Prestige Ocean Song"],
     ["24", "Faerie Court"],
     ["34", "Star Guardian"],
-    ["43", "Battle Dove", "seraphine_splash_<type>_43.skins_seraphine_skin43", "seraphineloadscreen_43.skins_seraphine_skin43"],
-    ["50", "Dumpling Darlings", "seraphine_splash_<type>_50.skins_seraphine_skin50", "seraphineloadscreen_50.skins_seraphine_skin50"],
+    ["43", "Battle Dove", undefined, "seraphineloadscreen_43.skins_seraphine_skin43"],
+    ["50", "Dumpling Darlings", undefined, "seraphineloadscreen_50.skins_seraphine_skin50"],
     ["59", "Firecracker", "seraphine_splash_<type>_59.skins_seraphine_skin59", "seraphineloadscreen_59.skins_seraphine_skin59"],
   ],
   Sett: [
@@ -1706,8 +1706,8 @@ const compactSkinIndex = {
     ["38", "Spirit Blossom"],
     ["45", "Soul Fighter"],
     ["56", "HEARTSTEEL"],
-    ["66", "Radiant Serpent", "sett_splash_<type>_66.skins_sett_skin66", "settloadscreen_66.skins_sett_skin66"],
-    ["67", "Spirit Blossom Springs", "sett_splash_<type>_67.skins_sett_skin67", "settloadscreen_67.skins_sett_skin67"],
+    ["66", "Radiant Serpent", undefined, "settloadscreen_66.skins_sett_skin66"],
+    ["67", "Spirit Blossom Springs", undefined, "settloadscreen_67.skins_sett_skin67"],
   ],
   Shaco: [
     ["0", "Original"],
@@ -1724,8 +1724,8 @@ const compactSkinIndex = {
     ["33", "Winterblessed"],
     ["43", "Soul Fighter"],
     ["44", "Prestige Soul Fighter"],
-    ["54", "Fright Night", "shaco_splash_<type>_54.skins_shaco_skin54", "shacoloadscreen_54.skins_shaco_skin54"],
-    ["64", "Cat-in-the-Box", "shaco_splash_<type>_64.skins_shaco_skin64", "shacoloadscreen_64.skins_shaco_skin64"],
+    ["54", "Fright Night", undefined, "shacoloadscreen_54.skins_shaco_skin54"],
+    ["64", "Cat-in-the-Box", undefined, "shacoloadscreen_64.skins_shaco_skin64"],
   ],
   Shen: [
     ["0", "Original"],
@@ -1740,7 +1740,7 @@ const compactSkinIndex = {
     ["22", "PsyOps"],
     ["40", "Shockblade"],
     ["49", "Ashen Guardian"],
-    ["51", "Three Honors", "shen_splash_<type>_51.skins_shen_skin51", "shenloadscreen_51.skins_shen_skin51"],
+    ["51", "Three Honors", undefined, "shenloadscreen_51.skins_shen_skin51"],
   ],
   Shyvana: [
     ["0", "Original", "shyvana_splash_<type>_0.shyvana_rework", "shyvanaloadscreen_0.shyvana_rework"],
@@ -1766,7 +1766,7 @@ const compactSkinIndex = {
     ["9", "Beekeeper"],
     ["10", "Resistance"],
     ["19", "Astronaut"],
-    ["28", "Arcane Shimmer Lab", "singed_splash_<type>_28.skins_singed_skin28", "singedloadscreen_28.skins_singed_skin28"],
+    ["28", "Arcane Shimmer Lab", undefined, "singedloadscreen_28.skins_singed_skin28"],
   ],
   Sion: [
     ["0", "Original"],
@@ -1779,7 +1779,7 @@ const compactSkinIndex = {
     ["22", "Blackfrost"],
     ["30", "High Noon"],
     ["40", "Cosmic Paladin"],
-    ["49", "Grand Reckoning", "sion_splash_<type>_49.skins_sion_skin49", "sionloadscreen_49.skins_sion_skin49"],
+    ["49", "Grand Reckoning", undefined, "sionloadscreen_49.skins_sion_skin49"],
   ],
   Sivir: [
     ["0", "Original", undefined, "sivirloadscreen_0"],
@@ -1800,7 +1800,7 @@ const compactSkinIndex = {
     ["50", "Mythmaker"],
     ["51", "Prestige Mythmaker"],
     ["61", "Primal Ambush"],
-    ["70", "Ann-Sivir-sary", "sivir_splash_<type>_70.skins_sivir_skin70", "sivirloadscreen_70.skins_sivir_skin70"],
+    ["70", "Ann-Sivir-sary", undefined, "sivirloadscreen_70.skins_sivir_skin70"],
     ["72", "PROJECT", "sivir_splash_<type>_72.skins_sivir_skin72", "sivirloadscreen_72.skins_sivir_skin72"],
   ],
   Skarner: [
@@ -1810,12 +1810,12 @@ const compactSkinIndex = {
     ["3", "Battlecast Alpha"],
     ["4", "Guardian of the Sands"],
     ["5", "Cosmic Sting"],
-    ["14", "Mecha Kingdoms", "skarner_splash_<type>_14.skins_skarner_skin14", "skarnerloadscreen_14.skins_skarner_skin14"],
+    ["14", "Mecha Kingdoms", undefined, "skarnerloadscreen_14.skins_skarner_skin14"],
   ],
   Smolder: [
     ["0", "Original", undefined, "smolderloadscreen_0"],
     ["1", "Heavenscale"],
-    ["11", "Reindeer", "smolder_splash_<type>_11.skins_smolder_skin11", "smolderloadscreen_11.skins_smolder_skin11"],
+    ["11", "Reindeer", undefined, "smolderloadscreen_11.skins_smolder_skin11"],
   ],
   Sona: [
     ["0", "Original"],
@@ -1832,8 +1832,8 @@ const compactSkinIndex = {
     ["35", "Star Guardian"],
     ["45", "Immortal Journey"],
     ["46", "Prestige Immortal Journey"],
-    ["56", "Victorious", "sona_splash_<type>_56.skins_sona_skin56", "sonaloadscreen_56.skins_sona_skin56"],
-    ["66", "Spirit Blossom Springs", "sona_splash_<type>_66.skins_sona_skin66", "sonaloadscreen_66.skins_sona_skin66"],
+    ["56", "Victorious", undefined, "sonaloadscreen_56.skins_sona_skin56"],
+    ["66", "Spirit Blossom Springs", undefined, "sonaloadscreen_66.skins_sona_skin66"],
     ["75", "Prestige Requiem", "sona_splash_<type>_75.skins_sona_skin75", "sonaloadscreen_75.skins_sona_skin75"],
   ],
   Soraka: [
@@ -1853,8 +1853,8 @@ const compactSkinIndex = {
     ["18", "Cafe Cuties"],
     ["27", "Spirit Blossom"],
     ["37", "Immortal Journey"],
-    ["44", "Faerie Court", "soraka_splash_<type>_44.skins_soraka_skin44", "sorakaloadscreen_44.skins_soraka_skin44"],
-    ["53", "Flora Fatalis", "soraka_splash_<type>_53.skins_soraka_skin53", "sorakaloadscreen_53.skins_soraka_skin53"],
+    ["44", "Faerie Court", undefined, "sorakaloadscreen_44.skins_soraka_skin44"],
+    ["53", "Flora Fatalis", undefined, "sorakaloadscreen_53.skins_soraka_skin53"],
   ],
   Swain: [
     ["0", "Original"],
@@ -1865,7 +1865,7 @@ const compactSkinIndex = {
     ["11", "Hextech"],
     ["12", "Crystal Rose"],
     ["21", "Winterblessed"],
-    ["32", "Chosen of the Wolf", "swain_splash_<type>_32.skins_swain_skin32", "swainloadscreen_32.skins_swain_skin32"],
+    ["32", "Chosen of the Wolf", undefined, "swainloadscreen_32.skins_swain_skin32"],
     ["33", "Prestige Chosen of the Wolf", "swain_splash_<type>_33.prestige2_matcha_swain", "swainloadscreen_33.prestige2_matcha_swain"],
     ["42", "Fried Chicken King", "swain_splash_<type>_42.skins_swain_skin42", "swainloadscreen_42.skins_swain_skin42"],
   ],
@@ -1878,8 +1878,8 @@ const compactSkinIndex = {
     ["24", "Battle Wolf"],
     ["34", "Ashen Slayer"],
     ["36", "Winterblessed"],
-    ["46", "Dark Star", "sylas_splash_<type>_46.skins_sylas_skin46", "sylasloadscreen_46.skins_sylas_skin46"],
-    ["53", "Prestige T1", "sylas_splash_<type>_53.skins_sylas_skin53", "sylasloadscreen_53.skins_sylas_skin53"],
+    ["46", "Dark Star", undefined, "sylasloadscreen_46.skins_sylas_skin46"],
+    ["53", "Prestige T1", undefined, "sylasloadscreen_53.skins_sylas_skin53"],
   ],
   Syndra: [
     ["0", "Original", undefined, "syndraloadscreen_0"],
@@ -1895,7 +1895,7 @@ const compactSkinIndex = {
     ["34", "Prestige Star Guardian"],
     ["44", "Spirit Blossom"],
     ["54", "Coven"],
-    ["65", "Dumpling Darlings", "syndra_splash_<type>_65.skins_syndra_skin65", "syndraloadscreen_65_2.skins_syndra_skin65"],
+    ["65", "Dumpling Darlings", undefined, "syndraloadscreen_65_2.skins_syndra_skin65"],
   ],
   TahmKench: [
     ["0", "Original"],
@@ -1914,7 +1914,7 @@ const compactSkinIndex = {
     ["3", "Pool Party"],
     ["11", "Star Guardian"],
     ["21", "Crystalis Motus"],
-    ["24", "Durand's Legacy", "taliyah_splash_<type>_24.skins_taliyah_skin24", "taliyahloadscreen_24.skins_taliyah_skin24"],
+    ["24", "Durand's Legacy", undefined, "taliyahloadscreen_24.skins_taliyah_skin24"],
   ],
   Talon: [
     ["0", "Original"],
@@ -1929,7 +1929,7 @@ const compactSkinIndex = {
     ["38", "High Noon"],
     ["39", "Prestige High Noon"],
     ["49", "Primal Ambush"],
-    ["59", "Grand Reckoning", "talon_splash_<type>_59.skins_talon_skin59", "talonloadscreen_59.skins_talon_skin59"],
+    ["59", "Grand Reckoning", undefined, "talonloadscreen_59.skins_talon_skin59"],
   ],
   Taric: [
     ["0", "Original"],
@@ -1939,7 +1939,7 @@ const compactSkinIndex = {
     ["4", "Pool Party"],
     ["9", "Taric Luminshield"],
     ["18", "Space Groove"],
-    ["27", "Fatebreaker", "taric_splash_<type>_27.skins_taric_skin27", "taricloadscreen_27.skins_taric_skin27"],
+    ["27", "Fatebreaker", undefined, "taricloadscreen_27.skins_taric_skin27"],
   ],
   Teemo: [
     ["0", "Original", "teemo_splash_<type>_0.asu_teemo", "teemoloadscreen_0.asu_teemo"],
@@ -1957,7 +1957,7 @@ const compactSkinIndex = {
     ["27", "Prestige Spirit Blossom", "teemo_splash_<type>_27.asu_teemo", "teemoloadscreen_27.asu_teemo"],
     ["37", "Firecracker", "teemo_splash_<type>_37.asu_teemo", "teemoloadscreen_37.asu_teemo"],
     ["47", "Space Groove"],
-    ["54", "Spirit Blossom Springs", "teemo_splash_<type>_54.skins_teemo_skin54", "teemoloadscreen_54.skins_teemo_skin54"],
+    ["54", "Spirit Blossom Springs", undefined, "teemoloadscreen_54.skins_teemo_skin54"],
   ],
   Thresh: [
     ["0", "Original"],
@@ -1976,7 +1976,7 @@ const compactSkinIndex = {
     ["14", "Prestige Pulsefire (2022)", undefined, "threshloadscreen_38"],
     ["39", "Lunar Emperor"],
     ["49", "Winterblessed"],
-    ["59", "Janitor", "thresh_splash_<type>_59.skins_thresh_skin59", "threshloadscreen_59.skins_thresh_skin59"],
+    ["59", "Janitor", undefined, "threshloadscreen_59.skins_thresh_skin59"],
   ],
   Tristana: [
     ["0", "Original"],
@@ -1994,8 +1994,8 @@ const compactSkinIndex = {
     ["40", "Hextech"],
     ["41", "Firecracker"],
     ["51", "Spirit Blossom"],
-    ["61", "Faerie Court", "tristana_splash_<type>_61.skins_tristana_skin61", "tristanaloadscreen_61.skins_tristana_skin61"],
-    ["70", "Rain Shepherd", "tristana_splash_<type>_70.skins_tristana_skin70", "tristanaloadscreen_70.skins_tristana_skin70"],
+    ["61", "Faerie Court", undefined, "tristanaloadscreen_61.skins_tristana_skin61"],
+    ["70", "Rain Shepherd", undefined, "tristanaloadscreen_70.skins_tristana_skin70"],
   ],
   Trundle: [
     ["0", "Original"],
@@ -2006,7 +2006,7 @@ const compactSkinIndex = {
     ["5", "Worldbreaker"],
     ["6", "Dragonslayer"],
     ["12", "Fright Night"],
-    ["21", "Esports Fan", "trundle_splash_<type>_21.skins_trundle_skin21", "trundleloadscreen_21.skins_trundle_skin21"],
+    ["21", "Esports Fan", undefined, "trundleloadscreen_21.skins_trundle_skin21"],
   ],
   Tryndamere: [
     ["0", "Original"],
@@ -2022,7 +2022,7 @@ const compactSkinIndex = {
     ["10", "Blood Moon"],
     ["18", "Nightbringer"],
     ["27", "Victorious"],
-    ["37", "Visions of the Fallen", "tryndamere_splash_<type>_37.skins_tryndamere_skin37", "tryndamereloadscreen_37.skins_tryndamere_skin37"],
+    ["37", "Visions of the Fallen", undefined, "tryndamereloadscreen_37.skins_tryndamere_skin37"],
   ],
   TwistedFate: [
     ["0", "Original"],
@@ -2041,7 +2041,7 @@ const compactSkinIndex = {
     ["23", "DWG"],
     ["25", "Crime City Nightmare"],
     ["36", "Space Groove"],
-    ["45", "Victorious", "twistedfate_splash_<type>_45.skins_twistedfate_skin45", "twistedfateloadscreen_45.skins_twistedfate_skin45"],
+    ["45", "Victorious", undefined, "twistedfateloadscreen_45.skins_twistedfate_skin45"],
   ],
   Twitch: [
     ["0", "Original"],
@@ -2058,7 +2058,7 @@ const compactSkinIndex = {
     ["36", "Dragonslayer"],
     ["45", "High Noon"],
     ["55", "Cheddar Chief"],
-    ["64", "Pool Party", "twitch_splash_<type>_64.skins_twitch_skin64", "twitchloadscreen_64.skins_twitch_skin64"],
+    ["64", "Pool Party", undefined, "twitchloadscreen_64.skins_twitch_skin64"],
   ],
   Udyr: [
     ["0", "Original", undefined, "udyrloadscreen_0"],
@@ -2077,7 +2077,7 @@ const compactSkinIndex = {
     ["9", "High Noon"],
     ["15", "Pajama Guardian Cosplay"],
     ["23", "Fright Night"],
-    ["32", "Urgot the Clogfather", "urgot_splash_<type>_32.skins_urgot_skin32", "urgotloadscreen_32.skins_urgot_skin32"],
+    ["32", "Urgot the Clogfather", undefined, "urgotloadscreen_32.skins_urgot_skin32"],
   ],
   Varus: [
     ["0", "Original"],
@@ -2094,8 +2094,8 @@ const compactSkinIndex = {
     ["34", "High Noon"],
     ["44", "Snow Moon"],
     ["53", "Empyrean"],
-    ["60", "Spirit Blossom", "varus_splash_<type>_60.skins_varus_skin60", "varusloadscreen_60.skins_varus_skin60"],
-    ["69", "T1", "varus_splash_<type>_69.skins_varus_skin69", "varusloadscreen_69.skins_varus_skin69"],
+    ["60", "Spirit Blossom", undefined, "varusloadscreen_60.skins_varus_skin60"],
+    ["69", "T1", undefined, "varusloadscreen_69.skins_varus_skin69"],
   ],
   Vayne: [
     ["0", "Original"],
@@ -2116,7 +2116,7 @@ const compactSkinIndex = {
     ["13", "Prestige Firecracker (2022)", undefined, "vayneloadscreen_33"],
     ["44", "Dawnbringer"],
     ["55", "Dragonmancer"],
-    ["64", "Risen Legend", "vayne_splash_<type>_64.skins_vayne_skin64", "vayneloadscreen_64.skins_vayne_skin64"],
+    ["64", "Risen Legend", undefined, "vayneloadscreen_64.skins_vayne_skin64"],
   ],
   Veigar: [
     ["0", "Original"],
@@ -2134,7 +2134,7 @@ const compactSkinIndex = {
     ["32", "Astronaut"],
     ["41", "Monster Tamer"],
     ["51", "King Beegar"],
-    ["60", "Fright Night", "veigar_splash_<type>_60.skins_veigar_skin60", "veigarloadscreen_60.skins_veigar_skin60"],
+    ["60", "Fright Night", undefined, "veigarloadscreen_60.skins_veigar_skin60"],
   ],
   Velkoz: [
     ["0", "Original"],
@@ -2149,7 +2149,7 @@ const compactSkinIndex = {
     ["0", "Original", undefined, "vexloadscreen_0"],
     ["1", "Dawnbringer"],
     ["10", "Empyrean"],
-    ["20", "Stargazer", "vex_splash_<type>_20.skins_vex_skin20", "vexloadscreen_20.skins_vex_skin20"],
+    ["20", "Stargazer", undefined, "vexloadscreen_20.skins_vex_skin20"],
     ["29", "Surprise Party", "vex_splash_<type>_29.skins_vex_skin29", "vexloadscreen_29.skins_vex_skin29"],
   ],
   Vi: [
@@ -2165,8 +2165,8 @@ const compactSkinIndex = {
     ["29", "Arcane Undercity"],
     ["30", "Heartache"],
     ["39", "Primal Ambush"],
-    ["48", "Arcane Brawler", "vi_splash_<type>_48.skins_vi_skin48", "viloadscreen_48.skins_vi_skin48"],
-    ["49", "T1", "vi_splash_<type>_49.skins_vi_skin49", "viloadscreen_49.skins_vi_skin49"],
+    ["48", "Arcane Brawler", undefined, "viloadscreen_48.skins_vi_skin48"],
+    ["49", "T1", undefined, "viloadscreen_49.skins_vi_skin49"],
   ],
   Viego: [
     ["0", "Original"],
@@ -2175,7 +2175,7 @@ const compactSkinIndex = {
     ["19", "EDG"],
     ["21", "King"],
     ["30", "Soul Fighter"],
-    ["37", "Worlds 2024", "viego_splash_<type>_37.skins_viego_skin37", "viegoloadscreen_37.skins_viego_skin37"],
+    ["37", "Worlds 2024", undefined, "viegoloadscreen_37.skins_viego_skin37"],
     ["43", "Revenant Reign", "viego_splash_<type>_43.skins_viego_skin43", "viegoloadscreen_43.skins_viego_skin43"],
   ],
   Viktor: [
@@ -2186,8 +2186,8 @@ const compactSkinIndex = {
     ["4", "Death Sworn", "viktor_splash_<type>_4.viktorvgu", "viktorloadscreen_4.viktorvgu"],
     ["5", "PsyOps", "viktor_splash_<type>_5.viktorvgu", "viktorloadscreen_5.viktorvgu"],
     ["14", "High Noon", "viktor_splash_<type>_14.viktorvgu", "viktorloadscreen_14.viktorvgu"],
-    ["24", "Arcane Savior", "viktor_splash_<type>_24.skins_viktorrework_skin24", "viktorloadscreen_24.skins_viktorrework_skin24"],
-    ["25", "Machine Herald", "viktor_splash_<type>_25.skins_viktor_skin25", "viktorloadscreen_25.skins_viktor_skin25"],
+    ["24", "Arcane Savior", undefined, "viktorloadscreen_24.skins_viktorrework_skin24"],
+    ["25", "Machine Herald", undefined, "viktorloadscreen_25.skins_viktor_skin25"],
   ],
   Vladimir: [
     ["0", "Original"],
@@ -2203,7 +2203,7 @@ const compactSkinIndex = {
     ["21", "Cosmic Devourer"],
     ["30", "Cafe Cuties"],
     ["39", "Broken Covenant"],
-    ["48", "Masque of the Black Rose", "vladimir_splash_<type>_48.skins_vladimir_care_skin48", "vladimirloadscreen_48.skins_vladimir_care_skin48"],
+    ["48", "Masque of the Black Rose", undefined, "vladimirloadscreen_48.skins_vladimir_care_skin48"],
     ["49", "PsyOps", "vladimir_splash_<type>_49.skins_vladimir_skin49", "vladimirloadscreen_49.skins_vladimir_skin49"],
   ],
   Volibear: [
@@ -2217,7 +2217,7 @@ const compactSkinIndex = {
     ["7", "Duality Dragon"],
     ["9", "Prestige Duality Dragon"],
     ["19", "Inkshadow"],
-    ["29", "Spirit Blossom Springs", "volibear_splash_<type>_29.skins_volibear_skin29", "volibearloadscreen_29.skins_volibear_skin29"],
+    ["29", "Spirit Blossom Springs", undefined, "volibearloadscreen_29.skins_volibear_skin29"],
   ],
   Warwick: [
     ["0", "Original"],
@@ -2235,7 +2235,7 @@ const compactSkinIndex = {
     ["35", "Old God"],
     ["45", "Winterblessed"],
     ["46", "Prestige Winterblessed"],
-    ["56", "Arcane Vander", "warwick_splash_<type>_56.skins_warwick_skin56", "warwickloadscreen_56.skins_warwick_skin56"],
+    ["56", "Arcane Vander", undefined, "warwickloadscreen_56.skins_warwick_skin56"],
     ["58", "Warhound", "warwick_splash_<type>_58.skins_warwick_skin58", "warwickloadscreen_58.skins_warwick_skin58"],
   ],
   MonkeyKing: [
@@ -2248,7 +2248,7 @@ const compactSkinIndex = {
     ["6", "Lancer Stratus"],
     ["7", "Battle Academia"],
     ["16", "Elderwood"],
-    ["26", "Mecha Kingdoms", "monkeyking_splash_<type>_26.skins_monkeyking_skin26", "monkeykingloadscreen_26.skins_monkeyking_skin26"],
+    ["26", "Mecha Kingdoms", undefined, "monkeykingloadscreen_26.skins_monkeyking_skin26"],
   ],
   Xayah: [
     ["0", "Original"],
@@ -2262,8 +2262,8 @@ const compactSkinIndex = {
     ["28", "Arcana"],
     ["37", "Broken Covenant"],
     ["38", "Redeemed Star Guardian"],
-    ["47", "Battle Bat", "xayah_splash_<type>_47.skins_xayah_skin47", "xayahloadscreen_47.skins_xayah_skin47"],
-    ["57", "Battle Academia", "xayah_splash_<type>_57.skins_xayah_skin57", "xayahloadscreen_57.skins_xayah_skin57"],
+    ["47", "Battle Bat", undefined, "xayahloadscreen_47.skins_xayah_skin47"],
+    ["57", "Battle Academia", undefined, "xayahloadscreen_57.skins_xayah_skin57"],
   ],
   Xerath: [
     ["0", "Original"],
@@ -2274,7 +2274,7 @@ const compactSkinIndex = {
     ["5", "Dark Star"],
     ["12", "Arcana"],
     ["21", "Astronaut"],
-    ["30", "Crystalis Indomitus", "xerath_splash_<type>_30.skins_xerath_skin30", "xerathloadscreen_30.skins_xerath_skin30"],
+    ["30", "Crystalis Indomitus", undefined, "xerathloadscreen_30.skins_xerath_skin30"],
     ["32", "Corrupted Petricite", "xerath_splash_<type>_32.skins_xerath_skin32", "xerathloadscreen_32.skins_xerath_skin32"],
   ],
   XinZhao: [
@@ -2289,7 +2289,7 @@ const compactSkinIndex = {
     ["20", "Cosmic Defender", "xinzhaorework_splash_<type>_20.xinzhaorework", "xinzhaoreworkloadscreen_20.xinzhaorework"],
     ["27", "Marauder", "xinzhaorework_splash_<type>_27.xinzhaorework", "xinzhaoreworkloadscreen_27.xinzhaorework"],
     ["36", "Firecracker", "xinzhaorework_splash_<type>_36.xinzhaorework", "xinzhaoreworkloadscreen_36.xinzhaorework"],
-    ["47", "Trials of Twilight", "xinzhao_splash_<type>_47.skins_xinzhaorework_skin47", "xinzhaoloadscreen_47.skins_xinzhaorework_skin47"],
+    ["47", "Trials of Twilight", undefined, "xinzhaoloadscreen_47.skins_xinzhaorework_skin47"],
   ],
   Yasuo: [
     ["0", "Original"],
@@ -2308,8 +2308,8 @@ const compactSkinIndex = {
     ["56", "Inkshadow"],
     ["57", "Prestige Inkshadow"],
     ["68", "Foreseen"],
-    ["77", "Battle Wolf", "yasuo_splash_<type>_77.skins_yasuo_skin77", "yasuoloadscreen_77.skins_yasuo_skin77"],
-    ["87", "Genesis Nightbringer", "yasuo_splash_<type>_87.skins_yasuo_skin87", "yasuoloadscreen_87.skins_yasuo_skin87"],
+    ["77", "Battle Wolf", undefined, "yasuoloadscreen_77.skins_yasuo_skin77"],
+    ["87", "Genesis Nightbringer", undefined, "yasuoloadscreen_87.skins_yasuo_skin87"],
     ["88", "Petals of Spring", "yasuo_splash_<type>_88.skins_yasuo_skin88", "yasuoloadscreen_88.skins_yasuo_skin88"],
   ],
   Yone: [
@@ -2323,8 +2323,8 @@ const compactSkinIndex = {
     ["46", "Prestige HEARTSTEEL"],
     ["55", "High Noon"],
     ["58", "Peacemaker High Noon"],
-    ["65", "Masked Justice", "yone_splash_<type>_65.skins_yone_skin65", "yoneloadscreen_65.skins_yone_skin65"],
-    ["74", "T1", "yone_splash_<type>_74.skins_yone_skin74", "yoneloadscreen_74.skins_yone_skin74"],
+    ["65", "Masked Justice", undefined, "yoneloadscreen_65.skins_yone_skin65"],
+    ["74", "T1", undefined, "yoneloadscreen_74.skins_yone_skin74"],
   ],
   Yorick: [
     ["0", "Original"],
@@ -2335,8 +2335,8 @@ const compactSkinIndex = {
     ["12", "Resistance"],
     ["21", "Pentakill Lost Chapter"],
     ["30", "Spirit Blossom"],
-    ["40", "Dark Star", "yorick_splash_<type>_40.skins_yorick_skin40", "yorickloadscreen_40.skins_yorick_skin40"],
-    ["50", "High Noon", "yorick_splash_<type>_50.skins_yorick_skin50", "yorickloadscreen_50.skins_yorick_skin50"],
+    ["40", "Dark Star", undefined, "yorickloadscreen_40.skins_yorick_skin40"],
+    ["50", "High Noon", undefined, "yorickloadscreen_50.skins_yorick_skin50"],
   ],
   Yunara: [
     ["0", "Original", "yunara_splash_<type>_0.yunara", "yunaraloadscreen_0.yunara"],
@@ -2350,9 +2350,9 @@ const compactSkinIndex = {
     ["28", "Bewitching"],
     ["37", "EDG"],
     ["39", "Shiba"],
-    ["49", "Cyber Cat", "yuumi_splash_<type>_49.skins_yuumi_skin49", "yuumiloadscreen_49.skins_yuumi_skin49"],
-    ["50", "Prestige Cyber Cat", "yuumi_splash_<type>_50.skins_yuumi_skin50", "yuumiloadscreen_50.skins_yuumi_skin50"],
-    ["61", "Nightbringer", "yuumi_splash_<type>_61.skins_yuumi_skin61", "yuumiloadscreen_61.skins_yuumi_skin61"],
+    ["49", "Cyber Cat", undefined, "yuumiloadscreen_49.skins_yuumi_skin49"],
+    ["50", "Prestige Cyber Cat", undefined, "yuumiloadscreen_50.skins_yuumi_skin50"],
+    ["61", "Nightbringer", undefined, "yuumiloadscreen_61.skins_yuumi_skin61"],
     ["70", "Firecracker", "yuumi_splash_<type>_70.skins_yuumi_skin70", "yuumiloadscreen_70.skins_yuumi_skin70"],
   ],
   Zaahen: [
@@ -2383,17 +2383,17 @@ const compactSkinIndex = {
     ["38", "Empyrean"],
     ["49", "Immortal Journey"],
     ["58", "Blood Moon"],
-    ["68", "Quantum Galaxy Slayer", "zed_splash_<type>_68.skins_zed_skin68", "zedloadscreen_68.skins_zed_skin68"],
-    ["69", "Prestige Spirit Blossom", "zed_splash_<type>_69.skins_zed_skin69", "zedloadscreen_69.skins_zed_skin69"],
+    ["68", "Quantum Galaxy Slayer", undefined, "zedloadscreen_68.skins_zed_skin68"],
+    ["69", "Prestige Spirit Blossom", undefined, "zedloadscreen_69.skins_zed_skin69"],
   ],
   Zeri: [
     ["0", "Original", undefined, "zeriloadscreen_0"],
     ["1", "Withered Rose"],
     ["10", "Ocean Song"],
     ["19", "Immortal Journey"],
-    ["28", "Fright Night", "zeri_splash_<type>_28.skins_zeri_skin28", "zeriloadscreen_28.skins_zeri_skin28"],
-    ["29", "Prestige Fright Night", "zeri_splash_<type>_29.skins_zeri_skin29", "zeriloadscreen_29.skins_zeri_skin29"],
-    ["40", "Winter Wonder", "zeri_splash_<type>_40.skins_zeri_skin40", "zeriloadscreen_40.skins_zeri_skin40"],
+    ["28", "Fright Night", undefined, "zeriloadscreen_28.skins_zeri_skin28"],
+    ["29", "Prestige Fright Night", undefined, "zeriloadscreen_29.skins_zeri_skin29"],
+    ["40", "Winter Wonder", undefined, "zeriloadscreen_40.skins_zeri_skin40"],
   ],
   Ziggs: [
     ["0", "Original"],
@@ -2419,7 +2419,7 @@ const compactSkinIndex = {
     ["5", "Blood Moon"],
     ["6", "Sugar Rush"],
     ["14", "Winterblessed"],
-    ["24", "Arcana", "zilean_splash_<type>_24.skins_zilean_skin24", "zileanloadscreen_24.skins_zilean_skin24"],
+    ["24", "Arcana", undefined, "zileanloadscreen_24.skins_zilean_skin24"],
   ],
   Zoe: [
     ["0", "Original"],
@@ -2430,8 +2430,8 @@ const compactSkinIndex = {
     ["19", "Prestige Arcanist"],
     ["20", "EDG"],
     ["22", "Winterblessed"],
-    ["33", "Dark Star", "zoe_splash_<type>_33.skins_zoe_skin33", "zoeloadscreen_33.skins_zoe_skin33"],
-    ["43", "Prestige Eternal Aspect", "zoe_splash_<type>_43.skins_zoe_skin43", "zoeloadscreen_43.skins_zoe_skin43"],
+    ["33", "Dark Star", undefined, "zoeloadscreen_33.skins_zoe_skin33"],
+    ["43", "Prestige Eternal Aspect", undefined, "zoeloadscreen_43.skins_zoe_skin43"],
   ],
   Zyra: [
     ["0", "Original"],
@@ -2446,7 +2446,7 @@ const compactSkinIndex = {
     ["36", "Mythmaker"],
     ["46", "Street Demons"],
     ["55", "Blood Moon"],
-    ["64", "Spirit Blossom", "zyra_splash_<type>_64.skins_zyra_skin64", "zyraloadscreen_64.skins_zyra_skin64"],
+    ["64", "Spirit Blossom", undefined, "zyraloadscreen_64.skins_zyra_skin64"],
   ],
 } as const satisfies Record<string, readonly CompactSkin[]>
 

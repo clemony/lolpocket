@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/03/2026 04:46:25 PM CDT
 import type { Path } from "#shared/types"
 
 export const pathRecord: Record<string, Path> = {
@@ -181,7 +181,11 @@ export const pathRecord: Record<string, Path> = {
           },
           {
             "id": 8230,
-            "name": "Phase Rush"
+            "name": "Stormraider's Surge"
+          },
+          {
+            "id": 8992,
+            "name": "Deathfire Touch"
           }
         ],
         "tier": 0

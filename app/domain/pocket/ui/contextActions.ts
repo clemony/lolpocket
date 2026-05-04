@@ -1,6 +1,6 @@
 import { deletePocket } from "~/domain/pocket/deletePocket"
-import { duplicatePocket } from "~/domain/pocket/duplicate"
 import { defaultPocketFolder } from "~/domain/pocket/manage/defaultFolders"
+import { duplicatePocket } from "~/domain/pocket/manage/duplicate"
 import type { PocketButton } from "~/domain/pocket/ui/pocketFolderItems"
 
 export function pocketActions(p: PocketButton, toggleEdit: () => void) {
@@ -60,6 +60,7 @@ export function folderActions(folder: PocketButton, toggleEdit: () => void) {
       {
         label: "Rename",
         icon: "i-lucide-text-cursor-input",
+        leadingIcon: "**:stroke-[2.4]! ",
         onClick: () => toggleEdit()
       },
       settings.value

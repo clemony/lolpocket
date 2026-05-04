@@ -1,4 +1,6 @@
+import type { Settings } from "#shared/schema"
 import { getEmptySettings, settingsSchema } from "#shared/schema"
+import { nowInstantString } from "#shared/utils"
 import * as v from "valibot"
 import { requireUser } from "../client.supabase"
 
@@ -15,7 +17,7 @@ const RPC_SETTING_KEYS = [
   "ping_pocket_comment",
   "fast_trash_pocket",
   "fast_trash_message",
-  "motion"
+  "reduce_motion"
 ] as const satisfies readonly (keyof Settings)[]
 
 export default defineEventHandler(async (event): Promise<Settings> => {
@@ -39,7 +41,7 @@ export default defineEventHandler(async (event): Promise<Settings> => {
   const parsed = v.safeParse(settingsSchema, {
     ...getEmptySettings(),
     ...requestedSettings,
-    updated: new Date().toISOString()
+    updated: nowInstantString()
   })
 
   if (!parsed.success) {

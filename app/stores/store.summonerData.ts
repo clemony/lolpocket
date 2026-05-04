@@ -4,7 +4,7 @@ import { useTimeline } from "~/domain/match/useTimeline"
 import { aggregateAllies } from "~/domain/stats/aggregateAllies"
 import { useChampionStats } from "~/domain/stats/useChampionStats"
 import { getOrFetchAllMastery } from "~/domain/summoner/mastery/getOrFetchMastery"
-import { getSplash } from "~/domain/utils/img"
+import { getSplash, getSplashFromSkinKey } from "~/domain/utils/img"
 
 export const sData = defineStore("summonerData", () => {
   const { summoner } = storeToRefs(sSession())
@@ -17,7 +17,7 @@ export const sData = defineStore("summonerData", () => {
   const account = computed<Account | null>(() => {
     const puuid = summoner.value?.puuid
     if (!puuid) return null
-    return summonerAccounts().getByPuuid(puuid)
+    return publicUsers().getByPuuid(puuid)
   })
 
   const { getAllTimelinesForPuuid } = useTimeline()
@@ -44,7 +44,7 @@ export const sData = defineStore("summonerData", () => {
   })
 
   const splash = computed(() => {
-    if (account.value?.splash) return account.value.splash
+    if (account.value?.skin) return getSplashFromSkinKey(account.value.skin, "uncentered")
 
     const first = champKeyById(champions.value?.[0]?.championId ?? 0)
     if (!first) return null

@@ -1,4 +1,4 @@
-// Updated Patch 16.7 - 04/16/2026 07:00:30 PM CDT
+// Updated Patch 16.9 - 05/03/2026 04:46:25 PM CDT
 
 export const runeToPath: Record<number, string> = {
   "8005": "8000",
@@ -56,6 +56,7 @@ export const runeToPath: Record<number, string> = {
   "8463": "8400",
   "8465": "8400",
   "8473": "8400",
+  "8992": "8200",
   "9101": "8000",
   "9103": "8000",
   "9104": "8000",
