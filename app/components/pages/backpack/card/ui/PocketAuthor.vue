@@ -51,7 +51,7 @@ const name = computed(() => {
     :to="`/${author.username}_${author.tag}/pockets/${pocket.key}`"
     :class="
       cn(
-        'card-scale pointer-events-auto! inline-flex cursor-pointer items-center gap-1 align-middle font-semibold group-hover/user:underline hover:underline',
+        'pointer-events-auto! inline-flex cursor-pointer items-center gap-1 align-middle font-semibold group-hover/user:underline hover:underline',
         className
       )
     ">

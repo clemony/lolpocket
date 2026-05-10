@@ -1,7 +1,7 @@
 import type { UseRefHistoryReturn } from "@vueuse/core"
+import type { Folder } from "#shared/schema"
 import { defaultPocketFolders } from "~/domain/pocket/folder/defaultFolders"
 import { generateName } from "~/domain/pocket/helpers/generateStrings"
-import type { FolderButton } from "~/domain/pocket/types"
 
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
@@ -26,7 +26,7 @@ export function iconSetFromKey(key: string): IconUi {
   }
 }
 
-export function isDefault(folder: FolderButton | Folder | undefined) {
+export function isDefault(folder: Folder | undefined) {
   if (!folder) return false
   return Object.keys(defaultPocketFolders).includes(String(folder.id))
 }

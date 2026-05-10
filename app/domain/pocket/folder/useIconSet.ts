@@ -1,7 +1,7 @@
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 export const useIconSet = (
-  iconKey: string,
+  iconKey: string | undefined,
   open: Ref<boolean | undefined>
 ): {
   icon: string

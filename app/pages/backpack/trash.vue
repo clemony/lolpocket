@@ -1,13 +1,10 @@
 <script lang="ts" setup>
-const { backpackViewMode } = defineProps<{
-  backpackViewMode: "gallery" | "list"
-}>()
-
 definePageMeta({
   title: "Trash",
-  icon: "trash",
+  icon: "i-trash",
+  iconKey: "trash",
   prefix: "Backpack",
-  order: 3,
+  order: 4,
   path: "/backpack/trash"
 })
 

@@ -2,12 +2,12 @@
 import type { ContextMenuItemProps } from "reka-ui"
 import { randomizeHistoryName } from "~/domain/pocket/helpers/utils"
 import { pocketSidebarContextUi } from "~/domain/pocket/menu/contextActions"
-import type { PocketButton } from "~/domain/pocket/types"
+import type { PocketProps } from "~/domain/pocket/types"
 import type { EditInputExpose } from "~~/layers/ui/app/types/types"
 
 const props = withDefaults(
   defineProps<{
-    item: PocketButton
+    item: PocketProps
     open?: boolean
   }>(),
   {

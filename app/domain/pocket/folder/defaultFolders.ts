@@ -1,7 +1,8 @@
-export const defaultPocketFolders: Record<string, Folder> = {
+export const defaultPocketFolders = {
   pinned: {
     label: "Pinned",
     id: "pinned",
+    to: "/backpack/pinned",
     iconKey: "pin",
     location: "",
     open: false,
@@ -10,10 +11,11 @@ export const defaultPocketFolders: Record<string, Folder> = {
   favorites: {
     label: "Favorites",
     id: "favorites",
+    to: "/backpack/favorites",
     iconKey: "heart",
     open: false,
     location: "",
-    order: 0
+    order: 1
   },
   pockets: {
     label: "Pockets",
@@ -22,7 +24,7 @@ export const defaultPocketFolders: Record<string, Folder> = {
     to: "/backpack",
     location: "",
     open: true,
-    order: 0
+    order: 2
   },
   archive: {
     label: "Archive",
@@ -31,7 +33,7 @@ export const defaultPocketFolders: Record<string, Folder> = {
     iconKey: "archive",
     open: false,
     location: "",
-    order: 0
+    order: 4
   },
   trash: {
     label: "Trash",
@@ -40,6 +42,6 @@ export const defaultPocketFolders: Record<string, Folder> = {
     to: "/backpack/trash",
     iconKey: "trash",
     location: "",
-    order: 0
+    order: 5
   }
-}
+} satisfies Record<string, Folder>

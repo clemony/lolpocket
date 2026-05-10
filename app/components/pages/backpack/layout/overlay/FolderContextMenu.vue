@@ -5,13 +5,13 @@ import type {
   ContextMenuProps
 } from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
+import type { Folder } from "#shared/schema"
 import {
   deleteFolder,
   deleteFolderWithConfirm
 } from "~/domain/pocket/folder/deleteFolder"
 import type { IconUi } from "~/domain/pocket/helpers/utils"
 import { iconSetFromKey } from "~/domain/pocket/helpers/utils"
-import type { FolderButton } from "~/domain/pocket/types"
 
 import {
   contextOpen,
@@ -24,7 +24,7 @@ import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 const props = defineProps<
   ContextMenuProps & {
-    folder: Folder | FolderButton | undefined
+    folder: Folder | undefined
   }
 >()
 

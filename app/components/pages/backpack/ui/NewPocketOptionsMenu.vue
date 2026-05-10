@@ -2,14 +2,13 @@
 import type { ButtonProps, DropdownMenuItem, DropdownMenuProps } from "@nuxt/ui"
 import { newPocket } from "~/domain/pocket/newPocket"
 import { newRandomPocket } from "~/domain/pocket/newRandomPocket"
-import type { FolderKey } from "~/types/types"
 
 const props = withDefaults(
   defineProps<
     ButtonProps & {
       menu?: DropdownMenuProps
       collapsed?: boolean
-      location?: FolderKey
+      location?: string
     }
   >(),
   {
@@ -28,6 +27,9 @@ const items: DropdownMenuItem[] = [
     type: "label"
   },
   {
+    type: "separator"
+  },
+  {
     label: "New Pocket",
     slot: "empty",
     icon: "i-lp-pocket-plus",
@@ -42,11 +44,11 @@ const items: DropdownMenuItem[] = [
     onClick: () => {}
   },
   {
-    type: "separator"
-  },
-  {
     type: "label",
     label: "Magic Pocket"
+  },
+  {
+    type: "separator"
   },
   {
     label: "SR Pocket",
@@ -84,7 +86,7 @@ const delegated = reactiveOmit(props, "class", "menu")
   <UDropdownMenu
     :items
     :orientation="props?.collapsed ? 'vertical' : 'horizontal'"
-    :ui="{ content: 'min-w-48' }"
+    :ui="{ content: 'min-w-54' }"
     :content="{
       align: collapsed ? 'center' : 'end',
       side: collapsed ? 'right' : 'bottom',

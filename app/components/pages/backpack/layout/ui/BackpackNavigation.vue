@@ -8,8 +8,6 @@ const { collapse = false } = defineProps<{
 }>()
 const route = useRoute()
 
-const modelValue = shallowRef<string>(route.path)
-
 const items = computed(() =>
   Object.values(defaultPocketFolders).map((p) => ({
     ...p,
@@ -17,23 +15,31 @@ const items = computed(() =>
     class: iconSets[p.iconKey]?.ui?.open
   }))
 )
+const { goTo, setPath, path } = useBackpack()
+onMounted(() => setPath(route.path))
+watch(
+  () => path.value,
+  (v) => {
+    console.log("💠 - watch - newVal:", v)
+  }
+)
 </script>
 
 <template>
   <UTabs
-    v-model:model-value="modelValue"
+    v-model:model-value="path"
     :items
     color="neutral"
     value-key="to"
     size="sm"
     :ui="{
       root: 'h-11! w-full',
-      list: 'h-11 shrink-0 rounded-2xl inset-shadow-xs inset-ring-p4/30',
+      list: 'h-11 shrink-0 rounded-2xl inset-shadow-[-1px_-1px_3px_rgba(0,0,0,0.1)] inset-ring-p4/30',
       label: 'hidden',
       indicator: 'h-8.5 rounded-xl',
       leadingIcon: 'size-3.5 **:stroke-[2.4]'
     }"
-    @update:model-value="navigateTo(modelValue)">
+    @update:model-value="navigateTo(path)">
     <template #leading="{ item }">
       <UTooltip
         :text="`View: ${item.label}`"

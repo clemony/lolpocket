@@ -3,10 +3,9 @@ import { LazyEditBackpackItemModal } from "#components"
 import { editFolderIcon } from "~/domain/pocket/folder/editFolder"
 import { useFolderChildren } from "~/domain/pocket/folder/useFolder"
 import { useIconSet } from "~/domain/pocket/folder/useIconSet"
-import type { FolderButton } from "~/domain/pocket/types"
 import type { EditInputExpose } from "~~/layers/ui/app/types/types"
 const { item: itemFolder } = defineProps<{
-  item: FolderButton
+  item: Folder
 }>()
 
 const item = computed(() => safeObject(itemFolder))
@@ -28,7 +27,7 @@ const open = shallowRef<boolean>(false)
 const menuOpen = shallowRef<boolean>(false)
 const togglePopover = useToggle(open)
 
-const set = useIconSet(item.value?.iconKey, open)
+const set = computed(() => useIconSet(item.value?.iconKey, open))
 </script>
 
 <template>
@@ -52,7 +51,7 @@ const set = useIconSet(item.value?.iconKey, open)
           square
           :icon="set.icon"
           :ui="{
-            leadingIcon: 'size-5'
+            leadingIcon: cn('size-5', set.class)
           }"
           @click="togglePopover()" />
       </UTooltip>
@@ -77,7 +76,7 @@ const set = useIconSet(item.value?.iconKey, open)
           <NewPocketButton size="_xs" :ui="{ base: 'rounded-full' }" square />
         </div>
       </div>
-      <div v-if="children.length" class="w-full py-3 pr-2 pl-1">
+      <div v-if="children?.length" class="w-full py-3 pr-2 pl-1">
         <SidebarPocket
           v-for="child in children"
           :key="childKey(child)"

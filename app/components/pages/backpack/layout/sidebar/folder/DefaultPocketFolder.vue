@@ -1,17 +1,14 @@
 <script lang="ts" setup>
 import { VueDraggable } from "vue-draggable-plus"
 import { defaultPocketFolders } from "~/domain/pocket/folder/defaultFolders"
-import {
-  useFolderChildren,
-  usePocketFolders
-} from "~/domain/pocket/folder/useFolder"
+import { useFolderChildren, useFolders } from "~/domain/pocket/folder/useFolder"
 import { onAdd, onChange } from "~/domain/pocket/helpers/drag"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 const { collapsed } = defineProps<{
   collapsed?: boolean
 }>()
-const { pockets, folders } = safeObject(usePocketFolders()).value
+const { pockets, folders } = useFolders()
 
 const open = shallowRef<boolean>(true)
 
@@ -45,19 +42,17 @@ const accordion = useTemplateRef<HTMLElement>("accordion")
         content: 'my-0! flex w-full flex-col gap-0.5 pr-4 pl-4.5'
       }">
       <UButton
-        :active="menuOpen"
-        style="--depth: 0"
         :icon="set.icon"
+        variant="solid"
+        color="transparent"
         :ui="{
-          base: 'inset-shadow-non my-0! w-full grow shadow-none drop-shadow-none fx-0!',
+          base: 'my-0! w-full grow hover:bg-p1',
           leadingIcon: cn('size-4.5', set.leadingIcon),
           trailingIcon: cn('trailing-rotate', { '-rotate-180': open })
         }"
         :label="pockets.label"
-        variant="ghost"
         trailing-icon="i-up" />
       <template #content>
-        <!--  :model-value="children" -->
         <VueDraggable
           :model-value="children"
           class="pocket-button relative z-0 flex w-full max-w-full flex-col gap-y-0.5 overflow-hidden p-1 before:pointer-events-none before:absolute before:left-0 before:h-full before:w-px before:border-l before:border-l-p4/80"

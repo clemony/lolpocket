@@ -1,20 +1,18 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
 import { useBackpack } from "~/domain/backpack/useBackpack"
-import { usePocketFolders } from "~/domain/pocket/folder/useFolder"
-import { asFolderButton } from "~/domain/pocket/helpers/typeAssert"
-import type { PocketButton } from "~/domain/pocket/types"
+import { useFolders } from "~/domain/pocket/folder/useFolder"
+import type { PocketProps } from "~/domain/pocket/types"
 import { collapseAllBtn, newFolderBtn } from "~/domain/pocket/ui/toolbarItems"
 
 const { collapsed } = useBackpack()
 const list = shallowRef<number[]>([])
 
-const selected = shallowRef<PocketButton | undefined>()
+const selected = shallowRef<PocketProps | undefined>()
 const search = shallowRef<string>("")
 
 const open = ref<boolean[]>([])
-const { folders, pockets, archive, trash, pinned, favorites } =
-  safeObject(usePocketFolders()).value
+const { archive, trash, pinned, favorites, all } = useFolders()
 
 /* watchEffect(() => {
   open.value = folders.value.map(
@@ -120,21 +118,21 @@ const setOpen = (index: number, value: boolean) => {
       <template v-if="!collapsed">
         <LazyBackpackSidebarFolder
           v-for="item in [pinned, favorites]"
-          :key="item.id"
+          :key="item?.id"
           :collapsed
-          :item />
+          :item="item" />
         <LazyDefaultPocketFolder :collapsed />
         <LazyBackpackSidebarFolder
           v-for="item in [archive, trash]"
-          :key="item.id"
+          :key="item?.id"
           :collapsed
-          :item />
+          :item="item" />
       </template>
       <template v-else>
         <LazyBackpackFolderPopover
-          v-for="folder in [pockets, ...folders, archive, trash]"
-          :key="asFolderButton(folder).id"
-          :item="asFolderButton(folder)" />
+          v-for="folder in all"
+          :key="folder.id"
+          :item="folder" />
       </template>
     </div>
 

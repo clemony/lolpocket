@@ -1,18 +1,18 @@
 <script lang="ts" setup>
+import type { Folder } from "#shared/schema"
 import { VueDraggable } from "vue-draggable-plus"
 import { useFolderChildren } from "~/domain/pocket/folder/useFolder"
-import { asFolderButton } from "~/domain/pocket/helpers/typeAssert"
-import type { FolderButton } from "~/domain/pocket/types"
+import { asFolder } from "~/domain/pocket/helpers/typeAssert"
 
 const { folder, header } = defineProps<{
-  folder: FolderButton
+  folder: Folder
   header?: boolean
 }>()
 const { children, childKey } = useFolderChildren(
-  computed(() => asFolderButton(folder))
+  computed(() => asFolder(folder))
 )
 
-const modelValue = ref<FolderButton[]>([])
+const modelValue = ref<Folder[]>([])
 </script>
 
 <template>

@@ -12,7 +12,8 @@ const props = withDefaults(
   {
     activeColor: "transparent",
     activeVariant: "solid",
-    variant: "ghost"
+    color: "transparent",
+    variant: "solid"
   }
 )
 
@@ -90,12 +91,11 @@ defineExpose<EditInputExpose>({
     <UButton
       v-if="!editing"
       v-bind="delegatedButton"
-      style="--depth: 0"
       :icon="props.icon"
       block
       :ui="{
         base: cn(
-          'my-0! w-full grow bg-transparent shadow-none! inset-shadow-none drop-shadow-none! fx-0! group-open/collapse:border-0 group-open/collapse:bg-transparent! group-open/collapse:shadow-none! group-open/collapse:drop-shadow-none! group-open/collapse:fx-0!',
+          'my-0! w-full grow hover:bg-p1',
           { 'gap-2.5': !props.avatar },
           props.ui?.base
         ),

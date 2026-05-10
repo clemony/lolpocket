@@ -1,9 +1,6 @@
-import type { FolderButton } from "~/domain/pocket/types"
+import type { Folder } from "#shared/schema"
 
-export function editFolderIcon(
-  folder: Folder | FolderButton | undefined,
-  e: string
-) {
+export function editFolderIcon(folder: Folder | undefined, e: string) {
   if (!folder) return
   folder.iconKey = e ?? "folder"
 }

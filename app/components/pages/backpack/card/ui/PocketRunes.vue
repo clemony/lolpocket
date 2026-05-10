@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { pathIndex } from "~~/shared/constants/runes/pathIndex"
-
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
@@ -23,58 +21,64 @@ const runes = computed(() => {
 </script>
 
 <template>
-  <div
-    v-if="runes?.keystone || runes?.secondary"
-    class="relative flex h-9 items-center gap-1 pr-1.5 pl-0.5">
-    <FoilLayer
-      mask-size="75%"
-      :mask="runes?.keystone ? `/img/rune/${runes.keystone}.webp` : undefined">
-      <UAvatar
-        :title="runeNameById(Number(runes?.keystone))"
-        :src="runes?.keystone ? `/img/rune/${runes.keystone}.webp` : undefined"
-        :ui="{
-          image: 'drop-shadow-xs',
-          root: 'card-scale pointer-events-auto! overflow-visible border-none bg-transparent shadow-none'
-        }"
-        size="lg" />
-    </FoilLayer>
-    <div
-      :class="
-        cn(
-          'absolute -right-1.5 -bottom-1.5 grid size-7 place-items-center rounded-full bg-radial from-p0 from-40% to-transparent to-70%'
-        )
-      ">
+  <UAvatarGroup
+    :max="6"
+    size="lg"
+    :ui="{
+      root: 'gap-0.5 overflow-visible p-0.5',
+      base: 'pointer-events-auto! relative z-2 overflow-visible'
+    }">
+    <Tooltip
+      :disabled="!runes?.keystone"
+      :label="runes?.keystone ? runeNameById(runes?.keystone) : undefined"
+      :avatar="runes?.keystone ? `/img/rune/${runes.keystone}.webp` : ''"
+      as-child>
       <FoilLayer
-        mask-size="52%"
-        class="size-max shrink-0 rounded-full"
+        :disabled="!runes?.keystone"
+        mask-size="75%"
+        class="rounded-full"
         :mask="
+          runes?.keystone ? `/img/rune/${runes.keystone}.webp` : undefined
+        ">
+        <UAvatar
+          :src="
+            runes?.keystone ? `/img/rune/${runes.keystone}.webp` : undefined
+          "
+          :ui="{
+            image: 'drop-shadow-xs',
+            root: cn(
+              'border border-p2',
+              runes?.secondary
+                ? 'bg-neutral/90 p-1'
+                : ' border border-p2 bg-p2 transition-colors duration-200 group-hover/card:bg-p1/90'
+            )
+          }"
+          size="lg" />
+      </FoilLayer>
+    </Tooltip>
+    <Tooltip
+      :disabled="!runes?.secondary"
+      :label="runes?.secondary ? pathNameById(runes?.secondary) : undefined"
+      :avatar="runes?.secondary ? `/img/path/${runes.secondary}.webp` : ''"
+      as-child>
+      <UAvatar
+        :src="
           runes?.secondary
             ? `/img/path/${runes.secondary.toString()}.webp`
             : undefined
-        ">
-        <UAvatar
-          :title="pathIndex[runes?.secondary as number]?.name"
-          :src="
+        "
+        :ui="{
+          root: cn(
+            'shrink-0 border border-p2 p-2',
             runes?.secondary
-              ? `/img/path/${runes.secondary.toString()}.webp`
-              : undefined
-          "
-          :ui="{
-            root: cn('pointer-events-auto! overflow-hidden bg-transparent'),
-            image: '',
-            icon: cn(
-              'size-full',
-              runes?.secondary && pathIndex[runes.secondary]?.color
-                ? twText[pathIndex[runes.secondary as number]?.color as string]
-                : 'text-pc',
-              {
-                'scale-180 **:stroke-[2.4]': runes.secondary === 8200
-              }
-            )
-          }"
-          icon=" i-lp-rune"
-          size="3xs" />
-      </FoilLayer>
-    </div>
-  </div>
+              ? 'bg-neutral/90'
+              : ' border border-p2 bg-p2 transition-colors duration-200 group-hover/card:bg-p1/90',
+            runes?.secondary === 8100 ? ' ' : '[&>img]:brightness-120 '
+          ),
+          image: 'group-hover/card:brightness-150'
+        }"
+        icon=" i-lp-rune"
+        size="lg" />
+    </Tooltip>
+  </UAvatarGroup>
 </template>

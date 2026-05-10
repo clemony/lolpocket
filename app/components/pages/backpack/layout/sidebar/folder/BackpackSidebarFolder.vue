@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import type { CollapsibleProps } from "@nuxt/ui"
 import { VueDraggable } from "vue-draggable-plus"
+import type { Folder } from "#shared/schema"
 import { editFolderIcon } from "~/domain/pocket/folder/editFolder"
 import { useFolderChildren } from "~/domain/pocket/folder/useFolder"
 import { useIconSet } from "~/domain/pocket/folder/useIconSet"
 import { onAdd, onChange } from "~/domain/pocket/helpers/drag"
 import { isDefault, randomizeHistoryName } from "~/domain/pocket/helpers/utils"
-import type { FolderButton } from "~/domain/pocket/types"
 import type { EditInputExpose } from "~~/layers/ui/app/types/types"
 
 defineOptions({
@@ -14,7 +14,7 @@ defineOptions({
 })
 const props = defineProps<
   CollapsibleProps & {
-    item: FolderButton
+    item: Folder | undefined
     collapsed?: boolean
   }
 >()
@@ -100,15 +100,15 @@ onBeforeRouteLeave(
       <UButton
         v-else
         :active="menuOpen"
-        style="--depth: 0"
         :icon="set.icon"
+        variant="solid"
+        color="transparent"
         :ui="{
-          base: 'my-0! w-full grow shadow-none inset-shadow-none drop-shadow-none fx-0! group-open/collapse:border-0 group-open/collapse:bg-transparent! group-open/collapse:shadow-none group-open/collapse:drop-shadow-none group-open/collapse:fx-0!',
+          base: 'my-0! w-full grow hover:bg-p1',
           leadingIcon: cn('size-4.5', set.class),
           trailingIcon: cn('trailing-rotate', { '-rotate-180': open })
         }"
         :label="item.label"
-        variant="ghost"
         trailing-icon="i-up" />
       <template #content>
         <div

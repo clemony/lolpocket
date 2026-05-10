@@ -1,13 +1,13 @@
 // shared/schemas/user.ts
 
 import { feedKeys } from "#shared/types"
-import type { CollapsibleProps } from "@nuxt/ui"
 import * as v from "valibot"
 import type {
   RouteLocationAsPathGeneric,
   RouteLocationAsRelativeGeneric
 } from "vue-router"
 import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
+import type { PocketProps } from "~/domain/pocket/types"
 
 // username
 export const usernameSchema = v.union([
@@ -73,25 +73,27 @@ export const settingsSchema = v.object({
   locale: v.fallback(v.string(), "en"),
   folders: v.fallback(v.array(folderSchema), []),
   theme: v.fallback(v.string(), "system"),
+  //
+  pinned_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_summoners: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   blocked_users: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
+  //
   ping_delete_pocket: v.fallback(v.boolean(), true),
   ping_new_pocket: v.fallback(v.boolean(), true),
   ping_new_friend: v.fallback(v.boolean(), true),
   ping_new_message: v.fallback(v.boolean(), true),
   ping_pocket_comment: v.fallback(v.boolean(), true),
+  //
   fast_trash_pocket: v.fallback(v.boolean(), false),
   fast_trash_message: v.fallback(v.boolean(), false),
-  reduce_motion: v.fallback(v.boolean(), true),
-  muted: v.fallback(v.boolean(), true),
   //
   feed_categories: feedCategorySchema,
   feed_spoilers: v.fallback(v.boolean(), true),
   feed_spoiler_safeguard: v.fallback(v.boolean(), true),
-  //new
-  pinned_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   //
+  reduce_motion: v.fallback(v.boolean(), true),
+  muted: v.fallback(v.boolean(), true),
   once: v.fallback(v.record(v.string(), v.boolean()), {}),
   updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
 })
@@ -112,10 +114,17 @@ export type UsernameSchema = v.InferOutput<typeof usernameSchema>
 export type EmailSchema = v.InferOutput<typeof emailSchema>
 export type Account = v.InferOutput<typeof accountSchema>
 export type FolderSchema = v.InferOutput<typeof folderSchema>
-export interface Folder extends FolderSchema, CollapsibleProps {
+export interface Folder extends Omit<FolderSchema, "location" | "order"> {
+  location?: string
+  order?: number
+  open?: boolean
   to?:
     | string
     | RouteLocationAsRelativeGeneric
     | RouteLocationAsPathGeneric
     | undefined
+  id: string
+  children?: ComputedRef<PocketProps[]>
+  type?: "pocket" | "folder"
+  slot?: string
 }

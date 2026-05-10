@@ -442,7 +442,7 @@ defineExpose({ pinned, isOpen: open })
           )
         ">
         <slot name="content">
-          <div class="inline-flex gap-2 align-baseline">
+          <div class="inline-flex items-center gap-2 align-baseline">
             <div v-if="avatar" class="size-3.5">
               <LazyUAvatar
                 v-if="avatar"
@@ -459,7 +459,10 @@ defineExpose({ pinned, isOpen: open })
                   root: cn('-ml-1 overflow-hidden bg-transparent')
                 }" />
             </div>
-            <Icon v-if="icon" :name="icon" class="size-3.5 text-nc" />
+            <Icon
+              v-if="icon"
+              :name="icon"
+              class="inline size-3.5 align-icon text-nc" />
             {{ label }}
 
             <Icon

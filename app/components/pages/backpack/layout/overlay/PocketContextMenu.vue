@@ -5,7 +5,7 @@ import type {
   ContextMenuProps
 } from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
-import type { PocketButton } from "~/domain/pocket/types"
+import type { PocketProps } from "~/domain/pocket/types"
 
 import { deletePocket } from "~/domain/pocket/deletePocket"
 import { deleteFolderWithConfirm } from "~/domain/pocket/folder/deleteFolder"

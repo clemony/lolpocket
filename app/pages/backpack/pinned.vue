@@ -1,11 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
-  title: "Archive",
-  icon: "i-archive",
-  iconKey: "archive",
+  title: "Pinned",
+  icon: "i-pin",
+  iconKey: "pin",
   prefix: "Backpack",
-  order: 3,
-  path: "/backpack/archive"
+  order: 0,
+  path: "/backpack/pinned"
 })
 </script>
 
