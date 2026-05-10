@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { generateName } from "~/domain/pocket/generateStrings"
+import { generateName } from "~/domain/pocket/helpers/generateStrings"
 
 const route = useRoute()
 const store = pocketStore()
@@ -21,7 +21,7 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
           size="lg">
           <h1
             class="text-2xs font-bold! tracking-tight text-nowrap drop-shadow-2xs">
-            {{ pocket.name }}
+            {{ pocket.label }}
           </h1>
         </UButton>
         <LazyPopoverContent
@@ -32,16 +32,16 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
           :side-offset="0"
           position-strategy="absolute">
           <UInput
-            v-model="pocket.name"
+            v-model="pocket.label"
             class="field-sizing-content size-full **:font-bold **:tracking-tight"
             size="xl"
-            @clear-input="pocket.name = ''">
+            @clear-input="pocket.label = ''">
             <template #trailing>
               <UButton
                 class="btn-square size-7"
                 title="No brain? Meet button."
                 variant="ghost"
-                @click="pocket.name = generateName()">
+                @click="pocket.label = generateName()">
                 <icon class="size-3.5" name="shuffle" />
               </UButton>
             </template>

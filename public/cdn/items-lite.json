@@ -673,6 +673,24 @@
       "Onhit effects"
     ]
   },
+  "1086": {
+    "id": 1086,
+    "name": "Doran's Bow",
+    "gold": {
+      "base": 400,
+      "total": 400,
+      "sell": 160
+    },
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "stats": {
+      "attackDamage": 6,
+      "attackSpeed": 15
+    }
+  },
   "1090": {
     "id": 1090,
     "name": "Quest: Top",
@@ -841,6 +859,25 @@
       "tenacity": 30
     }
   },
+  "1120": {
+    "id": 1120,
+    "name": "Doran's Helm",
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 180
+    },
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "stats": {
+      "magicResistance": 10,
+      "health": 110,
+      "armor": 10
+    }
+  },
   "1200": {
     "id": 1200,
     "name": "Top Lane Quest",
@@ -891,9 +928,19 @@
       "sell": 0
     }
   },
+  "1205": {
+    "id": 1205,
+    "name": "Jungle Quest Reward",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
   "1206": {
     "id": 1206,
-    "name": "Mid Lane Quest",
+    "name": "Mid Lane Quest Reward",
     "gold": {
       "base": 0,
       "purchasable": false,
@@ -903,7 +950,7 @@
   },
   "1207": {
     "id": 1207,
-    "name": "Bot Lane Quest",
+    "name": "Bot Lane Quest Reward",
     "gold": {
       "base": 0,
       "purchasable": false,
@@ -913,7 +960,7 @@
   },
   "1208": {
     "id": 1208,
-    "name": "Support Quest",
+    "name": "Support Quest Reward",
     "gold": {
       "base": 0,
       "purchasable": false,
@@ -923,7 +970,27 @@
   },
   "1209": {
     "id": 1209,
-    "name": "Jungle Quest",
+    "name": "Jungle Quest Reward",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "1210": {
+    "id": 1210,
+    "name": "Jungle Quest Reward",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "1211": {
+    "id": 1211,
+    "name": "Jungle Quest Reward",
     "gold": {
       "base": 0,
       "purchasable": false,
@@ -933,7 +1000,7 @@
   },
   "1220": {
     "id": 1220,
-    "name": "Unleashed Teleport",
+    "name": "Unleashed Teleport (Top Lane Quest Reward)",
     "gold": {
       "base": 0,
       "purchasable": false,
@@ -943,7 +1010,7 @@
   },
   "1221": {
     "id": 1221,
-    "name": "Top Lane Quest",
+    "name": "Top Lane Quest Reward",
     "gold": {
       "base": 0,
       "purchasable": false,
@@ -1632,9 +1699,6 @@
       "total": 500,
       "sell": 250
     },
-    "maps": [
-      30
-    ],
     "rank": "Starter",
     "stats": {
       "abilityPower": 20,
@@ -1653,9 +1717,6 @@
       "total": 500,
       "sell": 250
     },
-    "maps": [
-      30
-    ],
     "rank": "Starter",
     "stats": {
       "abilityPower": 35,
@@ -1972,6 +2033,15 @@
     ],
     "rank": "Special",
     "stats": {}
+  },
+  "2147": {
+    "id": 2147,
+    "name": "Augment Level",
+    "gold": {
+      "base": 1250,
+      "total": 1250,
+      "sell": 0
+    }
   },
   "2150": {
     "id": 2150,
@@ -2634,6 +2704,7 @@
     "name": "Trailblazer",
     "gold": {
       "base": 800,
+      "purchasable": false,
       "total": 2400,
       "sell": 1680
     },
@@ -2801,6 +2872,23 @@
     "tags": [
       "Movement"
     ]
+  },
+  "3008": {
+    "id": 3008,
+    "name": "Gluttonous Greaves",
+    "gold": {
+      "base": 650,
+      "total": 950,
+      "sell": 665
+    },
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "stats": {
+      "flatMovespeed": 45
+    }
   },
   "3009": {
     "id": 3009,
@@ -4102,9 +4190,9 @@
     "id": 3087,
     "name": "Statikk Shiv",
     "gold": {
-      "base": 450,
-      "total": 2700,
-      "sell": 1890
+      "base": 625,
+      "total": 3000,
+      "sell": 2100
     },
     "maps": [
       11,
@@ -5544,6 +5632,21 @@
       "Mage",
       "Support"
     ]
+  },
+  "3168": {
+    "id": 3168,
+    "name": "Immortal Path",
+    "gold": {
+      "base": 0,
+      "total": 950,
+      "sell": 665
+    },
+    "maps": [
+      11
+    ],
+    "stats": {
+      "flatMovespeed": 45
+    }
   },
   "3170": {
     "id": 3170,
@@ -7684,83 +7787,6 @@
       "Mage"
     ]
   },
-  "5000": {
-    "id": 5000,
-    "name": "Lucky Urf Statue",
-    "gold": {
-      "base": 420,
-      "total": 3620,
-      "sell": 2534
-    },
-    "stats": {
-      "health": 350,
-      "abilityPower": 40,
-      "attackDamage": 25
-    }
-  },
-  "5001": {
-    "id": 5001,
-    "name": "Heart Of Gold",
-    "gold": {
-      "base": 400,
-      "total": 800,
-      "sell": 560
-    },
-    "stats": {
-      "health": 200
-    }
-  },
-  "5002": {
-    "id": 5002,
-    "name": "Kage's Lucky Pick",
-    "gold": {
-      "base": 400,
-      "total": 800,
-      "sell": 560
-    },
-    "stats": {
-      "abilityPower": 25
-    }
-  },
-  "5003": {
-    "id": 5003,
-    "name": "Avarice Blade",
-    "gold": {
-      "base": 450,
-      "total": 800,
-      "sell": 560
-    },
-    "stats": {
-      "attackDamage": 15
-    }
-  },
-  "5004": {
-    "id": 5004,
-    "name": "Philosopher's Stone",
-    "gold": {
-      "base": 300,
-      "total": 800,
-      "sell": 560
-    }
-  },
-  "5005": {
-    "id": 5005,
-    "name": "<font color='#C21807'>Pot</font><font color='#FFBF00'>ion</font> <font color='#00A86B'>Of</font> <font color='#40E0D0'>Col</font><font color='#8F00FF'>ors</font>",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
-    }
-  },
-  "5006": {
-    "id": 5006,
-    "name": "Potion? of Greed",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
-    }
-  },
   "6029": {
     "id": 6029,
     "name": "Ironspike Whip",
@@ -8823,9 +8849,9 @@
       "lethality"
     ],
     "gold": {
-      "base": 963,
-      "total": 3000,
-      "sell": 2100
+      "base": 863,
+      "total": 2900,
+      "sell": 2030
     },
     "maps": [
       11,
@@ -8871,6 +8897,7 @@
     ],
     "gold": {
       "base": 475,
+      "purchasable": false,
       "total": 2700,
       "sell": 1890
     },
@@ -9769,7 +9796,7 @@
       35
     ],
     "stats": {
-      "attackDamage": 60
+      "attackDamage": 55
     }
   },
   "220000": {
@@ -9793,9 +9820,9 @@
     "id": 220001,
     "name": "Legendary Fighter Item",
     "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+      "base": 2250,
+      "total": 2250,
+      "sell": 2250
     },
     "maps": [
       30
@@ -9810,9 +9837,9 @@
     "id": 220002,
     "name": "Legendary Marksman Item",
     "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+      "base": 2250,
+      "total": 2250,
+      "sell": 2250
     },
     "maps": [
       30
@@ -9827,9 +9854,9 @@
     "id": 220003,
     "name": "Legendary Assassin Item",
     "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+      "base": 2250,
+      "total": 2250,
+      "sell": 2250
     },
     "maps": [
       30
@@ -9844,9 +9871,9 @@
     "id": 220004,
     "name": "Legendary Mage Item",
     "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+      "base": 2250,
+      "total": 2250,
+      "sell": 2250
     },
     "maps": [
       30
@@ -9861,9 +9888,9 @@
     "id": 220005,
     "name": "Legendary Tank Item",
     "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+      "base": 2250,
+      "total": 2250,
+      "sell": 2250
     },
     "maps": [
       30
@@ -9878,9 +9905,9 @@
     "id": 220006,
     "name": "Legendary Support Item",
     "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+      "base": 2250,
+      "total": 2250,
+      "sell": 2250
     },
     "maps": [
       30
@@ -9955,6 +9982,19 @@
       "base": 750,
       "purchasable": false,
       "total": 750,
+      "sell": 0
+    },
+    "maps": [
+      30
+    ]
+  },
+  "220012": {
+    "id": 220012,
+    "name": "Shardblade",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
       "sell": 0
     },
     "maps": [
@@ -10089,9 +10129,6 @@
       "total": 500,
       "sell": 250
     },
-    "maps": [
-      30
-    ],
     "stats": {
       "health": 300,
       "healthRegen": 4
@@ -10186,8 +10223,8 @@
     ],
     "stats": {
       "health": 300,
-      "abilityPower": 70,
-      "attackSpeed": 25
+      "abilityPower": 60,
+      "attackSpeed": 20
     }
   },
   "222512": {
@@ -10413,6 +10450,21 @@
     "stats": {
       "flatMovespeed": 55,
       "attackSpeed": 35
+    }
+  },
+  "223008": {
+    "id": 223008,
+    "name": "Gluttonous Greaves",
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    },
+    "maps": [
+      30
+    ],
+    "stats": {
+      "flatMovespeed": 45
     }
   },
   "223009": {
@@ -10727,7 +10779,8 @@
       "sell": 4200
     },
     "maps": [
-      12
+      12,
+      30
     ],
     "rank": "Special",
     "stats": {
@@ -10883,8 +10936,9 @@
       30
     ],
     "stats": {
-      "attackDamage": 45,
-      "attackSpeed": 40,
+      "abilityPower": 45,
+      "attackDamage": 40,
+      "attackSpeed": 30,
       "percentMovespeed": 4
     }
   },
@@ -11070,9 +11124,6 @@
       "total": 500,
       "sell": 250
     },
-    "maps": [
-      30
-    ],
     "stats": {
       "abilityPower": 55
     }
@@ -11406,9 +11457,6 @@
       "total": 500,
       "sell": 250
     },
-    "maps": [
-      30
-    ],
     "stats": {
       "health": 250,
       "attackDamage": 25
@@ -11439,9 +11487,6 @@
       "total": 500,
       "sell": 250
     },
-    "maps": [
-      30
-    ],
     "stats": {
       "attackDamage": 25,
       "attackSpeed": 35,
@@ -11456,9 +11501,6 @@
       "total": 500,
       "sell": 250
     },
-    "maps": [
-      30
-    ],
     "rank": "Starter",
     "stats": {
       "attackDamage": 25,
@@ -11956,9 +11998,9 @@
       "slurp"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -12070,6 +12112,22 @@
       "mana": 300,
       "health": 350,
       "abilityPower": 60
+    }
+  },
+  "226660": {
+    "id": 226660,
+    "name": "Bami's Cinder",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
+    "maps": [
+      30
+    ],
+    "stats": {
+      "health": 150
     }
   },
   "226662": {
@@ -12250,9 +12308,9 @@
     "id": 226693,
     "name": "Prowler's Claw",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -12598,6 +12656,7 @@
     "name": "Trailblazer",
     "gold": {
       "base": 1000,
+      "purchasable": false,
       "total": 2600,
       "sell": 1820
     },
@@ -12994,9 +13053,9 @@
       "kitae"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13021,9 +13080,9 @@
       "energize"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13045,9 +13104,9 @@
     "id": 443056,
     "name": "Demon King's Crown",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13062,9 +13121,9 @@
     "id": 443058,
     "name": "Shield of Molten Stone",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13085,9 +13144,9 @@
     "id": 443059,
     "name": "Cloak of Starry Night",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13111,9 +13170,9 @@
       "sotd"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13133,9 +13192,9 @@
     "id": 443061,
     "name": "Force Of Entropy",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13157,9 +13216,9 @@
     "id": 443062,
     "name": "Sanguine Gift",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13181,9 +13240,9 @@
     "id": 443063,
     "name": "Eleisa's Miracle",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13210,9 +13269,9 @@
       "Gold"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13230,9 +13289,9 @@
       "bleed"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13257,9 +13316,9 @@
       "catastrophe"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13279,13 +13338,11 @@
     "id": 443080,
     "name": "Twin Mask",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "purchasable": false,
+      "total": 2750,
+      "sell": 1100
     },
-    "maps": [
-      30
-    ],
     "rank": "Special",
     "recipe": [
       220007
@@ -13296,9 +13353,9 @@
     "id": 443081,
     "name": "Hexbolt Companion",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13319,9 +13376,9 @@
     "id": 443083,
     "name": "Warmog's Armor",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13335,9 +13392,9 @@
     "id": 443090,
     "name": "Reaper's Toll",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13358,9 +13415,9 @@
     "id": 443193,
     "name": "Gargoyle Stoneplate",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13387,9 +13444,9 @@
       "scythe"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13414,9 +13471,9 @@
       "helmet"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13437,9 +13494,9 @@
     "id": 444644,
     "name": "Crown of the Shattered Queen",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13466,9 +13523,9 @@
       "devourer"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13495,9 +13552,9 @@
       "supersoaker"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13523,9 +13580,9 @@
       "rv"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13551,9 +13608,9 @@
       "squallrider"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13579,9 +13636,9 @@
       "lethality"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13627,9 +13684,9 @@
     "id": 447100,
     "name": "Mirage Blade",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13647,9 +13704,9 @@
     "id": 447101,
     "name": "Gambler's Blade",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13671,9 +13728,9 @@
       "Kevins"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13698,9 +13755,9 @@
       "Omnivamp"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13722,9 +13779,9 @@
     "id": 447104,
     "name": "Innervating Locket",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13746,9 +13803,9 @@
     "id": 447105,
     "name": "Empyrean Promise",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13771,9 +13828,9 @@
     "id": 447106,
     "name": "Dragonheart",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13788,9 +13845,9 @@
     "id": 447107,
     "name": "Decapitator",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13811,9 +13868,9 @@
       "energize"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13835,9 +13892,9 @@
     "id": 447109,
     "name": "Cruelty",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13859,9 +13916,9 @@
     "id": 447110,
     "name": "Moonflair Spellblade",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13899,9 +13956,9 @@
     "id": 447112,
     "name": "Flesheater",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13919,9 +13976,9 @@
     "id": 447113,
     "name": "Detonation Orb",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13944,9 +14001,9 @@
     "id": 447114,
     "name": "Reverberation",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13968,9 +14025,9 @@
     "id": 447115,
     "name": "Regicide",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -13992,9 +14049,9 @@
     "id": 447116,
     "name": "Kinkou Jitte",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -14020,9 +14077,9 @@
       "burn"
     ],
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -14045,9 +14102,9 @@
     "id": 447119,
     "name": "Lightning Rod",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -14070,9 +14127,9 @@
     "id": 447120,
     "name": "Diamond-Tipped Spear",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -14093,9 +14150,9 @@
     "id": 447121,
     "name": "Twilight's Edge",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -14117,9 +14174,9 @@
     "id": 447122,
     "name": "Black Hole Gauntlet",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30
@@ -14140,9 +14197,9 @@
     "id": 447123,
     "name": "Puppeteer",
     "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
     },
     "maps": [
       30

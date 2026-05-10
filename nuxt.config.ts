@@ -33,7 +33,22 @@ export default defineNuxtConfig({
 
     //"@nuxtjs/i18n",
     ...(process.env.NODE_ENV === "development"
-      ? ["@nuxt/devtools", "@nuxt/hints", "@nuxt/test-utils/module"]
+      ? [
+          "@nuxt/devtools",
+          [
+            "@nuxt/hints",
+            {
+              features: {
+                hydration: true,
+                lazyLoad: false,
+                webVitals: true,
+                thirdPartyScripts: true,
+                htmlValidate: true
+              }
+            }
+          ] as [string, Record<string, any>],
+          "@nuxt/test-utils/module"
+        ]
       : [])
   ],
 
@@ -285,7 +300,6 @@ export default defineNuxtConfig({
         "clsx",
         "tailwind-merge",
         "tailwind-variants",
-        "random-words",
         "@internationalized/date",
         "fuse.js",
         "fast-deep-equal/es6"

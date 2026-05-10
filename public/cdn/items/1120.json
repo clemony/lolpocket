@@ -1,0 +1,22 @@
+{
+  "id": 1120,
+  "name": "Doran's Helm",
+  "description": "110 Health\n10 Armor\n10 Magic Resist\n\nHelping Hand\nAttacks deal 5 bonus physical damage to minions.",
+  "stats": {
+    "magicResistance": 10,
+    "health": 110,
+    "armor": 10
+  },
+  "gold": {
+    "base": 450,
+    "purchasable": true,
+    "total": 450,
+    "sell": 180
+  },
+  "maps": [
+    11,
+    12,
+    21
+  ],
+  "tags": []
+}

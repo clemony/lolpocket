@@ -24,7 +24,7 @@ const {
   invert = false,
   maskKey,
   label,
-  maskSize
+  maskSize = 86
 } = defineProps<{
   class?: HTMLAttributes["class"]
   invert?: boolean
@@ -56,29 +56,10 @@ const maskSvg: Record<string, string> = {
   30: map30Svg
 }
 
-function svgMaskStyle(svg: string, inverted = false): CSSProperties {
-  const svgMask = `url("data:image/svg+xml,${encodeURIComponent(svg)}") center / ${
-    maskSize ? `${maskSize}%` : "86%"
-  } no-repeat`
-
-  if (inverted) {
-    return {
-      mask: `linear-gradient(#fff 0 0), ${svgMask}`,
-      maskComposite: "exclude",
-      WebkitMask: `linear-gradient(#fff 0 0), ${svgMask}`,
-      WebkitMaskComposite: "xor"
-    }
-  }
-
-  return {
-    mask: svgMask,
-    WebkitMask: svgMask
-  }
-}
-
 const maskStyle = computed(() => {
-  if (!maskKey) return svgMaskStyle("i-question", invert)
-  return svgMaskStyle(String(maskSvg[maskKey]), invert)
+  if (!maskKey)
+    return svgMaskStyle("i-question", { inverted: invert, maskSize })
+  return svgMaskStyle(String(maskSvg[maskKey]), { inverted: invert, maskSize })
 })
 </script>
 

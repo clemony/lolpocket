@@ -23,12 +23,12 @@
     "health": 500,
     "abilityHaste": 20
   },
-  "description": "70 Adaptive Force\n500 Health\n20 Ability Haste\n\nHack the Meat\nDealing damage shreds 3 Armor and Magic Resist for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability.\n\nCannibalize\nOn Champion Takedown, Heal yourself and your ally for 18% of the Target's Max Health.",
+  "description": "70 Adaptive Force\n500 Health\n20 Ability Haste\n\nHack the Meat\nDealing damage shreds 3 Armor and Magic Resist for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability.\n\nCannibalize\nOn Champion Takedown, steal 10% of their stats and size for the rest of the round.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

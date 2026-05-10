@@ -36,6 +36,8 @@ watch(
     <div class="fixed top-0 left-15 z-12 flex h-15 w-56 items-center">
       <icon class="-mx-1 size-6.5 stroke-2" name="" />
       <PocketMenubar />
+      <Icon name="i-material-symbols-sticker-add-outline" class="" />
+      <Icon name="i-material-symbols-new-window" class="" />
     </div>
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
       <BgSplash size="full" :src="splash" />
@@ -54,7 +56,7 @@ watch(
         class="w-40% z-1 flex size-full grow flex-col items-start justify-center pt-16 pl-68 *:z-1">
         <BlurReveal>
           <h1 class="text-[3.4rem]! drop-shadow-2xs">
-            {{ pocket?.name }}
+            {{ pocket?.label }}
           </h1>
         </BlurReveal>
       </div>

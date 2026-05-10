@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Primitive } from "reka-ui"
+import { pathIndex } from "~~/shared/constants/runes/pathIndex"
 
 const { class: className, pathClass } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -41,8 +42,8 @@ const { class: className, pathClass } = defineProps<{
         <img
           v-if="set.secondary.path"
           class="absolute h-max! w-4.5! shrink-0"
-          :title="set.secondary.path"
-          :alt="set.secondary.path"
+          :title="pathIndex[set.secondary.path]?.name"
+          :alt="pathIndex[set.secondary.path]?.name"
           :src="`/img/path/${set.secondary.path}.webp`" />
 
         <Icon

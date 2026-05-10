@@ -2,11 +2,11 @@
 const { limit, path, runes, set } = defineProps<{
   set: number[]
   runes: Path | null
-  path: string | undefined
+  path: number | undefined
   limit?: boolean
 }>()
 const emit = defineEmits<{
-  (e: 'update:runes', currentSet: number[]): void
+  (e: "update:runes", currentSet: number[]): void
 }>()
 
 const currentRunes = ref<number[]>([])
@@ -17,12 +17,12 @@ const slots = computed(() =>
 const currentSet = computed(() => [
   currentRunes.value[0],
   currentRunes.value[1],
-  currentRunes.value[2],
+  currentRunes.value[2]
 ])
 
 function handleChange(slotTier: number, selectedKey: number) {
   currentRunes.value[slotTier] = selectedKey
-  emit('update:runes', currentRunes.value)
+  emit("update:runes", currentRunes.value)
 }
 
 onMounted(() => {
@@ -46,8 +46,7 @@ function openInfo(rune: number) {}
           :key="rune.id"
           :class="
             cn('cursor-pointer opacity-75 grayscale', {
-              'scale-110 opacity-94 grayscale-0':
-                currentSet.includes(rune.id),
+              'scale-110 opacity-94 grayscale-0': currentSet.includes(rune.id)
             })
           ">
           <input
@@ -56,13 +55,11 @@ function openInfo(rune: number) {}
             :value="Number(rune.id)"
             type="radio"
             :name="`tier-${i}`"
-            @change="handleChange(Number(i), Number(rune.id))">
+            @change="handleChange(Number(i), Number(rune.id))" />
         </Rune>
       </div>
     </template>
-    <div
-      v-else
-      class="grid size-full grid-cols-3 gap-y-14">
+    <div v-else class="grid size-full grid-cols-3 gap-y-14">
       <Placeholder
         v-for="i in 9"
         :key="i"

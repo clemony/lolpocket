@@ -1,0 +1,11 @@
+{
+  "id": 1211,
+  "name": "Jungle Quest Reward",
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
+  },
+  "tags": []
+}

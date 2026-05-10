@@ -29,7 +29,7 @@
     "armor": 50,
     "abilityHaste": 20
   },
-  "description": "300 Ability Power\n50 Armor\n20 Ability Haste\n\nMagical Opus\nIncreases your total Ability Power by 50%.\n\nRequires Augment: Quest: Wooglet's Witchcap\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
+  "description": "300 Ability Power\n50 Armor\n20 Ability Haste\n\nMagical Opus:\nIncreases your total Ability Power by 50% (0).\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
   "gold": {
     "base": 6000,
     "purchasable": true,

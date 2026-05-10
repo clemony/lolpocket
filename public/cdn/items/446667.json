@@ -23,12 +23,12 @@
     "health": 400,
     "magicResistance": 35
   },
-  "description": "400 Health\n35 Armor\n35 Magic Resist\n12% Heal and Shield Power\n\nGuiding Light\nUpon casting your Ultimate you Transcend, increasing your Max Health by  for 9s. While Transcended, you and allies within 1200 range of you heal for  () over the duration (0s).",
+  "description": "400 Health\n35 Armor\n35 Magic Resist\n12% Heal and Shield Power\n\nJudgement\nGain 30 Ultimate Haste.\n\nGuiding Light\nUpon casting your Ultimate you Transcend, increasing your Max Health by  for 9 seconds. While Transcended, you and allies within 5000 range of you heal for  () over the duration (0s).",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

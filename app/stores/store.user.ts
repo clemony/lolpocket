@@ -1,6 +1,6 @@
-import * as v from "valibot"
-import { skinKeyFromUrl } from "#shared/utils/img-url"
 import { nowInstantString } from "#shared/utils"
+import { skinKeyFromUrl } from "#shared/utils/img-url"
+import * as v from "valibot"
 
 export const user = defineStore(
   "userStore",
@@ -31,6 +31,19 @@ export const user = defineStore(
         }
       }
     )
+
+    const localSettings = ref<LocalSettings>({
+      sidebar_sort_folder_first: true,
+      sidebar_sort_method: "date",
+      sidebar_sort_mode: "desc",
+      backpack_group_by: "folder",
+      confirm_folder_delete: true,
+      confirm_pocket_delete: true
+    })
+
+    function updateSortMethod(method: "date" | "alpha") {
+      localSettings.value.sidebar_sort_method = method
+    }
 
     const hotkeys = {
       search: ["meta", "k"],
@@ -139,14 +152,47 @@ export const user = defineStore(
       "pockets"
     )
 
+    const match = /Entitled Folder.*/
+    function createEntitledName(): string {
+      const folders = settings?.value?.folders
+        .map((folder) => folder.label)
+        .filter((f) => match.test(f))
+
+      if (!folders || !folders.length) return "Entitled Folder"
+      else if (folders && folders.length)
+        return `Entitled Folder (${folders.length - 1})`
+      else return "Entitled Folder"
+    }
+
+    function setDefaultFolderName(
+      folder: ComputedRef<Folder> | undefined,
+      name?: string
+    ) {
+      if (!folder?.value) return
+      if (name === "") folder.value.label = createEntitledName()
+      else folder.value.label = String(name)
+    }
+
+    function updateFolderName(folderId: string, newLabel: string) {
+      if (!settings.value?.folders) return
+      settings.value.folders = settings.value.folders.map((f) =>
+        f.id === folderId
+          ? { ...f, label: newLabel ?? createEntitledName() }
+          : f
+      )
+    }
+
     function newPocketFolder(options?: { label?: string; location?: string }) {
       const folder = {
-        label: options?.label || "",
+        label: "",
         id: crypto.randomUUID(),
-        icon: "i-folder",
+        iconKey: "folder",
         location: options?.location || "",
         order: settings.value?.folders.length || 0
       }
+
+      if (options?.label) folder.label = String(options.label)
+      else folder.label = createEntitledName()
 
       if (!settings.value)
         settings.value = getEmptySettings() as unknown as Settings
@@ -155,22 +201,16 @@ export const user = defineStore(
       return folder
     }
 
-    function updateFolderName(folderId: string, newLabel: string) {
-      console.log("🥸 - updateFolderName - newName:", newLabel)
-      if (!settings.value) return
-      settings.value.folders = settings.value.folders.map((f) =>
-        f.id === folderId ? { ...f, label: newLabel } : f
-      )
-      console.log(
-        "🥸 - updateFolderName - settings.value.folders:",
-        settings.value.folders
-      )
+    function getFolder(folderId: string) {
+      return settings.value?.folders.find((f) => f.id === folderId)
     }
+
     return {
       settings,
       keybinds,
       summoner,
       account,
+      localSettings,
       migrateAccountSplashUrlToSkinKey,
       clearAccount,
       inbox,
@@ -184,8 +224,12 @@ export const user = defineStore(
       folderLocationSchema,
       updateFolderName,
       folderKeys,
+      updateSortMethod,
       identities,
-      hotkeys
+      getFolder,
+      hotkeys,
+
+      setDefaultFolderName
     }
   },
   {

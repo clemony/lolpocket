@@ -1,5 +1,5 @@
 import { FolderPlusIcon, SparkleIcon } from "#components"
-import type { ButtonProps } from "@nuxt/ui"
+import type { ButtonProps, DropdownMenuItem } from "@nuxt/ui"
 import type { SeparatorProps } from "reka-ui"
 import { newPocket } from "~/domain/pocket/newPocket"
 import { newRandomPocket } from "~/domain/pocket/newRandomPocket"
@@ -8,45 +8,38 @@ function handleNewFolder() {
   const folder = user().newPocketFolder()
 }
 
-export const toolbarItems: Record<string, ButtonProps> = {
-  new: {
-    icon: "i-add",
-    label: "New Pocket",
-    onClick: () => newPocket(),
-    ui: {
-      leadingIcon: "**:stroke-[2] in-group/sidebar:scale-106"
-    }
+export const randomPocketBtn: ButtonProps = {
+  icon: h(SparkleIcon, { class: "size-4" }),
+  square: true,
+  label: "Randomize",
+  ui: {
+    base: "p-0 anchor  ",
+    leadingIcon: "size-4! ",
+    label: "hidden "
   },
-  random: {
-    icon: h(SparkleIcon),
-    square: true,
-    label: "New Random Pocket",
-    ui: {
-      base: "p-0 anchor  ",
-      leadingIcon: "size-4.5! ",
-      label: "hidden "
-    },
-    onClick: () => newRandomPocket()
+  onClick: () => newRandomPocket()
+}
+
+export const newFolderBtn: ButtonProps = {
+  square: true,
+  icon: "i-lucide-folder-plus", //h(FolderPlusIcon),
+  ui: {
+    base: "p-0",
+    label: "hidden",
+    leadingIcon: " **:stroke-[1.8] group-hover/btn:**:stroke-[2.3]"
   },
-  folder: {
-    square: true,
-    icon: h(FolderPlusIcon),
-    ui: {
-      base: "p-0",
-      label: "hidden"
-    },
-    label: "New folder",
-    onClick: () => handleNewFolder()
+  label: "New folder",
+  onClick: () => handleNewFolder()
+}
+
+export const collapseAllBtn: ButtonProps = {
+  icon: "i-collapse-all",
+  square: true,
+  ui: {
+    base: "p-0",
+    label: "hidden",
+    leadingIcon: "scale-94 **:stroke-[1.9] group-hover/btn:**:stroke-[2.3]"
   },
-  collapseAll: {
-    icon: "i-collapse-all",
-    square: true,
-    ui: {
-      base: "p-0",
-      label: "hidden",
-      leadingIcon: "scale-94 **:stroke-[2] group-hover/btn:**:stroke-[2.5]"
-    },
-    label: "Collapse all",
-    onClick: () => {}
-  }
+  label: "Collapse all",
+  onClick: () => {}
 }

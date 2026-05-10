@@ -2,7 +2,7 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const badgeTheme = defineUiTheme({
   slots: {
-    base: "drop-shadow-tiny inline-flex w-fit items-center align-middle inset-ring",
+    base: "drop-shadow-tiny inline-flex w-fit items-center align-middle ring",
     leadingIcon: "inline align-icon"
   },
   variants: {
@@ -26,7 +26,7 @@ export const badgeTheme = defineUiTheme({
       outline: "",
       soft: "",
       subtle: "",
-      ghost: "bg-transparent inset-ring-transparent drop-shadow-none"
+      ghost: "bg-transparent ring-transparent drop-shadow-none"
     },
     size: {
       xs: {
@@ -70,13 +70,12 @@ export const badgeTheme = defineUiTheme({
       color: "ad",
       variant: "solid",
       class:
-        "noise text-white inset-ring-ad **:text-white dark:bg-ad/90 dark:font-bold light:bg-ad/70 light:font-semibold"
+        "noise text-white ring-ad **:text-white dark:bg-ad/90 dark:font-bold light:bg-ad/70 light:font-semibold"
     },
     {
       color: "base",
       variant: "solid",
-      class:
-        "fx-depth-p1 fx-noise bg-p0 text-pc inset-ring inset-ring-p4/60 fx-1"
+      class: "fx-depth-p1 fx-noise bg-p0 text-pc ring ring-p4/60 fx-1"
     },
     {
       color: "base",
@@ -86,28 +85,28 @@ export const badgeTheme = defineUiTheme({
     {
       color: "primary",
       variant: "solid",
-      class: "bg-p1 text-pc inset-ring inset-ring-p3"
+      class: "bg-p1 text-pc ring ring-p3"
     },
     {
       color: "secondary",
       variant: "solid",
-      class: "bg-p2 font-semibold text-pc inset-ring-p3"
+      class: "bg-p2 font-semibold text-pc ring-p3"
     },
     {
       color: ["primary", "secondary", "base", "tertiary"],
       variant: "outline",
-      class: "text-pc inset-ring-p3"
+      class: "text-pc ring-p3"
     },
     {
       color: "transparent",
       variant: "solid",
-      class: "inset-ring-0"
+      class: "ring-0"
     },
     {
       color: "transparent",
       variant: "subtle",
       class:
-        "px-0 text-pc shadow-none inset-shadow-none inset-ring-0 drop-shadow-none fx-0"
+        "px-0 text-pc shadow-none ring-0 inset-shadow-none drop-shadow-none fx-0"
     },
 
     // neutral
@@ -116,92 +115,91 @@ export const badgeTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class:
-        "fx-depth-neutral fx-noise bg-n0/90 text-nc inset-ring ring-n3 inset-ring-n1 backdrop-blur-sm **:text-nc [&_svg]:text-nc"
+        "fx-depth-neutral fx-noise bg-n0/90 text-nc ring ring-n1 backdrop-blur-sm **:text-nc [&_svg]:text-nc"
     },
     {
       color: "neutral",
       variant: "subtle",
       class:
-        "hover:noise inset-ring inset-ring-transparent hover:bg-n0/85 hover:text-nc hover:ring-n3 hover:inset-ring-n2 hover:**:text-nc"
+        "hover:noise ring ring-transparent hover:bg-n0/85 hover:text-nc hover:ring-n3 hover:**:text-nc"
     },
 
     // dom
     {
       color: "dom",
       variant: "solid",
-      class: "bg-dom font-semibold text-white inset-ring-dom"
+      class: "bg-dom font-semibold text-white ring-dom"
     },
     {
       color: "dom",
       variant: "soft",
-      class: "bg-dom/40 font-semibold text-pc/70 inset-ring-dom/50"
+      class: "bg-dom/40 font-semibold text-pc/70 ring-dom/50"
     },
 
     // sorc
     {
       color: "sorc",
       variant: "soft",
-      class: "noise bg-sorc/40 font-semibold text-pc/70 inset-ring-sorc/50"
+      class: "noise bg-sorc/40 font-semibold text-pc/70 ring-sorc/50"
     },
     {
       color: "sorc",
       variant: "solid",
-      class: "bg-sorc font-semibold text-white inset-ring-sorc"
+      class: "bg-sorc font-semibold text-white ring-sorc"
     },
 
     // insp
     {
       color: "insp",
       variant: "solid",
-      class: "text-insp-content bg-insp font-semibold inset-ring-insp"
+      class: "text-insp-content bg-insp font-semibold ring-insp"
     },
 
     {
       color: "insp",
       variant: "outline",
-      class: "font-semibold text-pc inset-ring-insp-offset/40"
+      class: "font-semibold text-pc ring-insp-offset/40"
     },
     {
       color: "insp",
       variant: "soft",
-      class:
-        "bg-insp-content/50 noise font-semibold text-pc inset-ring ring-insp/40 inset-ring-p3"
+      class: "bg-insp-content/50 noise font-semibold text-pc ring ring-insp/40"
     },
 
     // pre
     {
       color: "pre",
       variant: "soft",
-      class: "bg-pre/40 font-semibold text-pc/70 inset-ring-pre/50"
+      class: "bg-pre/40 font-semibold text-pc/70 ring-pre/50"
     },
     {
       color: "pre",
       variant: "solid",
-      class: "bg-pre font-semibold text-white inset-ring-pre"
+      class: "bg-pre font-semibold text-white ring-pre"
     },
 
     // gold
     {
       color: "gold",
       variant: "solid",
-      class: "bg-g/80 inset-ring-g font-semibold text-white **:text-white"
+      class: "bg-g/80 font-semibold text-white ring-g **:text-white"
     },
     {
       color: "gold",
       variant: "soft",
-      class: "bg-g/40 inset-ring-g/50 font-semibold text-pc/70"
+      class: "bg-g/40 font-semibold text-pc/70 ring-g/50"
     },
 
     // res
     {
       color: "res",
       variant: "soft",
-      class: "bg-res/40 text-pc/70 inset-ring-res/50"
+      class: "bg-res/40 text-pc/70 ring-res/50"
     },
     {
       color: "res",
       variant: "solid",
-      class: "bg-res text-white inset-ring-res"
+      class: "bg-res text-white ring-res"
     },
 
     //ghost

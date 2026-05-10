@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import type { DropdownMenuItem } from "@nuxt/ui"
 import { useBackpackProvider } from "~/domain/backpack/useBackpack"
-import { usePocketFolderProvider } from "~/domain/pocket/ui/pocketFolderItems"
-import { toolbarItems } from "~/domain/pocket/ui/toolbarItems"
+import { usePocketFolderProvider } from "~/domain/pocket/folder/useFolder"
 
 definePageMeta({
   layout: "default"
@@ -9,10 +9,8 @@ definePageMeta({
 const { backpack } = useApp().routes
 console.log("🥸 - backpack:", backpack)
 
-const { collapsed } = useBackpackProvider()
+const { collapsed, viewMode } = useBackpackProvider()
 usePocketFolderProvider()
-
-const backpackViewMode = shallowRef<string>("gallery")
 
 const viewModes = [
   {
@@ -26,6 +24,35 @@ const viewModes = [
     icon: "i-square-list"
   }
 ]
+
+const sortItems = computed<DropdownMenuItem[]>(() => [
+  {
+    label: "Group by",
+    type: "label",
+    ui: {
+      label: "pb-0.5!"
+    }
+  },
+  {
+    type: "separator"
+  },
+  {
+    label: "Folder",
+    icon: "i-folder",
+    type: "checkbox",
+    ui: {
+      itemLeadingIcon: "**:stroke-[2.3]"
+    }
+  },
+  {
+    label: "Patch",
+    icon: "i-lp-riot-circle",
+    type: "checkbox",
+    ui: {
+      itemLeadingIcon: "scale-112"
+    }
+  }
+])
 </script>
 
 <template>
@@ -38,16 +65,23 @@ const viewModes = [
         :toggle="false"
         :ui="{
           // root: 'border-b-p0/60',
-          root: 'h-16',
-          title: 'ml-4 text-4xl font-bold tracking-tight ds-2xs',
+          root: '@container h-16 pr-7!',
+          title: 'ml-4 text-4xl font-bold tracking-tight capitalize ds-2xs',
           left: 'gap-2'
         }"
         :icon="$route.meta?.icon || ''"
         :title="String($route.meta?.title || $route.name)">
         <template #leading>
           <UDashboardSidebarCollapse
-            :variant="collapsed ? 'solid' : 'outline'"
-            :color="collapsed ? 'secondary' : 'primary'"
+            size="sm_"
+            :ui="{
+              base: cn('rounded-xl', {
+                'shadow-none  inset-shadow-xs fx-noise fx-depth bg-p1/50':
+                  collapsed
+              })
+            }"
+            :variant="collapsed ? 'outline' : 'outline'"
+            :color="collapsed ? 'base' : 'primary'"
             :icon="
               collapsed
                 ? 'i-icon-park-outline-left-expand'
@@ -56,20 +90,44 @@ const viewModes = [
         </template>
 
         <template #trailing>
-          <UBadge size="sm" :label="4" color="neutral" class="font-semibold" />
+          <!--           <UBadge
+            size="sm"
+            :label="badgeValue"
+            color="neutral"
+            class="font-semibold" /> -->
         </template>
 
         <template #right>
           <UTabs
-            v-model:model-value="backpackViewMode"
+            v-model:model-value="viewMode"
             :items="viewModes"
-            size="md"
-            class="w-70"
-            :ui="{ list: 'rounded-xl' }"
+            size="sm"
+            :ui="{
+              root: 'ml-3 h-10!',
+              list: 'h-10 shrink-0 rounded-2xl inset-shadow-xs inset-ring-p4/30',
+              label: 'hidden',
+              indicator: 'h-7.5 rounded-xl',
+              leadingIcon: 'size-3.5 **:stroke-[2.4]'
+            }"
             color="neutral" />
+
+          <UDropdownMenu
+            :content="{
+              onCloseAutoFocus: (event) => event.preventDefault()
+            }"
+            :items="sortItems">
+            <Tooltip label="Sort">
+              <UButton
+                icon="i-swap-2"
+                :ui="{
+                  base: 'h-9 max-h-9 rounded-xl',
+                  leadingIcon: 'rotate-90 **:stroke-[2]'
+                }" />
+            </Tooltip>
+          </UDropdownMenu>
         </template>
       </UDashboardNavbar>
-      <NuxtPage :backpack-view-mode />
+      <NuxtPage />
     </UDashboardPanel>
   </UDashboardGroup>
 </template>

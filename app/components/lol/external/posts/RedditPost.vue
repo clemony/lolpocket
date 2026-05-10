@@ -88,6 +88,11 @@ function openPost() {
           fetchpriority: 'high',
           crossorigin: 'anonymous',
           loading: 'eager',
+          width: 400,
+          height: 300,
+          sizes: '(min-width: 1024px) 400px, 100vw',
+          format: 'webp',
+          preload: true,
           src: post.preview_image_url || post.thumbnail_url || undefined
         }
         : undefined

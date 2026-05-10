@@ -22,7 +22,7 @@ export async function finalizePocket(p: Pocket) {
     toast.add({
       color: "neutral",
       orientation: "horizontal",
-      title: `Created ${p.name}!`,
+      title: `Created ${p.label}!`,
       description: `${getRandom(heyGoodJob)}, ${
         user().account?.username || user().summoner?.name || "Summoner"
       }`,

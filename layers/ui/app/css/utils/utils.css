@@ -1,6 +1,7 @@
-
-
 @layer utilities {
+  .trailing-rotate {
+    @apply opacity-50 transition-all duration-200 ease-in-out **:stroke-[2.3] group-hover/btn:opacity-100 group-hover/child:opacity-100;
+  }
   .filter-grayscale {
     @apply opacity-80 brightness-120 contrast-110 grayscale;
   }

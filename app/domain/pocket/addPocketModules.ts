@@ -1,14 +1,15 @@
 //
 // --- Pocket Factory ---
 
-import { generateName } from "~/domain/pocket/generateStrings"
+import { generateName } from "~/domain/pocket/helpers/generateStrings"
 import { pType } from "~/domain/utils/pType"
 
 export function newItemSet(): ItemSet {
   return {
     id: crypto.randomUUID(),
     name: generateName(),
-    items: []
+    items: [],
+    quest: 0
   }
 }
 export function newSpellSet(): SpellSet {
@@ -24,11 +25,11 @@ export function newRuneSet(): RuneSet {
     id: crypto.randomUUID(),
     keystone: null,
     primary: {
-      path: "",
+      path: 0,
       runes: [0, 0, 0]
     },
     secondary: {
-      path: "",
+      path: 0,
       runes: [0, 0]
     },
     shards: [0, 0, 0]

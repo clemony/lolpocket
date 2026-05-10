@@ -1,0 +1,18 @@
+{
+  "id": 226660,
+  "name": "Bami's Cinder",
+  "description": "150 Health\n5 Ability Haste\n\nImmolate\nAfter taking or dealing damage, deal magic damage to nearby enemies for 3 seconds.",
+  "stats": {
+    "health": 150
+  },
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
+  },
+  "maps": [
+    30
+  ],
+  "tags": []
+}

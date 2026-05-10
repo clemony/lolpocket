@@ -27,7 +27,7 @@
     }
   ],
   "stats": {},
-  "description": "Jungle Companions\nSummon a Scorchclaw that assists you against monsters.\n\nScorchclaw's Slash\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it periodically imbues your next Attack or Ability to burn enemies and Slow them. Killing large monsters readies this immediately.",
+  "description": "Jungle Companions\nSummon a Scorchclaw that assists you against monsters.\n\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it completes your Jungle Quest and periodically imbues your next Attack or Ability to burn enemies and Slow them. Killing large monsters readies this immediately.",
   "gold": {
     "base": 450,
     "purchasable": true,

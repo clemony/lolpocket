@@ -79,8 +79,6 @@ export async function accountFetch() {
   if (account) user().setInbox(inbox)
   user().settings = (settings ?? getEmptySettings()) as Settings
   pocketStore().pockets = pockets ?? []
-  user().migrateAccountSplashUrlToSkinKey()
-  pocketStore().migrateSplashUrlsToSkinKeys()
   progress.value = 60
 
   if (account) publicUsers().setAccount(account)

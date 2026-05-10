@@ -7,65 +7,65 @@ export const radioGroupTheme = defineUiTheme({
     legend: "mb-1 block font-medium text-pc",
     item: "flex items-start",
     container: "flex items-center",
-    base: "overflow-hidden rounded-full ring ring-p3 ring-inset focus-visible:outline-2 focus-visible:outline-offset-2",
+    base: "overflow-hidden rounded-full ring ring-n2 ring-inset focus-visible:outline-2 focus-visible:outline-offset-2",
     indicator:
-      "flex size-full items-center justify-center after:rounded-sm after:bg-p0",
+      "flex size-full items-center justify-center after:rounded-full after:bg-p0",
     wrapper: "w-full",
     label: "block font-medium text-pc",
-    description: "text-n4",
+    description: "text-n5"
   },
   variants: {
     color: {
-      default: {
-        base: "focus-visible:outline-p3",
-        indicator: "bg-p0",
+      base: {
+        base: "focus-visible:outline-pc",
+        indicator: "bg-pc"
       },
       p1: {
         base: "focus-visible:outline-p3",
-        indicator: "bg-p1",
+        indicator: "bg-p1"
       },
       neutral: {
         base: "focus-visible:outline-nc",
-        indicator: "bg-n0",
-      },
+        indicator: "bg-n0"
+      }
     },
     variant: {
       list: {
-        item: "",
+        item: ""
       },
       card: {
-        item: "rounded-lg border border-p3/80",
+        item: "rounded-lg border border-p3/80"
       },
       soft: {
         root: "items-center",
         fieldset: "items-center gap-4",
-        item: "flex items-center justify-center rounded-lg border border-transparent hover:inset-shadow-morphic has-data-[state=checked]:pointer-events-none has-data-[state=checked]:shadow-morphic",
+        item: "flex items-center justify-center rounded-lg border border-transparent hover:inset-shadow-morphic has-data-[state=checked]:pointer-events-none has-data-[state=checked]:shadow-morphic"
       },
       table: {
-        item: "border border-p3/80",
-      },
+        item: "border border-p3/80"
+      }
     },
     orientation: {
       horizontal: {
-        fieldset: "flex-row",
+        fieldset: "flex-row"
       },
       vertical: {
-        fieldset: "flex-col",
-      },
+        fieldset: "flex-col"
+      }
     },
     indicator: {
       start: {
         item: "flex-row",
-        wrapper: "ms-2",
+        wrapper: "ms-2"
       },
       end: {
         item: "flex-row-reverse",
-        wrapper: "me-2",
+        wrapper: "me-2"
       },
       hidden: {
         base: "sr-only",
-        wrapper: "text-center",
-      },
+        wrapper: "text-center"
+      }
     },
     size: {
       xs: {
@@ -74,7 +74,7 @@ export const radioGroupTheme = defineUiTheme({
         base: "size-3",
         item: "text-xs",
         container: "h-4",
-        indicator: "rounded-sm after:size-1",
+        indicator: "rounded-sm after:size-1"
       },
       sm: {
         fieldset: "gap-y-0.5",
@@ -82,7 +82,7 @@ export const radioGroupTheme = defineUiTheme({
         base: "size-3.5",
         item: "text-xs",
         container: "h-4",
-        indicator: "after:size-1",
+        indicator: "after:size-1"
       },
       md: {
         fieldset: "gap-y-1",
@@ -90,7 +90,7 @@ export const radioGroupTheme = defineUiTheme({
         base: "size-4",
         item: "text-sm",
         container: "h-5",
-        indicator: "after:size-1.5",
+        indicator: "after:size-1.5"
       },
       lg: {
         fieldset: "gap-y-1",
@@ -98,7 +98,7 @@ export const radioGroupTheme = defineUiTheme({
         base: "size-4.5",
         item: "text-sm",
         container: "h-5",
-        indicator: "after:size-1.5",
+        indicator: "after:size-1.5"
       },
       xl: {
         fieldset: "gap-y-1.5",
@@ -106,55 +106,55 @@ export const radioGroupTheme = defineUiTheme({
         base: "size-5",
         item: "text-base",
         container: "h-6",
-        indicator: "after:size-2",
-      },
+        indicator: "after:size-2"
+      }
     },
     disabled: {
       true: {
         item: "opacity-75",
         base: "cursor-not-allowed",
         label: "cursor-not-allowed",
-        description: "cursor-not-allowed",
-      },
+        description: "cursor-not-allowed"
+      }
     },
     required: {
       true: {
-        legend: "after:ms-0.5 after:text-error after:content-['*']",
-      },
-    },
+        legend: "after:ms-0.5 after:text-error after:content-['*']"
+      }
+    }
   },
   compoundVariants: [
     {
       color: "default",
       variant: "soft",
       class: {
-        item: "hover:border-p3 has-data-[state=checked]:border-p3",
-      },
+        item: "hover:border-p3 has-data-[state=checked]:border-p3"
+      }
     },
     {
       orientation: "horizontal",
       variant: "soft",
       class: {
         root: "w-full",
-        item: "grow",
-      },
+        item: "grow"
+      }
     },
     {
       orientation: "horizontal",
       variant: "soft",
       class: {
         root: "w-full",
-        item: "h-10 grow",
-      },
-    },
+        item: "h-10 grow"
+      }
+    }
   ],
   defaultVariants: {
     size: "md",
-    color: "default",
+    color: "base",
     variant: "list",
     orientation: "vertical",
-    indicator: "start",
-  },
+    indicator: "start"
+  }
 })
 
 export default radioGroupTheme

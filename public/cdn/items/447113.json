@@ -21,10 +21,10 @@
   },
   "description": "90 Ability Power\n12 Magic Penetration\n600 Mana\n20 Ability Haste\n\nThe Bomb\nAbility damage marks the target, storing 20% of the damage dealt (increased to 25% against Immobilized enemies). \n\n3 seconds after you last damage the target with an ability, detonate the stored damage on them. If at any point the damage is enough to kill the target, detonate immediately.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

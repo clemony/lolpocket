@@ -4,9 +4,9 @@ export const modalTheme = defineUiTheme({
   slots: {
     title: "text-bc font-semibold",
     body: "bg-b1 flex-1 px-3 py-4 sm:p-6",
-    close: "",
+    close: "absolute top-0 right-0 self-start opacity-80",
     content:
-      "divide-b3 active-dialog flex flex-col divide-y focus:outline-none",
+      "divide-b3 active-dialog flex flex-col divide-none focus:outline-none",
     description: "mt-1 text-sm text-n4",
     footer: "flex items-center gap-1.5 p-4 sm:px-6",
     header: "flex min-h-16 items-center gap-1.5 p-4 sm:px-6",

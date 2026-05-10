@@ -1,7 +1,7 @@
 {
   "id": 226616,
   "name": "Staff of Flowing Water",
-  "description": "65 Ability Power\n14% Heal and Shield Power\n150% Base Mana Regen\n15 Ability Haste\n\nRapids\nHealing or Shielding an ally grants you both  Ability Power for 4 seconds.",
+  "description": "65 Ability Power\n14% Heal and Shield Power\n150% Base Mana Regen\n15 Ability Haste\n\nRapids\nHealing or Shielding an ally grants you both 40 Ability Power and 15 Ability Haste for 6 seconds.",
   "stats": {
     "abilityPower": 65
   },

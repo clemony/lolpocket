@@ -1,7 +1,7 @@
 {
   "id": 223072,
   "name": "Bloodthirster",
-  "description": "70 Attack Damage\n18% Life Steal\n\nIchorshield\nConvert excess healing from your Lifesteal to a Shield.",
+  "description": "70 Attack Damage\n18% Life Steal\n\nIchorshield\nConvert excess healing from your Life Steal to a Shield.",
   "stats": {
     "attackDamage": 70,
     "lifesteal": 18

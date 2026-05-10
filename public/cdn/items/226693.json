@@ -6,10 +6,10 @@
     "attackDamage": 55
   },
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

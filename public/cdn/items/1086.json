@@ -1,0 +1,21 @@
+{
+  "id": 1086,
+  "name": "Doran's Bow",
+  "description": "6 Attack Damage\n15% Attack Speed\n1.5% Omnivamp\n\n",
+  "stats": {
+    "attackDamage": 6,
+    "attackSpeed": 15
+  },
+  "gold": {
+    "base": 400,
+    "purchasable": true,
+    "total": 400,
+    "sell": 160
+  },
+  "maps": [
+    11,
+    12,
+    21
+  ],
+  "tags": []
+}

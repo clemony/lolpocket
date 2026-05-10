@@ -10,7 +10,7 @@ export function duplicatePocket(original: Pocket): Pocket {
   const newPocket = deepCopy(original)
 
   newPocket.key = crypto.randomUUID()
-  newPocket.name = `${original.name} (copy)`
+  newPocket.label = `${original.label} (copy)`
 
   newPocket.ouuid = user().account?.uuid ?? ""
   const now = nowInstantString()

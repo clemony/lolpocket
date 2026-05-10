@@ -33,7 +33,7 @@
     "lethality": 18,
     "abilityHaste": 10
   },
-  "description": "60 Attack Damage\n18 Lethality\n10 Ability Haste\n\nEminence\nWhen a champion that you damaged within 3 seconds dies, gain 15 Attack Damage plus 2 per champion killed for 90 seconds.",
+  "description": "55 Attack Damage\n18 Lethality\n10 Ability Haste\n\nEminence\nWhen a champion that you damaged within 3 seconds dies, gain 12 Attack Damage plus 3 per champion killed for 90 seconds.",
   "gold": {
     "base": 750,
     "purchasable": true,

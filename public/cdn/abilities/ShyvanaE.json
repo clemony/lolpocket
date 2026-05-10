@@ -5,7 +5,7 @@
   "affects": "Enemies",
   "blurb": "Active: Shyvana launches a fireball that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and  slowing them for a moment.",
   "castTime": "0.25 / 0.3333",
-  "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
+  "cooldown": "12 / 11 / 10 / 9 / 8",
   "cost": "0",
   "damageType": "Magic damage",
   "effectRadius": "150 / 300",

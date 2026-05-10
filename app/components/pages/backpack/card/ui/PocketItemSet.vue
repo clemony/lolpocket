@@ -1,23 +1,19 @@
 <script lang="ts" setup>
-const { class: className, pocket } = defineProps<{
-  class?: HTMLAttributes["class"]
-  pocket: Pocket
-}>()
+const {
+  class: className,
 
-const items = computed(() => {
-  if (!pocket.items?.length) return
-  if (pocket._items)
-    return pocket.items.find((set) => set.id === pocket._items)?.items
-  else if (pocket.items[0]?.items?.length) return pocket.items[0]?.items
-  else return null
-})
+  items
+} = defineProps<{
+  class?: HTMLAttributes["class"]
+  items: number[] | null | undefined
+}>()
 </script>
 
 <template>
   <div
     :class="
       cn(
-        'pocket-item-set relative isolate w-max overflow-hidden rounded-lg',
+        'pocket-item-set pointer-events-none relative isolate -ml-0.5 w-max overflow-visible rounded-lg',
         className
       )
     ">
@@ -26,14 +22,24 @@ const items = computed(() => {
         :max="6"
         size="lg"
         :ui="{
-          root: 'gap-1',
-          base: 'relative z-2 bg-p3'
+          root: 'gap-1 overflow-visible p-0.5 ring-5 ring-p0',
+          base: 'pointer-events-auto! relative z-2 overflow-visible bg-p3 ring-3'
         }">
-        <UAvatar
+        <Tooltip
           v-for="item in items"
           :key="item"
-          :src="item ? `/img/item/${item}.webp` : undefined"
-          icon="i-ui-none" />
+          :disabled="!item"
+          :label="item ? itemNameById(item) : undefined"
+          :avatar="item ? `/img/item/${item}.webp` : ''"
+          as-child>
+          <UAvatar
+            :ui="{
+              root: 'transition-scale duration-600 ease-spring-soft hover:z-5 hover:scale-110',
+              image: 'brightness-105 contrast-90'
+            }"
+            :src="item ? `/img/item/${item}.webp` : undefined"
+            icon="i-ui-none" />
+        </Tooltip>
       </UAvatarGroup>
     </FoilLayer>
   </div>
@@ -54,7 +60,7 @@ const items = computed(() => {
   background: var(--color-p0);
   mask-image: var(--caret-mask);
   mask-repeat: repeat-x;
-  mask-size: 26px 16px;
+  mask-size: 26px 20px;
   mask-position: center;
 }
 

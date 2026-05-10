@@ -37,7 +37,7 @@ export function copyItemSetToPocket(targetPocket: Pocket, set: ItemSet) {
     toast.add({ title: "Something went wrong!" })
   } else {
     if (targetPocket.items) targetPocket.items.push(newSet)
-    toast.add({ description: ` Set copied to ${targetPocket.name}!` })
+    toast.add({ description: ` Set copied to ${targetPocket.label}!` })
   }
 }
 

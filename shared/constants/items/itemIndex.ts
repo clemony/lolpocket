@@ -1,4 +1,4 @@
-// Updated Patch 16.9 - 05/02/2026 05:23:40 PM CDT
+// Updated Patch 16.9 - 05/08/2026 03:28:22 PM CDT
 import type { Index } from "#shared/types"
 
 export const itemIndex: Index[] = [
@@ -143,6 +143,11 @@ export const itemIndex: Index[] = [
     "name": "Cull"
   },
   {
+    "id": 1086,
+    "key": "item",
+    "name": "Doran's Bow"
+  },
+  {
     "id": 1090,
     "key": "item",
     "name": "Quest: Top"
@@ -193,6 +198,11 @@ export const itemIndex: Index[] = [
     "name": "Jarvan I's"
   },
   {
+    "id": 1120,
+    "key": "item",
+    "name": "Doran's Helm"
+  },
+  {
     "id": 1200,
     "key": "item",
     "name": "Top Lane Quest"
@@ -218,34 +228,49 @@ export const itemIndex: Index[] = [
     "name": "Jungle Quest"
   },
   {
+    "id": 1205,
+    "key": "item",
+    "name": "Jungle Quest Reward"
+  },
+  {
     "id": 1206,
     "key": "item",
-    "name": "Mid Lane Quest"
+    "name": "Mid Lane Quest Reward"
   },
   {
     "id": 1207,
     "key": "item",
-    "name": "Bot Lane Quest"
+    "name": "Bot Lane Quest Reward"
   },
   {
     "id": 1208,
     "key": "item",
-    "name": "Support Quest"
+    "name": "Support Quest Reward"
   },
   {
     "id": 1209,
     "key": "item",
-    "name": "Jungle Quest"
+    "name": "Jungle Quest Reward"
+  },
+  {
+    "id": 1210,
+    "key": "item",
+    "name": "Jungle Quest Reward"
+  },
+  {
+    "id": 1211,
+    "key": "item",
+    "name": "Jungle Quest Reward"
   },
   {
     "id": 1220,
     "key": "item",
-    "name": "Unleashed Teleport"
+    "name": "Unleashed Teleport (Top Lane Quest Reward)"
   },
   {
     "id": 1221,
     "key": "item",
-    "name": "Top Lane Quest"
+    "name": "Top Lane Quest Reward"
   },
   {
     "id": 1222,
@@ -508,6 +533,11 @@ export const itemIndex: Index[] = [
     "name": "Enhanced Lucky Dice"
   },
   {
+    "id": 2147,
+    "key": "item",
+    "name": "Augment Level"
+  },
+  {
     "id": 2150,
     "key": "item",
     "name": "Elixir of Skill"
@@ -661,6 +691,11 @@ export const itemIndex: Index[] = [
     "id": 3006,
     "key": "item",
     "name": "Berserker's Greaves"
+  },
+  {
+    "id": 3008,
+    "key": "item",
+    "name": "Gluttonous Greaves"
   },
   {
     "id": 3009,
@@ -1113,6 +1148,11 @@ export const itemIndex: Index[] = [
     "name": "Morellonomicon"
   },
   {
+    "id": 3168,
+    "key": "item",
+    "name": "Immortal Path"
+  },
+  {
     "id": 3170,
     "key": "item",
     "name": "Swiftmarch"
@@ -1531,41 +1571,6 @@ export const itemIndex: Index[] = [
     "id": 4646,
     "key": "item",
     "name": "Stormsurge"
-  },
-  {
-    "id": 5000,
-    "key": "item",
-    "name": "Lucky Urf Statue"
-  },
-  {
-    "id": 5001,
-    "key": "item",
-    "name": "Heart Of Gold"
-  },
-  {
-    "id": 5002,
-    "key": "item",
-    "name": "Kage's Lucky Pick"
-  },
-  {
-    "id": 5003,
-    "key": "item",
-    "name": "Avarice Blade"
-  },
-  {
-    "id": 5004,
-    "key": "item",
-    "name": "Philosopher's Stone"
-  },
-  {
-    "id": 5005,
-    "key": "item",
-    "name": "<font color='#C21807'>Pot</font><font color='#FFBF00'>ion</font> <font color='#00A86B'>Of</font> <font color='#40E0D0'>Col</font><font color='#8F00FF'>ors</font>"
-  },
-  {
-    "id": 5006,
-    "key": "item",
-    "name": "Potion? of Greed"
   },
   {
     "id": 6029,
@@ -2163,6 +2168,11 @@ export const itemIndex: Index[] = [
     "name": "Bravery Voucher"
   },
   {
+    "id": 220012,
+    "key": "item",
+    "name": "Shardblade"
+  },
+  {
     "id": 221011,
     "key": "item",
     "name": "Giant's Belt"
@@ -2311,6 +2321,11 @@ export const itemIndex: Index[] = [
     "id": 223006,
     "key": "item",
     "name": "Berserker's Greaves"
+  },
+  {
+    "id": 223008,
+    "key": "item",
+    "name": "Gluttonous Greaves"
   },
   {
     "id": 223009,
@@ -2816,6 +2831,11 @@ export const itemIndex: Index[] = [
     "id": 226657,
     "key": "item",
     "name": "Rod of Ages"
+  },
+  {
+    "id": 226660,
+    "key": "item",
+    "name": "Bami's Cinder"
   },
   {
     "id": 226662,

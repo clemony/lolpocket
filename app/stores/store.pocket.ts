@@ -58,30 +58,13 @@ export const pocketStore = defineStore(
         p.key === pocketKey ? { ...p, label: newName } : p
       )
     }
-
-    function migrateSplashUrlsToSkinKeys() {
-      let migrated = 0
-
-      pockets.value = pockets.value.map((pocket) => {
-        if (pocket.skin) return pocket
-
-        const { splash, ...nextPocket } = pocket as Pocket & { splash?: string }
-        const skin = splash ? skinKeyFromUrl(splash) : null
-        if (!skin) return pocket
-
-        migrated += 1
-        return { ...nextPocket, skin }
-      })
-
-      return migrated
-    }
+    const sidebarFolderRefs = ref<Record<string, boolean>>({})
 
     return {
       //
       downloadCard,
       pinned,
       pocketCardRef,
-      migrateSplashUrlsToSkinKeys,
       updatePocketName,
       pockets,
       tags,
@@ -91,7 +74,9 @@ export const pocketStore = defineStore(
       getRuneSet,
       getItemSet,
       pocketsByKey,
-      pocketIndexes
+      pocketIndexes,
+
+      sidebarFolderRefs
     }
   },
 

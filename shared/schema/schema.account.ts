@@ -1,7 +1,12 @@
 // shared/schemas/user.ts
 
 import { feedKeys } from "#shared/types"
+import type { CollapsibleProps } from "@nuxt/ui"
 import * as v from "valibot"
+import type {
+  RouteLocationAsPathGeneric,
+  RouteLocationAsRelativeGeneric
+} from "vue-router"
 import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
 
 // username
@@ -58,7 +63,7 @@ const feedCategorySchema = v.fallback(v.array(v.string()), feedKeys)
 export const folderSchema = v.object({
   id: v.pipe(v.string(), v.uuid("folder uuid malformed")),
   label: v.fallback(v.string(), ""),
-  icon: v.fallback(v.string(), ""),
+  iconKey: v.fallback(v.string(), ""),
   location: v.fallback(v.string(), ""),
   order: v.fallback(v.number(), 0)
 })
@@ -84,11 +89,10 @@ export const settingsSchema = v.object({
   feed_categories: feedCategorySchema,
   feed_spoilers: v.fallback(v.boolean(), true),
   feed_spoiler_safeguard: v.fallback(v.boolean(), true),
+  //new
+  pinned_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   //
   once: v.fallback(v.record(v.string(), v.boolean()), {}),
-  show_allies: v.fallback(v.boolean(), true),
-  show_flex: v.fallback(v.boolean(), true),
-  show_solo: v.fallback(v.boolean(), true),
   updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
 })
 
@@ -108,7 +112,10 @@ export type UsernameSchema = v.InferOutput<typeof usernameSchema>
 export type EmailSchema = v.InferOutput<typeof emailSchema>
 export type Account = v.InferOutput<typeof accountSchema>
 export type FolderSchema = v.InferOutput<typeof folderSchema>
-export interface Folder extends FolderSchema {
-  openIcon?: string
-  to?: string
+export interface Folder extends FolderSchema, CollapsibleProps {
+  to?:
+    | string
+    | RouteLocationAsRelativeGeneric
+    | RouteLocationAsPathGeneric
+    | undefined
 }

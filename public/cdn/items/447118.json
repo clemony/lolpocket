@@ -29,10 +29,10 @@
   },
   "description": "85 Adaptive Force\n400 Health\n15 Ability Haste\n\nSpark (5s) Cooldown\nAttack or Ability hits against an enemy champion Burn them for  magic damage over 3 seconds.\n\nCleansing Flame (0s) per champion\nApplying a Burn to an enemy champion creates a nearby Blaze for 5 seconds. While in a Blaze, you gain  Move Speed and restore  Health per second, while enemies take  magic damage per second.\n\nThe size and strength of each Blaze scale the number unique Burn sources you have.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

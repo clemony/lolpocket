@@ -24,10 +24,10 @@
   },
   "description": "65 Attack Damage\n30% Attack Speed\n25% Critical Strike Chance\n6% Move Speed\n\nCloudburst II \nDash in target direction over terrain, firing three missiles at the lowest Health enemy near your destination. Deals physical damage, increased against low Health targets.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

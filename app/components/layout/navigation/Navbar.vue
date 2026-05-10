@@ -8,7 +8,7 @@ const { toggle } = useApp().settings
     :toggle="false"
     :ui="{
       root: 'z-50 translate-3d transform-gpu px-0',
-      container: 'px-0',
+      container: 'px-3!',
       title: 'hidden'
     }">
     <template #left>
@@ -20,7 +20,7 @@ const { toggle } = useApp().settings
     </div>
 
     <template #right>
-      <UButton icon="i-menu" @click="toggle()" />
+      <UButton icon="i-menu" class="opacity-0" @click="toggle()" />
     </template>
   </UHeader>
 </template>

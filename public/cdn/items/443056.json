@@ -14,12 +14,12 @@
     }
   ],
   "stats": {},
-  "description": "Supremacy\nIncreases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste by 26%, increased by 0% per round win and -3% each round lost after acquiring this item.",
+  "description": "Supremacy\nIncreases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, increased by 0% per round win and -3% each round lost after acquiring this item.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

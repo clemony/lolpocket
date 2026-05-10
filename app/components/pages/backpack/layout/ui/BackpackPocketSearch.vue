@@ -13,10 +13,13 @@ const delegated = reactiveOmit(props, "collapsed")
 </script>
 
 <template>
-  <LazyUPopover v-if="props.collapsed" :content="{ side: 'right' }">
+  <LazyUPopover
+    v-if="props.collapsed"
+    mode="hover"
+    :content="{ side: 'right' }">
     <template #default="{ open }">
       <UButton
-        :variant="open ? 'solid' : 'outline'"
+        :variant="open ? 'solid' : 'ghost'"
         :color="open ? 'neutral' : 'primary'"
         :active="open"
         icon="i-search"
@@ -26,13 +29,14 @@ const delegated = reactiveOmit(props, "collapsed")
       <UInput
         v-bind="delegated"
         v-model:model-value="search"
-        variant="ghost"
-        placeholder="Backpack"
+        variant="none"
+        size="lg"
+        placeholder="Search Backpack..."
         :ui="{
-          base: 'w-full bg-p0 px-2 placeholder:font-semibold placeholder:text-pc',
+          base: 'w-full bg-p0 px-2',
           root: 'w-full',
 
-          leadingIcon: 'text-pc opacity-100 **:stroke-[2.4]'
+          leadingIcon: '**:stroke-[2.3]'
         }"
         icon="i-search">
         <template #trailing>
@@ -44,6 +48,7 @@ const delegated = reactiveOmit(props, "collapsed")
   </LazyUPopover>
 
   <UInput
+    v-else
     v-bind="delegated"
     v-model:model-value="search"
     placeholder="Backpack"

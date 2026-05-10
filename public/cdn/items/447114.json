@@ -30,12 +30,12 @@
     "attackSpeed": 40,
     "magicResistance": 35
   },
-  "description": "35 Armor\n35 Magic Resist\n40% Attack Speed\n\nReverberate\nAt combat start gain 50 max Health per 10% bonus Attack Speed.\n\nResonate\nAttacks deal  magic damage On-Hit.\n\nRumble\nImmobilizing or Grounding an enemy champion grants 25 stacks for 10 seconds. While at 100 stacks, Immobilizing an enemy champion applies On-Hit effects 3 times.",
+  "description": "35 Armor\n35 Magic Resist\n40% Attack Speed\n\nReverberate\nAt combat start gain 50 max Health per 10% bonus Attack Speed.\n\nResonate\nAttacks deal  magic damage On-Hit.\n\nRumble\nImmobilizing or Grounding an enemy champion applies On-Hit effects 3 times.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

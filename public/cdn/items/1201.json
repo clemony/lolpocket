@@ -1,7 +1,7 @@
 {
   "id": 1201,
   "name": "Mid Lane Quest",
-  "description": "Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in mid lane!\n\nRewards\n• Upgrade boots to tier 3\n• Enhanced Recall",
+  "description": "Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in mid lane!\n\nRewards\n• Upgrade boots to tier 3\n• Increased Bonus AD and AP",
   "gold": {
     "base": 0,
     "purchasable": false,

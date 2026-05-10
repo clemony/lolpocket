@@ -24,10 +24,10 @@
   },
   "description": "55 Attack Damage\n350 Health\n20 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack is enhanced with additional damage. If the target is a champion, also heal.\n\n",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

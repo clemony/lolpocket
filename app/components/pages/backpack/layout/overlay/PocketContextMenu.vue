@@ -1,0 +1,145 @@
+<script lang="ts" setup>
+import type {
+  ContextMenuEmits,
+  ContextMenuItem,
+  ContextMenuProps
+} from "@nuxt/ui"
+import { useForwardPropsEmits } from "reka-ui"
+import type { PocketButton } from "~/domain/pocket/types"
+
+import { deletePocket } from "~/domain/pocket/deletePocket"
+import { deleteFolderWithConfirm } from "~/domain/pocket/folder/deleteFolder"
+import { duplicatePocket } from "~/domain/pocket/manage/duplicate"
+import {
+  contextOpen,
+  pocketSidebarContextUi
+} from "~/domain/pocket/menu/contextActions"
+import { sortMenu } from "~/domain/pocket/menu/sortMenu"
+
+const props = defineProps<
+  ContextMenuProps & {
+    item: Pocket | undefined
+  }
+>()
+
+const emit = defineEmits<
+  ContextMenuEmits & {
+    toggleEdit: [boolean]
+  }
+>()
+
+const subopen = shallowRef<boolean>(false)
+const delegated = reactiveOmit(props, "class", "item")
+const forwarded = useForwardPropsEmits(delegated, emit)
+
+const handleDelete = async () => {
+  if (!props?.item) return
+
+  if (user().localSettings.confirm_pocket_delete === false && props?.item)
+    return deletePocket(props.item.key)
+  else deleteFolderWithConfirm(props.item?.key)
+}
+
+const { settings } = storeToRefs(user())
+const pocketActions = computed<ContextMenuItem[] | null>(() => {
+  if (!props.item) return null
+  const p = props.item
+  if (!p) return null
+
+  const pinned = pocketStore().pinned.includes(p.key)
+
+  if (p.location === "trash")
+    return [
+      {
+        label: "Restore",
+        icon: "i-ui-restore",
+
+        ui: {
+          itemLeadingIcon: "scale-120"
+        },
+        onSelect() {
+          p.location = "pockets"
+          p.trashed_at = undefined
+        }
+      }
+    ] as ContextMenuItem[]
+
+  return [
+    {
+      label: pinned ? "Unpin" : "Pin",
+      icon: pinned ? "i-unpin" : "i-pin",
+      ui: {
+        itemLeadingIcon: "**:stroke-[2.1] "
+      }
+    },
+
+    {
+      ...contextOpen(p.label ?? ""),
+      onSelect() {
+        navigateTo(`/backpack/pockets/${p.key}`)
+      }
+    },
+    {
+      type: "separator" as ContextMenuItem["type"]
+    },
+    {
+      label: "Rename",
+      icon: "i-lucide-text-cursor-input",
+      onSelect() {
+        emit("toggleEdit", true)
+      }
+    },
+    {
+      label: "Duplicate",
+      icon: "i-lucide-copy",
+      onSelect() {
+        duplicatePocket(p as Pocket)
+      }
+    },
+    {
+      type: "separator" as ContextMenuItem["type"]
+    },
+    settings.value
+      ? {
+          label: "Move to...",
+          icon: "i-lucide-pocket-symlink",
+          children: settings.value.folders.map((f) => ({
+            label: f.label,
+            onSelect() {
+              p.location = f.id
+            }
+          }))
+        }
+      : {},
+    sortMenu.value,
+    {
+      type: "separator" as ContextMenuItem["type"]
+    },
+    {
+      label: "Delete",
+      icon: "i-trash",
+      onSelect() {
+        p.key && deletePocket(p.key)
+      }
+    }
+  ].filter(Boolean)
+})
+</script>
+
+<template>
+  <ContextMenu
+    v-bind="forwarded"
+    :items="pocketActions"
+    size="lg"
+    :ui="pocketSidebarContextUi"
+    :content="{
+      ...props?.content,
+      onCloseAutoFocus: (event: Event) => event.preventDefault()
+    }"
+    @update:open="
+      (e) =>
+        e === false && subopen === true ? () => {} : emit('update:open', e)
+    ">
+    <slot />
+  </ContextMenu>
+</template>

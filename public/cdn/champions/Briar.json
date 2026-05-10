@@ -433,7 +433,7 @@
     "attackSpeed": 0.6
   },
   "statsPerLevel": {
-    "hp": 100,
+    "hp": 95,
     "armor": 4.5,
     "magicResist": 2.1,
     "attackSpeed": 2

@@ -14,43 +14,45 @@ const iconClass = computed(() =>
 </script>
 
 <template>
-  <Icon
-    name="i-meteor-icons-sparkles"
-    :class="
-      cn(
-        iconClass,
-        ui?.icon,
-        className,
-        'inactive-icon wrapper duration-600 **:stroke-[2.1] group-hover/btn:opacity-0'
-      )
-    " />
-  <svg
-    class="twinkle"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-    :class="
-      cn(
-        iconClass,
-        ui?.activeIcon,
-        className,
-        'wrapper text-nc opacity-0 duration-500 group-hover/btn:text-p0 group-hover/btn:opacity-100'
-      )
-    ">
-    <g class="sparkle-main">
-      <path
-        d="M9.33333333,16 C15.5555556,16.8888889 19.1111111,20.4444444 20,26.6666667 C20.8888889,20.4444444 24.4444444,16.8888889 30.6666667,16 C24.4444444,15.1111111 20.8888889,11.5555556 20,5.33333333 C19.1111111,11.5555556 15.5555556,15.1111111 9.33333333,16" />
-    </g>
+  <div class="relative grid size-full place-items-center">
+    <Icon
+      name="i-meteor-icons-sparkles"
+      :class="
+        cn(
+          iconClass,
+          ui?.icon,
+          className,
+          'inactive-icon wrapper duration-600 **:stroke-[2.1] group-hover/btn:opacity-0'
+        )
+      " />
+    <svg
+      class="twinkle"
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+      :class="
+        cn(
+          iconClass,
+          ui?.activeIcon,
+          className,
+          'wrapper text-nc opacity-0 duration-500 group-hover/btn:text-p0 group-hover/btn:opacity-100'
+        )
+      ">
+      <g class="sparkle-main">
+        <path
+          d="M9.33333333,16 C15.5555556,16.8888889 19.1111111,20.4444444 20,26.6666667 C20.8888889,20.4444444 24.4444444,16.8888889 30.6666667,16 C24.4444444,15.1111111 20.8888889,11.5555556 20,5.33333333 C19.1111111,11.5555556 15.5555556,15.1111111 9.33333333,16" />
+      </g>
 
-    <g class="sparkle-small sparkle-small-top">
-      <path d="M5.33333333,2.66666667 L5.33333333,10.6666667" />
-      <path d="M1.33333333,6.66666667 L9.33333333,6.66666667" />
-    </g>
+      <g class="sparkle-small sparkle-small-top">
+        <path d="M5.33333333,2.66666667 L5.33333333,10.6666667" />
+        <path d="M1.33333333,6.66666667 L9.33333333,6.66666667" />
+      </g>
 
-    <g class="sparkle-small sparkle-small-bottom">
-      <path d="M5.33333333,21.3333333 L5.33333333,29.3333333" />
-      <path d="M1.33333333,25.3333333 L9.33333333,25.3333333" />
-    </g>
-  </svg>
+      <g class="sparkle-small sparkle-small-bottom">
+        <path d="M5.33333333,21.3333333 L5.33333333,29.3333333" />
+        <path d="M1.33333333,25.3333333 L9.33333333,25.3333333" />
+      </g>
+    </svg>
+  </div>
 </template>
 
 <style lang="css" scoped>

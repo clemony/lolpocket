@@ -58,6 +58,13 @@ const name = computed(() => {
     <UAvatar
       v-if="authorSplash"
       :src="authorSplash"
+      width="16"
+      height="16"
+      sizes="16px"
+      format="webp"
+      loading="eager"
+      fetchpriority="high"
+      preload
       :ui="{
         root: 'card-shine z-0 size-4 shrink-0 overflow-hidden rounded-full'
       }" />

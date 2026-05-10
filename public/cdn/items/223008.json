@@ -1,0 +1,18 @@
+{
+  "id": 223008,
+  "name": "Gluttonous Greaves",
+  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 1% Omnivamp on Champion takedown, stacking up to 6 times.",
+  "stats": {
+    "flatMovespeed": 45
+  },
+  "gold": {
+    "base": 500,
+    "purchasable": true,
+    "total": 500,
+    "sell": 350
+  },
+  "maps": [
+    30
+  ],
+  "tags": []
+}

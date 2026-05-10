@@ -274,7 +274,7 @@
       "blurb": "Active:  Karma applies a  shield on herself or the target allied champion for a short time, which briefly grants  bonus movement speed.",
       "castTime": "none",
       "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
-      "cost": "50 / 55 / 60 / 65 / 70",
+      "cost": "60 / 65 / 70 / 75 / 80",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karma grants a shield to herself or the target allied champion for 2.5 seconds as well as 40% bonus movement speed for 2 seconds.</p>",
@@ -307,7 +307,7 @@
       "blurb": "Mantra Bonus:\nInspire's shield is increased, and Inspire spreads to surrounding allied champions at reduced power.",
       "castTime": "none",
       "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
-      "cost": "50 / 55 / 60 / 65 / 70",
+      "cost": "60 / 65 / 70 / 75 / 80",
       "effectRadius": "700",
       "effects": [
         {
@@ -419,7 +419,7 @@
     "attackRange": 525,
     "hpRegen": 5.5,
     "mpRegen": 13,
-    "attackDamage": 51,
+    "attackDamage": 49,
     "attackSpeed": 0.6
   },
   "statsPerLevel": {

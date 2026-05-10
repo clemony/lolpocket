@@ -20,10 +20,10 @@
   },
   "description": "70 Ability Power\n20 Ability Haste\n200 Health\n\nFill the Soul\nAny Ability cast within 800 range grants you a charge.\n\nAt 30 charges, gain  Shield,  Ability Power, and  Move Speed for the rest of the round.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

@@ -4,7 +4,7 @@
   "affects": "Enemies, Self",
   "blurb": "Active:  Zeri  dashes in the target direction, she will dash across any terrain she hits. Afterwards, she gains Lightning Rounds for a short time.",
   "castTime": "None",
-  "cooldown": "22 / 21 / 20 / 19 / 18",
+  "cooldown": "24 / 22.5 / 21 / 19.5 / 18",
   "cost": "90 / 85 / 80 / 75 / 70",
   "damageType": "Magic damage",
   "effects": [

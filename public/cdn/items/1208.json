@@ -1,7 +1,7 @@
 {
   "id": 1208,
-  "name": "Support Quest",
-  "description": "Rewards\n• Upgraded support item\n• Discounted control wards",
+  "name": "Support Quest Reward",
+  "description": "Rewards\n• A new slot for control wards\n• Discounted control wards\n• Bounty of Worlds item",
   "gold": {
     "base": 0,
     "purchasable": false,

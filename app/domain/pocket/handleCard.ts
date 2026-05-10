@@ -4,7 +4,7 @@
   const cardName = computed (() => {
     const c = pocket.champions[0] && pocket.champions[0] ? `${pocket.champions[0]}-` : ''
     const r = pocket.roles[0] && pocket.roles[0] !== 'all' ? `${pocket.roles[0]}-` : ''
-    const n = pocket.name ? `${pocket.name}-` : ''
+    const n = pocket.label ? `${pocket.label}-` : ''
     return `${(c + r + n).toLowerCase().replace(' ', '-')}pocket`
   })
 

@@ -2,6 +2,7 @@
 interface CardProps {
   class?: HTMLAttributes["class"]
   mask?: string
+  maskSize?: string
   ui?: {
     root?: HTMLAttributes["class"]
     container?: HTMLAttributes["class"]
@@ -12,7 +13,8 @@ interface CardProps {
 }
 
 const props = withDefaults(defineProps<CardProps>(), {
-  disabled: false
+  disabled: false,
+  maskSize: "cover"
 })
 
 const delegated = reactiveOmit(props)
@@ -69,7 +71,7 @@ const maskUrl = computed(() => (props.mask ? `url(${props.mask})` : undefined))
   content: "";
   z-index: 2; */
   mask-image: v-bind("maskUrl");
-  mask-size: cover;
+  mask-size: v-bind("maskSize");
   mask-position: center;
   mask-composite: add;
   mask-mode: alpha;

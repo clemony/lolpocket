@@ -30,7 +30,9 @@ const pocket = ref(props.pocket)
 
   <USeparator />
 
-  <DropdownMenuItem class="text-md! font-medium" @click="deletePocket(pocket)">
+  <DropdownMenuItem
+    class="text-md! font-medium"
+    @click="deletePocket(pocket.key)">
     <icon class="size-5" name="x-folder" />
     Send to Trash
   </DropdownMenuItem>

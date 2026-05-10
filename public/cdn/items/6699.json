@@ -50,12 +50,12 @@
     "lethality": 18,
     "abilityHaste": 10
   },
-  "description": "55 Attack Damage\n18 Lethality\n10 Ability Haste\n\nGalvanize\nDashes and Stealth stack Energized 75% faster.\n\nFirmament\nYour Energized Attack deals bonus physical damage and Slows for 0.75 seconds.",
+  "description": "55 Attack Damage\n10 Lethality\n10 Ability Haste\n\nGalvanize\nDamaging an Enemy Champions with an ability triggers Energized if it is ready.\n\nFirmament\nYour Energized Attack deals % target's Current Health as bonus physical damage and grants you bonus Lethality for 4 seconds.",
   "gold": {
-    "base": 963,
+    "base": 863,
     "purchasable": true,
-    "total": 3000,
-    "sell": 2100
+    "total": 2900,
+    "sell": 2030
   },
   "maps": [
     11,

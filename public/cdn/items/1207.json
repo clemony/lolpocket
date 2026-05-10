@@ -1,7 +1,7 @@
 {
   "id": 1207,
-  "name": "Bot Lane Quest",
-  "description": "Rewards\n• Lump Sum of Gold\n• Increased gold from minion kills, champion kills, and assists\n• Boots move to a 7th slot, freeing up your inventory for 6 items",
+  "name": "Bot Lane Quest Reward",
+  "description": "Rewards\n• +300immediately and Boots move to a 7th slot, freeing up your inventory for 6 items\n• +2from Minion kills\n• +40from Champion takedowns",
   "gold": {
     "base": 0,
     "purchasable": false,

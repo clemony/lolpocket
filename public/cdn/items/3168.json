@@ -1,0 +1,18 @@
+{
+  "id": 3168,
+  "name": "Immortal Path",
+  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 1% Omnivamp on Champion takedown, stacking up to 6 times.\n\nNow and Forever\nWhile above half Health, deal 5% increased damage. \n\nWhile below half Health, gain 15% increased healing, shielding, and regeneration.",
+  "stats": {
+    "flatMovespeed": 45
+  },
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 950,
+    "sell": 665
+  },
+  "maps": [
+    11
+  ],
+  "tags": []
+}

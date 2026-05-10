@@ -1,4 +1,4 @@
-// Updated Patch 16.9 - 05/02/2026 05:23:40 PM CDT
+// Updated Patch 16.9 - 05/08/2026 04:29:01 PM CDT
 
 export const unpurchasableItems: number[] = [
   1035,
@@ -10,10 +10,13 @@ export const unpurchasableItems: number[] = [
   1202,
   1203,
   1204,
+  1205,
   1206,
   1207,
   1208,
   1209,
+  1210,
+  1211,
   1220,
   1221,
   1222,
@@ -57,6 +60,7 @@ export const unpurchasableItems: number[] = [
   2422,
   2530,
   3001,
+  3002,
   3010,
   3011,
   3012,
@@ -108,6 +112,7 @@ export const unpurchasableItems: number[] = [
   6691,
   6693,
   6700,
+  6701,
   6702,
   7050,
   8001,
@@ -115,6 +120,7 @@ export const unpurchasableItems: number[] = [
   220009,
   220010,
   220011,
+  220012,
   221011,
   221026,
   221031,
@@ -139,6 +145,7 @@ export const unpurchasableItems: number[] = [
   226035,
   226632,
   226656,
+  226660,
   226667,
   226671,
   226691,
@@ -148,8 +155,10 @@ export const unpurchasableItems: number[] = [
   228006,
   228008,
   322530,
+  323002,
   323040,
   323042,
   323121,
+  443080,
   664403
 ]

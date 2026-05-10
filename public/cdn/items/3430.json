@@ -24,7 +24,7 @@
     "criticalStrikeChance": 25,
     "abilityHaste": 15
   },
-  "description": "50 Ability Power\n15 Ability Haste\n25% Critical Strike Chance\n\nWrath and Ruin\nOn spell cast, gain 2.5% critical chance for 6 seconds, stacking up to 20%.\n\nSalvage the Wreckage\nYour spells have a chance equal to your crit chance to grant you or your targeted ally a shield for  for 3s.\n",
+  "description": "50 Ability Power\n15 Ability Haste\n25% Critical Strike Chance\n\nWrath and Ruin\nOn spell cast, gain 2.5% Critical Strike Chance for 6 seconds, stacking up to 20%.\n\nSalvage the Wreckage\nYour spells have a chance equal to your Critical Strike Chance to grant you or your targeted ally a shield for  for 3s.",
   "gold": {
     "base": 2500,
     "purchasable": true,

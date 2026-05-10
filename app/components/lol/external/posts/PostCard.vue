@@ -70,6 +70,11 @@ function openPost(e: PostType, index?: number) {
       fetchpriority: 'high',
       crossorigin: 'anonymous',
       loading: 'eager',
+      width: 400,
+      height: 300,
+      sizes: '(min-width: 1024px) 400px, 100vw',
+      format: 'webp',
+      preload: true,
       src: (toValue(post).image as Partial<ImgHTMLAttributes>)?.src,
       preset: 'card'
     }"

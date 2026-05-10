@@ -1,4 +1,27 @@
-// Updated Patch 16.9 - 05/02/2026 05:23:40 PM CDT
+// Updated Patch 16.9 - 05/08/2026 04:29:01 PM CDT
+export const bootIndex: number[] = [
+  1001,
+  3006,
+  3009,
+  3020,
+  3047,
+  3111,
+  3158,
+  3170,
+  3171,
+  3173,
+  3174,
+  3175,
+  223005
+]
+
+export const supportItemIndex: number[] = [
+  3869,
+  3870,
+  3871,
+  3876,
+  3877
+]
 
 export const rankToItem: Record<string, number[]> = {
   "Starter": [

@@ -1,4 +1,3 @@
-
 .module-ghost {
   @apply size-full rounded-xl bg-p2/20 inset-shadow-sm;
 }
@@ -72,3 +71,29 @@
   max-height: calc(var(--spacing) * 36);
   overflow: hidden;
 }
+
+@utility pocket-sortable {
+  .sortable-ghost {
+    @apply size-full bg-p3;
+  }
+  .sortable-drag {
+    @apply size-full bg-p3;
+  }
+  .sortable-chosen {
+    @apply size-full bg-p3;
+  }
+}
+
+/*
+
+@utility template {
+  .sortable-ghost {
+  }
+  .sortable-drag {
+  }
+  .sortable-chosen {
+  }
+  .sortable-fallback {}
+}
+
+*/

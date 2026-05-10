@@ -19,10 +19,10 @@
   },
   "description": "300 Health\n100 Armor\n\nImmovable as the Earth\nIncrease your armor by 20%, and gain Block Chance based on your Armor.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

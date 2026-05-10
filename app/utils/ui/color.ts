@@ -138,6 +138,20 @@ export const twBorder: Record<string, string> = {
   dom: "border-dom"
 }
 
+export const twBorder40: Record<string, string> = {
+  p0: "border-p0/40",
+  p1: "border-p1/40",
+  p2: "border-p4/40",
+  p3: "border-p3/40",
+  p4: "border-p4/40",
+  primary: "border-p5/40",
+  insp: "border-insp/40",
+  sorc: "border-sorc/40",
+  pre: "border-pre/40",
+  res: "border-res/40",
+  dom: "border-dom/40"
+}
+
 export const twRing: Record<string, string> = {
   p0: "ring-p0",
   p1: "ring-p1",

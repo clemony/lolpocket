@@ -38,6 +38,15 @@ export interface ProviderIdentity {
   name: string
 }
 
+export interface LocalSettings {
+  sidebar_sort_folder_first: boolean
+  sidebar_sort_method: "date" | "alpha"
+  sidebar_sort_mode: "asc" | "desc"
+  backpack_group_by: "folder" | "patch"
+  confirm_folder_delete: boolean
+  confirm_pocket_delete: boolean
+}
+
 export interface Identifier {
   name?: string
   puuid?: string

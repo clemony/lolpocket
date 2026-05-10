@@ -1,0 +1,15 @@
+{
+  "id": 220012,
+  "name": "Shardblade",
+  "description": "Increase the effectiveness of stat shards.",
+  "gold": {
+    "base": 2500,
+    "purchasable": false,
+    "total": 2500,
+    "sell": 0
+  },
+  "maps": [
+    30
+  ],
+  "tags": []
+}

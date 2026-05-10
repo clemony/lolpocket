@@ -26,7 +26,7 @@ const pocket = ref(props.pocket)
 
     <button
       class="group btn cursor-pointer btn-ghost btn-lg"
-      @click="deletePocket(pocket)">
+      @click="deletePocket(pocket.key)">
       Send Pocket to Trash
     </button>
   </div>

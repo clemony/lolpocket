@@ -18,12 +18,12 @@
     "health": 400,
     "tenacity": 30
   },
-  "description": "85 Ability Power\n400 Health\n30% Tenacity\n\nRelentless\nWhen you use an Ability, reset your auto attack timer and gain 90% Attack Speed for your next 2 Attacks.\n\nWhen you Attack, reduce your Ability Cooldowns by 0.5 seconds.",
+  "description": "85 Ability Power\n400 Health\n30% Tenacity\n\nRelentless\nWhen you use an Ability, reset your auto attack timer and gain 90% Attack Speed for your next 2 Attacks.\n\nWhen you Attack, reduce your non-Dash and Blink Abilities Ability Cooldowns by 0.5 seconds.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

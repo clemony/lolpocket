@@ -173,7 +173,7 @@
       "width": "100 / 200",
       "affects": "Enemies",
       "castTime": "0.25",
-      "cooldown": "16 / 15 / 14 / 13 / 12",
+      "cooldown": "18 / 17 / 16 / 15 / 14",
       "cost": "80",
       "damageType": "Magic damage",
       "effectRadius": "250",

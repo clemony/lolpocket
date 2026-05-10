@@ -35,10 +35,10 @@
   },
   "description": "55 Attack Damage\n45% Attack Speed\n15% Move Speed\n\nPolarity\nOn Attack, if the target is different from the target you most recently triggered an Energized Attack on, ready Energize. \n\nDynamo\nEnergized Attacks deal an additional magic damage based on the Target's Current Health.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

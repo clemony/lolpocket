@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
   title: "Tools",
-  icon: "lucide:wrench",
-  order: 4,
+  icon: "lucide:wrench", //i-lucide-pocket-knife
+  order: 4
 })
 </script>
 

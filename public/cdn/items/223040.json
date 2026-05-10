@@ -1,7 +1,7 @@
 {
   "id": 223040,
   "name": "Seraph's Embrace",
-  "description": "60 Ability Power\n1200 Mana\n25 Ability Haste\n\nAwe\nGain Ability Power equal to 4% bonus Mana. (0).\n\nLifeline\nUpon taking damage that would reduce your Health below 30%, gain a 350 + 20% maximum Mana Shield for 3s (0s).",
+  "description": "60 Ability Power\n1200 Mana\n25 Ability Haste\n\nAwe\nGain Ability Power equal to 4% bonus Mana. (0).\n\nLifeline\nUpon taking damage that would reduce your Health below 30%, gain a 350 + 0% current Mana Shield for 3s (0s).",
   "stats": {
     "mana": 1200,
     "abilityPower": 60

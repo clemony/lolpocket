@@ -5,16 +5,21 @@ import {
   newSpellSet
 } from "~/domain/pocket/addPocketModules"
 import { finalizePocket } from "~/domain/pocket/finalizePocket"
-import { generateName } from "~/domain/pocket/generateStrings"
+import { generateName } from "~/domain/pocket/helpers/generateStrings"
 
 //
-export async function newPocket(options?: { location: LocationKey }) {
+export async function newPocket(options?: {
+  name?: string
+  location?: LocationKey
+}) {
   const now = nowInstantString()
   const key = crypto.randomUUID()
+  const genName = generateName()
+  console.log("🥸 - newPocket - genName:", genName)
   const p = {
     key,
     okey: key,
-    name: generateName(),
+    label: options?.name || genName,
     ouuid: user().account?.uuid ?? "",
     uuid: user().account?.uuid ?? "",
 

@@ -22,17 +22,17 @@ function handlePath1() {
   // set.primary.runes = []
   set.keystone = null
 
-  const index = Object.keys(pathIndex).indexOf(set.secondary?.path)
+  const index = Object.keys(pathIndex).indexOf(set.secondary?.path.toString())
   if (set.primary?.path === set.secondary.path)
     set.secondary.path =
-      pathList[index === 4 ? 0 : index + 1] ?? set.secondary.path
+      Number(pathList[index === 4 ? 0 : index + 1]) ?? set.secondary.path
 }
 
 function handlePath2() {
   set.secondary.runes = []
 }
 
-function handlePathUpdate(e: { primary: string; secondary: string }) {
+function handlePathUpdate(e: { primary: number; secondary: number }) {
   set.primary.path = e.primary
   set.secondary.path = e.secondary
 }

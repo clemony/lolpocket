@@ -14,6 +14,12 @@ export const buttonTheme = defineUiTheme({
   variants: {
     color: Object.fromEntries(colors.map((color) => [color, { [color]: `` }])),
     size: {
+      _xs: {
+        base: "h-6! min-w-6! gap-1 px-2 text-xs",
+        leadingAvatarSize: "3xs",
+        leadingIcon: "size-4",
+        trailingIcon: "size-4"
+      },
       xs: {
         base: "h-7! min-w-7! gap-1 px-2 text-xs",
         leadingAvatarSize: "3xs",
@@ -27,6 +33,12 @@ export const buttonTheme = defineUiTheme({
         trailingIcon: "size-4"
       },
 
+      sm_: {
+        base: "h-9! gap-1.5 px-2.5 text-sm",
+        leadingAvatarSize: "2xs",
+        leadingIcon: "size-4.5",
+        trailingIcon: "size-4 opacity-60 group-hover/btn:opacity-100"
+      },
       md: {
         base: "h-10! gap-1.5 px-2.5 text-sm",
         leadingAvatarSize: "2xs",
@@ -172,7 +184,7 @@ export const buttonTheme = defineUiTheme({
       color: "transparent",
       variant: "solid",
       class: {
-        base: "ring-none border-0 bg-transparent hover:border-0"
+        base: "inset-ring-none bg-transparent text-pc shadow-none drop-shadow-none fx-0 hover:bg-transparent hover:inset-ring-0 hover:fx-0"
       }
     },
     /* PRIMARY */
@@ -225,7 +237,7 @@ export const buttonTheme = defineUiTheme({
       color: ["base", "primary", "secondary", "tertiary"],
       variant: "outline",
       class: {
-        base: "btn border-0 bg-transparent text-pc shadow-xs ring-0 inset-ring inset-ring-p3 ring-offset-0"
+        base: "btn border-0 bg-transparent text-pc shadow-xs ring-0 inset-ring inset-ring-p3 ring-offset-0 hover:bg-p2/60"
       }
     },
     // soft

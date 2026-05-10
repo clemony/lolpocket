@@ -56,7 +56,7 @@ const pocket = computed(() => props.pocket)
           ">
           <PocketIcon class="size-6 rounded-full" :pocket size="sm" />
           <span class="truncate">
-            {{ friendlyPocket.name }}
+            {{ friendlyPocket.label }}
           </span>
         </UButton>
       </div>

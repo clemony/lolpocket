@@ -13,6 +13,7 @@ export const icon = {
     "arrow-right": "lucide:arrow-right", //'i-arrow-right'
     "arrow-up": "lucide:arrow-up", //'i-arrow-up'
     "arrow-up-thick": "i-typcn-arrow-up-thick",
+    "arrow-up-down": "i-lineicons-arrows-vertical", //'i-lineicons-arrows-vertical
     "caret-down": "tabler:caret-down-filled", //'i-caret-down'
     "caret-up": "tabler:caret-up-filled", //i-caret-up'
     "caret-right": "tabler:caret-right-filled", //'i-caret-right'
@@ -31,8 +32,13 @@ export const icon = {
     "up-to-line": "lucide:arrow-up-to-line", //'i-up-to-line'
     "up-up": "lucide:chevrons-up", //'i-up-up'
     "collapse-all": "lucide:list-collapse", //'i-lucide-list-collapse'
+    "sort-alpha": "lineicons:sort-alphabetical", //i-lineicons-sort-alphabetical
     shuffle: "lucide:shuffle", //'i-shuffle'
     swap: "lucide:arrow-right-left", //'i-swap'
+    sort: "icon-park-outline:sort-two", //'i-icon-park-outline-sort-two' i-uiw-swap i-tdesign-swap
+    "swap-2": "i-tdesign-swap", // i-tdesign-swap
+    "swap-right": "tdesign:swap-right", //i-tdesign-swap-right
+    "swap-left": "tdesign:swap-left", //i-tdesign-swap-left
     refresh: "lucide:refresh-ccw", //'i-refresh'
     reset: "lucide:rotate-ccw", //'i-reset'
     download: "lucide:download", //'i-download'
@@ -40,7 +46,7 @@ export const icon = {
     share: "lucide:share", //'i-share'
     "log-in": "lucide:log-in", //'i-log-in'
     "log-out": "lucide:log-out", //'i-log-out'
-    open: "radix-icons:open-in-new-window", //'i-open'
+    open: "iconoir:open-in-window", //'i-iconoir-open-in-window'
     external: "lucide:external-link", //'i-external'
     tab: "lucide:arrow-right-to-line", //'i-tab'
     shift: "lucide:arrow-big-up-dash", //'i-shift'
@@ -61,6 +67,7 @@ export const icon = {
     unpin: "iconoir:pin-slash", //'i-unpin:"iconoir'
 
     "check-fill": "bi:check-circle-fill", //'i-check-fill'
+    "circle-plus": "lucide:circle-plus", //i-lucide-circle-plus
     tick: "lucide:check", //'i-tick'
     check: "lucide:check", //'i-check'
     "tick-sm": "teenyicons:tick-small-outline", //'i-tick-sm'
@@ -71,15 +78,19 @@ export const icon = {
     menu: "lucide:menu", //'i-menu'
     more: "ri:more-line", //'i-ri-more-line'
     "more-vertical": "ri:more-line-vertical", //'i-ri-more-line-vertical'
-    radio: "formkit:radio", //'i-radio:"formkit'
+    radio: "lsicon:radio-selected-outline", //'i-lsicon-radio-selected-outline
+    "radio-off": "lsicon:radio-unselected-outline", //i-lsicon-radio-unselected-outline
     settings: "lucide:settings-2", //'i-settings'
 
     "square-list": "lucide:layout-list", // i-lucide-layout-list
     archive: "lucide:archive", //'i-archive'
+    "archive-restore": "lucide:archive-restore", //'i-lucide-archive-restore'
+    chest: "lucide-lab:chest", //'i-lucide-lab-chest'
     bold: "lucide:bold", //'i-bold'
     clear: "tabler:circle-half-vertical", //'i-clear'
     edit: "material:symbols-light:edit-square-outline", //'i-edit:"material:symbols-light'
     "edit-line": "lucide:pen-line", //'i-edit-line'
+    "text-input": "lucide:text-cursor-input", //'i-lucide-text-cursor-input"'
     erase: "lucide:eraser", //'i-erase'
     h1: "lucide:heading-1", //'i-h1'
     h2: "lucide:heading-2", //'i-h2'
@@ -90,9 +101,11 @@ export const icon = {
     save: "lucide:save", //'i-save'
     strikethrough: "lucide:strikethrough", //'i-strikethrough'
     trash: "lucide:trash-2", //'i-trash'
+    "trash-simple": "lucide:trash", //'i-lucide-trash'
 
     folder: "lucide:folder", //'i-folder'
     "folder-add": "lucide:folder-plus", //'i-folder-add'
+    "to-folder": "lucide:folder-symlink", //i-lucide-folder-symlink
     "folder-delete": "lucide:folder-x", //'i-folder-delete'
     "folder-documents": "formkit:folder", //'i-folder-documents'
     "folder-open": "lucide:folder-closed", //'i-folder-open'
@@ -179,6 +192,8 @@ export const icon = {
     star: "ph:star", //'i-star'
     "star-fill": "ph:star-fill", //'i-star-fill'
     sparkle: "meteor-icons:sparkles", //i-meteor-icons-sparkles
+    "crystal-ball": "tabler:crystal-ball", //i-tabler-crystal-ball i-mingcute-crystal-ball-line
+    wand: "lucide:wand", //i-lucide-wand
     hexagon: "lucide:hexagon", //'i-lucide-hexagon'
 
     key: "lucide:key-round", //'i-key'

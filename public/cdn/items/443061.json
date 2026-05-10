@@ -18,12 +18,12 @@
     "health": 900,
     "abilityHaste": 30
   },
-  "description": "900 Health\n30 Ability Haste\n25% Critical Strike Chance\n\nAtrophy\nImmobilizing Crowd Control effects you apply roll your Critical Chance to increase their duration by 0.25 +33% seconds.",
+  "description": "900 Health\n30 Ability Haste\n25% Critical Strike Chance\n\nAtrophy\nWhen you Immobilizing a target roll your Critical Chance to increase their duration by 0.25 +33% seconds.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

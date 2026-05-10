@@ -5,7 +5,7 @@
   "blurb": "Mantra Bonus:\nInspire's shield is increased, and Inspire spreads to surrounding allied champions at reduced power.",
   "castTime": "none",
   "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
-  "cost": "50 / 55 / 60 / 65 / 70",
+  "cost": "60 / 65 / 70 / 75 / 80",
   "effectRadius": "700",
   "effects": [
     {

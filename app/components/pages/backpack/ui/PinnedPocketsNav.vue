@@ -30,7 +30,7 @@ const { isCollapsed, pinned } = defineProps<{
         class="grid gap-1 group-data-[collapsed=true]:justify-center group-data-[collapsed=true]:px-2">
         <div
           v-for="link of pinned"
-          :key="link.name"
+          :key="link.label"
           class="group/tag flex max-h-9 w-full flex-nowrap items-center py-1 pr-2">
           <UButton
             class="flex grow items-center justify-start gap-3! px-2 text-md duration-0!"
@@ -42,7 +42,7 @@ const { isCollapsed, pinned } = defineProps<{
               :src="getSplashFromSkinKey(link.skin, 'tile')" />
 
             <span v-show="!isCollapsed" class="font-medium capitalize">
-              {{ link.name }}
+              {{ link.label }}
             </span>
           </UButton>
           <Label
@@ -70,7 +70,7 @@ const { isCollapsed, pinned } = defineProps<{
   <nav v-else class="flex flex-col items-center justify-center gap-1">
     <UButton
       v-for="link of pinned"
-      :key="link.name"
+      :key="link.label"
       class="size-12"
       :to="`/${link.key}`"
       variant="ghost">

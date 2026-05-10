@@ -41,12 +41,12 @@
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
-  "description": "45 Attack Damage\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nAttacks trigger chain lightning On-Hit, dealing magic damage with a cooldown.\n\nElectroshock \nTakedowns within 3 seconds of damaging the target reset Electrospark's cooldown.",
+  "description": "40 Attack Damage\n45 Ability Power\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nYour Energized Attacks fire chain lightning, applying On-Hit effects and dealing magic damage to nearby targets.\n\nElectroshock \nBasic Attacks grant extra Energized stacks.",
   "gold": {
-    "base": 450,
+    "base": 625,
     "purchasable": true,
-    "total": 2700,
-    "sell": 1890
+    "total": 3000,
+    "sell": 2100
   },
   "maps": [
     11,

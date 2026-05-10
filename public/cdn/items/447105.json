@@ -20,10 +20,10 @@
   },
   "description": "70 Ability Power\n18% Heal and Shield Power\n30 Ability Haste\n125% Base Mana Regen\n\nACTIVE (0s)\nVigilance\nTeleport to your ally and grant  shield for 5s when landing. Can be used when Ally is downed.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

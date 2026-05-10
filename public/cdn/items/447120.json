@@ -22,12 +22,12 @@
   "stats": {
     "attackSpeed": 30
   },
-  "description": "75 Adaptive Force\n30% Attack Speed\n\nReach Weapon\nIncrease your attack range by 75.\n\nSweet Spot\nDeal up to 30% increased damage with Attacks and 50% with Abilities based on how far your target is from you. Damage caps at 800 units. ",
+  "description": "75 Adaptive Force\n30% Attack Speed\n\nReach Weapon\nIncrease your attack range by 75.\n\nSweet Spot\nDeal up to 30% increased damage with Attacks and 50% with Abilities based on how far your target is from you. Damage caps at 700 units. ",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

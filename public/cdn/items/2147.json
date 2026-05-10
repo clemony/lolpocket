@@ -1,0 +1,12 @@
+{
+  "id": 2147,
+  "name": "Augment Level",
+  "description": "Active - Consume: Gain 1 augment level.\n\nGood for you.",
+  "gold": {
+    "base": 1250,
+    "purchasable": true,
+    "total": 1250,
+    "sell": 0
+  },
+  "tags": []
+}

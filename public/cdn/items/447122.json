@@ -26,10 +26,10 @@
   },
   "description": "900 Health\n25 Ability Haste\n\nAccretion\nOn-Hit, gain 1 stack of Accretion, and 5 stacks for immobilizing an enemy champion. These stacks last for the rest of the round, up to 50. Each stack increases your size by 2%.\n\nACTIVE (0s)\nDark Star\nSummon a Black Hole that scales with your size. Slowing nearby enemies by 30% while those in the center are pulled closer and take  magic damage each second, granting you 1 stack of Accretion. The Black Hole lasts for  seconds.\n\nIncreases in size every 10 stacks. ",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

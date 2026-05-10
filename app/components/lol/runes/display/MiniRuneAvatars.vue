@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { pathIndex } from "~~/shared/constants/runes/pathIndex"
+
 const { class: className, set } = defineProps<{
   class?: HTMLAttributes["class"]
   set: RuneSet
@@ -20,7 +22,7 @@ const { class: className, set } = defineProps<{
       class="border-b4/60 avatar relative grid size-7 place-items-center! border! bg-p0 group-open/trig:border-p2">
       <img
         class="absolute size-4.5 shrink-0"
-        :alt="set.secondary.path"
+        :alt="pathIndex[set.secondary.path]?.name"
         :src="`/img/path/${set.secondary.path}.webp`" />
     </div>
   </div>

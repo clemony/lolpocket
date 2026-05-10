@@ -23,10 +23,10 @@
   },
   "description": "55 Attack Damage\n400 Health\n20 Ability Haste\n10% Omnivamp\n\nActive - Thirsting Slash: Deal damage to nearby enemies. Restore Health for each champion hit.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

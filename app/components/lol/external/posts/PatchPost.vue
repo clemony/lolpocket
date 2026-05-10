@@ -51,7 +51,6 @@ onMounted(async () => {
     :date="data.metadata.date ?? ''"
     :to="data.url"
     external
-    :preload="{ fetchPriority: 'high' }"
     loading="eager"
     target="_blank"
     :authors="[
@@ -70,7 +69,21 @@ onMounted(async () => {
         ui: postAuthorUi
       }
     ]"
-    :image="data?.metadata.image || undefined"
+    :image="
+      data?.metadata.image
+        ? {
+          src: data.metadata.image,
+          alt: data.metadata.title ?? 'Patch notes',
+          width: 400,
+          height: 300,
+          sizes: '(min-width: 1024px) 400px, 100vw',
+          format: 'webp',
+          fetchpriority: 'high',
+          loading: 'eager',
+          preload: true
+        }
+        : undefined
+    "
     :description="
       data.metadata.description ??
         'It seems we lost the patch data. We\'ll attempt to turn the router off and on.'

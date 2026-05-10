@@ -1,7 +1,7 @@
 {
   "id": 123430,
   "name": "Rite of Ruin",
-  "description": "55 Ability Power\n10 Ability Haste\n25% Critical Strike Chance\n4% Move Speed\n\nWrath and Ruin\nOn spell cast, gain 2.5% critical chance for 6 seconds, stacking up to 20%.\n\nSalvage the Wreckage\nYour spells have a chance equal to your crit chance to grant you or your targeted ally a shield for  for 3s.\n",
+  "description": "55 Ability Power\n10 Ability Haste\n25% Critical Strike Chance\n4% Move Speed\n\nWrath and Ruin\nOn spell cast, gain 2.5% Critical Strike Chance for 6 seconds, stacking up to 20%.\n\nSalvage the Wreckage\nYour spells have a chance equal to your Critical Strike Chance to grant you or your targeted ally a shield for  for 3s.",
   "stats": {
     "abilityPower": 55,
     "criticalStrikeChance": 25,

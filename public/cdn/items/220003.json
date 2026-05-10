@@ -8,10 +8,10 @@
   "stats": {},
   "description": "Active - Consume: Automatically open a semi-random selection for a Legendary Assassin item.",
   "gold": {
-    "base": 2000,
+    "base": 2250,
     "purchasable": true,
-    "total": 2000,
-    "sell": 2000
+    "total": 2250,
+    "sell": 2250
   },
   "maps": [
     30

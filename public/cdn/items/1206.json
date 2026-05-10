@@ -1,7 +1,7 @@
 {
   "id": 1206,
-  "name": "Mid Lane Quest",
-  "description": "Rewards\n• Upgrade boots to tier 3\n• Enhanced Recall",
+  "name": "Mid Lane Quest Reward",
+  "description": "Rewards\n• Upgrade boots to tier 3\n• +6% bonus Attack Damage and Ability Power",
   "gold": {
     "base": 0,
     "purchasable": false,

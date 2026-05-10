@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { pathIndex } from "~~/shared/constants/runes/pathIndex"
+
 const { set } = defineProps<{
   set: RuneSet
   kClass?: HTMLAttributes["class"]
@@ -32,8 +34,8 @@ const { set } = defineProps<{
     </span>
     <img
       v-if="set?.secondary?.path"
-      :title="set?.secondary?.path"
-      :alt="set?.secondary?.path"
+      :title="pathIndex[set?.secondary?.path]?.name"
+      :alt="pathIndex[set?.secondary?.path]?.name"
       :src="`/img/path/${set?.secondary?.path}.webp`"
       :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)" />
 

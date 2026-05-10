@@ -23,10 +23,10 @@
   },
   "description": "45 Attack Damage\n40% Attack Speed\n25% Critical Strike Chance\n\nScour\nOn Critical Strike: Apply a bleed, dealing 25% of the damage done +  physical damage on hit over 2 seconds. This effect stacks any number of times. Apply a 7% Slow for 2 seconds. This effect stacks up to 35%.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

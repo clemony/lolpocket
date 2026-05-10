@@ -1,4 +1,5 @@
 import * as v from "valibot"
+import { pathIndex } from "~~/shared/constants/runes/pathIndex"
 
 // role schema
 export const roleSchema = v.fallback(
@@ -37,17 +38,21 @@ export const mapSchema = v.fallback(
 export const itemSetSchema = v.object({
   id: v.pipe(v.string(), v.uuid("item set uuid malformed")),
   name: v.fallback(v.string(), ""),
-  items: v.fallback(MinMaxArray(v.number(), 0, 20), [])
+  items: v.fallback(MinMaxArray(v.number(), 0, 20), []),
+  quest: v.optional(v.number(), 0)
 })
 
 // Runes
+
+export const pathKey = v.picklist(Object.keys(pathIndex) as unknown as number[])
+
 export const runesPrimarySchema = v.object({
-  path: v.fallback(v.string(), ""),
+  path: v.fallback(v.number(), 0),
   runes: v.fallback(FixedArray(v.number(), 3), [0, 0, 0])
 })
 
 export const runesSecondarySchema = v.object({
-  path: v.fallback(v.string(), ""),
+  path: v.fallback(v.number(), 0),
   runes: v.fallback(FixedArray(v.number(), 2), [0, 0])
 })
 
@@ -72,7 +77,7 @@ export const runeSetSchema = v.object({
 export const pocketSchema = v.object({
   key: v.pipe(v.string(), v.uuid("pocket uuid malformed")),
   okey: v.pipe(v.string(), v.uuid("pocket uuid malformed")),
-  name: v.optional(v.string()),
+  label: v.optional(v.string()),
   ouuid: v.fallback(
     v.pipe(v.string(), v.uuid("original author uuid malformed")),
     "mysterious pocket"
@@ -125,11 +130,14 @@ export type SpellSet = v.InferOutput<typeof spellSetSchema>
 export type RunesPrimary = v.InferOutput<typeof runesPrimarySchema>
 export type RunesSecondary = v.InferOutput<typeof runesSecondarySchema>
 export type Pocket = v.InferOutput<typeof pocketSchema>
+
 export type RoleKey = v.InferOutput<typeof roleSchema>
 export type PositionKey = v.InferOutput<typeof positionSchema>
 export type MapKey = v.InferOutput<typeof mapSchema>
-export type KeyType = RoleKey | PositionKey | MapKey
+export type PathKey = v.InferOutput<typeof pathKey>
 
-export function asKeyType(key: string): KeyType {
+export type KeyType = RoleKey | PositionKey | MapKey | PathKey
+
+export function asKeyType(key: string | number): KeyType {
   return key as KeyType
 }

@@ -1,7 +1,7 @@
 {
   "id": 226699,
   "name": "Voltaic Cyclosword",
-  "description": "50 Attack Damage\n18 Lethality\n20 Ability Haste\n\nGalvanize\nDashes and Stealth stack Energized 75% faster.\n\nFirmament\nYour Energized Attack deals bonus physical damage and Slows for 0.75 seconds.",
+  "description": "50 Attack Damage\n18 Lethality\n20 Ability Haste\n\nGalvanize\nDamaging an Enemy Champions with an ability triggers Energized if it is ready.\n\nFirmament\nYour Energized Attack deals % target's Current Health as bonus physical damage and grants you  Lethality for 4 seconds.",
   "stats": {
     "attackDamage": 50
   },

@@ -33,7 +33,7 @@
   "description": "250 Health\n40 Armor\n4% Move Speed\n\nLead the Way\nWhile moving, build up to 20 bonus Move Speed. \nAt max speed:Create a trail that grants allied champions Move Speed equal to 15% of yours. If you are Melee, your next Attack Slows the target by 50% for 1 second.\n\n",
   "gold": {
     "base": 800,
-    "purchasable": true,
+    "purchasable": false,
     "total": 2400,
     "sell": 1680
   },

@@ -124,8 +124,8 @@
       "affects": "Self",
       "blurb": "Passive: Relentless Pursuit's cooldown is  reduced for each  Lightslinger shot hit, doubled against enemy  champions.",
       "castTime": "none",
-      "cooldown": "18 / 17 / 16 / 15 / 14",
-      "cost": "40 / 30 / 20 / 10 / 0",
+      "cooldown": "16 / 15.5 / 15 / 14.5 / 14",
+      "cost": "32 / 24 / 16 / 8 / 0",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Relentless Pursuit's current cooldown is reduced by 1 second for each Lightslinger shot hit, doubled to 2 seconds against enemy champions.</p>"

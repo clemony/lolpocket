@@ -4,7 +4,7 @@
   "affects": "Self, Enemies",
   "blurb": "Active:  Mel briefly conjures a personal barrier with a  shield and a burst of  bonus move speed.",
   "castTime": "none",
-  "cooldown": "35 / 32 / 29 / 26 / 23",
+  "cooldown": "38 / 35 / 33 / 29 / 26",
   "cost": "80 / 60 / 40 / 20 / 0",
   "damageType": "Magic damage",
   "effectRadius": "175",

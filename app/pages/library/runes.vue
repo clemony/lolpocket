@@ -35,7 +35,7 @@ const selectedRune = ref<number | null>(null)
       <RunesBlurb
         v-if="selectedPath"
         :key="selectedPath"
-        :current-path="pathRecord[selectedPath]?.name ?? null" />
+        :current-path="selectedPath ?? null" />
 
       <Tabs v-model:model-value="selectedPath">
         <TabsList

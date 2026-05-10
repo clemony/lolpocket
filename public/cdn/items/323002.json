@@ -9,7 +9,7 @@
   },
   "gold": {
     "base": 1000,
-    "purchasable": true,
+    "purchasable": false,
     "total": 2600,
     "sell": 1820
   },

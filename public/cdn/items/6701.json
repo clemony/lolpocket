@@ -46,7 +46,7 @@
   "description": "55 Attack Damage\n18 Lethality\n\nPreparation\nAfter being out of combat with Champions for 8 seconds gain Lethality. This Lethality lasts for 3 seconds after dealing damage to champions.\n\nExtraction\nWhen a champion that you damaged within 3 seconds dies, gain 200 decaying Move Speed for 1.5 seconds.\n",
   "gold": {
     "base": 475,
-    "purchasable": true,
+    "purchasable": false,
     "total": 2700,
     "sell": 1890
   },

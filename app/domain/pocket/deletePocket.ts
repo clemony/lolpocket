@@ -1,12 +1,17 @@
 import { nowInstantString } from "#shared/utils"
 
-export function deletePocket(pocket: Pocket) {
-  const key = typeof pocket === "string" ? pocket : pocket.key
+export function deletePocket(key: string) {
+  console.log("🥸 - deletePocket - key:", key)
   if (!key) return
+  const store = pocketStore()
 
-  pocket.location = "trash"
-  pocket.trashed_at = nowInstantString()
+  store.pockets = store.pockets.map((p) =>
+    p.key === key
+      ? { ...p, location: "trash", trashed_at: nowInstantString() }
+      : p
+  )
+  console.log("🥸 - deletePocket - store.pockets:", store.pockets)
 
-  const pinnedIndex = pocketStore().pinned.indexOf(key)
-  if (pinnedIndex !== -1) pocketStore().pinned.splice(pinnedIndex, 1)
+  const pinnedIndex = store.pinned.indexOf(key)
+  if (pinnedIndex !== -1) store.pinned.splice(pinnedIndex, 1)
 }

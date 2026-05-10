@@ -21,10 +21,10 @@
   },
   "description": "85 Ability Power\n350 Health\n600 Mana\n25 Ability Haste\n\nSafeguard\nYou are Safeguarded, reducing incoming champion damage by 90%. Safeguard persists for 1.25 seconds after taking champion damage. (0s). \n\nItem Cooldown is restarted when damage is taken from champions.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

@@ -1,13 +1,12 @@
 <script lang="ts" setup>
 import { useRunes } from "~/domain/match/useRunes"
+import { pathIndex } from "~~/shared/constants/runes/pathIndex"
 
 const props = defineProps<{
   pocket?: Pocket
 }>()
 
-const selectedPath = ref("Resolve")
-
-const { pathList } = await useRunes()
+const selectedPath = ref<number>(8400)
 
 const tabListClass =
   "bg-p0/45  shadow-smooth h-18 w-120 justify-evenly gap-5  overflow-hidden rounded-xl border border-p0/20 py-3  z-20 absolute flex items-center "
@@ -34,27 +33,27 @@ const tabListClass =
 
         <div :class="tabListClass">
           <label
-            v-for="path in pathList"
-            :key="path"
+            v-for="[k, v] in Object.entries(pathIndex)"
+            :key="k"
             label="path"
             class="grid aspect-square size-14 place-items-center rounded-full"
             :class="{
               'bg-p0/70 shadow-sm shadow-black/5 backdrop-blur-sm duration-500':
-                path === selectedPath
+                v.id === selectedPath
             }">
             <input
               v-model="selectedPath"
               class="hidden"
               type="radio"
-              :value="path"
+              :value="v.id"
               name="selected-primary" />
 
             <Img
               class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 [&_img]:drop-shadow-sm"
-              :src="`/img/rune/${path}.webp`"
-              :alt="`${path} icon`"
+              :src="`/img/rune/${v.id}.webp`"
+              :alt="`${v.id} icon`"
               :class="{
-                'brightness-100 grayscale-0': path === selectedPath
+                'brightness-100 grayscale-0': v.id === selectedPath
               }" />
           </label>
         </div>

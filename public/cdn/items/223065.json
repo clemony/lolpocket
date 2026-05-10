@@ -1,7 +1,7 @@
 {
   "id": 223065,
   "name": "Spirit Visage",
-  "description": "300 Health\n40 Magic Resist\n10 Ability Haste\n\nBoundless Vitality\nIncreases all Healing and Shielding effectiveness on you by 30%.",
+  "description": "300 Health\n40 Magic Resist\n10 Ability Haste\n\nBoundless Vitality\nIncreases all Healing and  Shielding effectiveness on you by 30%.",
   "stats": {
     "magicResistance": 40,
     "health": 300

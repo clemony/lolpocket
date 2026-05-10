@@ -17,12 +17,12 @@
     "attackSpeed": 75,
     "health": 500
   },
-  "description": "75% Attack Speed\n500 Health\n\nCovering Fire\nWhile near an allied champion, On-Hit gain a stack of Edict, At 1 stacks, the next time you would apply an On-Hit, your teammate also fires a bolt at the target, dealing  physical damage and applying their On-Hit effects.\n\nCovering Fire cannot trigger other Covering Fire.",
+  "description": "75% Attack Speed\n500 Health\n4% Move Speed\n\nCovering Fire\nEvery 10 seconds, Autocast fires a bolt towards a nearby target, dealing  physical damage and applying On-Hit effects.\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nUnload\nYour Energized Attacks trigger your Autocast effects.",
   "gold": {
-    "base": 1000,
+    "base": 2750,
     "purchasable": true,
-    "total": 1000,
-    "sell": 400
+    "total": 2750,
+    "sell": 1100
   },
   "maps": [
     30

@@ -27,7 +27,7 @@
     }
   ],
   "stats": {},
-  "description": "Jungle Companions\nSummon a Jungle Pet that assists you against monsters.\n\nMosstomper's Courage\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it completes your Jungle Quest. ",
+  "description": "Jungle Companions\nSummon a Mosstomper that assists you against monsters.\n\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it completes your Jungle Quest and grants a Shield while out of combat and after killing large monsters.",
   "gold": {
     "base": 450,
     "purchasable": true,

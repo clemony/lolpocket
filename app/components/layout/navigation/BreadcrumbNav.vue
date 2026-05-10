@@ -58,7 +58,7 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
                     link.name === "champion_key"
                       ? champNameByKey(String(route.params.champion_key))
                       : link.name === "pocket_key"
-                        ? pocket?.name
+                        ? pocket?.label
                         : link.meta?.title || link.name
                   }}
                 </span>
