@@ -4,23 +4,24 @@ const { class: className, ui } = defineProps<{
   ui?: {
     root?: HTMLAttributes["class"]
     icon?: HTMLAttributes["class"]
+    inactveIcon?: HTMLAttributes["class"]
     activeIcon?: HTMLAttributes["class"]
   }
 }>()
 
 const iconClass = computed(() =>
-  cn("absolute size-4 transition-opacity group-hover/btn:scale-110")
+  cn("absolute size-4 transition-opacity group-hover/btn:scale-110", ui?.icon)
 )
 </script>
 
 <template>
-  <div class="relative grid size-full place-items-center">
+  <div :class="cn('relative grid size-full place-items-center', ui?.root)">
     <Icon
       name="i-meteor-icons-sparkles"
       :class="
         cn(
           iconClass,
-          ui?.icon,
+          ui?.inactveIcon,
           className,
           'inactive-icon wrapper duration-600 **:stroke-[2.1] group-hover/btn:opacity-0'
         )

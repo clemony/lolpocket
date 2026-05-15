@@ -6,40 +6,38 @@ import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 const { collapse = false } = defineProps<{
   collapse?: boolean
 }>()
-const route = useRoute()
-
-const items = computed(() =>
-  Object.values(defaultPocketFolders).map((p) => ({
+const items = computed(() => [
+  ...Object.values(defaultPocketFolders).map((p) => ({
     ...p,
     icon: iconSets[p.iconKey]?.icon,
     class: iconSets[p.iconKey]?.ui?.open
-  }))
-)
-const { goTo, setPath, path } = useBackpack()
-onMounted(() => setPath(route.path))
-watch(
-  () => path.value,
-  (v) => {
-    console.log("💠 - watch - newVal:", v)
+  })),
+  {
+    label: "Search Results",
+    id: "search",
+    icon: "i-search",
+    class: "**:stroke-[2.2]",
+    slot: "search" as const,
+    content: ""
   }
-)
+])
+const { folderId, onFolderUpdate } = useBackpack()
 </script>
 
 <template>
   <UTabs
-    v-model:model-value="path"
+    v-model:model-value="folderId"
     :items
     color="neutral"
-    value-key="to"
-    size="sm"
+    value-key="id"
+    size="md"
     :ui="{
-      root: 'h-11! w-full',
-      list: 'h-11 shrink-0 rounded-2xl inset-shadow-[-1px_-1px_3px_rgba(0,0,0,0.1)] inset-ring-p4/30',
+      root: 'h-12! w-full',
+      list: 'h-12 shrink-0 rounded-2xl px-1.5 inset-shadow-[-1px_-1px_3px_rgba(0,0,0,0.1)] inset-ring-p4/30',
       label: 'hidden',
-      indicator: 'h-8.5 rounded-xl',
-      leadingIcon: 'size-3.5 **:stroke-[2.4]'
+      indicator: 'h-9 rounded-xl'
     }"
-    @update:model-value="navigateTo(path)">
+    @update:model-value="onFolderUpdate($event)">
     <template #leading="{ item }">
       <UTooltip
         :text="`View: ${item.label}`"
@@ -49,7 +47,15 @@ watch(
         <div class="absolute inset-0 grid size-full place-items-center">
           <Icon
             :name="String(item.icon)"
-            :class="cn('size-4.5!', item.class)" />
+            :class="
+              cn(
+                'size-4.5!',
+                item.class,
+                ['pinned', 'favorites'].includes(item.id)
+                  ? '**:stroke-[2.5]'
+                  : '**:stroke-[2.4]'
+              )
+            " />
         </div>
       </UTooltip>
     </template>

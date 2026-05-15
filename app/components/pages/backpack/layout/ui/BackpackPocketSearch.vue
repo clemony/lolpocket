@@ -1,20 +1,21 @@
 <script lang="ts" setup>
 import type { InputProps } from "@nuxt/ui"
+import { useBackpack } from "~/domain/backpack/useBackpack"
 
 const props = defineProps<
   Omit<InputProps, "defaultValue"> & {
-    collapsed: boolean
+    sidebarCollapsed: boolean
   }
 >()
 
-const search = defineModel<string>("search", { default: "" })
+const delegated = reactiveOmit(props, "sidebarCollapsed")
 
-const delegated = reactiveOmit(props, "collapsed")
+const { search } = useBackpack()
 </script>
 
 <template>
   <LazyUPopover
-    v-if="props.collapsed"
+    v-if="props.sidebarCollapsed"
     mode="hover"
     :content="{ side: 'right' }">
     <template #default="{ open }">
@@ -51,12 +52,12 @@ const delegated = reactiveOmit(props, "collapsed")
     v-else
     v-bind="delegated"
     v-model:model-value="search"
-    placeholder="Backpack"
+    placeholder="Search Backpack..."
     :ui="{
-      base: 'w-full bg-p0 px-2 placeholder:font-semibold placeholder:text-pc',
-      root: 'w-full',
+      base: 'grow rounded-3xl bg-p0 px-3 text-sm inset-shadow-none ring-p3/60',
+      root: 'grow',
 
-      leadingIcon: 'text-pc opacity-100 **:stroke-[2.4]'
+      leadingIcon: ''
     }"
     icon="i-search">
     <template #trailing>

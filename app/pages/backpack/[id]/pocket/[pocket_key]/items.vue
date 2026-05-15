@@ -7,7 +7,7 @@ definePageMeta({
   name: "pocket-items",
   title: "items",
   order: 2,
-  path: "/pocket/:pocket_key/items",
+  path: "/backpack/:id/:pocket_key/items",
   search: false
 })
 

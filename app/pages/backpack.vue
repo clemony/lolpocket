@@ -1,133 +1,142 @@
 <script lang="ts" setup>
-import type { DropdownMenuItem } from "@nuxt/ui"
-import { useBackpackProvider } from "~/domain/backpack/useBackpack"
-import { usePocketFolderProvider } from "~/domain/pocket/folder/useFolder"
+import {
+  provideBackpack,
+  useBackpack,
+  useBackpackProvider
+} from "~/domain/backpack/useBackpack"
+import {
+  useFolders,
+  usePocketFolderProvider
+} from "~/domain/pocket/folder/useFolder"
+import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
+
+usePocketFolderProvider()
+useBackpackProvider()
 
 definePageMeta({
-  layout: "default"
+  title: "Backpack",
+  id: "backpack",
+  icon: "i-folder",
+  layout: false,
+  iconKey: "folder",
+  prefix: "Backpack",
+  order: 1
 })
-const { backpack } = useApp().routes
-console.log("🥸 - backpack:", backpack)
 
-const { collapsed, viewMode } = useBackpackProvider()
-usePocketFolderProvider()
+const { defaults, routeFolder, folders } = useFolders()
+const state = useBackpackProvider()
+const store = pocketStore()
+const {
+  onFolderUpdate,
+  sidebarCollapsed,
+  toggleSidebar,
+  sidebarFolderRefs,
+  view,
+  folderId
+} = provideBackpack(state)
 
-const viewModes = [
-  {
-    label: "Gallery",
-    value: "gallery",
-    icon: "i-gallery"
-  },
-  {
-    label: "List",
-    value: "list",
-    icon: "i-square-list"
-  }
-]
-
-const sortItems = computed<DropdownMenuItem[]>(() => [
-  {
-    label: "Group by",
-    type: "label",
-    ui: {
-      label: "pb-0.5!"
-    }
-  },
-  {
-    type: "separator"
-  },
-  {
-    label: "Folder",
-    icon: "i-folder",
-    type: "checkbox",
-    ui: {
-      itemLeadingIcon: "**:stroke-[2.3]"
-    }
-  },
-  {
-    label: "Patch",
-    icon: "i-lp-riot-circle",
-    type: "checkbox",
-    ui: {
-      itemLeadingIcon: "scale-112"
-    }
-  }
+const folderItems = computed(() => [
+  ...defaults.value.map((f) => {
+    if (f.id === "all")
+      return {
+        id: "all",
+        slot: "data",
+        label: "All",
+        icon: iconSets[f.iconKey]?.icon
+      }
+    else
+      return {
+        ...f,
+        slot: "data",
+        icon: iconSets[f.iconKey]?.icon
+      }
+  })
 ])
+onMounted(() => {
+  sidebarFolderRefs.value = store.sidebarFolderRefs
+})
+onBeforeRouteLeave(() => {
+  store.sidebarFolderRefs = sidebarFolderRefs.value
+})
 </script>
 
 <template>
-  <UDashboardGroup
-    unit="rem"
-    class="top-(--ui-header-height) max-h-[calc(100vh-var(--ui-header-height)] flex-1 overflow-hidden">
-    <BackpackSidebar />
-    <UDashboardPanel>
-      <UDashboardNavbar
-        :toggle="false"
-        :ui="{
-          // root: 'border-b-p0/60',
-          root: '@container h-16 pr-7!',
-          title: 'ml-4 text-4xl font-bold tracking-tight capitalize ds-2xs',
-          left: 'gap-2'
-        }"
-        :icon="$route.meta?.icon || ''"
-        :title="String($route.meta?.title || $route.name)">
-        <template #leading>
-          <UDashboardSidebarCollapse
-            size="sm_"
+  <Layout>
+    <UDashboardGroup
+      unit="rem"
+      class="top-(--ui-header-height) max-h-[calc(100vh-var(--ui-header-height)] w-full flex-1 gap-3 overflow-hidden px-6">
+      <BackpackSidebar />
+      <UDashboardPanel resizable>
+        <UPage class="size-full max-h-full overflow-hidden">
+          <div class="size-full max-h-(--ui-header-height)">
+            <h1 class="text-4xl">
+              {{ routeFolder.label }}
+            </h1>
+          </div>
+          <UPageBody
             :ui="{
-              base: cn('rounded-xl', {
-                'shadow-none  inset-shadow-xs fx-noise fx-depth bg-p1/50':
-                  collapsed
-              })
-            }"
-            :variant="collapsed ? 'outline' : 'outline'"
-            :color="collapsed ? 'base' : 'primary'"
-            :icon="
-              collapsed
-                ? 'i-icon-park-outline-left-expand'
-                : 'i-icon-park-outline-left-bar'
-            " />
-        </template>
-
-        <template #trailing>
-          <!--           <UBadge
-            size="sm"
-            :label="badgeValue"
-            color="neutral"
-            class="font-semibold" /> -->
-        </template>
-
-        <template #right>
-          <UTabs
-            v-model:model-value="viewMode"
-            :items="viewModes"
-            size="sm"
-            :ui="{
-              root: 'ml-3 h-10!',
-              list: 'h-10 shrink-0 rounded-2xl inset-shadow-xs inset-ring-p4/30',
-              label: 'hidden',
-              indicator: 'h-7.5 rounded-xl',
-              leadingIcon: 'size-3.5 **:stroke-[2.4]'
-            }"
-            color="neutral" />
-
-          <UDropdownMenu
-            :content="{
-              onCloseAutoFocus: (event) => event.preventDefault()
-            }"
-            :items="sortItems">
-            <Tooltip label="Sort">
-              <UButton
-                icon="i-swap-2"
-                :ui="{
-                  base: 'h-9 max-h-9 rounded-xl',
-                  leadingIcon: 'rotate-90 **:stroke-[2]'
-                }" />
-            </Tooltip>
-          </UDropdownMenu>
-        </template>
-      </UDashboardNavbar>
-      <NuxtPage />
-    </UDashboardPanel>
-  </UDashboardGroup>
+              base: 'mx-auto my-0! w-full max-w-full overflow-hidden py-0!'
+            }">
+            <UTabs
+              v-model:model-value="folderId"
+              variant="lift"
+              :ui="{
+                list: 'z-4! -mt-2.5 flex h-12 w-full items-center',
+                trigger: 'h-12 max-w-22 rounded-t-3xl',
+                label: 'hidden',
+                content: 'mt-2.5 w-full',
+                root: 'w-full',
+                indicator: ''
+              }"
+              :content="true"
+              size="md"
+              :items="folderItems"
+              value-key="id"
+              @update:model-value="onFolderUpdate($event)">
+              <template #leading="{ item }">
+                <Tooltip :label="item.label">
+                  <div class="anchor absolute inset-0 size-full">
+                    <Icon
+                      :name="String(item.icon)"
+                      :class="
+                        cn(
+                          'size-4.5 opacity-40 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100',
+                          { 'opacity-100': item.id === folderId }
+                        )
+                      " />
+                  </div>
+                </Tooltip>
+              </template>
+              <template #list-leading>
+                <div class="flex items-center gap-4 pr-16 pb-7">
+                  <UButton
+                    variant="ghost"
+                    color="base"
+                    size="md"
+                    :ui="{
+                      base: cn('anchor', {
+                        '': sidebarCollapsed
+                      }),
+                      leadingIcon: 'size-4.5'
+                    }"
+                    :icon="
+                      sidebarCollapsed
+                        ? 'i-icon-park-outline-left-expand'
+                        : 'i-icon-park-outline-left-bar'
+                    "
+                    @click="toggleSidebar()" />
+                </div>
+              </template>
+              <template #list-trailing>
+                <BackpackNavbar />
+              </template>
+              <template #data>
+                <NuxtPage :folder="routeFolder" :view />
+              </template>
+            </UTabs>
+          </UPageBody>
+        </UPage>
+      </UDashboardPanel>
+    </UDashboardGroup>
+  </Layout>
 </template>

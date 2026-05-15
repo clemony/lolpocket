@@ -30,7 +30,7 @@ const menu = computed<CommandItem[]>(
             icon: "i-folders",
             value: "backpack-pocket",
             trailingIcon: "",
-            to: "/backpack"
+            to: "/backpack/all"
           },
           {
             label: "New Pocket",

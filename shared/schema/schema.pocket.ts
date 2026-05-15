@@ -119,7 +119,7 @@ export const pocketSchema = v.object({
   trashed_at: v.optional(
     v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
   ),
-  location: v.fallback(v.string(), "pockets"),
+  location: v.fallback(v.string(), "all"),
   order: v.fallback(v.number(), 0)
 })
 

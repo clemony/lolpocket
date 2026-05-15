@@ -1,7 +1,9 @@
 <script lang="ts" setup>
+import { SparkleIcon } from "#components"
 import type { ButtonProps, DropdownMenuItem, DropdownMenuProps } from "@nuxt/ui"
 import { newPocket } from "~/domain/pocket/newPocket"
 import { newRandomPocket } from "~/domain/pocket/newRandomPocket"
+import { itemLabelUi } from "~~/layers/ui/app/variants/menu"
 
 const props = withDefaults(
   defineProps<
@@ -12,19 +14,24 @@ const props = withDefaults(
     }
   >(),
   {
-    variant: "ghost",
+    variant: "solid",
     collapsed: false,
     size: "md",
-    color: "primary",
-    location: "pockets",
-    icon: "i-more"
+    color: "neutral",
+    location: "all",
+    icon: "i-add",
+    label: "New Pocket"
   }
 )
 
-const items: DropdownMenuItem[] = [
+const map = shallowRef<MapKey>(11)
+const position = shallowRef<PositionKey>("all")
+
+const items = computed<DropdownMenuItem[]>(() => [
   {
     label: "Create Pocket",
-    type: "label"
+    type: "label",
+    ui: itemLabelUi
   },
   {
     type: "separator"
@@ -34,103 +41,162 @@ const items: DropdownMenuItem[] = [
     slot: "empty",
     icon: "i-lp-pocket-plus",
     ui: {
-      itemLeadingIcon: "**:stroke-[2.3]"
+      itemLeadingIcon: "**:stroke-[10%] scale-90"
     },
     onClick: () => newPocket({ location: String(props.location) ?? undefined })
   },
   {
     label: "Pocket Wizard",
     icon: "i-wand",
+    ui: {
+      itemLeadingIcon: "**:stroke-[12%]"
+    },
     onClick: () => {}
-  },
-  {
-    type: "label",
-    label: "Magic Pocket"
   },
   {
     type: "separator"
   },
   {
-    label: "SR Pocket",
-    slot: "sparkle",
+    icon: h(SparkleIcon, {
+      ui: {
+        root: "size-4.5",
+        icon: cn("size-3.5", props.ui?.leadingIcon),
+        inactveIcon:
+          "group-aria-[expanded=true]/btn:opacity-0 group-data-[state=open]/btn:opacity-0",
+        activeIcon:
+          "group-aria-[expanded=true]/btn:opacity-100 group-data-[state=open]/btn:opacity-100"
+      }
+    }),
+    label: "Magic Pocket",
     ui: {
       item: "group/btn"
     },
-    onSelect() {
-      newRandomPocket({
-        map: 11,
-        location: String(props.location)
-      })
-    }
-  },
+    children: [
+      {
+        type: "label",
+        label: "Map",
+        ui: itemLabelUi
+      },
+      {
+        type: "separator"
+      },
+      {
+        label: "All",
+        icon: "i-lp-0",
+        slot: "radio",
+        modelValue: map,
+        checked: map.value === 0,
+        onSelect(event: Event) {
+          event?.preventDefault()
+          map.value = 0
+        }
+      },
+      {
+        label: "Summoner's Rift",
+        icon: "i-lp-11",
+        slot: "radio",
+        checked: map.value === 11,
+        onSelect(event: Event) {
+          event?.preventDefault()
+          map.value = 11
+        }
+      },
 
-  {
-    slot: "sparkle",
-    label: "ARAM Pocket",
-    ui: {
-      item: "group/btn"
-    },
-    onSelect() {
-      newRandomPocket({
-        map: 12,
-        location: String(props.location)
-      })
-    }
+      {
+        label: "Howling Abyss",
+        icon: "i-lp-12",
+        checked: map.value === 12,
+        slot: "radio",
+        onSelect(event: Event) {
+          event?.preventDefault()
+          map.value = 12
+        }
+      },
+
+      {
+        type: "separator"
+      },
+      {
+        type: "label",
+        label: "Role",
+        ui: itemLabelUi
+      },
+      {
+        type: "separator"
+      },
+      ...positionSchema.options.map((p) => ({
+        label: p,
+        icon: `i-lp-${p}`,
+        slot: "radio",
+        checked: position.value === p,
+        onSelect(event: Event) {
+          event?.preventDefault()
+          position.value = p
+        },
+        ui: {
+          itemLabel: "capitalize"
+        }
+      })),
+      {
+        type: "separator"
+      },
+      {
+        label: "Generate",
+        color: "neutral",
+        onSelect() {
+          newRandomPocket({
+            map: map.value,
+            location: String(props.location),
+            position: position.value
+          })
+        }
+      }
+    ]
   }
-]
+])
 
 const delegated = reactiveOmit(props, "class", "menu")
+
+const open = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <UDropdownMenu
+  <Menu
+    v-model:open="open"
     :items
+    component="dropdown"
     :orientation="props?.collapsed ? 'vertical' : 'horizontal'"
-    :ui="{ content: 'min-w-54' }"
+    :ui="{ content: 'min-w-54', label: '' }"
     :content="{
       align: collapsed ? 'center' : 'end',
       side: collapsed ? 'right' : 'bottom',
-      onCloseAutoFocus: (event) => event.preventDefault()
+      onCloseAutoFocus: (event: Event) => event.preventDefault()
     }">
-    <template #default="{ open }">
-      <Tooltip as-child label="New Pocket Options">
-        <UButton
-          tabindex="-1"
-          v-bind="delegated"
-          :square="props?.collapsed"
-          :active="open"
-          :ui="{
-            ...props.ui,
-            base: cn(
-              'open:btn-active',
-              { 'anchor size-9 shrink-0': props?.collapsed },
-              props.ui?.base
-            ),
-            leadingIcon: 'group-aria-[expanded=true]/btn:opacity-100',
-            trailingIcon: cn(
-              'transition-rotate right-2 opacity-70 duration-200 ease-in-out not-group-hover/btn:not-group-active/btn:not-group-open/btn:text-pc group-open/btn:-rotate-180 group-open/btn:text-nc! group-active/btn:**:text-nc! group-aria-[expanded=true]/btn:-rotate-180 group-aria-[expanded=true]/btn:text-nc! group-aria-[expanded=true]/btn:opacity-100!',
-              props.ui?.trailingIcon
-            )
-          }" />
-      </Tooltip>
-    </template>
+    <Tooltip
+      :disabled="open || !collapsed"
+      as-child
+      label="Create New Pocket...">
+      <UButton
+        tabindex="-1"
+        v-bind="delegated"
+        :ui="{
+          base: cn('py-0', { 'anchor p-0 ': props.square }, props.ui?.base),
+          leadingIcon: cn(
+            'scale-90 **:stroke-[12%]',
+            { 'absolute scale-110 place-self-center': props.square },
+            props.ui?.leadingIcon
+          ),
+          label: cn(
+            'grow pr-3 font-medium',
+            { hidden: props.square },
+            props.ui?.label
+          )
+        }">
+      </UButton>
+    </Tooltip>
 
     <template #default-trailing>
       <span class="align-baseline text-xs text-n5 italic">(default)</span>
     </template>
-    <template #sparkle-leading>
-      <span class="size-4">
-        <SparkleIcon
-          :ui="{
-            root: cn(
-              'size-3.5 not-group-hover/btn:not-group-active/btn:not-group-open/btn:text-pc group-open/btn:**:text-nc! group-active/btn:**:text-nc!',
-              props.ui?.leadingIcon
-            ),
-            icon: 'aria-expanded/btn:text-nc',
-            activeIcon:
-              'group-aria-[expanded=true]/btn:text-nc group-aria-[expanded=true]/btn:opacity-100'
-          }" />
-      </span>
-    </template>
-  </UDropdownMenu>
+  </Menu>
 </template>

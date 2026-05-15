@@ -1,148 +1,167 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "@nuxt/ui"
 import { useBackpack } from "~/domain/backpack/useBackpack"
 import { useFolders } from "~/domain/pocket/folder/useFolder"
+import { asFolder } from "~/domain/pocket/helpers/typeAssert"
 import type { PocketProps } from "~/domain/pocket/types"
 import { collapseAllBtn, newFolderBtn } from "~/domain/pocket/ui/toolbarItems"
 
-const { collapsed } = useBackpack()
+const { sidebarCollapsed, search, folderId } = useBackpack()
+const tab = computed(() => useBackpack().activeTab.value)
 const list = shallowRef<number[]>([])
-
+watch(
+  () => folderId.value,
+  (v) => {
+    console.log("💠 - watch - newVal:", v)
+  }
+)
 const selected = shallowRef<PocketProps | undefined>()
-const search = shallowRef<string>("")
 
 const open = ref<boolean[]>([])
-const { archive, trash, pinned, favorites, all } = useFolders()
-
-/* watchEffect(() => {
-  open.value = folders.value.map(
-    (item, index) => open.value[index] ?? hasChildren(item)
-  )
-}) */
+const { complete, defaults } = useFolders()
 
 const setOpen = (index: number, value: boolean) => {
   open.value[index] = value
 }
+
+const buttons = computed(() =>
+  sidebarCollapsed.value === true
+    ? [newFolderBtn]
+    : [newFolderBtn, collapseAllBtn.value]
+)
+const tabs = [
+  {
+    label: "Backpack",
+    icon: "i-folder",
+    value: "all",
+    slot: "all"
+  }
+]
 </script>
 
 <template>
   <UDashboardSidebar
-    v-model:collapsed="collapsed"
+    v-model:collapsed="sidebarCollapsed"
     collapsible
     resizable
     :ui="{
-      footer: 'h-18 px-3',
-      root: 'group/sidebar @container relative h-[calc(100vh-var(--ui-header-height))] min-h-[calc(100vh-var(--ui-header-height))] data-[dragging=false]:duration-200 data-[dragging=false]:ease-out',
+      footer: 'h-18',
+      root: 'group/sidebar @container relative h-[89vh] gap-5 pb-2.5 data-[dragging=false]:duration-200 data-[dragging=false]:ease-out',
       header: cn(
-        'flex h-16 flex-wrap gap-2 overflow-hidden px-2',
-        collapsed
+        'z-1 flex h-auto flex-wrap gap-0 overflow-visible border-none bg-transparent px-0',
+        sidebarCollapsed
           ? 'flex-col justify-center h-max! py-2.5'
-          : 'items-center border-b border-[3]'
+          : 'items-center '
       ),
-      body: cn('flex flex-col gap-1 px-0 pt-0', { 'items-center': collapsed })
+      body: cn(
+        'overflowx-x-hidden p-0!',
+
+        sidebarCollapsed ? 'items-center' : 'pt-0'
+      )
     }"
-    :collapsed-size="4"
+    :sidebar-collapsed-size="4"
     :max-size="30"
     :default-collapsed="false"
     :default-size="22">
     <template #header>
-      <div
-        :class="
-          cn('flex h-11 w-full items-center justify-end gap-1.5', {
-            'h-max! flex-col justify-start! gap-1': collapsed
-          })
-        ">
-        <LazyBackpackPocketSearch v-if="collapsed" :collapsed />
-        <div
-          :class="
-            cn(
-              'fx-depth fx-noise flex h-full items-center gap-1 rounded-xl bg-p1 pl-1 inset-shadow-xs inset-ring inset-ring-p4/30',
-              { 'mt-4 h-max! flex-col px-1 py-1': collapsed }
-            )
-          ">
-          <NewPocketButton
-            size="sm_"
-            :square="collapsed"
-            :ui="{
-              base: 'rounded-xl',
-              label: cn('text-xs', { hidden: collapsed })
-            }" />
-          <NewPocketOptionsMenu
-            :collapsed
-            color="tertiary"
-            size="sm_"
-            :ui="{ base: 'shrink-0 rounded-xl aria-[expanded=true]:bg-p3!' }" />
-        </div>
-        <Grow />
-        <div
-          :class="
-            cn(
-              'flex',
-              collapsed
-                ? 'mb-1 border-b border-p3 pb-4'
-                : 'items-center gap-1 pr-1'
-            )
-          ">
-          <Tooltip
-            v-for="(item, i) in [
-              newFolderBtn,
-              collapsed ? undefined : collapseAllBtn
-            ].filter(Boolean) as ButtonProps[]"
-            :key="i"
-            :label="item?.label">
-            <UButton
-              v-bind="item"
-              :label="undefined"
-              square
-              :ui="{
-                base: 'rounded-xl',
-                leadingIcon: collapsed ? 'size-5 **:stroke-[2]' : ''
-              }"
-              size="sm_"
-              :variant="collapsed ? 'ghost' : 'outline'"
-              color="primary" />
-          </Tooltip>
-        </div>
-      </div>
+      <LazyBackpackPocketSearch size="xl" :sidebar-collapsed />
     </template>
-    <div v-if="!collapsed" :class="cn('flex flex-col gap-1 px-2.5 pt-3')">
-      <LazyBackpackPocketSearch :collapsed />
-    </div>
-    <div
-      :class="
-        cn('flex w-full flex-col', {
-          'items-center gap-3 pt-0': collapsed,
-          'gap-1 p-2': !collapsed
-        })
-      ">
-      <template v-if="!collapsed">
-        <LazyBackpackSidebarFolder
-          v-for="item in [pinned, favorites]"
-          :key="item?.id"
-          :collapsed
-          :item="item" />
-        <LazyDefaultPocketFolder :collapsed />
-        <LazyBackpackSidebarFolder
-          v-for="item in [archive, trash]"
-          :key="item?.id"
-          :collapsed
-          :item="item" />
-      </template>
-      <template v-else>
-        <LazyBackpackFolderPopover
-          v-for="folder in all"
-          :key="folder.id"
-          :item="folder" />
-      </template>
-    </div>
 
-    <template #footer>
-      <BackpackNavigation v-if="!collapsed" />
-    </template>
+    <UTabs
+      variant="lift"
+      default-value="all"
+      :items="tabs"
+      :ui="{
+        content: 'shadow-sm shadow-black/6',
+        trigger:
+          'h-12 grow-0 rounded-t-3xl px-3 opacity-100! disabled:opacity-100',
+        label: 'grow-0 pr-2 text-md font-semibold opacity-100',
+        leadingIcon: 'ml-1 size-4.5 opacity-100',
+        list: 'flex h-12 w-full items-center'
+      }"
+      size="md">
+      <template #list-trailing>
+        <div class="flex grow items-center justify-between">
+          <NewPocketOptionsMenu
+            size="sm_"
+            label="pocket"
+            variant="ghost"
+            :ui="{
+              base: 'shrink-0 rounded-xl pr-1.5 pl-2 shadow-none aria-[expanded=true]:brightness-110!',
+              label: ''
+            }" />
+          <div
+            :class="
+              cn(
+                'sticky top-0 z-1 flex grow border-2 border-b border-transparent bg-p0 bg-clip-border py-1 backdrop-blur-md',
+                sidebarCollapsed
+                  ? 'mb-1 flex-col border-b-p3 pb-4'
+                  : 'items-center justify-between border-b-p2 px-1'
+              )
+            ">
+            <div
+              :class="
+                cn(
+                  'flex',
+                  sidebarCollapsed
+                    ? 'mb-1 flex-col border-b-p3 pb-4'
+                    : 'items-center'
+                )
+              ">
+              <Tooltip v-for="(btn, i) in buttons" :key="i" :label="btn?.label">
+                <UButton
+                  v-bind="btn"
+                  :label="undefined"
+                  square
+                  :ui="{
+                    base: 'rounded-xl',
+                    leadingIcon: sidebarCollapsed ? 'size-5' : 'size-4.5'
+                  }"
+                  size="sm_" />
+              </Tooltip>
+            </div>
+          </div>
+        </div>
+      </template>
+      <template #trailing="{ item }">
+        <Icon
+          name="i-up"
+          class="size-4 opacity-50 group-hover/trigger:opacity-100" />
+      </template>
+      <template #all>
+        <div
+          :class="
+            cn('relative flex grow flex-col overflow-x-hidden', {
+              'items-center': sidebarCollapsed,
+              '': !sidebarCollapsed
+            })
+          ">
+          <div class="overflow-x-hidden px-2 py-3">
+            <template v-if="!sidebarCollapsed && folderId !== 'search'">
+              <LazyDefaultPocketFolder :sidebar-collapsed />
+              <LazyBackpackSidebarFolder
+                v-for="item in defaults.filter((f) => f.id !== 'all')"
+                :key="item.id"
+                :sidebar-collapsed
+                :item="item" />
+            </template>
+            <BackpackSidebarSearchResults v-else-if="folderId === 'search'" />
+            <template v-else>
+              <LazyBackpackFolderPopover
+                v-for="folder in complete"
+                :key="folder?.id"
+                :item="folder" />
+            </template>
+          </div>
+        </div>
+      </template>
+    </UTabs>
 
     <UDashboardResizeHandle
       :ui="{
-        base: 'absolute inset-y-0 right-0 border-r border-r-p3 after:absolute after:inset-y-0 after:w-px after:border-r after:border-r-p3'
+        base: 'absolute inset-y-0 right-0 border-0'
       }" />
+    <!--     <template #footer>
+      <BackpackNavigation v-if="!sidebarCollapsed" />
+    </template> -->
   </UDashboardSidebar>
 </template>

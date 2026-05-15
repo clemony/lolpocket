@@ -4,11 +4,11 @@ export const tabsTheme = defineUiTheme({
   slots: {
     indicator:
       "absolute shrink-0 grow transform-gpu transition-transform duration-200 will-change-transform",
-    list: "group relative flex rounded-xl p-1 inset-ring-0 inset-shadow-black/3 group-active:inset-ring-0",
+    list: "group/list relative flex rounded-xl p-1 inset-ring-0 inset-shadow-black/3 group-active:inset-ring-0",
     trigger:
-      "group text-2 relative inline-flex min-w-0 shrink-0 grow cursor-pointer items-center rounded-lg font-medium disabled:cursor-not-allowed disabled:opacity-30",
+      "group/trigger relative inline-flex min-w-0 shrink-0 grow cursor-pointer items-center rounded-lg text-sm font-medium disabled:cursor-not-allowed disabled:opacity-30",
 
-    root: "flex items-center gap-0 inset-ring-0",
+    root: "group/tabs flex items-center gap-0 inset-ring-0",
     leadingIcon: "shrink-0",
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
@@ -32,6 +32,20 @@ export const tabsTheme = defineUiTheme({
         indicator:
           "grid -translate-y-1 after:absolute after:h-0.5 after:w-[75%] after:justify-self-center after:border-b",
         trigger: "focus:outline-none on:text-pc"
+      },
+      ghost: {
+        list: "shadow-none inset-shadow-none"
+      },
+      lift: {
+        list: "tabs-lift-list tabs-lift z-1 tabs h-auto rounded-none border-0 p-0",
+        root: "h-auto p-0",
+        indicator: "tab-active z-2 rounded-b-none!",
+        leadingIcon:
+          "opacity-60 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100",
+        trigger:
+          "tab z-1 rounded-b-none! border-b-0 font-medium! tracking-normal",
+        content:
+          "tabs-content tabs-lift-content z-0 -translate-y-px overflow-hidden rounded-4xl border border-p2"
       },
       outline: {}
     },
@@ -74,14 +88,34 @@ export const tabsTheme = defineUiTheme({
         leadingAvatarSize: "2xs"
       },
       xl: {
-        indicator: "rounded-xl",
+        indicator: "rounded-6xl",
         trigger: "gap-0 p-0",
-        leadingIcon: "size-6",
+        leadingIcon: "size-5",
         leadingAvatarSize: "xs"
       }
     }
   },
   compoundVariants: [
+    {
+      color: "base",
+      variant: "lift",
+      class: {
+        root: "tabs-light tabs",
+        indicator: "",
+        trigger: "border-p2"
+      }
+    },
+    {
+      color: "neutral",
+      variant: "lift",
+      class: {
+        indicator: "tab-dark bg-neutral",
+        root: "tabs-dark tabs border-0!",
+        list: "border-0!",
+        trigger:
+          "border-b-0! border-p2 group-data-[state-active]/trigger:text-pc group-data-[state-active]/trigger:**:text-nc"
+      }
+    },
     {
       color: "base",
       variant: "pill",
@@ -125,6 +159,18 @@ export const tabsTheme = defineUiTheme({
       }
     },
 
+    {
+      color: "neutral",
+      variant: "ghost",
+      class: {
+        indicator:
+          "noise bg-neutral/90 shadow-xs inset-shadow-xs inset-ring inset-shadow-p1/10 inset-ring-n4",
+        list: "",
+        trigger:
+          "text-pc hover:text-pc! focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-p1 active:hover:**:text-nc data-[state=active]:text-nc data-[state=active]:**:text-nc"
+      }
+    },
+
     /* orientation */
     {
       orientation: "horizontal",
@@ -149,9 +195,11 @@ export const tabsTheme = defineUiTheme({
     ].flatMap(([k, sizeClass, indicateH, hClass, wClass, recClass]) => [
       {
         size: k,
+        variant: ["pill", "link", "soft", "subtle", "ghost"],
         class: { root: `tabs-${k}` }
       },
       {
+        variant: ["pill", "link", "soft", "subtle", "ghost"],
         size: k,
         orientation: "horizontal",
         class: {
@@ -171,11 +219,60 @@ export const tabsTheme = defineUiTheme({
           trigger: recClass
         }
       }
-    ])
+    ]),
+    {
+      variant: "lift",
+      size: "xs",
+      class: {
+        list: "tabs-xs text-xs"
+      }
+    },
+    {
+      variant: "lift",
+      size: "sm",
+      class: {
+        list: "tabs-sm text-sm"
+      }
+    },
+    {
+      variant: "lift",
+      size: "md",
+      class: {
+        list: "tabs-md h-10",
+        trigger: "h-10 text-sm",
+        content: "rounded-4xl"
+      }
+    },
+    {
+      variant: "lift",
+      size: "lg",
+      class: {
+        list: "tabs-lg h-12",
+        trigger: "h-12 text-sm",
+        content: "rounded-4xl"
+      }
+    },
+    {
+      variant: "lift",
+      size: "xl",
+      class: {
+        list: "tabs-xl h-14",
+        trigger: "h-14 text-sm",
+        content: "rounded-4xl"
+      }
+    },
+    {
+      variant: "lift",
+      color: "base",
+      class: {
+        content: "border-p2 bg-p0"
+      }
+    }
   ],
   defaultVariants: {
     color: "base",
-    variant: "pill"
+    variant: "pill",
+    size: "md"
   }
 })
 

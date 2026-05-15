@@ -114,6 +114,7 @@ export type UsernameSchema = v.InferOutput<typeof usernameSchema>
 export type EmailSchema = v.InferOutput<typeof emailSchema>
 export type Account = v.InferOutput<typeof accountSchema>
 export type FolderSchema = v.InferOutput<typeof folderSchema>
+export type FolderMixArray = (PocketProps | Folder)[]
 export interface Folder extends Omit<FolderSchema, "location" | "order"> {
   location?: string
   order?: number
@@ -125,6 +126,9 @@ export interface Folder extends Omit<FolderSchema, "location" | "order"> {
     | undefined
   id: string
   children?: ComputedRef<PocketProps[]>
-  type?: "pocket" | "folder"
   slot?: string
+}
+
+export interface AllFolder extends Folder {
+  folders?: ComputedRef<Folder[]>
 }

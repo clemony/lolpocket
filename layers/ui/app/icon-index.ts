@@ -1,5 +1,5 @@
 export const icon = {
-  class: "text-[var(--color-pc)] shrink-0 pointer-events-none",
+  class: "text-[var(--color-pc)] shrink-0 pointer-events-none **:stroke-[9%]",
   mode: "svg",
   size: "16px",
 
@@ -66,10 +66,12 @@ export const icon = {
     pin: "iconoir:pin", //'i-pin:"iconoir'
     unpin: "iconoir:pin-slash", //'i-unpin:"iconoir'
 
-    "check-fill": "bi:check-circle-fill", //'i-check-fill'
+    "check-fill": "garden:check-circle-fill-12", //i-garden-check-circle-fill-12
+    "check-circle": "ri:checkbox-circle-line", //i-ri-checkbox-circle-line
     "circle-plus": "lucide:circle-plus", //i-lucide-circle-plus
     tick: "lucide:check", //'i-tick'
     check: "lucide:check", //'i-check'
+    "check-sharp": "ri:check-line", //i-ri-check-line
     "tick-sm": "teenyicons:tick-small-outline", //'i-tick-sm'
     gallery: "lucide:gallery-vertical-end", //'i-gallery'
     gear: "solar:settings-linear", //'i-gear'
@@ -105,7 +107,7 @@ export const icon = {
 
     folder: "lucide:folder", //'i-folder'
     "folder-add": "lucide:folder-plus", //'i-folder-add'
-    "to-folder": "lucide:folder-symlink", //i-lucide-folder-symlink
+    "folder-to": "lucide:folder-symlink", //i-lucide-folder-symlink
     "folder-delete": "lucide:folder-x", //'i-folder-delete'
     "folder-documents": "formkit:folder", //'i-folder-documents'
     "folder-open": "lucide:folder-closed", //'i-folder-open'
@@ -143,6 +145,7 @@ export const icon = {
     inbox: "lucide:inbox",
     send: "lucide:send", //'i-send'
     wifi: "lucide:wifi", //'i-wifi'
+    "wifi-low": "lucide:wifi-low", //'i-lucide-wifi-low
 
     "right-click": "ph:mouse-right-click-fill", //'i-right-click'
     click: "i-mingcute-cursor-3-fill", //'i-click'

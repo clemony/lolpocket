@@ -4,6 +4,7 @@ export const pocketStore = defineStore(
   "pocketStore",
   () => {
     const pockets = ref<Pocket[]>([])
+    console.log("🥸 - pockets:", pockets)
     const pinned = ref<string[]>([])
 
     const pocketsByKey = computed(() =>
@@ -40,6 +41,13 @@ export const pocketStore = defineStore(
       ]
     }
 
+    function getSpellSet(pocketKey: string, setId?: string) {
+      const pocket = getPocket(pocketKey)
+      return pocketIndexes.value[pocketKey]?.spellsById[
+        setId ?? pocket?._spells ?? ""
+      ]
+    }
+
     function getItemSet(pocketKey: string, setId?: string) {
       const pocket = getPocket(pocketKey)
       return pocketIndexes.value[pocketKey]?.itemsById[
@@ -58,6 +66,14 @@ export const pocketStore = defineStore(
         p.key === pocketKey ? { ...p, label: newName } : p
       )
     }
+
+    function togglePublic(pocketKey: string, value?: boolean) {
+      console.log("🥸 - togglePublic - pocketKey:", pocketKey)
+      if (!pockets.value) return
+      pockets.value = pockets.value.map((p) =>
+        p.key === pocketKey ? { ...p, public: value ?? !p.public } : p
+      )
+    }
     const sidebarFolderRefs = ref<Record<string, boolean>>({})
 
     return {
@@ -66,6 +82,7 @@ export const pocketStore = defineStore(
       pinned,
       pocketCardRef,
       updatePocketName,
+      togglePublic,
       pockets,
       tags,
 
@@ -73,6 +90,7 @@ export const pocketStore = defineStore(
       getPocket,
       getRuneSet,
       getItemSet,
+      getSpellSet,
       pocketsByKey,
       pocketIndexes,
 

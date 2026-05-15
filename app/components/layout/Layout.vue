@@ -1,8 +1,12 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { color = "base" } = defineProps<{
+  color?: "base" | "transparent" | "primary"
+}>()
+</script>
 
 <template>
   <div class="contents">
-    <Navbar />
+    <Navbar :color />
     <UMain>
       <slot />
     </UMain>

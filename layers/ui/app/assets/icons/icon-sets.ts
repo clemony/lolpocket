@@ -6,6 +6,7 @@ export interface IconSet {
   open: string
   closed: string
   icon?: string
+  class?: string
   ui?: {
     open?: string
     closed?: string
@@ -27,10 +28,7 @@ export const iconSets: Record<string, IconSet> = {
     icon: "i-pin",
     open: "i-pin",
     closed: "i-unpin",
-    ui: {
-      open: "**:stroke-[1.9]",
-      closed: "**:stroke-[1.9]"
-    }
+    class: ""
   },
   archive: {
     key: "archive",
@@ -66,9 +64,10 @@ export const iconSets: Record<string, IconSet> = {
     icon: "i-proicons-heart",
     open: "i-proicons-heart",
     closed: "i-proicons-heart-stylistic", //i-ri-hearts-line,
+    class: " scale-110",
     ui: {
-      open: "**:stroke-[1.9] scale-110",
-      closed: "**:stroke-[1.9]  scale-110"
+      open: "  scale-110",
+      closed: " scale-110"
     }
   },
   live: {
@@ -98,9 +97,10 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-iconoir-half-cookie",
     closed: "i-iconoir-cookie",
     icon: "i-iconoir-cookie",
+    class: "",
     ui: {
-      open: "**:stroke-[2.4]",
-      closed: "**:stroke-[2.4]"
+      open: "",
+      closed: ""
     }
   },
   cloud: {
@@ -109,6 +109,7 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-lucide-cloud-lightning",
     closed: "i-lucide-cloud",
     icon: "i-lucide-cloud",
+    class: "translate-y-0.5",
     ui: {
       open: "translate-y-0.5"
     }
@@ -147,9 +148,10 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-lucide-lab-mug-teabag",
     closed: "i-lucide-lab-mug",
     icon: "i-lucide-lab-mug",
+    class: " scale-108    ",
     ui: {
-      open: " scale-108  **:stroke-[1.9]  ",
-      closed: " scale-108 **:stroke-[1.9]  "
+      open: " scale-108    ",
+      closed: " scale-108   "
     }
   },
   bull: {
@@ -165,6 +167,7 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-streamline-sharp-hand-washing",
     closed: "i-lucide-soap-dispenser-droplet",
     icon: "i-lucide-soap-dispenser-droplet",
+    class: "",
     ui: {
       open: " scale-120  stroke-[3.8]"
     }

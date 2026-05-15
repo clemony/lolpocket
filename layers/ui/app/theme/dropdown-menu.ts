@@ -4,7 +4,7 @@ export const dropdownMenuTheme = defineUiTheme({
   slots: {
     arrow: "fill-p0",
     content: [
-      "z-[120] flex min-w-42 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/96 shadow-lg ring shadow-black/8 drop-shadow-none backdrop-blur-sm select-none"
+      "z-[120] flex min-w-42 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/80 bg-blend-screen shadow-lg ring shadow-black/8 ring-p3 drop-shadow-none backdrop-blur-md select-none"
     ],
     group: "isolate p-0.5",
     item: "group relative flex w-full cursor-pointer items-center outline-none select-none before:absolute before:z-[-1] before:hidden before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
@@ -86,10 +86,10 @@ export const dropdownMenuTheme = defineUiTheme({
         label: "gap-1.5 p-1.5 text-xs"
       },
       lg: {
-        item: "h-12 gap-2 p-2 text-sm",
+        item: "h-11 gap-2 p-2 text-sm",
         itemLeadingAvatarSize: "2xs",
-        itemLeadingIcon: "size-5",
-        itemTrailingIcon: "size-5",
+        itemLeadingIcon: "size-4.5",
+        itemTrailingIcon: "size-4.5",
         itemTrailingKbds: "gap-1",
         itemTrailingKbdsSize: "md",
         label: "gap-2 p-2 text-sm"

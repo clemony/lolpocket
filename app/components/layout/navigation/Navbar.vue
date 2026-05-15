@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const { color = "base" } = defineProps<{
+  color?: "base" | "transparent" | "primary"
+}>()
+console.log("🥸 - color:", color)
 const { toggle } = useApp().settings
 </script>
 
@@ -7,7 +11,11 @@ const { toggle } = useApp().settings
     title="LP"
     :toggle="false"
     :ui="{
-      root: 'z-50 translate-3d transform-gpu px-0',
+      root: cn('z-50 translate-3d transform-gpu px-0', {
+        ' backdrop-contrast-100 backdrop-saturate-100': color !== 'base',
+        'bg-transparent!': color === 'transparent',
+        'bg-p1!': color === 'primary'
+      }),
       container: 'px-3!',
       title: 'hidden'
     }">

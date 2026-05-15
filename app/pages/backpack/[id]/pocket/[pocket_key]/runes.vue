@@ -5,7 +5,7 @@ definePageMeta({
   name: "pocket-runes",
   title: "runes",
   order: 3,
-  path: "/pocket/:pocket_key/runes",
+  path: "/backpack/:id/:pocket_key/runes",
   props: true,
   search: false
 })

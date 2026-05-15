@@ -7,36 +7,36 @@ export const mapPositions = [
   {
     color: "var(--color-n5)",
     label: "all",
-    icon: "i-lp-all",
+    icon: "i-lp-all"
   },
 
   {
     color: "var(--color-domination)",
     label: "top",
-    icon: "i-lp-top",
+    icon: "i-lp-top"
   },
 
   {
     color: "var(--color-res)",
     label: "jungle",
-    icon: "i-lp-jungle",
+    icon: "i-lp-jungle"
   },
 
   {
     color: "var(--color-sorc)",
-    label: "middle",
-    icon: "i-lp-middle",
+    label: "mid",
+    icon: "i-lp-mid"
   },
 
   {
     color: "var(--color-pre)",
-    label: "bottom",
-    icon: "i-lp-bottom",
+    label: "bot",
+    icon: "i-lp-bot"
   },
 
   {
     color: "var(--color-insp)",
     label: "support",
-    icon: "i-lp-support",
-  },
+    icon: "i-lp-support"
+  }
 ]

@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-import type { CollapsibleProps } from "@nuxt/ui"
-import { VueDraggable } from "vue-draggable-plus"
 import type { Folder } from "#shared/schema"
+import type { CollapsibleProps } from "@nuxt/ui"
+import type { ShallowRef } from "vue"
+import { VueDraggable } from "vue-draggable-plus"
+import { useBackpack } from "~/domain/backpack/useBackpack"
 import { editFolderIcon } from "~/domain/pocket/folder/editFolder"
 import { useFolderChildren } from "~/domain/pocket/folder/useFolder"
 import { useIconSet } from "~/domain/pocket/folder/useIconSet"
@@ -37,24 +39,16 @@ const { children, childRefs, childKey } = useFolderChildren(item)
 const delegated = reactiveOmit(props, "item")
 
 const menuOpen = shallowRef<boolean>(false)
-const store = pocketStore()
 
-const open = shallowRef<boolean>(
-  store.sidebarFolderRefs[item.value.id] || false
-)
+const { sidebarFolderRefs } = useBackpack()
 
-watch(
-  () => open.value,
-  (v) => {
-    console.log("💠 - watch - newVal:", v)
-  }
-)
 const isDefaultFolder = computed(() => item.value && isDefault(item.value))
 
-const set = computed(() => useIconSet(props.item?.iconKey, open))
-
-onBeforeRouteLeave(
-  () => (store.sidebarFolderRefs[item.value.id] = open.value ?? false)
+const set = computed(() =>
+  useIconSet(
+    props.item?.iconKey,
+    computed(() => sidebarFolderRefs.value[item.value?.id] ?? false)
+  )
 )
 </script>
 
@@ -68,7 +62,7 @@ onBeforeRouteLeave(
     <UCollapsible
       v-if="!collapsed && item?.id"
       v-bind="delegated"
-      v-model:open="open"
+      v-model:open="sidebarFolderRefs[item.id]"
       :disabled="editing"
       :ui="{
         root: 'group/collapse-child',
@@ -81,10 +75,20 @@ onBeforeRouteLeave(
         :label="item?.label"
         :icon="set.icon"
         trailing-icon="i-up"
-        :ui="{ leadingIcon: set.class, trailingIcon: open ? 'rotate-180' : '' }"
+        :ui="{
+          leadingIcon: set.class,
+          trailingIcon: sidebarFolderRefs[item.id] ? 'rotate-180' : ''
+        }"
         :value="item?.label || ''"
         :active="menuOpen"
         @update:label="handleEdit($event)">
+        <template #label>
+          <span class="grow text-start">{{ item?.label }}</span>
+          <SidebarBadge
+            v-if="item?.children?.value.length"
+            :is-true="sidebarFolderRefs[item.id]"
+            :label="item?.children?.value.length || 0" />
+        </template>
         <template #input-actions>
           <LazyUButton
             size="xs"
@@ -104,12 +108,22 @@ onBeforeRouteLeave(
         variant="solid"
         color="transparent"
         :ui="{
-          base: 'my-0! w-full grow hover:bg-p1',
+          base: 'my-0! w-full grow gap-2.5 hover:bg-p1',
           leadingIcon: cn('size-4.5', set.class),
-          trailingIcon: cn('trailing-rotate', { '-rotate-180': open })
+          trailingIcon: cn('trailing-rotate', {
+            '-rotate-180': sidebarFolderRefs[item.id]
+          })
         }"
         :label="item.label"
-        trailing-icon="i-up" />
+        trailing-icon="i-up">
+        <span class="grow text-start text-md font-semibold">{{
+          item?.label
+        }}</span>
+        <SidebarBadge
+          v-if="item?.children?.value.length"
+          :is-true="sidebarFolderRefs[item.id]"
+          :label="item?.children?.value.length || 0" />
+      </UButton>
       <template #content>
         <div
           class="relative z-0 w-full max-w-full overflow-hidden *:py-0! before:pointer-events-none before:absolute before:left-px before:h-full before:w-px before:border-l before:border-l-p4/80">

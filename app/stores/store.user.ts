@@ -142,14 +142,14 @@ export const user = defineStore(
         settings.value && settings?.value.folders
           ? settings?.value.folders.map((f) => f.id)
           : []
-      return ["pockets", "archive", "trash", ...(userFolders || "")].filter(
+      return ["all", "archive", "trash", ...(userFolders || "")].filter(
         Boolean
       )
     })
 
     const folderLocationSchema = v.fallback(
       v.picklist(folderKeys.value ?? []),
-      "pockets"
+      "all"
     )
 
     const match = /Entitled Folder.*/

@@ -73,7 +73,7 @@ defineExpose<EditInputExpose>({
         root: 'inline-flex h-10 max-h-10 w-full max-w-full align-baseline',
         leadingIcon: cn('size-4.5 text-pc', props.ui?.leadingIcon),
         leadingAvatar: '-translate-x-0.5',
-        base: 'pr-14 pl-8.5 text-start align-baseline font-medium tracking-tight select-all'
+        base: 'pr-14 pl-10 text-start align-baseline font-medium tracking-tight select-all'
       }"
       @blur="handleEdit()"
       @keydown.enter.stop="handleEdit()">
@@ -107,6 +107,8 @@ defineExpose<EditInputExpose>({
       <template v-if="!props.label && !editing" #default>
         <span class="grow" />
       </template>
+
+      <slot name="label" />
     </UButton>
   </div>
 </template>

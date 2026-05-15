@@ -90,7 +90,7 @@ export const inputTheme = defineUiTheme({
       },
       xl: {
         base: "input-xl h-14 gap-2 rounded-xl px-3 py-0 text-base",
-        leading: "ps-3",
+        leading: "ps-4",
         leadingAvatarSize: "xs",
         leadingIcon: "size-4.5",
         trailing: "pe-3",

@@ -16,6 +16,10 @@ import {
 } from "~/domain/pocket/menu/contextActions"
 import { sortMenu } from "~/domain/pocket/menu/sortMenu"
 
+defineOptions({
+  inheritAttrs: false
+})
+
 const props = defineProps<
   ContextMenuProps & {
     item: Pocket | undefined
@@ -58,7 +62,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
           itemLeadingIcon: "scale-120"
         },
         onSelect() {
-          p.location = "pockets"
+          p.location = "all"
           p.trashed_at = undefined
         }
       }
@@ -76,7 +80,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
     {
       ...contextOpen(p.label ?? ""),
       onSelect() {
-        navigateTo(`/backpack/pockets/${p.key}`)
+        navigateTo(`/backpack/${p.location || "all"}/pocket/${p.key}`)
       }
     },
     {
@@ -102,7 +106,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
     settings.value
       ? {
           label: "Move to...",
-          icon: "i-lucide-pocket-symlink",
+          icon: "i-folder-to",
           children: settings.value.folders.map((f) => ({
             label: f.label,
             onSelect() {
@@ -127,7 +131,8 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
 </script>
 
 <template>
-  <ContextMenu
+  <Menu
+    v-slot="{ open }"
     v-bind="forwarded"
     :items="pocketActions"
     size="lg"
@@ -140,6 +145,6 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
       (e) =>
         e === false && subopen === true ? () => {} : emit('update:open', e)
     ">
-    <slot />
-  </ContextMenu>
+    <slot :open />
+  </Menu>
 </template>

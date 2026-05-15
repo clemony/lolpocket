@@ -102,6 +102,9 @@ export const spellNameById = (id: number) => spellIndex[id]?.name
 export function currentPatch(): string {
   return patchIndex[0] ?? ""
 }
+export function currentPatchNormalized(): string {
+  return (normalizePatchNumber(String(patchIndex[0])) + 10).toString() ?? ""
+}
 
 export function mapIdById(id: number) {
   return mapIndex.find((m) => m.id === id)?.mapStringId

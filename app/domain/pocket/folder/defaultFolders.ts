@@ -8,6 +8,15 @@ export const defaultPocketFolders = {
     open: false,
     order: 0
   },
+  all: {
+    label: "Backpack",
+    id: "all",
+    iconKey: "folder",
+    to: "/backpack/all",
+    location: "all",
+    open: true,
+    order: 2
+  },
   favorites: {
     label: "Favorites",
     id: "favorites",
@@ -15,16 +24,7 @@ export const defaultPocketFolders = {
     iconKey: "heart",
     open: false,
     location: "",
-    order: 1
-  },
-  pockets: {
-    label: "Pockets",
-    id: "pockets",
-    iconKey: "folder",
-    to: "/backpack",
-    location: "",
-    open: true,
-    order: 2
+    order: 0
   },
   archive: {
     label: "Archive",

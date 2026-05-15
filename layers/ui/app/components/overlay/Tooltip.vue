@@ -443,7 +443,9 @@ defineExpose({ pinned, isOpen: open })
         ">
         <slot name="content">
           <div class="inline-flex items-center gap-2 align-baseline">
-            <div v-if="avatar" class="size-3.5">
+            <div
+              v-if="avatar"
+              class="relative inline-grid size-3.5 place-items-center align-middle">
               <LazyUAvatar
                 v-if="avatar"
                 hydrate-on-visible
@@ -456,7 +458,7 @@ defineExpose({ pinned, isOpen: open })
                 :src="avatar"
                 :alt="`${label}-icon`"
                 :ui="{
-                  root: cn('-ml-1 overflow-hidden bg-transparent')
+                  root: cn('absolute -ml-1 overflow-hidden bg-transparent')
                 }" />
             </div>
             <Icon

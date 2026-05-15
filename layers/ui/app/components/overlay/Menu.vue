@@ -1,17 +1,42 @@
 <script lang="ts" setup>
-import type { ContextMenuEmits, ContextMenuItem } from "@nuxt/ui"
+import { UContextMenu, UDropdownMenu } from "#components"
+import type {
+  ContextMenuEmits,
+  ContextMenuItem,
+  DropdownMenuEmits,
+  DropdownMenuItem
+} from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
 import { asSwitch } from "../../utils/menuUtils"
 
-const props = defineProps<ContextMenuItem>()
-const emits = defineEmits<ContextMenuEmits>()
+const props = withDefaults(
+  defineProps<
+    (ContextMenuItem | DropdownMenuItem) & {
+      component?: string
+    }
+  >(),
+  {
+    component: "context"
+  }
+)
+const emits = defineEmits(["update:modelValue"])
 
 const forwarded = useForwardPropsEmits(props, emits)
+
+const component = computed(() =>
+  props.component === "context"
+    ? UContextMenu
+    : props.component === "dropdown"
+      ? UDropdownMenu
+      : null
+)
+
+const modelValue = defineModel("open", { default: false })
 </script>
 
 <template>
-  <UContextMenu v-bind="props">
-    <slot :forwarded />
+  <component :is="component" v-bind="forwarded" v-model:open="modelValue">
+    <slot :forwarded :open="modelValue" />
     <template #switch-trailing="{ item }">
       <USwitch :checked="asSwitch(item).checked" size="xs" />
     </template>
@@ -44,5 +69,5 @@ const forwarded = useForwardPropsEmits(props, emits)
           " />
       </span>
     </template>
-  </UContextMenu>
+  </component>
 </template>

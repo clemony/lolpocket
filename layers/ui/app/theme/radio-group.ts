@@ -7,9 +7,9 @@ export const radioGroupTheme = defineUiTheme({
     legend: "mb-1 block font-medium text-pc",
     item: "flex items-start",
     container: "flex items-center",
-    base: "overflow-hidden rounded-full ring ring-n2 ring-inset focus-visible:outline-2 focus-visible:outline-offset-2",
+    base: "group grid place-items-center overflow-hidden rounded-full ring-0 inset-shadow-xs inset-ring focus-visible:outline-2 focus-visible:outline-offset-2",
     indicator:
-      "flex size-full items-center justify-center after:rounded-full after:bg-p0",
+      "hidden size-full items-center justify-center after:rounded-full",
     wrapper: "w-full",
     label: "block font-medium text-pc",
     description: "text-n5"
@@ -17,8 +17,13 @@ export const radioGroupTheme = defineUiTheme({
   variants: {
     color: {
       base: {
-        base: "focus-visible:outline-pc",
-        indicator: "bg-pc"
+        base: [
+          "bg-p1/40 after:relative focus-visible:outline-pc data-[state=checked]:inset-ring-pc! data-[state=unchecked]:inset-ring-p4",
+          "after:absolute! after:z-1 after:size-2! after:rounded-full after:bg-pc after:transition-all after:duration-500 after:ease-spring-soft",
+          "data-[state=checked]:after:scale-100!",
+          "after:scale-0"
+        ],
+        indicator: ""
       },
       p1: {
         base: "focus-visible:outline-p3",

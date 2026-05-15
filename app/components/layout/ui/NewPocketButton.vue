@@ -11,7 +11,7 @@ const props = withDefaults(
     ButtonProps & {
       kbd?: KbdProps | false
       collapsed?: boolean
-      location?: FolderKey
+      location?: FolderKey | string | undefined
     }
   >(),
   {

@@ -1,4 +1,3 @@
-
 @import "./base.css";
 @import "./accent.css";
 
@@ -45,7 +44,7 @@
   --color-error: var(--ui-dom);
   --color-error-content: var(--ui-dom-content);
 
-  --radius-selector: var(--radius-sm);
+  --radius-selector: var(--radius-md);
   --radius-box: var(--radius-xl);
   --radius-field: var(--radius-lg);
 
@@ -57,7 +56,8 @@
   --color-accent-content: var(--ui-accent-content);
 
   --border: 1px;
-
+  --radius-start: 0.85rem;
+  --radius-end: 0.85rem;
   /* effects */
   --depth: 0.4;
   --noise: 0.2;
@@ -68,14 +68,59 @@
 }
 
 @utility tab {
-  --tab-radius-min: 0.65rem !important;
-  --radius-field: 1rem;
-  --tab-bg: var(--ui-p0);
-}
-@utility tabs {
   --tab-paddings: 4px 20px !important;
-  --tab-border-color: var(--color-p3);
-  --tab-border-colors: var(--color-p3);
+  --tab-radius-grad:
+    #0000 calc(69% - var(--border)),
+    var(--tab-inset-color) calc(69% - var(--border) + 0.25px),
+    var(--tab-inset-color) 69%, var(--tab-bg) calc(69% + 0.25px);
+  &:nth-child(2) {
+    --radius-start: none;
+  }
+  &.tab-active {
+    @apply border-x border-t border-b-0 border-p2!;
+  }
+}
+
+.tabs-md {
+  :root {
+  }
+}
+
+@utility tabs {
+  &.tabs-light {
+    --tab-bg: var(--ui-p0);
+    --tab-border-color: var(--color-p2) !important;
+    --tab-border-colors: var(--color-p2);
+    --tab-inset-color: color-mix(in oklab, var(--color-p2) 80%, #fff 20%);
+  }
+  &.tabs-dark {
+    --tab-bg: var(--color-neutral);
+    --tab-inset-color: var(--color-n2);
+    --tab-border-colors: var(--color-n2);
+    --tab-border-color: var(--color-n2) !important;
+    &.tab-active {
+      @apply border-n2! text-nc! **:text-nc!;
+    }
+    & [data-state="active"] {
+      @apply border-n2! text-nc! **:text-nc! [&_svg]:text-nc;
+    }
+    & .tab {
+      @apply active:**:text-nc!;
+    }
+  }
+}
+
+.tabs-list.tabs-list {
+  @apply before:absolute before:inset-x-0 before:bottom-0 before:z-0 before:h-px before:bg-p2;
+}
+.tabs-lift-list:has(
+    > :nth-child(1 of :where([data-slot="trigger"], .tab)):is(
+        [data-state="active"],
+        .tab-active
+      )
+  )
+  ~ .tabs-lift-content {
+  @apply rounded-tl-none!;
 }
 
 @utility tabs-md {
@@ -130,12 +175,12 @@
   }
 
   /* tabs */
-  .tab {
-    @apply z-1 flex items-center gap-2 text-start! text-md font-medium! capitalize;
+  /*   .tab {
+    @apply flex items-center gap-2 text-start!;
     &::before {
       @apply opacity-90 mix-blend-plus-lighter;
     }
-  }
+  } */
   .tabs-box {
     border-radius: var(--radius-lg);
   }
@@ -147,6 +192,13 @@
     .tab {
       @apply h-8.5 pt-0.75;
       --tab-radius-min: 0.64rem;
+    }
+  }
+
+  .tabs-xl {
+    --radius-field: var(--radius-4xl) !important;
+    .tab {
+      --tab-radius-min: 0.85rem !important;
     }
   }
 
@@ -166,7 +218,7 @@
   }
   .tooltip {
     &::before {
-      @apply z-50 max-w-66 bg-neutral/90 px-3 py-1 text-start text-sm/5.5 text-pretty whitespace-pre-wrap text-nc drop-shadow-sm backdrop-blur-sm transition-all duration-200;
+      @apply z-50 max-w-66 bg-n1/90 px-3 py-1 text-start text-sm/5.5 text-pretty whitespace-pre-wrap text-nc drop-shadow-sm backdrop-blur-sm transition-all duration-200;
     }
     &::after {
       @apply invisible! hidden! size-0! opacity-0!;

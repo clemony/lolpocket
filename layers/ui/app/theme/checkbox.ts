@@ -6,7 +6,8 @@ export const checkboxTheme = defineUiTheme({
     container:
       "focus-visible:focus-ring flex items-center before:hidden before:rounded-md!",
     base: "relative overflow-hidden rounded-sm ring-1 focus-visible:outline-0",
-    indicator: "flex size-full items-center justify-center rounded-[inherit]",
+    indicator:
+      "checkbox flex size-full items-center justify-center rounded-[inherit]",
     icon: "size-full shrink-0 scale-80 **:stroke-[3.1]",
     wrapper: "w-full",
     label: "block font-medium text-pc group-hover/x:underline",
@@ -70,13 +71,13 @@ export const checkboxTheme = defineUiTheme({
         wrapper: "text-xs"
       },
       md: {
-        base: "size-4 rounded-sm",
+        base: "size-4 rounded-[0.35rem]",
         container: "h-5 rounded-md",
         wrapper: "text-sm"
       },
       lg: {
-        base: "size-4.5",
-        container: "h-5 rounded-lg",
+        base: "size-4.5 rounded-[0.35rem]",
+        container: "h-5 rounded-[0.35rem]",
         wrapper: "text-sm"
       },
       xl: {

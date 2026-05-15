@@ -48,7 +48,7 @@ export async function newPocket(options?: {
     // time
     created: now,
     updated: now,
-    location: options?.location || "pockets",
+    location: options?.location || "all",
     order: 0
   }
 

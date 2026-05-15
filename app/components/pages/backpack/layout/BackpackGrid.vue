@@ -35,7 +35,7 @@ const modelValue = ref<Folder[]>([])
 
     <div class="flex items-center gap-1">
       <NewPocketButton
-        :location="folder.id"
+        :location="folder.location || folder.id"
         variant="ghost"
         color="primary"
         collapsed
@@ -44,7 +44,7 @@ const modelValue = ref<Folder[]>([])
         color="primary"
         variant="ghost"
         icon="i-more"
-        :location="folder.id"
+        :location="folder.location || folder.id"
         :ui="{ trailingIcon: 'hidden' }" />
     </div>
   </div>

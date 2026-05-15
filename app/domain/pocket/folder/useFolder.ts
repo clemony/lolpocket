@@ -8,6 +8,11 @@ type FolderInput =
   | Ref<Folder | undefined>
   | ComputedRef<Folder | undefined>
 
+type AllFolderInput =
+  | AllFolder
+  | Ref<AllFolder | undefined>
+  | ComputedRef<AllFolder | undefined>
+
 function sortPocketProps(a: PocketProps, b: PocketProps) {
   return (
     ((a.order as number | undefined) ?? 0) -
@@ -20,6 +25,8 @@ function sortPocketProps(a: PocketProps, b: PocketProps) {
 }
 
 function mapPocket(pocket: Pocket): PocketProps {
+  const location = pocket.location || "all"
+
   return {
     pocket,
     slot: "pocket",
@@ -34,7 +41,7 @@ function mapPocket(pocket: Pocket): PocketProps {
         root: "overflow-hidden shadow-xs drop-shadow-xs"
       }
     },
-    to: `/backpack/pocket/${pocket.key}`,
+    to: `/backpack/${location}/pocket/${pocket.key}`,
     getKey: () => pocket.key
   }
 }
@@ -44,20 +51,23 @@ function mapFolder(folder: Folder): Folder {
     ...folder,
     iconKey: folder.iconKey ?? "folder",
     label: folder.label ?? "",
-    type: "folder",
     slot: "folder"
   }
 }
 
 export interface UseFoldersReturn {
   folders: ComputedRef<Folder[]>
-  pockets: ComputedRef<Folder>
   pinned: ComputedRef<Folder>
   favorites: ComputedRef<Folder>
   archive: ComputedRef<Folder>
   trash: ComputedRef<Folder>
   defaults: ComputedRef<Folder[]>
-  all: ComputedRef<Folder[]>
+  complete: ComputedRef<Folder[]>
+  all: ComputedRef<AllFolder>
+  routeId: ComputedRef<string>
+  routeFolder: ComputedRef<Folder>
+  routeFolderId: ComputedRef<string>
+  routeLocation: ComputedRef<string>
 }
 
 const [providePocketFolderState, useInjectedFolders] = createInjectionState(
@@ -65,6 +75,7 @@ const [providePocketFolderState, useInjectedFolders] = createInjectionState(
     const { settings } = storeToRefs(user())
     const store = pocketStore()
     const { pinned: pinnedKeys, pockets: sourcePockets } = storeToRefs(store)
+    const route = useRoute()
 
     const favoriteKeys = computed(() => settings.value?.favorite_pockets ?? [])
 
@@ -72,7 +83,7 @@ const [providePocketFolderState, useInjectedFolders] = createInjectionState(
       const children: Record<string, PocketProps[]> = {}
 
       for (const pocket of sourcePockets.value) {
-        const location = pocket.location || "pockets"
+        const location = pocket.location || "all"
         children[location] ??= []
         children[location].push(mapPocket(pocket))
       }
@@ -98,6 +109,18 @@ const [providePocketFolderState, useInjectedFolders] = createInjectionState(
       )
     }
 
+    const folders = computed(() =>
+      (settings.value?.folders ?? [])
+        .map((folder) =>
+          mapFolder({
+            ...folder,
+            to: `/backpack/${folder.id}`,
+            location: folder.location || folder.id,
+            children: childrenForLocation(folder.id)
+          })
+        )
+        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+    )
     function defaultFolder(key: keyof typeof defaultPocketFolders) {
       return computed(() =>
         mapFolder({
@@ -107,55 +130,82 @@ const [providePocketFolderState, useInjectedFolders] = createInjectionState(
               ? childrenForKeys(pinnedKeys)
               : key === "favorites"
                 ? childrenForKeys(favoriteKeys)
-                : childrenForLocation(key)
+                : childrenForLocation(defaultPocketFolders[key].location || key)
         })
       )
     }
 
+    function allFolder() {
+      return computed<AllFolder>(() => {
+        const all = mapFolder({
+          ...defaultPocketFolders.all,
+          children: childrenForLocation(
+            defaultPocketFolders.all.location || "all"
+          )
+        })
+        return {
+          ...all,
+          folders
+        }
+      })
+    }
+
     const pinned = defaultFolder("pinned")
     const favorites = defaultFolder("favorites")
-    const pockets = defaultFolder("pockets")
+    const all = allFolder()
     const archive = defaultFolder("archive")
     const trash = defaultFolder("trash")
 
-    const folders = computed(() =>
-      (settings.value?.folders ?? [])
-        .map((folder) =>
-          mapFolder({
-            ...folder,
-            to: `/backpack/#${folder.id}`,
-            children: childrenForLocation(folder.id)
-          })
-        )
-        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-    )
-
     const defaults = computed(() => [
       pinned.value,
+      all.value,
       favorites.value,
-      pockets.value,
       archive.value,
       trash.value
     ])
 
-    const all = computed(() => [
+    const complete = computed(() => [
       pinned.value,
       favorites.value,
-      pockets.value,
+      all.value,
       ...folders.value,
       archive.value,
       trash.value
     ])
 
+    const routeId = computed(() => {
+      const value = route.params.id
+      const id = Array.isArray(value) ? value[0] : value
+
+      return id || "all"
+    })
+
+    const routeFolder = computed(
+      () =>
+        complete.value.find(
+          (folder) =>
+            folder.id === routeId.value || folder.location === routeId.value
+        ) ?? all.value
+    )
+
+    const routeFolderId = computed(() => routeFolder.value.id)
+    const routeLocation = computed(
+      () => routeFolder.value.location || routeFolder.value.id
+    )
+
     return {
       folders,
-      pockets,
+      complete,
       pinned,
       favorites,
       archive,
       trash,
       defaults,
-      all
+      all,
+      routeId,
+      routeFolder,
+      routeFolderId,
+      routeLocation
     }
   }
 )
@@ -169,6 +219,20 @@ export function useFolders(): UseFoldersReturn {
 }
 
 export function useFolderChildren(item: FolderInput | undefined) {
+  const folder = computed(() => toValue(item))
+  const children = computed(() => toValue(folder.value?.children) ?? [])
+  const childKey = (child: PocketProps) =>
+    child.getKey?.() ?? child.pocket?.key ?? child.label
+
+  const childRefs = useTemplateRefsList<HTMLElement & FolderExpose>()
+
+  return {
+    children,
+    childRefs,
+    childKey
+  }
+}
+export function useAllFolderChildren(item: AllFolderInput | undefined) {
   const folder = computed(() => toValue(item))
   const children = computed(() => toValue(folder.value?.children) ?? [])
   const childKey = (child: PocketProps) =>

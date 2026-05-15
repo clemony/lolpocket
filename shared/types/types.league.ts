@@ -20,6 +20,16 @@ export interface QueueIndex {
   queueId: number
 }
 
+export interface ModeIndex {
+  description?: string
+  mapId: number | null
+  mapName: string | null
+  mapStringId: string | null
+  modeKey: string
+  modeLabel: string
+  modeSlug: string
+}
+
 export interface Role {
   name: string
   icon: string
@@ -32,6 +42,7 @@ export interface Spell {
   charges?: number
   description: string
   level?: number
+  modes?: string[]
   range?: number
   recharge?: number
 }

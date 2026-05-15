@@ -3,7 +3,7 @@ import type { ButtonProps } from "@nuxt/ui"
 export const backpackNav: ButtonProps[] = [
   {
     label: "Pockets",
-    to: "/backpack",
+    to: "/backpack/all",
     ui: {
       label: "font-semibold"
     },

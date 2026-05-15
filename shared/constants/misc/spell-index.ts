@@ -1,4 +1,4 @@
-// Updated Patch 16.9 - 05/08/2026 03:28:22 PM CDT
+// Updated Patch 16.9 - 05/11/2026 11:49:39 AM CDT
     import type { Spell } from "#shared/types"
 
     export const spellIndex: Record<number, Spell> = {
@@ -8,6 +8,18 @@
     cd: 240,
     description: "Removes all disables (excluding suppression and airborne) and summoner spell debuffs affecting your champion and gives Tenacity.",
     level: 9,
+    modes: [
+      "CLASSIC",
+      "ARAM",
+      "TUTORIAL",
+      "URF",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "FIRSTBLOOD",
+      "ARSR",
+      "NEXUSBLITZ",
+      "ULTBOOK"
+    ],
     range: 200
   },
   3: {
@@ -16,6 +28,17 @@
     cd: 240,
     description: "Slows target enemy champion and reduces their damage dealt.",
     level: 4,
+    modes: [
+      "CLASSIC",
+      "ARAM",
+      "TUTORIAL",
+      "URF",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "ARSR",
+      "NEXUSBLITZ",
+      "ULTBOOK"
+    ],
     range: 650
   },
   4: {
@@ -24,6 +47,19 @@
     cd: 300,
     description: "Teleports you a short distance toward your cursor.",
     level: 7,
+    modes: [
+      "CLASSIC",
+      "ARAM",
+      "TUTORIAL",
+      "URF",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "FIRSTBLOOD",
+      "ASSASSINATE",
+      "ARSR",
+      "NEXUSBLITZ",
+      "ULTBOOK"
+    ],
     range: 425
   },
   6: {
@@ -32,6 +68,19 @@
     cd: 240,
     description: "Gain Move Speed and ignore unit collision for the duration.",
     level: 1,
+    modes: [
+      "CLASSIC",
+      "ARAM",
+      "TUTORIAL",
+      "URF",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "FIRSTBLOOD",
+      "ASSASSINATE",
+      "ARSR",
+      "NEXUSBLITZ",
+      "ULTBOOK"
+    ],
     range: 200
   },
   7: {
@@ -40,6 +89,18 @@
     cd: 240,
     description: "Restores Health and grants Move Speed to you and target allied champion.",
     level: 1,
+    modes: [
+      "CLASSIC",
+      "ARAM",
+      "TUTORIAL",
+      "URF",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "ASSASSINATE",
+      "ARSR",
+      "NEXUSBLITZ",
+      "ULTBOOK"
+    ],
     range: 875
   },
   11: {
@@ -48,6 +109,15 @@
     charges: 2,
     description: "Deals true damage to a monster or minion.",
     level: 3,
+    modes: [
+      "CLASSIC",
+      "TUTORIAL",
+      "URF",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "ARSR",
+      "NEXUSBLITZ"
+    ],
     range: 500,
     recharge: 15
   },
@@ -57,6 +127,15 @@
     cd: 300,
     description: "After a brief channel, become untargetable and travel to an allied unit. Upgrades into Unleashed Teleport, which significantly increases travel speed. ",
     level: 7,
+    modes: [
+      "CLASSIC",
+      "TUTORIAL",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "ASSASSINATE",
+      "ARSR",
+      "ULTBOOK"
+    ],
     range: 25000
   },
   13: {
@@ -65,6 +144,10 @@
     cd: 240,
     description: "Restores your and ally champion's Mana.",
     level: 6,
+    modes: [
+      "ARAM",
+      "FIRSTBLOOD"
+    ],
     range: 600
   },
   14: {
@@ -73,6 +156,19 @@
     cd: 180,
     description: "Deals true damage over time to target enemy champion and reduces healing effects on them for the duration.",
     level: 9,
+    modes: [
+      "CLASSIC",
+      "ARAM",
+      "TUTORIAL",
+      "URF",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "FIRSTBLOOD",
+      "ASSASSINATE",
+      "ARSR",
+      "NEXUSBLITZ",
+      "ULTBOOK"
+    ],
     range: 600
   },
   21: {
@@ -81,6 +177,19 @@
     cd: 180,
     description: "Gain a brief Shield.",
     level: 4,
+    modes: [
+      "CLASSIC",
+      "ARAM",
+      "TUTORIAL",
+      "URF",
+      "DOOMBOTSTEEMO",
+      "ONEFORALL",
+      "FIRSTBLOOD",
+      "ASSASSINATE",
+      "ARSR",
+      "NEXUSBLITZ",
+      "ULTBOOK"
+    ],
     range: 1200
   },
   30: {
@@ -89,6 +198,9 @@
     cd: 10,
     description: "Quickly travel to the Poro King's side.",
     level: 1,
+    modes: [
+      "KINGPORO"
+    ],
     range: 200
   },
   31: {
@@ -97,6 +209,9 @@
     cd: 20,
     description: "Toss a Poro at your enemies. If it hits, you can quickly travel to your target as a follow up.",
     level: 1,
+    modes: [
+      "KINGPORO"
+    ],
     range: 2500
   },
   32: {
@@ -105,6 +220,10 @@
     cd: 80,
     description: "Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked, granting True Sight, and your champion can quickly travel to the marked target as a follow up.",
     level: 6,
+    modes: [
+      "ARAM",
+      "FIRSTBLOOD"
+    ],
     range: 1600
   },
   39: {
@@ -121,6 +240,9 @@
     cd: 0,
     description: "This slot will be replaced by another champion's ultimate and you will gain Attack-Smite. There will be 30 seconds to select an ultimate. Be prepared!",
     level: 1,
+    modes: [
+      "ULTBOOK"
+    ],
     range: 400
   },
   2201: {

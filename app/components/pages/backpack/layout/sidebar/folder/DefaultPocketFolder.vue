@@ -1,18 +1,22 @@
 <script lang="ts" setup>
 import { VueDraggable } from "vue-draggable-plus"
+import { useBackpack } from "~/domain/backpack/useBackpack"
 import { defaultPocketFolders } from "~/domain/pocket/folder/defaultFolders"
-import { useFolderChildren, useFolders } from "~/domain/pocket/folder/useFolder"
+import {
+  useAllFolderChildren,
+  useFolders
+} from "~/domain/pocket/folder/useFolder"
 import { onAdd, onChange } from "~/domain/pocket/helpers/drag"
+import { asPocketProps } from "~/domain/pocket/helpers/typeAssert"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 const { collapsed } = defineProps<{
   collapsed?: boolean
 }>()
-const { pockets, folders } = useFolders()
+const { folders, all } = useFolders()
 
-const open = shallowRef<boolean>(true)
-
-const { children, childRefs, childKey } = useFolderChildren(pockets)
+const { children, childRefs, childKey } = useAllFolderChildren(all)
+const { backpackFolderOpen: open } = useBackpack()
 
 const set = computed(() => {
   const ico = safeObject(iconSets.folder)
@@ -32,9 +36,7 @@ const accordion = useTemplateRef<HTMLElement>("accordion")
 </script>
 
 <template>
-  <FolderContextMenu
-    v-model:open="menuOpen"
-    :folder="defaultPocketFolders.pockets">
+  <FolderContextMenu v-model:open="menuOpen" :folder="defaultPocketFolders.all">
     <UCollapsible
       v-if="!collapsed"
       v-model:open="open"
@@ -46,12 +48,19 @@ const accordion = useTemplateRef<HTMLElement>("accordion")
         variant="solid"
         color="transparent"
         :ui="{
-          base: 'my-0! w-full grow hover:bg-p1',
+          base: 'my-0! w-full grow gap-2.5 hover:bg-p1',
           leadingIcon: cn('size-4.5', set.leadingIcon),
           trailingIcon: cn('trailing-rotate', { '-rotate-180': open })
         }"
-        :label="pockets.label"
-        trailing-icon="i-up" />
+        trailing-icon="i-up">
+        <span class="grow text-start text-md font-semibold">{{
+          all?.label
+        }}</span>
+        <SidebarBadge
+          v-if="all.children?.value.length"
+          :is-true="open"
+          :label="all.children?.value.length || 0" />
+      </UButton>
       <template #content>
         <VueDraggable
           :model-value="children"
@@ -60,7 +69,7 @@ const accordion = useTemplateRef<HTMLElement>("accordion")
           filter=".not-draggable"
           :animation="150"
           :group="{ name: 'pocket' }"
-          @add="onAdd($event, pockets?.id)"
+          @add="onAdd($event, all?.location || all?.id)"
           @change="onChange($event)">
           <BackpackSidebarFolder
             v-for="child in folders"
@@ -69,9 +78,9 @@ const accordion = useTemplateRef<HTMLElement>("accordion")
 
           <SidebarPocket
             v-for="(child, i) in children"
-            :key="childKey(child)"
+            :key="childKey(asPocketProps(child))"
             :ref="childRefs.set"
-            :item="child"
+            :item="asPocketProps(child)"
             :i />
 
           <!--             <div

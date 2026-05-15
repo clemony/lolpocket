@@ -44,7 +44,8 @@ export const sData = defineStore("summonerData", () => {
   })
 
   const splash = computed(() => {
-    if (account.value?.skin) return getSplashFromSkinKey(account.value.skin, "uncentered")
+    if (account.value?.skin)
+      return getSplashFromSkinKey(account.value.skin, "uncentered")
 
     const first = champKeyById(champions.value?.[0]?.championId ?? 0)
     if (!first) return null
