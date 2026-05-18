@@ -7,7 +7,8 @@ export const dropdownMenuTheme = defineUiTheme({
       "z-[120] flex min-w-42 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/80 bg-blend-screen shadow-lg ring shadow-black/8 ring-p3 drop-shadow-none backdrop-blur-md select-none"
     ],
     group: "isolate p-0.5",
-    item: "group relative flex w-full cursor-pointer items-center outline-none select-none before:absolute before:z-[-1] before:hidden before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
+    separator: "my-1 h-px bg-n0/8",
+    item: "group relative flex w-full cursor-pointer items-center outline-none select-none before:absolute before:z-[-1] before:rounded-lg data-disabled:cursor-not-allowed data-disabled:opacity-75",
     itemDescription: "truncate text-p1",
     itemLabel: "truncate font-medium",
     itemLabelExternalIcon: "ml-px inline-block size-2.75 align-[2px] text-pc",
@@ -26,11 +27,11 @@ export const dropdownMenuTheme = defineUiTheme({
   variants: {
     color: {
       neutral: "",
-      default: {
+      base: {
         arrow: "fill-p0",
         content: "",
-        item: "open:bg-p2/80 hover:bg-p2 hover:fx-1",
-        viewport: "divide-p2 ring ring-p3/60 ring-offset-1 ring-offset-p0",
+        item: "hover:fx-1 hover:before:bg-p2!",
+        viewport: "divide-p2 ring ring-p3/60",
         label: ""
       }
     },
@@ -86,13 +87,13 @@ export const dropdownMenuTheme = defineUiTheme({
         label: "gap-1.5 p-1.5 text-xs"
       },
       lg: {
-        item: "h-11 gap-2 p-2 text-sm",
+        label: "gap-2 p-2 text-sm font-medium",
+        item: "gap-2 p-2 text-sm font-medium",
+        itemLeadingIcon: "size-4 **:stroke-[10%]",
         itemLeadingAvatarSize: "2xs",
-        itemLeadingIcon: "size-4.5",
         itemTrailingIcon: "size-4.5",
         itemTrailingKbds: "gap-1",
-        itemTrailingKbdsSize: "md",
-        label: "gap-2 p-2 text-sm"
+        itemTrailingKbdsSize: "md"
       },
       xl: {
         item: "gap-2 p-2 text-pc",
@@ -107,16 +108,16 @@ export const dropdownMenuTheme = defineUiTheme({
   },
   compoundVariants: [
     {
-      color: "default",
+      color: "base",
       active: false,
       class: {
-        item: "data-pc:before:noise text-pc/60 data-pc:text-pc data-pc:before:bg-p3! data-[state=open]:before:bg-p3/60!",
+        item: "data-pc:before:noise text-pc/60 hover:before:bg-p2 data-pc:text-pc data-pc:before:bg-p3! data-[state=open]:before:bg-p3/60!",
         itemLeadingIcon:
           "text-pc/60 group-data-pc:text-pc/60 group-data-[state=open]:text-pc"
       }
     },
     {
-      color: "default",
+      color: "base",
       active: true,
       class: {
         item: "before:noise text-pc before:bg-p3/80!",
@@ -125,7 +126,7 @@ export const dropdownMenuTheme = defineUiTheme({
     }
   ],
   defaultVariants: {
-    color: "default",
+    color: "base",
     size: "md"
   }
 })

@@ -1,12 +1,13 @@
 import { championIndex } from "#shared/constants/champions/championIndex"
 import { itemIndex } from "#shared/constants/items/itemIndex"
 
-const leadingArticles = ["My", "This", "The"]
+const leadingArticles = ["My", "This", "The", "A"]
 const middleArticles = ["the", "my", "this", "your", "their"]
 const vowelSound = /^[aeiou]/i
 
 const modifiers = [
   "Apex",
+  "Actual",
   "Autofilled",
   "Big Brain",
   "Blessed",

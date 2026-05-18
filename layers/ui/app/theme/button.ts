@@ -102,7 +102,9 @@ export const buttonTheme = defineUiTheme({
         "btn border-0 text-pc btn-ghost",
         "hover:inset-ring on:inset-ring"
       ],
-      tab: "tab"
+      tab: "tab",
+      none: "",
+      "ghost-outline": ""
     }
   },
   compoundVariants: [
@@ -147,7 +149,7 @@ export const buttonTheme = defineUiTheme({
         label:
           "text-pc group-hover/btn:text-nc group-active/btn:text-nc group-data-[state=open]/btn:text-nc",
         leadingIcon:
-          "text-pc group-hover/btn:**:text-nc group-disabled/btn:text-nc/40"
+          "group-hover/btn:**:text-nc group-disabled/btn:text-nc/40 group-data-[state=active]/btn:**:text-nc group-[aria=expanded]/btn:**:text-nc"
       }
     },
     {
@@ -212,6 +214,13 @@ export const buttonTheme = defineUiTheme({
       variant: "solid",
       class: {
         base: "btn bg-p1 text-pc ring-0! inset-ring inset-ring-p3 depth-3 open:shadow-none hover:bg-p3! hover:shadow-xs hover:inset-shadow-xs hover:inset-ring-p4/60 disabled:bg-p1!"
+      }
+    },
+    {
+      color: "primary",
+      variant: "soft",
+      class: {
+        base: "btn bg-p1 text-pc shadow-none ring-0! inset-ring inset-ring-p2/80 fx-1 disabled:bg-p1! disabled:opacity-80"
       }
     },
     {

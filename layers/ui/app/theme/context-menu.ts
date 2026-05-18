@@ -3,7 +3,7 @@ import { defineUiTheme } from "./defineUiTheme"
 export const contextMenuTheme = defineUiTheme({
   slots: {
     content: [
-      "flex min-w-44 origin-(--reka-context-menu-content-transform-origin) flex-col overflow-hidden rounded-lg bg-p0/80 shadow-lg ring ring-p3 backdrop-blur-sm",
+      "flex min-w-44 origin-(--reka-context-menu-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/80 shadow-lg ring ring-p3 backdrop-blur-sm",
 
       /*       "data-[state=closed]:translate-y-3 data-[state=closed]:animate-[slide-in-from-bottom_100ms_ease-in] data-[state=open]:translate-y-0 data-[state=open]:animate-[slide-out-to-bottom_100ms_ease-out]" */ "data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]"
     ],
@@ -11,7 +11,7 @@ export const contextMenuTheme = defineUiTheme({
       "relative flex-1 scroll-py-1 divide-y divide-default overflow-y-auto",
     group: "isolate p-0.5",
     label: "flex w-full items-center bg-transparent font-semibold text-pc",
-    separator: "-mx-1 my-1 h-px bg-border",
+    separator: "-mx-1 my-1 h-px bg-n0/8",
     item: "group relative flex w-full items-center! outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md before:duration-0! data-disabled:cursor-not-allowed data-disabled:opacity-75",
     itemLeadingIcon: "shrink-0",
     itemLeadingAvatar: "shrink-0",
@@ -76,7 +76,7 @@ export const contextMenuTheme = defineUiTheme({
       lg: {
         label: "gap-2 p-2 text-sm font-medium",
         item: "gap-2 p-2 text-sm font-medium",
-        itemLeadingIcon: "size-4 **:stroke-[2.3]",
+        itemLeadingIcon: "size-4.5 **:stroke-[10%]",
         itemLeadingAvatarSize: "2xs",
         itemTrailingIcon: "size-4",
         itemTrailingKbds: "gap-1",

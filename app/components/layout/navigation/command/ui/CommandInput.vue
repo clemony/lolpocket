@@ -62,28 +62,10 @@ function handleClear() {
     @focus="emit('update:open', true)"
     @keydown.esc.stop.prevent="emit('update:open', false)">
     <template #trailing>
-      <div
-        v-if="!modelValue"
-        v-auto-animate
-        class="flex items-center -space-x-px">
-        <UKbd
-          v-for="k in ['meta', 'K']"
-          :key="k"
-          class="text-md! text-n5 group-hover/i:text-n1!"
-          variant="subtle"
-          size="lg"
-          square
-          :value="k" />
-      </div>
-      <div v-else v-auto-animate class="flex items-center">
-        <LazyInputClear
-          variant="ghost"
-          :ui="{
-            base: 'rounded-lg border border-transparent hover:border-p5 hover:shadow-xs [&_svg]:hover:opacity-60'
-          }"
-          color="transparent"
-          @clear-input="handleClear()" />
-      </div>
+      <KbdClear
+        :model-value
+        :kbds="['meta', 'K']"
+        @clear-input="handleClear()" />
     </template>
   </UInput>
 </template>

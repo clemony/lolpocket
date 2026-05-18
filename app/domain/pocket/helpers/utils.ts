@@ -1,18 +1,6 @@
-import type { UseRefHistoryReturn } from "@vueuse/core"
 import type { Folder } from "#shared/schema"
 import { defaultPocketFolders } from "~/domain/pocket/folder/defaultFolders"
-import { generateName } from "~/domain/pocket/helpers/generateStrings"
-
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
-
-export function randomizeHistoryName(
-  localLabel: UseRefHistoryReturn<string, string> | undefined,
-  focusInput: () => void
-) {
-  if (!localLabel) return
-  localLabel.source.value = generateName()
-  focusInput()
-}
 
 export interface IconUi {
   name: string[]

@@ -46,7 +46,7 @@ export const icon = {
     share: "lucide:share", //'i-share'
     "log-in": "lucide:log-in", //'i-log-in'
     "log-out": "lucide:log-out", //'i-log-out'
-    open: "iconoir:open-in-window", //'i-iconoir-open-in-window'
+    open: "radix-icons:open-in-new-window", // radix-icons:open-in-new-window'i-iconoir-open-in-window'
     external: "lucide:external-link", //'i-external'
     tab: "lucide:arrow-right-to-line", //'i-tab'
     shift: "lucide:arrow-big-up-dash", //'i-shift'
@@ -61,6 +61,7 @@ export const icon = {
     lock: "gg:lock", //'i-lock'
     tag: "lucide:tag", //'i-tag'
     tags: "lucide:tags", //'i-tags'
+    "open-box": "lucide:package-open", //i-lucide-package-open
     toggle: "gg:toggle-off", //'i-toggle'
     unlock: "gg:lock-unlock", //'i-unlock'
     pin: "iconoir:pin", //'i-pin:"iconoir'
@@ -77,7 +78,8 @@ export const icon = {
     gear: "solar:settings-linear", //'i-gear'
     "gear-solid": "i-solar-settings-bold", //'i-gear-solid'
     handle: "radix-icons:button", //'i-handle:"radix-icons'
-    menu: "lucide:menu", //'i-menu'
+    menu: "lucide:text-align-justify", //'i-lucide-text-align-justify'
+    "page-menu": "material-symbols:page-menu-ios-outline-rounded", //i-material-symbols-page-menu-ios-outline-rounded
     more: "ri:more-line", //'i-ri-more-line'
     "more-vertical": "ri:more-line-vertical", //'i-ri-more-line-vertical'
     radio: "lsicon:radio-selected-outline", //'i-lsicon-radio-selected-outline
@@ -188,6 +190,7 @@ export const icon = {
     "heart-fill": "teenyicons:heart-solid", //'i-heart-fill'
     "heart-sm": "teenyicons:heart-small-solid", //'i-heart-sm'
     "heart-sm-outline": "teenyicons:heart-small-outline", //'i-heart-sm-outline'
+    activity: "tabler:activity-heartbeat", //i-tabler-activity-heartbeat
     infinity: "gg:infinity", //'i-infinity'
     round: "mynaui:circle-solid", //'i-round'
     shield: "teenyicons:shield-tick-outline", //'i-shield'

@@ -100,7 +100,7 @@ export const badgeTheme = defineUiTheme({
     {
       color: "transparent",
       variant: "solid",
-      class: "ring-0"
+      class: "text-pc/60 ring-0"
     },
     {
       color: "transparent",

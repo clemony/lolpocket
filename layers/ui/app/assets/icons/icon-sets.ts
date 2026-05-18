@@ -148,10 +148,10 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-lucide-lab-mug-teabag",
     closed: "i-lucide-lab-mug",
     icon: "i-lucide-lab-mug",
-    class: " scale-108    ",
+    class: " scale-111 **:stroke-[8%] ",
     ui: {
-      open: " scale-108    ",
-      closed: " scale-108   "
+      open: " scale-111 **:stroke-[8%]!",
+      closed: " scale-111 **:stroke-[8%]  "
     }
   },
   bull: {
@@ -185,5 +185,12 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-lucide-lab-shorts-boxer",
     closed: "i-lucide-lab-shirt-t",
     icon: "i-lucide-lab-shirt-t"
+  },
+  brain: {
+    key: "brain",
+    label: "Big Brain",
+    open: "i-lucide-brain-circuit",
+    closed: "i-lucide-brain",
+    icon: "i-lucide-brain"
   }
 }

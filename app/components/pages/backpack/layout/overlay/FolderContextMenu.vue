@@ -6,6 +6,7 @@ import type {
   ContextMenuProps
 } from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
+import { useBackpack } from "~/domain/backpack/useBackpack"
 import {
   deleteFolder,
   deleteFolderWithConfirm
@@ -14,11 +15,12 @@ import type { IconUi } from "~/domain/pocket/helpers/utils"
 import { iconSetFromKey } from "~/domain/pocket/helpers/utils"
 
 import {
+  collapseAllBtn,
   contextOpen,
   newPocketContext,
   pocketSidebarContextUi
 } from "~/domain/pocket/menu/contextActions"
-import { sortMenu } from "~/domain/pocket/menu/sortMenu"
+import { useSortMenu } from "~/domain/pocket/menu/sortMenu"
 import { newPocket } from "~/domain/pocket/newPocket"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
@@ -44,6 +46,12 @@ const emit = defineEmits<
 const subopen = shallowRef<boolean>(false)
 const delegated = reactiveOmit(props, "class", "folder")
 const forwarded = useForwardPropsEmits(delegated, emit)
+const routeId = useRouteParams("id")
+const { collapseAllFolders } = useBackpack()
+const sortMenu = useSortMenu()
+const collapseAllItem = computed(() =>
+  toMenuItem(collapseAllBtn(collapseAllFolders))
+)
 
 const iconList = computed(() =>
   Object.values(iconSets).filter((i) => !["archive", "trash"].includes(i.key))
@@ -104,7 +112,18 @@ const folderActions = computed(() => {
   return [
     {
       ...contextOpen(String(props.folder?.label ?? "")),
-      onClick: () => navigateTo(`/backpack/#${props.folder?.id}`)
+      onClick: () => (routeId.value = String(props.folder?.id))
+    },
+    {
+      type: "separator"
+    },
+
+    {
+      ...newPocketContext(String(props.folder.label ?? "")),
+      onClick: () =>
+        newPocket({
+          location: props.folder?.location || String(props.folder?.id)
+        })
     },
     {
       type: "separator"
@@ -125,16 +144,13 @@ const folderActions = computed(() => {
       }
     },
     {
+      type: "separator" as ContextMenuItem["type"]
+    },
+    collapseAllItem.value,
+    {
       type: "separator"
     },
     sortMenu.value,
-    {
-      ...newPocketContext(String(props.folder.label ?? "")),
-      onClick: () =>
-        newPocket({
-          location: props.folder?.location || String(props.folder?.id)
-        })
-    },
     {
       type: "separator"
     },
@@ -155,6 +171,7 @@ const icons = computed<IconUi>(() =>
 
 <template>
   <Menu
+    v-if="folder"
     v-bind="forwarded"
     :component
     :items="folderActions"
@@ -165,7 +182,7 @@ const icons = computed<IconUi>(() =>
       onCloseAutoFocus: (event: Event) => event.preventDefault()
     }"
     @update:open="
-      (e) =>
+      (e: boolean) =>
         e === false && subopen === true ? () => {} : emit('update:open', e)
     ">
     <template #default="{ open }">
@@ -188,9 +205,7 @@ const icons = computed<IconUi>(() =>
         <template #content>
           <div class="flex items-center justify-between gap-1.5 px-3">
             <div class="flex flex-col items-start">
-              <p class="text-xs leading-none font-medium text-n5">
-                Selected
-              </p>
+              <p class="text-xs leading-none font-medium text-n5">Selected</p>
               <h6>{{ iconSets[folder?.iconKey ?? "folder"]?.label }}</h6>
             </div>
             <div class="flex items-center gap-2.5 pr-1">

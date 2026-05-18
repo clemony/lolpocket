@@ -74,6 +74,9 @@ export const settingsSchema = v.object({
   folders: v.fallback(v.array(folderSchema), []),
   theme: v.fallback(v.string(), "system"),
   //
+  default_role: v.fallback(v.string(), "all"),
+  default_map: v.fallback(v.number(), 0),
+  //
   pinned_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_summoners: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),

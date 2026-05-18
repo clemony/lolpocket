@@ -1,15 +1,11 @@
 <script lang="ts" setup>
 import type { Folder } from "#shared/schema"
 import type { CollapsibleProps } from "@nuxt/ui"
-import type { ShallowRef } from "vue"
 import { VueDraggable } from "vue-draggable-plus"
 import { useBackpack } from "~/domain/backpack/useBackpack"
 import { editFolderIcon } from "~/domain/pocket/folder/editFolder"
 import { useFolderChildren } from "~/domain/pocket/folder/useFolder"
-import { useIconSet } from "~/domain/pocket/folder/useIconSet"
 import { onAdd, onChange } from "~/domain/pocket/helpers/drag"
-import { isDefault, randomizeHistoryName } from "~/domain/pocket/helpers/utils"
-import type { EditInputExpose } from "~~/layers/ui/app/types/types"
 
 defineOptions({
   inheritAttrs: false
@@ -26,104 +22,42 @@ const emit = defineEmits<{
 
 const item = computed(() => safeObject(props.item))
 
-const input = useTemplateRef<EditInputExpose>("input")
-const editing = computed<boolean>(() => input.value?.editing.value || false)
-const toggleEdit = () => input.value?.toggleEdit()
-const focusInput = () => input.value?.focusInput()
-
-function handleEdit(event: string) {
-  console.log("🥸 - handleEdit - event:", event)
-  user().updateFolderName(item.value.id, event)
-}
 const { children, childRefs, childKey } = useFolderChildren(item)
 const delegated = reactiveOmit(props, "item")
 
-const menuOpen = shallowRef<boolean>(false)
+const contextOpen = shallowRef<boolean>(false)
 
 const { sidebarFolderRefs } = useBackpack()
 
-const isDefaultFolder = computed(() => item.value && isDefault(item.value))
-
-const set = computed(() =>
-  useIconSet(
-    props.item?.iconKey,
-    computed(() => sidebarFolderRefs.value[item.value?.id] ?? false)
-  )
-)
+const { editing, toggleEdit } = useEditableButtonProvider()
+const disabled = shallowRef<boolean>(false)
 </script>
 
 <template>
   <FolderContextMenu
-    v-model:open="menuOpen"
-    :disabled="editing || !item"
+    v-model:open="contextOpen"
+    :disabled="editing || !item || disabled"
     :folder="item"
     @toggle-edit="toggleEdit()"
+    @keydown.meta="disabled = true"
     @update:icon-key="editFolderIcon(item, $event)">
     <UCollapsible
       v-if="!collapsed && item?.id"
       v-bind="delegated"
       v-model:open="sidebarFolderRefs[item.id]"
-      :disabled="editing"
+      :disabled="editing || !item.children?.value.length"
       :ui="{
         root: 'group/collapse-child',
         content:
           'my-0! flex w-full max-w-full flex-col gap-0 overflow-hidden pl-5'
       }">
-      <EditableButton
-        v-if="!isDefaultFolder"
-        ref="input"
-        :label="item?.label"
-        :icon="set.icon"
-        trailing-icon="i-up"
-        :ui="{
-          leadingIcon: set.class,
-          trailingIcon: sidebarFolderRefs[item.id] ? 'rotate-180' : ''
-        }"
-        :value="item?.label || ''"
-        :active="menuOpen"
-        @update:label="handleEdit($event)">
-        <template #label>
-          <span class="grow text-start">{{ item?.label }}</span>
-          <SidebarBadge
-            v-if="item?.children?.value.length"
-            :is-true="sidebarFolderRefs[item.id]"
-            :label="item?.children?.value.length || 0" />
-        </template>
-        <template #input-actions>
-          <LazyUButton
-            size="xs"
-            icon="i-sparkle"
-            :ui="{ base: 'max-size-6! size-6! max-w-6! min-w-6! rounded-sm' }"
-            @pointerdown.prevent.stop
-            @click.stop.prevent="
-              randomizeHistoryName(input?.localLabel, focusInput)
-            " />
-        </template>
-      </EditableButton>
-
-      <UButton
-        v-else
-        :active="menuOpen"
-        :icon="set.icon"
-        variant="solid"
-        color="transparent"
-        :ui="{
-          base: 'my-0! w-full grow gap-2.5 hover:bg-p1',
-          leadingIcon: cn('size-4.5', set.class),
-          trailingIcon: cn('trailing-rotate', {
-            '-rotate-180': sidebarFolderRefs[item.id]
-          })
-        }"
-        :label="item.label"
-        trailing-icon="i-up">
-        <span class="grow text-start text-md font-semibold">{{
-          item?.label
-        }}</span>
-        <SidebarBadge
-          v-if="item?.children?.value.length"
-          :is-true="sidebarFolderRefs[item.id]"
-          :label="item?.children?.value.length || 0" />
-      </UButton>
+      <SidebarFolderButton
+        :open="sidebarFolderRefs[item.id]"
+        :item
+        :context-open
+        @update:open="
+          sidebarFolderRefs[item.id] = !sidebarFolderRefs[item.id]
+        " />
       <template #content>
         <div
           class="relative z-0 w-full max-w-full overflow-hidden *:py-0! before:pointer-events-none before:absolute before:left-px before:h-full before:w-px before:border-l before:border-l-p4/80">
@@ -139,7 +73,7 @@ const set = computed(() =>
             <template v-if="children.length">
               <template v-for="(child, i2) in children" :key="childKey(child)">
                 <div class="h-10 max-h-10 w-full overflow-hidden pl-0.5">
-                  <SidebarPocket
+                  <SidebarPocketButton
                     :ref="childRefs.set"
                     :item="child"
                     @dblclick.stop.prevent

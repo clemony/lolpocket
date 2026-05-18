@@ -4,7 +4,7 @@ import type { TableColumn } from "@nuxt/ui"
 import type { Column, SortDirection } from "@tanstack/vue-table"
 import type { ComputedRef, VNode } from "vue"
 import DraggableColumnHeader from "./DraggableColumnHeader.vue"
-import { columnOrder } from "./drag"
+import { columnOrder } from "./dragTable"
 
 interface ColumnHeaderOptions {
   draggable?: boolean

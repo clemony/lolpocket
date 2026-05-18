@@ -5,16 +5,16 @@ import type {
   ContextMenuProps
 } from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
-import type { PocketProps } from "~/domain/pocket/types"
-
+import { useBackpack } from "~/domain/backpack/useBackpack"
 import { deletePocket } from "~/domain/pocket/deletePocket"
 import { deleteFolderWithConfirm } from "~/domain/pocket/folder/deleteFolder"
 import { duplicatePocket } from "~/domain/pocket/manage/duplicate"
 import {
+  collapseAllBtn,
   contextOpen,
   pocketSidebarContextUi
 } from "~/domain/pocket/menu/contextActions"
-import { sortMenu } from "~/domain/pocket/menu/sortMenu"
+import { useSortMenu } from "~/domain/pocket/menu/sortMenu"
 
 defineOptions({
   inheritAttrs: false
@@ -23,6 +23,7 @@ defineOptions({
 const props = defineProps<
   ContextMenuProps & {
     item: Pocket | undefined
+    type?: "default" | "table" | "sidebar"
   }
 >()
 
@@ -35,6 +36,11 @@ const emit = defineEmits<
 const subopen = shallowRef<boolean>(false)
 const delegated = reactiveOmit(props, "class", "item")
 const forwarded = useForwardPropsEmits(delegated, emit)
+const { collapseAllFolders } = useBackpack()
+const sortMenu = useSortMenu()
+const collapseAllItem = computed(() =>
+  toMenuItem(collapseAllBtn(collapseAllFolders))
+)
 
 const handleDelete = async () => {
   if (!props?.item) return
@@ -103,6 +109,16 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
     {
       type: "separator" as ContextMenuItem["type"]
     },
+    ...computed(() =>
+      props.type === "sidebar"
+        ? [
+            collapseAllItem.value,
+            {
+              type: "separator" as ContextMenuItem["type"]
+            }
+          ]
+        : []
+    ).value.filter(Boolean),
     settings.value
       ? {
           label: "Move to...",
@@ -134,7 +150,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
   <Menu
     v-slot="{ open }"
     v-bind="forwarded"
-    :items="pocketActions"
+    :items="pocketActions ?? []"
     size="lg"
     :ui="pocketSidebarContextUi"
     :content="{
@@ -142,7 +158,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
       onCloseAutoFocus: (event: Event) => event.preventDefault()
     }"
     @update:open="
-      (e) =>
+      (e: boolean) =>
         e === false && subopen === true ? () => {} : emit('update:open', e)
     ">
     <slot :open />

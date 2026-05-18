@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import {
-  provideBackpack,
-  useBackpack,
-  useBackpackProvider
-} from "~/domain/backpack/useBackpack"
+import type { ButtonProps } from "@nuxt/ui"
+import { useTableProvider } from "~/composables/ui/useTableProvider"
+import { provideBackpack } from "~/domain/backpack/useBackpack"
 import {
   useFolders,
   usePocketFolderProvider
@@ -11,7 +9,7 @@ import {
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 usePocketFolderProvider()
-useBackpackProvider()
+useTableProvider()
 
 definePageMeta({
   title: "Backpack",
@@ -24,16 +22,9 @@ definePageMeta({
 })
 
 const { defaults, routeFolder, folders } = useFolders()
-const state = useBackpackProvider()
 const store = pocketStore()
-const {
-  onFolderUpdate,
-  sidebarCollapsed,
-  toggleSidebar,
-  sidebarFolderRefs,
-  view,
-  folderId
-} = provideBackpack(state)
+const backpack = provideBackpack()
+const { folderId, sidebarCollapsed, sidebarFolderRefs, view } = backpack
 
 const folderItems = computed(() => [
   ...defaults.value.map((f) => {
@@ -58,73 +49,63 @@ onMounted(() => {
 onBeforeRouteLeave(() => {
   store.sidebarFolderRefs = sidebarFolderRefs.value
 })
+
+const toggle = computed<ButtonProps>(() => ({
+  variant: "ghost",
+  color: "neutral",
+  size: "md",
+  ui: {
+    base: cn("anchor", {
+      "": sidebarCollapsed.value
+    }),
+    leadingIcon: "size-4.5"
+  },
+  icon: sidebarCollapsed.value
+    ? "i-icon-park-outline-left-expand"
+    : "i-icon-park-outline-left-bar",
+  onClick() {
+    backpack.toggleSidebar()
+  }
+}))
 </script>
 
 <template>
   <Layout>
     <UDashboardGroup
       unit="rem"
-      class="top-(--ui-header-height) max-h-[calc(100vh-var(--ui-header-height)] w-full flex-1 gap-3 overflow-hidden px-6">
+      class="top-(--ui-header-height) max-h-[calc(100vh-var(--ui-header-height)] w-full flex-1 gap-4 overflow-hidden px-8 pt-6 pb-4">
       <BackpackSidebar />
       <UDashboardPanel resizable>
         <UPage class="size-full max-h-full overflow-hidden">
-          <div class="size-full max-h-(--ui-header-height)">
-            <h1 class="text-4xl">
-              {{ routeFolder.label }}
-            </h1>
-          </div>
           <UPageBody
             :ui="{
-              base: 'mx-auto my-0! w-full max-w-full overflow-hidden py-0!'
+              base: 'mx-auto my-0! w-full max-w-full overflow-hidden pt-4 pb-0!'
             }">
             <UTabs
               v-model:model-value="folderId"
               variant="lift"
               :ui="{
-                list: 'z-4! -mt-2.5 flex h-12 w-full items-center',
-                trigger: 'h-12 max-w-22 rounded-t-3xl',
-                label: 'hidden',
-                content: 'mt-2.5 w-full',
+                list: 'rounded-tablist z-4! flex h-12 w-full items-center',
+                trigger:
+                  'z-5! flex! h-12 max-w-32 flex-col! flex-nowrap! gap-0 rounded-t-3xl',
+                content: 'h-[88vh] max-h-[88vh] overflow-y-auto border-border',
+                leadingIcon: 'absolute! hidden',
+                label: 'w-full leading-none',
                 root: 'w-full',
-                indicator: ''
+                indicator: 'border-b! border-b-p0!'
               }"
               :content="true"
               size="md"
               :items="folderItems"
               value-key="id"
-              @update:model-value="onFolderUpdate($event)">
-              <template #leading="{ item }">
-                <Tooltip :label="item.label">
-                  <div class="anchor absolute inset-0 size-full">
-                    <Icon
-                      :name="String(item.icon)"
-                      :class="
-                        cn(
-                          'size-4.5 opacity-40 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100',
-                          { 'opacity-100': item.id === folderId }
-                        )
-                      " />
-                  </div>
-                </Tooltip>
-              </template>
+              @update:model-value="backpack.onFolderUpdate($event)">
               <template #list-leading>
-                <div class="flex items-center gap-4 pr-16 pb-7">
-                  <UButton
-                    variant="ghost"
-                    color="base"
-                    size="md"
-                    :ui="{
-                      base: cn('anchor', {
-                        '': sidebarCollapsed
-                      }),
-                      leadingIcon: 'size-4.5'
-                    }"
-                    :icon="
-                      sidebarCollapsed
-                        ? 'i-icon-park-outline-left-expand'
-                        : 'i-icon-park-outline-left-bar'
-                    "
-                    @click="toggleSidebar()" />
+                <div
+                  class="flex w-64 -translate-y-4 items-center gap-2 self-center pr-6 pl-1">
+                  <UButton v-bind="toggle" />
+                  <h1 class="truncate text-4xl">
+                    {{ routeFolder.label }}
+                  </h1>
                 </div>
               </template>
               <template #list-trailing>
@@ -140,3 +121,10 @@ onBeforeRouteLeave(() => {
     </UDashboardGroup>
   </Layout>
 </template>
+
+<style scoped>
+/* .tab {
+  --tab-corner-width: 6rem;
+  --tab-corner-height: 3rem !important;
+} */
+</style>

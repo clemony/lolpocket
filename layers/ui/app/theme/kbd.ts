@@ -12,7 +12,8 @@ export const kbdTheme = defineUiTheme({
       solid: "",
       outline: "text-pc",
       soft: "",
-      subtle: ""
+      subtle: "",
+      ghost: ""
     },
     size: {
       sm: "h-4 min-w-[16px] text-[11px] [&[square]]:w-4 [&[square]]:min-w-4",
@@ -35,12 +36,12 @@ export const kbdTheme = defineUiTheme({
     },
     {
       color: "base",
-      variant: "subtle",
+      variant: "ghost",
       size: "md",
-      class: "gap-0 bg-transparent px-0 !text-pc/70 ring-transparent"
+      class: "gap-0 bg-transparent px-0 text-pc/50 ring-transparent"
     },
     {
-      /* border-r border-b border-r-p4/60 border-b-p4/60 */ color: "base",
+      color: "base",
       variant: "outline",
       class: "bg-transparent text-pc/70 ring ring-p4"
     },

@@ -14,7 +14,13 @@ const { collapsed } = defineProps<{
   collapsed?: boolean
 }>()
 const { folders, all } = useFolders()
-
+const count = computed(
+  () =>
+    (folders.value
+      .map((f) => f.children?.value.length)
+      .reduce((a, b) => (a || 0) + (b || 0), 0) || 0) +
+    (all.value.children?.value.length || 0)
+)
 const { children, childRefs, childKey } = useAllFolderChildren(all)
 const { backpackFolderOpen: open } = useBackpack()
 
@@ -26,41 +32,28 @@ const set = computed(() => {
   }
 })
 
-const menuOpen = shallowRef<boolean>(false)
-
-const accordion = useTemplateRef<HTMLElement>("accordion")
-
-/* useSortable(accordion, items, {
-  animation: 150
-}) */
+const contextOpen = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <FolderContextMenu v-model:open="menuOpen" :folder="defaultPocketFolders.all">
+  <LazyFolderContextMenu
+    v-model:open="contextOpen"
+    :folder="defaultPocketFolders.all">
     <UCollapsible
       v-if="!collapsed"
       v-model:open="open"
       :ui="{
-        content: 'my-0! flex w-full flex-col gap-0.5 pr-4 pl-4.5'
+        content: 'z-auto my-0! flex w-full flex-col gap-0.5 pr-4 pl-4.5'
       }">
-      <UButton
-        :icon="set.icon"
-        variant="solid"
-        color="transparent"
-        :ui="{
-          base: 'my-0! w-full grow gap-2.5 hover:bg-p1',
-          leadingIcon: cn('size-4.5', set.leadingIcon),
-          trailingIcon: cn('trailing-rotate', { '-rotate-180': open })
-        }"
-        trailing-icon="i-up">
-        <span class="grow text-start text-md font-semibold">{{
-          all?.label
-        }}</span>
-        <SidebarBadge
-          v-if="all.children?.value.length"
-          :is-true="open"
-          :label="all.children?.value.length || 0" />
-      </UButton>
+      <div class="[container-type:scroll-state] sticky top-0 z-1 w-full">
+        <div class="w-full bg-p0 pt-2 stuck-top:pb-1">
+          <SidebarFolderButton
+            :item="defaultPocketFolders.all"
+            :set="set"
+            :count
+            :context-open />
+        </div>
+      </div>
       <template #content>
         <VueDraggable
           :model-value="children"
@@ -71,12 +64,12 @@ const accordion = useTemplateRef<HTMLElement>("accordion")
           :group="{ name: 'pocket' }"
           @add="onAdd($event, all?.location || all?.id)"
           @change="onChange($event)">
-          <BackpackSidebarFolder
+          <LazyBackpackSidebarFolder
             v-for="child in folders"
             :key="child?.id"
             :item="child" />
 
-          <SidebarPocket
+          <LazySidebarPocketButton
             v-for="(child, i) in children"
             :key="childKey(asPocketProps(child))"
             :ref="childRefs.set"
@@ -91,5 +84,5 @@ const accordion = useTemplateRef<HTMLElement>("accordion")
         </VueDraggable>
       </template>
     </UCollapsible>
-  </FolderContextMenu>
+  </LazyFolderContextMenu>
 </template>

@@ -3,24 +3,29 @@ import { Icon, UTooltip, UUser } from "#components"
 import type { Folder } from "#shared/schema"
 import { DragDropProvider } from "@dnd-kit/vue"
 import type { DropdownMenuItem, TableRow } from "@nuxt/ui"
-import type { SortingState, Table } from "@tanstack/vue-table"
-import { useBackpack } from "~/domain/backpack/useBackpack"
+import type { Table } from "@tanstack/vue-table"
+import { folderActions } from "~/components/pages/backpack/layout/table/tableMenus"
+import { useTableInject } from "~/composables/ui/useTableProvider"
 import { defaultPocketFolders } from "~/domain/pocket/folder/defaultFolders"
 import { useFolders } from "~/domain/pocket/folder/useFolder"
-import { updatePocketLocation } from "~/domain/pocket/manage/editPocket"
 import type { PocketProps } from "~/domain/pocket/types"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 import { currentPatchNormalized } from "~~/shared/utils/dataHelpers"
 import { columns } from "./table/columns"
-import { columnOrder, onColumnDragEnd } from "./table/drag"
+import { columnOrder, onColumnDragEnd } from "./table/dragTable"
 import { rowRunes } from "./table/tableHelpers"
+
+defineProps<{
+  folder?: Folder
+}>()
 
 const route = useRoute()
 
 const id = asString(route.params.id)
 
 const { routeFolder } = useFolders()
-const { tableApi } = useBackpack()
+const { tableApi, rowSelection, columnPinning, columnVisibility, sorting } =
+  useTableInject<Pocket>()
 const { pockets } = storeToRefs(pocketStore())
 
 const data = computed<Pocket[]>(() => {
@@ -45,32 +50,8 @@ const folderIcon = (location: string) => {
   if (key) return iconSets[key]
 }
 
-const rowSelection = ref<Record<string, boolean>>({})
-
-const columnPinning = ref({
-  left: ["location", "label"],
-  right: []
-})
-
-const menu = (row: TableRow<Pocket>) => [
-  {
-    label: "Move to..."
-  },
-  { type: "separator" as DropdownMenuItem["type"] },
-  ...(settings.value?.folders.map((f) => ({
-    label: f.label,
-    icon: iconSets[f.iconKey]?.icon,
-    ui: {
-      itemLeadingIcon: iconSets[f.iconKey]?.ui?.open
-    },
-    onSelect() {
-      updatePocketLocation(row.original.key, f.id)
-    }
-  })) as DropdownMenuItem[])
-]
-
 const pocketContextItem = ref<Pocket | undefined>()
-const contextDisabled = shallowRef<boolean>(true)
+const contextDisabled = shallowRef<boolean>(false)
 
 const contextOpen = shallowRef<boolean>(false)
 function onContextmenu(_e: Event, row: TableRow<Pocket>) {
@@ -82,8 +63,6 @@ function onContextmenu(_e: Event, row: TableRow<Pocket>) {
 function onSelect(e: Event, row: TableRow<Pocket>) {
   row.toggleSelected()
 }
-
-const sorting = ref<SortingState>([])
 
 interface UTableExpose<T> {
   tableApi: Table<T>
@@ -101,10 +80,10 @@ watch(
 
 <template>
   <DragDropProvider @drag-end="onColumnDragEnd">
-    <PocketContextMenu
+    <LazyPocketContextMenu
       v-model:open="contextOpen"
       as-child
-      :disabled="contextDisabled"
+      :disabled="contextDisabled || !pocketContextItem"
       :item="pocketContextItem"
       @update:open="contextOpen = $event">
       <UTable
@@ -112,17 +91,19 @@ watch(
         v-model:row-selection="rowSelection"
         v-model:column-order="columnOrder"
         v-model:sorting="sorting"
+        v-model:column-visibility="columnVisibility"
         :column-pinning="columnPinning"
         sticky
         :data
         :columns
         :ui="{
-          tbody: 'pocket-table-tbody w-full pb-4',
+          tbody: 'pocket-table-tbody pb-4',
           thead: 'overflow-hidden bg-p0 py-0',
           th: 'py-0 text-center first:pl-3',
           tr: 'hover:p1 group/row',
           td: 'py-0 group-data-[selected=true]/row:bg-p2 data-[pinned=left]:group-hover/row:bg-p1 data-[pinned=left]:group-data-[selected=true]/row:bg-p2',
-          root: 'tabs-content max-h-[89vh]h-[89vh] z-0 max-h-[89vh] w-full rounded-4xl bg-p0 shadow-sm'
+          root: 'tabs-content relative z-0 size-full w-full rounded-4xl bg-p0 shadow-sm',
+          empty: 'm-auto'
         }"
         @select="onSelect"
         @contextmenu="onContextmenu">
@@ -130,7 +111,10 @@ watch(
 
         <template #location-cell="{ row }">
           <div class="grid size-full w-16 place-items-center">
-            <UDropdownMenu v-slot="{ open }" :items="menu(row)" size="md">
+            <UDropdownMenu
+              v-slot="{ open }"
+              :items="folderActions(routeFolder, row)"
+              size="md">
               <UButton
                 color="base"
                 :icon="folderIcon(row.getValue('location'))?.icon"
@@ -326,8 +310,17 @@ watch(
             </Tooltip>
           </div>
         </template>
+
+        <template #empty>
+          <div
+            class="absolute inset-0 m-auto grid size-full items-center justify-center">
+            <BackpackTableEmpty
+              :item="routeFolder"
+              :icon="folderIcon(routeFolder.id ?? 'all')" />
+          </div>
+        </template>
       </UTable>
-    </PocketContextMenu>
+    </LazyPocketContextMenu>
     <!--     <DragOverlay>
       <div>I will be rendered while dragging...</div>
     </DragOverlay> -->

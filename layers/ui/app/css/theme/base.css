@@ -49,7 +49,8 @@
   --ui-text-toned: var(--primary-700);
   --ui-text-accented: var(--primary-800);
 
-  --ui-border: var(--primary-200);
+  --ui-border: oklch(93.5% 0 68);
+  --ui-bc: color-mix(in oklab, var(--primary-200) 80%, #fff 20%);
   --ui-border-muted: var(--primary-100);
   --ui-border-accented: var(--primary-300);
   --ui-border-inverted: var(--primary-900);
@@ -98,6 +99,7 @@
   --ui-text-accented: var(--primary-700);
 
   --ui-border: var(--primary-600);
+  --ui-bc: var(--primary-600);
   --ui-border-muted: var(--primary-700);
   --ui-border-accented: var(--primary-500);
   --ui-border-inverted: var(--primary-300);
@@ -137,6 +139,7 @@
   --ui-text-toned: var(--nord-400);
   --ui-text-accented: var(--nord-500);
 
+  --ui-bc: var(--nord-600);
   --ui-border: var(--nord-600);
   --ui-border-muted: var(--nord-700);
   --ui-border-accented: var(--nord-500);
@@ -163,7 +166,7 @@
 @theme inline {
   --color-epic: var(--ui-epic);
   --color-base: var(--ui-base);
-
+  --color-border: var(--ui-border);
   --color-p0: var(--ui-p0);
   --color-p1: var(--ui-p1);
   --color-p2: var(--ui-p2);

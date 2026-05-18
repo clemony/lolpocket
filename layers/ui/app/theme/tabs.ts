@@ -37,15 +37,17 @@ export const tabsTheme = defineUiTheme({
         list: "shadow-none inset-shadow-none"
       },
       lift: {
-        list: "tabs-lift-list tabs-lift z-1 tabs h-auto rounded-none border-0 p-0",
+        list: "tabs-lift-list tabs-lift z-1 tabs h-auto rounded-none border-0! p-0",
         root: "h-auto p-0",
-        indicator: "tab-active z-2 rounded-b-none!",
+        indicator: "tab-active z-2 rounded-b-none! border-b-0!",
         leadingIcon:
-          "opacity-60 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100",
+          "[color:unset] opacity-60 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100",
         trigger:
-          "tab z-1 rounded-b-none! border-b-0 font-medium! tracking-normal",
+          "group/trigger tab z-3! rounded-b-none! border-b-0! font-medium! tracking-normal",
+        label:
+          "pointer-events-none after:absolute after:-bottom-px after:z-6 after:h-px after:w-full group-data-[state-active]/trigger:after:opacity-100 group-data-[state-inactive]/trigger:after:opacity-0",
         content:
-          "tabs-content tabs-lift-content z-0 -translate-y-px overflow-hidden rounded-4xl border border-p2"
+          "tabs-content tabs-lift-content z-0 -translate-y-px overflow-hidden rounded-4xl border-x border-b"
       },
       outline: {}
     },
@@ -102,7 +104,9 @@ export const tabsTheme = defineUiTheme({
       class: {
         root: "tabs-light tabs",
         indicator: "",
-        trigger: "border-p2"
+        label: "after:bg-p0",
+        leadingIcon: "",
+        trigger: "border-border"
       }
     },
     {
@@ -110,16 +114,32 @@ export const tabsTheme = defineUiTheme({
       variant: "lift",
       class: {
         indicator: "tab-dark bg-neutral",
-        root: "tabs-dark tabs border-0!",
+        root: "tabs-dark tabs border-0! [--tab-bg:var(--color-neutral)]! [--tab-inset-color:var(--color-n2)]!",
         list: "border-0!",
-        trigger:
-          "border-b-0! border-p2 group-data-[state-active]/trigger:text-pc group-data-[state-active]/trigger:**:text-nc"
+        label:
+          "group-data-[state-active]/trigger:text-nc! group-data-[state-active]/trigger:**:text-nc! group-not-[.background-tab]/trigger:after:bg-n0",
+        trigger: "border-0!",
+        leadingIcon:
+          "group-data-[state-active]/trigger:text-nc! group-data-[state-active]/trigger:**:text-nc!"
+      }
+    },
+    {
+      color: "primary",
+      variant: "lift",
+      class: {
+        indicator: "bg-p1",
+        root: "tabs border-0! [--tab-bg:var(--color-p1)]! [--tab-inset-color:var(--color-border)]!",
+        list: "border-0!",
+        label: "group-not-[.background-tab]/trigger:after:bg-p1",
+        trigger: "border-b-0! [--tab-bg:var(--color-p1)]!",
+        content: "border border-t-0! border-border"
       }
     },
     {
       color: "base",
       variant: "pill",
       class: {
+        content: "border-border!",
         indicator: "fx-depth bg-p0 shadow-xs inset-ring inset-ring-p3 depth-3",
         list: "noise bg-p1 inset-shadow-xs inset-ring inset-shadow-black/4 inset-ring-p3/80",
         trigger:

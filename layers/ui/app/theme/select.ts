@@ -11,7 +11,7 @@ export const selectTheme = defineUiTheme({
       "opacity-70 group-hover/select:opacity-100 group-active/select:opacity-100 [&>svg]:size-4 [&>svg]:align-icon [&>svg]:**:stroke-[2.4]",
     arrow: "fill-p0 text-p0",
     content:
-      "pointer-events-auto z-[120] flex max-h-60 w-(--reka-select-trigger-width) origin-(--reka-select-content-transform-origin) flex-col overflow-hidden rounded-lg bg-p0/90 p-0 shadow-lg ring shadow-black/8 ring-p3/60 drop-shadow-none backdrop-blur-sm",
+      "pointer-events-auto z-[120] flex max-h-60 w-(--reka-select-trigger-width) origin-(--reka-select-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/90 p-0 shadow-lg ring shadow-black/8 ring-p3/60 drop-shadow-none backdrop-blur-sm",
     viewport:
       "relative flex-1 scroll-py-1 divide-y divide-p3 overflow-y-auto bg-transparent p-0",
     group: "isolate px-0.5 py-1",
@@ -59,7 +59,7 @@ export const selectTheme = defineUiTheme({
         base: "h-10 rounded-lg",
         label: "gap-1.5 p-1.5 text-xs",
         leading: "[&>svg]:size-4.5 [&>svg]:**:stroke-[2.4]",
-        item: "gap-1.5 px-2 text-sm",
+        item: "min-h-10 items-center gap-1.5 rounded-lg px-2 text-sm",
         itemLeadingIcon: "size-4.5",
         itemLeadingAvatarSize: "2xs",
         itemLeadingChip: "size-5",
@@ -70,7 +70,7 @@ export const selectTheme = defineUiTheme({
       lg: {
         base: "h-12",
         label: "gap-2 p-2 text-xs",
-        item: "gap-2 p-2 text-sm",
+        item: "min-h-12 items-center gap-2 rounded-lg p-2 text-sm",
         itemLeadingIcon: "size-5",
         itemLeadingAvatarSize: "2xs",
         itemLeadingChip: "size-5",

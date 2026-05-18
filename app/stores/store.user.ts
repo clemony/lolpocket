@@ -142,9 +142,7 @@ export const user = defineStore(
         settings.value && settings?.value.folders
           ? settings?.value.folders.map((f) => f.id)
           : []
-      return ["all", "archive", "trash", ...(userFolders || "")].filter(
-        Boolean
-      )
+      return ["all", "archive", "trash", ...(userFolders || "")].filter(Boolean)
     })
 
     const folderLocationSchema = v.fallback(
@@ -153,6 +151,7 @@ export const user = defineStore(
     )
 
     const match = /Entitled Folder.*/
+
     function createEntitledName(): string {
       const folders = settings?.value?.folders
         .map((folder) => folder.label)
@@ -220,13 +219,18 @@ export const user = defineStore(
       markInboxMessageRead,
       markInboxNotificationRead,
       deleteInboxMessage,
+
+      //folder
       newPocketFolder,
+      createEntitledName,
       folderLocationSchema,
       updateFolderName,
+      getFolder,
       folderKeys,
+
+      //
       updateSortMethod,
       identities,
-      getFolder,
       hotkeys,
 
       setDefaultFolderName

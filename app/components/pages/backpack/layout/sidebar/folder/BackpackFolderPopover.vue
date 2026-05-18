@@ -12,6 +12,7 @@ const item = computed(() => safeObject(itemFolder))
 const { children, childRefs, childKey } = useFolderChildren(item)
 const overlay = useOverlay()
 
+console.log("🥸 - item:", item)
 const modal = overlay.create(LazyEditBackpackItemModal)
 
 async function openModal() {
@@ -40,44 +41,46 @@ const set = computed(() => useIconSet(item.value?.iconKey, open))
       onCloseAutoFocus: (event) => event.preventDefault()
     }"
     :ui="{ content: 'max-w-90 min-w-64 pl-0!' }">
-    <FolderContextMenu
+    <!--   <FolderContextMenu
       v-model:open="menuOpen"
       :disabled="editing || !item"
       :folder="item"
       @update:icon-key="editFolderIcon(item, $event)">
-      <UTooltip :text="item?.label" :content="{ side: 'right' }">
-        <UButton
-          variant="ghost"
-          square
-          :icon="set.icon"
-          :ui="{
-            leadingIcon: cn('size-5', set.class)
-          }"
-          @click="togglePopover()" />
-      </UTooltip>
-    </FolderContextMenu>
+    <UTooltip :text="item?.label" :content="{ side: 'right' }">-->
+    <UButton
+      variant="ghost"
+      :active="$route.params.path === item.to"
+      size="md"
+      square
+      :icon="set.icon"
+      :ui="{
+        base: 'anchor',
+        leadingIcon: cn('size-4.5', set.class)
+      }" />
+    <!--
+    </UTooltip>     </FolderContextMenu> -->
     <template #content>
       <div
-        class="flex w-full items-center justify-between gap-3 border-b border-p3 px-3 pt-2 pb-1">
+        class="flex w-full items-center justify-between gap-3 border-b border-p3 pt-0.5 pr-1 pl-4">
         <h5 class="max-w-full truncate text-xs font-medium">
           {{ item.label }}
         </h5>
 
         <div class="flex items-center gap-1.5 self-start">
-          <NewPocketOptionsMenu
-            size="_xs"
-            color="primary"
-            variant="outline"
+          <NewOptionsMenu
+            size="xs"
+            color="neutral"
+            variant="ghost"
+            icon="i-more"
             square
             :ui="{
-              base: 'size-6 rounded-full inset-ring-p4/60',
-              leadingIcon: 'scale-120 **:stroke-[4]'
+              base: 'w-12 rounded-lg px-4!',
+              leadingIcon: ''
             }" />
-          <NewPocketButton size="_xs" :ui="{ base: 'rounded-full' }" square />
         </div>
       </div>
       <div v-if="children?.length" class="w-full py-3 pr-2 pl-1">
-        <SidebarPocket
+        <SidebarPocketButton
           v-for="child in children"
           :key="childKey(child)"
           :item="child" />

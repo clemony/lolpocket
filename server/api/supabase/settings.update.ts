@@ -7,6 +7,8 @@ import { requireUser } from "../client.supabase"
 const RPC_SETTING_KEYS = [
   "locale",
   "theme",
+  "default_role",
+  "default_map",
   "favorite_pockets",
   "favorite_summoners",
   "blocked_users",

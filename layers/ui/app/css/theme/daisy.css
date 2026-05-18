@@ -49,8 +49,6 @@
   --radius-field: var(--radius-lg);
 
   --input-color: var(--ui-p3);
-  --tab-border-color: var(--ui-p3);
-  --tab-border-colors: var(--ui-p3);
 
   --color-accent: var(--ui-accent);
   --color-accent-content: var(--ui-accent-content);
@@ -64,7 +62,7 @@
 }
 
 :root {
-  --color-secondary: var(--color-p1);
+  --color-secondary: var(--color-p2);
 }
 
 @utility tab {
@@ -77,7 +75,7 @@
     --radius-start: none;
   }
   &.tab-active {
-    @apply border-x border-t border-b-0 border-p2!;
+    @apply border-x border-t border-b-0 border-(--color-border)!;
   }
 }
 
@@ -89,9 +87,9 @@
 @utility tabs {
   &.tabs-light {
     --tab-bg: var(--ui-p0);
-    --tab-border-color: var(--color-p2) !important;
-    --tab-border-colors: var(--color-p2);
-    --tab-inset-color: color-mix(in oklab, var(--color-p2) 80%, #fff 20%);
+    --tab-border-color: var(--ui-border) !important;
+    --tab-border-colors: var(--ui-border);
+    --tab-inset-color: var(--color-p2);
   }
   &.tabs-dark {
     --tab-bg: var(--color-neutral);
@@ -102,16 +100,19 @@
       @apply border-n2! text-nc! **:text-nc!;
     }
     & [data-state="active"] {
-      @apply border-n2! text-nc! **:text-nc! [&_svg]:text-nc;
+      @apply text-nc! **:text-nc! [&_svg]:text-nc;
     }
     & .tab {
+      --tab-bg: var(--color-neutral);
       @apply active:**:text-nc!;
     }
   }
 }
 
-.tabs-list.tabs-list {
-  @apply before:absolute before:inset-x-0 before:bottom-0 before:z-0 before:h-px before:bg-p2;
+@layer utilities {
+  .rounded-tablist::before {
+    @apply pointer-events-none absolute inset-x-0 -bottom-12 z-0 h-22 w-full translate-y-9.75 justify-self-center rounded-4xl border-x border-t border-(--ui-border) mask-b-from-31% mask-b-to-30% content-[''];
+  }
 }
 .tabs-lift-list:has(
     > :nth-child(1 of :where([data-slot="trigger"], .tab)):is(

@@ -34,17 +34,13 @@ const modelValue = ref<Folder[]>([])
     </div>
 
     <div class="flex items-center gap-1">
-      <NewPocketButton
-        :location="folder.location || folder.id"
-        variant="ghost"
-        color="primary"
-        collapsed
-        :ui="{ label: 'hidden', leadingIcon: 'scale-110 **:stroke-[1.8]' }" />
-      <NewPocketOptionsMenu
+      <NewOptionsMenu
         color="primary"
         variant="ghost"
-        icon="i-more"
-        :location="folder.location || folder.id"
+        :options="{
+          folder: { disabled: true },
+          pocket: { location: folder.id }
+        }"
         :ui="{ trailingIcon: 'hidden' }" />
     </div>
   </div>
@@ -56,7 +52,7 @@ const modelValue = ref<Folder[]>([])
     sort
     ease="ease-in-out"
     filter=".sortable-placeholder"
-    class="pocket-sortable group/sortable relative grid grid-cols-1 gap-8 px-8 transition-all duration-300 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    class="pocket-sortable group/sortable relative grid grid-cols-1 gap-8 p-8 transition-all duration-300 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     <template v-if="children.length">
       <div v-for="item in children" :key="childKey(item)">
         <LazyBackpackPocketCard

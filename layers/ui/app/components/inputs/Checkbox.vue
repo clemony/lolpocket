@@ -1,11 +1,14 @@
 <script lang="ts" setup>
+import { tv } from "tailwind-variants"
+
 const props = defineProps<{
   class?: HTMLAttributes["class"]
   id?: string
-  color?: "res" | "dom" | "neutral"
+  color?: "res" | "dom" | "neutral" | "base"
   modelValue?: boolean | "indeterminate"
   defaultValue?: boolean
   disabled?: boolean
+  variant?: "solid" | "ghost" | "outline"
   size?: "lg" | "md" | "sm" | "xs" | "xl"
   invalid?: boolean
 }>()
@@ -14,23 +17,84 @@ const emit = defineEmits<{
   "update:modelValue": [value: boolean]
 }>()
 
-const size = {
-  lg: "checkbox-lg",
-  xl: "checkbox-xl",
-  md: "checkbox-md",
-  sm: "checkbox-sm",
-  xs: "checkbox-xs"
-}[props.size || "md"]
-
-const color = {
-  res: "bg-res text-white/70",
-  dom: "bg-dom text-white/70",
-  neutral: "checkbox-neutral"
-}[props.color || "neutral"]
-
 function updateValue(event: Event) {
   emit("update:modelValue", (event.target as HTMLInputElement).checked)
 }
+
+const checkboxVariants = tv({
+  base: "checkbox",
+  variants: {
+    color: {
+      res: "",
+      dom: "",
+      base: "",
+      neutral: ""
+    },
+    size: {
+      lg: "checkbox-lg",
+      xl: "checkbox-xl",
+      md: "checkbox-md",
+      sm: "checkbox-sm",
+      xs: "checkbox-xs"
+    },
+    variant: {
+      solid: "checked:shadow-sm checked:drop-shadow-sm",
+      ghost:
+        "border-0 bg-transparent shadow-none ring-0 inset-shadow-none fx-0",
+      outline: ""
+    }
+  },
+  compoundVariants: [
+    {
+      color: "base",
+      variant: "solid",
+      class: "bg-p0 text-pc"
+    },
+    {
+      color: "base",
+      variant: "ghost",
+      class: "text-pc"
+    },
+
+    {
+      color: "base",
+      variant: "outline",
+      class: "text-pc ring ring-pc/60"
+    },
+    {
+      color: "neutral",
+      variant: "solid",
+      class: "checkbox-neutral"
+    },
+    {
+      color: "neutral",
+      variant: "ghost",
+      class: "text-nc"
+    },
+    {
+      color: "neutral",
+      variant: "outline",
+      class: "text-nc ring ring-nc"
+    },
+    {
+      color: "res",
+      variant: "solid",
+      class: "bg-res text-white/70"
+    },
+    {
+      color: "dom",
+      variant: "solid",
+      class: "bg-dom text-white/70"
+    }
+  ],
+  defaultVariants: {
+    colors: "base",
+    size: "md",
+    variant: "solid"
+  }
+})
+
+type CheckboxVariants = ReturnType<typeof checkboxVariants>
 </script>
 
 <template>
@@ -40,9 +104,12 @@ function updateValue(event: Event) {
     :checked="props.modelValue === true"
     :class="
       cn(
-        'checkbox-res checkbox checked:shadow-sm checked:drop-shadow-sm',
-        size,
-        color,
+        '',
+        checkboxVariants({
+          size: props.size,
+          variant: props.variant,
+          color: props.color
+        }),
         props.class,
         props.invalid && 'checkbox-invalid'
       )
