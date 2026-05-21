@@ -5,12 +5,14 @@ const { isCollapsed, pinned } = defineProps<{
   isCollapsed: boolean
   pinned: Pocket[]
 }>()
+const store = pocketStore()
+const sessionStore = session()
 </script>
 
 <template>
   <Collapsible
     v-if="!isCollapsed"
-    v-model:open="session().toggles.backpack.pinned"
+    v-model:open="sessionStore.toggles.backpack.pinned"
     class="px-3 pb-2 data-[collapsed=true]:py-2"
     :data-collapsed="isCollapsed">
     <CollapsibleTrigger class="group/collapse" as-child>
@@ -54,7 +56,7 @@ const { isCollapsed, pinned } = defineProps<{
             @click.stop>
             <icon class="absolute size-4 **:stroke-[1.84]" name="pin" />
             <input
-              v-model="pocketStore().pinned"
+              v-model="store.pinned"
               class="peer hidden"
               name="toggle-pin"
               type="checkbox" />

@@ -1,6 +1,5 @@
-import type { Table } from "@tanstack/vue-table"
 import type { AcceptableValue } from "reka-ui"
-import type { InjectionKey, Ref, ShallowRef } from "vue"
+import type { InjectionKey, Ref } from "vue"
 
 export type ViewMode = "gallery" | "table"
 
@@ -11,7 +10,6 @@ export interface BackpackInject {
   searchVisible: Ref<boolean>
   folderId: Ref<string>
   folderName: Ref<string>
-  tableApi: ShallowRef<Table<Pocket> | null>
   activeTab: Ref<string>
   backpackFolderOpen: Ref<boolean>
 
@@ -19,13 +17,12 @@ export interface BackpackInject {
   onFolderUpdate: (e: AcceptableValue | undefined) => void
   toggleSidebar: () => void
   toggleSearch: (value?: boolean) => void
+
   collapseAllFolders: () => void
   path: Ref<string | null | undefined>
 }
 export function useBackpackProvider(): BackpackInject {
   const route = useRoute()
-
-  const tableApi = shallowRef<Table<Pocket> | null>(null)
 
   const sidebarCollapsed = ref<boolean>(false)
   const toggleSidebar = useToggle(sidebarCollapsed)
@@ -33,7 +30,7 @@ export function useBackpackProvider(): BackpackInject {
   const path = ref<string | null>()
   const view = ref<ViewMode>("gallery")
 
-  const folderId = ref<string>("all")
+  const folderId = ref<string>("folders")
   const folderName = ref<string>("Backpack")
   const activeTab = ref<string>("Backpack")
   const searchVisible = ref<boolean>(false)
@@ -56,31 +53,18 @@ export function useBackpackProvider(): BackpackInject {
   watch(
     () => id.value,
     (value) => {
-      if (folderId.value !== "search") folderId.value = String(value ?? "all")
+      folderId.value = String(value ?? "folders")
     },
     { immediate: true }
-  )
-
-  watch(
-    () => search.value,
-    (value) => {
-      if (value && value.length > 2) {
-        folderId.value = "search"
-      } else if (folderId.value === "search") {
-        folderId.value = String(id.value ?? "all")
-      }
-    }
   )
 
   const toggleSearch = useToggle(searchVisible)
 
   function onFolderUpdate(e: AcceptableValue | undefined) {
-    if (e !== "search") {
-      const value = String(e ?? "all")
+    const value = String(e ?? "folders")
 
-      folderId.value = value
-      id.value = value
-    }
+    folderId.value = value
+    id.value = value
   }
 
   function collapseAllFolders() {
@@ -97,7 +81,6 @@ export function useBackpackProvider(): BackpackInject {
     backpackFolderOpen,
     collapseAllFolders,
     onFolderUpdate,
-    tableApi,
     folderId,
     folderName,
     activeTab,

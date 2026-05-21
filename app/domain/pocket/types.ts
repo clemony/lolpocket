@@ -1,4 +1,5 @@
 import type { ButtonProps } from "@nuxt/ui"
+import type { SortableProps } from "~/types/sortable"
 
 export interface FolderExpose {
   toggleEdit: () => void
@@ -10,10 +11,10 @@ export type PocketPropsChildren =
   | ComputedRef<PocketProps[]>
   | Ref<PocketProps[]>
 
-export interface PocketProps extends Omit<ButtonProps, "children" | "type"> {
-  pocket?: Pocket
-  getKey?: () => string
-  slot?: string
-  type?: "pocket"
-  order?: number
+export interface PocketProps extends SortableProps, Pocket {
+  key: string
+  to?: string
+  avatar: ButtonProps["avatar"]
+
+  data: ComputedRef<Pocket>
 }

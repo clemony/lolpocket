@@ -1,6 +1,12 @@
 import { nowInstantString } from "#shared/utils"
 import { skinKeyFromUrl } from "#shared/utils/img-url"
 import * as v from "valibot"
+import type { BackpackFolderKey } from "~/domain/pocket/folder/defaultFolders"
+import {
+  backpackFolders,
+  defaultFolderKeys
+} from "~/domain/pocket/folder/defaultFolders"
+import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 export const user = defineStore(
   "userStore",
@@ -14,7 +20,19 @@ export const user = defineStore(
       ref<Record<ProviderKey<string>, ProviderIdentity | null>>()
 
     const { cache } = storeToRefs(summonerStore())
-
+    function map() {
+      if (!settings.value?.folders) return
+      settings.value.folders = settings.value?.folders.map((f) =>
+        f.location === "backpack" || !f.location
+          ? {
+              ...f,
+              location: "folders"
+            }
+          : {
+              ...f
+            }
+      )
+    }
     watch(
       () =>
         (cache.value as Record<string, Summoner> | undefined)?.[
@@ -142,13 +160,25 @@ export const user = defineStore(
         settings.value && settings?.value.folders
           ? settings?.value.folders.map((f) => f.id)
           : []
-      return ["all", "archive", "trash", ...(userFolders || "")].filter(Boolean)
+      return ["backpack", "archive", "trash", ...(userFolders || "")].filter(
+        Boolean
+      )
     })
 
     const folderLocationSchema = v.fallback(
       v.picklist(folderKeys.value ?? []),
-      "all"
+      "backpack"
     )
+
+    const folderIcon = (location: string) => {
+      const folders = computed<Folder[]>(() => [
+        ...Object.values(backpackFolders),
+        ...(settings.value?.folders ?? [])
+      ])
+
+      const key = folders.value.find((f) => f.id === location)?.iconKey
+      if (key) return iconSets[key]
+    }
 
     const match = /Entitled Folder.*/
 
@@ -204,6 +234,60 @@ export const user = defineStore(
       return settings.value?.folders.find((f) => f.id === folderId)
     }
 
+    const defaultFolderOrder = ref<Record<BackpackFolderKey, number>>(
+      Object.fromEntries(
+        defaultFolderKeys.map((folderId, index) => [folderId, index])
+      ) as Record<BackpackFolderKey, number>
+    )
+
+    function updateDefaultFolderSort(folderId: string, newIndex: number) {
+      if (!defaultFolderKeys.includes(folderId as BackpackFolderKey)) return
+
+      const ordered = [...defaultFolderKeys].sort(
+        (a, b) => defaultFolderOrder.value[a] - defaultFolderOrder.value[b]
+      )
+      const currentIndex = ordered.indexOf(folderId as BackpackFolderKey)
+      if (currentIndex === -1) return
+
+      const [folder] = ordered.splice(currentIndex, 1)
+      if (!folder) return
+
+      ordered.splice(Math.max(0, Math.min(newIndex, ordered.length)), 0, folder)
+
+      defaultFolderOrder.value = Object.fromEntries(
+        ordered.map((id, index) => [id, index])
+      ) as Record<BackpackFolderKey, number>
+    }
+
+    function updateFolderSort(folderId: string, order: number) {
+      const folder = getFolder(folderId)
+      if (!folder) return
+
+      const byOrder = (a: Folder, b: Folder) =>
+        (a.order ?? 0) - (b.order ?? 0) ||
+        String(a.label ?? "").localeCompare(String(b.label ?? ""), undefined, {
+          numeric: true,
+          sensitivity: "base"
+        })
+      const folders =
+        settings.value?.folders
+          .filter((f) => f.id !== folder.id)
+          .sort(byOrder) ?? []
+
+      folders.splice(Math.max(0, Math.min(order, folders.length)), 0, folder)
+
+      const updates = new Map<string, number>()
+      folders.forEach((f, index) => {
+        updates.set(f.id, index)
+      })
+
+      if (settings.value)
+        settings.value.folders = settings.value?.folders.map((f) => {
+          const update = updates.get(f.id)
+          return update !== undefined ? { ...f, order: update } : f
+        })
+    }
+
     return {
       settings,
       keybinds,
@@ -225,14 +309,18 @@ export const user = defineStore(
       createEntitledName,
       folderLocationSchema,
       updateFolderName,
+      updateFolderSort,
+      defaultFolderOrder,
+      updateDefaultFolderSort,
       getFolder,
+      folderIcon,
       folderKeys,
 
       //
       updateSortMethod,
       identities,
       hotkeys,
-
+      map,
       setDefaultFolderName
     }
   },

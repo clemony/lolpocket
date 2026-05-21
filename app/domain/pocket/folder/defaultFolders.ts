@@ -1,19 +1,24 @@
-export const defaultPocketFolders = {
+export type BackpackFolderKey<T extends string = string> =
+  keyof typeof backpackFolders
+
+export type FolderKey = BackpackFolderKey | string
+
+export const backpackFolders = {
   pinned: {
     label: "Pinned",
     id: "pinned",
     to: "/backpack/pinned",
     iconKey: "pin",
-    location: "",
+    location: "default",
     open: false,
     order: 0
   },
-  all: {
-    label: "Backpack",
-    id: "all",
+  folders: {
+    label: "Folders",
+    id: "folders",
     iconKey: "folder",
-    to: "/backpack/all",
-    location: "all",
+    to: "/backpack/folders",
+    location: "default",
     open: true,
     order: 2
   },
@@ -23,7 +28,7 @@ export const defaultPocketFolders = {
     to: "/backpack/favorites",
     iconKey: "heart",
     open: false,
-    location: "",
+    location: "default",
     order: 0
   },
   archive: {
@@ -32,7 +37,7 @@ export const defaultPocketFolders = {
     to: "/backpack/archive",
     iconKey: "archive",
     open: false,
-    location: "",
+    location: "default",
     order: 4
   },
   trash: {
@@ -41,7 +46,10 @@ export const defaultPocketFolders = {
     open: false,
     to: "/backpack/trash",
     iconKey: "trash",
-    location: "",
+    location: "default",
     order: 5
   }
 } satisfies Record<string, Folder>
+export const defaultFolderKeys = Object.keys(
+  backpackFolders
+) as BackpackFolderKey[]

@@ -9,9 +9,9 @@ const props = withDefaults(
     }
   >(),
   {
-    placement: "start",
+    position: "start",
     underline: false,
-    labelPlacement: "start"
+    labelPosition: "start"
   }
 )
 
@@ -62,12 +62,12 @@ const separatorVariants = tv({
         label: "hidden"
       }
     },
-    placement: {
+    position: {
       center: {},
       end: {},
       start: {}
     },
-    labelPlacement: {
+    labelPosition: {
       center: {},
       end: {},
       start: {}
@@ -101,8 +101,8 @@ const separatorVariants = tv({
   },
   compoundVariants: [
     {
-      placement: "start",
-      labelPlacement: "end",
+      position: "start",
+      labelPosition: "end",
       class: {
         label: "order-last ml-3",
         separator: "order-1",
@@ -110,8 +110,8 @@ const separatorVariants = tv({
       }
     },
     {
-      placement: "start",
-      labelPlacement: "start",
+      position: "start",
+      labelPosition: "start",
       class: {
         label: "order-1 mr-2",
         leading: "order-first",
@@ -120,8 +120,8 @@ const separatorVariants = tv({
       }
     },
     {
-      placement: "start",
-      labelPlacement: "center",
+      position: "start",
+      labelPosition: "center",
       class: {
         label: "order-2 mx-2",
         separator: "order-1",
@@ -131,8 +131,8 @@ const separatorVariants = tv({
   ],
   defaultVariants: {
     color: "tertiary",
-    placement: "start",
-    labelPlacement: "start",
+    position: "start",
+    labelPosition: "start",
     size: "md",
     orientation: "horizontal"
   }
@@ -141,12 +141,12 @@ const separatorVariants = tv({
 const styles = computed(() =>
   separatorVariants({
     color: props.color,
-    placement: props.placement,
+    position: props.position,
     size: props.size,
     orientation: props.orientation,
     underline: props.underline,
     labelVisible: Boolean(props.label),
-    labelPlacement: props.labelPlacement
+    labelPosition: props.labelPosition
   })
 )
 </script>
@@ -165,7 +165,7 @@ const styles = computed(() =>
     </span>
 
     <span
-      v-if="props.placement === 'center'"
+      v-if="props.position === 'center'"
       :class="styles.separator({ class: props.ui?.separator })" />
 
     <span

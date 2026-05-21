@@ -59,6 +59,10 @@ function handleEdit() {
   emit("update:label", label.value)
   editing.value = false
 }
+
+const buttonRef = useTemplateRef<HTMLElement>("element")
+
+defineExpose({ buttonRef })
 </script>
 
 <template>
@@ -90,6 +94,7 @@ function handleEdit() {
     </UInput>
     <UButton
       v-if="!editing || !props.editable"
+      ref="element"
       v-bind="delegatedButton"
       :icon="props.icon"
       block
@@ -99,7 +104,6 @@ function handleEdit() {
           { 'gap-2.5': !props.avatar },
           props.ui?.base
         ),
-        label: '',
         leadingAvatar: '-translate-x-0.5',
         leadingIcon: cn('size-4.5', props.ui?.leadingIcon)
       }">
@@ -107,7 +111,6 @@ function handleEdit() {
         <span class="grow" />
       </template>
 
-      <slot name="label" />
       <template #trailing>
         <slot name="trailing" />
       </template>

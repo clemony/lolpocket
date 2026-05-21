@@ -8,6 +8,7 @@ import type {
 } from "vue-router"
 import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
 import type { PocketProps } from "~/domain/pocket/types"
+import type { SortableProps } from "~/types/sortable"
 
 // username
 export const usernameSchema = v.union([
@@ -77,6 +78,8 @@ export const settingsSchema = v.object({
   default_role: v.fallback(v.string(), "all"),
   default_map: v.fallback(v.number(), 0),
   //
+  //new
+  pocket_tags: v.fallback(v.array(v.string()), []),
   pinned_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_summoners: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
@@ -118,6 +121,7 @@ export type EmailSchema = v.InferOutput<typeof emailSchema>
 export type Account = v.InferOutput<typeof accountSchema>
 export type FolderSchema = v.InferOutput<typeof folderSchema>
 export type FolderMixArray = (PocketProps | Folder)[]
+
 export interface Folder extends Omit<FolderSchema, "location" | "order"> {
   location?: string
   order?: number
@@ -129,9 +133,8 @@ export interface Folder extends Omit<FolderSchema, "location" | "order"> {
     | undefined
   id: string
   children?: ComputedRef<PocketProps[]>
-  slot?: string
-}
-
-export interface AllFolder extends Folder {
-  folders?: ComputedRef<Folder[]>
+  subfolders?: ComputedRef<Folder[]>
+  sortable?: SortableProps & {
+    data?: ComputedRef<{ kind: string; id: string }>
+  }
 }

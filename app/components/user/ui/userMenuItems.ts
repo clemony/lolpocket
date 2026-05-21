@@ -4,17 +4,19 @@ import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 import { getSummonerIcon } from "~/domain/utils/img"
 import { testingMenu } from "../admin/testingMenu"
 import { useSignOut } from "../auth/useAuth"
-export const userAccountItem = computed(() => {
+
+export function useUserAccountItem() {
   const { summoner, account } = storeToRefs(user())
-  return {
+  return computed(() => ({
     label: summoner.value?.name ?? account.value?.username ?? "Not Connected",
     avatar: {
       src: getSummonerIcon(summoner.value?.icon) ?? null,
       icon: "i-plug"
     },
     itemTrailingIcon: "i-gear"
-  }
-})
+  }))
+}
+
 export const userMenuItems = (close: () => void): ButtonProps[][] => {
   const sbu = useSupabaseUser()
   const online = computed(() => sbu.value?.session_id)

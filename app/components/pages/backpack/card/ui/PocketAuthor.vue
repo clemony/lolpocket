@@ -12,12 +12,14 @@ const {
   pocket: Pocket
 }>()
 
+const userStore = user()
+const { account } = storeToRefs(userStore)
 const isAuthor = computed(
-  () => user().account?.uuid && authorId === user().account?.uuid
-).value
+  () => Boolean(account.value?.uuid) && authorId === account.value?.uuid
+)
 const author = computed(() => {
   if (!authorId) return
-  if (isAuthor) return user().account
+  if (isAuthor.value) return account.value
   return {
     username: "nell",
     tag: "nell",

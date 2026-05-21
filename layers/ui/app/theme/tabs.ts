@@ -37,15 +37,15 @@ export const tabsTheme = defineUiTheme({
         list: "shadow-none inset-shadow-none"
       },
       lift: {
-        list: "tabs-lift-list tabs-lift z-1 tabs h-auto rounded-none border-0! p-0",
+        list: "tabs-lift-list tabs-lift z-4! tabs flex h-auto items-center rounded-none border-0! p-0",
         root: "h-auto p-0",
-        indicator: "tab-active z-2 rounded-b-none! border-b-0!",
+        indicator: "tab-active absolute z-2 w-full rounded-b-none! border-b!",
         leadingIcon:
           "[color:unset] opacity-60 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100",
         trigger:
-          "group/trigger tab z-3! rounded-b-none! border-b-0! font-medium! tracking-normal",
+          "group/trigger tab z-5! flex items-center rounded-b-none! border-b-0 font-medium! tracking-normal",
         label:
-          "pointer-events-none after:absolute after:-bottom-px after:z-6 after:h-px after:w-full group-data-[state-active]/trigger:after:opacity-100 group-data-[state-inactive]/trigger:after:opacity-0",
+          "pointer-events-none w-full leading-none after:absolute after:-bottom-px after:z-6 after:h-px after:w-full group-data-[state-active]/trigger:after:opacity-100 group-data-[state-inactive]/trigger:after:opacity-0",
         content:
           "tabs-content tabs-lift-content z-0 -translate-y-px overflow-hidden rounded-4xl border-x border-b"
       },
@@ -103,8 +103,8 @@ export const tabsTheme = defineUiTheme({
       variant: "lift",
       class: {
         root: "tabs-light tabs",
-        indicator: "",
-        label: "after:bg-p0",
+        indicator: "border-b-p0!",
+        label: "after:bg-p0 group-not-[.background-tab]/trigger:after:bg-p0",
         leadingIcon: "",
         trigger: "border-border"
       }
@@ -258,7 +258,7 @@ export const tabsTheme = defineUiTheme({
       variant: "lift",
       size: "md",
       class: {
-        list: "tabs-md h-10",
+        list: "h-10 tabs-md",
         trigger: "h-10 text-sm",
         content: "rounded-4xl"
       }
@@ -267,8 +267,8 @@ export const tabsTheme = defineUiTheme({
       variant: "lift",
       size: "lg",
       class: {
-        list: "tabs-lg h-12",
-        trigger: "h-12 text-sm",
+        list: "h-12 tabs-md",
+        trigger: "h-12 max-w-32 rounded-t-2xl text-sm",
         content: "rounded-4xl"
       }
     },
@@ -276,7 +276,7 @@ export const tabsTheme = defineUiTheme({
       variant: "lift",
       size: "xl",
       class: {
-        list: "tabs-xl h-14",
+        list: "h-14 tabs-xl",
         trigger: "h-14 text-sm",
         content: "rounded-4xl"
       }

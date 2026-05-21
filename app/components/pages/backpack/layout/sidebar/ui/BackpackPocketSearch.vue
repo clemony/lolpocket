@@ -12,6 +12,7 @@ const props = defineProps<
 const delegated = reactiveOmit(props, "sidebarCollapsed")
 
 const { search, toggleSearch, searchVisible } = useBackpack()
+const userStore = user()
 
 const input = useTemplateRef<{
   inputRef?: HTMLInputElement | { value?: HTMLInputElement | null } | null
@@ -21,27 +22,33 @@ const { focused } = useFocus(
   computed(() => input.value?.inputRef) as MaybeElementRef
 )
 
-const watchKeys = computed(
-  () => user().hotkeys?.subSearch && user().hotkeys?.subSearch.join("_")
-)
+const subSearchKeys = computed(() => userStore.hotkeys.subSearch ?? [])
+const watchKeys = computed(() => subSearchKeys.value.join("_"))
 const keys = useMagicKeys()
+const subSearchPressed = computed(() => {
+  const key = watchKeys.value
+  return key ? Boolean(toValue(keys[key])) : false
+})
 
-whenever(keys[watchKeys.value] as ComputedRef<boolean>, () => {
+whenever(subSearchPressed, () => {
   focused.value = true
 })
 
 watch(
   () => focused.value,
   (v) => {
-    if (v) toggleSearch(true)
+    if (v && v === true) toggleSearch(true)
   }
 )
-watch(searchVisible, (v) => {
-  console.log("💠 - watch - newVal:", v)
-})
-function handleClear() {
-  search.value = ""
+
+function closeSearch() {
+  focused.value = false
   toggleSearch(false)
+}
+
+function handleClear() {
+  if (search.value) search.value = ""
+  closeSearch()
 }
 </script>
 
@@ -87,20 +94,29 @@ function handleClear() {
     ref="input"
     v-bind="delegated"
     v-model:model-value="search"
-    placeholder="Search Backpack..."
     :ui="{
-      base: 'grow rounded-3xl bg-p0 px-3 text-sm ring-p3/80',
-      root: 'max-w-full min-w-12 grow',
-
-      leadingIcon: ''
-    }"
-    icon="i-search">
+      ...props.ui,
+      base: cn(
+        'min-h-11 grow rounded-xl border-0 px-3 text-sm ring-p3/80',
+        props.ui?.base
+      ),
+      root: cn('max-w-full min-w-12 grow', props.ui?.root)
+    }">
+    <template #leading>
+      <slot name="leading" />
+    </template>
     <template #trailing>
-      <LazyInputClear v-if="search" @click="handleClear" />
-
+      <LazyInputClear v-if="search" size="sm" @clear-input="handleClear()" />
+      <LazyUButton
+        v-else-if="focused === true"
+        color="transparent"
+        size="sm"
+        icon="i-x"
+        @pointerdown.prevent.stop
+        @click.stop="closeSearch" />
       <div v-else class="inline-flex items-center">
         <UKbd
-          v-for="(k, i) in user().hotkeys?.subSearch"
+          v-for="(k, i) in subSearchKeys"
           :key="i"
           variant="ghost"
           color="base"

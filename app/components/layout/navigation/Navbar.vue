@@ -2,7 +2,7 @@
 const { color = "base" } = defineProps<{
   color?: "base" | "transparent" | "primary"
 }>()
-console.log("🥸 - color:", color)
+
 const { toggle } = useApp().settings
 </script>
 

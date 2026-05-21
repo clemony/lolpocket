@@ -7,13 +7,18 @@ const lang = computed(() => locales[locale.value].code)
 const dir = computed(() => locales[locale.value].dir)
 
     :locale="locales[locale]" */
+const userStore = user()
+const threadStore = threads()
+const preferredColorScheme = usePreferredColorScheme()
+const { account, settings } = storeToRefs(userStore)
+const { reportComment } = storeToRefs(threadStore)
+
 useHead(() => ({
   htmlAttrs: {
     lang: "en",
     dir: "auto",
-    "data-accent": user().account?.color ?? "diminuendo",
-    "data-theme":
-      user().settings?.theme ?? usePreferredColorScheme().value ?? "light"
+    "data-accent": account.value?.color ?? "diminuendo",
+    "data-theme": settings.value?.theme ?? preferredColorScheme.value ?? "light"
   },
   bodyAttrs: {
     class: "group/body"
@@ -24,7 +29,6 @@ const route = useRoute()
 useSeoMeta({
   title: () => String(route.meta.title || route.name)
 })
-const reportComment = computed(() => threads().reportComment ?? undefined)
 
 const settingsOpen = shallowRef<boolean>(false)
 const app = useAppProvider()
@@ -61,7 +65,7 @@ const app = useAppProvider()
       <!--       <LazySidebar /> -->
       <LazySettingsSidebar />
       <LazyReportDialog
-        v-if="user().account && reportComment"
+        v-if="account && reportComment"
         :comment="reportComment" />
     </div>
   </UApp>

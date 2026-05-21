@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { LazyUButton, LazyUFieldGroup } from "#components"
 import { RestrictToHorizontalAxis } from "@dnd-kit/abstract/modifiers"
 import { useDraggable, useDroppable } from "@dnd-kit/vue"
 import type { ButtonProps } from "@nuxt/ui"
@@ -8,6 +7,7 @@ import type { ComputedRef } from "vue"
 
 interface HeaderOptions {
   tooltip?: string
+  sortTip?: string
   draggable?: boolean
   sortable?: boolean
   sorted?: ComputedRef<false | SortDirection>
@@ -93,44 +93,50 @@ function onSort() {
 <template>
   <div
     ref="element"
+    v-auto-animate
     :data-dragging="isDragging"
     :data-drop-target="isDropTarget"
     :class="
       cn(
-        'group/column-header pointer-events-none my-1 flex h-9 max-h-9 min-h-9 w-full items-center justify-center gap-1 rounded-lg transition-all',
+        'group/column-header pointer-events-none flex h-10 max-h-10 min-h-10 w-full items-center justify-center gap-1 transition-all',
         /* dragging */
-        'data-[dragging=true]:opacity-50 data-[drop-target=true]:bg-p3',
+        'data-[dragging=true]:opacity-50 data-[drop-target=true]:inset-ring data-[drop-target=true]:inset-ring-pc/60',
 
         {
           'justify-start': props.id === 'label'
         }
       )
     ">
-    <UButton
-      v-if="headerOptions.draggable"
-      ref="handle"
-      size="sm"
-      variant="ghost"
-      :disabled="!headerOptions.draggable"
-      :ui="{
-        base: cn('pointer-events-auto grow px-2.5', {
-          'cursor-move!': headerOptions.draggable
-        }),
-        leadingIcon: 'opacity-40 group-hover/btn:opacity-100'
-      }"
-      :aria-label="`Move ${accessibleLabel} column`">
-      <slot>
-        <span class="font-semibold">{{ props.label }}</span>
+    <Tooltip
+      :label="props.options?.tooltip"
+      :ui="{ content: 'h-max! whitespace-pre-line' }"
+      :disabled="!props.options?.tooltip">
+      <UButton
+        v-if="headerOptions.draggable"
+        ref="handle"
+        size="sm"
+        variant="ghost"
+        :disabled="!headerOptions.draggable"
+        :ui="{
+          base: cn('pointer-events-auto grow px-2.5', {
+            'cursor-move!': headerOptions.draggable
+          }),
+          leadingIcon: 'opacity-40 group-hover/btn:opacity-100'
+        }"
+        :aria-label="`Move ${accessibleLabel} column`">
+        <slot>
+          <span class="font-semibold">{{ props.label }}</span>
+        </slot>
+      </UButton>
+
+      <slot v-else>
+        <span :class="{ 'grow font-semibold': props.label }">{{
+          props.label
+        }}</span>
       </slot>
-    </UButton>
+    </Tooltip>
 
-    <slot v-else>
-      <span :class="{ 'grow font-semibold': props.label }">{{
-        props.label
-      }}</span>
-    </slot>
-
-    <Tooltip :label="sortLabel">
+    <Tooltip :label="sortLabel" :disabled="!props.options?.sortTip">
       <UButton
         v-if="headerOptions.sortable"
         size="sm"

@@ -11,7 +11,7 @@ export const collapseProps = {
 
 export const separatorProps: SeparatorProps = {
   size: "md",
-  labelPlacement: "start",
+  labelPosition: "start",
   trailingIcon: "i-up",
   ui: {
     separator: "opacity-0   group-closed/btn:opacity-100 ",

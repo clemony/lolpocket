@@ -67,11 +67,11 @@ const handleDelete = async () => {
 }
 const folderActions = computed(() => {
   if (!props.folder || !props.folder.id) return []
-  else if (props.folder.id === "backpack")
+  else if (props.folder.id === "folders")
     return [
       {
         ...contextOpen("Backpack"),
-        onClick: () => navigateTo("/backpack/all")
+        onClick: () => navigateTo("/backpack/folders")
       },
       {
         type: "separator" as ContextMenuItem["type"]

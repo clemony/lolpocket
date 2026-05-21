@@ -1,5 +1,5 @@
 import type { Folder } from "#shared/schema"
-import { defaultPocketFolders } from "~/domain/pocket/folder/defaultFolders"
+import { backpackFolders } from "~/domain/pocket/folder/defaultFolders"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 export interface IconUi {
@@ -16,5 +16,5 @@ export function iconSetFromKey(key: string): IconUi {
 
 export function isDefault(folder: Folder | undefined) {
   if (!folder) return false
-  return Object.keys(defaultPocketFolders).includes(String(folder.id))
+  return Object.keys(backpackFolders).includes(String(folder.id))
 }

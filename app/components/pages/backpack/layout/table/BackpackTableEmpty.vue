@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defaultPocketFolders } from "~/domain/pocket/folder/defaultFolders"
+import { backpackFolders } from "~/domain/pocket/folder/defaultFolders"
 import type { IconSet } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 const { item, icon } = defineProps<{
@@ -8,8 +8,8 @@ const { item, icon } = defineProps<{
 }>()
 
 const isDefault = computed(() =>
-  Object.keys(defaultPocketFolders)
-    .filter((k) => k !== "all")
+  Object.keys(backpackFolders)
+    .filter((k) => k !== "folders")
     .includes(item.id)
 )
 

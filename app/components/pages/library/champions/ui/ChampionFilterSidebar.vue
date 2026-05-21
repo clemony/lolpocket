@@ -85,7 +85,7 @@ const attackStep = ref<StepperItem[]>([
         <Separator
           size="md"
           label="Role"
-          label-placement="end"
+          label-position="end"
           leading-icon="right"
           :ui="{
             separator: 'group-hover/btn:bg-p4',

@@ -68,7 +68,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
           itemLeadingIcon: "scale-120"
         },
         onSelect() {
-          p.location = "all"
+          p.location = "folders"
           p.trashed_at = undefined
         }
       }
@@ -86,7 +86,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
     {
       ...contextOpen(p.label ?? ""),
       onSelect() {
-        navigateTo(`/backpack/${p.location || "all"}/pocket/${p.key}`)
+        navigateTo(`/backpack/${p.location || "folders"}/pocket/${p.key}`)
       }
     },
     {

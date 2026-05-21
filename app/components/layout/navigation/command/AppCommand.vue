@@ -8,8 +8,6 @@ import {
 import type { PopoverProps } from "@nuxt/ui"
 import { focusTrigger, onContentInteractOutside } from "./build/helpers"
 import { useCommandFocusNavigation } from "./build/useCommandFocusNavigation"
-import type { CommandGroup } from "./build/useCommandGroups"
-import { useCommandGroups } from "./build/useCommandGroups"
 const route = useRoute()
 
 const query = shallowRef<string>("")
@@ -132,7 +130,7 @@ watch(
             <LazyCommandFooter
               v-if="reference"
               :reference
-              @update:open="(e) => handleUpdate(e)" />
+              @update:open="(e: string) => handleUpdate(e)" />
           </div>
         </div>
       </template>

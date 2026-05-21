@@ -148,7 +148,7 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-lucide-lab-mug-teabag",
     closed: "i-lucide-lab-mug",
     icon: "i-lucide-lab-mug",
-    class: " scale-111 **:stroke-[8%] ",
+    class: " scale-111 **:stroke-[8%] [&.icon-bold]:[**:stroke-10%]!",
     ui: {
       open: " scale-111 **:stroke-[8%]!",
       closed: " scale-111 **:stroke-[8%]  "

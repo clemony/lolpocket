@@ -4,23 +4,25 @@ import { ListboxContent, ListboxGroup, ListboxRoot } from "reka-ui"
 const { paddingClass } = defineProps<{
   paddingClass?: HTMLAttributes["class"]
 }>()
+const store = pocketStore()
+const sessionStore = session()
 const newTag = ref("")
 const tags = ref<string[]>([])
 watch(
   () => tags.value,
   (newVal) => {
     console.log("💠 - watch - newVal:", newVal)
-    console.log("💠 - watch - newVajljljljl:", pocketStore().tags)
+    console.log("💠 - watch - newVajljljljl:", store.tags)
   }
 )
 
 function deleteTag(tag: string) {
-  const a = pocketStore().tags.findIndex((t) => t === tag)
+  const a = store.tags.findIndex((t) => t === tag)
 
   if (a !== -1) {
-    pocketStore().tags.splice(a, 1)
-    pocketStore()
-      .pockets.map((p: Pocket) => p.tags)
+    store.tags.splice(a, 1)
+    store.pockets
+      .map((p: Pocket) => p.tags)
       .forEach((set) => {
         if (!set) return
         const a = set.findIndex((t) => t === tag)
@@ -43,7 +45,7 @@ function deleteTag(tag: string) {
       <!-- custom tags -->
 
       <Collapsible
-        v-model:open="session().toggles.backpack.tags"
+        v-model:open="sessionStore.toggles.backpack.tags"
         :disabled="false"
         :class="cn('space-y-1 px-3 pb-3', paddingClass)">
         <CollapsibleTrigger as-child>
@@ -59,7 +61,7 @@ function deleteTag(tag: string) {
         <CollapsibleContent class="CollapsibleContent space-y-1" menu>
           <ListboxGroup class="relative flex flex-col justify-start gap-y-1">
             <div
-              v-for="item in pocketStore().tags"
+              v-for="item in store.tags"
               :key="item"
               class="group/tag grid h-9! w-full grid-cols-[1fr_min-content] items-center justify-self-start p-0 pr-2">
               <!-- list item -->
@@ -108,7 +110,7 @@ function deleteTag(tag: string) {
               placeholder="create new tag..."
               @keydown.enter="
                 () => {
-                  ;(pocketStore().tags.push(newTag), (newTag = ''))
+                  ;(store.tags.push(newTag), (newTag = ''))
                 }
               " />
 

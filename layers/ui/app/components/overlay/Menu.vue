@@ -181,7 +181,7 @@ const items = computed(() => guardedItems(props.items))
           " />
       </span>
     </template>
-    <template #radio-check-trailing="{ item }">
+    <template #check-trailing="{ item }">
       <Checkbox
         :model-value="asSwitch(item).checked"
         v-bind="item.indicator"

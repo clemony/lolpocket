@@ -94,6 +94,8 @@ export const icon = {
     clear: "tabler:circle-half-vertical", //'i-clear'
     edit: "material:symbols-light:edit-square-outline", //'i-edit:"material:symbols-light'
     "edit-line": "lucide:pen-line", //'i-edit-line'
+    pencil: "lucide:pencil", //'i-pencil'
+    pen: "lucide:pen", //i-lucide-pen
     "text-input": "lucide:text-cursor-input", //'i-lucide-text-cursor-input"'
     erase: "lucide:eraser", //'i-erase'
     h1: "lucide:heading-1", //'i-h1'
@@ -101,7 +103,6 @@ export const icon = {
     italic: "lucide:italic", //'i-italic'
     "letter-text": "lucide:letter-text", //'i-letter-text'
     paperclip: "lucide:paperclip", //'i-paperclip'
-    pencil: "lucide:pencil", //'i-pencil'
     save: "lucide:save", //'i-save'
     strikethrough: "lucide:strikethrough", //'i-strikethrough'
     trash: "lucide:trash-2", //'i-trash'
@@ -153,11 +154,13 @@ export const icon = {
     click: "i-mingcute-cursor-3-fill", //'i-click'
     cursor: "i-mingcute-cursor-2-fill", //'i-cursor'
 
+    "send-to-back": "lucide:send-to-back", //'i-lucide-send-to-back
     "calc-solid": "streamline:calculator-1-solid", //'i-calc-solid'
     absolute: "hugeicons:absolute", //'i-absolute'
     add: "lucide:plus", //'i-add'
     calc: "teenyicons:calculator-outline", //'i-calc'
     minus: "lucide:minus", //'i-minus'
+    "ellipsis-box": "lucide:rectangle-ellipsis", //i-lucide-rectangle-ellipsis
     "sq-minus": "lucide:square-minus", //'i-sq-minus'
     "sq-plus": "lucide:square-plus", //'i-sq-plus'
     weighted: "tabler:math-integral-x", //'i-weighted'
@@ -190,7 +193,7 @@ export const icon = {
     "heart-fill": "teenyicons:heart-solid", //'i-heart-fill'
     "heart-sm": "teenyicons:heart-small-solid", //'i-heart-sm'
     "heart-sm-outline": "teenyicons:heart-small-outline", //'i-heart-sm-outline'
-    activity: "tabler:activity-heartbeat", //i-tabler-activity-heartbeat
+    activity: "lucide:activity", //i-lucide-activity
     infinity: "gg:infinity", //'i-infinity'
     round: "mynaui:circle-solid", //'i-round'
     shield: "teenyicons:shield-tick-outline", //'i-shield'

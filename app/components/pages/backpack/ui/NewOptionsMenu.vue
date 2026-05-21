@@ -27,7 +27,7 @@ const props = withDefaults(
     color: "neutral",
     activeColor: "neutral",
     activeVariant: "solid",
-    location: "all",
+    location: "folders",
     icon: "i-add"
   }
 )
@@ -71,7 +71,11 @@ const open = shallowRef<boolean>(false)
       side: props.menu?.content?.side ?? (collapsed ? 'right' : 'bottom'),
       onCloseAutoFocus: (event: Event) => event.preventDefault()
     }">
-    <Tooltip :disabled="open || !collapsed" as-child label="Create New...">
+    <Tooltip
+      side="top"
+      :disabled="open || props.disabled"
+      as-child
+      label="Menu">
       <UButton
         tabindex="-1"
         v-bind="delegated"

@@ -6,12 +6,11 @@ const { pocketKey } = defineProps<{
 const isDisabled = computed(() => pocketKey === null)
 
 const store = pocketStore()
+const { account } = storeToRefs(user())
 const pocket = computed(() => store.getPocket(String(pocketKey)))
 
 const pocketKeySafe = computed(() => pocket.value?.key ?? "")
-const pinned = computed(() =>
-  pocketStore().pinned.includes(pocketKeySafe.value)
-)
+const pinned = computed(() => store.pinned.includes(pocketKeySafe.value))
 </script>
 
 <template>
@@ -31,7 +30,7 @@ const pinned = computed(() =>
         ">
         <input
           v-if="pocket && pocket?.key"
-          v-model="pocketStore().pinned"
+          v-model="store.pinned"
           class="peer hidden"
           :value="pocket.key"
           type="checkbox" />
@@ -52,7 +51,7 @@ const pinned = computed(() =>
         ">
         <input
           v-if="pocket && pocket?.key"
-          v-model="pocketStore().pinned"
+          v-model="store.pinned"
           class="peer hidden"
           :value="pocket.key"
           type="checkbox" />
@@ -97,7 +96,7 @@ const pinned = computed(() =>
       <UButton
         label="'Export to LoL'"
         class="size-11"
-        :disabled="!user().account?.puuid"
+        :disabled="!account?.puuid"
         variant="ghost">
         <icon name="export" />
       </UButton>

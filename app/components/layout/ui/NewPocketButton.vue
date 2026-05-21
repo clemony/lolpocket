@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { ButtonProps, KbdProps } from "@nuxt/ui"
+import type { FolderKey } from "~/domain/pocket/folder/defaultFolders"
 import { newPocket } from "~/domain/pocket/newPocket"
-import type { FolderKey } from "~/types/types"
 
 type KbdUi = KbdProps["ui"] & { wrapper?: HTMLAttributes["class"] }
 type Kbd = KbdProps & { ui?: KbdUi }

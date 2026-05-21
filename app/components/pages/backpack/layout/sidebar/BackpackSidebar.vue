@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+import { useSortable } from "@dnd-kit/vue/sortable"
 import { useBackpack } from "~/domain/backpack/useBackpack"
 import { useFolders } from "~/domain/pocket/folder/useFolder"
+import { clickFriendlySensors } from "~/domain/pocket/helpers/sortableSensors"
 import type { PocketProps } from "~/domain/pocket/types"
 
 const { sidebarCollapsed, search, searchVisible, folderId } = useBackpack()
@@ -10,10 +12,36 @@ const selected = shallowRef<PocketProps | undefined>()
 
 const open = ref<boolean[]>([])
 const { defaults } = useFolders()
+const tabList = computed(() => [
+  {
+    label: " ",
+    value: "folders",
+    slot: "folders",
+    icon: "i-folder"
+  },
+  {
+    label: " ",
+    value: "search",
+    slot: "search",
+    icon: "i-search"
+  },
+  {
+    label: "Pocket",
+    value: "pocket"
+  },
+  {
+    label: "empty",
+    value: "empty",
+    ui: {
+      trigger: "grow"
+    }
+  }
+])
 
-watch(searchVisible, (v) => {
-  console.log("💠 - watckhkhkhkhh - newVal:", v)
-})
+const section = ref("folders")
+
+const element = useTemplateRef<HTMLElement>("element")
+const handle = useTemplateRef<HTMLElement>("handle")
 </script>
 
 <template>
@@ -22,62 +50,60 @@ watch(searchVisible, (v) => {
     :collapsible="true"
     :resizable="true"
     :ui="{
-      root: 'group/sidebar @container relative h-[89vh] max-h-[calc(100vh-var(--ui-header-height))] max-w-full gap-4 pb-2.5 data-[dragging=false]:duration-200 data-[dragging=false]:ease-out',
-      header: cn(
-        'z-1 flex h-auto w-full max-w-full flex-wrap gap-0 overflow-hidden bg-transparent px-0',
-        sidebarCollapsed
-          ? 'flex-col justify-center h-max! py-2 rounded-4xl border border-border'
-          : 'items-center  border-none'
-      ),
+      header: 'm-0! flex w-full items-end justify-start p-0!',
+      root: 'group/sidebar h-unset! @container relative m-0! max-w-full gap-0! space-y-0! p-0! data-[dragging=false]:duration-200 data-[dragging=false]:ease-out',
       body: cn(
-        'w-full overflow-hidden rounded-4xl border border-border p-0!',
+        'relative max-h-[90.4vh] w-full overflow-hidden p-0',
 
-        sidebarCollapsed
-          ? 'items-center max-h-min'
-          : 'max-h-[88vh] h-[88vh] pt-0'
+        sidebarCollapsed ? 'items-center max-h-min' : ' h-min  pt-0'
       )
     }"
     :sidebar-collapsed-size="3"
     :max-size="40"
     :default-collapsed="false"
     :default-size="26">
-    <template #header>
-      <BackpackSidebarHeader
-        :sidebar-collapsed="computed(() => sidebarCollapsed)" />
-    </template>
-
-    <div
-      :class="
-        cn('@container/sidebar relative overflow-x-hidden overflow-y-auto', {
-          'min-w-12 grow-0': sidebarCollapsed,
-          'size-full max-h-full grow': !sidebarCollapsed
-        })
-      ">
+    <template #default>
       <div
-        v-auto-animate
-        :class="
-          cn('flex flex-col items-center overflow-x-hidden overflow-y-auto', {
-            'h-fit gap-1 py-2': sidebarCollapsed,
-            'size-full px-2': !sidebarCollapsed
-          })
-        ">
-        <template
-          v-if="!sidebarCollapsed && folderId !== 'search' && !searchVisible">
-          <LazyDefaultPocketFolder :sidebar-collapsed />
+        class="relative w-full overflow-hidden rounded-4xl border border-border pb-3">
+        <div class="w-full">
+          <BackpackSidebarHeader
+            :sidebar-collapsed="computed(() => sidebarCollapsed)" />
+        </div>
+        <div
+          :class="
+            cn('@container/sidebar overflow-x-hidden overflow-y-auto', {
+              'min-w-12 grow-0': sidebarCollapsed,
+              'max-h-full w-full': !sidebarCollapsed
+            })
+          ">
+          <ul
+            v-if="!sidebarCollapsed && folderId !== 'search' && !searchVisible"
+            ref="element"
+            class="z-auto flex w-full flex-col items-center gap-1 overflow-x-hidden px-2">
+            <template v-for="(item, index) in defaults" :key="item.id">
+              <LazyDefaultPocketFolder
+                v-if="item.id === 'folders'"
+                :index
+                :collapsed="sidebarCollapsed" />
 
-          <LazyBackpackSidebarFolder
-            v-for="item in defaults.filter((f) => f.id !== 'all')"
-            :key="item.id"
-            :sidebar-collapsed
-            :item="item" />
-        </template>
-        <BackpackSidebarSearchResults v-else-if="searchVisible" />
-        <template v-else>
-          <template v-for="folder in defaults" :key="folder?.id">
-            <LazyBackpackFolderPopover :item="folder" />
-          </template>
-        </template>
+              <LazyBackpackSidebarFolder
+                v-else
+                :index
+                group="folders:default"
+                :collapsed="sidebarCollapsed"
+                :item="item" />
+            </template>
+          </ul>
+          <BackpackSidebarSearchResults v-else-if="searchVisible" />
+          <div
+            v-else
+            class="'z-auto overflow-x-hidden' flex h-fit flex-col items-center gap-1 pb-2">
+            <template v-for="folder in defaults" :key="folder?.id">
+              <LazyBackpackFolderPopover :item="folder" />
+            </template>
+          </div>
+        </div>
       </div>
-    </div>
+    </template>
   </UDashboardSidebar>
 </template>

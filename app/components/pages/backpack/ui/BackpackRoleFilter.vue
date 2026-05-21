@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { mapPositions } from "#shared/constants/misc/positions"
 
+const sessionStore = session()
 const tags = ref<string[]>([])
 </script>
 
@@ -8,7 +9,7 @@ const tags = ref<string[]>([])
   <!-- position tags -->
 
   <Collapsible
-    v-model:open="session().toggles.backpack.positions"
+    v-model:open="sessionStore.toggles.backpack.positions"
     :class="cn('px-3')">
     <CollapsibleTrigger as-child>
       <UButton class="w-full" as="button" variant="ghost" size="md">

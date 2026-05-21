@@ -43,7 +43,7 @@ const positionItems = positionSchema.options.map((p) => ({
   value: p,
   ui: {
     itemLabel: "capitalize",
-    item: "c gap-2 checked:bg-p2/60",
+    item: "gap-2 checked:bg-p2/60",
     itemTrailing: "rounded-full",
     itemLeadingIcon: " scale-110"
   }
@@ -120,7 +120,10 @@ export const newItemOptions = (options: NewOptions | undefined) =>
             content: "max-w-64 "
           },
 
-          content: { sideOffset: options?.content?.sideOffset ?? -8 },
+          content: {
+            sideOffset: options?.content?.sideOffset ?? -8,
+            align: "center"
+          },
           children: [
             {
               type: "label",
@@ -131,7 +134,7 @@ export const newItemOptions = (options: NewOptions | undefined) =>
                 modelValue: position,
                 items: positionItems,
                 open: positionOpen,
-                ui: { content: "-translate-y-14 bg-p0/94 p-0.5" }
+                ui: { content: " bg-p0/94 p-0.5" }
               }
             },
             {
@@ -144,7 +147,7 @@ export const newItemOptions = (options: NewOptions | undefined) =>
                 items: mapItems,
                 open: mapOpen,
                 ui: {
-                  content: "-translate-y-14 bg-p0/94 p-0.5 max-h-100 h-max!"
+                  content: " bg-p0/94 p-0.5 max-h-100 h-max!"
                 }
               }
             },

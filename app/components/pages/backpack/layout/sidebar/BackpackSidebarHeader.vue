@@ -2,46 +2,54 @@
 const { sidebarCollapsed } = defineProps<{
   sidebarCollapsed: ComputedRef<boolean>
 }>()
-
-const sidebar = shallowRef<HTMLElement>()
 </script>
 
 <template>
   <div
-    ref="sidebar"
     :class="
       cn(
-        'flex w-full items-center gap-2',
-        sidebarCollapsed ? 'flex-col gap-1' : ''
+        'flex w-full flex-col',
+        sidebarCollapsed.value ? 'items-center gap-1' : 'gap-0.5 px-2'
       )
     ">
-    <NewOptionsMenu
-      icon="i-menu"
-      :menu="{
-        color: 'base',
-        content: {
-          align: 'start',
-          reference: sidebar ?? undefined,
-          side: sidebarCollapsed ? 'right' : 'bottom'
-        },
-        ui: {
-          content: cn('w-(--reka-popper-anchor-width)', {
-            'min-w-64': sidebarCollapsed
-          }),
-          item: 'gap-2.5'
-        }
-      }"
-      :label="undefined"
-      :variant="sidebarCollapsed ? 'ghost' : 'outline'"
-      color="primary"
-      :size="sidebarCollapsed ? 'md' : 'lg'"
-      :ui="{
-        base: cn('aria-[expanded=true]:brightness-110!', {
-          anchor: sidebarCollapsed
-        })
-      }" />
-    <LazyBackpackPocketSearch
-      :size="sidebarCollapsed ? 'md' : 'lg'"
-      :sidebar-collapsed="sidebarCollapsed.value" />
+    <div :class="cn('w-full py-2')">
+      <LazyBackpackPocketSearch
+        variant="outline"
+        :ui="{
+          leading: '-left-1.5',
+          root: 'relative h-13! min-h-13! w-full p-0!'
+        }"
+        :size="sidebarCollapsed.value ? 'md' : 'lg'"
+        :sidebar-collapsed="sidebarCollapsed.value">
+        <template #leading>
+          <label class="grid h-full w-10 cursor-pointer place-items-center">
+            <NewOptionsMenu
+              icon="i-more"
+              square
+              :label="undefined"
+              :menu="{
+                color: 'base',
+                content: {
+                  align: 'start',
+                  side: sidebarCollapsed.value ? 'right' : 'bottom'
+                },
+                ui: {
+                  content: cn('w-(--reka-popper-anchor-width)', {
+                    'min-w-64': sidebarCollapsed.value
+                  }),
+                  item: 'gap-2.5'
+                }
+              }"
+              :variant="sidebarCollapsed.value ? 'ghost' : 'ghost'"
+              :color="sidebarCollapsed.value ? 'primary' : 'primary'"
+              :size="sidebarCollapsed.value ? 'md' : 'sm'"
+              :ui="{
+                base: cn('', {}),
+                leadingIcon: cn('size-4.5 rotate-90 **:stroke-[10%]!')
+              }" />
+          </label>
+        </template>
+      </LazyBackpackPocketSearch>
+    </div>
   </div>
 </template>

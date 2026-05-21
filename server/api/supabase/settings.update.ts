@@ -9,6 +9,7 @@ const RPC_SETTING_KEYS = [
   "theme",
   "default_role",
   "default_map",
+  "pocket_tags",
   "favorite_pockets",
   "favorite_summoners",
   "blocked_users",

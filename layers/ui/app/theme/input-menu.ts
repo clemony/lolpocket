@@ -1,7 +1,6 @@
 import { defineUiTheme } from "./defineUiTheme"
-import input from "./input"
 
-export const footerColumnsTheme = defineUiTheme({
+export const inputMenuTheme = defineUiTheme({
   slots: {
     trailing:
       "group absolute inset-y-0 end-0 flex items-center focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
@@ -9,17 +8,17 @@ export const footerColumnsTheme = defineUiTheme({
     base: "",
     arrow: "fill-p0",
     content:
-      "pointer-events-auto z-[120] flex max-h-60 w-(--reka-combobox-trigger-width) origin-(--reka-combobox-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/96 shadow-lg ring shadow-black/8 ring-p3 drop-shadow-none backdrop-blur-sm data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",
+      "pointer-events-auto z-[120] flex max-h-60 w-(--reka-combobox-trigger-width) origin-(--reka-combobox-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/90 shadow-lg ring shadow-black/8 ring-p3 drop-shadow-none backdrop-blur-sm data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",
     viewport: "relative flex-1 scroll-py-1 overflow-y-auto",
     group: "isolate p-1",
     empty: "text-center text-n5",
     label: "font-semibold text-pc",
     separator: "-mx-1 my-1 h-px bg-p3/80",
     item: [
-      "group relative flex w-full items-start gap-1.5 p-1.5 text-sm text-pc outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-elevated/50",
+      "group relative flex w-full items-start gap-1.5 p-1.5 text-sm text-pc outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-elevated/50"
     ],
     itemLeadingIcon: [
-      "shrink-0 text-n4 group-data-highlighted:not-group-data-disabled:text-pc",
+      "shrink-0 text-n4 group-data-highlighted:not-group-data-disabled:text-pc"
     ],
     itemLeadingAvatar: "shrink-0",
     itemLeadingAvatarSize: "",
@@ -31,63 +30,62 @@ export const footerColumnsTheme = defineUiTheme({
     itemLabel: "truncate",
     itemDescription: "truncate text-n5",
     tagsItem:
-      "inline-flex items-center gap-0.5 rounded-sm bg-p1 px-1.5 py-0.5 font-medium text-pc ring ring-p3/80 ring-inset data-disabled:cursor-not-allowed data-disabled:opacity-75",
+      "inline-flex items-center gap-1 rounded-md bg-p1 px-1.5 py-0.5 font-medium text-pc ring-0 inset-ring inset-ring-p3/60 data-disabled:cursor-not-allowed data-disabled:opacity-75",
     tagsItemText: "truncate",
     tagsItemDelete: [
-      "inline-flex items-center rounded-xs text-n5 hover:bg-p2/75 hover:text-pc disabled:pointer-events-none",
+      "inline-flex items-center rounded-xs text-n5 hover:bg-p2/75 hover:text-pc disabled:pointer-events-none"
     ],
     tagsItemDeleteIcon: "shrink-0",
     tagsInput:
-      "flex-1 border-0 bg-transparent placeholder:text-n5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "flex-1 border-0 bg-transparent placeholder:text-n5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75"
   },
   variants: {
     virtualize: {
       true: {
-        viewport: "isolate p-1",
+        viewport: "isolate p-1"
       },
       false: {
-        viewport: "divide-y divide-p3/80",
-      },
+        viewport: "divide-y divide-p3/80"
+      }
     },
     multiple: {
       true: {
-        root: "flex-wrap",
+        root: "flex-wrap"
       },
       false: {
-        base: "w-full border-0 placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
-      },
-    },
-    ...input.variants.color,
-    ...input.variants.variant,
-    ...input.variants.size,
+        base: "w-full border-0 placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75"
+      }
+    }
   },
   compoundVariants: [
     {
       variant: "soft",
       multiple: true,
-      class: "has-focus:bg-elevated",
+      class: "has-focus:bg-elevated"
     },
     {
       variant: "ghost",
       multiple: true,
-      class: "has-focus:bg-elevated",
+      class: "has-focus:bg-elevated"
     },
     {
       color: "neutral",
       multiple: true,
       variant: ["outline", "subtle"],
-      class: "has-focus-visible:ring-1 has-focus-visible:ring-n0/60",
+      class: "has-focus-visible:ring-1 has-focus-visible:ring-n0/60"
     },
     {
       variant: "outline",
-      color: "default",
+      color: "base",
       class:
-        "focus:outline-0 focus-visible:outline-0 has-focus-within:outline-0 has-focus-visible:ring-1! has-focus-visible:ring-n0/60 has-focus-visible:outline-0 has-focus-visible:outline-offset-0!",
-    },
+        "focus:outline-0 focus-visible:outline-0 has-focus-within:outline-0 has-focus-visible:ring-1! has-focus-visible:ring-n0/60 has-focus-visible:outline-0 has-focus-visible:outline-offset-0!"
+    }
   ],
   defaultVariants: {
-    color: "default",
+    color: "base",
     variant: "outline",
-    size: "md",
-  },
+    size: "md"
+  }
 })
+
+export default inputMenuTheme

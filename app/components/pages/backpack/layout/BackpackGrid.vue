@@ -1,18 +1,36 @@
 <script lang="ts" setup>
 import type { Folder } from "#shared/schema"
-import { VueDraggable } from "vue-draggable-plus"
+import { useSortable } from "@dnd-kit/vue/sortable"
+import { useTableInject } from "~/composables/ui/useTableProvider"
 import { useFolderChildren } from "~/domain/pocket/folder/useFolder"
+import { clickFriendlySensors } from "~/domain/pocket/helpers/sortableSensors"
 import { asFolder } from "~/domain/pocket/helpers/typeAssert"
 
-const { folder, header } = defineProps<{
+const { folder, header, index } = defineProps<{
   folder: Folder
+  index?: number
   header?: boolean
 }>()
-const { children, childKey } = useFolderChildren(
+const { children, childKey, childData } = useFolderChildren(
   computed(() => asFolder(folder))
 )
-
+const { isRowSelected, setRowSelected } = useTableInject<Pocket>()
 const modelValue = ref<Folder[]>([])
+
+const element = useTemplateRef<HTMLElement>("element")
+const handle = useTemplateRef<HTMLElement>("handle")
+
+useSortable({
+  id: computed(() => folder.id),
+  index: computed(() => index ?? 0),
+  group: folder.location || "folders",
+  type: "folder",
+  accept: "pocket",
+  element,
+  handle,
+  sensors: clickFriendlySensors,
+  data: computed(() => ({ kind: "folder" as const, id: folder.id }))
+})
 </script>
 
 <template>
@@ -45,25 +63,22 @@ const modelValue = ref<Folder[]>([])
     </div>
   </div>
 
-  <VueDraggable
-    v-model:model-value="modelValue"
-    :group="{ name: 'pocket', pull: true, put: true }"
-    :animation="1"
-    sort
-    ease="ease-in-out"
-    filter=".sortable-placeholder"
-    class="pocket-sortable group/sortable relative grid grid-cols-1 gap-8 p-8 transition-all duration-300 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  <div
+    ref="element"
+    class="tmd:grid-cols-2 relative grid grid-cols-1 gap-8 p-8 lg:grid-cols-3 xl:grid-cols-4">
+    <span ref="handle" class="absolute hidden size-0" />
     <template v-if="children.length">
-      <div v-for="item in children" :key="childKey(item)">
+      <template v-for="(item, i) in children" :key="childKey(item)">
         <LazyBackpackPocketCard
-          v-if="item && item.pocket"
-          :pocket="item.pocket" />
-      </div>
+          v-if="item && childData(item)?.key"
+          :pocket="childData(item)"
+          :index="i" />
+      </template>
     </template>
     <div
       v-else
       class="sortable-placeholder relative col-span-full grid size-full place-items-center group-has-[.sortable-ghost]/sortable:hidden">
       <UBadge label="Empty" variant="outline" />
     </div>
-  </VueDraggable>
+  </div>
 </template>

@@ -49,8 +49,8 @@ const props = withDefaults(
 
 const emit = defineEmits(["pinned", "unpinned"])
 
-const open = ref(false)
-const pinned = ref(false)
+const open = shallowRef<boolean>(false)
+const pinned = shallowRef<boolean>(false)
 const anchor = ref({ x: 0, y: 0 })
 const placement = ref<{ side: Side; alignOffset: number }>({
   side: "bottom",

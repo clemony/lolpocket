@@ -108,15 +108,17 @@ export const inputTheme = defineUiTheme({
   compoundVariants: [
     {
       color: "base",
-      variant: "outline",
+      variant: ["outline", "solid"],
       class:
-        "text-pc ring-p3/80 focus-visible:fx-noise focus-visible:ring-1! focus-visible:inset-shadow-sm focus-visible:ring-pc/70 focus-visible:ring-offset-p3 disabled:bg-p1/40"
+        "text-pc ring-p3/80 hover:bg-transparent hover:ring-pc/70 focus-visible:bg-transparent focus-visible:ring-1 focus-visible:inset-shadow-sm focus-visible:ring-pc/70 focus-visible:ring-offset-p3 disabled:bg-p1/40"
     },
-    /*     {
+    {
       color: "base",
-      class: "ring ring-n4 ring-inset",
+      variant: "ghost",
+      class:
+        "bg-transparent! hover:bg-transparent! focus-visible:bg-transparent! disabled:bg-transparent!",
       highlight: true
-    }, */
+    },
     {
       color: "neutral",
       variant: ["outline", "subtle"],

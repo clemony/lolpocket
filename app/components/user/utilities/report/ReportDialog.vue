@@ -13,16 +13,20 @@ const { button, comment } = defineProps<{
 const emit = defineEmits<{ close: [boolean] }>()
 
 const form = useTemplateRef<HTMLFormElement>("form")
+const userStore = user()
+const threadStore = threads()
+const { account } = storeToRefs(userStore)
+const { reportOpen } = storeToRefs(threadStore)
 
 const state = reactive({
-  reporterUid: user().account?.puuid ?? "",
+  reporterUid: account.value?.puuid ?? "",
   options: [] as string[],
   message: "",
   // keep comment shape aligned to reportSchema so UForm can validate
   comment: {
     author_id: comment.uuid,
     comment_id: comment.id,
-    reporter_id: user().account?.puuid ?? "",
+    reporter_id: account.value?.puuid ?? "",
     content_text: undefined as string | undefined,
     created: comment.created
   }
@@ -56,17 +60,21 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
     description: ""
   })
 }
+
+function handleOpenUpdate(open: boolean) {
+  if (!open) form.value?.clear()
+}
 </script>
 
 <template>
   <LazyModal
-    v-model:open="threads().reportOpen"
+    v-model:open="reportOpen"
     :close="{ onClick: () => emit('close', false) }"
     title="Report Card"
     description="Report offensive, negative, or disruptive content. Please fill out the form to clarify and give additional context."
     :modal="true"
-    @update:open="!threads().reportOpen ? form?.clear() : null">
-    <slot v-if="button" :report="threads().report()">
+    @update:open="handleOpenUpdate">
+    <slot v-if="button" :report="threadStore.report()">
       <UButton as-child>
         <button class="text-xs hover:underline">
           Report
