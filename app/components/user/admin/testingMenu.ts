@@ -1,4 +1,6 @@
 import type { DropdownMenuItem } from "@nuxt/ui"
+import { accountFetch } from "~/composables/account/accountFetch"
+import { getToast } from "~/composables/ui/toast"
 import { heyGoodJob } from "~/domain/lp/ui/good-job"
 import { useSignOut } from "../../user/auth/useAuth"
 import {

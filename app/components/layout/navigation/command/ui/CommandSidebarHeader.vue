@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
+import { useAuthModal } from "~/composables/account/useAuthModal"
 import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 const emit = defineEmits(["update:component", "close"])
 const { account, summoner } = safeObject(storeToRefs(user()))

@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { accountOptions } from "~/components/user/settings/data/accountOptions"
+import {
+  validateField,
+  validateRefHistory
+} from "~/composables/utils/validateField"
 
 const { orientation = "horizontal" } = defineProps<{
   orientation?: "vertical" | "horizontal"
@@ -18,7 +22,9 @@ const username = useRefHistory(
   shallowRef<string>(safeAccount.value.username ?? "")
 )
 
-const blockedUsers = shallowRef<string[]>(safeSettings.value?.blocked_users ?? [])
+const blockedUsers = shallowRef<string[]>(
+  safeSettings.value?.blocked_users ?? []
+)
 const { history: blockedHistory } = useRefHistory(blockedUsers)
 
 const blockInput = shallowRef<string | undefined>("")

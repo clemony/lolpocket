@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { RouteRecordRaw } from "vue-router"
+import { useAppSidebar } from "~/composables/ui/useAppSidebar"
 
 const routes = useRouter().getRoutes()
 

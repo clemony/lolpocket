@@ -1,5 +1,6 @@
 import type { UseRefHistoryReturn } from "@vueuse/core"
 import type { ShallowRef } from "vue"
+import { accountUpdate } from "~/composables/account/accountUpdate"
 
 export function updateEmail(
   email: ShallowRef<string>,

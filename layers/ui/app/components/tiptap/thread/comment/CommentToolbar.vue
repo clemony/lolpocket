@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { removeComment } from "~/composables/tiptap/commentRemove"
+
 const { class: className, comment } = defineProps<{
   comment?: CommentData
   class?: HTMLAttributes["class"]
@@ -51,9 +53,7 @@ const btnClass = "disabled:hidden inline px-1 align-bottom text-xs opacity-50"
           </UButton>
         </template>
 
-        <UButton v-if="!comment.is_author">
-          Report
-        </UButton>
+        <UButton v-if="!comment.is_author"> Report </UButton>
 
         <Icons
           class="absolute size-4"

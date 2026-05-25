@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Editor } from "@tiptap/vue-3"
+import { useMentionTabMenu } from "~/composables/tiptap/useMentionTabMenu"
 
 const { editor, mentionData } = defineProps<{
   editor: Editor | null

@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import type { SwitchProps } from "@nuxt/ui"
+import { accountUpdate } from "~/composables/account/accountUpdate"
+import { settingsUpdate } from "~/composables/account/settingsUpdate"
 import { communicationOptions } from "./data/communicationOptions"
 import type { Switch, SwitchGroup } from "./data/settingsProps"
 

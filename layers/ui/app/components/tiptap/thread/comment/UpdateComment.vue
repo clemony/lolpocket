@@ -1,10 +1,12 @@
 <script lang="ts" setup>
-import type { Editor } from '@tiptap/vue-3'
+import type { Editor } from "@tiptap/vue-3"
+import { updateComment } from "~/composables/tiptap/commentUpdate"
+import { getLeagueMentionData } from "~/composables/tiptap/useLeagueMentions"
 const { comment } = defineProps<{
   comment: CommentData
 }>()
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(["close"])
 </script>
 
 <template>
@@ -24,7 +26,7 @@ const emit = defineEmits(['close'])
             updateComment(
               editor?.getJSON() as Doc,
               comment.thread_id,
-              comment.id,
+              comment.id
             )
             editor?.commands.clearContent()
             editor?.commands.blur()

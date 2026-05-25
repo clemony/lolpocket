@@ -1,8 +1,11 @@
 <script lang="ts" setup>
+import { postComment } from "~/composables/tiptap/commentPost"
+import { getLeagueMentionData } from "~/composables/tiptap/useLeagueMentions"
+
 const { comment } = defineProps<{
   comment: CommentData
 }>()
-const emit = defineEmits(['close'])
+const emit = defineEmits(["close"])
 
 const replyContent = ref<Doc | null>(null)
 </script>

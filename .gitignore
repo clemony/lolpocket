@@ -24,6 +24,7 @@ test
 # Logs
 logs
 *.log
+docs
 
 patch
 AGENTS.md

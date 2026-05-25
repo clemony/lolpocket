@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { accountFetch } from "~/composables/account/accountFetch"
+
 definePageMeta({
   path: "/auth/redirect",
   search: false
