@@ -1,12 +1,9 @@
 import { nowInstantString } from "#shared/utils"
 import { skinKeyFromUrl } from "#shared/utils/img-url"
 import * as v from "valibot"
-import type { BackpackFolderKey } from "~/domain/pocket/folder/defaultFolders"
-import {
-  backpackFolders,
-  defaultFolderKeys
-} from "~/domain/pocket/folder/defaultFolders"
+import { backpackFolders } from "~/domain/pocket/folder/defaultFolders"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
+import { backpackFolderKeys } from "~~/shared/types/types.sortable"
 
 export const user = defineStore(
   "userStore",
@@ -160,14 +157,12 @@ export const user = defineStore(
         settings.value && settings?.value.folders
           ? settings?.value.folders.map((f) => f.id)
           : []
-      return ["backpack", "archive", "trash", ...(userFolders || "")].filter(
-        Boolean
-      )
+      return [...(userFolders || "")].filter(Boolean)
     })
 
     const folderLocationSchema = v.fallback(
       v.picklist(folderKeys.value ?? []),
-      "backpack"
+      "folders"
     )
 
     const folderIcon = (location: string) => {
@@ -236,14 +231,14 @@ export const user = defineStore(
 
     const defaultFolderOrder = ref<Record<BackpackFolderKey, number>>(
       Object.fromEntries(
-        defaultFolderKeys.map((folderId, index) => [folderId, index])
+        backpackFolderKeys.map((folderId, index) => [folderId, index])
       ) as Record<BackpackFolderKey, number>
     )
 
     function updateDefaultFolderSort(folderId: string, newIndex: number) {
-      if (!defaultFolderKeys.includes(folderId as BackpackFolderKey)) return
+      if (!backpackFolderKeys.includes(folderId as BackpackFolderKey)) return
 
-      const ordered = [...defaultFolderKeys].sort(
+      const ordered = [...backpackFolderKeys].sort(
         (a, b) => defaultFolderOrder.value[a] - defaultFolderOrder.value[b]
       )
       const currentIndex = ordered.indexOf(folderId as BackpackFolderKey)

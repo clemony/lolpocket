@@ -1,22 +1,11 @@
 <script lang="ts" setup>
 import { useSortable } from "@dnd-kit/vue/sortable"
-import { pocketSidebarContextUi } from "~/domain/pocket/menu/contextActions"
-import type { PocketProps } from "~/domain/pocket/types"
+import { useDragState } from "~/composables/ui/useDragManager"
 
-const props = withDefaults(
-  defineProps<{
-    item: PocketProps
-    open?: boolean
-    index?: number
-  }>(),
-  {
-    open: false,
-    type: "button"
-  }
-)
-const emit = defineEmits<{
-  "update:open": [value: boolean]
-  "update:label": [value: string]
+const props = defineProps<{
+  item: SortablePocket
+  open?: ComputedRef<boolean>
+  index?: number
 }>()
 
 const contextOpen = shallowRef<boolean>(false)
@@ -26,59 +15,71 @@ const store = pocketStore()
 const { editing, randomizeHistoryName, toggleEdit } =
   useEditableButtonProvider()
 function handleEdit(event: string) {
-  console.log("🥸 - handleEdit - event:", event)
   store.updatePocketName(props.item.key, event)
 }
+
+const { dragState } = useDragState()
+
+const droppable = computed(
+  () =>
+    dragState.value.dragging &&
+    (dragState.value.targetType === "folder" ||
+      dragState.value.targetType === "subfolder")
+)
 
 const element = useTemplateRef<HTMLElement>("element")
 const handle = useTemplateRef<HTMLElement>("handle")
 
 const { isDragging } = useSortable({
-  id: computed(() => props.item.key ?? ""),
-  type: "pocket",
-  accept: "pocket",
-  group: computed(() => props.item.location ?? "folders"),
+  ...props.item.sortable,
   index: computed(() => props.index ?? 0),
-  data: computed(() => props.item),
   element,
   handle
 })
+
+const dragData = computed(
+  () => toValue(props.item.sortable.data) as PocketDragData
+)
+
+const shared = computed(() => ({
+  avatar: dragData.value.avatar || undefined,
+  label: props.item?.label || " "
+}))
 </script>
 
 <template>
-  <li
+  <div
     ref="element"
     :data-dragging="isDragging"
-    class="h-10 max-h-10 w-full overflow-hidden rounded-lg pl-0.5">
-    <PocketContextMenu
-      v-model:open="contextOpen"
-      :item="item.data?.value"
-      type="sidebar"
-      :ui="pocketSidebarContextUi"
-      @toggle-edit="toggleEdit()">
-      <EditableButton
-        ref="handle"
-        :label="item.data?.value.label"
-        :avatar="props.item.avatar"
-        :ui="{
-          base: cn('pr-6', {
-            'bg-p1/80 backdrop-blur-sm': isDragging
-          }),
-          label: 'align-baseline text-md! font-medium tracking-tight'
-        }"
-        color="primary"
-        :value="item.data?.value.label || ''"
-        :variant="contextOpen ? 'soft' : isDragging ? 'solid' : 'ghost'"
-        @update:label="handleEdit($event)">
-        <template #input-actions>
-          <LazyUButton
-            size="xs"
-            icon="i-sparkle"
-            :ui="{ base: 'max-size-6! size-6! max-w-6! min-w-6! rounded-sm' }"
-            @pointerdown.prevent.stop
-            @click.stop.prevent="randomizeHistoryName()" />
-        </template>
-      </EditableButton>
-    </PocketContextMenu>
-  </li>
+    :data-open="contextOpen"
+    :data-active="$route.path === dragData.to"
+    :data-droppable="droppable"
+    class="group/btn relative flex max-w-full grow overflow-visible rounded-lg">
+    <UTheme :props="{ button: shared }">
+      <PocketContextMenu
+        v-model:open="contextOpen"
+        :pocket="props.item"
+        type="sidebar"
+        @toggle-edit="toggleEdit()">
+        <EditableButton
+          ref="handle"
+          :label="item.label"
+          :avatar="dragData.avatar"
+          :value="item?.label || ''"
+          @update:label="handleEdit($event)">
+          <template #input-actions>
+            <LazyUButton
+              block
+              size="xs"
+              icon="i-sparkle"
+              :ui="{
+                base: 'max-size-6! size-6! max-w-6! min-w-6! rounded-sm'
+              }"
+              @pointerdown.prevent.stop
+              @click.stop.prevent="randomizeHistoryName()" />
+          </template>
+        </EditableButton>
+      </PocketContextMenu>
+    </UTheme>
+  </div>
 </template>

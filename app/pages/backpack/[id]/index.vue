@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-defineProps<{
-  folder: Folder
+const props = defineProps<{
+  folder: SortableFolder
   view: string
 }>()
 definePageMeta({
@@ -12,12 +12,21 @@ definePageMeta({
   prefix: "Backpack",
   order: 1
 })
+
+const items = computed(() => props.folder?.subfolders)
 </script>
 
 <template>
   <div>
     <NuxtLayout name="folder">
       <BackpackGrid :folder />
+      <template v-if="folder?.subfolders?.value.length">
+        <BackpackGrid
+          v-for="(item, i) in folder.subfolders.value"
+          :key="item.id"
+          :folder="item"
+          :index="i" />
+      </template>
     </NuxtLayout>
   </div>
 </template>

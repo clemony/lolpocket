@@ -1,4 +1,5 @@
 import * as v from "valibot"
+import { generateName } from "~/domain/pocket/helpers/generateStrings"
 import { pathIndex } from "~~/shared/constants/runes/pathIndex"
 
 // role schema
@@ -77,7 +78,7 @@ export const runeSetSchema = v.object({
 export const pocketSchema = v.object({
   key: v.pipe(v.string(), v.uuid("pocket uuid malformed")),
   okey: v.pipe(v.string(), v.uuid("pocket uuid malformed")),
-  label: v.optional(v.string()),
+  label: v.fallback(v.string(), () => generateName()),
   ouuid: v.fallback(
     v.pipe(v.string(), v.uuid("original author uuid malformed")),
     "mysterious pocket"

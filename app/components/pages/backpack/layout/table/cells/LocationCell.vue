@@ -30,9 +30,8 @@ const { folderIcon } = user()
         color="neutral"
         icon="i-more"
         :ui="{
-          base: 'max-w-auto absolute z-5 h-[calc(100%-var(--spacing)*2)]! max-h-full w-8/10! rounded-lg transition-all duration-200 ease-spring-soft hover:bg-n2 hover:inset-ring-neutral data-[state=open]:max-h-10! data-[state=open]:max-w-10! hover:[&_svg]:text-nc',
-          leadingIcon:
-            'transition-rotate scale-120 rotate-90 duration-200 ease-spring-soft group-data-[state=open]/btn:rotate-0 group-data-[state=open]/btn:text-nc'
+          base: 'absolute z-5 not-hover:bg-p0 hover:[&_svg]:text-nc',
+          leadingIcon: 'scale-120 group-data-[state=open]/btn:text-nc'
         }" />
     </UDropdownMenu>
   </div>

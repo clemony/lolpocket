@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { Feedback } from "@dnd-kit/dom"
 import { useSortable } from "@dnd-kit/vue/sortable"
 import { parseAbsoluteToLocal } from "@internationalized/date"
 import { useTableInject } from "~/composables/ui/useTableProvider"
@@ -6,7 +7,7 @@ import { clickFriendlySensors } from "~/domain/pocket/helpers/sortableSensors"
 import { getSplash, getSplashFromSkinKey } from "~/domain/utils/img"
 
 const props = defineProps<{
-  pocket: Pocket
+  pocket: SortablePocket
   index?: number
 }>()
 
@@ -38,21 +39,19 @@ function toggleEdit() {
 const champion = computed(
   () => pocket.value._champion || pocket.value.champions?.[0]
 )
+function championImage(type: SplashType) {
+  return champion.value ? getSplash(String(champion.value), type) : undefined
+}
 const image = computed(() => {
   if (!pocket.value.skin && !champion.value) return null
   else {
-    function champion(type: SplashType) {
-      return pocket.value._champion
-        ? getSplash(String(pocket.value._champion), type)
-        : pocket.value.champions?.[0]
-          ? getSplash(String(pocket.value.champions?.[0]), type)
-          : null
-    }
     return pocket.value.skin
       ? getSplashFromSkinKey(pocket.value.skin, "centered")
-      : champion("centered")
+      : championImage("centered")
   }
 })
+
+const splash = computed(() => championImage("centered"))
 
 const contextOpen = shallowRef<boolean>(false)
 
@@ -75,17 +74,11 @@ const position = computed(() => {
 const element = useTemplateRef<HTMLElement>("element")
 const handle = useTemplateRef<HTMLElement>("handle")
 
-useSortable({
-  id: computed(() => props.pocket.key),
-  type: "pocket",
-  accept: "pocket",
-  index: computed(() => props.index ?? 0),
-  group: computed(() => props.pocket.location || "backpack"),
+const { isDragging } = useSortable({
+  ...pocket.value.sortable,
+  type: "grid:pocket",
   element,
-  handle,
-  sensors: clickFriendlySensors,
-  disabled: computed(() => editing.value || contextOpen.value),
-  data: computed(() => props.pocket)
+  handle: element
 })
 
 const { isRowSelected, setRowSelected } = useTableInject<Pocket>()
@@ -98,7 +91,14 @@ function onSelectionChange(event: Event, rowId: string) {
 </script>
 
 <template>
-  <label ref="element">
+  <label
+    ref="element"
+    :class="
+      cn('relative w-full rounded-4xl p-3', {
+        'ring inset-shadow-xs ring-pc/60 ring-offset-1 ring-offset-p3':
+          isRowSelected(pocket.key)
+      })
+    ">
     <input
       v-if="pocket"
       :checked="isRowSelected(pocket.key)"
@@ -107,96 +107,92 @@ function onSelectionChange(event: Event, rowId: string) {
       :value="pocket.key"
       @change="onSelectionChange($event, pocket.key)" />
 
-    <PerspectiveCard
-      :class="
-        cn({
-          'w-full rounded-xl ring ring-pc ring-offset-4': isRowSelected(
-            pocket.key
-          )
-        })
-      ">
+    <PerspectiveCard>
       <PocketContextMenu
         v-model:open="contextOpen"
-        :item="pocket"
+        :pocket
         :disabled="editing || !pocket"
         @toggle-edit="editPocketLabelDialog()">
         <UCard
           :ui="{
-            root: 'divide group/card w-full divide-y drop-shadow-md transition-transform duration-200 ease-out',
-            header: 'min-h-28 p-0!',
-            body: 'relative pt-9! pb-4!'
+            root: 'group/card relative w-full drop-shadow-md transition-transform duration-200 ease-out',
+            header: 'px-3!!',
+            body: 'z-auto w-full gap-0! bg-transparent px-0! pt-0! pb-2!',
+            footer:
+              'pointer-events-auto! flex w-full items-center justify-between gap-1 border-t border-border px-3! py-1!'
           }">
-          <UButton
-            ref="handle"
-            :ui="{ base: 'absolute top-1 right-1' }"
-            label="drag" />
-          <template #header>
-            <div class="relative size-full grow bg-p2">
-              <div
-                class="pointer-events-none relative isolate aspect-20/9 size-full overflow-hidden object-cover">
-                <FoilLayer>
-                  <NuxtImg
-                    v-if="image"
-                    :src="image"
-                    width="500"
-                    height="300"
-                    sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    format="webp"
-                    fetchpriority="high"
-                    loading="eager"
-                    decoding="async"
-                    preload
-                    class="z-1 size-full shrink-0 translate-y-5 scale-180 rounded-none object-cover transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-186!" />
-                </FoilLayer>
-              </div>
-              <!--       <div class="absolute top-1 right-1 size-10">
-                <SvgMask v-if="position" class="size-full" :mask-key="position" />
-              </div> -->
-
-              <FoilLayer
-                :disabled="!champion"
+          <div
+            class="relative h-34 w-full cursor-move bg-p1 *:pointer-events-none">
+            <FoilLayer
+              :disabled="!splash"
+              :ui="{
+                root: 'h-34 overflow-hidden rounded-none!'
+              }">
+              <NuxtImg
+                v-if="image"
+                :src="image"
+                width="500"
+                height="300"
+                sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                format="webp"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+                preload
+                class="z-1 size-full shrink-0 translate-y-5 scale-180 rounded-none object-cover transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-184!" />
+            </FoilLayer>
+            <FoilLayer
+              :disabled="!champion"
+              :ui="{
+                root: 'group/card absolute -bottom-9 left-4 z-2 size-18! overflow-hidden rounded-full ring-5 ring-p0'
+              }">
+              <UAvatar
+                icon="i-lp-champ"
+                :src="
+                  champion
+                    ? `/img/champion/${champIdByKey(String(champion))}.webp`
+                    : undefined
+                "
+                :title="champion ? champNameByKey(String(champion)) : undefined"
+                width="80"
+                height="80"
+                sizes="80px"
                 :ui="{
-                  root: 'group/card absolute -bottom-9 left-3 isolate z-2 size-22 overflow-hidden rounded-lg bg-p0 p-1.5 transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-102'
-                }">
-                <UAvatar
-                  icon="i-lp-champ"
-                  :src="
-                    champion
-                      ? `/img/champion/${champIdByKey(String(champion))}.webp`
-                      : undefined
-                  "
-                  :title="
-                    champion ? champNameByKey(String(champion)) : undefined
-                  "
-                  width="80"
-                  height="80"
-                  sizes="80px"
-                  :ui="{
-                    root: 'fx-noise z-0 size-full rounded-none! inset-ring inset-ring-p3 *:rounded-none',
-                    icon: 'size-5.5 opacity-60',
-                    image:
-                      'shadow-sm drop-shadow-sm transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-104!'
-                  }" />
-              </FoilLayer>
+                  root: 'fx-noise z-0 size-full rounded-full! *:rounded-full',
+                  icon: 'size-5.5 opacity-60',
+                  image:
+                    'shadow-sm drop-shadow-sm transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-104!'
+                }" />
+            </FoilLayer>
+          </div>
+
+          <div class="w-full grow items-start! gap-4! px-3 pt-10">
+            <div class="flex w-full max-w-full flex-col overflow-hidden pb-0.5">
+              <h4 class="w-full truncate text-lg text-nowrap">
+                {{ pocket.label ?? "Entitled Pocket" }}
+              </h4>
+              <div
+                class="size-full grow justify-between! gap-y-0.5 pt-1! pb-1.5">
+                <div
+                  class="flex w-full grow items-center justify-between overflow-visible">
+                  <PocketItemSet :pocket :position="computed(() => position)" />
+                  <Grow />
+                  <PocketRunes :pocket />
+                </div>
+              </div>
             </div>
-          </template>
-          <UBlogPost
-            orientation="vertical"
-            size="sm"
-            variant="naked"
-            :title="pocket.label"
-            :ui="{
-              root: 'w-full grow items-start! gap-4! px-5! py-0',
-              description:
-                'mt-2 flex w-full grow items-center justify-between overflow-visible',
-              header: 'overflow-visible',
-              body: 'size-full grow justify-between! gap-y-0.5 pt-1! pb-1.5',
-              date: 'pointer-events-auto! inline-flex w-full items-center gap-1',
-              meta: 'mb-0 w-full',
-              title: 'truncate text-nowrap',
-              authors: 'px-px pt-0.5'
-            }">
-            <template #date>
+          </div>
+          <template #footer>
+            <div
+              class="inline-flex flex-nowrap items-center gap-1 px-px align-middle text-xs">
+              <PocketAuthor :pocket="pocket" :author-id="accountId" />
+              <template v-if="isPickedPocket">
+                picked
+                <PocketAuthor :pocket="pocket" :author-id="pocket.ouuid" />
+              </template>
+              pocket
+            </div>
+            <div class="inline-flex items-center gap-1 align-middle">
               <Tooltip
                 :disabled="!position"
                 :icon="`i-lp-${position}`"
@@ -211,30 +207,10 @@ function onSelectionChange(event: Event, rowId: string) {
                 </div>
               </Tooltip>
               <span class="text-xs font-semibold text-nowrap">
-                Patch {{ date ?? "Hazy" }}
+                {{ date ?? "???" }}
               </span>
-            </template>
-
-            <template #description>
-              <PocketItemSet :pocket :position="computed(() => position)" />
-              <Grow />
-              <div
-                class="pointer-events-auto size-fit transition-all duration-600 ease-spring-soft hover:scale-110"></div>
-              <Grow />
-              <PocketRunes :pocket />
-            </template>
-            <template #authors>
-              <div
-                class="mt-2 inline-flex flex-nowrap items-center gap-1 align-middle text-xs">
-                <PocketAuthor :pocket="pocket" :author-id="accountId" />
-                <template v-if="isPickedPocket">
-                  picked
-                  <PocketAuthor :pocket="pocket" :author-id="pocket.ouuid" />
-                </template>
-                pocket
-              </div>
-            </template>
-          </UBlogPost>
+            </div>
+          </template>
         </UCard>
       </PocketContextMenu>
     </PerspectiveCard>

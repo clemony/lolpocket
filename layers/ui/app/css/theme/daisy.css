@@ -108,10 +108,14 @@
     }
   }
 }
-
+/* @utility button-neutral {
+  @apply bg-neutral font-semibold text-nc! inset-ring inset-ring-n1 btn-neutral depth-5 **:text-nc! focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-n1 disabled:shadow-none on:text-nc on:btn-neutral [&_span]:text-nc! [&_svg]:text-nc!;
+} */
 @layer utilities {
-  .rounded-tablist::before {
-    @apply pointer-events-none absolute inset-x-0 -bottom-12 z-0 h-22 w-full translate-y-9.75 justify-self-center rounded-4xl border-x border-t border-(--ui-border) mask-b-from-31% mask-b-to-30% content-[''];
+  .rounded-tablist {
+    &::before {
+      @apply pointer-events-none absolute inset-x-0 -bottom-12 z-0 h-22 w-full translate-y-9.5 justify-self-center rounded-4xl border-x border-t border-(--ui-border) mask-b-from-31% mask-b-to-30% content-[''];
+    }
   }
 }
 .tabs-lift-list:has(

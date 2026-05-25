@@ -1,9 +1,4 @@
-export type BackpackFolderKey<T extends string = string> =
-  keyof typeof backpackFolders
-
-export type FolderKey = BackpackFolderKey | string
-
-export const backpackFolders = {
+export const backpackFolders: Record<BackpackFolderKey, Folder> = {
   pinned: {
     label: "Pinned",
     id: "pinned",
@@ -49,7 +44,4 @@ export const backpackFolders = {
     location: "default",
     order: 5
   }
-} satisfies Record<string, Folder>
-export const defaultFolderKeys = Object.keys(
-  backpackFolders
-) as BackpackFolderKey[]
+}

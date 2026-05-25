@@ -52,6 +52,7 @@ const open = shallowRef<boolean>(false)
   <Menu
     v-bind="props.menu"
     v-model:open="open"
+    size="lg"
     :items="newItemOptions({ location: props.location }).value"
     component="dropdown"
     :orientation="props?.collapsed ? 'vertical' : 'horizontal'"
@@ -61,8 +62,8 @@ const open = shallowRef<boolean>(false)
         'size-4.5 **:stroke-[10%]',
         props.menu?.ui?.itemLeadingIcon
       ),
-      item: 'pr-4',
-      content: cn('min-w-54 rounded-xl', props.menu?.ui?.content)
+      item: 'gap-2.5 pr-4',
+      content: cn('min-w-54', props.menu?.ui?.content)
     }"
     :highlight="true"
     :content="{

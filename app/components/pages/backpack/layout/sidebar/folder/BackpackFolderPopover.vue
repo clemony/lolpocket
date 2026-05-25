@@ -2,10 +2,9 @@
 import { LazyEditBackpackItemModal } from "#components"
 import { editFolderIcon } from "~/domain/pocket/folder/editFolder"
 import { useFolderChildren } from "~/domain/pocket/folder/useFolder"
-import { useIconSet } from "~/domain/pocket/folder/useIconSet"
 import type { EditInputExpose } from "~~/layers/ui/app/types/types"
 const { item: itemFolder } = defineProps<{
-  item: Folder
+  item: SortableFolder
 }>()
 
 const item = computed(() => safeObject(itemFolder))
@@ -27,8 +26,6 @@ const focusInput = () => input.value?.focusInput()
 const open = shallowRef<boolean>(false)
 const menuOpen = shallowRef<boolean>(false)
 const togglePopover = useToggle(open)
-
-const set = computed(() => useIconSet(item.value?.iconKey, open))
 </script>
 
 <template>
@@ -52,10 +49,10 @@ const set = computed(() => useIconSet(item.value?.iconKey, open))
       :active="$route.params.path === item.to"
       size="md"
       square
-      :icon="set.icon"
+      :icon="item.icons?.[open ? 'open' : 'closed']"
       :ui="{
         base: 'anchor',
-        leadingIcon: cn('size-4.5', set.class)
+        leadingIcon: cn('size-4.5', item.icons?.class)
       }" />
     <!--
     </UTooltip>     </FolderContextMenu> -->

@@ -91,6 +91,11 @@ export const buttonTheme = defineUiTheme({
         "btn border-0 text-pc btn-ghost",
         "hover:inset-ring on:inset-ring"
       ],
+      highlight: [
+        "disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
+        "btn border-0 text-pc btn-ghost",
+        "hover:inset-ring hover:fx-0! on:inset-ring"
+      ],
       outline:
         "btn border-0 ring ring-p3 btn-outline hover:bg-p1 hover:inset-shadow-xs",
       subtle:
@@ -169,11 +174,11 @@ export const buttonTheme = defineUiTheme({
     /* BASE */
     {
       color: ["base", "primary", "secondary", "tertiary"],
-      variant: "link",
-      class: {
+      variant: "link"
+      /*      class: {
         label:
           "text-start font-medium decoration-[inherit] group-hover/btn:underline"
-      }
+      } */
     },
     {
       color: "base",
@@ -203,9 +208,10 @@ export const buttonTheme = defineUiTheme({
     /* TRANSPARENT */
     {
       color: "transparent",
-      variant: "solid",
+      variant: ["solid", "ghost"],
       class: {
-        base: "inset-ring-none bg-transparent text-pc shadow-none drop-shadow-none fx-0 hover:bg-transparent hover:inset-ring-0 hover:fx-0"
+        base: "inset-ring-none bg-transparent text-pc shadow-none drop-shadow-none fx-0 hover:bg-transparent hover:inset-ring-0 hover:fx-0",
+        leadingIcon: "text-pc"
       }
     },
     /* PRIMARY */
@@ -235,6 +241,13 @@ export const buttonTheme = defineUiTheme({
       variant: "ghost",
       class: {
         base: "text-pc hover:bg-p1 hover:shadow-sm hover:inset-ring hover:shadow-black/4 hover:inset-ring-p3/40! hover:drop-shadow-xs on:bg-p1"
+      }
+    },
+    {
+      color: "primary",
+      variant: "highlight",
+      class: {
+        base: "text-pc hover:bg-p1 hover:shadow-none hover:inset-ring hover:inset-ring-p3/40! hover:drop-shadow-none on:bg-p1"
       }
     },
     /* SECONDARY */
@@ -296,8 +309,9 @@ export const buttonTheme = defineUiTheme({
     // LINK
     {
       variant: "link",
-      class:
-        "text-pc [&>[data-slot=label]]:text-pc [&>[data-slot=label]]:decoration-pc group-hover/btn:**:[&>[data-slot=label]]:underline"
+      class: {
+        base: "text-pc [&>[data-slot=label]]:text-pc [&>[data-slot=label]]:decoration-pc group-hover/btn:**:[&>[data-slot=label]]:underline"
+      }
     },
     {
       variant: ["soft"],

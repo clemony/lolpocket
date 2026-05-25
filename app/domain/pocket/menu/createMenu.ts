@@ -107,7 +107,7 @@ export const newItemOptions = (options: NewOptions | undefined) =>
           icon: h(SparkleIcon, {
             ui: {
               root: "size-4.5",
-              icon: cn("size-3.75! scale-90", options?.ui?.itemLeadingIcon),
+              icon: cn("size-4!", options?.ui?.itemLeadingIcon),
               inactveIcon:
                 "group-aria-[expanded=true]/btn:opacity-0 group-data-[state=open]/btn:opacity-0",
               activeIcon:
@@ -117,20 +117,28 @@ export const newItemOptions = (options: NewOptions | undefined) =>
           label: "Magic Pocket",
           ui: {
             item: "group/btn",
-            content: "max-w-64 "
+            content: "max-w-64 pb-0.5"
           },
 
           content: {
-            sideOffset: options?.content?.sideOffset ?? -8,
-            align: "center"
+            sideOffset: options?.content?.sideOffset ?? -4,
+            align: "start"
           },
           children: [
+            {
+              type: "label",
+              label: "Generation Defaults"
+            },
+            {
+              type: "separator"
+            },
             {
               type: "label",
               label: "Position",
               slot: "select",
               ui: labelUi,
               select: {
+                icon: `i-lp-${position.value ?? "all"}`,
                 modelValue: position,
                 items: positionItems,
                 open: positionOpen,
@@ -143,6 +151,7 @@ export const newItemOptions = (options: NewOptions | undefined) =>
               slot: "select",
               ui: labelUi,
               select: {
+                icon: `i-lp-${map.value ?? 0}`,
                 modelValue: map,
                 items: mapItems,
                 open: mapOpen,
@@ -150,30 +159,30 @@ export const newItemOptions = (options: NewOptions | undefined) =>
                   content: " bg-p0/94 p-0.5 max-h-100 h-max!"
                 }
               }
-            },
-            {
-              type: "separator"
-            },
-            {
-              label: "Generate",
-              color: "neutral",
-              icon: "i-activity",
-              variant: "solid",
-              ui: {
-                item: " px-3 group/item gap-2 mb-1 mt-2 flex justify-center rounded-lg bg-neutral hover:bg-n3 fx-noise-3 fx-1 justify-center w-[calc(100%-0.5rem)] mx-auto",
-                itemLabel: "text-nc! font-semibold",
-                itemLeadingIcon:
-                  "text-nc scale-110 group-hover/item:text-nc! group-[data=highlighted]/item:text-nc! group-active/item:text-nc! text-nc! **:text-nc!"
-              },
-              onSelect() {
-                newRandomPocket({
-                  map: map.value,
-                  location: String(options?.location),
-                  position: position.value
-                })
-              }
             }
           ]
+        },
+        {
+          type: "separator"
+        },
+        {
+          label: "Generate",
+          color: "neutral",
+          icon: "i-activity",
+          variant: "solid",
+          ui: {
+            item: " px-3 group/item gap-2 mb-1 mt-2 flex justify-center rounded-lg bg-neutral hover:bg-n3 fx-noise-3 fx-1 justify-center w-[calc(100%-0.5rem)] mx-auto",
+            itemLabel: "text-nc! font-semibold",
+            itemLeadingIcon:
+              "text-nc scale-110 group-hover/item:text-nc! group-[data=highlighted]/item:text-nc! group-active/item:text-nc! text-nc! **:text-nc!"
+          },
+          onSelect() {
+            newRandomPocket({
+              map: map.value,
+              location: String(options?.location),
+              position: position.value
+            })
+          }
         }
       ].filter(Boolean) as DropdownMenuItem[]
   )

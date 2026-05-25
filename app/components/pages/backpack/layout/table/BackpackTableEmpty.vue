@@ -34,12 +34,13 @@ const description = computed(() => {
 
 <template>
   <UEmpty
-    :ui="{ root: 'max-w-100' }"
+    :ui="{ root: 'group/btn max-w-100' }"
     :title="`${item.label} Empty`"
     :icon="icon?.closed"
+    data-state="closed"
     :avatar="{
       ui: {
-        icon: icon?.ui?.closed
+        icon: icon?.class
       }
     }"
     :description>

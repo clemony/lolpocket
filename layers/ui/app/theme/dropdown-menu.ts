@@ -4,7 +4,7 @@ export const dropdownMenuTheme = defineUiTheme({
   slots: {
     arrow: "fill-p0",
     content: [
-      "z-[120] flex min-w-42 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/80 bg-blend-screen shadow-lg ring shadow-black/8 ring-p3 drop-shadow-none backdrop-blur-md select-none"
+      "z-[120] flex min-w-42 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-xl! bg-p0/80 bg-blend-screen shadow-lg ring shadow-black/8 ring-p0/50 ring-offset-1 ring-offset-p3 drop-shadow-none backdrop-blur-md select-none"
     ],
     group: "isolate p-0.5",
     separator: "my-1 h-px bg-n0/8",
@@ -88,8 +88,8 @@ export const dropdownMenuTheme = defineUiTheme({
       },
       lg: {
         label: "gap-2 p-2 text-sm font-medium",
-        item: "gap-2 p-2 text-sm font-medium",
-        itemLeadingIcon: "size-4 **:stroke-[10%]",
+        item: "gap-2 rounded-lg p-2 text-sm font-medium",
+        itemLeadingIcon: "size-4.5 **:stroke-[10%]",
         itemLeadingAvatarSize: "2xs",
         itemTrailingIcon: "size-4.5",
         itemTrailingKbds: "gap-1",
@@ -108,7 +108,6 @@ export const dropdownMenuTheme = defineUiTheme({
   },
   compoundVariants: [
     {
-      color: "base",
       active: false,
       class: {
         item: "data-pc:before:noise text-pc/60 hover:before:bg-p2 data-pc:text-pc data-pc:before:bg-p3! data-[state=open]:before:bg-p3/60!",
@@ -117,18 +116,13 @@ export const dropdownMenuTheme = defineUiTheme({
       }
     },
     {
-      color: "base",
       active: true,
       class: {
         item: "before:noise text-pc before:bg-p3/80!",
         itemLeadingIcon: "text-pc"
       }
     }
-  ],
-  defaultVariants: {
-    color: "base",
-    size: "md"
-  }
+  ]
 })
 
 export default dropdownMenuTheme

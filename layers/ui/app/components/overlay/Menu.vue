@@ -147,6 +147,7 @@ const items = computed(() => guardedItems(props.items))
         :model-value="asSelect(item).select.modelValue.value"
         :open="asSelect(item).select.open.value"
         :portal="true"
+        :icon="item.select.icon"
         :default-open="false"
         :content="selectContent(item)"
         :ui="selectUi(item)"

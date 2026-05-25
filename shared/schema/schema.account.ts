@@ -1,14 +1,7 @@
 // shared/schemas/user.ts
 
-import { feedKeys } from "#shared/types"
 import * as v from "valibot"
-import type {
-  RouteLocationAsPathGeneric,
-  RouteLocationAsRelativeGeneric
-} from "vue-router"
 import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
-import type { PocketProps } from "~/domain/pocket/types"
-import type { SortableProps } from "~/types/sortable"
 
 // username
 export const usernameSchema = v.union([
@@ -120,21 +113,3 @@ export type UsernameSchema = v.InferOutput<typeof usernameSchema>
 export type EmailSchema = v.InferOutput<typeof emailSchema>
 export type Account = v.InferOutput<typeof accountSchema>
 export type FolderSchema = v.InferOutput<typeof folderSchema>
-export type FolderMixArray = (PocketProps | Folder)[]
-
-export interface Folder extends Omit<FolderSchema, "location" | "order"> {
-  location?: string
-  order?: number
-  open?: boolean
-  to?:
-    | string
-    | RouteLocationAsRelativeGeneric
-    | RouteLocationAsPathGeneric
-    | undefined
-  id: string
-  children?: ComputedRef<PocketProps[]>
-  subfolders?: ComputedRef<Folder[]>
-  sortable?: SortableProps & {
-    data?: ComputedRef<{ kind: string; id: string }>
-  }
-}

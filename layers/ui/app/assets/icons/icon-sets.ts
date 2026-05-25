@@ -7,10 +7,6 @@ export interface IconSet {
   closed: string
   icon?: string
   class?: string
-  ui?: {
-    open?: string
-    closed?: string
-  }
 }
 export type IconKey = keyof typeof iconSets
 
@@ -27,8 +23,7 @@ export const iconSets: Record<string, IconSet> = {
     label: "Pin",
     icon: "i-pin",
     open: "i-pin",
-    closed: "i-unpin",
-    class: ""
+    closed: "i-unpin"
   },
   archive: {
     key: "archive",
@@ -64,11 +59,7 @@ export const iconSets: Record<string, IconSet> = {
     icon: "i-proicons-heart",
     open: "i-proicons-heart",
     closed: "i-proicons-heart-stylistic", //i-ri-hearts-line,
-    class: " scale-110",
-    ui: {
-      open: "  scale-110",
-      closed: " scale-110"
-    }
+    class: " scale-110"
   },
   live: {
     key: "live",
@@ -96,12 +87,7 @@ export const iconSets: Record<string, IconSet> = {
     label: "Cookie",
     open: "i-iconoir-half-cookie",
     closed: "i-iconoir-cookie",
-    icon: "i-iconoir-cookie",
-    class: "",
-    ui: {
-      open: "",
-      closed: ""
-    }
+    icon: "i-iconoir-cookie"
   },
   cloud: {
     key: "cloud",
@@ -109,10 +95,7 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-lucide-cloud-lightning",
     closed: "i-lucide-cloud",
     icon: "i-lucide-cloud",
-    class: "translate-y-0.5",
-    ui: {
-      open: "translate-y-0.5"
-    }
+    class: "group-open/btn:translate-y-0.5"
   },
   time: {
     key: "time",
@@ -148,11 +131,7 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-lucide-lab-mug-teabag",
     closed: "i-lucide-lab-mug",
     icon: "i-lucide-lab-mug",
-    class: " scale-111 **:stroke-[8%] [&.icon-bold]:[**:stroke-10%]!",
-    ui: {
-      open: " scale-111 **:stroke-[8%]!",
-      closed: " scale-111 **:stroke-[8%]  "
-    }
+    class: " scale-111 **:stroke-[8%] [&.icon-bold]:[**:stroke-10%]!"
   },
   bull: {
     key: "bull",
@@ -167,10 +146,8 @@ export const iconSets: Record<string, IconSet> = {
     open: "i-streamline-sharp-hand-washing",
     closed: "i-lucide-soap-dispenser-droplet",
     icon: "i-lucide-soap-dispenser-droplet",
-    class: "",
-    ui: {
-      open: " scale-120  stroke-[3.8]"
-    }
+
+    class: " group-open/btn:scale-120   group-open/btn:stroke-[3.8]"
   },
   candle: {
     key: "candle",

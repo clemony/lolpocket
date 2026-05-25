@@ -22,7 +22,7 @@ defineOptions({
 
 const props = defineProps<
   ContextMenuProps & {
-    item: Pocket | undefined
+    pocket: Pocket | undefined
     type?: "default" | "table" | "sidebar"
   }
 >()
@@ -32,9 +32,9 @@ const emit = defineEmits<
     toggleEdit: [boolean]
   }
 >()
-
+const item = computed(() => props.pocket)
 const subopen = shallowRef<boolean>(false)
-const delegated = reactiveOmit(props, "class", "item")
+const delegated = reactiveOmit(props, "class", "pocket")
 const forwarded = useForwardPropsEmits(delegated, emit)
 const { collapseAllFolders } = useBackpack()
 const sortMenu = useSortMenu()
@@ -43,17 +43,17 @@ const collapseAllItem = computed(() =>
 )
 
 const handleDelete = async () => {
-  if (!props?.item) return
+  if (!item.value) return
 
-  if (user().localSettings.confirm_pocket_delete === false && props?.item)
-    return deletePocket(props.item.key)
-  else deleteFolderWithConfirm(props.item?.key)
+  if (user().localSettings.confirm_pocket_delete === false && item.value)
+    return deletePocket(item.value.key)
+  else deleteFolderWithConfirm(item.value?.key)
 }
 
 const { settings } = storeToRefs(user())
 const pocketActions = computed<ContextMenuItem[] | null>(() => {
-  if (!props.item) return null
-  const p = props.item
+  if (!item.value) return null
+  const p = item.value
   if (!p) return null
 
   const pinned = pocketStore().pinned.includes(p.key)

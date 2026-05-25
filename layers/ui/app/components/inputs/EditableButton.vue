@@ -2,25 +2,16 @@
 import { LazyEditableButton, LazyUButton } from "#components"
 import type { ButtonProps, InputProps } from "@nuxt/ui"
 
-const props = withDefaults(
-  defineProps<
-    ButtonProps & {
-      value: string
-      input?: Omit<InputProps, "defaultValue">
-      editable?: boolean
-    }
-  >(),
-  {
-    activeColor: "transparent",
-    activeVariant: "solid",
-    color: "transparent",
-    variant: "solid"
+const props = defineProps<
+  InputProps & {
+    value: string
+    input?: Omit<InputProps, "defaultValue">
+    editable?: boolean
   }
-)
+>()
 
 const emit = defineEmits(["update:label"])
 
-const delegatedButton = reactiveOmit(props, "class", "value", "autofocus")
 const { editing, label, setFocusInput } = useEditableButton()
 const input = useTemplateRef<{
   inputRef?: HTMLInputElement | { value?: HTMLInputElement | null } | null
@@ -59,61 +50,29 @@ function handleEdit() {
   emit("update:label", label.value)
   editing.value = false
 }
-
-const buttonRef = useTemplateRef<HTMLElement>("element")
-
-defineExpose({ buttonRef })
 </script>
 
 <template>
-  <div class="w-full max-w-full overflow-hidden pl-1">
+  <div class="max-w-full grow overflow-hidden pl-1">
     <UInput
       v-if="editing"
       v-bind="props.input"
       ref="input"
       v-model="label"
-      :avatar="props.avatar"
-      :icon="props.icon"
       :autofocus="true"
-      :placeholder="props.input?.placeholder || props.label"
-      :ui="{
-        root: 'inline-flex h-10 max-h-10 w-full max-w-full align-baseline',
-        leadingIcon: cn('size-4.5 text-pc', props.ui?.leadingIcon),
-        leadingAvatar: '-translate-x-0.5',
-        base: 'pr-14 pl-10 text-start align-baseline text-md font-medium tracking-tight select-all'
-      }"
+      :placeholder="props.input?.placeholder || props.defaultValue?.toString()"
       @blur="handleEdit()"
       @keydown.enter.stop="handleEdit()">
       <template #trailing>
         <LazyInputClear
-          v-if="label !== '' && label !== props?.label"
+          v-if="label !== '' && label !== props?.modelValue"
           @pointerdown.prevent.stop
           @clear-input="label = ''" />
         <slot name="input-actions" />
       </template>
     </UInput>
-    <UButton
-      v-if="!editing || !props.editable"
-      ref="element"
-      v-bind="delegatedButton"
-      :icon="props.icon"
-      block
-      :ui="{
-        base: cn(
-          'my-0! w-full grow hover:bg-p1',
-          { 'gap-2.5': !props.avatar },
-          props.ui?.base
-        ),
-        leadingAvatar: '-translate-x-0.5',
-        leadingIcon: cn('size-4.5', props.ui?.leadingIcon)
-      }">
-      <template v-if="!props.label && !editing" #default>
-        <span class="grow" />
-      </template>
-
-      <template #trailing>
-        <slot name="trailing" />
-      </template>
+    <UButton v-if="!editing || !props.editable">
+      <slot name="label" />
     </UButton>
   </div>
 </template>

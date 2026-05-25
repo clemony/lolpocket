@@ -100,19 +100,6 @@ function toggle() {
 
 <template>
   <div class="inset-0 flex size-full flex-col">
-    <div class="sticky top-0 z-1 w-full bg-p0 p-2">
-      <UButton
-        variant="link"
-        size="sm"
-        :ui="{
-          base: 'opacity-60 hover:opacity-100',
-          leadingIcon: 'size-3.5',
-          label: 'text-xs'
-        }"
-        label="Back to pockets"
-        icon="i-left"
-        @click="toggle()" />
-    </div>
     <div
       v-if="search.length <= 2 || (search.length > 2 && !results.length)"
       class="flex w-full flex-col gap-12 px-6 py-12">
@@ -124,17 +111,13 @@ function toggle() {
         description="Find pockets or folders within your backpack." />
 
       <div class="flex w-full flex-col gap-1">
-        <div class="w-full text-2xs font-bold uppercase opacity-60">
-          Suggestions
-        </div>
         <div
           v-for="suggestion in searchSuggestions"
           :key="suggestion.label"
           class="flex w-full flex-col gap-4 py-2">
           <Separator
             :label="suggestion.label"
-            :ui="{ label: 'text-2xs font-bold uppercase opacity-60' }"
-            label-position="end" />
+            :ui="{ label: 'text-2xs font-bold uppercase opacity-60' }" />
           <div
             :class="
               cn(

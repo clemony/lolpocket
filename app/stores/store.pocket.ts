@@ -14,7 +14,7 @@ export const pocketStore = defineStore(
     function map() {
       if (!pockets.value) return
       pockets.value = pockets.value.map((f) =>
-        f.location === "folders" || !f.location
+        f.location === "folder:folders" || !f.location
           ? {
               ...f,
               location: "folders"

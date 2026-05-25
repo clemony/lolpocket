@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { Folder } from "#shared/schema"
 import type {
   ContextMenuEmits,
   ContextMenuItem,
@@ -11,8 +10,6 @@ import {
   deleteFolder,
   deleteFolderWithConfirm
 } from "~/domain/pocket/folder/deleteFolder"
-import type { IconUi } from "~/domain/pocket/helpers/utils"
-import { iconSetFromKey } from "~/domain/pocket/helpers/utils"
 
 import {
   collapseAllBtn,
@@ -27,7 +24,7 @@ import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 const props = withDefaults(
   defineProps<
     ContextMenuProps & {
-      folder: Folder | undefined
+      folder: SortableFolder | undefined
       component?: "context" | "dropdown"
     }
   >(),
@@ -137,7 +134,7 @@ const folderActions = computed(() => {
     },
     {
       label: "Edit Folder Icon",
-      slot: "icons" as const,
+      slot: "folder.icons" as const,
       icon: iconSets[String(props.folder?.iconKey ?? "folder")]?.closed,
       ui: {
         item: "relative"
@@ -163,10 +160,6 @@ const folderActions = computed(() => {
     }
   ].filter(Boolean) as ContextMenuItem[]
 })
-
-const icons = computed<IconUi>(() =>
-  iconSetFromKey(props.folder?.iconKey ?? "folder")
-)
 </script>
 
 <template>
@@ -188,7 +181,7 @@ const icons = computed<IconUi>(() =>
     <template #default="{ open }">
       <slot :open />
     </template>
-    <template #icons>
+    <template #folder>
       <LazyUPopover
         v-model:open="subopen"
         mode="hover"
@@ -196,8 +189,8 @@ const icons = computed<IconUi>(() =>
         :ui="{ content: 'pt-3' }">
         <button class="inset-0 flex size-full items-center justify-start gap-2">
           <Icon
-            :name="String(icons.name[0])"
-            :class="cn('size-4 **:stroke-[2.1]', icons.class[0])" />
+            :name="String(folder.icons?.open)"
+            :class="cn('size-4 **:stroke-[2.1]', folder.icons?.class)" />
           <span class="grow text-start">Edit Folder Icon...</span>
           <Icon name="i-right" class="size-4 opacity-60" />
         </button>
@@ -210,10 +203,7 @@ const icons = computed<IconUi>(() =>
             </div>
             <div class="flex items-center gap-2.5 pr-1">
               <Icon
-                v-for="(ico, i) in [
-                  iconSets[folder?.iconKey ?? 'folder']?.closed,
-                  iconSets[folder?.iconKey ?? 'folder']?.open
-                ]"
+                v-for="(ico, i) in [folder.icons?.closed, folder.icons?.open]"
                 :key="i"
                 :name="String(ico)"
                 :class="cn('size-5.5 **:stroke-[1.7]')" />
@@ -223,7 +213,7 @@ const icons = computed<IconUi>(() =>
           <div
             class="grid max-h-60 grid-cols-4 gap-2 overflow-y-scroll px-3 py-2.5">
             <UButton
-              v-for="set in iconList"
+              v-for="set in iconSets"
               :key="set.key"
               :active="folder?.iconKey === set.key"
               active-color="neutral"
@@ -235,26 +225,30 @@ const icons = computed<IconUi>(() =>
               for="icon"
               @click="handleChange(set.key)">
               <template #leading>
-                <Icon
-                  :name="set.open"
-                  :class="
-                    cn(
-                      'size-5 opacity-0 transition-opacity duration-200 ease-in-out group-hover/btn:opacity-100',
-                      set?.ui?.open,
-                      { 'text-nc': folder?.iconKey === set.key }
-                    )
-                  " />
-                <Icon
-                  :name="set.closed"
-                  :class="
-                    cn(
-                      'size-5 transition-opacity duration-200 ease-in-out group-hover/btn:opacity-0',
-                      set?.ui?.closed,
-                      {
-                        'text-nc': folder?.iconKey === set.key
-                      }
-                    )
-                  " />
+                <span data-state="open" class="group/btn">
+                  <Icon
+                    :name="set.open"
+                    :class="
+                      cn(
+                        'size-5 opacity-0 transition-opacity duration-200 ease-in-out group-hover/btn:opacity-100',
+                        set?.class,
+                        { 'text-nc': folder?.iconKey === set.key }
+                      )
+                    " />
+                </span>
+                <span data-state="closed" class="group/btn">
+                  <Icon
+                    :name="set.closed"
+                    :class="
+                      cn(
+                        'size-5 transition-opacity duration-200 ease-in-out group-hover/btn:opacity-0',
+                        set?.class,
+                        {
+                          'text-nc': folder?.iconKey === set.key
+                        }
+                      )
+                    " />
+                </span>
               </template>
             </UButton>
           </div>

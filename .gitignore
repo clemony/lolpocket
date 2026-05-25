@@ -4,7 +4,6 @@
 .nitro
 .cache
 dist
-test
 .vscode
 .storage
 .history
@@ -16,12 +15,12 @@ gitignore
 *.cpuprofile
 *.code-workspace
 nuxt-build.cpuprofile
-*/vitest.config.ts
-test
-
+--host
+.notes
+.pnpm-store
 # Node dependencies
 node_modules
-
+test
 # Logs
 logs
 *.log

@@ -115,6 +115,8 @@ export const icon = {
     "folder-documents": "formkit:folder", //'i-folder-documents'
     "folder-open": "lucide:folder-closed", //'i-folder-open'
     folders: "lucide:folders", //'i-folders'
+    "resize-corner": "hugeicons:resize-field", //i-hugeicons-resize-field i-pajamas-resize i-mdi-resize-bottom-right
+    "drag-line": "si:drag-handle-lines", // i-si-drag-handle-line
 
     question: "i-uil-question", //'i-question'
     "win-key": "streamline:logos:microsoft-windows-logo-3-solid", //'i-win-key'

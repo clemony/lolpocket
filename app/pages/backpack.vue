@@ -6,6 +6,8 @@ import {
   useFolders,
   usePocketFolderProvider
 } from "~/domain/pocket/folder/useFolder"
+
+import { provideDragManager } from "~/composables/ui/useDragManager"
 import { onSidebarDragEnd } from "~/domain/pocket/helpers/sidebarDrag"
 
 usePocketFolderProvider()
@@ -23,8 +25,7 @@ definePageMeta({
 
 const { routeFolder } = useFolders()
 const store = pocketStore()
-const backpack = provideBackpack()
-const { sidebarFolderRefs, view } = backpack
+const { sidebarFolderRefs, view } = provideBackpack()
 
 onMounted(() => {
   sidebarFolderRefs.value = store.sidebarFolderRefs
@@ -32,6 +33,10 @@ onMounted(() => {
 onBeforeRouteLeave(() => {
   store.sidebarFolderRefs = sidebarFolderRefs.value
 })
+
+const manager = provideDragManager()
+
+const inSidebar = shallowRef<boolean>(false)
 </script>
 
 <template>
@@ -39,11 +44,14 @@ onBeforeRouteLeave(() => {
     <UDashboardGroup
       unit="rem"
       :ui="{
-        base: 'max-h-[calc(100vh-var(--ui-header-height)] w-full flex-1 translate-y-(--ui-header-height) gap-4 overflow-hidden px-8 py-6'
+        base: 'max-h-[calc(100vh-var(--ui-header-height)] w-full flex-1 translate-y-(--ui-header-height) gap-4 overflow-hidden px-8 py-7'
       }">
-      <DragDropProvider @drag-end="onSidebarDragEnd">
-        <BackpackSidebar />
-        <UDashboardPanel :ui="{ root: '' }" resizable>
+      <DragDropProvider :manager @drag-end="onSidebarDragEnd">
+        <BackpackSidebar
+          ref="sidebar"
+          @update:model-value="inSidebar = $event" />
+
+        <UDashboardPanel resizable>
           <NuxtPage :folder="routeFolder" :view />
         </UDashboardPanel>
       </DragDropProvider>

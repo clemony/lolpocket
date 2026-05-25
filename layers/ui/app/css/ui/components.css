@@ -1,3 +1,26 @@
+@utility corner-mask-* {
+  /* the radius */
+  --r: 4px;
+  --r: --spacing(--modifier(integer));
+
+  /* the size of the cut */
+  --s: 40px;
+  --s: --spacing(--value(integer));
+
+  --_m: /calc(2 * var(--r)) calc(2 * var(--r))
+    radial-gradient(#000 70%, #0000 72%) no-repeat;
+  mask:
+    calc(var(--s) + var(--r)) 0 var(--_m),
+    0 calc(var(--s) + var(--r)) var(--_m),
+    radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r)
+      no-repeat,
+    conic-gradient(
+      at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
+      #000 75%,
+      #0000 0
+    );
+}
+
 @layer components {
   .dropdown-label-class {
     @apply -mb-2 text-2xs! font-black tracking-normal uppercase opacity-50;
@@ -62,24 +85,6 @@
     @apply text-sm! font-semibold tracking-normal uppercase drop-shadow-2xs;
   }
 
-  .corner-mask {
-    --r: 4px;
-    /* the radius */
-    --s: 40px;
-    /* the size of the cut */
-    --_m: /calc(2 * var(--r)) calc(2 * var(--r))
-      radial-gradient(#000 70%, #0000 72%) no-repeat;
-    mask:
-      calc(var(--s) + var(--r)) 0 var(--_m),
-      0 calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r)
-        no-repeat,
-      conic-gradient(
-        at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
-        #000 75%,
-        #0000 0
-      );
-  }
   /* MATCH DATA TABLE */
   .match-data-table {
     .match-row {

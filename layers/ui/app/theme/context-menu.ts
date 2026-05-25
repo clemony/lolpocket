@@ -3,7 +3,7 @@ import { defineUiTheme } from "./defineUiTheme"
 export const contextMenuTheme = defineUiTheme({
   slots: {
     content: [
-      "flex min-w-44 origin-(--reka-context-menu-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/80 shadow-lg ring ring-p3 backdrop-blur-sm",
+      "flex min-w-44 origin-(--reka-context-menu-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/80 shadow-lg ring ring-p0/50 ring-offset-1 ring-offset-p3 backdrop-blur-md",
 
       /*       "data-[state=closed]:translate-y-3 data-[state=closed]:animate-[slide-in-from-bottom_100ms_ease-in] data-[state=open]:translate-y-0 data-[state=open]:animate-[slide-out-to-bottom_100ms_ease-out]" */ "data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]"
     ],
@@ -75,7 +75,7 @@ export const contextMenuTheme = defineUiTheme({
       },
       lg: {
         label: "gap-2 p-2 text-sm font-medium",
-        item: "gap-2 p-2 text-sm font-medium",
+        item: "gap-2 rounded-lg p-2 text-sm font-medium",
         itemLeadingIcon: "size-4.5 **:stroke-[10%]",
         itemLeadingAvatarSize: "2xs",
         itemTrailingIcon: "size-4",

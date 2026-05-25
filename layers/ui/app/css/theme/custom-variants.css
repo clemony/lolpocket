@@ -21,12 +21,18 @@
 }
 
 /* Element-level data states */
-@custom-variant open (&[data-state="open"]);
+@custom-variant open (&[data-state="open"],&[data-open="true"] );
 @custom-variant hover-open (&[data-state="open"]);
 @custom-variant closed (&[data-state="closed"]);
 @custom-variant hover-closed (&[data-state="closed"]);
-@custom-variant active (&[data-state="active"]);
+@custom-variant active (&[data-state="active"], &[data-active="true"]);
 @custom-variant selected (&[data-state="selected"]);
+
+@custom-variant current (&[data-current="true"]);
+
+@custom-variant dragging (&[data-dragging="true"]);
+@custom-variant droppable (&[data-droppable="true"]);
+@custom-variant targetted (&[data-targetted="true"]);
 
 @custom-variant checked (&[data-state="checked"]);
 @custom-variant collapsed (&[data-collapsed="true"]);

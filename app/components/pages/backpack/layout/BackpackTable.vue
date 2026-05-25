@@ -1,20 +1,17 @@
 <script lang="ts" setup>
 import type { UpdatedCell } from "#components"
 import { Icon } from "#components"
-import type { Folder } from "#shared/schema"
 import { DragDropProvider } from "@dnd-kit/vue"
 import type { TableRow } from "@nuxt/ui"
 import type { Table } from "@tanstack/vue-table"
 import { useTableInject } from "~/composables/ui/useTableProvider"
-import { backpackFolders } from "~/domain/pocket/folder/defaultFolders"
 import { useFolderChildren, useFolders } from "~/domain/pocket/folder/useFolder"
-import { asFolder } from "~/domain/pocket/helpers/typeAssert"
-import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
+import { asSortableFolder } from "~/domain/pocket/helpers/typeAssert"
 import { description, useBackpackColumns } from "./table/columns"
 import { columnOrder, onColumnDragEnd } from "./table/dragTable"
 
 defineProps<{
-  folder?: Folder
+  folder?: SortableFolder
 }>()
 
 const route = useRoute()
@@ -29,20 +26,17 @@ const columns = useBackpackColumns()
 const { folderIcon } = user()
 
 const { children, childKey, childData } = useFolderChildren(
-  computed(() => asFolder(routeFolder.value))
+  computed(() => asSortableFolder(routeFolder.value))
 )
 
-const data = computed<Pocket[]>(() => {
+const data = computed<SortablePocket[]>(() => {
   return [
-    ...(children.value?.map((p) => p.data?.value) as Pocket[]),
+    ...children.value,
     ...computed(() => {
       if (id !== "folders") return []
-      else
-        return subfolders.value.flatMap(
-          (f) => toValue(f.children)?.map((p) => p.data?.value) as Pocket[]
-        )
-    }).value
-  ].filter(Boolean)
+      else return subfolders.value.flatMap((f) => toValue(f.children))
+    }).value?.filter(Boolean)
+  ].filter(Boolean) as SortablePocket[]
 })
 
 const activePocketItem = ref<Pocket | undefined>()
@@ -103,7 +97,7 @@ watch(
         v-model:open="contextOpen"
         as-child
         :disabled="contextDisabled || !activePocketItem"
-        :item="activePocketItem"
+        :pocket="activePocketItem"
         @update:open="contextOpen = $event">
         <UTable
           ref="backpackTable"

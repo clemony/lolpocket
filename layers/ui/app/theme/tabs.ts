@@ -45,7 +45,7 @@ export const tabsTheme = defineUiTheme({
         trigger:
           "group/trigger tab z-5! flex items-center rounded-b-none! border-b-0 font-medium! tracking-normal",
         label:
-          "pointer-events-none w-full leading-none after:absolute after:-bottom-px after:z-6 after:h-px after:w-full group-data-[state-active]/trigger:after:opacity-100 group-data-[state-inactive]/trigger:after:opacity-0",
+          "pointer-events-none w-full leading-none after:absolute after:bottom-0 after:left-0 after:z-6 after:h-px after:w-full group-not-active/trigger:after:hidden group-data-[state-active]/trigger:after:opacity-100 group-data-[state-inactive]/trigger:after:opacity-0",
         content:
           "tabs-content tabs-lift-content z-0 -translate-y-px overflow-hidden rounded-4xl border-x border-b"
       },

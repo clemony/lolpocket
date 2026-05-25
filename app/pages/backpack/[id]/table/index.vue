@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineProps<{
-  folder: Folder
+  folder: SortableFolder
   view: string
 }>()
 

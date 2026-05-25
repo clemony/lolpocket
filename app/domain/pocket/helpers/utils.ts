@@ -1,4 +1,3 @@
-import type { Folder } from "#shared/schema"
 import { backpackFolders } from "~/domain/pocket/folder/defaultFolders"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
@@ -10,7 +9,7 @@ export function iconSetFromKey(key: string): IconUi {
   const ico = safeObject(iconSets[key])
   return {
     name: [ico.open, ico.closed],
-    class: [ico.ui?.open, ico.ui?.closed]
+    class: []
   }
 }
 

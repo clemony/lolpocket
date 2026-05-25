@@ -1,12 +1,32 @@
-import type { Folder } from "#shared/schema"
-import type { PocketProps, PocketPropsChildren } from "~/domain/pocket/types"
+import type { SortablePocketChildren } from "~/domain/pocket/types"
 
-export function asPocketProps(
-  item: PocketProps | PocketProps[] | undefined | PocketPropsChildren | Folder
-): PocketProps {
-  return item as PocketProps
+export function asSortablePocket(
+  item:
+    | SortablePocket
+    | SortableFolder
+    | SortablePocket[]
+    | undefined
+    | SortablePocketChildren
+    | Folder
+): SortablePocket {
+  return item as SortablePocket
 }
 
-export function asFolder(item: Folder | undefined | string | number): Folder {
-  return item as Folder
+export function asSortableFolder(
+  item: SortableFolder | SortablePocket | Folder | undefined | string | number
+): SortableFolder {
+  return item as SortableFolder
+}
+
+export function asSortableFolderOrPocket(
+  item:
+    | SortablePocket
+    | SortableFolder
+    | SortablePocket[]
+    | undefined
+    | SortablePocketChildren
+    | Folder
+): SortablePocket | SortableFolder {
+  console.log("🥸 - asSortableFolderOrPocket - item:", item)
+  return item as SortablePocket | SortableFolder
 }

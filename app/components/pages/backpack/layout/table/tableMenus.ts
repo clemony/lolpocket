@@ -31,7 +31,7 @@ export const folderActions = (
       icon: iconSets[f.iconKey]?.icon,
       checked: folder.id === f.location,
       ui: {
-        itemLeadingIcon: iconSets[f.iconKey]?.ui?.open
+        itemLeadingIcon: f.icons?.class
       },
       onSelect() {
         updatePocketLocation(row.original.key, f.id)
