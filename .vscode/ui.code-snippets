@@ -1,9 +1,0 @@
-{
-  "ui": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": ":ui",
-    "body": [
-      ":ui=\"{$0}\""
-    ]
-  }
-}
