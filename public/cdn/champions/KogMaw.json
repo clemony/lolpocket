@@ -232,7 +232,7 @@
           ]
         },
         {
-          "description": "Kog'Maw then gains a stack of Living Artillery for 8 seconds, refreshing on subsequent casts and stacking up to 9 times."
+          "description": "Kog'Maw then generates a stack of Living Artillery for 8 seconds, refreshing on subsequent casts and stacking up to 9 times."
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Living Artillery:</span> For each stack, Living Artillery's mana cost is increased by 40.</p>"
@@ -259,7 +259,7 @@
     "difficulty": 2
   },
   "lore": "Belched forth from a rotting Void incursion deep in the wastelands of Icathia, Kog'Maw is an inquisitive yet putrid creature with a caustic, gaping mouth. This particular Void-spawn needs to gnaw and drool on anything within reach to truly understand it. Though not inherently evil, Kog'Maw's beguiling naiveté is dangerous, as it often precedes a feeding frenzy—not for sustenance, but to satisfy its unending curiosity.",
-  "patchLastChanged": "25.21",
+  "patchLastChanged": "26.10",
   "positions": [
     "Bottom"
   ],

@@ -19,6 +19,9 @@
           "description": "Quinn's basic attacks on-hit against Vulnerable targets are empowered to consume the mark to deal 15 - 132.35 (based on level) (+ 40% bonus AD) bonus physical damage."
         },
         {
+          "description": "Harrier deals 50 bonus physical damage against monsters."
+        },
+        {
           "description": "While Behind Enemy Lines is active, Harrier is disabled and all Vulnerable marks are removed."
         }
       ],
@@ -41,7 +44,7 @@
       "effectRadius": "210",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies, increased to 150% against monsters.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -149,9 +152,9 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/e",
-      "notes": "Quinn will track the target if they change locations.\nShe will dash to the target's previous location without applying Vault's effects if the target is too far away or moves beyond 1200 units.\nVault  resets Quinn's remaining attack cooldown a short delay after the first dash ends (even if interrupted).\nThis delay is a fuzzy 0.25 to 0.5 seconds and this matches up with the moment the target of Vault is marked as  Vulnerable.\nThe basic attack reset does not count as one for  Hail of Blades.\nQuinn will automatically attempt to attack the target once she completes Vault.\nThe target will turn to face the opposite direction after being  knocked back.\nUnlike its constant cast range Vault's bounce's can vary to allow Quinn to close or to make a gap between herself and the target (depending on casting position) or even to jump through a wall (if there is enough landing room on the other side).\nVault's  knock back also interrupts the windup of basic attacks with  uncancellable windups.(unexpected)",
+      "notes": "Quinn will track the target if they change locations.\nShe will dash to the target's previous location without applying Vault's effects if the target is too far away or moves beyond 1200 units.\nVault  resets Quinn's remaining attack cooldown a short delay after the first dash ends (even if interrupted).\nThis delay is a fuzzy 0.25 to 0.5 seconds and this matches up with the moment the target of Vault is marked as  Vulnerable.\nQuinn will automatically attempt to attack the target once she completes Vault.\nThe target will turn to face the opposite direction after being  knocked back.\nUnlike its constant cast range Vault's bounce's can vary to allow Quinn to close or to make a gap between herself and the target (depending on casting position) or even to jump through a wall (if there is enough landing room on the other side).\nVault's  knock back also interrupts the windup of basic attacks with  uncancellable windups.(unexpected)",
       "resource": "Mana",
-      "speed": "2500 / 850",
+      "speed": "2500 • 850",
       "spellEffects": "Spell",
       "spellshieldable": "True",
       "targeting": "Unit",
@@ -246,7 +249,7 @@
   },
   "fullName": "Quinn and Valor",
   "lore": "Quinn is an elite ranger-knight of Demacia, who undertakes dangerous missions deep in enemy territory. She and her legendary eagle, Valor, share an unbreakable bond, and their foes are often slain before they realize they are fighting not one, but two of the kingdom's greatest heroes. Nimble and acrobatic when required, Quinn takes aim with her crossbow while Valor marks their elusive targets from above, making them a deadly pair on the battlefield.",
-  "patchLastChanged": "26.01",
+  "patchLastChanged": "26.10",
   "positions": [
     "Top"
   ],

@@ -47,7 +47,7 @@
   "notes": "Orb of Deception will hit additional units around the return point in a small circle when the orb turns around.\nThis applies both to the initial and return missile's damage, but the initial missile only deals damage if the unit was not hit by it already.\nEach pass of the projectile can only damage an enemy once.\nIf Ahri dies while the orb is out, the orb will visually disappear but continue to deal damage and return to Ahri.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1550 / 60 - 2600",
+  "speed": "1550 • 60 - 2600",
   "spellEffects": "Area of effect",
   "spellshieldable": "Special",
   "targeting": "Direction"

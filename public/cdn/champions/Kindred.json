@@ -72,14 +72,14 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/q",
-      "notes": "This ability always employs Quick cast.\nThe  dash distance can be extended to up to 400 units when dashing across terrain.\nThe  cooldown will not be modified if it cannot be reduced (the current cooldown would have to be less than the reduction amount in this case).",
+      "notes": "Dance of Arrows has no minimum dash range.\nThis ability always employs Quick cast.\nThe  cooldown will not be modified if it cannot be reduced (the current cooldown would have to be less than the reduction amount in this case).",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "500 + 100% movement speed",
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "300"
+      "targetRange": "300 • 400"
     },
     {
       "key": "W",
@@ -161,7 +161,7 @@
       "key": "E",
       "name": "Mounting Dread",
       "affects": "Enemies",
-      "blurb": "Active:  Lamb fires a shot at the target enemy that briefly  slows them applies a  stack of Mounting Dread. Lamb's  basic attacks against this target stack Mounting Dread up to a cap.",
+      "blurb": "Active:  Lamb fires a shot at the target enemy that briefly  slows them and applies a  stack of Mounting Dread. Lamb's  basic attacks against this target stack Mounting Dread up to a cap.",
       "castTime": "0.25",
       "cooldown": "14 / 12.5 / 11 / 9.5 / 8",
       "cost": "0",

@@ -47,5 +47,6 @@
   "speed": "1350 + 100% movement speed",
   "spellEffects": "Spell",
   "spellshieldable": "True",
-  "targeting": "Proximity"
+  "targeting": "Proximity",
+  "targetRange": "1250"
 }

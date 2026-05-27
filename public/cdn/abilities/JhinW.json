@@ -1,7 +1,7 @@
 {
   "key": "W",
   "name": "Deadly Flourish",
-  "width": "90",
+  "width": "80",
   "affects": "Enemies",
   "blurb": "Passive: Enemy champions that trigger a  Lotus Trap, or take damage from  Jhin or his allies, are marked with  Caught Out for a few seconds.",
   "castTime": "0.75",

@@ -20,8 +20,6 @@ export interface FolderDragData {
 export interface PocketDragData {
   kind: "pocket"
   item: Pocket
-  to?: string
-  avatar: ButtonProps["avatar"]
 }
 
 export const backpackFolderKeys = [
@@ -34,30 +32,26 @@ export const backpackFolderKeys = [
 
 export type BackpackFolderKey = (typeof backpackFolderKeys)[number]
 
-export type FolderKey<T extends BackpackFolderKey | string = string> =
-  | BackpackFolderKey
-  | string
+export type FolderKey<T extends string = string> = T | BackpackFolderKey
 
 export interface Folder extends FolderSchema {
   open?: boolean
   icons?: IconSet
-  to?:
-    | string
-    | RouteLocationAsRelativeGeneric
-    | RouteLocationAsPathGeneric
-    | undefined
+  to?: string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric
   id: string
   children?: ComputedRef<SortablePocket[]>
   count?: number
 }
 
 export interface SortableFolder extends Folder {
-  sortable: UseSortableInput
-  droppable: UseDroppableInput
+  sortable?: UseSortableInput
+  droppable?: UseDroppableInput
   subfolders?: ComputedRef<SortableFolder[]>
+  button?: ComputedRef<ButtonProps>
 }
 
 export interface SortablePocket extends Pocket {
   id: ComputedRef<string>
-  sortable: UseSortableInput
+  sortable?: Omit<UseSortableInput, "index"> & { index?: ComputedRef<number> }
+  button?: ComputedRef<Omit<ButtonProps, "prefetch">>
 }

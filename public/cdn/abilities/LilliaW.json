@@ -7,7 +7,7 @@
   "cooldown": "14 / 13 / 12 / 11 / 10",
   "cost": "50",
   "damageType": "Magic damage",
-  "effectRadius": "65 /  250",
+  "effectRadius": "250",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lillia dashes to 150 units in front of the target location over 0.759 seconds, though not through terrain, and deals magic damage in an area around the target spot. Enemies hit within the epicenter are dealt 200% increased damage.</p>",
@@ -69,10 +69,11 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/w",
+  "innerRadius": "65",
   "notes": "Lillia dashes to her target location over 0.6 to 0.767 seconds, but cannot move before the strike goes off at 0.767 seconds, regardless.\nLillia can hop over the edges of certain walls despite the ability being unable to traverse terrain.",
   "resource": "Mana",
   "spellEffects": "aoe",
   "spellshieldable": "true",
   "targeting": "Location",
-  "targetRange": "500 / 350"
+  "targetRange": "500 • 350"
 }

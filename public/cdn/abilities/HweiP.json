@@ -7,7 +7,7 @@
   "effectRadius": "285",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Hwei's damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 35 - 252.94 (based on level) (+ 35% AP) bonus magic damage to enemies in the area after a 0.85-second delay.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Hwei's damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 40 - 313.82 (based on level) (+ 35% AP) bonus magic damage to enemies in the area after a 0.85-second delay.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/p",

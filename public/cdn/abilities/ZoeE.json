@@ -1,7 +1,7 @@
 {
   "key": "E",
   "name": "Sleepy Trouble Bubble",
-  "width": "100 / 200",
+  "width": "100 • 200",
   "affects": "Enemies",
   "castTime": "0.25",
   "cooldown": "18 / 17 / 16 / 15 / 14",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "description": "The next instance of non- persistent damage from champions, large monsters or turrets within 3.25 seconds after the target starts sleeping consumes the debuff to deal bonus true damage equal to the post-mitigation damage dealt, capped at Sleepy Trouble Bubble's damage.",
+      "description": "The next instance of non- persistent damage from champions, large monsters or turrets against the sleeping target consumes the debuff to deal bonus true damage equal to the post-mitigation damage dealt, capped at Sleepy Trouble Bubble's damage. This bonus damage may also be applied within 1 second of the sleep ending, if the debuff was not consumed.",
       "leveling": [
         {
           "attribute": "Bonus Damage Cap",
@@ -62,6 +62,20 @@
             {
               "unit": "% AP",
               "values": "90"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Sleepy Trouble Bubble refunds a percentage of its cooldown if the bubble hits an enemy champion.",
+      "leveling": [
+        {
+          "attribute": "Cooldown Refund",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "16 / 19.5 / 23 / 26.5 / 30"
             }
           ]
         }

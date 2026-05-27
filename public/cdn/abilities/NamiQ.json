@@ -7,7 +7,7 @@
   "cooldown": "12 / 11 / 10 / 9 / 8",
   "cost": "60",
   "damageType": "Magic damage",
-  "effectRadius": "200 / 225",
+  "effectRadius": "200 • 225",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nami launches a bubble at the target location that lands after 0.726 seconds, dealing magic damage to enemies hit and suspending them for 1.5 seconds, during which they are revealed.</p>",

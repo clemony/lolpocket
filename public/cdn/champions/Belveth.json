@@ -21,7 +21,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/p",
-      "notes": "Bel'Veth's attack speed cap is increased to 9999.0, however this value is already way beyond the technical limit for attack speed.\nDeath in Lavender's  takedown effect will not trigger against monsters if they were slain by an enemy.\nDeath in Lavender stacks are indicated under Bel'Veth's health bar.\nBel'Veth's on-hit damage modifier will reduce the damage dealt by on-hit effects even if they aren't meant to be affected by on-hit modifiers (eg.  Statikk Shiv).(bug)",
+      "notes": "Bel'Veth's attack speed cap is increased to 9999.0, however this value is already way beyond the technical limit for attack speed.\nDeath in Lavender's  takedown effect will not trigger against monsters if they were slain by an enemy.\nDeath in Lavender stacks are indicated under Bel'Veth's health bar.\nBel'Veth's on-hit damage modifier will reduce the damage dealt by on-hit effects even if they aren't meant to be affected by on-hit modifiers (e.g.  Grasp of the Undying).(bug)\nThis includes damage dealt by on-hit effects triggered by other effects such as  Guinsoo's Rageblade's Seething Strike.",
       "targeting": "Passive"
     },
     {
@@ -94,7 +94,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/q",
-      "notes": "Void Surge applies  basic damage, additionally tagged as  spell damage to the first (closest) enemy hit and  area damage to secondary enemies:\nVoid Surge will apply  spell effects to all targets hit.\n Spell vamp will grant  healing from the damage dealt to all targets, but healing from damage to secondary targets is reduced to 33% effectiveness.\n Life steal will heal based on the damage dealt to the first target hit.\nVoid Surge's on-hit damage modifier will reduce the damage dealt by on-hit effects even if they aren't meant to be affected by on-hit modifiers (eg.  Statikk Shiv).(bug)\nThe icon partially darkens based on the combination of dashes available. When all dashes are expended, the cooldown indicates the next available dash.\nWhile in  True Form, Void Surge's dash distance is extended up to 225 units when targeted across terrain.\nThe basic attack reset is not considered one for  Hail of Blades.\nVoid Surge can be  dodged and  blocked only as the first enemy hit.",
+      "notes": "Void Surge applies  basic damage, additionally tagged as  spell damage to the first (closest) enemy hit and  area damage to secondary enemies:\nVoid Surge will apply  spell effects to all targets hit.\n Spell vamp will grant  healing from the damage dealt to all targets, but healing from damage to secondary targets is reduced to 33% effectiveness.\n Life steal will heal based on the damage dealt to the first target hit.\nVoid Surge's on-hit damage modifier will reduce the damage dealt by on-hit effects even if they aren't meant to be affected by on-hit modifiers (eg.  Statikk Shiv).(bug)\nThe icon partially darkens based on the combination of dashes available. When all dashes are expended, the cooldown indicates the next available dash.\nWhile in  True Form, Void Surge's dash distance is extended up to 225 units when targeted across terrain.\nVoid Surge can be  dodged and  blocked only as the first enemy hit.",
       "speed": "800 / 850 / 900 / 950 / 1000 + 100% movement speed",
       "spellEffects": "Special",
       "spellshieldable": "true",
@@ -392,7 +392,7 @@
     "difficulty": 3
   },
   "lore": "A nightmarish empress created from the raw material of an entire devoured city, Bel'Veth is the end of Runeterra itself... and the beginning of a monstrous reality of her own design. Driven by epochs of repurposed history, knowledge, and memories from the world above, she voraciously feeds an ever-expanding need for new experiences and emotions, consuming all that crosses her path. Yet her wants could never be sated by only one world as she turns her hungry eyes toward the Void's old masters...",
-  "patchLastChanged": "26.03",
+  "patchLastChanged": "26.09",
   "positions": [
     "Jungle"
   ],

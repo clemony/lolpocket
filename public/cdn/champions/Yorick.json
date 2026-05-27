@@ -9,7 +9,7 @@
       "name": "Shepherd of Souls",
       "affects": "Self",
       "blurb": "Innate- Final Service: Enemies that die near  Yorick will leave a grave, as well as those he kills or damages with  Last Rites. Yorick can use  Awakening and  Mourning Mist to turn all graves into Mist Walkers that assist him in combat.",
-      "effectRadius": "1000 / 2500",
+      "effectRadius": "1000 • 2500",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Final Service:</span> Whenever Yorick uses Last Rites to score the killing blow on any enemy or damage an enemy champion or large monster, he raises a grave at their location. Additionally, a grave is passively raised for every 8th : 2nd (based on level) enemy that dies otherwise near him. Up to 4 graves can exist at once, lasting until Yorick exits the general area or dies, with the furthest one always being replaced by the newest upon raising one over the limit.</p>"
@@ -120,7 +120,7 @@
       "castTime": "none",
       "cooldown": "20 / 18 / 16 / 14 / 12",
       "cost": "70",
-      "effectRadius": "225 / 200",
+      "effectRadius": "225 • 200",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yorick summons a ring of spirits around the target location that arises after a 0.75-second delay, knocking aside enemies hit by the walls over 0.25 seconds, though not through terrain. Within 210-units, they are pulled inside; otherwise they are pushed away. The ring remains for 4 seconds as impassible terrain against enemies, granting sight inside the ring.</p>"

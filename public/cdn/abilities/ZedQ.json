@@ -40,7 +40,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/q",
-  "notes": "Shurikens blocked by  spell shield still count as being hit for the reduced pass-through damage.\nIf Zed buffers an attack command during Razor Shuriken's cast time the attack will perform slower than if Zed had attacked after the cast time.\nThe same does not happen if Zed recasts  Living Shadow during Razor Shuriken's cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "notes": "Shurikens blocked by  spell shield still count as being hit for the reduced pass-through damage.\nRazor Shuriken is special cased to not lock out  Living Shadow's recast during its cast time.\nOther abilities are locked out and buffered to cast after Razor Shuriken's cast time, as normal.\nIf Zed buffers an attack command during Razor Shuriken's cast time the attack will perform slower than if Zed had attacked after the cast time.\nThe same does not happen if Zed recasts  Living Shadow during Razor Shuriken's cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "resource": "Energy",
   "speed": "1700",

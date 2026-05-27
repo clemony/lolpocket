@@ -9,7 +9,7 @@
       "name": "Pix, Faerie Companion",
       "width": "60",
       "affects": "Self",
-      "blurb": "Innate:  Lulu is assisted by Pix, whom follows her around. Whenever Lulu basic attacks, Pix fires 3 bolts that deal magic damage to the first enemy hit.",
+      "blurb": "Innate:  Lulu is assisted by Pix, who follows her around. Whenever Lulu basic attacks, Pix fires 3 bolts that deal magic damage to the first enemy hit.",
       "damageType": "Magic damage",
       "effects": [
         {
@@ -137,7 +137,7 @@
       "name": "Whimsy",
       "affects": "Enemies / Allies / Self",
       "blurb": "Active:  Lulu can cast Whimsy on herself or the target champion.",
-      "castTime": "0.2419 / None",
+      "castTime": "0.2419 • None",
       "cooldown": "18",
       "cost": "65",
       "effects": [
@@ -256,7 +256,7 @@
       "castTime": "none",
       "cooldown": "120 / 100 / 80",
       "cost": "100",
-      "effectRadius": "400 / 400",
+      "effectRadius": "400 •  400",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu enlarges herself or the target allied champion, knocking up nearby enemies for 1 second. For the next 7 seconds, the target gains bonus health and 40% increased size and slows nearby enemies, which lingers for 0.25 seconds.</p>",

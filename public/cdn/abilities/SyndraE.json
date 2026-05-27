@@ -1,9 +1,9 @@
 {
   "key": "E",
   "name": "Scatter the Weak",
-  "width": "120 / 200",
+  "width": "120 • 200",
   "affects": "Enemies",
-  "angle": "56° / 84°",
+  "angle": "56° • 84°",
   "blurb": "Active:  Syndra propels a wave of force in a cone in the target direction that deals magic damage and  knocks back enemies hit based on proximity.",
   "castTime": "0.25",
   "collisionRadius": "70",
@@ -39,7 +39,7 @@
   "notes": "Scatter the Weak is blocked by the portion of  Wind Wall it collides with. Spheres thrown will stop upon colliding with the wall.\nSpheres spawned at close range of the ability are more likely to be hit.\nEnemies and spheres will be knocked into the direction directly away from Syndra, and the knock back has no dispersion.\nScatter the Weak will knock back Spheres even farther if they are inside terrain, up until they reach open space. If the terrain they're inside in cannot be surpassed, the Spheres will be knocked in the opposite direction.\nScatter the Weak will delay the expiration of a Sphere until after it finishes being knocked back.\nThis ability will cast from wherever the caster is at the end of the cast time.\nOnce Scatter the Weak has been learned, an arrow directly in front of every  Dark Sphere will appear to signify the direction the sphere will be knocked towards, each one corresponding to Syndra's position. This is only visible to Syndra.",
   "projectile": "SPECIAL",
   "resource": "Mana",
-  "speed": "2500 / 2000",
+  "speed": "2500 • 2000",
   "spellEffects": "Aoe",
   "spellshieldable": "True",
   "targeting": "Direction"

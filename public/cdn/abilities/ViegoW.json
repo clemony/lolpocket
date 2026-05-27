@@ -38,9 +38,9 @@
   "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/w",
   "notes": "The reduced cooldown from the charge will not occur if Spectral Maw's cooldown is already below 3 seconds.\nThe following table refers for interactions while Viego is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Harrowed Path is usable.  Blade of the Ruined King and  Heartbreaker are disabled.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled, but can still use trinkets.\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\n Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
   "projectile": "TRUE",
-  "speed": "1000 / 1300",
+  "speed": "1000 • 1300",
   "spellEffects": "spell",
   "spellshieldable": "true",
-  "targeting": "Auto / Direction",
+  "targeting": "Auto • Direction",
   "targetRange": "300 /  500 : 900 (based on channel time)"
 }

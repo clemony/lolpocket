@@ -1,10 +1,37 @@
 {
-  "id": 3008,
   "name": "Gluttonous Greaves",
-  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 1% Omnivamp on Champion takedown, stacking up to 6 times.",
+  "id": 3008,
+  "rank": "Boots",
+  "buildsFrom": [
+    {
+      "id": 1001,
+      "name": "Boots",
+      "gold": 300
+    }
+  ],
+  "buildsInto": [
+    {
+      "id": 3168,
+      "name": "Immortal Path",
+      "gold": 950
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Slay",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion grants you 0.6% omnivamp, stacking up to 10 times for a total of 6% omnivamp."
+    }
+  ],
   "stats": {
-    "flatMovespeed": 45
+    "flatMovespeed": 45,
+    "omnivamp": 4
   },
+  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 1% Omnivamp on Champion takedown, stacking up to 6 times.",
   "gold": {
     "base": 650,
     "purchasable": true,
@@ -16,5 +43,7 @@
     12,
     21
   ],
-  "tags": []
+  "tags": [
+    "Movement"
+  ]
 }

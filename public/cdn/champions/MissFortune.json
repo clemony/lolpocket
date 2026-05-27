@@ -80,7 +80,7 @@
       "cost": "45",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Miss Fortune gains bonus movement speed after 4 seconds without taking non- persistent damage. This bonus is increased after another 3 seconds, and is granted instantly whenever Strut is cast.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Miss Fortune gains bonus movement speed after 4 seconds without taking non- periodic damage. This bonus is increased after another 3 seconds, and is granted instantly whenever Strut is cast.</p>",
           "leveling": [
             {
               "attribute": "Bonus Movement Speed",
@@ -119,7 +119,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/w",
-      "notes": "No additional notes.",
+      "notes": "The bonus movement speed is not lost from taking 0 damage instances.",
       "resource": "Mana",
       "targeting": "Auto"
     },

@@ -28,7 +28,7 @@
     {
       "key": "Q",
       "name": "Dredge Line",
-      "width": "180 /  0",
+      "width": "180 •  0",
       "affects": "Self, Enemies",
       "castTime": "0.25",
       "cooldown": "14 / 13 / 12 / 11 / 10",
@@ -149,7 +149,7 @@
       "cooldown": "7 / 6.5 / 6 / 5.5 / 5",
       "cost": "50 / 60 / 70 / 80 / 90",
       "damageType": "Magic damage",
-      "effectRadius": "0 - 350 / 215 - 465 / 350 - 590",
+      "effectRadius": "0 - 350 • 215 - 465 • 350 - 590",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nautilus sends three waves of explosions that radiate from him over 0.561 seconds. Each wave deals magic damage to enemies hit, reduced to 50% against those hit by subsequent waves beyond the first, and slows them by an amount that decays over 1.5 seconds.</p>",
@@ -235,7 +235,7 @@
       "cooldown": "120 / 100 / 80",
       "cost": "100",
       "damageType": "Magic damage",
-      "effectRadius": "225 / 300 / 750",
+      "effectRadius": "225 • 300 • 750",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nautilus sends out a Depth Charge that chases the target enemy champion, accelerating over time and creating eruptions every 0.264 seconds in its wake that also briefly grant sight of the area. Enemies hit by the eruptions are dealt magic damage, knocked up for 1 second, and stunned for a duration.</p>",

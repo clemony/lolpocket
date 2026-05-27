@@ -15,7 +15,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/w",
-  "notes": "This ability always employs Quick cast.\nUpon first rank up, Rampant Growth gains 2 charges.\nSeeds are  untargetable.",
+  "notes": "This ability always employs Quick cast.\nUpon first rank up, Rampant Growth gains 2 charges.\nSeeds are  untargetable.\nRampant Growth cannot be learnt at level 1.",
   "rechargeRate": "18 / 16 / 14 / 12 / 10",
   "resource": "Other",
   "spellshieldable": "false",

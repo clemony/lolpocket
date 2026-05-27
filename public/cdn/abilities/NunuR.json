@@ -37,7 +37,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Nunu and Willump cause the blizzard to explode, dealing magic damage to nearby enemies, modified to 0% - 100% (based on channel time). Affected enemies will remain slowed for 0 - 3 (based on channel time) seconds and any of the duo's remaining shield will decay over 3 seconds.</p>",
       "leveling": [
         {
-          "attribute": "Magic Damage",
+          "attribute": "Maximum Magic Damage",
           "modifiers": [
             {
               "values": "625 / 950 / 1275"

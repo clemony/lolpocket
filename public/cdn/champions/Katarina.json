@@ -40,7 +40,7 @@
       "effectRadius": "450",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Katarina throws a Dagger at the target enemy that deals magic damage and can bounce to up to two additional visible nearby enemies.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Katarina throws a Dagger at the target enemy that deals magic damage. Upon arrival, the Dagger also bounces to up to two additional visible nearby enemies, dealing the same damage and travelling to bounce targets over 0.15 seconds each time.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -63,7 +63,7 @@
       "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/q",
       "notes": "Bouncing Blade will not be destroyed in-flight if the target dies before reaching them but it will on  clones that expire.\nIf the Dagger's intended landing position is inside terrain it will instead land at the closest spot that isn't inside terrain.\nValid targets are determined after each bounce.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "projectile": "TRUE",
-      "speed": "1600 / 0.15 seconds",
+      "speed": "1600",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Unit",
@@ -139,7 +139,7 @@
       "spellEffects": "Single target",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "725 / 775"
+      "targetRange": "725 • 775"
     },
     {
       "key": "R",
@@ -241,7 +241,7 @@
   },
   "fullName": "Katarina Du Couteau",
   "lore": "Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest daughter to the legendary General Du Couteau, she made her talents known with swift kills against unsuspecting enemies. Her fiery ambition has driven her to pursue heavily-guarded targets, even at the risk of endangering her allies—but no matter the mission, Katarina will not hesitate to execute her duty amid a whirlwind of serrated daggers.",
-  "patchLastChanged": "26.03",
+  "patchLastChanged": "26.08",
   "positions": [
     "Middle"
   ],

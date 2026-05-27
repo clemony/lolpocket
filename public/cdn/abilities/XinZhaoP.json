@@ -6,7 +6,7 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning's first slash hit and thrust on at least one enemy hit each generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15% / 30% / 45% / 60% (based on level) AD bonus physical damage and heal Xin Zhao for 3% / 4% / 5% (based on level) of his maximum health (+ 65% AP).</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning's first slash hit and thrust on at least one enemy hit each generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15% / 30% / 45% / 60% (based on level) AD bonus physical damage and heal Xin Zhao for 3% / 4% / 5% (based on level) of his maximum health (+ 50% / 65% / 90% (based on level) AP).</p>"
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Challenge:</span> Wind Becomes Lightning and, if Crescent Guard has been learned, Xin Zhao's basic attacks and Audacious Charge, apply a Challenged mark to certain enemies hit for 3 seconds. Only one enemy can be marked as Challenged at a time; applying the mark to a new target removes it from the previous one. Audacious Charge and Crescent Guard have interactions against Challenged targets.</p>"

@@ -6,7 +6,7 @@
   "castTime": "0.25",
   "cooldown": "20 / 19 / 18 / 17 / 16",
   "cost": "0",
-  "effectRadius": "350 / 1175",
+  "effectRadius": "350 • 1175",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akali restores 100 energy over 0.4 seconds and gains bonus movement speed that decays over 2 seconds. She also detonates a smoke bomb a fixed distance away in the target direction, creating a circular shroud that expands over the next 5 seconds into a ring. The shroud does not permeate terrain, and will expand toward nearby enemy champions. While the shroud is active, Akali's maximum energy is increased by 100.</p>",

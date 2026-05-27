@@ -47,7 +47,7 @@
                 },
                 {
                   "unit": "% AP",
-                  "values": "15"
+                  "values": "40"
                 }
               ]
             }
@@ -64,7 +64,7 @@
       "speed": "2000",
       "spellEffects": "special",
       "spellshieldable": "special",
-      "targeting": "Direction",
+      "targeting": "Location",
       "targetRange": "1200"
     },
     {
@@ -95,9 +95,8 @@
                   "values": "100"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n70 / 75 / 80 / 85 / 90% AP",
                   "unit": "% AP",
-                  "values": "70 - 90"
+                  "values": "90"
                 }
               ]
             }
@@ -114,7 +113,7 @@
       "speed": "1700",
       "spellEffects": "spell",
       "spellshieldable": "Special",
-      "targeting": "Direction",
+      "targeting": "Location",
       "targetRange": "1200"
     },
     {
@@ -192,28 +191,28 @@
                 },
                 {
                   "unit": "% AP",
-                  "values": "90"
+                  "values": "110"
                 }
               ]
             }
           ]
         },
         {
-          "description": "Minions and non-epic monsters take 50% reduced damage.",
+          "description": "Minions and non-epic monsters take modified damage.",
           "leveling": [
             {
-              "attribute": "Reduced Damage",
+              "attribute": "Modified Damage",
               "modifiers": [
                 {
-                  "values": "175 / 275 / 375"
+                  "values": "150 / 225 / 300"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "50"
+                  "values": "100"
                 },
                 {
                   "unit": "% AP",
-                  "values": "45"
+                  "values": "110"
                 }
               ]
             }
@@ -243,7 +242,7 @@
     "difficulty": 3
   },
   "lore": "A dashing adventurer, unknowingly gifted in the magical arts, Ezreal raids long-lost catacombs, tangles with ancient curses, and overcomes seemingly impossible odds with ease. His courage and bravado knowing no bounds, he prefers to improvise his way out of any situation, relying partially on his wits, but mostly on his mystical Shuriman gauntlet, which he uses to unleash devastating arcane blasts. One thing is for sure—whenever Ezreal is around, trouble isn't too far behind. Or ahead. Probably everywhere.",
-  "patchLastChanged": "26.03",
+  "patchLastChanged": "26.09",
   "positions": [
     "Bottom"
   ],

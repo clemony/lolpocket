@@ -11,10 +11,7 @@
       "blurb": "Innate: Whenever  Twisted Fate kills an enemy, he generates a small amount of  bonus gold based on chance.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on probability). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on probability).</p>"
-        },
-        {
-          "description": "As you'd expect, Twisted Fate plays with loaded dice. His initial dice roll is weighted to have an increased chance of granting 6, while his critical dice roll is weighted against him and has an increased chance of granting 1."
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on chance). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on chance).</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/p",
@@ -258,7 +255,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Gate:</span> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying all projectiles targeting him in the process.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Gate:</span> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying enemy projectiles targeting him in the process.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/r",
@@ -282,7 +279,7 @@
   },
   "fullName": "Tobias Felix",
   "lore": "Twisted Fate is an infamous cardsharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking smile and an insouciant swagger. In every possible way, Twisted Fate always has an ace up his sleeve.",
-  "patchLastChanged": "26.07",
+  "patchLastChanged": "26.10",
   "positions": [
     "Bottom",
     "Middle",

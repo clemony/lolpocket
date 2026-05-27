@@ -61,7 +61,7 @@
   "notes": "Viktor may freely act while the ray is traveling.\nThe effected area is set upon casting, no matter how far away Viktor moves. Unlike a leash, Hextech Ray will not break off its own effect.\nThe laser grants a moderate area of  sight around where the beam strikes the ground.\nIf Hextech Ray is  intercepted, the initial ray is not destroyed.\nHowever, the capability to be blocked only applies to the laser as it hits the ground. Viktor can cast the ability over the wall and it will not be destroyed or intercepted.\nAugmented Hextech Ray will still cause the entire target area to explode even if the laser is blocked.\nIf Viktor dies while he is firing the beam it only deals damage up to the location at the time of his death.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1050 / 1500",
+  "speed": "1050 • 1500",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
   "targeting": "Vector",

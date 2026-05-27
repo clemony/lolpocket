@@ -7,7 +7,7 @@
   "cooldown": "20 / 18 / 16 / 14 / 12",
   "cost": "80",
   "damageType": "Magic damage",
-  "effectRadius": "325 /  400",
+  "effectRadius": "325 • 400",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs hurls a charge to the target location, remaining there for 4 seconds and granting sight of the area. Satchel Charge can be recast within the duration, and does so automatically afterwards. If recast while in flight, the charge will explode immediately upon landing.</p>"
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "description": "Ziggs does not dash if he is immobilized or grounded. He can cast any of his abilities during the dash."
+      "description": "Ziggs will not dash from the explosion if he is immobilized or grounded. He can cast any of his abilities during the dash."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/w",

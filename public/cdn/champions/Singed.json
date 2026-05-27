@@ -37,7 +37,7 @@
       "effectRadius": "180",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Singed continually creates a toxic cloud in his wake that lingers for 3.25 seconds. The cloud inflicts poison to enemies within.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Singed continually creates a toxic cloud in his wake that lingers for 3.25 seconds. The cloud inflicts poison to enemies within.Poison Trail is toggled off automatically if Singed becomes unable to pay its mana cost.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">poison:</span> The target takes magic damage every 0.25 seconds over 2 seconds as well as upon being hit if not currently affected. Subsequent inflictions refresh the duration.</p>",
@@ -206,7 +206,7 @@
               ]
             },
             {
-              "attribute": "Total HP/Mana Regeneration (per 25 Seconds)",
+              "attribute": "Total HP/Mana Regenerated over the duration",
               "modifiers": [
                 {
                   "values": "125 / 275 / 425"

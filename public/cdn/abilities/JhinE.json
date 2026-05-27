@@ -8,7 +8,7 @@
   "cooldown": "2",
   "cost": "30",
   "damageType": "Magic damage",
-  "effectRadius": "260 / 260",
+  "effectRadius": "260 • 260",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Beauty in Death:</span> Whenever Jhin kills an enemy champion, he summons a Blooming Lotus Trap on their corpse.</p>"

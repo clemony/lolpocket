@@ -72,7 +72,7 @@
   "notes": "Spell shield will not prevent the canister from bouncing.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1800 / 600",
+  "speed": "1800 • 600",
   "spellEffects": "spellaoe",
   "spellshieldable": "Special",
   "targeting": "Unit",

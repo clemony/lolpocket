@@ -23,7 +23,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/p",
-      "notes": "Freeing the  Krug camp will only grant the  gold and  experience of 1  Ancient Krug, 2  Krugs, and 3  Mini Krugs.\nIvern must be within  275 units of the large monster of the targeted camp to start channeling or collect a grove. The large monsters also must be  visible.\nIf Ivern cannot afford the cost to place a grove, Friend of the Forest is placed on a cooldown equal to the number of seconds it takes for his  health regeneration and/or  mana regeneration to restore him to the amount of health and/or mana needed to afford the cost.\nThe cooldown will update based on Ivern's current health and mana regeneration, as well as his current health and mana.\nFriend of the Forest can be used while Ivern or the camp is in combat and, once the grove is placed,  Smite can be used to instantly claim the camp.  Interrupting Ivern's channel is the only way to contest jungle camps, short of killing the camp during the channel time.\nFreeing a grove causes the monsters within the camp to be dealt 5000 true damage in the  internalraw damage source type by Ivern, despite his inability to damage them.\nFriend of the Forest will leave Ivern at 1 health if cast with exactly the required amount. Friend of the Forest cannot be cast with less, unlike other abilities with health costs.\nNon-epic monsters can attack Ivern if his allies enter combat with the monster and he manages to receive aggro.(bug)\n Voidmites uses the allied healthbar-colours whilst still being able to be damaged by Ivern.(bug)\nThe following table refers for interactions while Ivern is  channeling:\nIvern is unable to act during the first 0.15 and last 0.5 seconds of the channel.\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDamaging effectsDeath Cast-inhibiting effects",
+      "notes": "Freeing the  Krug camp will only grant the  gold and  experience of 1  Ancient Krug, 2  Krugs, and 3  Mini Krugs.\nIvern must be within  275 units of the large monster of the targeted camp to start channeling or collect a grove. The large monsters also must be  visible.\nIf Ivern cannot afford the cost to place a grove, Friend of the Forest is placed on a cooldown equal to the number of seconds it takes for his  health regeneration and/or  mana regeneration to restore him to the amount of health and/or mana needed to afford the cost.\nThe cooldown will update based on Ivern's current health and mana regeneration, as well as his current health and mana.\nIf Ivern's level is 19 or higher, he will be  healed and receive mana when placing a grove.\nFriend of the Forest can be used while Ivern or the camp is in combat and, once the grove is placed,  Smite can be used to instantly claim the camp.  Interrupting Ivern's channel is the only way to contest jungle camps, short of killing the camp during the channel time.\nFreeing a grove causes the monsters within the camp to be dealt 5000 true damage in the  internalraw damage source type by Ivern, despite his inability to damage them.\nFriend of the Forest will leave Ivern at 1 health if cast with exactly the required amount. Friend of the Forest cannot be cast with less, unlike other abilities with health costs.\nNon-epic monsters can attack Ivern if his allies enter combat with the monster and he manages to receive aggro.(bug)\n Voidmites uses the allied healthbar-colours whilst still being able to be damaged by Ivern.(bug)\nThe following table refers for interactions while Ivern is  channeling:\nIvern is unable to act during the first 0.15 and last 0.5 seconds of the channel.\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDamaging effectsDeath Cast-inhibiting effects",
       "targeting": "Unit"
     },
     {
@@ -64,7 +64,7 @@
           ]
         },
         {
-          "description": "Ivern and allied champions can select the target rooted by Rootcaller to dash to their location, stopping at their attack range."
+          "description": "Ivern and allied champions can issue an attack order against the target rooted by Rootcaller to dash to their location, stopping at their attack range."
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Ivern dashes to the rooted target.</p>"
@@ -74,14 +74,14 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/q",
-      "notes": "This ability will cast from wherever the caster is at the start of the cast time.\n Daisy dashes to rooted  monsters, and enemy champions if within 1200 units when Rootcaller hits.\nShe does not dash to enemy minions.(unexpected)\n Daisy can not dash if she's more than 1200 units from the target hit. She will not dash even if she later walks in range.(bug)\nRegardless of  Daisy's and Ivern's distance from the target hit, Ivern dashing does not affect  Daisy in any way.(bug)\nRootcaller will hit  monsters but does not deal damage to it unless the target is an epic monster.\nIvern's pull/attack range is determined when he dashes to the target - not from when he initially casts Rootcaller and throws the vine.\nIvern can rightclick on the target hit to dash to it, stopping at his attack range.\nRightclicking while closer than attack range to the target makes Ivern dash to 425 units away from it.\nThis interacts like expected with attack range increases, increasing the dash distance away from the target 1:1.\nIvern will never dash closer than his current distance from the target when rightclicking within attack range.\nRecasting dashes Ivern to on top of the enemy instead of at attack range.\nIvern and his allies are not able to dash to the target unless they are within 1200 units.\nRootcaller cannot be used to  dash while  grounded or  rooted. This applies to Ivern and his allies.\nRootcaller's dash does not follow targets, their position at the time of starting the dash is the location Ivern and his allies will stop from.",
+      "notes": "This ability will cast from wherever the caster is at the start of the cast time.\n Daisy dashes to rooted  monsters, and enemy champions if within 1200 units when Rootcaller hits.\nShe does not dash to enemy minions.(unexpected)\n Daisy can not dash if she is more than 1200 units from the target hit. She will not dash even if she later walks in range.(bug)\nRegardless of  Daisy's and Ivern's distance from the target hit, Ivern dashing does not affect  Daisy in any way.(bug)\nRootcaller will hit  monsters but does not deal damage to it unless the target is an epic monster.\nIvern's pull/attack range is determined when he dashes to the target - not from when he initially casts Rootcaller and throws the vine.\nWhen using an attack order to dash to a target further than 475 units, Ivern may stop at his attack range (475 units).\nIf he is closer than his attack range from them, Ivern will dash to 425 units away from it instead.\nAttack range bonuses affect the offset from the target at a 1:1 ratio.\nIvern will never dash closer than his current distance from the target in this case.\nRootcaller's  dash is disabled while the user is  grounded or  rooted when targeting via either means (applies to Ivern and his allies).\nRootcaller's dash does not follow targets, their position at the time of starting the dash is the relative range Ivern and his allies will stop at.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "1300",
       "spellEffects": "Single target",
       "spellshieldable": "True",
-      "targeting": "Direction / Auto",
-      "targetRange": "1150 /  0 /  475 /  Attack range"
+      "targeting": "Direction • Auto",
+      "targetRange": "1200"
     },
     {
       "key": "W",
@@ -94,7 +94,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Ivern is in brush, his basic attacks are empowered to deal bonus magic damage on-hit. This bonus persists for 3 seconds after leaving brush.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Ivern is in brush, his basic attacks are empowered to fire a bolt at the target, dealing additional magic damage. This bonus persists for 3 seconds after leaving brush.</p>",
           "leveling": [
             {
               "attribute": "Bonus Magic Damage",
@@ -114,7 +114,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ivern grows a patch of brush at the target location for 45 seconds, granting sight of the area within and around it for 8 seconds. Brushes despawn instantly after allied vision within them is lost. Spawning brush near terrain or other brush increases its radius.</p>"
         },
         {
-          "description": "While allied champions are in any brush when Ivern is within 1000 units, their basic attacks are empowered to fire a bolt at the target on-hit that deals them bonus magic damage. This bonus persists for 1.5 seconds after leaving brush.",
+          "description": "While allied champions are in any brush when Ivern is within 1000 units, their basic attacks are empowered to fire a bolt at the target, dealing additional magic damage. This bonus persists for 1.5 seconds after leaving brush.",
           "leveling": [
             {
               "attribute": "Ally Bonus Magic Damage",
@@ -135,12 +135,12 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/w",
-      "notes": "The bonus damage does not apply to structures.\nThe bonus damage will not be triggered twice by  Dusk and Dawn's Spellblade.(bug)\nThe empowerment given to allies respects  enchantment redirection.\nA  brush is immediately  exposed if grown within an enemy  turret's  sight radius of  1350.\nEpic monsters can not be concealed within a  brush.\nYou can still deny enemy vision of an entire area by creating walls of  brush, thereby denying vision of the Epic monster.\n Brushmaker locks on allies when hovered.\nThe indicator for  Brushmaker's cast range has a radius of 1150, where the maximum cast range takes the  brush's edge, rather than center, into consideration.",
+      "notes": "The bonus damage does not apply to structures.\nThe empowerment given to allies respects  enchantment redirection.\nA  brush is immediately  exposed if grown within an enemy  turret's  sight radius of  1350.\nEpic monsters can not be concealed within a  brush.\nYou can still deny enemy vision of an entire area by creating walls of  brush, thereby denying vision of the Epic monster.\n Brushmaker locks on allies when hovered.\nThe indicator for  Brushmaker's cast range has a radius of 1150, where the maximum cast range takes the  brush's edge, rather than center, into consideration.",
       "projectile": "TRUE",
       "rechargeRate": "20 / 20 / 20 / 20 / 20",
       "resource": "Mana",
       "speed": "3500",
-      "spellEffects": "spell",
+      "spellEffects": "proc",
       "spellshieldable": "False",
       "targeting": "Location",
       "targetRange": "1000"

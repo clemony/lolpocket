@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { InputProps } from "@nuxt/ui"
-import type { DialogProps } from "~~/layers/ui/app/types/types"
+import type { DialogProps } from "~~/layers/ui/app/types"
 
 const props = defineProps<
   DialogProps & {

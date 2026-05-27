@@ -21,7 +21,7 @@
     {
       "key": "Q",
       "name": "Rocket Grab",
-      "width": "140 /  60",
+      "width": "140 •  60",
       "affects": "Enemies",
       "castTime": "0.25",
       "cooldown": "20 / 19 / 18 / 17 / 16",
@@ -53,7 +53,7 @@
       "notes": "Rocket Grab's range is composed of a missile with 1080 range, and a smaller center-range area check at the end (colloqially known as a 'lollipop').\nThe area check is currently half as long as it is supposed to be, reducing the intended 1150 range of the ability to 1115 range.\nHitting an enemy with this area check only also fails to play the ability's hit SFX. This makes it possible to easily distinguish whether the target was picked up by the missile collision or 'lollipop'.\nTargets  larger than 95 units in radius can be hit by a different edge-range circle check at the end of the missile.\nThe  airborne debuff lasts for up-to 1 second but will end prematurely when the target's movement stops, while the stun will persist (if duration permits).\n Displacement immunity will not resist the application of the  stun.\nThe target's destination lies 75 units in front of Blitzcrank at the start of cast time.\nIf the target is closer than this, the effect will still move them to this location.\nIf this location would be inside static terrain, the target's destination will end up on Blitzcrank's side, even if that means pulling them right on top of Blitzcrank.\nThis can occasionally fail.(bug)\nIf Blitzcrank is being moved (e.g.  Airborne,  Kinematics or  Fate's Call) during the grab, the target will be pulled towards Blitzcranks old location.\nBlitzcrank will be ordered to  basic attack the target once the target arrives.\nIf the target dies to Rocket Grab's damage, they will not be pulled.\nThis ability will cast from wherever the caster is at the end of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1800 / 1800",
+      "speed": "1800 • 1800",
       "spellEffects": "spell",
       "spellshieldable": "True",
       "targeting": "Direction"
@@ -112,17 +112,17 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Blitzcrank empowers their next basic attack on-hit within 5 seconds to have an uncancellable windup, deal 100% AD (+ 25% AP) bonus physical damage and knock up the target for 1 second. This damage is affected by critical strike modifiers.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Blitzcrank empowers their next basic attack within 5 seconds to have an uncancellable windup, deal 100% AD (+ 25% AP) bonus physical damage and knock up the target for 1 second. This damage is affected by critical strike modifiers.</p>"
         },
         {
           "description": "Power Fist resets Blitzcrank's basic attack timer."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Blitzcrank/ability-icon/e",
-      "notes": "Power Fist deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nThis includes the  basic attack itself.\nThe  knockup is applied even if the attack is  dodged or  missed.\nIt is not applied if it is  blocked.\n Spell shield prevents the  knockup but not the damage.\nThe enhanced attack will still complete and hit the target even if they become  untargetable during the attack's windup.\nPower Fist's knockup is applied on-hit, but the damage is applied by the attack.\nIf the knockup is applied during the attack windup, (eg. via  Guinsoo's Rageblade), the attack will not deal damage, nor continue to be  uncancellable.(bug)\nThe knockup does not trigger against  wards or jungle plants.\nThe target is displaced a short distance during the  knockup in a random direction.",
+      "notes": "Power Fist deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nThis includes the  basic attack itself.\n Spell shield prevents the  knockup and the damage, including the damage of the basic attack itself.(unexpected)\nThe enhanced attack will still complete and hit the target even if they become  untargetable during the attack's windup.\nThe knockup does not trigger against  structures, jungle plants, and  wards.\nThe Power Fist buff does not get consumed if the knockup doesn't trigger, allowing Blitzcrank to repeatedly attack structures for bonus damage.(unexpected)\nThe target is displaced a short distance during the  knockup in a random direction.",
       "resource": "Mana",
       "spellEffects": "Special",
-      "spellshieldable": "special",
+      "spellshieldable": "true",
       "targeting": "Auto"
     },
     {

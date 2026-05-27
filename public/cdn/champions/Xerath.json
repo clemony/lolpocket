@@ -85,7 +85,7 @@
       "cooldown": "14 / 13 / 12 / 11 / 10",
       "cost": "80 / 90 / 100 / 110 / 120",
       "damageType": "Magic damage",
-      "effectRadius": "275 / 125 / 250",
+      "effectRadius": "275 • 125 • 250",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xerath casts down a blast of arcane energy that strikes the target location after 0.528 seconds, briefly granting sight of the area and dealing magic damage to enemies hit and slowing them by 25% for 2.5 seconds.</p>",

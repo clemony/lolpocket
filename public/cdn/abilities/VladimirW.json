@@ -13,7 +13,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vladimir sinks into a pool of blood, becoming untargetable and ghosted for 2 seconds. He also gains 37.5% bonus movement speed that decays exponentially over 1 second.</p>"
     },
     {
-      "description": "Enemies within the pool are dealt magic damage every 0.5 seconds over the duration and are slowed by 40%. Vladimir heals himself for 30% of the pre-mitigation damage dealt, reduced to 18% against minions.",
+      "description": "Enemies within the pool are dealt magic damage every 0.5 seconds over the duration and are slowed by 40%.Vladimir heals himself for 30% of the pre-mitigation damage dealt, reduced to 18% against minions.",
       "leveling": [
         {
           "attribute": "Magic Damage Per Tick",

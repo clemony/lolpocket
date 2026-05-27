@@ -9,13 +9,13 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rengar gains 40% bonus attack speed on his next two basic attacks within 3 seconds.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rengar gains 40% bonus attack speed on his next two basic attacks on-attack within 3 seconds.</p>"
     },
     {
-      "description": "His first attack is empowered to stab the target, having an uncancellable windup, gaining 25 bonus range, and dealing bonus physical damage. The attack can critically strike for (100% + 30%) AD bonus physical damage.",
+      "description": "His first attack on-hit is empowered to stab the target, having an uncancellable windup, gaining 25 bonus range, and dealing additional physical damage. The attack can critically strike for (100% + 30%) AD bonus physical damage.",
       "leveling": [
         {
-          "attribute": "Bonus Physical Damage",
+          "attribute": "Additional Physical Damage",
           "modifiers": [
             {
               "values": "20 / 55 / 90 / 125 / 160"
@@ -29,15 +29,15 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Savagery's damage is modified to deal 35 - 260 (based on level) (+ 20% AD) bonus physical damage. Rengar instead gains 50% - 107% (based on level) bonus attack speed for 5 seconds.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Savagery's damage is modified to deal 35 - 260 (based on level) (+ 20% AD) bonus physical damage. In addition to gaining another instance of the base attack speed on-cast, consuming the attack also grants 50% - 107% (based on level) bonus attack speed for 5 seconds.</p>"
     },
     {
       "description": "Savagery resets Rengar's basic attack timer."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/q",
-  "notes": "Savagery deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nSavagery's empowered attack is consumed against jungle plants.\nThe bonus attack speed from the unempowered and empowered casts can stack with each other, if both are cast shortly one after another.\nThe enhanced attack applies other  on-hit effects as well as  life steal as normal.\nCasting Savagery does not  break stealth.",
+  "notes": "Casting Savagery does not  break stealth.\nThe bonus attack speed from the unempowered and empowered casts can stack with each other, if both are cast shortly one after another.\nThe empowered attack windup may still be manually cancelled when targeting jungle plants or  structures. [8] (unexpected)\nDifferent attack speeds may desync the animation from the hit. [9] (unexpected)\n Interrupting  Unseen Predator's leap will shortly after replace Savagery's own animation with a normal basic attack animation. [10] (unexpected)\nIf  energized kills the target before the attack hits, Savagery won't be consumed but it will still grant free Ferocity. [11] (unexpected)\nSavagery's empowered attack is consumed against jungle plants.\nWhile the Ferocity timer is not running, if the attack  misses or is  dodged it will grant a permanent Ferocity stack until the timer is triggered and refreshed. [12] (unexpected)\nThe additional damage is tagged as  proc damage,  basic damage, and  spell damage, and applies other  on-hit effects as well as  life steal as normal.\nIt is also part of a separate cast instance - potentially allowing an extra stack of  Eclipse and  Electrocute (e.g while using  Black Cleaver). [13] (unexpected)\nThe in-game extended tooltip incorrectly states that the additional damage is reduced against structures. [14] (unexpected)",
   "spellEffects": "Special",
-  "spellshieldable": "True",
+  "spellshieldable": "false",
   "targeting": "Auto"
 }

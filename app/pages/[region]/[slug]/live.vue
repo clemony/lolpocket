@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Live",
   description: "Real time match data.",
-  icon: "i-majesticons-video-line", // "i-ic-outline-stream",
+  icon: "i-activity", // "i-majesticons-video-line", // "i-ic-outline-stream",
   order: 4,
   search: false,
   prefix: "summoner"

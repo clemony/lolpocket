@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Comet Spear",
-  "width": "120 / 110",
+  "width": "120 • 110",
   "affects": "Enemies",
   "castTime": "0.2",
   "cooldown": "11 / 10.25 / 9.5 / 8.75 / 8",
@@ -120,11 +120,11 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/q",
-  "notes": "This ability always employs Quick cast.\nOnly the ranged version of Comet Spear can be  intercepted.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe following table refers for interactions while Pantheon is  channeling:\nItem actives that interrupt and those with cast times as well as  Titanic Hydra,  Hexflash, and  Recall will cause Comet Spear to recast automatically and the active or spell to buffer to cast afterwards.\n Teleport will cancel the channel entirely.\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\n Zhonya's Hourglass\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Teleport  Recall  Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+  "notes": "This ability always employs Quick cast.\nOnly the ranged version of Comet Spear can be  intercepted.\nThis ability will cast from wherever the caster is at the end of the cast time.\nComet Spear maintains its casting angle direction in relation to Pantheon if he moves during the cast time.\nThe following table refers for interactions while Pantheon is  channeling:\nItem actives that interrupt and those with cast times as well as  Titanic Hydra,  Hexflash, and  Recall will cause Comet Spear to recast automatically and the active or spell to buffer to cast afterwards.\n Teleport will cancel the channel entirely.\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\n Zhonya's Hourglass\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Teleport  Recall  Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
   "projectile": "SPECIAL",
   "resource": "Mana",
   "speed": "2700",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
-  "targeting": "Auto / Direction"
+  "targeting": "Auto • Direction"
 }

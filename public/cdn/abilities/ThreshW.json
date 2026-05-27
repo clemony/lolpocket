@@ -6,7 +6,7 @@
   "castTime": "none",
   "cooldown": "21 / 20 / 19 / 18 / 17",
   "cost": "50 / 55 / 60 / 65 / 70",
-  "effectRadius": "350 / 150",
+  "effectRadius": "350 • 150",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Thresh throws his lantern to the target location over 0.5 seconds, lasting for 6 seconds while he remains nearby and granting sight of its surroundings. If Thresh moves too far away from the lantern, it returns back to him immediately.</p>"
@@ -33,7 +33,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/w",
-  "notes": "The dashing ally will track Thresh if he changes locations.\nThey will dash to Thresh's previous location if he is too far away or moves beyond 2200 units.\nThe lantern is considered a unit and can be targeted by an allied  Teleport,  Leap Strike,  Shunpo, and  Safeguard.\nIt is  untargetable to enemies.\nThe lantern's duration and maximum leash range are each displayed as a circle on the ground.\nThresh will gain Dark Passage's shield from moving out of leash range of the lantern.\nDark Passage is special cased to trigger  Guardian.",
+  "notes": "The dashing ally will track Thresh if he changes locations.\nThey will dash to Thresh's previous location if he is too far away or moves beyond 2200 units.\nThe lantern is considered a unit and can be targeted by an allied  Teleport,  Leap Strike,  Shunpo, and  Safeguard.\nIt is  untargetable to enemies.\nThe lantern blocks pathing of units like minions and champions.\nThe lantern's duration and maximum leash range are each displayed as a circle on the ground.\nThresh will gain Dark Passage's shield from moving out of leash range of the lantern.\nWhen the lantern returns to Thresh, the first ally champion to come in contact with Thresh while he has Dark Passage's shield will also gain a shield as long as no other ally has the shield.\nDark Passage is special cased to trigger  Guardian.",
   "projectile": "TRUE",
   "resource": "Mana",
   "targeting": "Location",

@@ -8,7 +8,7 @@
   "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
   "cost": "60 / 65 / 70 / 75 / 80",
   "damageType": "Magic damage",
-  "effectRadius": "350 /  500",
+  "effectRadius": "350 • 500",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zilean throws a ticking time bomb to the target location that briefly grants sight of its surroundings as it travels as well as while lingering in the area. The bomb will attach itself to units that move within the epicenter, or those hit directly at the time of the bomb's landing, revealing them and their surroundings.</p>"

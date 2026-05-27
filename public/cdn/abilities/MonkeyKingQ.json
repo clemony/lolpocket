@@ -50,7 +50,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/q",
-  "notes": "Crushing Blow triggers on  structures and  wards but the armor reduction is not applied.\nIssuing a Hold command (default J) or Stop command (default S) after Crushing Blow's attack has started will cancel the animation, however the attack will still be launched and Wukong will be unable to move until that point.",
+  "notes": "Crushing Blow's bonus damage is tagged as  basic damage and  spell damage, which allows it to trigger  spell effects.\nCrushing Blow triggers on  structures and  wards but the armor reduction is not applied.\nIssuing a Hold command (default J) or Stop command (default S) after Crushing Blow's attack has started will cancel the animation, however the attack will still be launched and Wukong will be unable to move until that point.",
   "resource": "Mana",
   "spellEffects": "spell",
   "spellshieldable": "True",

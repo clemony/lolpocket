@@ -7,7 +7,7 @@
   "cooldown": "120 / 100 / 80",
   "cost": "100",
   "damageType": "Magic damage",
-  "effectRadius": "400",
+  "effectRadius": "400 + 0.8 per 1% bonus size",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nasus empowers himself for 15 seconds, gaining bonus health, bonus armor, bonus magic resistance, increased size, and 50 bonus attack range for the duration.</p>",

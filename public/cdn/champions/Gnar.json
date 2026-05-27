@@ -30,7 +30,7 @@
     {
       "key": "Q",
       "name": "Boomerang Throw",
-      "width": "110 / 150",
+      "width": "110 • 150",
       "affects": "Enemies",
       "blurb": "Active:  Mini Gnar throws a boomerang in the target direction that deals physical damage and  slows enemies hit. At maximum range or hitting an enemy, the boomerang flies back toward Gnar based on his current movement, dealing reduced damage.",
       "castTime": "0.25",
@@ -86,7 +86,7 @@
       "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/q",
       "notes": "The boomerang return direction is determined at the apex of its flight by Gnar's current position and which direction Gnar is heading at the time.\nSince the cooldown between the two is shared, Mini Gnar may pick up a boulder and/or Mega Gnar may catch a boomerang.\nThis ability will cast from wherever the caster is at the start of the cast time.",
       "projectile": "TRUE",
-      "speed": "2500 - 1400 / 60 - 2600",
+      "speed": "2500 - 1400 • 60 - 2600",
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
       "targeting": "Direction"
@@ -272,7 +272,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/e",
-      "notes": "Hop does not allow Gnar to bounce off wards.\nIf Gnar generates Rage to maximum during Hop, he may cast  Boulder Toss,  Wallop, or  GNAR! during the bounce.\nIf Hop generates Rage to maximum after Gnar bounces off an enemy, he may cast  GNAR!, and then  Boulder Toss or  Wallop before he lands.(bug)\n Sleep does not count for preventing the bounce.(bug)\nIf circumstances allow it, Crunch's shockwave from using it to transform can hit the target Gnar bounced off of.\nIf Hop is used to transform, the area of effect is missing at the first landing location, whether he bounces off a target or not.(bug)\nThis interaction broke in V9.13.",
+      "notes": "Hop has no minimum dash range.\nHop does not allow Gnar to bounce off wards.\nIf Gnar generates Rage to maximum during Hop, he may cast  Boulder Toss,  Wallop, or  GNAR! during the bounce.\nIf Hop generates Rage to maximum after Gnar bounces off an enemy, he may cast  GNAR!, and then  Boulder Toss or  Wallop before he lands.(bug)\n Sleep does not count for preventing the bounce.(bug)\nIf circumstances allow it, Crunch's shockwave from using it to transform can hit the target Gnar bounced off of.\nIf Hop is used to transform, the area of effect is missing at the first landing location, whether he bounces off a target or not.(bug)\nThis interaction broke in V9.13.",
       "spellEffects": "Single target",
       "spellshieldable": "True",
       "targeting": "Location",

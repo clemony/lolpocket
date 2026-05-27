@@ -2,7 +2,7 @@
   "key": "R",
   "name": "Unleashed Power",
   "affects": "Enemies",
-  "blurb": "Active:  Syndra creates a few  Dark Spheres and grabs a few more nearby, then barrages them at the target enemy champion. Each sphere deals magic damage upon hit, and remains on the ground for a few seconds.",
+  "blurb": "Passive:  Dark Sphere gains  ability haste.",
   "castTime": "none",
   "cooldown": "120 / 100 / 80",
   "cost": "100",
@@ -10,7 +10,7 @@
   "effectRadius": "3000",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Dark Sphere gains ability haste.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Dark Sphere's cooldown is reduced equivalent to an amount of ability haste.</p>",
       "leveling": [
         {
           "attribute": "Ability Haste",

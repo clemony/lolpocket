@@ -8,7 +8,7 @@
   "cost": "0",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Mordekaiser stores 45% of the post-mitigation damage he deals and 7.5% of the pre-mitigation damage he takes,[ reduced by 75% for non-champion sources, ][ reduced to 11.25% of damage dealt and 3.75% of damage taken for non-champion sources, ]as Potential Shield on his secondary resource bar, up to 30% of his maximum health. The Potential Shield decays by 8 - 25 (based on level) every second after not dealing or taking damage for 1 second. While Indestructible is not on cooldown, the Potential Shield will not decay below a minimum of 5% of his maximum health, and it will be set to that amount when it comes off cooldown if it was previously below it.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Mordekaiser stores 45% of the post-mitigation damage he deals and 7.5% of the pre-mitigation damage he takes,[ reduced by 75% for non-champion sources, ][ reduced to 11.25% of damage dealt and 1.875% of damage taken for non-champion sources, ]as Potential Shield on his secondary resource bar, up to 30% of his maximum health. The Potential Shield decays by 8 - 25 (based on level) every second after not dealing or taking damage for 1 second. While Indestructible is not on cooldown, the Potential Shield will not decay below a minimum of 5% of his maximum health, and it will be set to that amount when it comes off cooldown if it was previously below it.</p>"
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Mordekaiser consumes his Potential Shield to grant himself a shield for the same amount for 4 seconds. The shield decays exponentially over the duration. Indestructible can be recast after 0.5 seconds while the shield is active.</p>"
@@ -29,6 +29,6 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/w",
-  "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.",
+  "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nThe recast will heal Mordekaiser for a minimum of 1.75 / 1.875 / 2 / 2.125 / 2.25% and up to 10.5 / 11.25 / 12 / 12.75 / 13.5% of his maximum health.\nIt also effectively converts 15.75 / 16.875 / 18 / 19.125 / 20.25% of damage dealt and 2.625 / 2.8125 / 3 / 3.1875 / 3.375% of damage taken, reduced to 3.9375 / 4.2188 / 4.5 / 4.7813 / 5.0625% and 0.6563 / 0.7031 / 0.75 / 0.7969 / 0.8438% for non-champion sources respectively.",
   "targeting": "Auto"
 }

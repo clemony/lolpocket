@@ -32,10 +32,10 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/q",
-  "notes": "Deals  area damage on the gust and applies  persistent area damage for the tornado.\n Spell shield will block the gusts damage but not the tornado's.\n Yasuo's  Wind Wall and  Braum's  Unbreakable can block each windblast individually.\nThe tornado will not form if only one windblast reaches the target location.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "notes": "Deals  area damage on the gust, and applies  persistent area damage, additionally tagged as  indirect damage for the tornado.\n Spell shield will block the gusts damage but not the tornado's.\n Yasuo's  Wind Wall and  Braum's  Unbreakable can block each windblast individually.\nThe tornado will not form if only one windblast reaches the target location.\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1400 / 50",
+  "speed": "1400 • 50",
   "spellEffects": "special",
   "spellshieldable": "Special",
   "targeting": "Location",

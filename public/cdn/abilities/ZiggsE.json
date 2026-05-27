@@ -7,7 +7,7 @@
   "cooldown": "16",
   "cost": "70 / 80 / 90 / 100 / 110",
   "damageType": "Magic damage",
-  "effectRadius": "335 /  135",
+  "effectRadius": "335 •  135",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs scatters a cluster of 11 proximity mines over the target location that grant sight of the area for 2 seconds, arming after 0.5 seconds and lasting for up to 10 seconds.</p>"

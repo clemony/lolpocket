@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import type { ShallowRef } from "vue"
 import { useBackpack } from "~/domain/backpack/useBackpack"
 import { useFolders } from "~/domain/pocket/folder/useFolder"
-
 const { sidebarCollapsed, search, searchVisible, folderId, sidebarFolderRefs } =
   useBackpack()
 
@@ -29,9 +29,10 @@ const tabList = computed(() => [
 ])
 
 const currentTab = shallowRef<string>("backpack")
-const modelValue = defineModel<boolean>("modelValue", {
-  default: false
-})
+
+const sidebarRef = useTemplateRef<HTMLElement>("sidebarRef")
+defineExpose<{ sidebarRef: ShallowRef<HTMLElement | null> }>({ sidebarRef })
+const hi = shallowRef<string>("")
 </script>
 
 <template>
@@ -60,12 +61,8 @@ const modelValue = defineModel<boolean>("modelValue", {
     <template #default>
       <SidebarTheme>
         <div
-          ref="sidebarBody"
-          class="@container/sidebar relative w-full overflow-hidden"
-          @mouseenter="modelValue = true"
-          @focusin="modelValue = true"
-          @mouseleave="modelValue = false"
-          @focusout="modelValue = false">
+          ref="sidebarRef"
+          class="@container/sidebar relative w-full overflow-hidden">
           <UTabs
             v-if="!sidebarCollapsed"
             v-model:model-value="currentTab"

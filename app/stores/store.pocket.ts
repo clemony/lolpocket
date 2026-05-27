@@ -1,4 +1,4 @@
-import { skinKeyFromUrl } from "#shared/utils/img-url"
+import { normalizeDragLocation } from "~/domain/pocket/helpers/dragLocation"
 
 export const pocketStore = defineStore(
   "pocketStore",
@@ -13,16 +13,10 @@ export const pocketStore = defineStore(
 
     function map() {
       if (!pockets.value) return
-      pockets.value = pockets.value.map((f) =>
-        f.location === "folder:folders" || !f.location
-          ? {
-              ...f,
-              location: "folders"
-            }
-          : {
-              ...f
-            }
-      )
+      pockets.value = pockets.value.map((f) => ({
+        ...f,
+        location: normalizeDragLocation(f.location, "folders")
+      }))
     }
     const pocketIndexes = computed(() =>
       Object.fromEntries(
@@ -88,8 +82,8 @@ export const pocketStore = defineStore(
       const pocket = getPocket(pocketKey)
       if (!pocket) return
 
-      const fromLocation = pocket.location || "all"
-      const toLocation = location || "all"
+      const fromLocation = normalizeDragLocation(pocket.location, "all")
+      const toLocation = normalizeDragLocation(location, "all")
       const byOrder = (a: Pocket, b: Pocket) =>
         (a.order ?? 0) - (b.order ?? 0) ||
         String(a.label ?? "").localeCompare(String(b.label ?? ""), undefined, {
@@ -98,7 +92,11 @@ export const pocketStore = defineStore(
         })
       const groupPockets = (group: string) =>
         pockets.value
-          .filter((p) => (p.location || "all") === group && p.key !== pocketKey)
+          .filter(
+            (p) =>
+              normalizeDragLocation(p.location, "all") === group &&
+              p.key !== pocketKey
+          )
           .sort(byOrder)
 
       const destination = groupPockets(toLocation)

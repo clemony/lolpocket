@@ -4,7 +4,7 @@
   "width": "320",
   "affects": "Enemies",
   "blurb": "Active:  Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, briefly  charming,  slowing, and  revealing them.",
-  "castTime": "0.5 / 0.5",
+  "castTime": "0.5 • 0.5",
   "cooldown": "160 / 140 / 120",
   "cost": "100",
   "damageType": "Magic damage",

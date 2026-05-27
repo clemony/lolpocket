@@ -8,7 +8,7 @@
   "cooldown": "18 / 16 / 14 / 12 / 10",
   "cost": "0",
   "damageType": "Magic damage",
-  "effectRadius": "800 / 200",
+  "effectRadius": "800 • 200",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Mordekaiser gains magic penetration.</p>",
@@ -43,11 +43,11 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/e",
-  "notes": "Death's Grasp will still  pull even if Mordekaiser  dies.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+  "notes": "Death's Grasp will still  pull even if Mordekaiser  dies.\nDeath's Grasp tooltip does not mention the  magic penetration granted.(unexpected)\nThe extended tooltip does mention it.\nThis ability will cast from wherever the caster is at the start of the cast time.",
   "projectile": "FALSE",
   "speed": "3000",
   "spellEffects": "aoe",
   "spellshieldable": "True",
   "targeting": "Location",
-  "targetRange": "700 / 900"
+  "targetRange": "700 • 900"
 }

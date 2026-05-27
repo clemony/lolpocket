@@ -39,5 +39,5 @@
   "resource": "Mana",
   "speed": "1250 + 80% movement speed",
   "targeting": "Unit",
-  "targetRange": "700 / 1000"
+  "targetRange": "700 • 1000"
 }

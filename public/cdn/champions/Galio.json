@@ -62,10 +62,10 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/q",
-      "notes": "Deals  area damage on the gust and applies  persistent area damage for the tornado.\n Spell shield will block the gusts damage but not the tornado's.\n Yasuo's  Wind Wall and  Braum's  Unbreakable can block each windblast individually.\nThe tornado will not form if only one windblast reaches the target location.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+      "notes": "Deals  area damage on the gust, and applies  persistent area damage, additionally tagged as  indirect damage for the tornado.\n Spell shield will block the gusts damage but not the tornado's.\n Yasuo's  Wind Wall and  Braum's  Unbreakable can block each windblast individually.\nThe tornado will not form if only one windblast reaches the target location.\nThis ability will cast from wherever the caster is at the end of the cast time.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1400 / 50",
+      "speed": "1400 • 50",
       "spellEffects": "special",
       "spellshieldable": "Special",
       "targeting": "Location",
@@ -205,11 +205,11 @@
               "attribute": "Magic Damage",
               "modifiers": [
                 {
-                  "values": "90 / 130 / 170 / 210 / 250"
+                  "values": "100 / 135 / 170 / 205 / 240"
                 },
                 {
                   "unit": "% AP",
-                  "values": "90"
+                  "values": "100"
                 }
               ]
             },
@@ -217,11 +217,11 @@
               "attribute": "Non-Champion Damage",
               "modifiers": [
                 {
-                  "values": "72 / 104 / 136 / 168 / 200"
+                  "values": "80 / 108 / 136 / 164 / 192"
                 },
                 {
                   "unit": "% AP",
-                  "values": "72"
+                  "values": "80"
                 }
               ]
             }
@@ -234,7 +234,7 @@
       "speed": "2300",
       "spellEffects": "spellaoe",
       "targeting": "Location",
-      "targetRange": "250 / 650"
+      "targetRange": "250 - 650"
     },
     {
       "key": "R",
@@ -261,6 +261,10 @@
                 {
                   "unit": "% AP",
                   "values": "70"
+                },
+                {
+                  "unit": "% bonus magic resistance",
+                  "values": "100"
                 }
               ]
             }
@@ -268,7 +272,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/r",
-      "notes": "Hero's Entrance does not resist allied  crowd control.\nHero's Entrance has a  forgiveness radius of 175 units.\nGalio cannot cast Hero's Entrance on allies he cannot  see while  nearsighted.\nGalio will still cause an impact to occur at the destination even if he is unable to travel the full distance with the dash (e.g. by  The Hextech Ultimatum's and  Realm of Death's borders and terrain). Galio will dash as far as he can go, and thus, does not end the dash prematurely.\nGalio will always dash 100 units minimum, and dash over his target's location if they are less than 100 units away from him.\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest will activate at the end of Hero's Entrance's  channel.\nThe following table refers for interactions while Galio is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects\n\nHero's Entrance's channel can only be  interrupted by  crowd control in the first 1.25 seconds.",
+      "notes": "Hero's Entrance does not resist allied  crowd control.\nHero's Entrance has a  forgiveness radius of 175 units.\nGalio cannot cast Hero's Entrance on allies he cannot  see while  nearsighted.\nGalio will still cause an impact to occur at the destination even if he is unable to travel the full distance with the dash (e.g. by  The Hextech Ultimatum's and  Realm of Death's borders and terrain). Galio will dash as far as he can go, and thus, does not end the dash prematurely.\nGalio will always dash 100 units minimum, and dash over his target's location if they are less than 100 units away from him.\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest will activate at the end of Hero's Entrance's  channel.\nWhen becoming  untargetable, Galio  destroys enemy projectiles targeting him.\nThe following table refers for interactions while Galio is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects\n\nHero's Entrance's channel can only be  interrupted by  crowd control in the first 1.25 seconds.",
       "resource": "Mana",
       "spellEffects": "Area of Effect",
       "spellshieldable": "True",
@@ -288,7 +292,7 @@
     "difficulty": 2
   },
   "lore": "Outside the gleaming city of Demacia, the stone colossus Galio keeps vigilant watch. Built as a bulwark against enemy mages, he often stands motionless for decades until the presence of powerful magic stirs him to life. Once activated, Galio makes the most of his time, savoring the thrill of a fight and the rare honor of defending his countrymen. But his triumphs are always bittersweet, for the magic he destroys is also his source of reanimation, and each victory leaves him dormant once again.",
-  "patchLastChanged": "25.18",
+  "patchLastChanged": "26.10",
   "positions": [
     "Middle",
     "Support"

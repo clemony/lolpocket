@@ -47,7 +47,7 @@
                 },
                 {
                   "unit": "% per 100 bonus AD",
-                  "values": "4"
+                  "values": "3.5"
                 }
               ]
             },
@@ -60,7 +60,7 @@
                 },
                 {
                   "unit": "% per 100 bonus AD",
-                  "values": "8"
+                  "values": "7"
                 }
               ]
             }
@@ -82,18 +82,23 @@
               "attribute": "Bonus Physical Damage On-Hit",
               "modifiers": [
                 {
-                  "values": "5 / 13 / 21 / 29 / 37 / 45"
+                  "values": "6 / 12 / 18 / 24 / 30 / 36"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "25"
+                  "values": "20"
+                },
+                {
+                  "tooltip": "Scaling per rank:\n1 / 1.2 / 1.4 / 1.6 / 1.8 / 2% bonus health",
+                  "unit": "% bonus health",
+                  "values": "1 - 2"
                 }
               ]
             }
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr gains an additional 20% - 75.88% (based on level) bonus attack speed. The empowered attacks deal an additional 2% - 4.24% (based on level) (+ 3% per 100 bonus AD) of the target's maximum health bonus physical damage if used within 4 seconds. Udyr's next two basic attacks on-hit in any Stance within 4 seconds are each empowered to strike with lightning[ 6 times over 1 second, ][ every 0.2 seconds over 1 second, ]dealing bonus magic damage equal to 1.5% - 3.18% (based on level) (+ 0.8% per 100 AP) of the target's maximum health per hit, chaining to up to 3 nearby visible enemies and being able to hit the same target multiple times, for a total of 9% - 19.06% (based on level) (+ 4.8% per 100 AP) of the target's maximum health. Each lightning strike deals a minimum of 40 - 174.12 (based on level) against minions and is capped at 15 (+ 100% bonus AD) (+ 50% AP) against monsters.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr gains an additional 20% - 75.88% (based on level) bonus attack speed. The empowered attacks deal an additional 2% - 4.24% (based on level) (+ 1.5% per 100 bonus AD) (+ 0.1% per 100 bonus health) of the target's maximum health bonus physical damage if used within 4 seconds. Udyr's next two basic attacks on-hit in any Stance within 4 seconds are each empowered to strike with lightning[ 6 times over 1 second, ][ every 0.2 seconds over 1 second, ]dealing bonus magic damage equal to 1.5% - 3.18% (based on level) (+ 0.6% per 100 AP) of the target's maximum health per hit, chaining to up to 3 nearby visible enemies and being able to hit the same target multiple times, for a total of 9% - 19.06% (based on level) (+ 3.6% per 100 AP) of the target's maximum health. Each lightning strike deals a minimum of 40 - 174.12 (based on level) against minions and is capped at 15 (+ 100% bonus AD) (+ 50% AP) against monsters.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/q",
@@ -137,6 +142,10 @@
                   "values": "45 / 65 / 85 / 105 / 125 / 145"
                 },
                 {
+                  "unit": "% bonus AD",
+                  "values": "50"
+                },
+                {
                   "unit": "% AP",
                   "values": "40"
                 },
@@ -162,6 +171,10 @@
                   "values": "45 / 65 / 85 / 105 / 125 / 145"
                 },
                 {
+                  "unit": "% bonus AD",
+                  "values": "100"
+                },
+                {
                   "unit": "% AP",
                   "values": "65"
                 },
@@ -181,6 +194,10 @@
                   "values": "22.5 / 32.5 / 42.5 / 52.5 / 62.5 / 72.5"
                 },
                 {
+                  "unit": "% bonus AD",
+                  "values": "50"
+                },
+                {
                   "unit": "% AP",
                   "values": "32.5"
                 },
@@ -198,6 +215,10 @@
                 },
                 {
                   "values": "1.41 / 2.03 / 2.66 / 3.28 / 3.91 / 4.53"
+                },
+                {
+                  "unit": "% bonus AD",
+                  "values": "3.13"
                 },
                 {
                   "unit": "% AP",
@@ -251,6 +272,10 @@
                 {
                   "unit": "%",
                   "values": "25 / 31 / 37 / 43 / 49 / 55"
+                },
+                {
+                  "unit": "% per 100 bonus AD",
+                  "values": "5"
                 }
               ]
             },
@@ -260,13 +285,17 @@
                 {
                   "unit": "%",
                   "values": "7.5 / 9.3 / 11.1 / 12.9 / 14.7 / 16.5"
+                },
+                {
+                  "unit": "% per 100 bonus AD",
+                  "values": "1.5"
                 }
               ]
             }
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr gains 75 bonus attack range and an additional 30% - 41.18% (based on level) bonus movement speed. He also gains immunity to crowd control for 1.5 seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr gains 75 bonus attack range and an additional 30% - 41.18% (based on level) (+ 10% per 100 bonus AD) bonus movement speed. He also gains immunity to crowd control for 1.5 seconds.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/e",
@@ -285,7 +314,7 @@
       "cooldown": "6",
       "cost": "40",
       "damageType": "Magic damage",
-      "effectRadius": "370 /  1300",
+      "effectRadius": "370 •  1300",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active - Stance:</span> Udyr enters Storm Stance, empowering his next two basic attacks on-hit to deal 10 - 43.53 (based on level) (+ 35% AP) magic damage to nearby enemies.</p>"
@@ -349,7 +378,6 @@
       "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/r",
       "notes": "The storm that Udyr surrounds himself with is independent from the unleashed storm.\nHe can still cast Wingborne Storm to surround himself with a storm while an unleashed storm from an Awakened cast is active.\nUsing the Awakened cast ends the storm around Udyr if it is active and summons a separate storm that is able to move on its own.\nThe slow debuff has a duration equal to the storm's remaining duration and is removed immediately when the unit leaves the storm's area of effect.\nUnits receive the debuff whenever they are in the storm, even after having it removed from leaving the area.\nIf the target Udyr has most recently attacked is invalid and there are no nearby enemies then the storm will follow him instead.\nThe storm can follow Udyr regardless of how far away he is from it.\nThe storm will remain active even if Udyr dies. Any commands it was issued to follow a target will not be interrupted.\nThe storm will follow its target even if they are not  visible, but only for up to 1 second.\nIf it does not gain vision of its target within that time, it changes its target.\nThe storm is obstructed by terrain. If it encounters terrain, then it will automatically navigate its path towards the target.\nThe empowered attacks will not trigger nor be consumed if they hit a structure or ward or are parried.",
       "resource": "Mana",
-      "speed": "109.5 : 250 (based on level)",
       "spellEffects": "aoedot",
       "spellshieldable": "false",
       "targeting": "Auto"
@@ -367,7 +395,7 @@
     "difficulty": 2
   },
   "lore": "The most powerful spirit walker alive, Udyr communes with all the spirits of the Freljord, whether by empathically understanding their needs, or by channeling and transforming their ethereal energy into his own primal fighting style. He seeks balance within, so that his mind does not get lost amidst others, but he also seeks balance without—for the Freljord's mystical landscape can only thrive with the growth that comes from conflict and struggle, and Udyr knows that sacrifices must be made to keep peaceful stagnance at bay.",
-  "patchLastChanged": "26.04",
+  "patchLastChanged": "26.09",
   "positions": [
     "Jungle",
     "Top"

@@ -1,11 +1,16 @@
 {
-  "id": 1086,
   "name": "Doran's Bow",
-  "description": "6 Attack Damage\n15% Attack Speed\n1.5% Omnivamp\n\n",
+  "id": 1086,
+  "rank": "Starter",
+  "specialRecipe": 0,
+  "noEffects": true,
+  "removed": false,
   "stats": {
-    "attackDamage": 6,
-    "attackSpeed": 15
+    "attackDamage": 8,
+    "attackSpeed": 15,
+    "omnivamp": 1.5
   },
+  "description": "6 Attack Damage\n15% Attack Speed\n1.5% Omnivamp\n\n",
   "gold": {
     "base": 400,
     "purchasable": true,
@@ -17,5 +22,7 @@
     12,
     21
   ],
-  "tags": []
+  "tags": [
+    "Marksman"
+  ]
 }

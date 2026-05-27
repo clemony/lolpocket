@@ -33,7 +33,7 @@
   "notes": "Even if the target  spell shields the bolt, they may still be damaged by the explosion. Moonlight is not applied to the protected target if blocked.\nThe bolt consists of two  projectiles with slightly different trajectories.\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1900 / 2100",
+  "speed": "1900 • 2100",
   "spellEffects": "aoe",
   "spellshieldable": "special",
   "targeting": "Location",

@@ -51,10 +51,7 @@ const description = computed(() => {
           :menu="{
             content: { align: 'center', side: 'top' }
           }"
-          :options="{
-            folder: { disabled: true },
-            pocket: { location: item.id }
-          }"
+          :options="{ location: item.id, folder: { disabled: true } }"
           :ui="{
             leadingIcon: 'hidden',
             base: 'pl-5'

@@ -211,7 +211,7 @@ export const user = defineStore(
         label: "",
         id: crypto.randomUUID(),
         iconKey: "folder",
-        location: options?.location || "",
+        location: options?.location || "folders",
         order: settings.value?.folders.length || 0
       }
 

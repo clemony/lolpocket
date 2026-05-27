@@ -28,7 +28,7 @@
       "cooldown": "9",
       "cost": "50 / 55 / 60 / 65 / 70",
       "damageType": "Physical damage",
-      "effectRadius": "100 / 250 / 300",
+      "effectRadius": "100 • 250 • 300",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1 - 3 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.</p>",
@@ -96,7 +96,7 @@
       "spellEffects": "Aoe",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "425 / 1000"
+      "targetRange": "425 • 1000"
     },
     {
       "key": "W",

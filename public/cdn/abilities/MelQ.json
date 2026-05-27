@@ -7,7 +7,7 @@
   "cooldown": "10 / 9 / 8 / 7 / 6",
   "cost": "70 / 75 / 80 / 85 / 90",
   "damageType": "Magic damage",
-  "effectRadius": "200 /  100",
+  "effectRadius": "200 • 100",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Mel launches a barrage of luminous bolts at the target location over 0.5 seconds which distribute evenly in the area. Each bolt explodes upon landing to deal magic damage to nearby enemies, with all explosions after the first dealing reduced damage.</p>",
@@ -16,11 +16,11 @@
           "attribute": "Initial Explosion Magic Damage",
           "modifiers": [
             {
-              "values": "60 / 90 / 120 / 150 / 180"
+              "values": "60 / 85 / 110 / 135 / 160"
             },
             {
               "unit": "% AP",
-              "values": "60"
+              "values": "55"
             }
           ]
         },
@@ -48,12 +48,12 @@
           "attribute": "Total Magic Damage",
           "modifiers": [
             {
-              "values": "90 / 139 / 192 / 249 / 310"
+              "values": "85 / 127 / 173 / 223 / 277"
             },
             {
-              "tooltip": "Scaling per rank:\n90 / 95 / 100 / 105 / 110% AP",
+              "tooltip": "Scaling per rank:\n80 / 85 / 90 / 95 / 100% AP",
               "unit": "% AP",
-              "values": "90 - 110"
+              "values": "80 - 100"
             }
           ]
         }

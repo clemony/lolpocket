@@ -3,7 +3,7 @@
   "name": "Pulverize",
   "affects": "Enemies",
   "blurb": "Active:  Alistar smashes the ground, dealing magic damage to nearby enemies and briefly  stunning and  knocking them up.",
-  "castTime": "0.25 / 0.15",
+  "castTime": "0.25 • 0.15",
   "cooldown": "14 / 13 / 12 / 11 / 10",
   "cost": "50 / 55 / 60 / 65 / 70",
   "damageType": "Magic damage",

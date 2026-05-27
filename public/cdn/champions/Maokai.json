@@ -149,13 +149,13 @@
       "cooldown": "18 / 17 / 16 / 15 / 14",
       "cost": "60 / 65 / 70 / 75 / 80",
       "damageType": "Magic damage",
-      "effectRadius": "175 / 350 / 475",
+      "effectRadius": "175 • 250 • 350 • 475",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Maokai flings a Sapling to the target location, granting sight of the area.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Maokai flings a Sapling to the target location, granting sight of the area while it is in-flight.</p>"
         },
         {
-          "description": "Once landed, a Sapling remains stationary for 30 seconds or until it reacts to the first nearby visible enemy, chasing them for up to 2.5 seconds. The Sapling explodes upon colliding with an enemy or when it expires, dealing magic damage to nearby enemies, capped at 300 against non-champions, and slowing them by 45% for 2 seconds.",
+          "description": "Once landed, the Sapling grants sight of its surroundings and remains stationary for 30 seconds or until it reacts to the first nearby visible enemy, chasing them for up to 2.5 seconds. The Sapling explodes upon colliding with an enemy or when it expires, dealing magic damage to nearby enemies, capped at 300 against non-champions, and slowing them by 45% for 2 seconds.",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -176,7 +176,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">A Sapling placed in a brush becomes empowered:</span> lasting 30 (+ 1.5% bonus health) seconds and causing its explosion to deal 66.7% damage to non- minion targets struck and attach two Saplings to them for 1.5 seconds, as well as slow enemies hit by 45% (+ 1% per 100 bonus health) (+ 1% per 100 AP) for 2 seconds and reveal them for 3 seconds. The attached Saplings explode on the afflicted target every 0.75 seconds over the duration, dealing them the same damage each time. Targets can only be attached to two Saplings at a time; subsequent empowered Sapling explosions on a target will refresh the duration and only attach a Sapling if one has exploded on them already. Against minions, the explosion deals 100% damage. The total damage is capped at 600 against non-champions.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">A Sapling placed in a brush becomes empowered:</span> lasting 30 (+ 1.5% bonus health) seconds and causing its explosion to deal 66.7% damage to non- minion targets struck and attach two Saplings to them for 1.5 seconds, as well as slow enemies hit by 45% (+ 1% per 100 bonus health) (+ 1% per 100 AP) for 2 seconds and reveal them for 3 seconds. The attached Saplings explode on the afflicted target every 0.75 seconds over the duration, dealing them the same damage each time.Targets can only be attached to two Saplings at a time; subsequent empowered Sapling explosions on a target will refresh the duration and only attach a Sapling if one has exploded on them already. Against minions, the explosion deals 100% damage. The total damage is capped at 600 against non-champions.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage per Instance",
@@ -249,14 +249,13 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/e",
-      "notes": "Applies  area damage from a normal Sapling and deals  persistent damage to enemies hit by an empowered Sapling.\nSapling Toss grants  sight of the target location even while the Sapling is in flight.\nThe Saplings will continue to chase their target even if they lose  sight of them (but they do not prioritize champions so they will chase the first target they encounter).\nSaplings cannot stack on top of each other (they will move a short distance away from one another if they are aimed at the same location).\nThe Sapling will stop its movement upon colliding with  Unbreakable.\nSaplings attack  Baron Nashor always at the same two points, no matter where they were placed.",
+      "notes": "Applies  area damage from a normal Sapling and deals  persistent damage to enemies hit by an empowered Sapling.\nThe Saplings will continue to chase their target even if they lose  sight of them.\nSaplings cannot be stacked on top of each other; if Sapling Toss is cast to the same point as a Sapling currently on the ground, the new Sapling will move a short distance away from the existing one upon landing.\nSapling Toss's cast does not initially fling the actual Sapling unit but instead a Sapling-like  projectile that can be destroyed by projectile-interception effects.\nThe projectile will stop its flight upon colliding with  Unbreakable, causing the Sapling to land in front of the barrier.\nWhen Saplings acquire the  Baron Nashor as their chase target, they will move to a specific point next to him before exploding. This behavior only occurs if the Sapling is not already within collision range.",
       "projectile": "TRUE",
       "resource": "Mana",
       "spellEffects": "special",
       "spellshieldable": "true",
       "targeting": "Location",
-      "targetRange": "1100",
-      "tetherRadius": "250"
+      "targetRange": "1100"
     },
     {
       "key": "R",

@@ -7,7 +7,7 @@
   "cooldown": "16",
   "cost": "50",
   "damageType": "Magic damage",
-  "effectRadius": "325 / 425",
+  "effectRadius": "325 • 425",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Volibear summons a lightning bolt to strike at the target location after a 2-second delay, granting sight of the area for 1 second after the first second of the delay. If Volibear is within the strike, he gains a shield equal to 14% of his maximum health (+ 75% AP) for 3 seconds.</p>"

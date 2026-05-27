@@ -7,7 +7,7 @@
   "cooldown": "120 / 100 / 80",
   "cost": "100",
   "damageType": "Magic damage",
-  "effectRadius": "450 /  375",
+  "effectRadius": "450 •  375",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell erupts with magnetic fury, pulling nearby enemies inward and creating a gravitational field around her for the next 2 seconds that deals magic damage every 0.25 seconds to nearby enemies and drags them towards her.</p>",

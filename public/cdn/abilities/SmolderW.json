@@ -33,7 +33,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "65"
+              "values": "50"
             },
             {
               "unit": "% AP",
@@ -49,7 +49,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "125"
+              "values": "110"
             },
             {
               "unit": "% AP",
@@ -64,7 +64,7 @@
   "notes": "Smolder can't declare basic attacks for a brief moment after the cast time.\n Spell shield can block either the glob or the explosion, but not both.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "2000 / 400",
+  "speed": "2000 • 400",
   "spellEffects": "spellaoe",
   "spellshieldable": "special",
   "targeting": "Direction"

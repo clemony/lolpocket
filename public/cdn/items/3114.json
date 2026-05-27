@@ -16,11 +16,6 @@
       "gold": 2800
     },
     {
-      "id": 223011,
-      "name": "Chemtech Putrifier",
-      "gold": 1900
-    },
-    {
       "id": 323222,
       "name": "Mikael's Blessing",
       "gold": 2800
@@ -31,6 +26,11 @@
       "gold": 2350
     },
     {
+      "id": 223011,
+      "name": "Chemtech Putrifier",
+      "gold": 1900
+    },
+    {
       "id": 2526,
       "name": "Whispering Circlet",
       "gold": 2250
@@ -39,6 +39,11 @@
       "id": 3504,
       "name": "Ardent Censer",
       "gold": 2200
+    },
+    {
+      "id": 326621,
+      "name": "Dawncore",
+      "gold": 2900
     },
     {
       "id": 3011,
@@ -69,11 +74,6 @@
       "id": 326616,
       "name": "Staff of Flowing Water",
       "gold": 2600
-    },
-    {
-      "id": 326621,
-      "name": "Dawncore",
-      "gold": 2900
     },
     {
       "id": 6616,

@@ -4,11 +4,11 @@ import { newItemOptions } from "~/domain/pocket/menu/createMenu"
 
 interface Option {
   disabled?: boolean
-  location?: string
 }
 interface OptionsConfig {
   folder?: Option
   pocket?: Option
+  location?: string
 }
 
 const props = withDefaults(
@@ -16,7 +16,6 @@ const props = withDefaults(
     ButtonProps & {
       menu?: DropdownMenuProps & DropdownMenuItem
       collapsed?: boolean
-      location?: string
       options?: OptionsConfig
     }
   >(),
@@ -32,17 +31,6 @@ const props = withDefaults(
   }
 )
 
-const options = computed(() => ({
-  folder: {
-    disabled: props.options?.folder?.disabled ?? false,
-    location: props?.options?.folder?.location ?? undefined
-  },
-  pocket: {
-    disabled: props.options?.pocket?.disabled ?? false,
-    location: props?.options?.pocket?.location ?? undefined
-  }
-}))
-
 const delegated = reactiveOmit(props, "class", "menu")
 
 const open = shallowRef<boolean>(false)
@@ -53,7 +41,7 @@ const open = shallowRef<boolean>(false)
     v-bind="props.menu"
     v-model:open="open"
     size="lg"
-    :items="newItemOptions({ location: props.location }).value"
+    :items="newItemOptions({ location: props.options?.location }).value"
     component="dropdown"
     :orientation="props?.collapsed ? 'vertical' : 'horizontal'"
     :ui="{

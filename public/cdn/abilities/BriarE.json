@@ -3,7 +3,7 @@
   "name": "Chilling Scream",
   "width": "380",
   "affects": "Enemies, Self",
-  "castTime": "None / 0.15",
+  "castTime": "None • 0.15",
   "cooldown": "16",
   "cost": "0",
   "damageType": "Magic damage",
@@ -113,8 +113,8 @@
   "notes": "Chilling Scream increases its damage by its minimum every 0.025 seconds over the duration.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe following table refers for interactions while Briar is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled, but can still use trinkets\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall\n\n\nInterrupted by\n\n Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath",
   "projectile": "TRUE",
   "resource": "Current health",
-  "speed": "1900 / 1800",
+  "speed": "1900 • 1800",
   "spellEffects": "spellaoe",
   "spellshieldable": "true",
-  "targeting": "Direction / Auto"
+  "targeting": "Direction • Auto"
 }

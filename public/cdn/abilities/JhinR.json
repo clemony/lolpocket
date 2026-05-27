@@ -4,7 +4,7 @@
   "width": "160",
   "affects": "Enemies",
   "angle": "60°",
-  "castTime": "1 / 0.25",
+  "castTime": "1 • 0.25",
   "cooldown": "120 / 105 / 90",
   "cost": "100",
   "damageType": "Physical damage",

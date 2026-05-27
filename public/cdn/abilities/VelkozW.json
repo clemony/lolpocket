@@ -1,7 +1,7 @@
 {
   "key": "W",
   "name": "Void Rift",
-  "width": "175 / 175",
+  "width": "175 • 175",
   "affects": "Enemies",
   "blurb": "Active:  Vel'Koz cracks a rift in the target direction that opens after a brief delay, cascading through the area to deal magic damage to enemies within.",
   "castTime": "none",

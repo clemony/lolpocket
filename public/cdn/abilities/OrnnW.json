@@ -1,7 +1,7 @@
 {
   "key": "W",
   "name": "Bellows Breath",
-  "affects": "Self / Enemies",
+  "affects": "Self • Enemies",
   "blurb": "Active:  Ornn marches in the target direction with  displacement immunity, belching fire in a cone that continually deals magic damage for a brief time. The final gout of flame will apply  Brittle for a short time.",
   "castTime": "none",
   "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
@@ -74,11 +74,11 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/w",
-  "notes": "Ornn's lunge distance is based on the distance he would travel in the target direction by standard movement over a time period of 0.75 seconds with 35% of his total movement speed.\nHis movement speed during the lunge does not actually change in this case and is only used as a scaling.\nThe scaling is based on the total movement speed Ornn had at the time of casting Bellows Breath.\nIf his total movement speed was less than or equal to an estimated value of 190, then Ornn will not lunge at all.\nWhile lunging, special VFX will be played when Ornn is first affected by  crowd control, even if that crowd control is not resisted by  displacement immunity.\n Spell shield will negate the final instance of damage and prevents  Brittle from being applied.\nOrnn can see the on-target VFX on targets that are being struck even while they are in the fog of war.\nThe following table refers for interactions while Ornn is performing Bellows Breath:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+  "notes": "Ornn's lunge distance is based on the distance he would travel in the target direction by standard movement over a time period of 0.75 seconds with 35% of his total movement speed.\nHis movement speed during the lunge does not actually change in this case and is only used as a scaling.\nThe scaling is based on the total movement speed Ornn had at the time of casting Bellows Breath.\nIf his total movement speed was less than or equal to an estimated value of 190, then Ornn will not lunge at all.\nWhile lunging, special VFX will be played when Ornn is first affected by  crowd control, even if that crowd control is not resisted by  displacement immunity.\n Spell shield will negate the final instance of damage and prevents  Brittle from being applied.\nOrnn can see the on-target VFX on targets that are being struck even while they are in the fog of war.\nBellows Breath's  lunge can pass over thin, player-generated terrain (i.e  Jarvan IV's  Cataclysm) but will otherwise not be able to.(unexpected)\nThe following table refers for interactions while Ornn is performing Bellows Breath:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
   "projectile": "FALSE",
   "resource": "Mana",
   "spellEffects": "aoe",
   "spellshieldable": "Special",
   "targeting": "Direction",
-  "targetRange": "500 / 560"
+  "targetRange": "500 • 560"
 }

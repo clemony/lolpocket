@@ -3,7 +3,7 @@
   "name": "Perfect Execution",
   "affects": "Enemies",
   "blurb": "Active:  Akali  dashes in the direction of the target enemy champion, dealing physical damage to enemies she passes through.",
-  "castTime": "0.25 / None",
+  "castTime": "0.25 • None",
   "collisionRadius": "110",
   "cooldown": "120 / 90 / 60",
   "cost": "0",
@@ -65,9 +65,9 @@
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/r",
   "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nWith the first cast, Akali can dash up to a maximum of 900 units if the first enemy she hit was at the maximum dash range.\nCasting  Flash during either dashes will interrupt them, but Akali will deal damage to any enemies she comes in contact with at the new location.\nEnemies already hit by either of Perfect Execution's casts cannot be affected more than once by the same cast.\n Shuriken Flip can be used during the initial dash if it is cast after Perfect Execution's cast time finishes.\nThis ability's damage is calculated based on the caster's stats at the start of cast and does not change dynamically.",
-  "speed": "1500 / 3000",
+  "speed": "1500 • 3000",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
-  "targeting": "Unit / Direction",
+  "targeting": "Unit • Direction",
   "targetRange": "675"
 }

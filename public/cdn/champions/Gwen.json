@@ -26,7 +26,7 @@
     {
       "key": "Q",
       "name": "Snip Snip!",
-      "width": "75 / 360 /  25",
+      "width": "75 • 360 •  25",
       "affects": "Enemies",
       "blurb": "Passive:  Gwen's  basic attacks  on-hit generate  stacks of Snippy, up to a cap.",
       "castTime": "0.5",
@@ -254,19 +254,19 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/e",
-      "notes": "Skip 'n Slash has no minimum dash range.\nThe basic attack reset is not considered one for  Hail of Blades.(unexpected)",
+      "notes": "Skip 'n Slash has no minimum dash range.",
       "resource": "Mana",
       "spellEffects": "proc",
       "targeting": "Location",
-      "targetRange": "350 / 450"
+      "targetRange": "350 • 450"
     },
     {
       "key": "R",
       "name": "Needlework",
-      "width": "240 to 30",
+      "width": "240 - 30",
       "affects": "Enemies",
       "blurb": "First Cast:  Gwen launches a needle in the target direction that deals magic damage and  slows enemies hit. Needlework can be recast up to two more times.",
-      "castTime": "0.25 / 0.5",
+      "castTime": "0.25 • 0.5",
       "cooldown": "120 / 100 / 80",
       "cost": "100",
       "damageType": "Magic damage",
@@ -406,7 +406,7 @@
     "difficulty": 2
   },
   "lore": "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker's love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen's scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world.",
-  "patchLastChanged": "26.04",
+  "patchLastChanged": "26.09",
   "positions": [
     "Jungle",
     "Top"

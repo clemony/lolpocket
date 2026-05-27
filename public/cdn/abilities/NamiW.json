@@ -70,7 +70,7 @@
   "notes": "If cast on an enemy with a  spell shield they will not take damage but Ebb and Flow will still continue to bounce, and the target who blocked the ability may be targeted again by the final bounce.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "2500 / 1500",
+  "speed": "2500 • 1500",
   "spellEffects": "aoe",
   "spellshieldable": "True",
   "targeting": "Unit",

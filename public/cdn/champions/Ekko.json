@@ -31,7 +31,7 @@
     {
       "key": "Q",
       "name": "Timewinder",
-      "width": "120 / 200",
+      "width": "120 • 200",
       "affects": "Enemies",
       "blurb": "Active:  Ekko throws a temporal grenade that deals magic damage to enemies hit. It expands at max range or upon hitting an enemy  champion,  slowing nearby enemies.",
       "castTime": "0.25",
@@ -108,7 +108,7 @@
       "notes": "Spell shield will block only a single instance of damage.\nThis ability will cast from wherever the caster is at the end of the cast time.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1650 / 200 / 2300",
+      "speed": "1650 • 200 • 2300",
       "spellEffects": "spellaoe",
       "spellshieldable": "Special",
       "targeting": "Direction",
@@ -192,29 +192,29 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/e",
-      "notes": "The  dash distance can be extended to up-to 550 units when targeting across terrain. It will only extend for the distance needed to cross the wall.\nWhile  grounded or  rooted, Ekko loses the  bonus attack range from Phase Dive.\nPhase Drive's attack can  miss and be  blocked and  dodged, consuming the basic attack without dealing any damage.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.",
+      "notes": "The  dash distance can be extended to up-to 550 units when targeting across terrain. It will only extend for the distance needed to cross the wall.\nWhile  grounded or  rooted, Ekko loses the  bonus attack range from Phase Dive.\nPhase Drive's attack can  miss and be  blocked and  dodged, consuming the basic attack without dealing any damage.\nPhase Dive's attack  breaks stealth at the start of its cast time.\nThis is relevant for external sources of  stealth such as  Senna's  Curse of the Black Mist.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.",
       "resource": "Mana",
       "spellEffects": "Spell",
       "spellshieldable": "true",
       "targeting": "Direction",
-      "targetRange": "325 / 550"
+      "targetRange": "325 • 550"
     },
     {
       "key": "R",
       "name": "Chronobreak",
-      "affects": "Enemies / Self",
+      "affects": "Enemies • Self",
       "blurb": "Passive:  Ekko reveals a time-delayed afterimage of himself that tracks where he was 4 seconds ago.",
       "castTime": "0.5",
       "cooldown": "110 / 80 / 50",
       "cost": "100",
       "damageType": "Magic damage",
-      "effectRadius": "375 / Global",
+      "effectRadius": "375 • Global",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Upon learning Chronobreak or if its current cooldown is lower than 4 seconds, Ekko reveals a time-delayed afterimage of himself that constantly tracks where he was 4 seconds ago.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ekko enters stasis at the start of the cast time, and afterwards heals himself and dashes to his afterimage's location at the time of cast over 0.5 seconds. Upon arrival, the stasis ends and he creates an explosion that deals magic damage to nearby enemies.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ekko enters stasis at the start of the cast time, and afterwards heals himself, increased by 0% - 300% (based on health lost in the last 4 seconds), and dashes to his afterimage's location at the time of cast over 0.5 seconds. Upon arrival, the stasis ends and he creates an explosion that deals magic damage to nearby enemies.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -229,7 +229,7 @@
               ]
             },
             {
-              "attribute": "Heal",
+              "attribute": "Minimum Heal",
               "modifiers": [
                 {
                   "values": "100 / 150 / 200"
@@ -237,10 +237,18 @@
                 {
                   "unit": "% AP",
                   "values": "60"
+                }
+              ]
+            },
+            {
+              "attribute": "Maximum Heal",
+              "modifiers": [
+                {
+                  "values": "400 / 600 / 800"
                 },
                 {
-                  "unit": "% per 1% of health lost in the past 4 seconds",
-                  "values": "3"
+                  "unit": "% AP",
+                  "values": "240"
                 }
               ]
             }
@@ -270,7 +278,7 @@
     "difficulty": 2
   },
   "lore": "A prodigy from the rough streets of Zaun, Ekko is able to manipulate time to twist any situation to his advantage. He uses his own invention, the Z-Drive, to explore the branching possibilities of reality, crafting the perfect moment to seemingly achieve the impossible the first time, every time. Though Ekko revels in this freedom, when there's a threat to those he cares about, he and the Firelights will do anything to defend them.",
-  "patchLastChanged": "26.03",
+  "patchLastChanged": "26.09",
   "positions": [
     "Jungle",
     "Middle"

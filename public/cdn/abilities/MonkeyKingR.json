@@ -7,7 +7,7 @@
   "cooldown": "130 / 110 / 90",
   "cost": "100",
   "damageType": "Physical damage",
-  "effectRadius": "162.5",
+  "effectRadius": "315",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong spins his staff around for up to 2 seconds, becoming ghosted and gaining 20% bonus movement speed. The staff deals physical damage every 0.25 seconds to enemies hit, and can knock them up once for 0.6 seconds. Cyclone will not knock up enemies who were already hit by either Wukong or his clone within the same cast.</p>",

@@ -14,6 +14,11 @@
       "gold": 2600
     },
     {
+      "id": 326621,
+      "name": "Dawncore",
+      "gold": 2900
+    },
+    {
       "id": 3100,
       "name": "Lich Bane",
       "gold": 2900
@@ -49,24 +54,19 @@
       "gold": 2850
     },
     {
-      "id": 326621,
-      "name": "Dawncore",
-      "gold": 2900
-    },
-    {
       "id": 4637,
       "name": "Demonic Embrace",
       "gold": 3000
     },
     {
-      "id": 6657,
-      "name": "Rod of Ages",
-      "gold": 2600
-    },
-    {
       "id": 6621,
       "name": "Dawncore",
       "gold": 2500
+    },
+    {
+      "id": 6657,
+      "name": "Rod of Ages",
+      "gold": 2600
     }
   ],
   "specialRecipe": 0,

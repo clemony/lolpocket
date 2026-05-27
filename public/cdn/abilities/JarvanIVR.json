@@ -7,7 +7,7 @@
   "cooldown": "120 / 105 / 90",
   "cost": "100",
   "damageType": "Physical damage",
-  "effectRadius": "350 / 1700",
+  "effectRadius": "350 • 1700",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.</p>",
@@ -34,9 +34,9 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/r",
-  "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\n Spell shield will block the damage but not the terrain generation.\nIf Jarvan IV's  leap is interrupted by another by another forced movement (eg. old  Skarner's  Impale[2]), the terrain will be generated at Jarvan IV's location when the forced movement ends.\nCataclysm will not deal damage, generate terrain, nor refund its cooldown if Jarvan IV is killed while leaping.\nThe perimeter is made up of 24 units with 95  pathing radius, 65  gameplay radius and 1350  sight radius each. Only every other unit is rendered visible.\n Searing Charge will not destroy the whole ring but only the part that  Ornn collides with.",
+  "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\n Spell shield will block the damage but not the terrain generation.\nIf Jarvan IV's  leap is interrupted by another by another forced movement (eg. old  Skarner's  Impale[2]), the terrain will be generated at Jarvan IV's location when the forced movement ends.\nCataclysm will not deal damage, generate terrain, nor refund its cooldown if Jarvan IV is killed while leaping.\nThe perimeter is made up of 24 units with 95  pathing radius, 65  gameplay radius and 1350  sight radius each. Only every other unit is rendered visible.\n Ornn's  Searing Charge will not destroy the whole ring but only the part that  Ornn collides with.",
   "resource": "Mana",
-  "speed": "Varies",
+  "speed": "Distance to target ÷ 0.35 s",
   "spellEffects": "Aoe",
   "spellshieldable": "Special",
   "targeting": "Unit",

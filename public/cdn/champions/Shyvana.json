@@ -33,13 +33,13 @@
       "effectRadius": "275",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Shyvana's basic attacks on-hit will reduce Emberstrike's current cooldown by 1 second, and deal bonus magic damage equal to 1% (+ 1.1% per 100 bonus AD) (+ 1.1% per 100 AP) of the target's maximum health. Against non-champions, this effect deals a minimum of 10 and is capped at 200.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Shyvana's basic attacks on-hit will reduce Emberstrike's current cooldown by 0.5 seconds, and deal bonus magic damage equal to 1% (+ 1.1% per 100 bonus AD) of the target's maximum health. Against non-champions, this effect deals a minimum of 10 and is capped at 200.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Emberstrike can be cast twice in Human Form and thrice in Dragon Form. Each cast empowers Shyvana's next basic attack within 6 seconds to have an uncancellable windup and trigger an additional exclusive effect. After 1.5 seconds of using an Emberstrike attack, or immediately following a basic attack, the ability can be recast within and up to the next 4 seconds each time, before it incurs its cooldown. Shyvana gains 50 bonus range on all of her basic attacks while Emberstrike is active. The attacks deal 10 bonus physical damage against monsters.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">First Cast:</span> Shyvana's slashes her claws, blasting a cone in the target's direction that deals modified physical damage to enemies hit. The damage to the primary target is affected by critical strike modifiers.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">First Cast:</span> Shyvana slashes her claws, blasting a cone in the target's direction that deals modified physical damage to enemies hit. The damage to the primary target is affected by critical strike modifiers.</p>",
           "leveling": [
             {
               "attribute": "Area Physical Damage",
@@ -53,7 +53,7 @@
                 },
                 {
                   "unit": "% AP",
-                  "values": "25"
+                  "values": "30"
                 }
               ]
             }
@@ -77,7 +77,7 @@
                 },
                 {
                   "unit": "% AP",
-                  "values": "37.5"
+                  "values": "45"
                 }
               ]
             }
@@ -97,15 +97,15 @@
       "key": "W",
       "name": "Inferno Aegis",
       "affects": "Enemies",
-      "blurb": "Active: Shyvana  shields herself for a short time, with the shield strength increased for every nearby enemy champion. While it holds, she gains  bonus move speed, increased while facing enemy champions. Inferno Aegis can be recast while the shield holds and does so automatically after it expires or is broken.",
+      "blurb": "Active: Shyvana  shields herself for a short time, with the shield strength increased for every nearby enemy champion. For the same duration, she gains  bonus move speed, increased while facing enemy champions. Inferno Aegis can be recast while the shield holds and does so automatically after it expires or is broken.",
       "castTime": "none",
       "cooldown": "13 / 12 / 11 / 10 / 9",
       "cost": "0",
       "damageType": "Magic damage",
-      "effectRadius": "350",
+      "effectRadius": "350 •  2000 •  600",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana shields herself for 2.5 seconds, with the shield strength increased by 30% for every nearby enemy champion. While it holds, she gains 25% bonus movement speed, increased to 43.75% while facing visible enemy champions.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana shields herself for 2.5 seconds, with the shield strength increased by 30% for every nearby enemy champion. For the same duration, she gains 25% bonus movement speed, increased to 43.75% while facing visible enemy champions.</p>",
           "leveling": [
             {
               "attribute": "Shield Strength",
@@ -114,8 +114,8 @@
                   "values": "60 / 80 / 100 / 120 / 140"
                 },
                 {
-                  "unit": "% maximum health",
-                  "values": "5"
+                  "unit": "% bonus health",
+                  "values": "12"
                 }
               ]
             },
@@ -126,8 +126,8 @@
                   "values": "18 / 24 / 30 / 36 / 42"
                 },
                 {
-                  "unit": "% maximum health",
-                  "values": "1.5"
+                  "unit": "% bonus health",
+                  "values": "3.6"
                 }
               ]
             }
@@ -146,19 +146,15 @@
                   "values": "80 / 100 / 120 / 140 / 160"
                 },
                 {
-                  "unit": "% bonus AD",
-                  "values": "40"
-                },
-                {
                   "unit": "% AP",
-                  "values": "20"
+                  "values": "65"
                 }
               ]
             }
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> If the explosion hits an enemy champion, Shyvana heals herself for 75 - 214.71 (based on level) (+ 10% bonus AD) (+ 5% AP), increased by 0% - 100% (based on her missing health) for a maximum heal of 150 - 429.41 (based on level) (+ 20% bonus AD) (+ 10% AP).</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> If the explosion hits an enemy champion, Shyvana heals herself for 60 - 104.71 (based on level) (+ 4% - 8.47% (based on level) missing health).</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/w",
@@ -169,61 +165,52 @@
     {
       "key": "E",
       "name": "Molten Burst",
-      "width": "120 / 100",
+      "width": "120 • 100",
       "affects": "Enemies",
       "blurb": "Active: Shyvana launches a fireball that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and  slowing them for a moment.",
-      "castTime": "0.25 / 0.3333",
+      "castTime": "0.25 • 0.3333",
       "cooldown": "12 / 11 / 10 / 9 / 8",
       "cost": "0",
       "damageType": "Magic damage",
-      "effectRadius": "150 / 300",
+      "effectRadius": "150 • 300",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana launches a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and slowing them for 2 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana launches a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and slowing by 30% them for 2 seconds.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
               "modifiers": [
                 {
-                  "values": "80 / 110 / 140 / 170 / 200"
-                },
-                {
-                  "unit": "% bonus AD",
-                  "values": "35"
+                  "values": "50 / 65 / 80 / 95 / 110"
                 },
                 {
                   "unit": "% AP",
-                  "values": "70"
-                }
-              ]
-            },
-            {
-              "attribute": "Slow Strength",
-              "modifiers": [
+                  "values": "60 / 65 / 70 / 75 / 80"
+                },
                 {
-                  "unit": "%",
-                  "values": "20 / 25 / 30 / 35 / 40"
+                  "unit": "% of target's maximum health",
+                  "values": "5"
                 }
               ]
             }
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> The fireball is wider, can pass through enemies, and deals 25% increased damage. Upon hitting an enemy champion or large monster, and after reaching maximum range, the fireball sets an explosion upon the targets struck and at the location that applies the same effects. Molten Burst will also scorch the ground it touches beneath for 2 seconds. Enemies within a scorched field are dealt 3.75 / 5 / 6.25 (based on level) (+ 1.25% AP) magic damage every 0.25 seconds, for a total maximum damage of 30 / 40 / 50 (based on level) (+ 10% AP).Enemies may be damaged by only one scorched field at a time. Subsequent explosions against the same target deal 50% damage.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> The fireball is wider, can pass through enemies, and deals 25% increased damage. Upon hitting an enemy champion or large monster, and after reaching maximum range, the fireball sets an explosion upon the targets struck and at the location that applies the same effects. Molten Burst will also scorch the ground it touches beneath for 2 seconds. Enemies within a scorched field are dealt 3.75 / 5 / 6.25 (based on level) (+ 1.25% AP) magic damage every 0.25 seconds, for a total maximum damage of 30 / 40 / 50 (based on level) (+ 10% AP).Enemies may be damaged by only one scorched field at a time. Subsequent explosions against the same target deal 40% damage.</p>",
           "leveling": [
             {
               "attribute": "Increased/Explosion Magic Damage",
               "modifiers": [
                 {
-                  "values": "100 / 137.5 / 175 / 212.5 / 250"
-                },
-                {
-                  "unit": "% bonus AD",
-                  "values": "43.75"
+                  "values": "62.5 / 81.25 / 100 / 118.75 / 137.5"
                 },
                 {
                   "unit": "% AP",
-                  "values": "87.5"
+                  "values": "75 / 81.25 / 87.5 / 93.75 / 100"
+                },
+                {
+                  "unit": "% of target's maximum health",
+                  "values": "6.25"
                 }
               ]
             },
@@ -231,15 +218,15 @@
               "attribute": "Subsequent Explosion Damage",
               "modifiers": [
                 {
-                  "values": "50 / 68.75 / 87.5 / 106.25 / 125"
-                },
-                {
-                  "unit": "% bonus AD",
-                  "values": "21.88"
+                  "values": "25 / 32.5 / 40 / 47.5 / 55"
                 },
                 {
                   "unit": "% AP",
-                  "values": "43.75"
+                  "values": "30 / 32.5 / 35 / 37.5 / 40"
+                },
+                {
+                  "unit": "% of target's maximum health",
+                  "values": "2.5"
                 }
               ]
             }
@@ -249,7 +236,7 @@
       "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/e",
       "notes": "The fireball applies  area damage. In  Dragon Form, the explosion applies  area damage and the scorched field deals  persistent area damage.\nIn Dragon Form, both areas of effect will be centered on the first champion struck, not at the location the missile collided with them.\nMolten Burst will fail to go on cooldown if its cast time starts in  Dragon Form and ends in Human Form.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.",
       "projectile": "TRUE",
-      "speed": "1600 / 1575",
+      "speed": "1600 • 1575",
       "spellEffects": "special",
       "spellshieldable": "True",
       "targeting": "Direction / Location"
@@ -285,7 +272,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana transforms into Dragon Form and flies with displacement immunity in the target direction, breathing fire in a cone along the way that deals magic damage to enemies hit and fears them for 0.75 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana transforms into Dragon Form and flies with displacement immunity in the target direction, breathing fire in a cone along the way that deals magic damage to enemies hit and fears them for 0.75 seconds, as well as slows them by 99% for the same duration.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -341,7 +328,7 @@
       "spellEffects": "aoe",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "400 / 1050"
+      "targetRange": "400 - 1050"
     }
   ],
   "adaptiveType": "Physical damage",
@@ -356,15 +343,15 @@
     "difficulty": 1
   },
   "lore": "Shyvana is a fearsome half-dragon warrior. Though she often appears humanoid, she also rules the skies as a dragon, incinerating her foes with fiery breath. Having saved the life of the crown prince Jarvan IV, Shyvana now serves uneasily in his royal guard, struggling to find acceptance among the suspicious people of Demacia.",
-  "patchLastChanged": "26.07",
+  "patchLastChanged": "26.10",
   "positions": [
     "Jungle"
   ],
   "releaseDate": "2011-11-01",
   "resource": "Fury",
   "roles": [
+    "Diver",
     "Fighter",
-    "Juggernaut",
     "Mage"
   ],
   "stats": {

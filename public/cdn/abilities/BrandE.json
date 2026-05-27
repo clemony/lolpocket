@@ -7,7 +7,7 @@
   "cooldown": "13 / 12 / 11 / 10 / 9",
   "cost": "70 / 75 / 80 / 85 / 90",
   "damageType": "Magic damage",
-  "effectRadius": "300 / 600",
+  "effectRadius": "300 • 600",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Brand sets the target enemy aflame, which creates a blast that deals magic damage to them and causes the flame to spread from the target to nearby enemies, dealing them the same damage.</p>",

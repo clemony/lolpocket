@@ -15,7 +15,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Talon's abilities apply a stack of Wound to enemy champions and large monsters hit for 6 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p>"
         },
         {
-          "description": "Talon's next basic attack against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 - 303.53 (based on level) (+ 210% bonus AD) total physical damage ][ 5 - 18.97 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds ]over 2 seconds. The target cannot gain Wound stacks during this time."
+          "description": "Talon's next basic attack on-hit against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 - 303.53 (based on level) (+ 210% bonus AD) total physical damage ][ 5 - 18.97 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds ]over 2 seconds. The target cannot gain Wound stacks during this time."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/p",
@@ -28,8 +28,8 @@
       "key": "Q",
       "name": "Noxian Diplomacy",
       "affects": "Enemies",
-      "blurb": "Active:  Talon  leaps to the target enemy, dealing physical damage. If the target is within melee range, Talon instead  critically strikes the target.",
-      "castTime": "None / 100% of Talon's windup time (0.198 at base attack speed)",
+      "blurb": "Active:  Talon  leaps to the target enemy, dealing physical damage. If the target is within melee range, Talon will  critically strike the target.",
+      "castTime": "None • 100% of Talon's windup time (0.198 at base attack speed)",
       "cooldown": "8 / 7.5 / 7 / 6.5 / 6",
       "cost": "40",
       "damageType": "Physical damage",
@@ -77,7 +77,7 @@
       "spellEffects": "spell",
       "spellshieldable": "True",
       "targeting": "Unit",
-      "targetRange": "575 /  170"
+      "targetRange": "575 •  170"
     },
     {
       "key": "W",
@@ -154,7 +154,7 @@
       "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nCasting Rake when an enemy is within 650 radius and 26° angle in front of Talon will reveal him from the fog of war like a targeted cast.(bug)\nThis is because of Rake's internal Cone targeting type, which defaults to \"targeting\" all units in the preset area and thereby trigger revealing the caster if not toggled off for the spell.\nIf Talon dies while Rake is mid-air, the projectiles will still complete their travel.\nThe blades each will fail to return to Talon if he is somehow too far from them after the delay.\nThis maximum distance is 5000 units at ranks 1-4 of Rake, or 20000 units at rank 5 of Rake.(bug)\nThe latter distance is barely achievable between fountains on Summoner's Rift.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "2571 / 2429 / 3000",
+      "speed": "2571 • 2429 • 3000",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Direction"
@@ -247,7 +247,7 @@
       "notes": "Shadow Assault casts a total of 12 blades evenly distributed in all directions. 4 of them travel down the cardinal directions (Relative to the map, not relative to Talon), while all blades have an angle of 30° to one another.\n Spell shield will block a single pass.\nShadow Assault does not cancel Talon's basic attacks.\nShadow Assault has a minimum lifetime of 0.8 seconds before convergence.\nThe blades each will fail to converge on their target (Talon or the attacked target) if the target is more than 20000 units from them.(bug)\nThis distance is barely achievable between fountains on Summoner's Rift.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "2400 / 4000",
+      "speed": "2400 • 4000",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Auto"

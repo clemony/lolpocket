@@ -41,6 +41,6 @@
   "speed": "1750",
   "spellEffects": "Single",
   "spellshieldable": "True",
-  "targeting": "Direction",
+  "targeting": "Location",
   "targetRange": "3000"
 }

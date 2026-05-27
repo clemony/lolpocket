@@ -66,7 +66,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/r",
-  "notes": "Spell shield will block the tether's application and initial damage but not the aftereffects of one already applied.\nMorgana will turn to face southeast upon casting Soul Shackles.\nA circle indicator for Soul Shackles' maximum tether range is visible to Morgana and her tethered targets only.",
+  "notes": "Spell shield will block the tether's application and initial damage but not the aftereffects of one already applied.\nMorgana will turn to face southeast upon casting Soul Shackles.\nSoul Shackles checks for nearby valid targets around a location that is Morgana's exact location at the start of the cast time.\nIn other words, the latch-on radius is from a fixed location around Soul Shackles'  cast point in which targets are acquired; targets around Morgana's location at the end of the cast time that are not within this radius will not be targeted, since her location after the cast starts is not considered.\nEnemies that were outside of the latch-on radius at the time of cast that enter it afterwards, during the cast time, will be targeted.\nA circle indicator for Soul Shackles' maximum tether range is visible to Morgana and her tethered targets only.",
   "projectile": "FALSE",
   "resource": "Mana",
   "spellEffects": "aoe",

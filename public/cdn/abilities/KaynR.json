@@ -7,7 +7,7 @@
   "cooldown": "120 / 100 / 80",
   "cost": "100",
   "damageType": "Physical damage",
-  "effectRadius": "300 / 500",
+  "effectRadius": "300 • 300 - 500",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kayn marks enemy champions he damaged in the last 3.15 seconds.</p>"
@@ -45,5 +45,5 @@
   "spellEffects": "spell",
   "spellshieldable": "Special",
   "targeting": "Unit / Direction",
-  "targetRange": "550 / 750"
+  "targetRange": "550 • 750"
 }

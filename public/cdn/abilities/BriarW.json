@@ -65,7 +65,7 @@
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/w",
   "notes": "Snack Attack can only be used during  Blood Frenzy; if the frenzy ends at any point, the empowered attack will be lost immediately.\nSnack Attack can be cast while Briar is  charmed or  taunted.(bug)",
-  "spellEffects": "proc",
+  "spellEffects": "spell",
   "spellshieldable": "false",
   "targeting": "Auto"
 }

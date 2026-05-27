@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { DialogProps } from "~~/layers/ui/app/types/types"
+import type { DialogProps } from "~~/layers/ui/app/types"
 
 defineProps<DialogProps>()
 

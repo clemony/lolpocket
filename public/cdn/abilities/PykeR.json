@@ -7,7 +7,7 @@
   "cooldown": "100 / 85 / 70",
   "cost": "100",
   "damageType": "Other damage",
-  "effectRadius": "125 / 282.5  ×  100",
+  "effectRadius": "125 • 282.5 × 100",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Pyke marks the target location with the shape of an X before striking it, executing enemy champions within the area that are below 250 - 550 (based on level) (+ 80% bonus AD) (+ 1.5 per 1 Lethality) health. Other enemies hit and enemy champions above the threshold are instead dealt[ 50% of the amount as physical damage. ][ 125 - 275 (based on level) (+ 40% bonus AD) (+ 0.75 per 1 Lethality) physical damage. ]</p>"

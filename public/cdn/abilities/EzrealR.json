@@ -24,28 +24,28 @@
             },
             {
               "unit": "% AP",
-              "values": "90"
+              "values": "110"
             }
           ]
         }
       ]
     },
     {
-      "description": "Minions and non-epic monsters take 50% reduced damage.",
+      "description": "Minions and non-epic monsters take modified damage.",
       "leveling": [
         {
-          "attribute": "Reduced Damage",
+          "attribute": "Modified Damage",
           "modifiers": [
             {
-              "values": "175 / 275 / 375"
+              "values": "150 / 225 / 300"
             },
             {
               "unit": "% bonus AD",
-              "values": "50"
+              "values": "100"
             },
             {
               "unit": "% AP",
-              "values": "45"
+              "values": "110"
             }
           ]
         }

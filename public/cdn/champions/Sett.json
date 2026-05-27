@@ -22,7 +22,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/p",
-      "notes": "Alternatively, Pit Grit grants Sett 0.75 / 2.5 / 5 / 10 (based on level) bonus health regeneration for every 5% missing health, up to 14.25 / 47.5 / 95 / 190 (based on level) at the cap of 95% missing health.\nThe Right Punch does not grant  bonus attack speed, rather its windup is sped up and fixed at [ 12.5% of a Left Punch's windup time. ][ 800% of a Left Punch's windup speed. ]\nThe windup is still affected by  cripples and attack speed buffs that were not already active for the previous Left Punch's.\nThe bonus physical damage from the Right Punch benefits from  life steal.",
+      "notes": "Alternatively, Pit Grit grants Sett 0.75 / 2.5 / 5 / 10 / 10.25 / 10.5 (based on level) bonus health regeneration for every 5% missing health, up to 14.25 / 47.5 / 95 / 190 / 194.75 / 199.5 (based on level) at the cap of 95% missing health.\nThe Right Punch does not grant  bonus attack speed, rather its windup is sped up and fixed at [ 12.5% of a Left Punch's windup time. ][ 800% of a Left Punch's windup speed. ]\nThe windup is still affected by  cripples and attack speed buffs that were not already active for the previous Left Punch's.\nThe bonus physical damage from the Right Punch benefits from  life steal.",
       "spellEffects": "Proc",
       "targeting": "Passive"
     },
@@ -81,7 +81,7 @@
     {
       "key": "W",
       "name": "Haymaker",
-      "width": "300 / 620 /  70",
+      "width": "300  • 620 •  70",
       "affects": "Self, Enemies",
       "blurb": "Passive:  Sett stores Grit equal to damage taken, which gradually expires after a few seconds.",
       "castTime": "0.75",
@@ -156,7 +156,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/e",
-      "notes": "Sett will afterwards attempt to basic attack the closest target picked up by Facebreaker, prioritising champions and prioritising those in front of him.\nIf Facebreaker does not hit an enemy,  Haymaker is also unable to be cast for 0.25 seconds after the cast time.\nTargets will be pulled towards Sett's location in a straight line and rebound to 150 units from him back in the same line.\nThe spell indicator is slightly shorter than the actual hitbox' rectangle length, and slightly wider than the width (note that the effects are edge-range from the hitbox rectangle).\nTargets protected by  spell shields don't count toward the requirement to  stun.\nThis ability will cast from wherever the caster is at the end of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+      "notes": "Sett will afterwards attempt to basic attack the closest target picked up by Facebreaker, prioritising champions and prioritising those in front of him.\nIf Facebreaker does not hit an enemy,  Haymaker is also unable to be cast for 0.25 seconds after the cast time.\nTargets will be pulled towards Sett's location in a straight line and rebound to 150 units from him back in the same line.\nThe spell indicator is slightly shorter than the actual hitbox' rectangle length, and slightly wider than the width (note that the effects are edge-range from the hitbox rectangle).\nTargets protected by  spell shields don't count toward the requirement to  stun.\nFacebreaker's cast generates an additional stack of  Hail of Blades despite the ability not  resetting his basic attack timer.(bug)\nThis is due to the spell incorrectly having the Trait_AttackReset spell tag.\nThis ability will cast from wherever the caster is at the end of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
       "projectile": "FALSE",
       "spellEffects": "aoe",
       "spellshieldable": "true",

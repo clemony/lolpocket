@@ -11,7 +11,7 @@
   "effectRadius": "Global",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shen recalls his Spirit Blade to his location. Enemy champions hit are slowed for the next 2 seconds while moving away from Shen.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shen recalls his Spirit Blade to him. Enemy champions hit by the Spirit Blade along its path are slowed for the next 2 seconds while moving away from Shen.</p>",
       "leveling": [
         {
           "attribute": "Slow",
@@ -101,7 +101,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/q",
-  "notes": "The Spirit Blade will stop in place upon colliding with  Wind Wall or  Unbreakable. If this occurs, Shen will not receive the empowered attacks.\nWhen it is called, the Spirit Blade also checks for units which's  gameplay radius it overlaps which (equal to a  0 radius check) before flying off, allowing it to hit enemies whose center is behind the missile origin.\nThe empowered attack will not trigger against  wards.",
+  "notes": "The Spirit Blade will track Shen as it is traveling to him, following his movements if he changes locations while the blade is in-flight.\nThe Spirit Blade will stop in place upon colliding with  projectile-intercepting effects. If this occurs, Shen will not gain the empowered attacks as the Spirit Blade failed to complete its travel to him.\nWhen it is recalled, the Spirit Blade also checks for units whose  gameplay radius it overlaps with (equal to a  0 radius check) before flying off, allowing it to hit enemies whose center is behind the missile origin.\nThe empowered attack will not trigger against  wards.",
   "projectile": "SPECIAL",
   "resource": "Energy",
   "speed": "2000 - 5000",

@@ -115,13 +115,10 @@
               ]
             }
           ]
-        },
-        {
-          "description": "Reaping Slash's dash speed scales with Kayn's total movement speed."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kayn/ability-icon/q",
-      "notes": "Spell shields will block only a single instance of damage - either the dash or the slash.\nIf the  dash is  interrupted, Kayn will not swing his scythe.\nReaping Slash's swing can be performed quicker if the dash stops prematurely upon colliding with terrain.\nAs the  Shadow Assassin, an  alternate icon for Reaping Slash is used but has no modified effect.\nOther abilities can be queued while casting Reaping Slash.\nItem actives are locked out while casting.\nThe swing's animation has a 0.25-second  lockout time.\nKayn will only be able to move after 0.416 seconds.",
+      "notes": "Reaping Slash's dash speed is increased by Kayn's bonus movement speed.\n Spell shields will block only a single instance of damage - either the dash or the slash.\nIf the  dash is  interrupted, Kayn will not swing his scythe.\nReaping Slash's swing can be performed quicker if the dash stops prematurely upon colliding with terrain.\nAs the  Shadow Assassin, an  alternate icon for Reaping Slash is used but has no modified effect.\nOther abilities can be queued while casting Reaping Slash.\nItem actives are locked out while casting.\nThe swing's animation has a 0.25-second  lockout time.\nKayn will only be able to move after 0.416 seconds.",
       "resource": "Mana",
       "spellEffects": "Area of effect",
       "spellshieldable": "Special",
@@ -132,7 +129,7 @@
       "key": "W",
       "name": "Blade's Reach",
       "affects": "Enemies",
-      "castTime": "0.55 / None",
+      "castTime": "0.55 • None",
       "cooldown": "13 / 12 / 11 / 10 / 9",
       "cost": "40 / 45 / 50 / 55 / 60",
       "damageType": "Physical damage",
@@ -168,7 +165,7 @@
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
       "targeting": "Direction",
-      "targetRange": "700 / 900"
+      "targetRange": "700 • 900"
     },
     {
       "key": "E",
@@ -231,7 +228,7 @@
       "cooldown": "120 / 100 / 80",
       "cost": "100",
       "damageType": "Physical damage",
-      "effectRadius": "300 / 500",
+      "effectRadius": "300 • 300 - 500",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kayn marks enemy champions he damaged in the last 3.15 seconds.</p>"
@@ -269,7 +266,7 @@
       "spellEffects": "spell",
       "spellshieldable": "Special",
       "targeting": "Unit / Direction",
-      "targetRange": "550 / 750"
+      "targetRange": "550 • 750"
     }
   ],
   "adaptiveType": "Physical damage",

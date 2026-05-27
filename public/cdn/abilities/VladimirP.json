@@ -5,7 +5,7 @@
   "blurb": "Innate:  Vladimir gains  ability power based on his bonus health, and  bonus health based on his ability power.",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Vladimir gains (3.333% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/p",

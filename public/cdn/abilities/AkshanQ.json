@@ -66,7 +66,7 @@
   "notes": "Spell shield will only block a single hit. They do not prevent the initial throw from extending its range.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1500 / 2400",
+  "speed": "1500 • 2400",
   "spellEffects": "spellaoe",
   "spellshieldable": "special",
   "targeting": "Direction"

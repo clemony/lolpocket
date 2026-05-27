@@ -51,7 +51,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
-      "notes": "The attack damage, attack speed and lethality within Aphelios' unique rank-up menu in the HUD correspond to the Q, W, E ability rank-up hotkeys, respectively, for the purposes of assigning skill points via keyboard.\nDue to Aphelios lacking a fourth rankup option (R), his point assigment does not follow the same rules as other champions.\nFor example, the earliest level that an individual statistic can attain rank 6 is level 9, by assigning points at levels 1 / 2 / 3 / 5 / 7 / 9.\nAn ammunition counter will appear to the right side of the screen when Aphelios' main weapon has 10 or less Moonlight.\nWhile at lower than 10 Moonlight, casting his  primary abilities will not spend additional Moonlight but instead consume all the remaining points.\n Runaan's Hurricane's Wind's Fury will not consume additional Moonlight when firing its bolts.",
+      "notes": "The attack damage, attack speed and lethality within Aphelios' unique rank-up menu in the HUD correspond to the Q, W, E ability rank-up hotkeys, respectively, for the purposes of assigning skill points via keyboard.\nDue to Aphelios lacking a fourth rankup option (R), his point assigment does not follow the same rules as other champions.\nFor example, the earliest level that an individual statistic can attain rank 6 is level 9, by assigning points at levels 1 / 2 / 3 / 5 / 7 / 9.\nAn ammunition counter will appear to the right side of the screen when Aphelios' main weapon has 10 or less Moonlight.\nWhile at lower than 10 Moonlight, casting his  primary abilities will not spend additional Moonlight but instead consume all the remaining points.\n Runaan's Hurricane's Wind's Fury will not consume additional Moonlight when firing its bolts.\nThe in-game tooltip will reflect the current order of weapons.",
       "targeting": "Passive"
     },
     {
@@ -145,17 +145,17 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "Basic attacks with Crescendum hurl the blade at the target, which lingers for 0.25 seconds before homing back to Aphelios. He is unable to declare basic attacks until he retrieves Crescendum, but the attack timer is reset once caught."
+          "description": "Basic attacks with Crescendum hurl the blade at the target, which lingers for 0.2 seconds before homing back to Aphelios. He is unable to declare basic attacks until he retrieves Crescendum, but the attack timer is reset once caught."
         },
         {
           "description": "Whenever Aphelios casts an ability that would require him to throw Crescendum, he instead fires a spectral Chakram at the target that similarly returns to him. Aphelios accumulates the Chakrams he catches, up to 20, which last for 5 seconds or until Crescendum is depleted of Moonlight. Chakram duration is refreshed when Aphelios catches a new one or attacks a champion with Crescendum."
         },
         {
-          "description": "Attacks with Crescendum are empowered to deal 0% - 138.5% (based on number of Chakrams) AD bonus physical damage and have a lower windup of 10.67%, further decreased to 6.67% when critically striking. The bonus damage from Chakrams is affected by critical strike modifiers."
+          "description": "Attacks with Crescendum are empowered to deal 0% - 138.5% (based on number of Chakrams) AD additional physical damage and have a lower windup of 10.67%, further decreased to 6.67% when critically striking. The bonus damage from Chakrams is affected by critical strike modifiers."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
-      "notes": "All Chakram stacks are lost if the Crescendum projectile is destroyed (i.e  Wind Wall,  Unbreakable).\nDue to the return time, at high attack speeds Crescendum will increase Aphelios' effective time to cast attacks, even when right next to his target.",
+      "notes": "All Chakram stacks are lost if the Crescendum projectile is destroyed (i.e  Wind Wall,  Unbreakable).\nDue to the return time, at high attack speeds Crescendum will increase Aphelios' effective time to cast attacks, even when right next to his target.\nPENDING FOR TEST: Crescendum attack cannot exceed attack speed limit",
       "projectile": "FALSE",
       "resource": "Other",
       "spellEffects": "default",
@@ -225,7 +225,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
-      "notes": "Severum's attacks are not  intercepted, but the attacks from the off-hand weapon are during Onslaught.\nAphelios will also not perform the attacks while channeling  Recall.\nIf Aphelios is  taunted, he will still attack the nearest enemy.\nDuring Onslaught, Aphelios'   attack range is reduced[ to 410 ][ by 140 ]and his attack commands instead issue movement commands to walk into the respective range of his target.\nOnslaught's attacks stack  Energized, but do not apply any other  on-attack effects.\nOnslaught begins firing with Aphelios' off-hand weapon.\nThis means that, if used with  Crescendum, it will generate [n ÷ 2] Chakrams for even numbers of hits, and [(n - 1 ÷ 2) + 1] Chakrams for odd numbers of hits.\n Crescendum will not deal damage if blocked by  Wind Wall, but the stacks will still be gained.\nCosmetically, the Moonlight cost is consumed through the duration.",
+      "notes": "Severum's attacks are not  intercepted, but the attacks from the off-hand weapon are during Onslaught.\nAphelios will also not perform the attacks while channeling  Recall.\nEach attack of Onslaught counts as a separate cast instance for effects such as  Electrocute and  Eclipse's Ever Rising Moon.\nIf Aphelios is  taunted, he will still attack the nearest enemy.\nDuring Onslaught, Aphelios'   attack range is reduced[ to 410 ][ by 140 ]and his attack commands instead issue movement commands to walk into the respective range of his target.\nOnslaught's attacks stack  Energized, but do not apply any other  on-attack effects.\nOnslaught begins firing with Aphelios' off-hand weapon.\nThis means that, if used with  Crescendum, it will generate [n ÷ 2] Chakrams for even numbers of hits, and [(n - 1 ÷ 2) + 1] Chakrams for odd numbers of hits.\n Crescendum will not deal damage if blocked by  Wind Wall, but the stacks will still be gained.\nCosmetically, the Moonlight cost is consumed through the duration.",
       "projectile": "SPECIAL",
       "resource": "Mana",
       "spellEffects": "attack",

@@ -1,6 +1,17 @@
 {
-  "id": 228009,
   "name": "Multitool",
+  "id": 228009,
+  "rank": "Legendary",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "active": [
+    {
+      "unique": false,
+      "effects": "Once every round in the Shop Phase, change this item into one of five Legendary-tier item options in a random selection."
+    }
+  ],
+  "stats": {},
   "description": "Molds into another item each Shopping Phase.",
   "gold": {
     "base": 2500,
@@ -11,5 +22,23 @@
   "maps": [
     30
   ],
-  "tags": []
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin",
+    "Mage",
+    "Tank",
+    "Support",
+    "Attack damage",
+    "Attack speed",
+    "Onhit effects",
+    "Armor pen",
+    "Ability power",
+    "Mana and reg",
+    "Magic pen",
+    "Health and reg",
+    "Ability haste",
+    "Movement",
+    "Lifesteal vamp"
+  ]
 }

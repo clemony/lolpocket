@@ -22,5 +22,5 @@
   "resource": "Mana",
   "speed": "1350",
   "targeting": "Location",
-  "targetRange": "200 / 425"
+  "targetRange": "200 - 425"
 }

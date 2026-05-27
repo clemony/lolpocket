@@ -70,7 +70,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/q",
-  "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\nFlash Frost can only proc  Conqueror once even if it damages the same target twice.\nFlash Frost will fire from wherever Anivia was at the start of the cast time.\n Spell shield can only prevent either the collision hit or recast from affecting the target.",
+  "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\nFlash Frost will fire from wherever Anivia was at the start of the cast time.\n Spell shield can block the effects of either the active or the recast, but not both if the former is blocked.",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "950",

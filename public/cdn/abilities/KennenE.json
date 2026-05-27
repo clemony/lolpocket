@@ -42,7 +42,7 @@
       "description": "Lightning Rush can be recast after 0.5 seconds, and does so automatically after the duration."
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Kennen ends Lightning Rush to gain bonus attack speed and be allowed to exceed the attack speed cap by the amount gained for 4 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Kennen ends Lightning Rush to gain bonus attack speed and be allowed to exceed the attack speed cap by the amount gained for 4 seconds. Critical strikes extend the bonus attack speed's duration by 1 second, up to the original duration.</p>",
       "leveling": [
         {
           "attribute": "Bonus Attack Speed",

@@ -40,7 +40,7 @@
       "cooldown": "10 / 9 / 8 / 7 / 6",
       "cost": "55",
       "damageType": "Magic damage",
-      "effectRadius": "180 / 200",
+      "effectRadius": "180 • 200",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sylas lashes out two chains that converge to the target location and extend beyond it up to a maximum range, dealing magic damage to enemies hit and slowing them for 1.5 seconds.</p>",
@@ -129,7 +129,7 @@
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "50 / 775"
+      "targetRange": "50 • 775"
     },
     {
       "key": "W",
@@ -197,7 +197,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/w",
-      "notes": "The damage will be dealt if the dash completed uninterrupted, and regardless of how far the target's location is at the end of the dash.\nSylas will heal even if the target champion dies before the dash is completed.\nThe only exception is if the target becomes  untargetable, in which case Kingslayer will have no effect.",
+      "notes": "The damage will be dealt if the dash completed uninterrupted, and regardless of how far the target's location is at the end of the dash.\nSylas will heal even if the target champion dies before the dash is completed.\nThe only exception is if the target becomes  untargetable, in which case Kingslayer will have no effect.\nFacebreaker's cast generates an additional stack of  Hail of Blades despite the ability not  resetting his basic attack timer.(bug)",
       "resource": "Mana",
       "spellEffects": "Single target",
       "spellshieldable": "true",
@@ -262,7 +262,7 @@
       "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/e",
       "notes": "Abduct counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nSylas will not dash to his target if the chains are blocked by  spell shield.\nThe target will be revealed for 2 seconds if the dash is interrupted.\nAbduct will still apply the  knock up if the target is  untargetable by the end of the dash.\nThis ability will cast from wherever the caster is at the start of the cast time.\nSylas is unable to perform actions while dashing to the target, and becomes able to again after 0.05 seconds of the dash ending.\nSylas will not dash to the target hit if he is  channeling or  dashing from a  Hijacked ability.\nAbduct will not apply the  knock up when this happens.\nIf the chains connect before a pre-channel cast time is complete then Sylas will dash to the target and the ability will cancel.",
       "projectile": "TRUE",
-      "speed": "2500 - 400 / 1800",
+      "speed": "2500 - 400 • 1800",
       "spellEffects": "Single target",
       "spellshieldable": "True",
       "targeting": "Direction"
@@ -308,7 +308,7 @@
     "difficulty": 3
   },
   "lore": "Raised in one of Demacia's lesser quarters, Sylas of Dregbourne has come to symbolize the darker side of the Great City. As a boy, his ability to root out hidden sorcery caught the attention of the notorious mageseekers, who eventually imprisoned him for turning those same powers against them. Having now broken free, Sylas lives as a hardened revolutionary, using the magic of those around him to destroy the kingdom he once served… and his band of outcast mage followers seems to grow by the day.",
-  "patchLastChanged": "25.24",
+  "patchLastChanged": "26.10",
   "positions": [
     "Middle",
     "Top"

@@ -36,9 +36,9 @@
   "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/q",
   "notes": "Lunge deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nLunge's dash speed is modified by her bonus movement speed at the time of cast:\n1100 + 350% bonus movement speed, capped at 1600 maximum dash speed if bonus movement speed is positive.\n1100 + 300% bonus movement speed, capped at 850 minimum dash speed if bonus movement speed is negative.\nThe stab searches for targets in its radius and prioritizes in order of:\nNearest enemy champion affected by  Grand Challenge with a Vital facing Fiora.\nNearest enemy champion with their Vital facing Fiora.\nNearest enemy champion affected by  Grand Challenge.\nEnemy champion with the lowest health percent out of all champions <20% remaining health.\nNearest enemy champion, minion, or monster within 60% of the radius ( 252) with current health below Lunge's pre-mitigation damage.\nNearest enemy champion in the radius check.\nNearest champion in a  rectangular check with 160 width and 450 units length backwards from Fiora's current facing direction, ignoring the normal radius check.\nTurning Fiora's facing direction during the dash (e.g. by casting  Riposte) can create some very long range hits opposite to her new facing direction, especially against targets with a large gameplay radius.(bug)\nNearest enemy minion with current health below Lunge's pre-mitigation damage.\nAny nearest enemy minion or monster.\nStructures.\nVisible wards.\nLunge cannot target jungle plants.\nFiora does not stab if the  dash is  interrupted.\n Flash is disabled during the dash.\nLunge does not interrupt issued orders.\nThe user can freely input a movement or attack order during the dash to perform it after the dash ends.\nThis behavior is the same regardless of whether Lunge hits an enemy or not.\nLunge can be  dodged or  blocked, negating its damage.\nLunge does not apply  on-attack effects but is special cased to stack  Energized upon hitting an enemy.",
   "resource": "Mana",
-  "speed": "1100 + 300% / 350% bonus movement speed",
+  "speed": "1100 (+ 300% • 350% bonus movement speed)",
   "spellEffects": "Special",
   "spellshieldable": "True",
   "targeting": "Location",
-  "targetRange": "50 / 400"
+  "targetRange": "50 - 400"
 }

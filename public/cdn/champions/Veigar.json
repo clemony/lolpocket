@@ -62,7 +62,7 @@
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Direction",
-      "targetRange": "1050 /  990"
+      "targetRange": "1050 •  990"
     },
     {
       "key": "W",
@@ -113,7 +113,7 @@
       "castTime": "0.25",
       "cooldown": "20 / 18.5 / 17 / 15.5 / 14",
       "cost": "70 / 75 / 80 / 85 / 90",
-      "effectRadius": "411 / 290 / 390",
+      "effectRadius": "411 • 290 • 390",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Veigar forms a cage at the target location that erects after a 0.5 second delay, remaining there for 3 seconds. Enemies that collide with the edges of the cage are knocked down and stunned for a duration.</p>",

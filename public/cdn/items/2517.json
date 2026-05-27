@@ -27,7 +27,7 @@
       "unique": true,
       "mythic": false,
       "name": "Famine",
-      "effects": "Gain 5 ah (+10% <b>bonus</b> AD) ability haste."
+      "effects": "Gain 5 ah (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />13% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10%) <b>bonus</b> AD) ability haste."
     },
     {
       "unique": true,

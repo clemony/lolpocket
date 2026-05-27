@@ -3,7 +3,6 @@
   "name": "Regurgitate",
   "affects": "Enemies / Allies",
   "blurb": "Active: Tahm Kench  spits the swallowed champion in the target direction. If they are an enemy, he deals magic damage based on the target's maximum health.",
-  "castTime": "0.25",
   "cooldown": "0",
   "cost": "100",
   "damageType": "Magic damage",
@@ -26,11 +25,11 @@
       ]
     },
     {
-      "description": "If Regurgitate was cast automatically, Tahm Kench spits the target out in his facing direction."
+      "description": "Tahm Kench is unable to act for 0.4 seconds after casting Regurgitate. If Regurgitate was cast automatically, Tahm Kench spits the target out in his facing direction."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
-  "notes": "The displacement from spitting the target out also uniquely counts as the enemy's  dash.\nThe target will face in the direction of Regurgitate's cast for the duration of the displacement.\nThe target will  blink to Tahm Kench's location at the start of Regurgitate's cast time.\nRegurgitate will also automatically cast if the target is affected by  Fate's Call or enters  resurrection.\nTahm Kench becomes  unable to act for 0.25 seconds upon casting Regurgitate.",
+  "notes": "The displacement from spitting the target out also uniquely counts as the enemy's  dash.\nThe target will face in the direction of Regurgitate's cast for the duration of the displacement.\nThe target will  blink to Tahm Kench's location at the start of Regurgitate's cast time.\nRegurgitate will also automatically cast if the target is affected by  Fate's Call or enters  resurrection.",
   "spellEffects": "spell",
   "spellshieldable": "false",
   "targeting": "Direction"

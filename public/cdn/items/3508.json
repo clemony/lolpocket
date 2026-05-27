@@ -31,7 +31,7 @@
       "unique": true,
       "mythic": false,
       "name": "Spellblade",
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 125% <b>base</b> AD (+0 – 50 (based on level) based on critical strike chance) <b>bonus</b> physical damage on-hit and restores mana equal to 50% of that amount(1.5 second cooldown, starts after using the empowered attack)."
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 125% <b>base</b> AD (+0 – 50 (based on %) based on critical strike chance) <b>bonus</b> physical damage on-hit and restores mana equal to 50% of that amount(1.5 second cooldown, starts after using the empowered attack)."
     }
   ],
   "stats": {

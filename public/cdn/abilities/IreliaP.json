@@ -16,7 +16,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/p",
-  "notes": "PENDING FOR TEST:: Parry interactions ( block and  dodge).\nIonian Fervor will not deal damage if the attack misses due to  blind, but its duration will be refreshed.\n Blade Surge cannot be missed while Irelia is  blinded, applying Ionian Fervor from the ability will not be prevented from that parry effect.\nIonian Fervor stacks are represented by a counter under Irelia's health bar. It is highlighted while the ability is at its maximum effect.",
+  "notes": "PENDING FOR TEST:: Parry interactions ( block and  dodge).\nIonian Fervor will not deal damage if the attack misses due to  blind, but its duration will be refreshed.\n Bladesurge cannot be missed while Irelia is  blinded, applying Ionian Fervor from the ability will not be prevented from that parry effect.\nIonian Fervor stacks are represented by a counter under Irelia's health bar. It is highlighted while the ability is at its maximum effect.",
   "spellEffects": "Proc",
   "targeting": "Passive"
 }

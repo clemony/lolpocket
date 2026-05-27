@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Minion Damager",
-      "effects": "Against lane minions, this minion deals <b>bonus</b> physical damage on-hit equal to 4% of the target's <b>current</b> health."
+      "effects": "Against lane minions, this minion deals <b>bonus</b> physical damage on-hit equal to 3.5% of the target's <b>current</b> health."
     }
   ],
   "stats": {},

@@ -1,9 +1,4 @@
 import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
-const ui = {
-  leadingIcon: "hidden",
-  trailingIcon: "text-n5 align-top",
-  label: ""
-}
 
 export const summonerNav = (summoner: Summoner) => {
   const root = buildSummonerRootPath(summoner)
@@ -13,9 +8,7 @@ export const summonerNav = (summoner: Summoner) => {
       icon: "i-history",
       label: "Match History",
       to: root,
-      ui: {
-        leadingIcon: " scale-90"
-      }
+      ui: {}
     },
     {
       icon: "i-lp-champ-circle",
@@ -29,18 +22,14 @@ export const summonerNav = (summoner: Summoner) => {
       icon: "i-folder",
       label: "Pockets",
       to: `${root}/pockets`,
-      ui: {
-        leadingIcon: " scale-90"
-      }
+      ui: {}
     },
     {
-      icon: "i-bx-play-circle",
+      icon: "i-activity", //i-bx-play-circle",
       label: "Live",
       to: `${root}/live`,
       slot: "live" as const,
-      ui: {
-        leadingIcon: " scale-105"
-      }
+      ui: {}
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Plasma Fission",
-  "width": "100 / 90",
+  "width": "100 • 90",
   "affects": "Enemies",
   "blurb": "Active:  Vel'Koz fires a plasma bolt that deals magic damage to the first enemy hit,  slowing them for a short time.\nPlasma Fission can be recast while the bolt is in flight, and does so automatically upon hitting an enemy or reaching max range.",
   "castTime": "0.25",
@@ -64,8 +64,8 @@
   "notes": "The initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDetonating the ability manually does not.\nPlasma Fission's damage applies before  Organic Deconstruction's.\nThis also ensures Vel'Koz does not lose Plasma Fission's restoration effect.\nAn enemy cannot be hit by multiple bolts even when having blocked one with a  spell shield.\nThe split occurs at a location 55 units in front of the primary bolt's final location.\nPlasma Fission can reach a maximum 1595 units diagonally (ignoring the split missile's width and enemy hitbox radius), reaching this distance after a total of about ~1.65 seconds.\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1300 / 2100",
+  "speed": "1300 • 2100",
   "spellEffects": "Area of Effect",
   "spellshieldable": "True",
-  "targeting": "Direction / Auto"
+  "targeting": "Direction • Auto"
 }

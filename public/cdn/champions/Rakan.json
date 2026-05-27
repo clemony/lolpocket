@@ -21,7 +21,8 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/p",
-      "notes": "Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield.\nThe cooldown reduction is granted even if the attack misses due to  blind.\nPENDING FOR TEST: Cooldown reduction interaction with parries ( block and  dodge.",
+      "notes": "Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield or  Riposte.\nThe cooldown reduction is granted even if the attack is  blocked,  dodged, or misses due to  blind.",
+      "spellshieldable": "false",
       "targeting": "Passive"
     },
     {
@@ -100,7 +101,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/w",
-      "notes": "Sleep does not count for knocking the dash down.(bug)",
+      "notes": "Grand Entrance has no minimum dash range.\n Sleep does not count for knocking the dash down.(bug)",
       "resource": "Mana",
       "speed": "1700",
       "spellEffects": "spellaoe",
@@ -149,7 +150,7 @@
       "resource": "Mana",
       "speed": "1250 + 80% movement speed",
       "targeting": "Unit",
-      "targetRange": "700 / 1000"
+      "targetRange": "700 • 1000"
     },
     {
       "key": "R",

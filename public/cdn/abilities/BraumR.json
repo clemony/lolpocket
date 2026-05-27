@@ -1,13 +1,13 @@
 {
   "key": "R",
   "name": "Glacial Fissure",
-  "width": "230 /  170",
+  "width": "230 •  170",
   "affects": "Enemies",
   "castTime": "0.5",
   "cooldown": "130 / 115 / 100",
   "cost": "100",
   "damageType": "Magic damage",
-  "effectRadius": "300 /  60 × 10",
+  "effectRadius": "300 •  60 × 10",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Braum leaps into the air and slams his shield into the ground, creating a fissure from the impact that travels forth in the target direction, dealing magic damage to enemies within its path as well as those around Braum.</p>",
@@ -30,7 +30,7 @@
       "description": "The first target hit is knocked up for at least 0.6 seconds, increased if they are further away from Braum. All other enemies hit are knocked up for 0.6 seconds.",
       "leveling": [
         {
-          "attribute": "Maximum Knockup Duration",
+          "attribute": "Maximum Knock up Duration",
           "modifiers": [
             {
               "unit": " seconds",

@@ -52,10 +52,10 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/q",
-      "notes": "This ability always employs Quick cast.\nThe bonus damage applies  life steal.\nAlthough Tumble will reset the basic attack timer, Vayne cannot attack until the animation is complete.\nVayne can cast  Final Hour during Tumble. She does not become  invisible during the dash.",
+      "notes": "This ability always employs Quick cast.\nThe basic attack portion of Tumble's damage is tagged as  basic damage and  spell damage, while the bonus damage is tagged as  spell damage.\nThe bonus damage applies  life steal.\nAlthough Tumble will reset the basic attack timer, Vayne cannot attack until the animation is complete.\nVayne can cast  Final Hour during Tumble. She does not become  invisible during the dash.",
       "resource": "Mana",
-      "speed": "500 + total movement speed",
-      "spellEffects": "spell",
+      "speed": "500 + 100% movement speed",
+      "spellEffects": "special",
       "targeting": "Direction"
     },
     {
@@ -173,7 +173,7 @@
       "notes": "Condemn's  displacement direction is determined at the end of the cast time.\nBecause of this, Vayne may use  Flash during the cast time to create a better angle.\n Cleansing the  knock back will also end the displacement early.\nThe spell indicator for this ability also displays the direction for the knock back relative to Vayne's position.\nCondemn's  stun duration starts when Vayne's target collides with a wall (they can be immobilized for up to 2 seconds depending on  displacement duration based on distance traveled).\nCondemn's missile will fail to fire if Vayne is  suppressed during the cast time.(unexpected)\nCondemn can interact with player-generated terrain.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "2200 / 2000",
+      "speed": "2200 • 2000",
       "spellEffects": "spell",
       "spellshieldable": "True",
       "targeting": "Unit",

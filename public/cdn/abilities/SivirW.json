@@ -70,7 +70,7 @@
   "notes": "Ricochet-enhanced basic attacks can bounce from structures onto secondary targets but not from nearby units onto structures.\nPENDING FOR TEST:: Ricochet's  interactions with  dodging,  blocking, and  blinding effects.\nRicochet do not apply to additional targets with  Runaan's Hurricane.\nSivir's attack timer will only reset from casting Ricochet if the ability's buff was not already active on her. Refreshing the buff will not grant an attack reset.(bug)",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1750 / 1000",
+  "speed": "1750 •  1000",
   "spellEffects": "proc",
   "spellshieldable": "False",
   "targeting": "Auto"

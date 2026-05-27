@@ -1,10 +1,39 @@
 {
-  "id": 3168,
   "name": "Immortal Path",
-  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 1% Omnivamp on Champion takedown, stacking up to 6 times.\n\nNow and Forever\nWhile above half Health, deal 5% increased damage. \n\nWhile below half Health, gain 15% increased healing, shielding, and regeneration.",
+  "id": 3168,
+  "rank": "Boots",
+  "buildsFrom": [
+    {
+      "id": 3008,
+      "name": "Gluttonous Greaves",
+      "gold": 950
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "boots"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Slay",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion grants you 0.6% omnivamp, stacking up to 10 times for a total of 6% omnivamp."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Now and Forever",
+      "effects": "While above 50% of your <b>maximum</b> health, you deal 5% increased damage. While below 50% of your <b>maximum</b> health, you gain 15% increased <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />healing, <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shielding, and <img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />health regeneration."
+    }
+  ],
   "stats": {
-    "flatMovespeed": 45
+    "flatMovespeed": 45,
+    "omnivamp": 4
   },
+  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 1% Omnivamp on Champion takedown, stacking up to 6 times.\n\nNow and Forever\nWhile above half Health, deal 5% increased damage. \n\nWhile below half Health, gain 15% increased healing, shielding, and regeneration.",
   "gold": {
     "base": 0,
     "purchasable": true,
@@ -14,5 +43,7 @@
   "maps": [
     11
   ],
-  "tags": []
+  "tags": [
+    "Movement"
+  ]
 }

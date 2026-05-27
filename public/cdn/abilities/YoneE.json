@@ -3,7 +3,7 @@
   "name": "Soul Unbound",
   "affects": "Self, Enemies",
   "blurb": "Active:  Yone  dashes in the target direction, leaving his body behind and entering Spirit Form for a few seconds.",
-  "castTime": "None / 0.225",
+  "castTime": "None • 0.225",
   "cooldown": "22 / 19 / 16 / 13 / 10",
   "cost": "0",
   "damageType": "True damage",
@@ -41,5 +41,5 @@
   "speed": "1200",
   "spellEffects": "aoe",
   "spellshieldable": "false",
-  "targeting": "Direction / Auto"
+  "targeting": "Direction • Auto"
 }

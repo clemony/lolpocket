@@ -27,14 +27,14 @@
       ]
     },
     {
-      "description": "If she hits at least one enemy champion, she will dash 225 units behind the last one struck within 3000 range and root them for 0.5 seconds."
+      "description": "After reaching its maximum range, if the sword hit an enemy champion during its flight, Leona dashes to 225 units beyond the location of the last champion struck and roots them for 0.5 seconds."
     },
     {
       "description": "Leona is unable to move or attack while Zenith Blade is in flight. She can cast any of her abilities during the dash."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/e",
-  "notes": "Leona will be ordered to basic attack the target.\n Spell shield will block Zenith Blade's effects, and prevent Leona from dashing to the target.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "notes": "Leona will fail to  dash to and  root the last champion struck if they are not within 3000 units of her by the time the sword missile fizzles from reaching maximum range.\nLeona will not track the target if they change locations during her dash.\nShe will only dash to their current location at the time the sword fizzled.\nThe  root application on the last champion struck is applied at an inconsistent timing.(unexpected)\nLeona will be ordered to basic attack the target she dashed to, after her dash completes.\n Spell shield will block the damage, and prevent Leona from dashing as the last champion struck by her sword.\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "2000",

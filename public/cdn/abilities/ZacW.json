@@ -9,7 +9,7 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zac explodes to deal magic damage to nearby enemies, the damage based on the target's max health ratio is capped at 200 against minions and monsters.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zac explodes to deal magic damage to nearby enemies. The damage based on the target's max health ratio is capped at 200 against minions and monsters.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",

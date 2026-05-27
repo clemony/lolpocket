@@ -7,7 +7,7 @@
   "cooldown": "120 / 110 / 100",
   "cost": "100",
   "damageType": "Physical damage",
-  "effectRadius": "500 / 450",
+  "effectRadius": "500 • 450",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Xin Zhao's basic attacks and Audacious Charge apply the Challenged mark to enemy champions hit, with the latter applying the mark to the farthest champion hit in the area of effect or the primary target if they are a champion.</p>"

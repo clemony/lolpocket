@@ -33,7 +33,7 @@
     {
       "key": "Q",
       "name": "Piercing Darkness",
-      "width": "100 / 280",
+      "width": "100 • 280",
       "affects": "Allies, Enemies, Turrets, Wards",
       "blurb": "Active:  Senna fires a spectral laser toward the target unit. Senna and allied champions hit are  healed. Enemies hit are dealt physical damage, which applies  life steal and  on-hit effects, and  slowed for a short time.",
       "castTime": "80% of Senna's windup time (0.4 at base attack speed)",
@@ -203,8 +203,8 @@
     {
       "key": "R",
       "name": "Dawning Shadow",
-      "width": "320 / 2400",
-      "affects": "Allies / Enemies",
+      "width": "320 • 2400",
+      "affects": "Self, Allies, Enemies",
       "blurb": "Active:  Senna fires a massive beam in the target direction.",
       "castTime": "1",
       "cooldown": "140 / 120 / 100",
@@ -249,8 +249,8 @@
                   "values": "50"
                 },
                 {
-                  "unit": " per Mist",
-                  "values": "1.5"
+                  "unit": "% Mist",
+                  "values": "150"
                 }
               ]
             }

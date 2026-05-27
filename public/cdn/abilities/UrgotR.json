@@ -7,7 +7,7 @@
   "cooldown": "100 / 85 / 70",
   "cost": "100",
   "damageType": "Other damage",
-  "effectRadius": "Global /  600",
+  "effectRadius": "Global •  600",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Urgot fires a chem-drill in the target direction that impales the first enemy champion hit, dealing physical damage and leashing the target for 4 seconds, during which they are revealed and slowed by 0% - 75% (based on target's missing health).</p>",
@@ -46,6 +46,6 @@
   "speed": "3200",
   "spellEffects": "special",
   "spellshieldable": "Special",
-  "targeting": "Direction / Auto",
+  "targeting": "Direction • Auto",
   "targetRange": "2500"
 }

@@ -10,13 +10,13 @@
   "effectRadius": "275",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Shyvana's basic attacks on-hit will reduce Emberstrike's current cooldown by 1 second, and deal bonus magic damage equal to 1% (+ 1.1% per 100 bonus AD) (+ 1.1% per 100 AP) of the target's maximum health. Against non-champions, this effect deals a minimum of 10 and is capped at 200.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Shyvana's basic attacks on-hit will reduce Emberstrike's current cooldown by 0.5 seconds, and deal bonus magic damage equal to 1% (+ 1.1% per 100 bonus AD) of the target's maximum health. Against non-champions, this effect deals a minimum of 10 and is capped at 200.</p>"
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Emberstrike can be cast twice in Human Form and thrice in Dragon Form. Each cast empowers Shyvana's next basic attack within 6 seconds to have an uncancellable windup and trigger an additional exclusive effect. After 1.5 seconds of using an Emberstrike attack, or immediately following a basic attack, the ability can be recast within and up to the next 4 seconds each time, before it incurs its cooldown. Shyvana gains 50 bonus range on all of her basic attacks while Emberstrike is active. The attacks deal 10 bonus physical damage against monsters.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">First Cast:</span> Shyvana's slashes her claws, blasting a cone in the target's direction that deals modified physical damage to enemies hit. The damage to the primary target is affected by critical strike modifiers.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">First Cast:</span> Shyvana slashes her claws, blasting a cone in the target's direction that deals modified physical damage to enemies hit. The damage to the primary target is affected by critical strike modifiers.</p>",
       "leveling": [
         {
           "attribute": "Area Physical Damage",
@@ -30,7 +30,7 @@
             },
             {
               "unit": "% AP",
-              "values": "25"
+              "values": "30"
             }
           ]
         }
@@ -54,7 +54,7 @@
             },
             {
               "unit": "% AP",
-              "values": "37.5"
+              "values": "45"
             }
           ]
         }

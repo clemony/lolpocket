@@ -24,7 +24,7 @@
             },
             {
               "unit": "% AP",
-              "values": "15"
+              "values": "40"
             }
           ]
         }
@@ -41,6 +41,6 @@
   "speed": "2000",
   "spellEffects": "special",
   "spellshieldable": "special",
-  "targeting": "Direction",
+  "targeting": "Location",
   "targetRange": "1200"
 }

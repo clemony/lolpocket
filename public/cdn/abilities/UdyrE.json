@@ -19,6 +19,10 @@
             {
               "unit": "%",
               "values": "25 / 31 / 37 / 43 / 49 / 55"
+            },
+            {
+              "unit": "% per 100 bonus AD",
+              "values": "5"
             }
           ]
         },
@@ -28,13 +32,17 @@
             {
               "unit": "%",
               "values": "7.5 / 9.3 / 11.1 / 12.9 / 14.7 / 16.5"
+            },
+            {
+              "unit": "% per 100 bonus AD",
+              "values": "1.5"
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr gains 75 bonus attack range and an additional 30% - 41.18% (based on level) bonus movement speed. He also gains immunity to crowd control for 1.5 seconds.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr gains 75 bonus attack range and an additional 30% - 41.18% (based on level) (+ 10% per 100 bonus AD) bonus movement speed. He also gains immunity to crowd control for 1.5 seconds.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/e",

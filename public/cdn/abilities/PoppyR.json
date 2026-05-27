@@ -3,11 +3,11 @@
   "name": "Keeper's Verdict",
   "width": "180",
   "affects": "Enemies",
-  "castTime": "0.25 / 0.35",
+  "castTime": "0.25 • 0.35",
   "cooldown": "140 / 120 / 100",
   "cost": "100",
   "damageType": "Physical damage",
-  "effectRadius": "180 / 225",
+  "effectRadius": "180 • 225",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Poppy charges while being slowed by 15% for up to 4 seconds to increase Keeper's Verdict's range and knock back distance over 0.5 seconds after the first 0.5 seconds of the channel. Keeper's Verdict can be recast within the duration.</p>"
@@ -57,5 +57,5 @@
   "speed": "2500",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",
-  "targeting": "Auto / Direction"
+  "targeting": "Auto • Direction"
 }

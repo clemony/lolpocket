@@ -9,7 +9,7 @@
       "name": "Triumphant Roar",
       "affects": "Self, Allies",
       "blurb": "Innate:  Alistar generates  stacks of Triumph from  stunning or  displacing enemy champions or when a nearby enemy  dies.",
-      "effectRadius": "1000 / 950",
+      "effectRadius": "1000 • 950",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Alistar generates a stack of Triumph for each enemy champion he stuns or displaces with his abilities, and each time a nearby enemy minion or non-epic monster dies. He generates 7 stacks if a nearby enemy champion or epic monster dies.</p>"
@@ -31,7 +31,7 @@
       "name": "Pulverize",
       "affects": "Enemies",
       "blurb": "Active:  Alistar smashes the ground, dealing magic damage to nearby enemies and briefly  stunning and  knocking them up.",
-      "castTime": "0.25 / 0.15",
+      "castTime": "0.25 • 0.15",
       "cooldown": "14 / 13 / 12 / 11 / 10",
       "cost": "50 / 55 / 60 / 65 / 70",
       "damageType": "Magic damage",
@@ -91,9 +91,9 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/w",
-      "notes": "The dash speed depends on the inverse of the distance to the target:\nIf Alistar's  radius overlaps with his target's, he will dash with 1200 speed.\nIf Alistar is further from his target than the previous condition, he will dash with (1200  ×  dash distance) / (dash distance - sum of radiuses).\nAt maximum target range, against an enemy with a 65  gameplay radius (median of all champions), Alistar will dash with 1544 speed (reaching his target within 0.429 seconds).\nBoth the lower the dash distance and the larger Alistar and/or his target, the faster the dash becomes; this scales hyperbolically.\nWhen  Pulverize is buffered during the dash, the knockback distance is reduced to 200 units.\nThe CC duration of the ability can be reduced by up to 33.33%  Tenacity, due to airborne not being reducible while the stun is.\nThe  knockback direction is in a straight line from Alistar's original location at start of cast and the enemy when Alistar's dash ends.\nHeadbutt can knock enemies through terrain. The  knockback stops short on walls that cannot be surpassed but the disable duration is not changed.\nThe spell indicator for this ability also displays the direction for the knock back relative to Alistar's position.\nAlistar's  attack range is reduced[ to -375 ][ by 500 ]during Headbutt, to prevent him from being able to attack the target when he completes the dash.\n Displacement immunity will not resist the application of the  stun.",
+      "notes": "The dash speed depends on the inverse of the distance to the target:\nIf Alistar's  radius overlaps with his target's, he will dash with 1200 speed.\nIf Alistar is further from his target than the previous condition, he will dash with (1200  ×  dash distance) / (dash distance - sum of radiuses).\nAt maximum target range, against an enemy with a 65  gameplay radius (median of all champions), Alistar will dash with 1544 speed (reaching his target within 0.429 seconds).\nBoth the lower the dash distance and the larger Alistar and/or his target, the faster the dash becomes; this scales hyperbolically (dash speed can theoretically scale up to ∞).\nWhen  Pulverize is buffered during the dash, the knock back distance is reduced to 200 units.\nThe CC duration of the ability can be reduced by up to 33.33%  Tenacity, due to airborne not being reducible while the stun is.\nThe  knockback direction is in a straight line from Alistar's original location at start of cast and the enemy when Alistar's dash ends.\nHeadbutt can knock enemies through terrain. The  knockback stops short on walls that cannot be surpassed but the disable duration is not changed.\nThe spell indicator for this ability also displays the direction for the knock back relative to Alistar's position.\nAlistar's  attack range is reduced[ to -375 ][ by 500 ]during Headbutt, to prevent him from being able to attack the target when he completes the dash.\n Displacement immunity will not resist the application of the  stun.",
       "resource": "Mana",
-      "speed": "1200 / 1544 / ∞",
+      "speed": "1200 • 1544",
       "spellEffects": "spell",
       "spellshieldable": "True",
       "targeting": "Unit",

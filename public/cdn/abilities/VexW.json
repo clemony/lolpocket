@@ -7,10 +7,10 @@
   "cooldown": "16 / 15 / 14 / 13 / 12",
   "cost": "75",
   "damageType": "Magic damage",
-  "effectRadius": "475 / 550",
+  "effectRadius": "475 • 550",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vex emits a deafening scream around her before the cast time, dealing magic damage to nearby enemies and granting herself a shield for 2.5 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vex emits a deafening scream around her before the cast time, dealing magic damage to nearby enemies and granting herself a shield for 2.5 seconds.The scream's radius is slightly increased against enemies that are dashing.</p>",
       "leveling": [
         {
           "attribute": "Shield Strength",

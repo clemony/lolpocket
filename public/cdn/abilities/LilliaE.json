@@ -32,9 +32,9 @@
   "notes": "Swirlseed's origin is determined from Lillia's position at the start of cast, the rolling direction is determined from Lillia's position at the end of cast (when the projectile is created, not when the seed starts rolling).\n Spell shield does not prevent the seed from detonating thus striking nearby targets.\n Projectile destroying effects will still make the rolling seed detonate upon colliding with them, but not when the initial arcing missile is destroyed.\nIf  Braum's  Unbreakable blocks the initial projectile, it is destroyed and deals 0 damage to him, as well as not triggering the cone-shaped area of effect.\nThe spot at which the seed will collide with terrain is highlighted while it is rolling.\nCollision indicator",
   "projectile": "SPECIAL",
   "resource": "Mana",
-  "speed": "5000 / 1400",
+  "speed": "5000 • 1400",
   "spellEffects": "aoe",
   "spellshieldable": "special",
   "targeting": "Location",
-  "targetRange": "700 / Global"
+  "targetRange": "700 • Global"
 }

@@ -10,7 +10,7 @@
       "affects": "Enemies",
       "blurb": "Innate: Whenever an enemy champion dies while  Lissandra is nearby, she spawns a Frozen Thrall from their corpse.",
       "damageType": "Magic damage",
-      "effectRadius": "1350 /  450",
+      "effectRadius": "1350 •  450",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 580 (based on level) (+ 50% AP) magic damage to nearby enemies.</p>"
@@ -25,7 +25,7 @@
     {
       "key": "Q",
       "name": "Ice Shard",
-      "width": "150 / 180",
+      "width": "150 • 180",
       "affects": "Enemies",
       "blurb": "Active:  Lissandra throws a spear of ice in the target direction that  slows the first target hit and deals magic damage to all enemies it passes through.",
       "castTime": "0.25",
@@ -146,24 +146,24 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Lissandra consumes the claw and blinks to its current location.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Lissandra blinks to the claw's current location, ending its trajectory.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/e",
       "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nLissandra can reactivate Glacial Path for the duration (plus another 0.2-0.3 seconds after the claw 'sinks' into the ground).\nThe Claw can also hit enemies near the end point at this time, shortly after the missile has reached its maximum range.\nGlacial Path allows Lissandra to surpass through every single wall in all maps, so long as the claw is at least halfway through them.\nGlacial Path cannot be recast while  grounded or  rooted.\nGlacial Path's endpoint shows through terrain, fog of war and  brush to enemies within 600 range of it.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1200 / 640",
+      "speed": "1200 - 640",
       "spellEffects": "aoe",
       "spellshieldable": "True",
-      "targeting": "Direction / Auto"
+      "targeting": "Direction • Auto"
     },
     {
       "key": "R",
       "name": "Frozen Tomb",
       "affects": "Enemies, Self",
       "blurb": "Active:  Lissandra can cast Frozen Tomb on herself or an enemy champion.",
-      "castTime": "0.375 / None",
+      "castTime": "0.375 • None",
       "cooldown": "120 / 100 / 80",
       "cost": "100",
       "damageType": "Magic damage",
@@ -256,7 +256,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/r",
-      "notes": "Enemies can only be damaged by the field of ice once every 4 seconds.\nUnder normal circumstances, this means once per cast of Frozen Tomb.\nEnemies who come in contact with Frozen Tomb's slow field will be damaged and a small visual and sound effect will play.\n Spell shield will block the single-targeted portion and the radiating ice damage, but will not stop it from spreading.\nIf the target becomes  untargetable,  dies, or is too far away during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost.\nThe ability is not cancelled by loss of  sight of the target.\nThis only applies to the enemy cast.",
+      "notes": "Enemies can only be damaged by the field of ice once every 4 seconds.\nUnder normal circumstances, this means once per cast of Frozen Tomb.\nEnemies who come in contact with Frozen Tomb's slow field will be damaged and a small visual and sound effect will play.\n Spell shield will block the single-targeted portion and the radiating ice damage, but will not stop it from spreading.\nIf the target becomes  untargetable,  dies, or is too far away during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost.\nThe ability is not cancelled by loss of  sight of the target.\nThis only applies to the enemy cast.\nWhen becoming  untargetable, Lissandra  destroys enemy projectiles targeting her.",
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "special",
@@ -276,7 +276,7 @@
     "difficulty": 2
   },
   "lore": "Lissandra's magic twists the pure power of ice into something dark and terrible. With the force of her black ice, she does more than freeze—she impales and crushes those who oppose her. To the terrified denizens of the north, she is known only as ''The Ice Witch.'' The truth is much more sinister: Lissandra is a corruptor of nature who plots to unleash an ice age on the world.",
-  "patchLastChanged": "26.06",
+  "patchLastChanged": "26.10",
   "positions": [
     "Middle"
   ],

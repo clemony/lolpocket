@@ -7,7 +7,7 @@
   "cooldown": "16 / 15.5 / 15 / 14.5 / 14",
   "cost": "50 / 55 / 60 / 65 / 70",
   "damageType": "Physical damage",
-  "effectRadius": "300 / 300 / 600",
+  "effectRadius": "300 • 300 • 600",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tristana's basic attacks are empowered to trigger an explosion when they kill the target, dealing magic damage to nearby enemies.</p>",

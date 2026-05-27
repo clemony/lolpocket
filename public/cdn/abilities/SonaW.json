@@ -6,7 +6,7 @@
   "castTime": "none",
   "cooldown": "10",
   "cost": "80 / 85 / 90 / 95 / 100",
-  "effectRadius": "1000 /  400",
+  "effectRadius": "1000 •  400",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sona heals herself and sends out a tone to heal the most wounded allied champion nearby.</p>",

@@ -9,7 +9,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zeri generates 1 charge for every 40 units she travels by any means and 10 charge every time she casts Burst Fire, up to a maximum of 100 charge. Her basic attacks consume charge to deal modified damage.Zeri gains maximum charge when the game starts and upon respawning.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Basic Attack:</span> Zeri zaps the target, dealing 10 - 27.35 (based on level) (+ 3% AP) magic damage, applying spell effects as spell damage, triggering on-cast effects and executing targets below 60 - 160.59 (based on level) (+ 18% AP) health. This cannot critically strike nor trigger on-hit and on-attack effects.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Basic Attack:</span> Zeri zaps the target, dealing 10 - 27.35 (based on level) (+ 3% AP) magic damage, applying spell effects as spell damage, triggering on-cast effects and executing the target if they are below 70 - 170.59 (based on level) (+ 20% AP) health. This cannot critically strike and does not apply nor trigger on-hit and on-attack effects.</p>"
     },
     {
       "description": "At full charge, Zeri's next attack is empowered to consume all charge to deal 75 - 170 (based on level) (+ 110% AP) (+ 1% - 12.18% (based on level) of target's maximum health) magic damage. The damage based on the target's health ratio is capped at 300 against monsters."

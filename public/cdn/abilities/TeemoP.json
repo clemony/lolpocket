@@ -5,7 +5,7 @@
   "blurb": "Innate:  Teemo becomes  invisible after a brief moment remaining idle without taking damage, and will maintain so long as he remains idle or not  displaced.",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Teemo gains invisibility after 1.5 seconds without moving, taking damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth, but will lose the stealth in this case if he is knocked up.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Teemo gains invisibility after 1.5 seconds without moving, taking non- over time damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth, but will lose the stealth in this case if he is knocked up.</p>"
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Element of Surprise:</span> When Teemo breaks the stealth, he gains 20% / 40% / 60% / 80% (based on level) bonus attack speed for 5 seconds.</p>"

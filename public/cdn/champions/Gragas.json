@@ -132,7 +132,7 @@
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "10 / 12 / 14 / 16 / 18"
+                  "values": "10 / 14 / 18 / 22 / 26"
                 },
                 {
                   "unit": "% per 100 AP",
@@ -180,7 +180,7 @@
       "cooldown": "14 / 13.5 / 13 / 12.5 / 12",
       "cost": "50",
       "damageType": "Magic damage",
-      "effectRadius": "180 /  180",
+      "effectRadius": "180 •  180",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gragas charges in the target direction and stops upon colliding with an enemy, dealing magic damage to all nearby enemies, knocking them back, though not through terrain, and stunning them for 1 second.</p>",
@@ -266,7 +266,7 @@
     "difficulty": 2
   },
   "lore": "Equal parts jolly and imposing, Gragas is a massive, rowdy brewmaster who's always on the lookout for new ways to raise everyone's spirits. Hailing from parts unknown, he searches for ingredients among the unblemished wastes of the Freljord to help him perfect his latest concoction. He is impulsive, headstrong, and renowned for the brawls he starts, which often end in all-night parties and widespread property damage. Any appearance from Gragas must surely foreshadow merriment and destruction—in that order.",
-  "patchLastChanged": "25.09",
+  "patchLastChanged": "26.09",
   "positions": [
     "Jungle",
     "Middle",

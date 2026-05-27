@@ -1,4 +1,4 @@
-// Updated Patch 16.9 - 05/08/2026 03:28:22 PM CDT
+// Updated Patch 16.10 - 05/27/2026 01:35:56 PM CDT
 
 export const roleToChamp: Record<string, number[]> = {
   "Fighter": [
@@ -77,7 +77,6 @@ export const roleToChamp: Record<string, number[]> = {
     82,
     75,
     875,
-    102,
     72,
     48,
     77,
@@ -396,6 +395,7 @@ export const roleToChamp: Record<string, number[]> = {
     421,
     58,
     107,
+    102,
     254,
     19,
     62,

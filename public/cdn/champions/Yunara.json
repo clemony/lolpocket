@@ -16,7 +16,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Yunara/ability-icon/p",
-      "notes": "PENDING FOR TEST: Interaction with parry effects ( dodge,  block and  blind.",
+      "notes": "The bonus damage is calculated based on the total damage of the critical strike pre-mitigation.\nIf Yunara critically strikes against a champion that has  Randuin's Omen, the bonus magic damage from Vow of the First Lands and the bonus magic damage on-hit from  Cultivation of Spirit will both be reduced by 30%.(unexpected)\nThis can result in a critical strike yielding less bonus magic damage than if the basic attack had not critically struck.",
       "spellEffects": "proc",
       "targeting": "Passive"
     },
@@ -118,7 +118,7 @@
       "notes": "Cultivation of Spirit's damage classifications:\n Proc damage for the passive and active on-hit damage.\n Basic damage for the spread attack damage.\nSpread attacks will still deal damage even if Yunara misses her basic attack due to  blind.\nPENDING FOR TEST: Spread attack interaction with parrying effects ( dodge,  block)\nThere is no limit to the number of enemies the empowered attacks can spread to.\nYunara's secondary resource bar gives various context for Cultivation of Spirit. It is visible to the player only.\nWhile Cultivation of Spirit is not active, the bar shows her current Unleash stacks. It is colored white while below maximum stacks and yellow while at maximum stacks.\nAfter Cultivation of Spirit is cast, the bar counts down the buff's duration.\nThis is also true during  Transcend One's Self, which means that the bar effectively also counts down the duration of her Transcendent State.\nIf Yunara begins an attack windup toward the end of the active effects' duration and its launch would take place after it, the effects' duration is extended equal to the attack's windup time, once at most.\nSince the buff ends right after launching Cultivation of Spirit's attack and its effects have already been determined, this allows it to both spread to nearby enemies and generate a stack of Unleash.\nEach bolt from  Runaan's Hurricane's Wind's Fury may trigger its own spread attack (despite the spread attacks not being an on-hit effect).",
       "projectile": "TRUE",
       "resource": "Other",
-      "speed": "10000 / 2000",
+      "speed": "10000 • 2000",
       "spellEffects": "special",
       "spellshieldable": "false",
       "targeting": "Auto"
@@ -136,7 +136,7 @@
       "effectRadius": "150",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara launches a spinning prayer bead in the target direction that briefly grants sight of its surroundings as it travels. The bead slows down significantly while colliding with an enemy, lingering as it travels and resetting its remaining duration; upon reaching maximum range, it will expand and linger in place for 1 second regardless of enemies hit.The initial hit against each enemy before the bead's expansion deals magic damage and slows them by 99% decaying over 1.5 seconds. While lingering, the bead deals 60% of impact damage as magic damage to nearby enemies every 0.25 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara launches a spinning prayer bead in the target direction that briefly grants sight of its surroundings as it travels. The bead slows down significantly while colliding with an enemy, lingering as it travels and resetting its remaining duration; upon reaching maximum range, it will expand and linger in place for 1 second regardless of enemies hit.The initial hit against each enemy before the bead's expansion deals magic damage and slows them by 99% decaying over 1.5 seconds. While lingering, the bead deals 15% of the impact damage as magic damage to nearby enemies every 0.25 seconds.</p>",
           "leveling": [
             {
               "attribute": "Initial Magic Damage",
@@ -196,7 +196,7 @@
       "notes": "Applies  area damage for the initial hit and  persistent area damage for the lingering effect.\n Spell shield can block either the initial hit or one damage tick of the lingering effect.\nThis ability will cast from wherever the caster is at the end of the cast time.\nArc of Judgment can hit an enemy more than once with the initial damage as well with the lingering effect (both while not expanded and while expanded).\nThe bead can hit an enemy multiple times if they collide with it again while it is in flight.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "2150 / 150",
+      "speed": "2150 • 150",
       "spellEffects": "special",
       "spellshieldable": "special",
       "targeting": "Direction"
@@ -281,7 +281,7 @@
       "notes": "Untouchable Shadow does not trigger ultimate cast effects, such as  Experimental Hexplate's Overdrive,  Zeke's Convergence's Frostfire Tempest and  Cloud Dragon Soul's increased movement speed. This is intended.",
       "speed": "1350 / 1500 / 1650 (based on  Transcend One's Self's Rank)",
       "targeting": "Location",
-      "targetRange": "225 : 450 / 550"
+      "targetRange": "225 - 450 • 550"
     },
     {
       "key": "R",

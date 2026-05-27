@@ -7,7 +7,7 @@
   "cooldown": "11 / 10 / 9 / 8 / 7",
   "cost": "0",
   "damageType": "Physical damage",
-  "effectRadius": "300 / 360",
+  "effectRadius": "300 • 360",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Riven emits a flash of runic energy, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.</p>",

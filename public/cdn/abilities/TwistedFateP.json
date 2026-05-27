@@ -5,10 +5,7 @@
   "blurb": "Innate: Whenever  Twisted Fate kills an enemy, he generates a small amount of  bonus gold based on chance.",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on probability). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on probability).</p>"
-    },
-    {
-      "description": "As you'd expect, Twisted Fate plays with loaded dice. His initial dice roll is weighted to have an increased chance of granting 6, while his critical dice roll is weighted against him and has an increased chance of granting 1."
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on chance). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on chance).</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/p",

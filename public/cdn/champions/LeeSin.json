@@ -109,7 +109,8 @@
       "speed": "1350 + 100% movement speed",
       "spellEffects": "Spell",
       "spellshieldable": "True",
-      "targeting": "Proximity"
+      "targeting": "Proximity",
+      "targetRange": "1250"
     },
     {
       "key": "W",
@@ -120,13 +121,13 @@
       "cost": "50",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin dashes to the target allied unit's location. If the ally is a champion upon arrival, both they and Lee Sin gain a shield for 2 seconds and Safeguard's cooldown is halved.</p>\nLee Sin can self-cast Safeguard to shield himself.",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin dashes to the target allied unit's location. If the ally is a champion upon arrival, both they and Lee Sin gain a shield for 2 seconds.If the target is a minion or ward, Lee Sin also shields himself.Lee Sin can self-cast Safeguard to shield himself.</p>",
           "leveling": [
             {
               "attribute": "Shield Strength",
               "modifiers": [
                 {
-                  "values": "70 / 115 / 160 / 205 / 250"
+                  "values": "60 / 105 / 150 / 195 / 240"
                 },
                 {
                   "unit": "% AP",
@@ -201,7 +202,7 @@
                 },
                 {
                   "unit": "% AD",
-                  "values": "100"
+                  "values": "90"
                 }
               ]
             }
@@ -226,10 +227,10 @@
       "castTime": "none",
       "cooldown": "8",
       "cost": "50",
-      "effectRadius": "550 / 600",
+      "effectRadius": "550",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin slows nearby enemies marked by Tempest, decaying over 4 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin slows nearby enemies marked by Tempest, decaying in strength over 4 seconds.</p>",
           "leveling": [
             {
               "attribute": "Slow",
@@ -247,9 +248,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/e",
-      "notes": "Tempest's reveal is not removed when Lee Sin casts Cripple.\nCripple cannot be cast without a marked target within 550 range.",
       "resource": "Energy",
-      "speed": "1600",
       "spellshieldable": "True",
       "targeting": "Proximity"
     },
@@ -302,10 +301,13 @@
               ]
             }
           ]
+        },
+        {
+          "description": "If Dragon's Rage kills the primary target, it will still knock them back, causing the target's corpse to be displaced and collide with enemies it passes through."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/r",
-      "notes": "The spell indicator for this ability also displays the direction for the knock back relative to Lee Sin's position.\nIf the target of Dragon Rage  dies initially on the first hit there will be no displacement of any kind.\nThe  displacement's direction is decided at the moment of impact and not by Lee Sin and his target's relative locations at the start of the cast (the only way for Lee Sin to control where his target is displaced is by using  Flash before the cast time of Dragon's Rage ends).\nIf the  airborne debuff is removed from the target, its ability to collide with enemies is removed aswell, even if the target has not come to a stop yet.(unexpected)\nThe airborne debuff and with it collision of the target remains for the normal duration even if its trajectory is  displaced by another source (i.e -  Headbutt).\nThe target may still collide with other enemies for the remaining airborne duration after they reach their destination, as the airborne debuff lasts longer than the displacement.\nThe knockback distance is intended to be 800, but due to a bug, this is reduced by up-to the sum of Lee Sin's and his target's  gameplay radius, depending on how far they are away from one another at the end of the cast time.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+      "notes": "The spell indicator for this ability also displays the direction for the knock back relative to Lee Sin's position.\nThe  displacement's direction is decided at the moment of impact and not by Lee Sin and his target's relative locations at the start of the cast (the only way for Lee Sin to control where his target is displaced is by using  Flash before the cast time of Dragon's Rage ends).\nIf the  airborne debuff is removed from the target, its ability to collide with enemies is removed aswell, even if the target has not come to a stop yet.(unexpected)\nThe airborne debuff and with it collision of the target remains for the normal duration even if its trajectory is  displaced by another source (i.e -  Headbutt).\nThe target may still collide with other enemies for the remaining airborne duration after they reach their destination, as the airborne debuff lasts longer than the displacement.\nThe knock back distance is intended to be 800, but due to a bug, this is reduced by up-to the sum of Lee Sin's and his target's  gameplay radius, depending on how far they are away from one another at the end of the cast time.(bug)\nDragon's Rage will not knock back killed champions that enter a  zombie state upon dying, or a  Yone with his  Spirit Form active.\nDragon's Rage will knock back killed champions even if they were immune to the  displacement at the time of being hit (e.g. with  displacement immunity or  crowd control immunity).\nWhile a champion's corpse is being displaced from dying to Dragon's Rage, they will be unable to respawn until after the displacement finishes.\nThe killed champion's death animation will be played after Dragon's Rage's displacement finishes.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "spellEffects": "aoe",
       "spellshieldable": "True",
       "targeting": "Unit",
@@ -324,7 +326,7 @@
     "difficulty": 3
   },
   "lore": "A master of Ionia's ancient martial arts, Lee Sin is a principled fighter who channels the essence of the dragon spirit to face any challenge. Though he lost his sight many years ago, the warrior-monk has devoted his life to protecting his homeland against any who would dare upset its sacred balance. Enemies who underestimate his meditative demeanor will endure his fabled burning fists and blazing roundhouse kicks.",
-  "patchLastChanged": "26.05",
+  "patchLastChanged": "26.10",
   "positions": [
     "Jungle"
   ],

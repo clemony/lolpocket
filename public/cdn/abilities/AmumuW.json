@@ -26,6 +26,9 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Despair is toggled off automatically if Amumu becomes unable to pay its mana cost."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/w",

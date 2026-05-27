@@ -31,7 +31,7 @@
       "cooldown": "10",
       "cost": "50 / 55 / 60 / 65 / 70",
       "damageType": "Magic damage",
-      "effectRadius": "100 /  250 / 275 / 190",
+      "effectRadius": "100 •  250 • 275 • 190",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> After a 0.25-second delay, Milio kicks a fireball in the target direction that grants sight of its path and knocks back and stuns the first enemy it hits over 1 second.</p>"
@@ -86,7 +86,7 @@
       "name": "Cozy Campfire",
       "affects": "Self, Allies",
       "blurb": "Active:  Milio summons a fuemigo that lasts for 6 seconds and follows the closest allied  champion. Allied champions near the fuemigo gain increased  attack range and are continually  healed.",
-      "castTime": "0.25 / None",
+      "castTime": "0.25 • None",
       "cooldown": "29 / 27 / 25 / 23 / 21",
       "cost": "90 / 100 / 110 / 120 / 130",
       "effectRadius": "415",
@@ -142,8 +142,8 @@
       "icon": "https://cdn.communitydragon.org/latest/champion/Milio/ability-icon/w",
       "notes": "Cozy Campfire's initial cast and recast have a  forgiveness radius of 175 units for their unit-targeted version.\nThe summoned fuemigo will still follow the nearest allied champion in range, even if the initial cast was targeted on a different ally.\nThe  attack range increase lingers on allies for the entire duration of Cozy Campfire, even if they leave the zone.",
       "resource": "Mana",
-      "targeting": "Location / Unit",
-      "targetRange": "650 / 3000"
+      "targeting": "Location • Unit",
+      "targetRange": "650 • 3000"
     },
     {
       "key": "E",

@@ -7,10 +7,10 @@
   "cooldown": "100 / 90 / 80",
   "cost": "100",
   "damageType": "Magic damage",
-  "effectRadius": "475 / 225",
+  "effectRadius": "475 • 225",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Diana pulls in all nearby enemies, during which they are revealed, then slows them for 2 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Diana pulls all nearby enemies towards her, during which they are revealed, then slows them for 2 seconds.</p>",
       "leveling": [
         {
           "attribute": "Slow",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "description": "If an enemy champion is pulled in, she calls down a beam of moonlight to strike upon the area around her after 1 second, dealing magic damage to all nearby enemies, increased for each champion pulled beyond the first.",
+      "description": "If an enemy champion is pulled, she calls down a beam of moonlight to strike upon the area around her after 1 second, dealing magic damage to all nearby enemies, increased for each champion pulled beyond the first.",
       "leveling": [
         {
           "attribute": "Magic Damage",

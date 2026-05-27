@@ -3,7 +3,7 @@
   "name": "Heart Zapper",
   "affects": "Self, Enemies",
   "blurb": "Active:  Dr. Mundo charges up a defibrillator for a few seconds, continually dealing magic damage to nearby enemies and storing a portion of the post-mitigation damage he takes.",
-  "castTime": "None / None",
+  "castTime": "None",
   "cooldown": "17 / 16.5 / 16 / 15.5 / 15",
   "cost": "0",
   "damageType": "Magic damage",

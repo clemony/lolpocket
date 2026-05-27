@@ -2642,7 +2642,7 @@
     "positions": [
       "Jungle"
     ],
-    "resource": "Rage",
+    "resource": "Fury",
     "roles": [
       "Diver",
       "Fighter",
@@ -3022,8 +3022,8 @@
     ],
     "resource": "Fury",
     "roles": [
+      "Diver",
       "Fighter",
-      "Juggernaut",
       "Mage"
     ],
     "stats": {}

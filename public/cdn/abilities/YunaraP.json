@@ -10,7 +10,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Yunara/ability-icon/p",
-  "notes": "PENDING FOR TEST: Interaction with parry effects ( dodge,  block and  blind.",
+  "notes": "The bonus damage is calculated based on the total damage of the critical strike pre-mitigation.\nIf Yunara critically strikes against a champion that has  Randuin's Omen, the bonus magic damage from Vow of the First Lands and the bonus magic damage on-hit from  Cultivation of Spirit will both be reduced by 30%.(unexpected)\nThis can result in a critical strike yielding less bonus magic damage than if the basic attack had not critically struck.",
   "spellEffects": "proc",
   "targeting": "Passive"
 }

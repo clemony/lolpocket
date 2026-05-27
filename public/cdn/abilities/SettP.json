@@ -16,7 +16,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/p",
-  "notes": "Alternatively, Pit Grit grants Sett 0.75 / 2.5 / 5 / 10 (based on level) bonus health regeneration for every 5% missing health, up to 14.25 / 47.5 / 95 / 190 (based on level) at the cap of 95% missing health.\nThe Right Punch does not grant  bonus attack speed, rather its windup is sped up and fixed at [ 12.5% of a Left Punch's windup time. ][ 800% of a Left Punch's windup speed. ]\nThe windup is still affected by  cripples and attack speed buffs that were not already active for the previous Left Punch's.\nThe bonus physical damage from the Right Punch benefits from  life steal.",
+  "notes": "Alternatively, Pit Grit grants Sett 0.75 / 2.5 / 5 / 10 / 10.25 / 10.5 (based on level) bonus health regeneration for every 5% missing health, up to 14.25 / 47.5 / 95 / 190 / 194.75 / 199.5 (based on level) at the cap of 95% missing health.\nThe Right Punch does not grant  bonus attack speed, rather its windup is sped up and fixed at [ 12.5% of a Left Punch's windup time. ][ 800% of a Left Punch's windup speed. ]\nThe windup is still affected by  cripples and attack speed buffs that were not already active for the previous Left Punch's.\nThe bonus physical damage from the Right Punch benefits from  life steal.",
   "spellEffects": "Proc",
   "targeting": "Passive"
 }

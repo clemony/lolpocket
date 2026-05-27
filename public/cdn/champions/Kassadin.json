@@ -142,7 +142,7 @@
       "cooldown": "21 / 20 / 19 / 18 / 17",
       "cost": "60 / 65 / 70 / 75 / 80",
       "damageType": "Magic damage",
-      "effectRadius": "600 / 1800",
+      "effectRadius": "600 • 1800",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Each time Kassadin or a nearby champion casts an ability, Force Pulse's current cooldown is reduced by 0.75 seconds.</p>"

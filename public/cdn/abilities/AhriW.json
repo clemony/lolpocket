@@ -7,7 +7,7 @@
   "cooldown": "9 / 8 / 7 / 6 / 5",
   "cost": "30",
   "damageType": "Magic damage",
-  "effectRadius": "150 / 550 / 725",
+  "effectRadius": "150 • 550 • 725",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ahri gains 40% bonus movement speed that decays over 2 seconds and conjures three flames which orbit her clockwise for up to 2.5 seconds.</p>"
@@ -90,7 +90,7 @@
   "notes": "Each missile of Fox-Fire has its own shorter non-priority range.\nAny unused Fox-Fires will fizzle upon death.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "75.92° per second / 1400",
+  "speed": "75.92° per second • 1400",
   "spellEffects": "Single target",
   "spellshieldable": "True",
   "targeting": "Auto"

@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Bone Skewer",
-  "width": "140 / 200",
+  "width": "140 • 200",
   "affects": "Enemies",
   "castTime": "0.25",
   "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
@@ -42,6 +42,6 @@
   "resource": "Mana",
   "spellEffects": "Spell",
   "spellshieldable": "True",
-  "targeting": "Auto / Direction",
+  "targeting": "Auto • Direction",
   "targetRange": "400 : 1100 (based on channel time)"
 }

@@ -6,7 +6,7 @@
   "cooldown": "120 / 105 / 90",
   "cost": "100",
   "damageType": "Magic damage",
-  "effectRadius": "590 /  600",
+  "effectRadius": "590 •  600",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration.</p>"

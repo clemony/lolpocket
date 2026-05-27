@@ -115,13 +115,13 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/w",
-      "notes": "Distortion will be buffered and cast as soon as the cooldown ends if the player attempts to cast it within 0.5 seconds of the cooldown ending.\nThe recast will be buffered and cast as soon as it becomes available if the player attempts to cast it within 0.3 seconds of it becoming available to cast.\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nRecasting the ability does not.\n Mimic: Distortion has the same properties.\nDistortion and  Mimic: Distortion have independent return pads and LeBlanc can travel to both while they are active.\nDistortion's pad duration starts once the dash ends.",
+      "notes": "Distortion has no minimum dash range.\nDistortion will be buffered and cast as soon as the cooldown ends if the player attempts to cast it within 0.5 seconds of the cooldown ending.\nThe recast will be buffered and cast as soon as it becomes available if the player attempts to cast it within 0.3 seconds of it becoming available to cast.\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nRecasting the ability does not.\n Mimic: Distortion has the same properties.\nDistortion and  Mimic: Distortion have independent return pads and LeBlanc can travel to both while they are active.\nDistortion's pad duration starts once the dash ends.",
       "resource": "Mana",
       "speed": "1450",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
-      "targeting": "Location / Auto",
-      "targetRange": "600 / Global"
+      "targeting": "Location • Auto",
+      "targetRange": "600 • Global"
     },
     {
       "key": "E",

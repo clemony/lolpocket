@@ -57,7 +57,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/q",
-      "notes": "Each  Thorn Spitter will generate 2 stacks of  Conqueror and 1 stack of each of  Phase Rush and  Electrocute.",
+      "notes": "Each  Thorn Spitter will generate 2 stacks of  Conqueror and 1 stack of  Electrocute.",
       "resource": "Mana",
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
@@ -81,7 +81,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/w",
-      "notes": "This ability always employs Quick cast.\nUpon first rank up, Rampant Growth gains 2 charges.\nSeeds are  untargetable.",
+      "notes": "This ability always employs Quick cast.\nUpon first rank up, Rampant Growth gains 2 charges.\nSeeds are  untargetable.\nRampant Growth cannot be learnt at level 1.",
       "rechargeRate": "18 / 16 / 14 / 12 / 10",
       "resource": "Other",
       "spellshieldable": "false",
@@ -91,7 +91,7 @@
     {
       "key": "E",
       "name": "Grasping Roots",
-      "width": "140 / 560",
+      "width": "140 • 560",
       "affects": "Enemies",
       "blurb": "Active:  Zyra shoots a surge of vines in the target direction that deals magic damage to enemies hit and briefly  roots them.",
       "castTime": "0.25",
@@ -130,14 +130,14 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/e",
-      "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nZyra will be locked out of actions for 0.15 seconds after casting Grasping Roots.\nEach  Vine Lasher will generate 2 stacks of  Conqueror and 1 stack of each of  Phase Rush and  Electrocute.",
+      "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nZyra will be locked out of actions for 0.15 seconds after casting Grasping Roots.\nEach  Vine Lasher will generate 2 stacks of  Conqueror and 1 stack of  Electrocute.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "1150",
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
       "targeting": "Direction",
-      "targetRange": "1100 / 1200"
+      "targetRange": "1100 • 1200"
     },
     {
       "key": "R",
@@ -195,7 +195,7 @@
     "difficulty": 1
   },
   "lore": "Born in an ancient, sorcerous catastrophe, Zyra is the wrath of nature given form—an alluring hybrid of plant and human, kindling new life with every step. She views the many mortals of Valoran as little more than prey for her seeded progeny, and thinks nothing of slaying them with flurries of deadly spines. Though her true purpose has not been revealed, Zyra wanders the world, indulging her most primal urges to colonize, and strangle all other life from it.",
-  "patchLastChanged": "25.16",
+  "patchLastChanged": "26.08",
   "positions": [
     "Support"
   ],

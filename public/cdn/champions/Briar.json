@@ -86,7 +86,7 @@
       "cooldown": "14 / 13 / 12 / 11 / 10",
       "cost": "0",
       "damageType": "Physical damage",
-      "effectRadius": "1000 / 275",
+      "effectRadius": "1000 • 275",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Briar dashes in the target direction. If there is a nearby enemy upon her arrival, she gains Blood Frenzy for 5 seconds, during which she can cast Snack Attack.</p>"
@@ -134,9 +134,9 @@
       "notes": "Blood Frenzy acquires targets regardless of if they are visible or not.\nThis does not apply to  stealthed targets.\nIt cannot acquire  wards or jungle plants, however.\nIf the main attack  critically strikes, the cleave damage will do so as well.\nBriar uses  Frenzy as a resource to indicate the remaining duration of the frenzy, in seconds.\nThe following table refers for interactions while Briar is in her frenzy:\nWhile in the frenzy, Briar cannot control her movement nor declare who she attacks. She will automatically acquire a nearby enemy as her attack target based on a priority system, becoming forced to basic attack the target and consequently move into her attack range of them to do so.\n Disarming crowd control as well as any other lockout that would disable basic attacking will disable the forced attacks.\n Forced action crowd control will cause her forced attacks to be either overridden or disabled, depending on the actions being forced by the debuff.\n\n\nAttacking\n\nUncontrollable\n\n\nAbilities\n\n Head Rush can only be cast on targets within its radius.  Chilling Scream interrupts the frenzy.  Certain Death can be cast during the frenzy without interrupting it.\n\n\nMovement\n\nUncontrollable\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
       "resource": "Current health",
       "speed": "1200",
-      "spellEffects": "default",
+      "spellEffects": "proc",
       "targeting": "Location",
-      "targetRange": "75 - 300 / 650"
+      "targetRange": "75 - 300 • 650"
     },
     {
       "key": "W",
@@ -205,7 +205,7 @@
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/w",
       "notes": "Snack Attack can only be used during  Blood Frenzy; if the frenzy ends at any point, the empowered attack will be lost immediately.\nSnack Attack can be cast while Briar is  charmed or  taunted.(bug)",
-      "spellEffects": "proc",
+      "spellEffects": "spell",
       "spellshieldable": "false",
       "targeting": "Auto"
     },
@@ -214,7 +214,7 @@
       "name": "Chilling Scream",
       "width": "380",
       "affects": "Enemies, Self",
-      "castTime": "None / 0.15",
+      "castTime": "None • 0.15",
       "cooldown": "16",
       "cost": "0",
       "damageType": "Magic damage",
@@ -324,21 +324,21 @@
       "notes": "Chilling Scream increases its damage by its minimum every 0.025 seconds over the duration.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe following table refers for interactions while Briar is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled, but can still use trinkets\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall\n\n\nInterrupted by\n\n Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath",
       "projectile": "TRUE",
       "resource": "Current health",
-      "speed": "1900 / 1800",
+      "speed": "1900 • 1800",
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
-      "targeting": "Direction / Auto"
+      "targeting": "Direction • Auto"
     },
     {
       "key": "R",
       "name": "Certain Death",
       "width": "320",
       "affects": "Enemies, Self",
-      "castTime": "1 / 1.25",
+      "castTime": "1 • 1.25",
       "cooldown": "120 / 100 / 80",
       "cost": "0",
       "damageType": "Magic damage",
-      "effectRadius": "Global /  1500 /  575",
+      "effectRadius": "Global •  1500 •  575",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Briar kicks her pillory's hemolith in the target direction, briefly granting sight of its surroundings as it travels and marking the first enemy champion hit as her prey. The mark's application disrupts the target's ongoing channels. While the target is marked, they are revealed.</p>"
@@ -394,7 +394,7 @@
       "notes": "Briar will track the target with the  dash if they change locations.\nShe will not stop tracking the target until she reaches them, as there is no maximum tracking distance.\nBriar lands 100 units in front of her target at the end of the dash.\nBriar will not initiate the second cast if she is being  suppressed, is under  resurrection, or is in the  Realm of Death when her target is hit by the missile in the normal realm.\nSince Certain Death cleanses herself from all crowd control when the first cast hits, she will be able to start the second cast due to removing the suppression effect.\nBriar will still dash to the target even if they die before she reaches them.\nBriar will transition from having  total crowd control immunity during the cast time of the dash, to having  displacement immunity during the dash.\nBriar will place herself onto the ground and interrupt  displacements affecting her upon starting the second cast time.\nHematomania's targeting priorities differ slightly from that of  Blood Frenzy's:\nShe will prioritize the marked target regardless of range and over all other units as long as it can be attacked.\nIf the marked target is not available, then she shifts her priority to the nearest other champion, then large monster or minion, and then any other unit.\nIf neither the marked target is valid or any other valid targets are close nearby, then she will prioritize targeting the nearest other champion, then large monster or minion, and then any other unit within a global radius.\nStarting the second cast interrupts any spells that Briar is  channeling.\nThe mark will expire if Hematomania's buff is dispelled.\nCasting  Blood Frenzy during Hematomania will not grant any additional bonuses nor will it override Hematomania's effects.\nGaining Hematomania while Blood Frenzy is active will override the previous buff.\nThe  disrupt is 'wrapped' into a status effect that causes the affected champion to display the \" Silenced\" UI on their health bar for 0.25 seconds, without actually applying the disabling effects of the  silence crowd control type (functions as an indicator of the target becoming disrupted). This however ensures that the disrupt is also prevented by effects that would negate  silences (such as  crowd control immunity).\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest will activate at the end of Certain Death's initial cast time. If the missile hits a target, the buff's duration is refreshed at the end of the dash.\nThis ability will cast from wherever the caster is at the start of the cast time.\nThe following table refers for interactions while Briar is in either the first or second cast time:\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection\n\nThe following table refers for interactions while Briar is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\nThe following table refers for interactions while Briar is in Hematomania:\n\n\nAttacking\n\nUncontrollable\n\n\nAbilities\n\n Head Rush can only be cast on targets within its radius.  Chilling Scream interrupts the frenzy.  Certain Death is disabled.\n\n\nMovement\n\nUncontrollable\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
       "projectile": "TRUE",
       "resource": "Current health",
-      "speed": "2000 / 2500 : 5000",
+      "speed": "2000 • 2500 : 5000",
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
       "targeting": "Direction"
@@ -412,7 +412,7 @@
     "difficulty": 2
   },
   "lore": "A failed experiment by the Black Rose, Briar's uncontrollable bloodlust required a special pillory to focus her frenzied mind. After years of confinement, this living weapon broke free from her restraints and unleashed herself into the world. Now she's controlled by no one—following only her hunger for knowledge and blood—and relishes the opportunities to let loose, even if reining back the frenzy isn't easy.",
-  "patchLastChanged": "26.03",
+  "patchLastChanged": "26.09",
   "positions": [
     "Jungle"
   ],

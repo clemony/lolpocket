@@ -1,12 +1,24 @@
 {
-  "id": 1120,
   "name": "Doran's Helm",
-  "description": "110 Health\n10 Armor\n10 Magic Resist\n\nHelping Hand\nAttacks deal 5 bonus physical damage to minions.",
+  "id": 1120,
+  "rank": "Starter",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Helping Hand",
+      "effects": "Basic attacks deal 5 <b>bonus</b> physical damage on-hit against minions."
+    }
+  ],
   "stats": {
-    "magicResistance": 10,
-    "health": 110,
-    "armor": 10
+    "armor": 10,
+    "health": 140,
+    "magicResistance": 10
   },
+  "description": "110 Health\n10 Armor\n10 Magic Resist\n\nHelping Hand\nAttacks deal 5 bonus physical damage to minions.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -18,5 +30,7 @@
     12,
     21
   ],
-  "tags": []
+  "tags": [
+    "Tank"
+  ]
 }

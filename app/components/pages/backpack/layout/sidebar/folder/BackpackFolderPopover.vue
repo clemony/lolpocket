@@ -2,7 +2,7 @@
 import { LazyEditBackpackItemModal } from "#components"
 import { editFolderIcon } from "~/domain/pocket/folder/editFolder"
 import { useFolderChildren } from "~/domain/pocket/folder/useFolder"
-import type { EditInputExpose } from "~~/layers/ui/app/types/types"
+import type { EditInputExpose } from "~~/layers/ui/app/types"
 const { item: itemFolder } = defineProps<{
   item: SortableFolder
 }>()

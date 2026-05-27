@@ -8,7 +8,7 @@
   "cooldown": "10",
   "cost": "50 / 55 / 60 / 65 / 70",
   "damageType": "Magic damage",
-  "effectRadius": "100 /  250 / 275 / 190",
+  "effectRadius": "100 •  250 • 275 • 190",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> After a 0.25-second delay, Milio kicks a fireball in the target direction that grants sight of its path and knocks back and stuns the first enemy it hits over 1 second.</p>"

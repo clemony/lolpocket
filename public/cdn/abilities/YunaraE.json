@@ -15,5 +15,5 @@
   "notes": "Untouchable Shadow does not trigger ultimate cast effects, such as  Experimental Hexplate's Overdrive,  Zeke's Convergence's Frostfire Tempest and  Cloud Dragon Soul's increased movement speed. This is intended.",
   "speed": "1350 / 1500 / 1650 (based on  Transcend One's Self's Rank)",
   "targeting": "Location",
-  "targetRange": "225 : 450 / 550"
+  "targetRange": "225 - 450 • 550"
 }

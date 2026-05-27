@@ -1,7 +1,7 @@
 {
   "key": "R",
   "name": "Impale",
-  "width": "350 / 200",
+  "width": "350 • 200",
   "affects": "Self, Enemies",
   "blurb": "Active:  Skarner winds up his stingers over the cast time with  displacement immunity, then lashes them forward in the target direction, dealing magic damage to enemies hit and impaling up to 3 of the closest enemy champions within the area to briefly  suppress. While suppressed, the targets are  revealed and  attached to Skarner. If he successfully impales at least one enemy champion, Skarner gains  bonus movement speed for Impale's duration.",
   "castTime": "0.75",

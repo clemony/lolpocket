@@ -8,7 +8,7 @@
   "cooldown": "14 / 13 / 12 / 11 / 10",
   "cost": "70 / 80 / 90 / 100 / 110",
   "damageType": "Magic damage",
-  "effectRadius": "325 / 225",
+  "effectRadius": "325 • 225",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renata sends out chemtech rockets from either side of her that instantly strike targets around her. After 0.429 seconds they converge and travel to the target location as a single missile, striking targets along its path and exploding upon reaching the target location.</p>"

@@ -4,7 +4,7 @@
   "affects": "Self, Enemies",
   "blurb": "Innate - Living Weapon:  Kai'Sa can permanently evolve each of her basic abilities by obtaining  attack damage,  ability power, and  attack speed, respectively.",
   "damageType": "Magic damage",
-  "effectRadius": "2750",
+  "effectRadius": "3000",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Living Weapon:</span> Kai'Sa can evolve each of her basic abilities by gaining a set amount of permanent stats from items and stat growth, granting them additional effects. Evolving an ability causes her to enter a 2-second cast time. The upgrade is lost if the stat requirement is no longer met.</p>"
@@ -13,7 +13,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Plasma:</span> Kai'Sa's basic attacks on-hit and Void Seeker apply stacks of Plasma to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 5 times. Basic attacks each apply 1 stack and Void Seeker applies 2 stacks, increased to 3 if it is evolved. Her and nearby allies' immobilizing effects and polymorphs against enemy champions will also apply a stack of Plasma.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Caustic Wounds:</span> Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 - 26.35 (based on level) (+ 12% AP) bonus magic damage plus 1 - 6.59 (based on level) (+ 3% AP) additional magic damage per Plasma stack before application, up to a total of 8 - 52.71 (based on level) (+ 24% AP) bonus magic damage at 4 Plasma stacks before application. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Caustic Wounds:</span> Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 - 26.35 (based on level) (+ 12% AP) additional magic damage plus 1 - 6.59 (based on level) (+ 3% AP) additional magic damage per Plasma stack before application, up to a total of 8 - 52.71 (based on level) (+ 24% AP) additional magic damage at 4 Plasma stacks before application. The fifth stack against a target consumes them all to deal additional magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/p",

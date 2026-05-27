@@ -35,10 +35,10 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/e",
-  "notes": "Spell Flux's second cast on a target will apply a new Flux debuff as well as triggering the previous one (effectively refreshing the duration).\nThe \"main\" missile of Spell Flux is blocked by  projectile-intercepting effects, while the spreading bounce missiles are not.\nPENDING FOR TEST: bounce range  to-edge or  to-center?\nGame data notes additional range checks of 400 (bounce range) and 500 (Q damage bounce range) against 'large' enemies.\nSpell Flux can be buffered 0.5 seconds before it comes off cooldown.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+  "notes": "Spell Flux's second cast on a target will apply a new Flux debuff as well as triggering the previous one (effectively refreshing the duration).\nThe \"main\" missile of Spell Flux is blocked by  projectile-intercepting effects, while the spreading bounce missiles are not.\nPENDING FOR TEST: bounce range  to-edge or  to-center?\nGame data notes additional range checks of 400 (bounce range) and 500 (Q damage bounce range) against 'large' enemies.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
   "projectile": "SPECIAL",
   "resource": "Mana",
-  "speed": "4000 / 1500",
+  "speed": "4000 • 1500",
   "spellEffects": "spell",
   "spellshieldable": "True",
   "targeting": "Unit",

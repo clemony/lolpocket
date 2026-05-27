@@ -7,7 +7,7 @@
   "cooldown": "120 / 100 / 80",
   "cost": "100",
   "damageType": "Magic damage",
-  "effectRadius": "225 / 300 / 750",
+  "effectRadius": "225 • 300 • 750",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nautilus sends out a Depth Charge that chases the target enemy champion, accelerating over time and creating eruptions every 0.264 seconds in its wake that also briefly grant sight of the area. Enemies hit by the eruptions are dealt magic damage, knocked up for 1 second, and stunned for a duration.</p>",

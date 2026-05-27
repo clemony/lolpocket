@@ -43,7 +43,7 @@
       "unique": true,
       "mythic": false,
       "name": "Manaflow",
-      "effects": "Grants a charge every 8 seconds, up to 5 charges. Affecting an enemy or ally with an ability consumes a charge to grant 4 <b>bonus</b> mana, increased to 8 mana if they are a champion, up to a <b>maximum</b> of 360 <b>bonus</b> mana."
+      "effects": "Grants a charge every 8 seconds, up to 5 charges. Consumes a charge on-hit and whenever affecting an enemy or ally with an ability to grant 4 <b>bonus</b> mana, increased to 8 mana for champion targets, up to a <b>maximum</b> of 360 <b>bonus</b> mana. Can only be triggered once per cast instance."
     },
     {
       "unique": false,

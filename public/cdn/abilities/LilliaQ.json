@@ -7,7 +7,7 @@
   "cooldown": "6 / 5.5 / 5 / 4.5 / 4",
   "cost": "65",
   "damageType": "Other damage",
-  "effectRadius": "225 / 485",
+  "effectRadius": "485",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Whenever Lillia's abilities hit at least one enemy, she generates a stack of Prance for 6.5 seconds, refreshing on subsequent hits and stacking up to 4 times. Stacks expire one by one every 1.5 seconds when the duration ends.</p>"
@@ -77,6 +77,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/q",
+  "innerRadius": "225",
   "notes": "Spell shield will not prevent Lillia from gaining a Prance stack.\nFor the purpose of aim-assist, Lillia's  attack range is reduced[ to 275 ][ by 50 ]during Blooming Blows's cast time.",
   "resource": "Mana",
   "spellEffects": "aoe",

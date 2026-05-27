@@ -13,7 +13,7 @@
       "effectRadius": "285",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Hwei's damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 35 - 252.94 (based on level) (+ 35% AP) bonus magic damage to enemies in the area after a 0.85-second delay.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Hwei's damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 40 - 313.82 (based on level) (+ 35% AP) bonus magic damage to enemies in the area after a 0.85-second delay.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/p",
@@ -208,10 +208,13 @@
         },
         {
           "description": "Molten Fissure's damage is reduced to 60% against minions and increased to 135% against monsters."
+        },
+        {
+          "description": "Molten Fissure's slow stacks multiplicatively with the slows applied by Grim Visage, Crushing Maw, and Spiraling Despair."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
-      "notes": "Applies  area damage for the explosions and deals  persistent area damage for the lava.\nMolten Fissure's  slow improperly counts as an additive percent movement speed modifier rather than a multiplicative one.(bug)\nThe strength is unaffected by  slow resist as a result of this behavior.\nThis means it can unintentionally stack with the effects of other slows.\nThe shockwaves can only hit each enemy once.\n Spell shield will block an explosion but not the persistent lava damage.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+      "notes": "Applies  area damage for the explosions and deals  persistent area damage for the lava.\nThe shockwaves can only hit each enemy once.\n Spell shield will block an explosion but not the persistent lava damage.\nThis ability will cast from wherever the caster is at the start of the cast time.",
       "projectile": "TRUE",
       "spellEffects": "special",
       "spellshieldable": "special",
@@ -486,7 +489,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active - EQ:</span> Hwei launches a terrifying grin in the target direction that deals magic damage to the first enemy hit, knocks them down, and fears them for a duration, as well as slows them by 60% for the same duration.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active - EQ:</span> Hwei launches a terrifying grin in the target direction that deals magic damage to the first enemy hit, knocks them down, and fears them for a duration, as well as slows them by 70% - 99% (based on distance from Hwei) for the same duration.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -510,6 +513,9 @@
               ]
             }
           ]
+        },
+        {
+          "description": "Grim Visage's slow stacks multiplicatively with the slows applied by Molten Fissure, Crushing Maw, and Spiraling Despair."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
@@ -529,10 +535,10 @@
       "cooldown": "13 / 12.5 / 12 / 11.5 / 11",
       "cost": "50 / 55 / 60 / 65 / 70",
       "damageType": "Magic damage",
-      "effectRadius": "350 / 600 / 450",
+      "effectRadius": "350 • 600 • 450",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active - EW:</span> Hwei tosses an eyeball to the target location. Upon arrival, it expands over 0.2 seconds into a dark gaze lasting 3 seconds, granting sight in a larger area. After 0.7 seconds of being placed, the eye locks onto the nearest visible enemy champion or otherwise remains there until an enemy champion is in range. Once locked on, the eye launches itself at the target after 0.3 seconds and collides with the first enemy hit to deal magic damage, reveal them for 2.5 seconds, and root them for a duration.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active - EW:</span> Hwei tosses an eyeball to the target location. Upon arrival, it expands over 0.2 seconds into a dark gaze that lasts 3 seconds and grants sight of the area. After 0.7 seconds of being placed, the eye locks onto the nearest visible enemy champion or otherwise remains there until an enemy champion is in range. Once locked on, the eye launches itself at the target after a 0.3-second delay and collides with the first enemy hit to deal magic damage, reveal them for 2.5 seconds, and root them for a duration.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -603,6 +609,9 @@
               ]
             }
           ]
+        },
+        {
+          "description": "Crushing Maw's slow stacks multiplicatively with the slows applied by Molten Fissure, Grim Visage, and Spiraling Despair."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
@@ -686,7 +695,7 @@
           ]
         },
         {
-          "description": "Spiraling Despair can only be cast if Hwei has not entered a mood."
+          "description": "Spiraling Despair can only be cast if Hwei has not entered a mood.Spiraling Despair's slow stacks multiplicatively with the slows applied by Molten Fissure, Grim Visage, and Crushing Maw."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/r",
@@ -731,7 +740,7 @@
     "difficulty": 3
   },
   "lore": "Hwei is a brooding painter who creates brilliant art in order to confront Ionia's criminals and comfort their victims. Beneath his melancholy roils a torn, emotional mind—haunted by both the vibrant visions of his imagination and the gruesome memories of his temple's massacre. Hwei seeks to understand this light and dark, which drives him inevitably toward the artist who unraveled him. With paintbrush and palette, Hwei shapes endless possibilities as he draws ever closer to earning closure or embracing despair.",
-  "patchLastChanged": "26.04",
+  "patchLastChanged": "26.08",
   "positions": [
     "Middle",
     "Support"

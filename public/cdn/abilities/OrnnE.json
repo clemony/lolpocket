@@ -6,7 +6,7 @@
   "cooldown": "14 / 13.5 / 13 / 12.5 / 12",
   "cost": "35 / 40 / 45 / 50 / 55",
   "damageType": "Physical damage",
-  "effectRadius": "360 / 150",
+  "effectRadius": "360 • 150",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ornn charges in the target direction, dealing physical damage to enemies he passes through and stopping upon colliding with terrain.</p>",
@@ -46,5 +46,5 @@
   "spellEffects": "Area of effect",
   "spellshieldable": "True",
   "targeting": "Direction",
-  "targetRange": "800 / 650"
+  "targetRange": "800 • 650"
 }

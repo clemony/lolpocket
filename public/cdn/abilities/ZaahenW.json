@@ -1,7 +1,7 @@
 {
   "key": "W",
   "name": "Dreaded Return",
-  "width": "70",
+  "width": "140",
   "affects": "Enemies",
   "blurb": "Active:  Zaahen extends his glaive in the target direction, dealing physical damage to enemies hit. Upon reaching maximum range, all enemies in the area are dealt physical damage,  stunned briefly, and  pulled toward Zaahen.",
   "castTime": "0.5",
@@ -52,10 +52,10 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Zaahen/ability-icon/w",
-  "notes": "Spell shield will block both passes, as well as the second one individually if circumstances permit.\n Intercepting the initial projectile will instantly trigger Dreaded Return's pull.\n Displacement immunity will not resist the application of the  stun.\nThe projectile is shown on the minimap and Dreaded Return can be cast targeting the minimap.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDreaded Return's end point will not move in relation to Zaahen if he moves during the cast time.\nDreaded Return briefly provides  vision over an area.\nPENDING FOR TEST: How big is the vision bubble and how long does it last?",
+  "notes": "Spell shield will block both passes, as well as the second one individually if circumstances permit.\n Intercepting the initial projectile will instantly trigger Dreaded Return's pull.\n Displacement immunity will not resist the application of the  stun.\nThe projectile is shown on the minimap and Dreaded Return can be cast targeting the minimap.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDreaded Return maintains its casting angle direction in relation to Zaahen if he moves during the cast time.\nDreaded Return briefly provides  vision over an area.\nPENDING FOR TEST: How big is the vision bubble and how long does it last?",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "2900 / 900",
+  "speed": "2900 • 900",
   "spellEffects": "spellaoe",
   "spellshieldable": "true",
   "targeting": "Direction",

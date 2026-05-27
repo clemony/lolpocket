@@ -2,8 +2,8 @@
   "key": "Q",
   "name": "Noxian Diplomacy",
   "affects": "Enemies",
-  "blurb": "Active:  Talon  leaps to the target enemy, dealing physical damage. If the target is within melee range, Talon instead  critically strikes the target.",
-  "castTime": "None / 100% of Talon's windup time (0.198 at base attack speed)",
+  "blurb": "Active:  Talon  leaps to the target enemy, dealing physical damage. If the target is within melee range, Talon will  critically strike the target.",
+  "castTime": "None • 100% of Talon's windup time (0.198 at base attack speed)",
   "cooldown": "8 / 7.5 / 7 / 6.5 / 6",
   "cost": "40",
   "damageType": "Physical damage",
@@ -51,5 +51,5 @@
   "spellEffects": "spell",
   "spellshieldable": "True",
   "targeting": "Unit",
-  "targetRange": "575 /  170"
+  "targetRange": "575 •  170"
 }

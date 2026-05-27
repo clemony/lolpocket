@@ -41,11 +41,11 @@
       "description": "If Azir dashes into an enemy champion, he stops and gains a charge of Arise!."
     },
     {
-      "description": "A summoned Sand Soldier is required to cast this ability. Azir can cast of any of his abilities during the dash."
+      "description": "A summoned Sand Soldier is required to cast this ability. Azir can cast any of his abilities during the dash."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/e",
-  "notes": "Azir will track the Sand Soldier if they change locations, such as by  Conquering Sands.",
+  "notes": "Azir will track the Sand Soldier if they change locations, such as by  Conquering Sands.\nMovement and attack commands will be canceled upon cast and cannot be issued again until Azir arrives at his final location.",
   "resource": "Mana",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",

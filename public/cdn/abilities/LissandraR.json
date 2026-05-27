@@ -3,7 +3,7 @@
   "name": "Frozen Tomb",
   "affects": "Enemies, Self",
   "blurb": "Active:  Lissandra can cast Frozen Tomb on herself or an enemy champion.",
-  "castTime": "0.375 / None",
+  "castTime": "0.375 • None",
   "cooldown": "120 / 100 / 80",
   "cost": "100",
   "damageType": "Magic damage",
@@ -96,7 +96,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/r",
-  "notes": "Enemies can only be damaged by the field of ice once every 4 seconds.\nUnder normal circumstances, this means once per cast of Frozen Tomb.\nEnemies who come in contact with Frozen Tomb's slow field will be damaged and a small visual and sound effect will play.\n Spell shield will block the single-targeted portion and the radiating ice damage, but will not stop it from spreading.\nIf the target becomes  untargetable,  dies, or is too far away during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost.\nThe ability is not cancelled by loss of  sight of the target.\nThis only applies to the enemy cast.",
+  "notes": "Enemies can only be damaged by the field of ice once every 4 seconds.\nUnder normal circumstances, this means once per cast of Frozen Tomb.\nEnemies who come in contact with Frozen Tomb's slow field will be damaged and a small visual and sound effect will play.\n Spell shield will block the single-targeted portion and the radiating ice damage, but will not stop it from spreading.\nIf the target becomes  untargetable,  dies, or is too far away during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost.\nThe ability is not cancelled by loss of  sight of the target.\nThis only applies to the enemy cast.\nWhen becoming  untargetable, Lissandra  destroys enemy projectiles targeting her.",
   "resource": "Mana",
   "spellEffects": "spellaoe",
   "spellshieldable": "special",

@@ -2,7 +2,7 @@
   "name": "Demonic Embrace",
   "id": 444637,
   "rank": "Special",
-  "specialRecipe": 220007,
+  "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
   "nicknames": [
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Sinister Pact",
-      "effects": "Increase your ability power by 1.5% ap and gain 1.5% <b>bonus</b> movement speed for every 100 <b>current</b> health you are missing, up to an increase of 45% ability power and 45% <b>bonus</b> movement speed at 3000 <b>current</b> health missing."
+      "effects": "Gain 0% – 45% (based on %) <img src=\"/img/icons/ability-power.webp\" class=\"tip-icon\" />ability power and <img src=\"/img/icons/bonus-movement-speed.webp\" class=\"tip-icon\" /><b>bonus</b> movement speed."
     }
   ],
   "stats": {

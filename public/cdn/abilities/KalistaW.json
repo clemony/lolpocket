@@ -49,6 +49,6 @@
   "rechargeRate": "90 / 80 / 70 / 60 / 50",
   "spellEffects": "proc",
   "targeting": "Location",
-  "targetRange": "1400 / 5000",
+  "targetRange": "1400 - 5000",
   "tetherRadius": "1100"
 }

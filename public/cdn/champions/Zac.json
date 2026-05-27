@@ -14,7 +14,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - The Secret Weapon:</span> Zac gains increased percentage size equal to 1.5% of his bonus health, capped at 35% increased size at 2333.33 bonus health. Zac's size also reduces based on his missing health, down to 70% total size while at 0% health.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Goo:</span> Whenever Zac damages at least one enemy with an ability, he sheds a number of chunks of himself to a nearby location, landing towards nearby visible enemy champions and lasting for 6 seconds.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Stretching Strikes:</span> 1 chunk for the initial hit, and 1 chunk if the second hit is on a different unit</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Unstable Matter:</span> 1 chunk if it hits at least one unit</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Elastic Slingshot:</span> 1 chunk for each enemy champion hit, with a minimum of 1 if it hits at least one unit</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Let's Bounce!:</span> 1 chunk for each bounce that hits at least one unit</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Goo:</span> Whenever Zac hits enemies with an ability, he sheds a number of chunks of himself to a nearby location, landing towards nearby visible enemy champions and lasting for 6 seconds.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Stretching Strikes:</span> 1 chunk for the initial hit, and 1 chunk if the second hits a different enemy</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Unstable Matter:</span> 1 chunk if it hits at least one enemy</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Elastic Slingshot:</span> 1 chunk for each enemy champion hit, with a minimum of 1 if it hits at least one enemy</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Let's Bounce!:</span> 1 chunk for each bounce that hits at least one enemy</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Both Zac and enemy champions can interact with a chunk by being within 50 units of it:</span> an enemy will destroy it, while Zac will consume it to heal for 4% - 8.47% (based on level) of his maximum health.</p>"
@@ -101,7 +101,7 @@
       "spellEffects": "Single target",
       "spellshieldable": "special",
       "targeting": "Direction",
-      "targetRange": "800 /  80",
+      "targetRange": "800 •  80",
       "tetherRadius": "900"
     },
     {
@@ -115,7 +115,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zac explodes to deal magic damage to nearby enemies, the damage based on the target's max health ratio is capped at 200 against minions and monsters.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zac explodes to deal magic damage to nearby enemies. The damage based on the target's max health ratio is capped at 200 against minions and monsters.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -224,7 +224,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zac bounces after the cast time, then bounces 3 additional times each second over 3 seconds. Each bounce deals magic damage to enemies hit, knocks them back over 1 second, and slows them by 20% for the same duration. An enemy can be hit by multiple bounces, but ones beyond the first deal 50% damage to them and do not apply the knock back.</p>",
           "leveling": [
             {
-              "attribute": "Primary Magic Damage",
+              "attribute": "Magic Damage Per Hit",
               "modifiers": [
                 {
                   "values": "120 / 190 / 260"
@@ -236,7 +236,7 @@
               ]
             },
             {
-              "attribute": "Reduced Magic Damage",
+              "attribute": "Reduced Damage Per Hit",
               "modifiers": [
                 {
                   "values": "60 / 95 / 130"

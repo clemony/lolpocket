@@ -37,7 +37,7 @@
   "notes": "This ability always employs Quick cast.\nEach cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nThere's a slight delay before a champion gains vision of the fog of war once inside it. Because of this, if Ahri dashes into it, it is possible that Spirit Rush will not target any enemy in range.\nThe bolts do not fire if Ahri dies while  dashing, unless she was saved by  resurrection.\nThe bolts will fire if the dash is  interrupted by other means.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1200 + 100% movement speed / 1400",
+  "speed": "1200 + 100% movement speed • 1400",
   "spellEffects": "aoe",
   "spellshieldable": "True",
   "targeting": "Location",

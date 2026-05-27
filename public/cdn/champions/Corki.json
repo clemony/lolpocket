@@ -29,7 +29,7 @@
       "cooldown": "9 / 8.5 / 8 / 7.5 / 7",
       "cost": "60 / 65 / 70 / 75 / 80",
       "damageType": "Magic damage",
-      "effectRadius": "275 /  500",
+      "effectRadius": "275 •  500",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Corki launches a bomb at the target location that briefly grants sight of its surroundings as it travels and explodes upon impact, dealing magic damage to enemies hit.</p>",
@@ -129,7 +129,7 @@
       "spellEffects": "aoedot",
       "spellshieldable": "False",
       "targeting": "Location",
-      "targetRange": "300 / 600"
+      "targetRange": "300 - 600"
     },
     {
       "key": "E",
@@ -207,7 +207,7 @@
       "cooldown": "2",
       "cost": "35",
       "damageType": "Physical damage",
-      "effectRadius": "150 / 300",
+      "effectRadius": "150 • 300",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Basic attacks on-hit against champions reduce Missile Barrage's remaining recharge time by 2 - 4 (based on critical strike chance) seconds.</p>"
@@ -259,7 +259,7 @@
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Direction",
-      "targetRange": "1300 / 1500"
+      "targetRange": "1300 • 1500"
     }
   ],
   "adaptiveType": "Physical damage",
@@ -274,7 +274,7 @@
     "difficulty": 2
   },
   "lore": "The yordle pilot Corki loves two things above all others: flying, and his glamorous mustache... though not necessarily in that order. After leaving Bandle City, he settled in Piltover and fell in love with the wondrous machines he found there. He dedicated himself to the development of flying contraptions, leading an aerial defense force of seasoned veterans known as the Screaming Yipsnakes. Calm under fire, Corki patrols the skies around his adopted home, and has never encountered a problem that a good missile barrage couldn't solve.",
-  "patchLastChanged": "26.01",
+  "patchLastChanged": "26.10",
   "positions": [
     "Bottom",
     "Middle"

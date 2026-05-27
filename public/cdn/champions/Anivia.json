@@ -96,7 +96,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/q",
-      "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\nFlash Frost can only proc  Conqueror once even if it damages the same target twice.\nFlash Frost will fire from wherever Anivia was at the start of the cast time.\n Spell shield can only prevent either the collision hit or recast from affecting the target.",
+      "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\nFlash Frost will fire from wherever Anivia was at the start of the cast time.\n Spell shield can block the effects of either the active or the recast, but not both if the former is blocked.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "950",
@@ -160,7 +160,7 @@
       "resource": "Mana",
       "spellshieldable": "false",
       "targeting": "Location",
-      "targetRange": "1000 / 100"
+      "targetRange": "1000 • 100"
     },
     {
       "key": "E",
@@ -241,7 +241,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Anivia calls forth a driving rain of ice and hail at the target location, dealing magic damage every 0.5 seconds to enemies within and slowing them for 1 second, refreshing every 0.5 seconds while they remain inside.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Anivia calls forth a driving rain of ice and hail at the target location, dealing magic damage every 0.5 seconds to enemies within and slowing them for 1 second, refreshing every 0.5 seconds while they remain inside.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage per Tick",
@@ -293,14 +293,11 @@
           ]
         },
         {
-          "description": "Glacial Storm can be recast after 1 second, and does so automatically if Anivia is no longer in range or unable to pay the mana cost, or becomes affected by any form of cast-inhibiting crowd control."
-        },
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Anivia ends Glacial Storm, dealing one last tick of damage.</p>"
+          "description": "Toggling Glacial Storm off triggers a final tick of damage and incurs its full cooldown. Glacial Storm is toggled off automatically if Anivia moves too far away from the blizzard or becomes unable to pay the mana cost, or is affected by any form of cast-inhibiting crowd control."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/r",
-      "notes": "Toggle abilities do not count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nGlacial Storm's slow leaves a trail that is visible even if the target is stealthed.\nGlacial Storm deals 3 half ticks at 200 / 267 / 333 radius for a total of 1.5 normal damage ticks before it starts dealing empowered damage at 400 radius.\n Stasis via  Zhonya's Hourglass doesn't interrupt Glacial Storm.\n Tahm Kench's  Devour does interrupt (allied and enemy) Glacial Storm.",
+      "notes": "Toggled abilities do not count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nGlacial Storm's slow leaves a trail that is visible even if the target is stealthed.\nGlacial Storm deals 3 half ticks at 200 / 267 / 333 radius for a total of 1.5 normal damage ticks before it starts dealing empowered damage at 400 radius.\n Stasis via  Zhonya's Hourglass doesn't interrupt Glacial Storm.\n Tahm Kench's  Devour does interrupt (allied and enemy) Glacial Storm.",
       "resource": "Other",
       "spellEffects": "aoedot",
       "spellshieldable": "False",
@@ -321,7 +318,7 @@
     "difficulty": 2
   },
   "lore": "Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north, who revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new tomorrow.",
-  "patchLastChanged": "25.20",
+  "patchLastChanged": "26.10",
   "positions": [
     "Middle"
   ],

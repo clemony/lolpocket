@@ -15,6 +15,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/p",
-  "notes": "Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield.\nThe cooldown reduction is granted even if the attack misses due to  blind.\nPENDING FOR TEST: Cooldown reduction interaction with parries ( block and  dodge.",
+  "notes": "Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield or  Riposte.\nThe cooldown reduction is granted even if the attack is  blocked,  dodged, or misses due to  blind.",
+  "spellshieldable": "false",
   "targeting": "Passive"
 }

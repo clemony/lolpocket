@@ -27,6 +27,5 @@ export function asSortableFolderOrPocket(
     | SortablePocketChildren
     | Folder
 ): SortablePocket | SortableFolder {
-  console.log("🥸 - asSortableFolderOrPocket - item:", item)
   return item as SortablePocket | SortableFolder
 }

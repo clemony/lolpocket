@@ -37,6 +37,6 @@
   "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/e",
   "notes": "Footwork's cast on allies has a  forgiveness radius of 150 units.\nDashing to the side or behind will cancel current move or attack orders. Exception when attack order was given at melee range from target.\nThe shield is granted instantly on cast for both K'Sante and the potential allied champion.",
   "resource": "Mana",
-  "speed": "(500 / 1250 / 1100 / 1400) + 100% movement speed",
-  "targeting": "Location /  Unit"
+  "speed": "(500 • 1250 • 1100 • 1400) + 100% movement speed",
+  "targeting": "Location • Unit"
 }

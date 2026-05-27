@@ -10,7 +10,7 @@
   "effectRadius": "1000",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire starting from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.</p>",
       "leveling": [
         {
           "attribute": "Self Heal",
@@ -32,11 +32,11 @@
           "attribute": "Physical Damage",
           "modifiers": [
             {
-              "values": "200 / 300 / 400"
+              "values": "150 / 250 / 350"
             },
             {
               "unit": "% bonus AD",
-              "values": "110"
+              "values": "100"
             },
             {
               "unit": "% AP",
@@ -48,11 +48,11 @@
           "attribute": "Increased Physical Damage",
           "modifiers": [
             {
-              "values": "300 / 450 / 600"
+              "values": "225 / 375 / 525"
             },
             {
               "unit": "% bonus AD",
-              "values": "165"
+              "values": "150"
             },
             {
               "unit": "% AP",

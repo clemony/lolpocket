@@ -1,61 +1,52 @@
 {
   "key": "E",
   "name": "Molten Burst",
-  "width": "120 / 100",
+  "width": "120 • 100",
   "affects": "Enemies",
   "blurb": "Active: Shyvana launches a fireball that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and  slowing them for a moment.",
-  "castTime": "0.25 / 0.3333",
+  "castTime": "0.25 • 0.3333",
   "cooldown": "12 / 11 / 10 / 9 / 8",
   "cost": "0",
   "damageType": "Magic damage",
-  "effectRadius": "150 / 300",
+  "effectRadius": "150 • 300",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana launches a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and slowing them for 2 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana launches a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and slowing by 30% them for 2 seconds.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "80 / 110 / 140 / 170 / 200"
-            },
-            {
-              "unit": "% bonus AD",
-              "values": "35"
+              "values": "50 / 65 / 80 / 95 / 110"
             },
             {
               "unit": "% AP",
-              "values": "70"
-            }
-          ]
-        },
-        {
-          "attribute": "Slow Strength",
-          "modifiers": [
+              "values": "60 / 65 / 70 / 75 / 80"
+            },
             {
-              "unit": "%",
-              "values": "20 / 25 / 30 / 35 / 40"
+              "unit": "% of target's maximum health",
+              "values": "5"
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> The fireball is wider, can pass through enemies, and deals 25% increased damage. Upon hitting an enemy champion or large monster, and after reaching maximum range, the fireball sets an explosion upon the targets struck and at the location that applies the same effects. Molten Burst will also scorch the ground it touches beneath for 2 seconds. Enemies within a scorched field are dealt 3.75 / 5 / 6.25 (based on level) (+ 1.25% AP) magic damage every 0.25 seconds, for a total maximum damage of 30 / 40 / 50 (based on level) (+ 10% AP).Enemies may be damaged by only one scorched field at a time. Subsequent explosions against the same target deal 50% damage.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> The fireball is wider, can pass through enemies, and deals 25% increased damage. Upon hitting an enemy champion or large monster, and after reaching maximum range, the fireball sets an explosion upon the targets struck and at the location that applies the same effects. Molten Burst will also scorch the ground it touches beneath for 2 seconds. Enemies within a scorched field are dealt 3.75 / 5 / 6.25 (based on level) (+ 1.25% AP) magic damage every 0.25 seconds, for a total maximum damage of 30 / 40 / 50 (based on level) (+ 10% AP).Enemies may be damaged by only one scorched field at a time. Subsequent explosions against the same target deal 40% damage.</p>",
       "leveling": [
         {
           "attribute": "Increased/Explosion Magic Damage",
           "modifiers": [
             {
-              "values": "100 / 137.5 / 175 / 212.5 / 250"
-            },
-            {
-              "unit": "% bonus AD",
-              "values": "43.75"
+              "values": "62.5 / 81.25 / 100 / 118.75 / 137.5"
             },
             {
               "unit": "% AP",
-              "values": "87.5"
+              "values": "75 / 81.25 / 87.5 / 93.75 / 100"
+            },
+            {
+              "unit": "% of target's maximum health",
+              "values": "6.25"
             }
           ]
         },
@@ -63,15 +54,15 @@
           "attribute": "Subsequent Explosion Damage",
           "modifiers": [
             {
-              "values": "50 / 68.75 / 87.5 / 106.25 / 125"
-            },
-            {
-              "unit": "% bonus AD",
-              "values": "21.88"
+              "values": "25 / 32.5 / 40 / 47.5 / 55"
             },
             {
               "unit": "% AP",
-              "values": "43.75"
+              "values": "30 / 32.5 / 35 / 37.5 / 40"
+            },
+            {
+              "unit": "% of target's maximum health",
+              "values": "2.5"
             }
           ]
         }
@@ -81,7 +72,7 @@
   "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/e",
   "notes": "The fireball applies  area damage. In  Dragon Form, the explosion applies  area damage and the scorched field deals  persistent area damage.\nIn Dragon Form, both areas of effect will be centered on the first champion struck, not at the location the missile collided with them.\nMolten Burst will fail to go on cooldown if its cast time starts in  Dragon Form and ends in Human Form.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
-  "speed": "1600 / 1575",
+  "speed": "1600 • 1575",
   "spellEffects": "special",
   "spellshieldable": "True",
   "targeting": "Direction / Location"

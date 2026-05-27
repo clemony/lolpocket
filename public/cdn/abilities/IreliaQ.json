@@ -9,7 +9,7 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Irelia dashes 100 units through the target enemy's location, and upon collision or dash completion, she deals physical damage, applies on-hit effects, and heals herself. Bladesurge deals 50 - 237 (based on level) bonus physical damage to minions.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Irelia dashes 100 units through the target enemy's location, and upon collision or dash completion, she deals physical damage, applies on-hit effects, and heals herself. Bladesurge deals 50 - 259 (based on level) bonus physical damage to minions.</p>",
       "leveling": [
         {
           "attribute": "Physical Damage",

@@ -7,7 +7,7 @@
   "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
   "cost": "70 / 80 / 90 / 100 / 110",
   "damageType": "Magic damage",
-  "effectRadius": "310 / 650",
+  "effectRadius": "310 • 650",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lux sends a lucent singularity to the target location, remaining there for 5 seconds to grant sight of the area and slow nearby enemies.</p>",
@@ -54,6 +54,6 @@
   "speed": "1200",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",
-  "targeting": "Location / Auto",
+  "targeting": "Location • Auto",
   "targetRange": "1100"
 }

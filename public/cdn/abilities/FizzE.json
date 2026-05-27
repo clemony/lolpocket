@@ -27,9 +27,9 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/e",
-  "notes": "This ability always employs Quick cast.\nTrickster does not count as an ability activation.\nBoth  Playful's and Trickster's  dashes may be directed separately.\nTrickster has a minimum dash distance of 75 units.\n Flash cannot be used during the dash.\nThe splash occurs immediately if Fizz encounters terrain that cannot be dashed through (he has to be particularly close to the wall).",
+  "notes": "This ability always employs Quick cast.\nTrickster does not count as an ability activation.\nBoth  Playful's and Trickster's  dashes may be directed separately.\n Flash cannot be used during the dash.\nThe splash occurs immediately if Fizz encounters terrain that cannot be dashed through (he has to be particularly close to the wall).",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
   "targeting": "Location",
-  "targetRange": "300"
+  "targetRange": "75 - 300"
 }

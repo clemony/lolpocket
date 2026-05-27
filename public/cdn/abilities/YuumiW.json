@@ -16,7 +16,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Change of Plan:</span> Yuumi detaches from her Anchor and dashes to the target allied champion to attach to them, refreshing the recast. She will detach automatically if her Anchor dies or under certain circumstances. If recast without a valid target, Yuumi will detach and dash 250-units in the target direction, placing You and Me! on a 0.25-second cooldown if it is not already on cooldown.</p>"
     },
     {
-      "description": "Yuumi will be knocked down by any immobilizing or polymorphing crowd control during the dash."
+      "description": "Yuumi will be knocked down by any immobilizing or polymorphing crowd control during the dash to the ally."
     },
     {
       "description": "Yuumi starts with a skill point in You and Me! and Prowling Projectile instead has 6 ranks."

@@ -70,7 +70,7 @@
       "notes": "Orb of Deception will hit additional units around the return point in a small circle when the orb turns around.\nThis applies both to the initial and return missile's damage, but the initial missile only deals damage if the unit was not hit by it already.\nEach pass of the projectile can only damage an enemy once.\nIf Ahri dies while the orb is out, the orb will visually disappear but continue to deal damage and return to Ahri.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1550 / 60 - 2600",
+      "speed": "1550 • 60 - 2600",
       "spellEffects": "Area of effect",
       "spellshieldable": "Special",
       "targeting": "Direction"
@@ -84,7 +84,7 @@
       "cooldown": "9 / 8 / 7 / 6 / 5",
       "cost": "30",
       "damageType": "Magic damage",
-      "effectRadius": "150 / 550 / 725",
+      "effectRadius": "150 • 550 • 725",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ahri gains 40% bonus movement speed that decays over 2 seconds and conjures three flames which orbit her clockwise for up to 2.5 seconds.</p>"
@@ -167,7 +167,7 @@
       "notes": "Each missile of Fox-Fire has its own shorter non-priority range.\nAny unused Fox-Fires will fizzle upon death.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "75.92° per second / 1400",
+      "speed": "75.92° per second • 1400",
       "spellEffects": "Single target",
       "spellshieldable": "True",
       "targeting": "Auto"
@@ -258,7 +258,7 @@
       "notes": "This ability always employs Quick cast.\nEach cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nThere's a slight delay before a champion gains vision of the fog of war once inside it. Because of this, if Ahri dashes into it, it is possible that Spirit Rush will not target any enemy in range.\nThe bolts do not fire if Ahri dies while  dashing, unless she was saved by  resurrection.\nThe bolts will fire if the dash is  interrupted by other means.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1200 + 100% movement speed / 1400",
+      "speed": "1200 + 100% movement speed • 1400",
       "spellEffects": "aoe",
       "spellshieldable": "True",
       "targeting": "Location",

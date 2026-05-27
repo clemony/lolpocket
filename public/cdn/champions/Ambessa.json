@@ -27,7 +27,7 @@
       "spellEffects": "proc",
       "spellshieldable": "false",
       "targeting": "Passive",
-      "targetRange": "175 / 350"
+      "targetRange": "175 - 350"
     },
     {
       "key": "Q",
@@ -39,7 +39,7 @@
       "cooldown": "14 / 13 / 12 / 11 / 10",
       "cost": "70",
       "damageType": "Physical damage",
-      "effectRadius": "275 / 135 / 400",
+      "effectRadius": "275 • 135 • 400",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ambessa enters a 0.225-second lockout, at the end of which she slashes with her twin drakehounds in a cone in the target direction, dealing physical damage to enemies hit. The damage is doubled against enemies hit by the outer edge. Drakehound's Step's dash may be buffered during the lockout or initiated within 0.275 seconds of the lockout ending, and Ambessa will perform the dash after her slash completes.</p>",
@@ -55,9 +55,9 @@
                   "values": "30"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n1 / 1.5 / 2 / 2.5 / 3% (+ 1.5% per 100 bonus AD) of target's maximum health",
+                  "tooltip": "Scaling per rank:\n2 / 2.25 / 2.5 / 2.75 / 3% (+ 1.5% per 100 bonus AD) of target's maximum health",
                   "unit": "% (+ 1.5% per 100 bonus AD) of target's maximum health",
-                  "values": "1 - 3"
+                  "values": "2 - 3"
                 }
               ]
             },
@@ -72,9 +72,9 @@
                   "values": "60"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n2 / 3 / 4 / 5 / 6% (+ 3% per 100 bonus AD) of target's maximum health",
+                  "tooltip": "Scaling per rank:\n4 / 4.5 / 5 / 5.5 / 6% (+ 3% per 100 bonus AD) of target's maximum health",
                   "unit": "% (+ 3% per 100 bonus AD) of target's maximum health",
-                  "values": "2 - 6"
+                  "values": "4 - 6"
                 }
               ]
             }
@@ -84,7 +84,7 @@
           "description": "If this hits at least one enemy, Ambessa can cast Sundering Slam within the next 4 seconds."
         },
         {
-          "description": "Against monsters, Cunning Sweep deals 125 bonus physical damage and the damage based on their health ratio is capped at 100 - 323.53 (based on level)."
+          "description": "Against monsters, Cunning Sweep deals 75 bonus physical damage and the damage based on their health ratio is capped at 100 - 323.53 (based on level)."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ambessa/ability-icon/q",
@@ -98,7 +98,7 @@
     {
       "key": "Q",
       "name": "Sundering Slam",
-      "width": "40",
+      "width": "80",
       "affects": "Enemies",
       "blurb": "Active:  Ambessa slams her twin drakehounds in a line in the target direction, dealing physical damage to enemies hit. The damage is  increased against the first enemy.",
       "castTime": "none",
@@ -120,9 +120,9 @@
                   "values": "45"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n1 / 1.5 / 2 / 2.5 / 3% (+ 2% per 100 bonus AD) of the target's maximum health",
+                  "tooltip": "Scaling per rank:\n2 / 2.25 / 2.5 / 2.75 / 3% (+ 2% per 100 bonus AD) of the target's maximum health",
                   "unit": "% (+ 2% per 100 bonus AD) of the target's maximum health",
-                  "values": "1 - 3"
+                  "values": "2 - 3"
                 }
               ]
             },
@@ -137,16 +137,16 @@
                   "values": "90"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n2 / 3 / 4 / 5 / 6% (+ 4% per 100 bonus AD) of the target's maximum health",
+                  "tooltip": "Scaling per rank:\n4 / 4.5 / 5 / 5.5 / 6% (+ 4% per 100 bonus AD) of the target's maximum health",
                   "unit": "% (+ 4% per 100 bonus AD) of the target's maximum health",
-                  "values": "2 - 6"
+                  "values": "4 - 6"
                 }
               ]
             }
           ]
         },
         {
-          "description": "Against monsters, Sundering Slam deals 150 bonus physical damage and the damage based on their health ratio is capped at 100 - 323.53 (based on level)."
+          "description": "Against monsters, Sundering Slam deals 75 bonus physical damage and the damage based on their health ratio is capped at 100 - 323.53 (based on level)."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ambessa/ability-icon/q",
@@ -264,16 +264,16 @@
     {
       "key": "R",
       "name": "Public Execution",
-      "width": "65",
+      "width": "130",
       "affects": "Enemies",
       "blurb": "Passive:  Ambessa gains  armor penetration and  heals for a percentage of the damage dealt by her active abilities.",
-      "castTime": "0.55",
+      "castTime": "0.7",
       "cooldown": "130 / 115 / 100",
       "cost": "0",
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Ambessa gains armor penetration and heals herself for a percentage of the post-mitigation damage she deals to enemies with her active abilities. The healing effectiveness is reduced to 25% against minions and 40% against monsters.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Ambessa gains armor penetration and heals herself for a percentage of the post-mitigation damage she deals to enemies with her active abilities. The healing effectiveness is reduced to 25% against minions and monsters.</p>",
           "leveling": [
             {
               "attribute": "Armor Penetration",
@@ -289,7 +289,7 @@
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "10 / 12.5 / 15"
+                  "values": "15 / 17.5 / 20"
                 },
                 {
                   "unit": "% life steal",
@@ -298,28 +298,15 @@
               ]
             },
             {
-              "attribute": "Minion Healing Percentage",
+              "attribute": "Reduced Healing Percentage",
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "2.5 / 3.13 / 3.75"
+                  "values": "3.75 / 4.38 / 5"
                 },
                 {
                   "unit": "% life steal",
                   "values": "12.5"
-                }
-              ]
-            },
-            {
-              "attribute": "Monster Healing Percentage",
-              "modifiers": [
-                {
-                  "unit": "%",
-                  "values": "4 / 5 / 6"
-                },
-                {
-                  "unit": "% life steal",
-                  "values": "20"
                 }
               ]
             }
@@ -347,7 +334,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ambessa/ability-icon/r",
-      "notes": "Public Execution's attachment depends on the application of the  suppression; if the suppression is not applied, neither is the attachment. Similarly, if the suppression is removed, so is the attachment.\nIf the target resists the suppression by being  immune to crowd control,  displacement immune, or having a  spell shield, Ambessa will not attach them to herself.\nShe will be unable to apply the damage and stun in this case since the suppression was not applied in the first place.\nShe will still  blink to the target in this case.\nIf the target removes the suppression by any means, including with an applicable  cleanse effect or  dispel, they will instantly detach themselves from Ambessa, which causes the ability to cancel immediately.\nShe will fail to apply the damage and stun to the target since the suppression was removed from them early in this case.\nHer lockout and displacement immunity also ends prematurely in this case.\nIf Ambessa would blink inside the  attack range of an enemy  turret, including the Nexus Obelisk, Public Execution will instead attempt to position her outside of it.\nAmbessa will  reveal herself during the cast time if there is an enemy champion nearby.\nAmbessa will search for enemies in the direction she is facing at the end of cast time.\nThis direction can be changed by  Seraphine's  Encore.(bug)\nIf Ambessa successfully seizes a target, any regular movement commands issued before doing so are discarded upon the lockout ending.\nThis does not affect movement orders issued during the lockout.\nPublic Execution will trigger a stack of  Electrocute,  Phase Rush, and  Eclipse's Ever Rising Moon for the suppression application and the damage dealt.\nPublic Execution will not queue  Flash if Ambessa attempts to use the summoner spell during the cast time.(unexpected)\nThe following table refers for interactions while Ambessa is in cast time and during the lockout:\n\n\nAttacking\n\nRegisters input for  Drakehound's Step.\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nRegisters input for  Drakehound's Step.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+      "notes": "Public Execution's attachment depends on the application of the  suppression; if the suppression is not applied, neither is the attachment. Similarly, if the suppression is removed, so is the attachment.\nIf the target resists the suppression by being  immune to crowd control,  displacement immune, or having a  spell shield, Ambessa will not attach them to herself.\nShe will be unable to apply the damage and stun in this case since the suppression was not applied in the first place.\nShe will still  blink to the target in this case.\nIf the target removes the suppression by any means, including with an applicable  cleanse effect or  dispel, they will instantly detach themselves from Ambessa, which causes the ability to cancel immediately.\nShe will fail to apply the damage and stun to the target since the suppression was removed from them early in this case.\nHer lockout and displacement immunity also ends prematurely in this case.\nThe target is attached to Ambessa a small distance in front of her.\nAmbessa attaches the target to herself a second time, before detaching them at the end of the suppression.\nIf Ambessa would blink inside the  attack range of an enemy  turret, including the Nexus Obelisk, Public Execution will instead attempt to position her outside of it.\nAmbessa will  reveal herself during the cast time if there is an enemy champion nearby.\nAmbessa will search for enemies in the direction she is facing at the end of cast time.\nThis direction can be changed by  Seraphine's  Encore.(bug)\nIf Ambessa successfully seizes a target, any regular movement commands issued before doing so are discarded upon the lockout ending.\nThis does not affect movement orders issued during the lockout.\nAmbessa is also special cased to be immune to  polymorphs while she is  displacement immune.\nPublic Execution will trigger a stack of  Electrocute and  Eclipse's Ever Rising Moon for the suppression application and the damage dealt.\nPublic Execution will not queue  Flash if Ambessa attempts to use the summoner spell during the cast time.(unexpected)\nThe following table refers for interactions while Ambessa is in cast time and during the lockout:\n\n\nAttacking\n\nRegisters input for  Drakehound's Step.\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nRegisters input for  Drakehound's Step.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
       "spellEffects": "spell",
       "spellshieldable": "true",
       "targeting": "Direction"
@@ -366,7 +353,7 @@
   },
   "fullName": "Ambessa Medarda",
   "lore": "All who know the name Medarda respect and fear the family's leader, Ambessa. As a Noxian general, she embodies a deadly combination of ruthless strength and fearless resolve in battle. Her role as matriarch is no different, requiring great cunning to empower the Medardas while leaving no room for failure or compassion. Embracing the merciless ways of the Wolf, Ambessa will do whatever it takes to protect her family's legacy, even at the cost of her own children's love.",
-  "patchLastChanged": "26.04",
+  "patchLastChanged": "26.10",
   "positions": [
     "Jungle",
     "Top"

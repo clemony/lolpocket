@@ -52,11 +52,11 @@
       ]
     },
     {
-      "description": "An enemy champion affected by Overwhelm is required to cast this ability. The target does not have to be visible to be hit by this ability."
+      "description": "An enemy champion affected by Overwhelm is required to cast this ability."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/r",
-  "notes": "Golden Eclipse can be cast even if all affected targets are  untargetable.(unexpected)\nGolden Eclipse does not deal damage to enemies that are  untargetable by the time the cast time completes.\nGolden Eclipse cannot be cast if none of the affected targets are in Mel's realm ( Death Realm).\nGolden Eclipse will only deal damage to targets in Mel's realm at the end of the cast.\nWhenever Golden Eclipse's damage would put a target below  Overwhelm's threshold, it will use a  different icon.\nGolden Eclipse will display the number of total stacks affecting all enemy champions in the HUD.\nGolden Eclipse sets the duration of  Overwhelm stacks to 0.75 seconds if they would run out during the cast time.",
+  "notes": "Golden Eclipse can be cast even if all affected targets are  untargetable.(unexpected)\nGolden Eclipse does not deal damage against enemies that are  untargetable.\nWhenever Golden Eclipse's damage would put a target below  Overwhelm's threshold, it will use a  different icon.\nGolden Eclipse will display the number of total stacks affecting all enemy champions in the HUD.\nGolden Eclipse sets the duration of  Overwhelm stacks to 0.75 seconds if they would run out during the cast time.",
   "resource": "Mana",
   "spellEffects": "spell",
   "spellshieldable": "true",

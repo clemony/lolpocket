@@ -29,7 +29,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana transforms into Dragon Form and flies with displacement immunity in the target direction, breathing fire in a cone along the way that deals magic damage to enemies hit and fears them for 0.75 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana transforms into Dragon Form and flies with displacement immunity in the target direction, breathing fire in a cone along the way that deals magic damage to enemies hit and fears them for 0.75 seconds, as well as slows them by 99% for the same duration.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -85,5 +85,5 @@
   "spellEffects": "aoe",
   "spellshieldable": "True",
   "targeting": "Location",
-  "targetRange": "400 / 1050"
+  "targetRange": "400 - 1050"
 }

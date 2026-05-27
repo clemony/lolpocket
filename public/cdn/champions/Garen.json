@@ -18,7 +18,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/p",
-      "notes": "Perseverance does not go on nor refresh its cooldown from damage which was fully prevented by a  shield or  invulnerability.",
+      "notes": "Perseverance does not go on nor refresh its cooldown from damage which was:\nReduced to or equal to 0 damage.\nDealt to  shields.\nAbsorbed by  invulnerability.",
       "spellEffects": "Heal",
       "targeting": "Passive"
     },
@@ -230,6 +230,7 @@
       "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/e",
       "notes": "At level 20, Garen will spin a minimum of 9 times.\nDeactivating the ability manually does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nEach spin triggers a stack of  Conqueror.\nFor the purpose of moving closer to an enemy when right clicking them, Judgment also reduces Garen's  attack range [ to 100 ][ by 75 ] for the duration.\nJudgment only scales with bonus attack speed from items and growth (per level).\nJudgment cancels Garen's last movement command upon ending.\nEach spin deals damage simultaneously to all enemies within its range when the spin is completed.\nThe spin animation is capped at 200% bonus attack speed, but the amount of ticks will keep on scaling.\nThe armor reduction stacks multiplicatively with other percentage armor penetration effects.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Decisive Strike and  Courage are usable.  Demacian Justice interrupts.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Hexflash\n\n\nDisabled\n\n Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
       "spellEffects": "aoedot",
+      "spellshieldable": "false",
       "targeting": "Auto"
     },
     {

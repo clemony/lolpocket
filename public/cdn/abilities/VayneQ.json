@@ -31,9 +31,9 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/q",
-  "notes": "This ability always employs Quick cast.\nThe bonus damage applies  life steal.\nAlthough Tumble will reset the basic attack timer, Vayne cannot attack until the animation is complete.\nVayne can cast  Final Hour during Tumble. She does not become  invisible during the dash.",
+  "notes": "This ability always employs Quick cast.\nThe basic attack portion of Tumble's damage is tagged as  basic damage and  spell damage, while the bonus damage is tagged as  spell damage.\nThe bonus damage applies  life steal.\nAlthough Tumble will reset the basic attack timer, Vayne cannot attack until the animation is complete.\nVayne can cast  Final Hour during Tumble. She does not become  invisible during the dash.",
   "resource": "Mana",
-  "speed": "500 + total movement speed",
-  "spellEffects": "spell",
+  "speed": "500 + 100% movement speed",
+  "spellEffects": "special",
   "targeting": "Direction"
 }

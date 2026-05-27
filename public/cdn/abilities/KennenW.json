@@ -10,7 +10,7 @@
   "effectRadius": "775",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kennen's basic attacks on-attack generate a stack of Electrical Surge, stacking up to 4 times. At 4 stacks, his next basic attack on-attack is empowered to consume all stacks on-hit to deal bonus magic damage and apply a stack of Mark of the Storm.Kennen gains maximum stacks of Electrical Surge upon respawning.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kennen's basic attacks on-attack generate a stack of Electrical Surge, stacking up to 4 times. At 4 stacks, his next basic attack on-attack consumes all stacks to both deal bonus magic damage and apply a stack of Mark of the Storm on-hit. This damage can critically strike for (140% + 12%) damage.Kennen gains maximum stacks of Electrical Surge upon respawning.</p>",
       "leveling": [
         {
           "attribute": "Bonus Magic Damage",
@@ -52,7 +52,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/w",
-  "notes": "The empowered basic attack applies bonus  spell damage, while the electrical surge deals  area damage.\nElectrical Surge's enhanced attack will be consumed and the bonus damage will not be applied if Kennen is  blinded.\nElectrical Surge's enhanced attack cannot be  dodged or  blocked.\nThe empowered attack will trigger but not be consumed nor apply its effects against  structures and  wards.",
+  "notes": "The empowered basic attack applies bonus  spell damage, while the electrical surge deals  area damage.\nElectrical Surge's enhanced attack will be consumed and the bonus damage will not be applied if Kennen is  blinded.\nElectrical Surge's enhanced attack cannot be  dodged or  blocked.\nUniquely to Electrical Surge,  on-hit effects triggered by the enchanced attack's cast instance (e.g.  Runaan's Hurricane's Wind's Fury,  Dusk and Dawn's Spellblade) will apply the bonus damage and  Mark of the Storm to targets hit.\nThis is not the case with any other effects applied  on-hit.\nDeveloper's Note: This is intentional.\nThe empowered attack will trigger but not be consumed nor apply its effects against  structures and  wards.",
   "projectile": "FALSE",
   "resource": "Energy",
   "spellEffects": "special",

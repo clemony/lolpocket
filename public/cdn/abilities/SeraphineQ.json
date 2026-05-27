@@ -48,7 +48,7 @@
   "notes": "High Note uses a modified icon for the  second and  third stack of  Stage Presence.\nThe maximum damage of High Note uses a  cosmetic critical strike.\nHigh Note will fire from wherever Seraphine is at the end of the cast time.\nThe impact delay depends solely on the missile speed. It is 0 seconds to 0.75 seconds (after end of cast time) within the standard cast radius, but can be increased further by Seraphine being moved away from the cast location during the cast time.\nThe area of effect is covered via expansion in seven distinct rings and targets can only be hit once.\nThe range indicator for the target range has a radius of 950 units, but the center of High Note can only be cast up to 900 units. The area indicator shows the proper 350 area of effect radius and cast location.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1300 / 875",
+  "speed": "1300 • 875",
   "spellEffects": "spellaoe",
   "spellshieldable": "true",
   "targeting": "Location",

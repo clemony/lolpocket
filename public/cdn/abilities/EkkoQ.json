@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Timewinder",
-  "width": "120 / 200",
+  "width": "120 • 200",
   "affects": "Enemies",
   "blurb": "Active:  Ekko throws a temporal grenade that deals magic damage to enemies hit. It expands at max range or upon hitting an enemy  champion,  slowing nearby enemies.",
   "castTime": "0.25",
@@ -78,7 +78,7 @@
   "notes": "Spell shield will block only a single instance of damage.\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1650 / 200 / 2300",
+  "speed": "1650 • 200 • 2300",
   "spellEffects": "spellaoe",
   "spellshieldable": "Special",
   "targeting": "Direction",

@@ -18,3 +18,12 @@ export interface DialogProps {
   description?: string
   defaultValue?: string
 }
+
+export interface EditableButtonInstance {
+  editing?: ShallowRef<boolean>
+  label?: ShallowRef<string>
+  randomizeLabel?: () => void
+  toggleEdit: () => void
+  //focusInput: () => void
+  // setFocusInput: (handler: (() => void) | null) => void
+}

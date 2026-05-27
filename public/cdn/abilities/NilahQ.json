@@ -4,7 +4,7 @@
   "width": "150",
   "affects": "Self, Enemies",
   "blurb": "Passive:  Nilah gains  armor penetration based on her  critical strike chance. Also, her basic attacks and Formless Blade against  champions  heal her based on her  critical strike chance; overhealing becomes a  shield that lasts a few seconds.",
-  "castTime": "0.35 : 0.28 (based on bonus attack speed) / None",
+  "castTime": "0.35 : 0.28 (based on bonus attack speed) • None",
   "cooldown": "4",
   "cost": "30",
   "damageType": "Physical damage",

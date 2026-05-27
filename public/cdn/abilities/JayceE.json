@@ -5,11 +5,12 @@
   "affects": "Allies",
   "blurb": "Active:  Jayce deploys an energy gate centered at the target location for a few seconds. All allied champions that touch the gate will gain a burst of  movement speed.",
   "castTime": "none",
+  "collisionRadius": "100",
   "cooldown": "20 / 18 / 16 / 14 / 12 / 10",
   "cost": "55",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce deploys an energy gate centered at the target location, lasting for 4 seconds and granting sight of its surroundings. Jayce and all allied champions can move through it to gain bonus movement speed that decays over 3 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce deploys an energy gate centered at the target location, lasting for 4 seconds and granting sight of its surroundings. Jayce and allied champions can move through the gate to gain bonus movement speed that decays over 3 seconds, with the duration refreshing continuously while within the gate.</p>",
       "leveling": [
         {
           "attribute": "Bonus Movement Speed",
@@ -21,13 +22,9 @@
           ]
         }
       ]
-    },
-    {
-      "description": "The buff is continuously refreshed while inside the gate."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/e",
-  "notes": "The Gate grants the bonus in an area  750 units wide and  100 units thick.",
   "resource": "Mana",
   "targeting": "Location",
   "targetRange": "650"

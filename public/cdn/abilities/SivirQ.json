@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Boomerang Blade",
-  "width": "180 / 200",
+  "width": "180 • 200",
   "affects": "Enemies",
   "blurb": "Active:  Sivir hurls her crossblade in the target direction that deals physical damage to enemies hit.",
   "castTime": "0.25 : 0.1 (based on bonus attack speed)",
@@ -72,10 +72,10 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/q",
-  "notes": "Due to the cast time effectively rounding up to full game ticks, at undesturbed game tick interval times the technical minimum cast time is 0.198 seconds reached at 99.8% bonus attack speed.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe damage reduction per unit hit resets back to full damage upon changing direction.\nBoomerang Blade will still return to Sivir even if she dies before it changes direction.\n Spell shield only blocks one instance of damage.",
+  "notes": "Due to the cast time effectively rounding up to full game ticks, at undisturbed game tick interval times the technical minimum cast time is 0.198 seconds reached at 99.8% bonus attack speed.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe damage reduction per unit hit resets back to full damage upon changing direction.\nBoomerang Blade will still return to Sivir even if she dies before it changes direction.\n Spell shield only blocks one instance of damage.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1450 / 1200",
+  "speed": "1450 • 1200",
   "spellEffects": "AoE",
   "spellshieldable": "Special",
   "targeting": "Direction",

@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Shock",
-      "effects": "Basic attacks on-hit against champions deal 1.2% <b>maximum</b> mana <b>bonus</b> physical damage. Can only be triggered on the same target once every 6.5 seconds from the same cast instance."
+      "effects": "Basic attacks on-hit against champions deal 1.2% <b>maximum</b> mana <b>bonus</b> physical damage."
     }
   ],
   "stats": {

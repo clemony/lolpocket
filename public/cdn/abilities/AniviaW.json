@@ -54,5 +54,5 @@
   "resource": "Mana",
   "spellshieldable": "false",
   "targeting": "Location",
-  "targetRange": "1000 / 100"
+  "targetRange": "1000 • 100"
 }

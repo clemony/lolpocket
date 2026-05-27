@@ -30,10 +30,10 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/e",
-  "notes": "The  dash distance can be extended to up-to 550 units when targeting across terrain. It will only extend for the distance needed to cross the wall.\nWhile  grounded or  rooted, Ekko loses the  bonus attack range from Phase Dive.\nPhase Drive's attack can  miss and be  blocked and  dodged, consuming the basic attack without dealing any damage.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.",
+  "notes": "The  dash distance can be extended to up-to 550 units when targeting across terrain. It will only extend for the distance needed to cross the wall.\nWhile  grounded or  rooted, Ekko loses the  bonus attack range from Phase Dive.\nPhase Drive's attack can  miss and be  blocked and  dodged, consuming the basic attack without dealing any damage.\nPhase Dive's attack  breaks stealth at the start of its cast time.\nThis is relevant for external sources of  stealth such as  Senna's  Curse of the Black Mist.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.",
   "resource": "Mana",
   "spellEffects": "Spell",
   "spellshieldable": "true",
   "targeting": "Direction",
-  "targetRange": "325 / 550"
+  "targetRange": "325 • 550"
 }

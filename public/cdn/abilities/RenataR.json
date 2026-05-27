@@ -8,7 +8,7 @@
   "castTime": "0.75",
   "cooldown": "150 / 130 / 110",
   "cost": "100",
-  "effectRadius": "750 /  1000",
+  "effectRadius": "1000 • 750",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renata launches a cloud of potent chemicals that travels in the target direction, granting sight of its surroundings. Enemy champions and minions hit become berserk for a duration.</p>",

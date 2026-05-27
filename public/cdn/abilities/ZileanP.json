@@ -4,10 +4,10 @@
   "affects": "Allies",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zilean generates 2 / 3.5 / 5 / 6 / 12 (based on level) experience (does not count towards his own level up) every 5 seconds. Time in a Bottle is on cooldown when the game starts and becomes disabled when everyone on Zilean's team including himself has reached level 18.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zilean generates 2 / 3.5 / 5 / 6 / 12 (based on level) experience (does not count towards his own level up) every 5 seconds. Time in a Bottle is on cooldown when the game starts and becomes disabled when Zilean and his allied champions have reached their maximum level.</p>"
     },
     {
-      "description": "When he has stored enough to level up an allied champion and grant the same amount of experience to himself, he can select them to channel for 1.2 seconds after a 0.5-second cast time. The channel is interrupted and disabled upon entering combat with enemy champions or taking damage from turrets, placing it on a 10-second cooldown. If Zilean interrupts it himself, it is placed on a 1-second cooldown, increased to 2 if he used a basic attack against a turret to do so. Additionally, if Zilean becomes affected by any form of crowd control, the channel is placed on a 10-second cooldown."
+      "description": "When he has stored enough to level up an allied champion and grant the same amount of experience to himself, he can select them to channel for 1.2 seconds after a 0.5-second cast time.The channel is interrupted and disabled upon entering combat with enemy champions or taking damage from turrets, placing it on a 10-second cooldown. If Zilean interrupts it himself, it is placed on a 1-second cooldown, increased to 2 if he used a basic attack against a turret to do so. Additionally, if Zilean becomes affected by any form of crowd control, the channel is placed on a 10-second cooldown."
     },
     {
       "description": "A successful channel will grant an equal amount of experience to the ally to-level-up and Zilean, with a combined minimum of 15% of the stored experience."

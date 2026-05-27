@@ -3,7 +3,7 @@
   "name": "Aegis Assault",
   "affects": "Enemies",
   "angle": "60°",
-  "castTime": "None / 0.25",
+  "castTime": "None • 0.25",
   "cooldown": "22 / 21 / 20 / 19 / 18",
   "cost": "80",
   "damageType": "Physical damage",

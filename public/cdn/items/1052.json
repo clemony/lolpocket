@@ -4,11 +4,6 @@
   "rank": "Basic",
   "buildsInto": [
     {
-      "id": 3146,
-      "name": "Hextech Gunblade",
-      "gold": 3000
-    },
-    {
       "id": 4635,
       "name": "Leeching Leer",
       "gold": 1265
@@ -22,6 +17,11 @@
       "id": 124011,
       "name": "Sword of Blossoming Dawn",
       "gold": 2350
+    },
+    {
+      "id": 3146,
+      "name": "Hextech Gunblade",
+      "gold": 3000
     },
     {
       "id": 3145,

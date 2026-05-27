@@ -141,15 +141,15 @@
       "resource": "Mana",
       "spellEffects": "Aoe",
       "spellshieldable": "True",
-      "targeting": "Unit / Location",
-      "targetRange": "925 / 950 / 500"
+      "targeting": "Unit • Location",
+      "targetRange": "925 • 950 • 500"
     },
     {
       "key": "E",
       "name": "Scatter the Weak",
-      "width": "120 / 200",
+      "width": "120 • 200",
       "affects": "Enemies",
-      "angle": "56° / 84°",
+      "angle": "56° • 84°",
       "blurb": "Active:  Syndra propels a wave of force in a cone in the target direction that deals magic damage and  knocks back enemies hit based on proximity.",
       "castTime": "0.25",
       "collisionRadius": "70",
@@ -185,7 +185,7 @@
       "notes": "Scatter the Weak is blocked by the portion of  Wind Wall it collides with. Spheres thrown will stop upon colliding with the wall.\nSpheres spawned at close range of the ability are more likely to be hit.\nEnemies and spheres will be knocked into the direction directly away from Syndra, and the knock back has no dispersion.\nScatter the Weak will knock back Spheres even farther if they are inside terrain, up until they reach open space. If the terrain they're inside in cannot be surpassed, the Spheres will be knocked in the opposite direction.\nScatter the Weak will delay the expiration of a Sphere until after it finishes being knocked back.\nThis ability will cast from wherever the caster is at the end of the cast time.\nOnce Scatter the Weak has been learned, an arrow directly in front of every  Dark Sphere will appear to signify the direction the sphere will be knocked towards, each one corresponding to Syndra's position. This is only visible to Syndra.",
       "projectile": "SPECIAL",
       "resource": "Mana",
-      "speed": "2500 / 2000",
+      "speed": "2500 • 2000",
       "spellEffects": "Aoe",
       "spellshieldable": "True",
       "targeting": "Direction"
@@ -194,7 +194,7 @@
       "key": "R",
       "name": "Unleashed Power",
       "affects": "Enemies",
-      "blurb": "Active:  Syndra creates a few  Dark Spheres and grabs a few more nearby, then barrages them at the target enemy champion. Each sphere deals magic damage upon hit, and remains on the ground for a few seconds.",
+      "blurb": "Passive:  Dark Sphere gains  ability haste.",
       "castTime": "none",
       "cooldown": "120 / 100 / 80",
       "cost": "100",
@@ -202,7 +202,7 @@
       "effectRadius": "3000",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Dark Sphere gains ability haste.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Dark Sphere's cooldown is reduced equivalent to an amount of ability haste.</p>",
           "leveling": [
             {
               "attribute": "Ability Haste",

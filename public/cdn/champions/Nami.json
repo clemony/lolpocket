@@ -27,7 +27,7 @@
       "cooldown": "12 / 11 / 10 / 9 / 8",
       "cost": "60",
       "damageType": "Magic damage",
-      "effectRadius": "200 / 225",
+      "effectRadius": "200 • 225",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nami launches a bubble at the target location that lands after 0.726 seconds, dealing magic damage to enemies hit and suspending them for 1.5 seconds, during which they are revealed.</p>",
@@ -131,7 +131,7 @@
       "notes": "If cast on an enemy with a  spell shield they will not take damage but Ebb and Flow will still continue to bounce, and the target who blocked the ability may be targeted again by the final bounce.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "2500 / 1500",
+      "speed": "2500 • 1500",
       "spellEffects": "aoe",
       "spellshieldable": "True",
       "targeting": "Unit",
@@ -194,7 +194,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Nami/ability-icon/e",
-      "notes": "Tidecaller's Blessing has a  forgiveness radius of 175 units.\nThe effect will not trigger against structures nor wards.\nThe empowerment given to allies respects  enchantment redirection.\nDamage instances of Tidecaller's Blessing beyond the first do not count as separate applications for the purposes of  Electrocute and  Phase Rush.",
+      "notes": "Tidecaller's Blessing has a  forgiveness radius of 175 units.\nThe effect will not trigger against structures nor wards.\nThe empowerment given to allies respects  enchantment redirection.\nDamage instances of Tidecaller's Blessing beyond the first do not count as separate applications for the purposes of  Electrocute.",
       "resource": "Mana",
       "spellEffects": "proc",
       "spellshieldable": "False",

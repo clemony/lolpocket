@@ -1,10 +1,10 @@
 {
   "key": "Q",
   "name": "Hate Spike",
-  "width": "120 / 180",
+  "width": "120 • 180",
   "affects": "Enemies",
   "blurb": "Active:  Evelynn fires her Lasher, dealing magic damage to the first enemy hit and marking them. Evelynn's next few attacks against the marked target will deal bonus magic damage.",
-  "castTime": "0.3 / None",
+  "castTime": "0.3 • None",
   "cooldown": "4",
   "cost": "40 / 45 / 50 / 55 / 60",
   "damageType": "Magic damage",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "description": "Evelynn's next 3 basic attacks or abilities against the marked target deal bonus magic damage.",
+      "description": "Evelynn's next 3 basic attacks on-hit or abilities against the marked target deal bonus magic damage.",
       "leveling": [
         {
           "attribute": "Bonus Magic Damage",
@@ -114,6 +114,6 @@
   "speed": "2400",
   "spellEffects": "Special",
   "spellshieldable": "True",
-  "targeting": "Direction / Proximity",
-  "targetRange": "800 / 680"
+  "targeting": "Direction • Proximity",
+  "targetRange": "800 • 680"
 }

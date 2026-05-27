@@ -7,7 +7,7 @@
   "cooldown": "10 / 9 / 8 / 7 / 6",
   "cost": "55",
   "damageType": "Magic damage",
-  "effectRadius": "180 / 200",
+  "effectRadius": "180 • 200",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sylas lashes out two chains that converge to the target location and extend beyond it up to a maximum range, dealing magic damage to enemies hit and slowing them for 1.5 seconds.</p>",
@@ -96,5 +96,5 @@
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
   "targeting": "Location",
-  "targetRange": "50 / 775"
+  "targetRange": "50 • 775"
 }

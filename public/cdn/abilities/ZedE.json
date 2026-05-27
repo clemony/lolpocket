@@ -7,7 +7,7 @@
   "cooldown": "5 / 4.5 / 4 / 3.5 / 3",
   "cost": "40",
   "damageType": "Physical damage",
-  "effectRadius": "315 / 290",
+  "effectRadius": "315 • 290",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zed slashes to deal physical damage to nearby enemies.</p>",
@@ -16,11 +16,11 @@
           "attribute": "Physical Damage",
           "modifiers": [
             {
-              "values": "70 / 95 / 120 / 145 / 170"
+              "values": "70 / 92.5 / 115 / 137.5 / 160"
             },
             {
               "unit": "% bonus AD",
-              "values": "80"
+              "values": "70"
             }
           ]
         }

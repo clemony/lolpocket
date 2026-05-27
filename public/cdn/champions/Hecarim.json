@@ -196,7 +196,7 @@
     {
       "key": "R",
       "name": "Onslaught of Shadows",
-      "width": "80 / 480",
+      "width": "80 • 480",
       "blurb": "Active:  Hecarim summons spectral riders and  charges in the target direction, dealing magic damage to enemies they pass through.",
       "castTime": "none",
       "cooldown": "140 / 120 / 100",
@@ -236,7 +236,7 @@
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "300 / 1000"
+      "targetRange": "300 - 1000"
     }
   ],
   "adaptiveType": "Physical damage",

@@ -13,7 +13,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zac bounces after the cast time, then bounces 3 additional times each second over 3 seconds. Each bounce deals magic damage to enemies hit, knocks them back over 1 second, and slows them by 20% for the same duration. An enemy can be hit by multiple bounces, but ones beyond the first deal 50% damage to them and do not apply the knock back.</p>",
       "leveling": [
         {
-          "attribute": "Primary Magic Damage",
+          "attribute": "Magic Damage Per Hit",
           "modifiers": [
             {
               "values": "120 / 190 / 260"
@@ -25,7 +25,7 @@
           ]
         },
         {
-          "attribute": "Reduced Magic Damage",
+          "attribute": "Reduced Damage Per Hit",
           "modifiers": [
             {
               "values": "60 / 95 / 130"

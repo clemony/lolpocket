@@ -52,7 +52,7 @@
       ]
     },
     {
-      "description": "Blunt Force Trauma as well as the triggering attack's damage is increased to 140% against minions and 200% against monsters.",
+      "description": "Blunt Force Trauma as well as the triggering attack's damage is increased to 140% against minions and 140% against monsters.",
       "leveling": [
         {
           "attribute": "Minimum Minion Physical Damage",
@@ -82,11 +82,11 @@
           "attribute": "Minimum Monster Physical Damage",
           "modifiers": [
             {
-              "values": "10 / 30 / 50 / 70 / 90"
+              "values": "7 / 21 / 35 / 49 / 63"
             },
             {
               "unit": "% bonus health",
-              "values": "10"
+              "values": "7"
             }
           ]
         },
@@ -94,11 +94,11 @@
           "attribute": "Maximum Monster Physical Damage",
           "modifiers": [
             {
-              "values": "14 / 42 / 70 / 98 / 126"
+              "values": "9.8 / 29.4 / 49 / 68.6 / 88.2"
             },
             {
               "unit": "% bonus health",
-              "values": "14"
+              "values": "9.8"
             }
           ]
         }

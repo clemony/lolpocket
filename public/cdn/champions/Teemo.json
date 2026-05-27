@@ -11,7 +11,7 @@
       "blurb": "Innate:  Teemo becomes  invisible after a brief moment remaining idle without taking damage, and will maintain so long as he remains idle or not  displaced.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Teemo gains invisibility after 1.5 seconds without moving, taking damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth, but will lose the stealth in this case if he is knocked up.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Teemo gains invisibility after 1.5 seconds without moving, taking non- over time damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth, but will lose the stealth in this case if he is knocked up.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Element of Surprise:</span> When Teemo breaks the stealth, he gains 20% / 40% / 60% / 80% (based on level) bonus attack speed for 5 seconds.</p>"
@@ -92,7 +92,7 @@
       "cost": "40",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Teemo gains bonus movement speed after 5 seconds without taking damage from enemy champions or turrets.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Teemo gains bonus movement speed after 5 seconds without taking non- over time damage from enemy champions or turrets.</p>",
           "leveling": [
             {
               "attribute": "Bonus Movement Speed",
@@ -132,7 +132,7 @@
       "key": "E",
       "name": "Toxic Shot",
       "affects": "Self",
-      "blurb": "Passive:  Teemo's  basic attacks deal bonus magic damage and inflict  poison.",
+      "blurb": "Passive:  Teemo's  basic attacks deal bonus magic damage  on-hit and inflict  poison.",
       "cooldown": "0",
       "cost": "0",
       "damageType": "Magic damage",
@@ -147,6 +147,10 @@
                   "values": "9 / 23 / 37 / 51 / 65"
                 },
                 {
+                  "unit": "% bonus AD",
+                  "values": "10"
+                },
+                {
                   "unit": "% AP",
                   "values": "30"
                 }
@@ -159,6 +163,10 @@
                   "values": "6 / 12 / 18 / 24 / 30"
                 },
                 {
+                  "unit": "% bonus AD",
+                  "values": "5"
+                },
+                {
                   "unit": "% AP",
                   "values": "10"
                 }
@@ -169,6 +177,10 @@
               "modifiers": [
                 {
                   "values": "24 / 48 / 72 / 96 / 120"
+                },
+                {
+                  "unit": "% bonus AD",
+                  "values": "20"
                 },
                 {
                   "unit": "% AP",
@@ -188,6 +200,10 @@
                   "values": "14.4 / 36.8 / 59.2 / 81.6 / 104"
                 },
                 {
+                  "unit": "% bonus AD",
+                  "values": "16"
+                },
+                {
                   "unit": "% AP",
                   "values": "48"
                 }
@@ -198,6 +214,10 @@
               "modifiers": [
                 {
                   "values": "9.6 / 19.2 / 28.8 / 38.4 / 48"
+                },
+                {
+                  "unit": "% bonus AD",
+                  "values": "8"
                 },
                 {
                   "unit": "% AP",
@@ -212,6 +232,10 @@
                   "values": "38.4 / 76.8 / 115.2 / 153.6 / 192"
                 },
                 {
+                  "unit": "% bonus AD",
+                  "values": "32"
+                },
+                {
                   "unit": "% AP",
                   "values": "64"
                 }
@@ -221,7 +245,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/e",
-      "notes": "Toxic Shot deals  persistent  proc damage, and does not trigger  spell effects.\nDespite this, it is special cased to trigger  Dark Harvest, but not  Cheap Shot,  Conqueror,  Scorchclaw's Slash,  Summon Aery and  Ocean Dragon Soul.\nThe initial hit from Toxic Shot will consume  Manaflow Band if it is available.\nThe attacks do not affect  structures nor  wards.",
+      "notes": "Toxic Shot deals  proc  damage over time, and does not trigger  spell effects.\nDespite this, it is special cased to trigger  Dark Harvest, but not  Cheap Shot,  Conqueror,  Scorchclaw's Slash,  Summon Aery and  Ocean Dragon Soul.\nThe damage per tick is not updated dynamically based on Teemo's current ability power.\nThe initial hit from Toxic Shot will consume  Manaflow Band if it is available.\nThe attacks do not affect  structures nor  wards.",
       "spellEffects": "mixed",
       "spellshieldable": "False",
       "targeting": "Passive"
@@ -232,14 +256,14 @@
       "affects": "Enemies",
       "blurb": "Active:  Teemo tosses a poisonous mushroom to the target location that becomes  stealthed and lasts for a while. It will bounce forward upon landing on another mushroom.",
       "castTime": "0.25",
-      "collisionRadius": "160 / 150",
+      "collisionRadius": "160 • 150",
       "cooldown": "0.25",
       "cost": "75 / 55 / 35",
       "damageType": "Magic damage",
       "effectRadius": "450",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on one that has already been placed, it will bounce forward from the placed mushroom for its cast distance, up to a cap, which can happen repeatedly.</p>",
           "leveling": [
             {
               "attribute": "Bounce Distance Cap",
@@ -315,11 +339,11 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/r",
-      "notes": "The bounce can occur an indefinite amount of times while Teemo is alive. If Teemo dies before Noxious Trap bounces on another, the trap will disappear.\n Rift Scuttler will not trigger Noxious Trap's explosion if it is not being attacked.\nEnemies who step on multiple Noxious Traps will only refresh the duration of the damage over time and slow.\nNoxious Trap's damage is determined when it detonates and not when planted, meaning if Teemo's  ability power changes, the scaling is also altered to affect the active damage of all Noxious Traps so long as they do not explode.\n Spell shield will prevent the damage over time and slow for all units but will not prevent the detonation itself.",
+      "notes": "Noxious Trap deals  persistent area damage, additionally tagged as  indirect damage, and applies  spell effects.\nThe bounce can occur an indefinite amount of times while Teemo is alive. If Teemo dies before Noxious Trap bounces on another, the trap will disappear.\n Rift Scuttler will not trigger Noxious Trap's explosion if it is not being attacked.\nEnemies who step on multiple Noxious Traps will only refresh the duration of the damage over time and slow.\nNoxious Trap's damage is determined when it detonates and not when planted, meaning if Teemo's  ability power changes, the scaling is also altered to affect the active damage of all Noxious Traps so long as they do not explode.\n Spell shield will prevent the damage over time and slow for all units but will not prevent the detonation itself.",
       "projectile": "TRUE",
       "rechargeRate": "35 / 30 / 25",
       "resource": "Mana",
-      "spellEffects": "aoedot",
+      "spellEffects": "special",
       "spellshieldable": "Special",
       "targeting": "Location",
       "targetRange": "600 / 675 / 750 / 825 / 900"
@@ -337,7 +361,7 @@
     "difficulty": 1
   },
   "lore": "Undeterred by even the most dangerous and threatening of obstacles, Teemo scouts the world with boundless enthusiasm and a cheerful spirit. A yordle with an unwavering sense of morality, he takes pride in following the Bandle Scout's Code, sometimes with such eagerness that he is unaware of the broader consequences of his actions. Though some say the existence of the Scouts is questionable, one thing is for certain: Teemo's conviction is nothing to be trifled with.",
-  "patchLastChanged": "26.04",
+  "patchLastChanged": "26.10",
   "positions": [
     "Jungle",
     "Support",

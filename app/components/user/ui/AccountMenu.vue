@@ -98,6 +98,7 @@ const isAdmin = computed(() => {
       </UButton>
       <template #content>
         <LazyAdminTestMenu v-if="isAdmin" v-bind="subProps" />
+        <DevOnly><LazyAdminTestMenu v-bind="subProps" /></DevOnly>
 
         <div v-for="(group, i) in menu" :key="i" class="p-1">
           <LazyThemeMenu v-if="i === 1" v-bind="subProps" />

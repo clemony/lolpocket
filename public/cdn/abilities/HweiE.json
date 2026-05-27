@@ -34,6 +34,9 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Crushing Maw's slow stacks multiplicatively with the slows applied by Molten Fissure, Grim Visage, and Spiraling Despair."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",

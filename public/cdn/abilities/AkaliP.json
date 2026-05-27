@@ -13,7 +13,7 @@
       "description": "When Akali exits the ring, for 2 seconds, she regains the bonus movement speed while facing nearby enemy champions and becomes empowered with Swinging Kama for 4 seconds, during which she cannot create another ring."
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Swinging Kama:</span> Akali's next basic attack is empowered to have its range doubled and deal 35 - 212 (based on level) (+ 60% bonus AD) (+ 55% AP) bonus magic damage.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Swinging Kama:</span> Akali's next basic attack is empowered to have an uncancellable windup, gain doubled range and deal 35 - 212 (based on level) (+ 60% bonus AD) (+ 55% AP) bonus magic damage.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/p",

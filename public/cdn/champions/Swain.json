@@ -9,10 +9,10 @@
       "name": "Ravenous Flock",
       "affects": "Self, Enemies",
       "blurb": "Innate: Enemy champions that  die will leave behind a Soul Fragment for some time.  Swain will collect nearby Soul Fragments, as well as with  Vision of Empire and  Nevermove.",
-      "effectRadius": "1100 /  250",
+      "effectRadius": "1100 • 250",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Enemy champions that die will leave behind a Soul Fragment for 16 seconds. Swain's ravens will collect nearby dropped Soul Fragments, as well as rip the Soul Fragments out of champions hit by Vision of Empire or Nevermove's recast. Once a raven has collected a Soul Fragment, it will fly towards Swain to grant it to him, while also granting sight of its surroundings during the travel.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">Soul Fragment:</span> For each stack, Swain gains 15 bonus health permanently. Upon claiming the fragment, he will heal for 6% of his maximum health.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Enemy champions that die will leave behind a Soul Fragment for 16 seconds. Swain's ravens will collect nearby dropped Soul Fragments, as well as rip the Soul Fragments out of champions hit by Vision of Empire or Nevermove's recast. Once a raven has collected a Soul Fragment, it will fly towards Swain to grant it to him, while also granting sight of its surroundings during the travel.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">Soul Fragment:</span> For each stack, Swain gains 15 bonus health permanently. Upon claiming a fragment, he will heal for 6% of his maximum health.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/p",
@@ -148,7 +148,7 @@
       "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
       "cost": "50 / 55 / 60 / 65 / 70",
       "damageType": "Magic damage",
-      "effectRadius": "100 / Global",
+      "effectRadius": "100 • Global",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain launches a demonic wave in the target direction.</p>"
@@ -178,10 +178,10 @@
       "notes": "Nevermove's missiles have their speed update to accelerate at specific times by the server. The client applies these speed increases after additional specified delays, while the hitbox behaviour itself only uses the timings noted above.\nNevermove's recast can be used during the cast time of other spells.\n Spell shield will block either the detonation on the first cast or the pull from the recast.\nIf the recast is blocked, the target will also prevent a Soul Fragment being collected from them.\nIf the root is not applied to, removed or its targets  blink or  dash, the recast becomes unavailable.\nThe pull will interrupt  channels at the very beginning, but does not keep the target stunned for the rest of the movement.\n Channels can be started successfully during the pull, provided the previous crowd control does not prevent them still.\nThis ability will cast from wherever the caster is at the start of the cast time.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1125 : 1800 (based on seconds in flight) / 2000 : 2800 (based on seconds in flight)",
+      "speed": "1125 : 1800 (based on seconds in flight) • 2000 : 2800 (based on seconds in flight)",
       "spellEffects": "Area of effect",
       "spellshieldable": "special",
-      "targeting": "Direction / Auto",
+      "targeting": "Direction • Auto",
       "targetRange": "850"
     },
     {
@@ -196,7 +196,7 @@
       "effectRadius": "650",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain frees the demon within himself, gaining Demonic Ascension and generating 50 Demonic Energy. Demonic Ascension is maintained with Demonic Energy, which decays by 5 every 0.5 seconds, increased to 7.5 after 5 seconds have elapsed, and is lost once all Demonic Energy is depleted to 0. Swain generates 10 Demonic Energy every 0.5 seconds while draining from at least one enemy champion, and fully restores it to the maximum of 50 upon scoring a champion takedown.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain frees the demon within himself, gaining Demonic Ascension and generating 50 Demonic Energy. Demonic Ascension is maintained with Demonic Energy, which decays by 5 every 0.5 seconds, increased to 7.5 after 5 seconds have elapsed. Demonic Ascension is lost once all Demonic Energy is depleted to 0. Swain generates 10 Demonic Energy every 0.5 seconds while draining from at least one enemy champion, and fully restores it to the maximum of 50 upon scoring a champion takedown.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Demonic Ascension:</span> Swain is ghosted and drains the lifeforce of nearby enemies, both dealing magic damage and healing himself every 0.5 seconds per target affected. The heal is reduced by 90% against minions and monsters.</p>",
@@ -248,7 +248,7 @@
           ]
         },
         {
-          "description": "After 2 seconds, Swain gains the ability to cast Demonflare, up to 100 times, and does so automatically when Demonic Ascension expires if Demonflare is not on cooldown."
+          "description": "After 2 seconds, Swain gains the ability to cast Demonflare, up to 100 times, and does so automatically when Demonic Ascension expires if Demonflare is not on cooldown at the time of expiration."
         },
         {
           "description": "The targets do not have to be visible to be hit by this ability."

@@ -30,9 +30,9 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/w",
-  "notes": "Crippling Strike deals  basic damage but will also trigger  spell effects by also being tagged as  spell damage.\nThis includes the  basic attack itself.\n Spell shield will not block the damage.\nThe attack's animation can be cancelled by casting  Decimate, but the attack will still land.\nThe cooldown reduction and mana refund will not trigger when killing jungle plants.",
+  "notes": "Crippling Strike deals  basic damage but will also trigger  spell effects by also being tagged as  spell damage.\nThis includes the  basic attack itself.\n Spell shields will negate all effects of Crippling Strike, including the damage of the basic attack itself.(unexpected)\nThe attack's animation can be cancelled by casting  Decimate, but the attack will still land.\nThe cooldown reduction and mana refund will not trigger when killing jungle plants.",
   "resource": "Mana",
   "spellEffects": "Special",
-  "spellshieldable": "special",
+  "spellshieldable": "true",
   "targeting": "Auto"
 }

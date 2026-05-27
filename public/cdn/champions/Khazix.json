@@ -16,7 +16,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/p",
-      "notes": "Any form of vision loss may trigger Unseen Threat, such as  Curse of the Black Mist,  nearsight and  Brushmaker.\n Void Assault grants Unseen Threat even if Kha'Zix never becomes unseen (e.g. affected by  true sight).\nOther  stealth such as  Senna's  Curse of the Black Mist does not do this.\nBoth the attack's damage and bonus spell damage are grouped under the same Spell ID.\nBecause of this, a single Unseen Threat attack does not trigger two  Electrocute stacks.",
+      "notes": "Any form of vision loss may trigger Unseen Threat, such as  Curse of the Black Mist,  nearsight and  Brushmaker.\n Void Assault grants Unseen Threat even if Kha'Zix never becomes unseen (e.g. affected by  true sight).\nOther  stealth such as  Senna's  Curse of the Black Mist does not do this.\nBoth the attack's damage and bonus spell damage are grouped under the same cast instance.\nBecause of this, a single Unseen Threat attack does not trigger two  Electrocute stacks.",
       "spellEffects": "spell",
       "spellshieldable": "False",
       "targeting": "Passive"
@@ -36,7 +36,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kha'Zix considers any enemy unit to be Isolated if they are not nearby to one of their allies. Taste Their Fear, Evolved Reaper Claws, and Evolved Spike Racks have special interactions against Isolated targets.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kha'Zix slashes the target enemy, dealing physical damage, increased by 110% against Isolated targets.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kha'Zix slashes the target enemy, dealing physical damage, increased to 210% against Isolated targets.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -51,7 +51,7 @@
               ]
             },
             {
-              "attribute": "Increased Damage",
+              "attribute": "Isolated Target Physical Damage",
               "modifiers": [
                 {
                   "values": "168 / 220.5 / 273 / 325.5 / 378"

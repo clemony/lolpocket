@@ -2,15 +2,15 @@
   "key": "W",
   "name": "Inferno Aegis",
   "affects": "Enemies",
-  "blurb": "Active: Shyvana  shields herself for a short time, with the shield strength increased for every nearby enemy champion. While it holds, she gains  bonus move speed, increased while facing enemy champions. Inferno Aegis can be recast while the shield holds and does so automatically after it expires or is broken.",
+  "blurb": "Active: Shyvana  shields herself for a short time, with the shield strength increased for every nearby enemy champion. For the same duration, she gains  bonus move speed, increased while facing enemy champions. Inferno Aegis can be recast while the shield holds and does so automatically after it expires or is broken.",
   "castTime": "none",
   "cooldown": "13 / 12 / 11 / 10 / 9",
   "cost": "0",
   "damageType": "Magic damage",
-  "effectRadius": "350",
+  "effectRadius": "350 •  2000 •  600",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana shields herself for 2.5 seconds, with the shield strength increased by 30% for every nearby enemy champion. While it holds, she gains 25% bonus movement speed, increased to 43.75% while facing visible enemy champions.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana shields herself for 2.5 seconds, with the shield strength increased by 30% for every nearby enemy champion. For the same duration, she gains 25% bonus movement speed, increased to 43.75% while facing visible enemy champions.</p>",
       "leveling": [
         {
           "attribute": "Shield Strength",
@@ -19,8 +19,8 @@
               "values": "60 / 80 / 100 / 120 / 140"
             },
             {
-              "unit": "% maximum health",
-              "values": "5"
+              "unit": "% bonus health",
+              "values": "12"
             }
           ]
         },
@@ -31,8 +31,8 @@
               "values": "18 / 24 / 30 / 36 / 42"
             },
             {
-              "unit": "% maximum health",
-              "values": "1.5"
+              "unit": "% bonus health",
+              "values": "3.6"
             }
           ]
         }
@@ -51,19 +51,15 @@
               "values": "80 / 100 / 120 / 140 / 160"
             },
             {
-              "unit": "% bonus AD",
-              "values": "40"
-            },
-            {
               "unit": "% AP",
-              "values": "20"
+              "values": "65"
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> If the explosion hits an enemy champion, Shyvana heals herself for 75 - 214.71 (based on level) (+ 10% bonus AD) (+ 5% AP), increased by 0% - 100% (based on her missing health) for a maximum heal of 150 - 429.41 (based on level) (+ 20% bonus AD) (+ 10% AP).</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> If the explosion hits an enemy champion, Shyvana heals herself for 60 - 104.71 (based on level) (+ 4% - 8.47% (based on level) missing health).</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/w",

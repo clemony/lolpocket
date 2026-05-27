@@ -43,10 +43,10 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/e",
-  "notes": "Malefic Vision's cast is special cased to not be cancelled if the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time.\nThe debuff is not applied if the target is untargetable by the time the cast completes.",
+  "notes": "Malefic Visions deals  persistent damage, additionally tagged as  indirect damage, and applies  spell effects.\nMalefic Vision's cast is special cased to not be cancelled if the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time.\nThe debuff is not applied if the target is untargetable by the time the cast completes.",
   "projectile": "FALSE",
   "resource": "Mana",
-  "spellEffects": "DoT",
+  "spellEffects": "special",
   "spellshieldable": "True",
   "targeting": "Unit",
   "targetRange": "650"

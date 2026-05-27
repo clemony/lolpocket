@@ -11,7 +11,7 @@
   "effectRadius": "240",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown and each bounce occurring over 0.495 seconds regardless of distance.</p>"
     },
     {
       "description": "The bomb explodes upon landing near an enemy, within terrain, or the final bounce, dealing magic damage to nearby enemies.",
@@ -36,7 +36,7 @@
   "notes": "Bouncing Bomb can be thrown or bounce over units/terrain.\n Spell shield will block the damage of the explosion, but the explosion can still damage other targets in the radius.\nZiggs will throw the bomb from his location at the end of the cast time, towards the pre-clamped cast location, causing the bounces to adjust their angle accordingly.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1700 / Fixed time",
+  "speed": "1700",
   "spellEffects": "spellaoe",
   "spellshieldable": "true",
   "targeting": "Location",

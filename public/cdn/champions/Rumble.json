@@ -569,7 +569,7 @@
       "width": "410 - 368.4",
       "affects": "Enemies",
       "blurb": "Active:  Rumble deploys a barrage of rockets along the target path that create a field which lingers for a few seconds.",
-      "castTime": "None / 0.5833",
+      "castTime": "None • 0.5833",
       "cooldown": "130 / 105 / 80",
       "cost": "0",
       "damageType": "Magic damage",

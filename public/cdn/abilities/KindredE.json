@@ -2,7 +2,7 @@
   "key": "E",
   "name": "Mounting Dread",
   "affects": "Enemies",
-  "blurb": "Active:  Lamb fires a shot at the target enemy that briefly  slows them applies a  stack of Mounting Dread. Lamb's  basic attacks against this target stack Mounting Dread up to a cap.",
+  "blurb": "Active:  Lamb fires a shot at the target enemy that briefly  slows them and applies a  stack of Mounting Dread. Lamb's  basic attacks against this target stack Mounting Dread up to a cap.",
   "castTime": "0.25",
   "cooldown": "14 / 12.5 / 11 / 9.5 / 8",
   "cost": "0",

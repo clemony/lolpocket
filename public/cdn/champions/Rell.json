@@ -137,7 +137,7 @@
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
       "targeting": "Location",
-      "targetRange": "400 / 100"
+      "targetRange": "100 - 400"
     },
     {
       "key": "W",
@@ -191,7 +191,7 @@
       "cooldown": "14 / 13 / 12 / 11 / 10",
       "cost": "40",
       "damageType": "Magic damage",
-      "effectRadius": "300 / 2200 / 1600",
+      "effectRadius": "300 • 2200 • 1600",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 15% bonus movement speed, increased to 30% while facing the empowered ally or a visible enemy champion.</p>"
@@ -223,7 +223,7 @@
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
-      "targeting": "Unit / Auto",
+      "targeting": "Unit • Auto",
       "targetRange": "1200"
     },
     {
@@ -235,7 +235,7 @@
       "cooldown": "120 / 100 / 80",
       "cost": "100",
       "damageType": "Magic damage",
-      "effectRadius": "450 /  375",
+      "effectRadius": "450 •  375",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell erupts with magnetic fury, pulling nearby enemies inward and creating a gravitational field around her for the next 2 seconds that deals magic damage every 0.25 seconds to nearby enemies and drags them towards her.</p>",
@@ -290,7 +290,7 @@
   },
   "fullName": "Rell Canwell",
   "lore": "The product of brutal experimentation at the hands of the Black Rose, Rell is a defiant, living weapon determined to topple Noxus. Her childhood was one of misery and horror, enduring unspeakable procedures to perfect and weaponize her magical control over metal... until she staged a violent escape, killing many of her captors in the process. Now branded as a criminal, Rell attacks Noxian soldiers on sight as she searches for survivors of her old “academy,” defending the meek while delivering violent death to her former overseers.",
-  "patchLastChanged": "26.07",
+  "patchLastChanged": "26.09",
   "positions": [
     "Support"
   ],

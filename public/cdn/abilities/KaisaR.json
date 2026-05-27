@@ -34,7 +34,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/r",
-  "notes": "Kai'Sa will issue a movement command to the targeted location regardless of whether the target location is valid. The dash is not buffered during this movement command. Kai'Sa will not dash if the targeted location becomes valid by walking in range or a nearby enemy champion becomes affected by Plasma.\nIf the targeted location is not valid, the range indicator will glow.\nThe enemy champion recently affected by Plasma must be in range of Kai'Sa for the targeted location to be valid, and not the targeted location itself.\nThe basic attack reset is not considered one for  Hail of Blades.",
+  "notes": "Kai'Sa will issue a movement command to the targeted location regardless of whether the target location is valid. The dash is not buffered during this movement command. Kai'Sa will not dash if the targeted location becomes valid by walking in range or a nearby enemy champion becomes affected by Plasma.\nIf the targeted location is not valid, the range indicator will glow.\nThe enemy champion recently affected by Plasma must be in range of Kai'Sa for the targeted location to be valid, and not the targeted location itself.",
   "resource": "Mana",
   "speed": "3800",
   "targeting": "Location",

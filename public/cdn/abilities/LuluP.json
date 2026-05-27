@@ -3,7 +3,7 @@
   "name": "Pix, Faerie Companion",
   "width": "60",
   "affects": "Self",
-  "blurb": "Innate:  Lulu is assisted by Pix, whom follows her around. Whenever Lulu basic attacks, Pix fires 3 bolts that deal magic damage to the first enemy hit.",
+  "blurb": "Innate:  Lulu is assisted by Pix, who follows her around. Whenever Lulu basic attacks, Pix fires 3 bolts that deal magic damage to the first enemy hit.",
   "damageType": "Magic damage",
   "effects": [
     {

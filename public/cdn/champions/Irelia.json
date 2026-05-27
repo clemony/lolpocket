@@ -22,7 +22,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/p",
-      "notes": "PENDING FOR TEST:: Parry interactions ( block and  dodge).\nIonian Fervor will not deal damage if the attack misses due to  blind, but its duration will be refreshed.\n Blade Surge cannot be missed while Irelia is  blinded, applying Ionian Fervor from the ability will not be prevented from that parry effect.\nIonian Fervor stacks are represented by a counter under Irelia's health bar. It is highlighted while the ability is at its maximum effect.",
+      "notes": "PENDING FOR TEST:: Parry interactions ( block and  dodge).\nIonian Fervor will not deal damage if the attack misses due to  blind, but its duration will be refreshed.\n Bladesurge cannot be missed while Irelia is  blinded, applying Ionian Fervor from the ability will not be prevented from that parry effect.\nIonian Fervor stacks are represented by a counter under Irelia's health bar. It is highlighted while the ability is at its maximum effect.",
       "spellEffects": "Proc",
       "targeting": "Passive"
     },
@@ -37,7 +37,7 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Irelia dashes 100 units through the target enemy's location, and upon collision or dash completion, she deals physical damage, applies on-hit effects, and heals herself. Bladesurge deals 50 - 237 (based on level) bonus physical damage to minions.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Irelia dashes 100 units through the target enemy's location, and upon collision or dash completion, she deals physical damage, applies on-hit effects, and heals herself. Bladesurge deals 50 - 259 (based on level) bonus physical damage to minions.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -82,12 +82,12 @@
       "key": "W",
       "name": "Defiant Dance",
       "width": "240",
-      "affects": "Self / Enemies",
-      "castTime": "None / 0.25",
+      "affects": "Self, Enemies",
+      "castTime": "None • 0.25",
       "cooldown": "20 / 18 / 16 / 14 / 12",
       "cost": "70 / 75 / 80 / 85 / 90",
       "damageType": "Physical damage",
-      "effectRadius": "300 /  120",
+      "effectRadius": "300 • 120",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Irelia assumes a defensive stance with her blades to charge for up to 1.5 seconds, during which she reduces incoming physical damage by 40% - 70% (based on level) (+ 7% per 100 AP) and incoming magic damage by 20% - 35% (based on level) (+ 3.5% per 100 AP). Additionally, Defiant Dance's damage increases over the first 0.75 seconds of the channel.</p>"
@@ -142,12 +142,12 @@
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
-      "targeting": "Auto / Direction"
+      "targeting": "Auto • Direction"
     },
     {
       "key": "E",
       "name": "Flawless Duet",
-      "width": "70",
+      "width": "140",
       "affects": "Enemies",
       "blurb": "Active:  Irelia sends a blade to the target location for a short time.\nFlawless Duet can be recast within the duration, and does so automatically after the duration. The recast cannot be  interrupted.",
       "castTime": "None",
@@ -187,7 +187,7 @@
       "notes": "Both casts count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger and it will be considered as an ability activation. This is the only ability with this interaction in the game.\nFlawless Duet will recast automatically at its end during  Defiant Dance despite being disabled.\nFlawless Duet will also recast automatically upon entering  resurrection.\nThe outgoing blades will stop flight upon touching  projectile blocking effects. The converging blades will instead be destroyed upon contact with such effects.\nThe blades will not stun nor deal damage if they fail to converge (i.e  Yasuo's  Wind Wall).\nBoth of Flawless Duet's casts will be buffered and cast when their cooldowns end if the player attempts to cast each within 0.3 seconds of their cooldown ending.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "2000 / Distance ÷ 0.1 s",
+      "speed": "2000 • Distance ÷ 0.1 s",
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
       "targeting": "Location",
@@ -229,11 +229,11 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/r",
-      "notes": "Enemies that cross the perimeter are not marked Unsteady.\nThis ability will cast from wherever the caster is at the end of the cast time.\nIn addition to its  projectile, Vanguard's Edge will check for enemy champions within a  90-unit radius area from the projectile's origin point.\nThe projectile interacts with projectile-blocking effects but the area check doesn't.\nThe blades will still expand if the champion hit by the blades is protected by a  spell shield.\nThe  sight is granted in a 1350 unit radius at the location of the enemy champion at the time of being hit and can be blocked by terrain.\nIf this spell is casted while there are blades from a previous Vanguard's Edge still active, the previous blades will disappear.",
+      "notes": "Vanguard's Edge deals  area damage, and applies  spell effects. The damage dealt by the blades after they land on the ground is additionally tagged as  indirect.\nEnemies that cross the perimeter are not marked Unsteady.\nThis ability will cast from wherever the caster is at the end of the cast time.\nVanguard's Edge maintains its casting angle direction in relation to Irelia if he moves during the cast time.\nIn addition to its  projectile, Vanguard's Edge will check for enemy champions within a  90-unit radius area from the projectile's origin point.\nThe projectile interacts with projectile-blocking effects but the area check doesn't.\nThe blades will still expand if the champion hit by the blades is protected by a  spell shield.\nThe  sight is granted in a 1350 unit radius at the location of the enemy champion at the time of being hit and can be blocked by terrain.\nIf this spell is cast while there are blades from a previous Vanguard's Edge still active, the previous blades will disappear.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "2000",
-      "spellEffects": "spellaoe",
+      "spellEffects": "special",
       "spellshieldable": "special",
       "targeting": "Direction",
       "targetRange": "1000"

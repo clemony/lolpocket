@@ -6,10 +6,10 @@
   "castTime": "0.25",
   "cooldown": "21 / 19.5 / 18 / 16.5 / 15",
   "cost": "75",
-  "effectRadius": "360 / 225",
+  "effectRadius": "360 • 225",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Trundle erects a pillar of ice at the target location for 6 seconds, which knocks back units hit to 225 units from its center. The pillar acts as terrain and slows nearby enemies.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Trundle erects a pillar of ice at the target location for 6 seconds, which knocks back units hit up to 225 units from its center. The pillar acts as terrain and slows nearby enemies.</p>",
       "leveling": [
         {
           "attribute": "Slow",

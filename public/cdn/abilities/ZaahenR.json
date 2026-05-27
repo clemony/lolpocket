@@ -63,5 +63,5 @@
   "spellEffects": "spellaoe",
   "spellshieldable": "special",
   "targeting": "Location",
-  "targetRange": "10 / 600"
+  "targetRange": "10 - 600"
 }

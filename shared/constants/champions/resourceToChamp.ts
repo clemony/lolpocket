@@ -1,4 +1,4 @@
-// Updated Patch 16.9 - 05/08/2026 03:28:22 PM CDT
+// Updated Patch 16.10 - 05/27/2026 01:35:56 PM CDT
 
 export const resourceToChamp: Record<string, number[]> = {
   "Blood well": [
@@ -173,8 +173,7 @@ export const resourceToChamp: Record<string, number[]> = {
     154
   ],
   "Rage": [
-    150,
-    421
+    150
   ],
   "Courage": [
     240
@@ -183,6 +182,7 @@ export const resourceToChamp: Record<string, number[]> = {
     82
   ],
   "Fury": [
+    421,
     58,
     102,
     23

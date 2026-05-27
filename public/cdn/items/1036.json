@@ -69,6 +69,11 @@
       "gold": 3500
     },
     {
+      "id": 3134,
+      "name": "Serrated Dirk",
+      "gold": 1000
+    },
+    {
       "id": 323004,
       "name": "Manamune",
       "gold": 2900
@@ -102,11 +107,6 @@
       "id": 4003,
       "name": "Lifeline",
       "gold": 1600
-    },
-    {
-      "id": 3134,
-      "name": "Serrated Dirk",
-      "gold": 1000
     },
     {
       "id": 3142,

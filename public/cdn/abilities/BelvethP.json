@@ -15,6 +15,6 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/p",
-  "notes": "Bel'Veth's attack speed cap is increased to 9999.0, however this value is already way beyond the technical limit for attack speed.\nDeath in Lavender's  takedown effect will not trigger against monsters if they were slain by an enemy.\nDeath in Lavender stacks are indicated under Bel'Veth's health bar.\nBel'Veth's on-hit damage modifier will reduce the damage dealt by on-hit effects even if they aren't meant to be affected by on-hit modifiers (eg.  Statikk Shiv).(bug)",
+  "notes": "Bel'Veth's attack speed cap is increased to 9999.0, however this value is already way beyond the technical limit for attack speed.\nDeath in Lavender's  takedown effect will not trigger against monsters if they were slain by an enemy.\nDeath in Lavender stacks are indicated under Bel'Veth's health bar.\nBel'Veth's on-hit damage modifier will reduce the damage dealt by on-hit effects even if they aren't meant to be affected by on-hit modifiers (e.g.  Grasp of the Undying).(bug)\nThis includes damage dealt by on-hit effects triggered by other effects such as  Guinsoo's Rageblade's Seething Strike.",
   "targeting": "Passive"
 }

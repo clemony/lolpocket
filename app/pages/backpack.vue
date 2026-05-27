@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { DragDropProvider } from "@dnd-kit/vue"
+import { DragDropProvider, DragOverlay } from "@dnd-kit/vue"
 import { useTableProvider } from "~/composables/ui/useTableProvider"
 import { provideBackpack } from "~/domain/backpack/useBackpack"
 import {
@@ -25,18 +25,11 @@ definePageMeta({
 
 const { routeFolder } = useFolders()
 const store = pocketStore()
-const { sidebarFolderRefs, view } = provideBackpack()
+const { view } = provideBackpack()
 
-onMounted(() => {
-  sidebarFolderRefs.value = store.sidebarFolderRefs
-})
-onBeforeRouteLeave(() => {
-  store.sidebarFolderRefs = sidebarFolderRefs.value
-})
-
-const manager = provideDragManager()
-
-const inSidebar = shallowRef<boolean>(false)
+const sidebarRef = useTemplateRef<{ sidebarRef: HTMLElement }>("sidebarRef")
+const sidebar = computed(() => sidebarRef.value?.sidebarRef)
+const provider = provideDragManager({ reference: sidebar })
 </script>
 
 <template>
@@ -46,14 +39,21 @@ const inSidebar = shallowRef<boolean>(false)
       :ui="{
         base: 'max-h-[calc(100vh-var(--ui-header-height)] w-full flex-1 translate-y-(--ui-header-height) gap-4 overflow-hidden px-8 py-7'
       }">
-      <DragDropProvider :manager @drag-end="onSidebarDragEnd">
-        <BackpackSidebar
-          ref="sidebar"
-          @update:model-value="inSidebar = $event" />
-
+      <DragDropProvider
+        :manager="provider.manager"
+        @drag-end="onSidebarDragEnd">
+        <BackpackSidebar ref="sidebarRef" />
         <UDashboardPanel resizable>
           <NuxtPage :folder="routeFolder" :view />
         </UDashboardPanel>
+
+        <DragOverlay
+          tag="div"
+          :drop-animation="null"
+          class="pointer-events-none size-0 opacity-0" />
+        <Teleport to="body">
+          <SortableBackpackGhost />
+        </Teleport>
       </DragDropProvider>
     </UDashboardGroup>
   </Layout>

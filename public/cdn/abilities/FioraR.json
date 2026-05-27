@@ -6,7 +6,7 @@
   "castTime": "none",
   "cooldown": "110 / 90 / 70",
   "cost": "100",
-  "effectRadius": "550 / 500",
+  "effectRadius": "550 • 500",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Duelist's Dance's bonus movement speed is increased.</p>",

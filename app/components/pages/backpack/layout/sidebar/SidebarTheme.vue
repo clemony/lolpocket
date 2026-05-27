@@ -22,31 +22,40 @@ defineOptions({
           '[&_.label]:w-full [&_.label]:truncate [&_.label]:text-start [&_.label]:align-baseline [&_.label]:text-md [&_.label]:font-medium [&_.label]:tracking-tight',
 
           /* dragging */
-          'group-dragging/btn:bg-p1/80 group-dragging/btn:inset-ring! group-dragging/btn:inset-ring-p2! group-dragging/btn:backdrop-blur-sm',
+          'dragging:bg-p1/80 dragging:inset-ring! dragging:inset-ring-p2! dragging:backdrop-blur-sm',
 
           /* active */
           'group-open/btn:bg-p1 group-active/btn:bg-p1',
 
           /* targetted */
-          'group-targetted/btn:bg-neutral group-targetted/btn:[&_span]:text-nc! group-targetted/btn:[&_svg]:text-nc',
+          'group-targetted/btn:bg-neutral group-targetted/btn:text-nc group-targetted/btn:[&_span]:text-nc!',
+
+          /* editing */
+          /*           'group-data-[editing=false]/btn:pointer-events-none group-data-[editing=true]/btn:pointer-events-auto', */
 
           /* droppable */
-          ''
+          '',
+
+          /* trailing */
+          '[&_.trailing-icon]:transition-rotate [&_.trailing-icon]:pointer-events-none [&_.trailing-icon]:-ml-1 [&_.trailing-icon]:size-4.5 [&_.trailing-icon]:shrink-0 [&_.trailing-icon]:align-icon [&_.trailing-icon]:opacity-50 [&_.trailing-icon]:duration-200 [&_.trailing-icon]:group-open/btn:-rotate-180 [&_.trailing-icon]:group-hover/btn:opacity-100 group-targetted/btn:[&_.trailing-icon]:text-nc group-targetted/btn:[&_.trailing-icon]:opacity-100'
         ),
-        leadingAvatar: '-translate-x-0.5',
-        trailingIcon:
-          'trailing-rotate pointer-events-none size-4 shrink-0 align-icon group-open/btn:-rotate-180',
+        leadingAvatar: 'pointer-events-none -translate-x-0.5',
+        trailingIcon: cn(
+          'trailing-rotate pointer-events-none -ml-1 size-4! shrink-0 align-icon opacity-60 group-open/btn:-rotate-180 group-hover/btn:opacity-100'
+        ),
+        leadingIcon:
+          'pointer-events-none group-targetted/btn:text-nc! group-targetted/btn:**:text-nc!',
         label:
-          'truncate text-start align-baseline text-sm font-medium tracking-tight'
+          'pointer-events-none truncate text-start align-baseline text-sm font-medium tracking-tight'
       },
       badge: {
-        base: 'h-4.25! shrink-0 rounded-[0.44rem] px-1.5',
+        base: 'pointer-events-none h-4.25! shrink-0 rounded-[0.44rem] px-1.5',
         label: 'text-xs font-semibold'
       },
       input: {
-        root: 'inline-flex h-10 max-h-10 max-w-full grow align-baseline',
+        root: 'inline-flex h-10 max-h-10 w-full max-w-full grow align-baseline',
         leadingAvatar: '-translate-x-0.5',
-        base: 'pr-14 pl-10 text-start align-baseline text-sm font-medium tracking-tight select-all'
+        base: 'w-full scrollbar-none overflow-x-scroll pr-14 pl-10.75 text-start align-baseline text-sm font-medium tracking-tight select-all'
       },
       contextMenu: pocketSidebarContextUi
     }">

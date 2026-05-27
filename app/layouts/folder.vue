@@ -8,12 +8,10 @@ const { folderId, sidebarCollapsed, onFolderUpdate, toggleSidebar } =
   useBackpack()
 
 const folderItems = computed(() => [
-  ...(defaults.value as SortableFolder[])
-    .map((f) => ({
-      ...f,
-      slot: "data"
-    }))
-    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+  ...(defaults.value as SortableFolder[]).map((f) => ({
+    ...f,
+    slot: "data"
+  }))
 ])
 
 const toggle = computed<ButtonProps>(() => ({

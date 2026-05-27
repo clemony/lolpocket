@@ -8,7 +8,7 @@
   "cooldown": "2",
   "cost": "35",
   "damageType": "Physical damage",
-  "effectRadius": "150 / 300",
+  "effectRadius": "150 • 300",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Basic attacks on-hit against champions reduce Missile Barrage's remaining recharge time by 2 - 4 (based on critical strike chance) seconds.</p>"
@@ -60,5 +60,5 @@
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
   "targeting": "Direction",
-  "targetRange": "1300 / 1500"
+  "targetRange": "1300 • 1500"
 }

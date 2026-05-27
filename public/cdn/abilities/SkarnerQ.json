@@ -4,14 +4,14 @@
   "width": "180",
   "affects": "Enemies",
   "blurb": "Active: Skarner ends Shattered Earth by throwing his boulder, which explodes upon colliding with the first enemy hit, mimicking the final attack's damage and effects.",
-  "castTime": "0.25 / none",
+  "castTime": "0.25 • none",
   "cooldown": "8 / 6.75 / 5.5 / 4.25 / 3",
   "cost": "30",
   "damageType": "Physical damage",
   "effectRadius": "300",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skarner ends Shattered Earth by throwing his boulder in the target direction. It explodes upon colliding with the first enemy hit, applying the same damage and slow to the target and surrounding enemies as the final attack would.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skarner ends Shattered Earth by throwing his boulder in the target direction. It explodes upon colliding with the first enemy hit, applying the same damage and slow to the target and surrounding enemies as Shattered Earth's final empowered attack would.</p>",
       "leveling": [
         {
           "attribute": "Physical Damage",

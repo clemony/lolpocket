@@ -3,7 +3,7 @@
   "name": "Volley",
   "width": "20",
   "affects": "Enemies",
-  "angle": "27.75°/ 37° / 46.25° / 4.625°",
+  "angle": "27.75° / 37° / 37° / 46.25° / 46.25° • 4.625°",
   "blurb": "Active:  Ashe fires arrows in a cone dealing physical damage and applying  Critical Slow to the first enemies hit.",
   "castTime": "0.25",
   "cooldown": "18 / 14.5 / 11 / 7.5 / 4",

@@ -19,7 +19,7 @@
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/e",
   "notes": "The  dash distance can be extended to up-to 500 units when targeting across terrain. It will only extend for the distance needed to cross the wall.\nThis may upscale his dash speed so that the dash takes the same total time as the standard maximum-range dash.\nIf Umbral Dash is cast towards a movement command's end point, Umbral Dash will re-issue a movement command to that point when the dash ends.\nHe will be unable to buffer any commands during the dash if it is casted this way. (bug)\nAatrox's model darkens for 1.5 seconds upon casting Umbral Dash, which is a remnant of an attack damage buff he received before it got removed in V9.9.",
-  "speed": "800 / Up to 1340",
+  "speed": "800 • 1340",
   "targeting": "Location",
-  "targetRange": "75 / 300 / 500"
+  "targetRange": "75 - 300 • 500"
 }

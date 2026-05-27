@@ -32,7 +32,7 @@
     {
       "key": "Q",
       "name": "Piltover Peacemaker",
-      "width": "120 / 180",
+      "width": "120 • 180",
       "affects": "Enemies",
       "blurb": "Active:  Caitlyn revs up her rifle to unleash a penetrating shot that deals physical damage to enemies hit.",
       "castTime": "0.625",
@@ -183,7 +183,7 @@
       "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nThe recoil can be used to pass through terrain.\nIf Caitlyn buffers  Piltover Peacemaker during 90 Caliber Net's cast time,  Piltover Peacemaker will start after the cast time.\nIf Caitlyn buffers an ability or basic attack during this ability's cast time, the buffered ability or basic attack will instead start after the dash ends.\nOther abilities can be cast while  dashing if they are input after the cast time.\n90 Caliber Net's missile will fail to fire if Caitlyn is  suppressed during the cast time.(unexpected)",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1600 / 1000",
+      "speed": "1600 • 1000",
       "spellEffects": "Single target",
       "spellshieldable": "True",
       "targeting": "Direction"

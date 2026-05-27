@@ -2,7 +2,7 @@
   "key": "W",
   "name": "Blade's Reach",
   "affects": "Enemies",
-  "castTime": "0.55 / None",
+  "castTime": "0.55 • None",
   "cooldown": "13 / 12 / 11 / 10 / 9",
   "cost": "40 / 45 / 50 / 55 / 60",
   "damageType": "Physical damage",
@@ -38,5 +38,5 @@
   "spellEffects": "Area of effect",
   "spellshieldable": "True",
   "targeting": "Direction",
-  "targetRange": "700 / 900"
+  "targetRange": "700 • 900"
 }

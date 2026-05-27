@@ -21,7 +21,7 @@
             },
             {
               "unit": "% per 100 bonus AD",
-              "values": "4"
+              "values": "3.5"
             }
           ]
         },
@@ -34,7 +34,7 @@
             },
             {
               "unit": "% per 100 bonus AD",
-              "values": "8"
+              "values": "7"
             }
           ]
         }
@@ -56,18 +56,23 @@
           "attribute": "Bonus Physical Damage On-Hit",
           "modifiers": [
             {
-              "values": "5 / 13 / 21 / 29 / 37 / 45"
+              "values": "6 / 12 / 18 / 24 / 30 / 36"
             },
             {
               "unit": "% bonus AD",
-              "values": "25"
+              "values": "20"
+            },
+            {
+              "tooltip": "Scaling per rank:\n1 / 1.2 / 1.4 / 1.6 / 1.8 / 2% bonus health",
+              "unit": "% bonus health",
+              "values": "1 - 2"
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr gains an additional 20% - 75.88% (based on level) bonus attack speed. The empowered attacks deal an additional 2% - 4.24% (based on level) (+ 3% per 100 bonus AD) of the target's maximum health bonus physical damage if used within 4 seconds. Udyr's next two basic attacks on-hit in any Stance within 4 seconds are each empowered to strike with lightning[ 6 times over 1 second, ][ every 0.2 seconds over 1 second, ]dealing bonus magic damage equal to 1.5% - 3.18% (based on level) (+ 0.8% per 100 AP) of the target's maximum health per hit, chaining to up to 3 nearby visible enemies and being able to hit the same target multiple times, for a total of 9% - 19.06% (based on level) (+ 4.8% per 100 AP) of the target's maximum health. Each lightning strike deals a minimum of 40 - 174.12 (based on level) against minions and is capped at 15 (+ 100% bonus AD) (+ 50% AP) against monsters.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr gains an additional 20% - 75.88% (based on level) bonus attack speed. The empowered attacks deal an additional 2% - 4.24% (based on level) (+ 1.5% per 100 bonus AD) (+ 0.1% per 100 bonus health) of the target's maximum health bonus physical damage if used within 4 seconds. Udyr's next two basic attacks on-hit in any Stance within 4 seconds are each empowered to strike with lightning[ 6 times over 1 second, ][ every 0.2 seconds over 1 second, ]dealing bonus magic damage equal to 1.5% - 3.18% (based on level) (+ 0.6% per 100 AP) of the target's maximum health per hit, chaining to up to 3 nearby visible enemies and being able to hit the same target multiple times, for a total of 9% - 19.06% (based on level) (+ 3.6% per 100 AP) of the target's maximum health. Each lightning strike deals a minimum of 40 - 174.12 (based on level) against minions and is capped at 15 (+ 100% bonus AD) (+ 50% AP) against monsters.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/q",

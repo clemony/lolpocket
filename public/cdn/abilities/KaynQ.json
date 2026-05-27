@@ -86,13 +86,10 @@
           ]
         }
       ]
-    },
-    {
-      "description": "Reaping Slash's dash speed scales with Kayn's total movement speed."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kayn/ability-icon/q",
-  "notes": "Spell shields will block only a single instance of damage - either the dash or the slash.\nIf the  dash is  interrupted, Kayn will not swing his scythe.\nReaping Slash's swing can be performed quicker if the dash stops prematurely upon colliding with terrain.\nAs the  Shadow Assassin, an  alternate icon for Reaping Slash is used but has no modified effect.\nOther abilities can be queued while casting Reaping Slash.\nItem actives are locked out while casting.\nThe swing's animation has a 0.25-second  lockout time.\nKayn will only be able to move after 0.416 seconds.",
+  "notes": "Reaping Slash's dash speed is increased by Kayn's bonus movement speed.\n Spell shields will block only a single instance of damage - either the dash or the slash.\nIf the  dash is  interrupted, Kayn will not swing his scythe.\nReaping Slash's swing can be performed quicker if the dash stops prematurely upon colliding with terrain.\nAs the  Shadow Assassin, an  alternate icon for Reaping Slash is used but has no modified effect.\nOther abilities can be queued while casting Reaping Slash.\nItem actives are locked out while casting.\nThe swing's animation has a 0.25-second  lockout time.\nKayn will only be able to move after 0.416 seconds.",
   "resource": "Mana",
   "spellEffects": "Area of effect",
   "spellshieldable": "Special",

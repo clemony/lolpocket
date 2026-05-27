@@ -70,6 +70,6 @@
   "resource": "Mana",
   "spellEffects": "Aoe",
   "spellshieldable": "True",
-  "targeting": "Unit / Location",
-  "targetRange": "925 / 950 / 500"
+  "targeting": "Unit • Location",
+  "targetRange": "925 • 950 • 500"
 }

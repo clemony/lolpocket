@@ -10,7 +10,7 @@
   "effectRadius": "825",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zeri discharges an electric nova that deals magic damage to nearby enemies. If this hits at least one enemy champion, she enters Overcharged for 5 seconds. Hitting an enemy champion with an ability or charged attack will extend the duration by 1.5 seconds, up to its original duration.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zeri discharges an electric nova that deals magic damage to nearby enemies. If this hits at least one enemy champion, she enters Overcharged for 5 seconds. Hitting an enemy champion with an ability or charged attack will extend the duration by 2.5 seconds, up to its original duration.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -20,7 +20,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "100"
+              "values": "60"
             },
             {
               "unit": "% AP",
@@ -31,13 +31,13 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overcharged:</span> Zeri gains 10% bonus movement speed and 30% bonus attack speed and an increased attack speed cap of 1.6875. Burst Fire is empowered to have a 20% shorter cast time and instead fire 3 rounds that travel with increased speed. The first round to hit an enemy per cast instance chains electricity to the nearest visible enemy within 650 units of the target, up to 4 subsequent targets, to deal 40% AD physical damage. This damage can critically strike for (40% + 12%) AD bonus physical damage.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overcharged:</span> Zeri gains 15% bonus movement speed and 30% bonus attack speed and an increased attack speed cap of 1.6875. Burst Fire is empowered to have a 20% shorter cast time and a decreased spread angle, and instead fires 3 rounds that travel with increased speed. The first round to hit an enemy per cast instance chains electricity to the nearest visible enemy within 650 units of the target, up to 4 subsequent targets, to deal 40% AD physical damage. This damage can critically strike for (40% + 12%) AD bonus physical damage.</p>"
     },
     {
-      "description": "During Overcharged, Zeri can generate stacks of Hypercharged from enemy champions that last 1.5 seconds. She generates 1 stack for each one she hits with an ability or charged attack, increased to 3 on abilities that critically strike. Subsequent hits refresh the duration of Hypercharged. Burst Fire grants stacks only against the first target hit."
+      "description": "During Overcharged, Zeri can generate stacks of Hypercharged from enemy champions that last 2.5 seconds. She generates 1 stack for each one she hits with an ability or charged attack, increased to 3 on abilities that critically strike. Subsequent hits refresh the duration of Hypercharged. Burst Fire grants stacks only against the first target hit."
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hypercharged:</span> For each stack, Zeri gains 1% bonus movement speed.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hypercharged:</span> For each stack, Zeri gains 1.5% bonus movement speed.</p>"
     },
     {
       "description": "Zeri can move during Lightning Crash's cast time."

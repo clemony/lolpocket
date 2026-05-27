@@ -4,14 +4,14 @@
   "affects": "Enemies",
   "blurb": "Active:  Teemo tosses a poisonous mushroom to the target location that becomes  stealthed and lasts for a while. It will bounce forward upon landing on another mushroom.",
   "castTime": "0.25",
-  "collisionRadius": "160 / 150",
+  "collisionRadius": "160 • 150",
   "cooldown": "0.25",
   "cost": "75 / 55 / 35",
   "damageType": "Magic damage",
   "effectRadius": "450",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on one that has already been placed, it will bounce forward from the placed mushroom for its cast distance, up to a cap, which can happen repeatedly.</p>",
       "leveling": [
         {
           "attribute": "Bounce Distance Cap",
@@ -87,11 +87,11 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/r",
-  "notes": "The bounce can occur an indefinite amount of times while Teemo is alive. If Teemo dies before Noxious Trap bounces on another, the trap will disappear.\n Rift Scuttler will not trigger Noxious Trap's explosion if it is not being attacked.\nEnemies who step on multiple Noxious Traps will only refresh the duration of the damage over time and slow.\nNoxious Trap's damage is determined when it detonates and not when planted, meaning if Teemo's  ability power changes, the scaling is also altered to affect the active damage of all Noxious Traps so long as they do not explode.\n Spell shield will prevent the damage over time and slow for all units but will not prevent the detonation itself.",
+  "notes": "Noxious Trap deals  persistent area damage, additionally tagged as  indirect damage, and applies  spell effects.\nThe bounce can occur an indefinite amount of times while Teemo is alive. If Teemo dies before Noxious Trap bounces on another, the trap will disappear.\n Rift Scuttler will not trigger Noxious Trap's explosion if it is not being attacked.\nEnemies who step on multiple Noxious Traps will only refresh the duration of the damage over time and slow.\nNoxious Trap's damage is determined when it detonates and not when planted, meaning if Teemo's  ability power changes, the scaling is also altered to affect the active damage of all Noxious Traps so long as they do not explode.\n Spell shield will prevent the damage over time and slow for all units but will not prevent the detonation itself.",
   "projectile": "TRUE",
   "rechargeRate": "35 / 30 / 25",
   "resource": "Mana",
-  "spellEffects": "aoedot",
+  "spellEffects": "special",
   "spellshieldable": "Special",
   "targeting": "Location",
   "targetRange": "600 / 675 / 750 / 825 / 900"

@@ -17,16 +17,17 @@ export function newRandomPocket(options?: {
   position?: PositionKey
 }) {
   const position =
-    options?.position ||
-    (getRandom(
-      positionSchema.options.filter((p) => p !== "all")
-    ) as PositionKey)
+    options?.position && options?.position !== "all"
+      ? options?.position
+      : (getRandom(
+          positionSchema.options.filter((p) => p !== "all")
+        ) as PositionKey)
 
   const itemSet = computed<ItemSet>(() => {
     const set: ItemSet = newItemSet()
-    set.items = !options?.map
-      ? generateItemSet(11, position)
-      : generateItemSet(options.map, position)
+    set.items = options?.map
+      ? generateItemSet(options.map, position)
+      : generateItemSet(11, position)
     return set
   })
 

@@ -1,8 +1,8 @@
 {
   "key": "R",
   "name": "Dawning Shadow",
-  "width": "320 / 2400",
-  "affects": "Allies / Enemies",
+  "width": "320 • 2400",
+  "affects": "Self, Allies, Enemies",
   "blurb": "Active:  Senna fires a massive beam in the target direction.",
   "castTime": "1",
   "cooldown": "140 / 120 / 100",
@@ -47,8 +47,8 @@
               "values": "50"
             },
             {
-              "unit": " per Mist",
-              "values": "1.5"
+              "unit": "% Mist",
+              "values": "150"
             }
           ]
         }

@@ -28,7 +28,7 @@
       "width": "150",
       "affects": "Self, Enemies",
       "blurb": "Passive:  Nilah gains  armor penetration based on her  critical strike chance. Also, her basic attacks and Formless Blade against  champions  heal her based on her  critical strike chance; overhealing becomes a  shield that lasts a few seconds.",
-      "castTime": "0.35 : 0.28 (based on bonus attack speed) / None",
+      "castTime": "0.35 : 0.28 (based on bonus attack speed) • None",
       "cooldown": "4",
       "cost": "30",
       "damageType": "Physical damage",
@@ -167,7 +167,7 @@
       "cooldown": "110 / 95 / 80",
       "cost": "100",
       "damageType": "Physical damage",
-      "effectRadius": "450 / 1500",
+      "effectRadius": "450 • 1500",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nilah whirls her whip-blade over 1 second, dealing physical damage to nearby enemies every 0.25 seconds. She then unleashes a burst that deals physical damage and pulls them 250 units towards her. Each hit also slows targets by 10% for 3 seconds, refreshing on subsequent hits.</p>",

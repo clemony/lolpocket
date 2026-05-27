@@ -6,7 +6,7 @@
   "castTime": "none",
   "cooldown": "20 / 18 / 16 / 14 / 12",
   "cost": "70",
-  "effectRadius": "225 / 200",
+  "effectRadius": "225 • 200",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yorick summons a ring of spirits around the target location that arises after a 0.75-second delay, knocking aside enemies hit by the walls over 0.25 seconds, though not through terrain. Within 210-units, they are pulled inside; otherwise they are pushed away. The ring remains for 4 seconds as impassible terrain against enemies, granting sight inside the ring.</p>"

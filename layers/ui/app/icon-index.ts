@@ -237,7 +237,7 @@ export const icon = {
     "shopping-bag": "lucide:shopping-bag", //'i-shopping-bag'
     smile: "lucide:smile", //'i-smile'
     swatch: "lucide:swatch-book", //'i-swatch'
-    todo: "lucide:list-todo", //'i-todo'
+    todo: "lucide:list-todo",
     "image-circle": "li-solar-gallery-circle-bold-duotone", //'i-image-round'
     "up-face": "iconoir-emoj:look-up", //'i-up-face'
     user: "lucide:user", //'i-user'

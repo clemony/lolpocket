@@ -27,7 +27,7 @@
           ]
         },
         {
-          "attribute": "Total HP/Mana Regeneration (per 25 Seconds)",
+          "attribute": "Total HP/Mana Regenerated over the duration",
           "modifiers": [
             {
               "values": "125 / 275 / 425"

@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "End of the Line",
-  "width": "80 / 500 / 200",
+  "width": "80 • 500 • 200",
   "affects": "Enemies",
   "blurb": "Active:  Graves fires an explosive shell that deals physical damage to enemies it passes through.",
   "castTime": "0.25",

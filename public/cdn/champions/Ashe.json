@@ -57,7 +57,7 @@
               "modifiers": [
                 {
                   "unit": "% AD",
-                  "values": "22 / 23.5 / 25 / 26.5 / 28"
+                  "values": "22 / 23 / 24 / 25 / 26"
                 }
               ]
             },
@@ -66,7 +66,7 @@
               "modifiers": [
                 {
                   "unit": "% AD",
-                  "values": "110 / 117.5 / 125 / 132.5 / 140"
+                  "values": "110 / 115 / 120 / 125 / 130"
                 }
               ]
             }
@@ -77,7 +77,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/q",
-      "notes": "The flurries deal 1 instance of  basic damage followed by 4 instances of a non-reactive type of damage (either  default or  proc).\nThe flurries are classified as a basic attack on a script level, but are considered an ability for other effects (e.g.  Maokai's  Sap Magic).(bug)\nThe first flurry of a Ranger's Focus cast fires[ one additional arrow, dealing 20% increased total damage. ][ six arrows, dealing a total of 132 / 141 / 150 / 159 / 168% attack damage. ]\nRanger's Focus works against  structures.\nFlat damage reductions (e.g.  Amumu's  Tantrum,  Fizz's  Nimble Fighter, or  Leona's  Eclipse) apply per arrow, resulting in extremely increased effectiveness against Ranger's Focus.\nThe sole exception is  Warden's Mail's Rock Solid, as that applies per cast instance rather than per damage instance.\nA flurry can apply 5 stacks of  Black Cleaver's Carve to a single target as it deals 5 instances of physical damage.\nRanger's Focus also empowers  Runaan's Hurricane's Wind's Fury bolts to become a flurry of 5 bolts each as well.\nThe empowered bolts use Ashe's attack projectile, including her missile speed (2500 compared to their default 2000).\nThe bolts are evenly distributed among the targets, but a single target cannot be hit by more than 5 bolts.\nThese flurries also apply  on-hit effects only once to each target hit.\nBecause Focus stacks are generated  on-attack,  Runaan's Hurricane's Wind's Fury's bolts will not generate any.",
+      "notes": "The flurries deal 1 instance of  basic damage followed by 4 instances of a non-reactive type of damage (either  default or  proc).\nThe flurries are classified as a basic attack on a script level, but are considered an ability for other effects (e.g.  Maokai's  Sap Magic).(bug)\nThe first flurry of a Ranger's Focus cast fires[ one additional arrow, dealing 20% increased total damage. ][ six arrows, dealing a total of 132 / 138 / 144 / 150 / 156% attack damage. ]\nRanger's Focus works against  structures.\nFlat damage reductions (e.g.  Amumu's  Tantrum,  Fizz's  Nimble Fighter, or  Leona's  Eclipse) apply per arrow, resulting in extremely increased effectiveness against Ranger's Focus.\nThe sole exception is  Warden's Mail's Rock Solid, as that applies per cast instance rather than per damage instance.\nA flurry can apply 5 stacks of  Black Cleaver's Carve to a single target as it deals 5 instances of physical damage.\nRanger's Focus also empowers  Runaan's Hurricane's Wind's Fury bolts to become a flurry of 5 bolts each as well.\nThe empowered bolts use Ashe's attack projectile, including her missile speed (2500 compared to their default 2000).\nThe bolts are evenly distributed among the targets, but a single target cannot be hit by more than 5 bolts.\nThese flurries also apply  on-hit effects only once to each target hit.\nBecause Focus stacks are generated  on-attack,  Runaan's Hurricane's Wind's Fury's bolts will not generate any.",
       "projectile": "TRUE",
       "resource": "Mana",
       "spellEffects": "special",
@@ -89,7 +89,7 @@
       "name": "Volley",
       "width": "20",
       "affects": "Enemies",
-      "angle": "27.75°/ 37° / 46.25° / 4.625°",
+      "angle": "27.75° / 37° / 37° / 46.25° / 46.25° • 4.625°",
       "blurb": "Active:  Ashe fires arrows in a cone dealing physical damage and applying  Critical Slow to the first enemies hit.",
       "castTime": "0.25",
       "cooldown": "18 / 14.5 / 11 / 7.5 / 4",
@@ -172,7 +172,7 @@
       "cooldown": "100 / 80 / 60",
       "cost": "100",
       "damageType": "Magic damage",
-      "effectRadius": "400 /  350",
+      "effectRadius": "400 •  350",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ashe fires a massive arrow of ice in the target direction, briefly granting sight of the area it flies through. The arrow shatters upon hitting an enemy champion, dealing them magic damage, stunning them for 1 - 3.5 (based on distance traveled) seconds, and granting sight of the area around them for 1 second.</p>",
@@ -199,7 +199,7 @@
       "notes": "Enchanted Crystal Arrow's projectile has an  icon on the mini-map while it is in flight. It can be seen by only Ashe and her allies.\nThis ability will cast from wherever the caster is at the start of the cast time.\nThe effect will be centered on the first champion struck, not at the location the missile collided with them.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1500 : 2100",
+      "speed": "1500 : 2100 (based on Seconds traveled)",
       "spellEffects": "aoe",
       "spellshieldable": "True",
       "targeting": "Direction"
@@ -217,7 +217,7 @@
     "difficulty": 1
   },
   "lore": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people's belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
-  "patchLastChanged": "26.03",
+  "patchLastChanged": "26.10",
   "positions": [
     "Bottom",
     "Support"

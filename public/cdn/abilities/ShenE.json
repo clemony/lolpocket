@@ -4,7 +4,7 @@
   "affects": "Enemies",
   "blurb": "Passive: Dealing damage with  Twilight Assault or Shadow Dash will restore  energy.",
   "castTime": "none",
-  "collisionRadius": "60 /  150",
+  "collisionRadius": "60 •  150",
   "cooldown": "18 / 16 / 14 / 12 / 10",
   "cost": "150",
   "damageType": "Physical damage",
@@ -40,5 +40,5 @@
   "spellEffects": "Area of effect",
   "spellshieldable": "True",
   "targeting": "Location",
-  "targetRange": "600 / 300"
+  "targetRange": "300 - 600"
 }

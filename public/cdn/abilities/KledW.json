@@ -11,10 +11,10 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kled periodically gains Violent Tendencies, which starts expiring upon his next basic attack.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Violent Tendencies:</span> Kled gains 150% bonus attack speed on his next 4 basic attacks within 4 seconds. The fourth attack is empowered to deal bonus physical damage. The damage based on the target's health is capped at 200 against monsters.Violent Tendencies' current cooldown is reduced by 0.5 seconds on-hit, increased to 1.5 against champions.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Violent Tendencies:</span> Kled gains 150% bonus attack speed on his next 4 basic attacks within 4 seconds. The fourth attack is empowered to deal additional physical damage. The damage based on the target's health is capped at 200 against monsters.Violent Tendencies' current cooldown is reduced by 0.5 seconds on-hit, increased to 1.5 against champions.</p>",
       "leveling": [
         {
-          "attribute": "Bonus Physical Damage",
+          "attribute": "Additional Physical Damage",
           "modifiers": [
             {
               "values": "20 / 30 / 40 / 50 / 60"
@@ -29,10 +29,10 @@
       ]
     },
     {
-      "description": "Against structures, the fourth attack deals modified bonus physical damage.",
+      "description": "Against structures, the fourth attack deals modified additional physical damage.",
       "leveling": [
         {
-          "attribute": "Structure Bonus Damage",
+          "attribute": "Structure Additional Damage",
           "modifiers": [
             {
               "values": "62 / 64.02 / 66.05 / 68.07 / 70.1 / 72.12 / 74.14 / 76.17 / 78.19 / 80.22 / 82.24 / 84.27 / 86.29 / 88.31 / 90.34 / 92.36 / 94.39 / 96.41"
@@ -47,7 +47,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/w",
-  "notes": "Violent Tendencies' bonus damage is applied as a separate damage instance from the attack that triggers it.\nThis causes  Black Cleaver's Carve to be applied twice.(unexpected)\nThis damage instance is applied before the damage of the attack.\nViolent Tendencies' bonus damage is tagged as  basic damage and  spell damage, which allows it to trigger spell effects.\nThe bonus damage applies  life steal.\nAttacking a plant or  ward will not activate Violent Tendencies.\nAttacking either while Violent Tendencies is already active will still consume an attack.\nKled gains attack speed even on non-Violent Tendencies attacks as long as the ability is not on cooldown.\nWhile affected by  Silence or  Forced Actions, the animations and sounds of Kled's first 3 Violent Tendencies attacks are replaced with default ones.(bug)\nThe first and third attack will  instead play  critical strike animations if they strike critically.\nLearning Violent Tendencies will cancel Kled's ongoing attack windup.(bug)\nIn contrast, Violent Tendencies coming off cooldown during an ongoing attack windup will not cancel it.\nSuccessfully finishing the basic attack will then cause Violent Tendencies to begin expiring, but will not count as one of the 4 attacks.",
+  "notes": "Violent Tendencies' additional damage is applied as a separate damage instance from the attack that triggers it.\nThis causes  Black Cleaver's Carve to be applied twice.(unexpected)\nThis damage instance is applied before the damage of the attack.\nViolent Tendencies will proc  on-hit effects even if the additional damage kills the target.\nViolent Tendencies' additional damage is tagged as  basic damage and  spell damage, which allows it to trigger  spell effects.\nThe additional damage applies  life steal.\nAttacking a plant or  ward will not activate Violent Tendencies.\nAttacking either while Violent Tendencies is already active will still consume an attack.\nKled gains attack speed even on non-Violent Tendencies attacks as long as the ability is not on cooldown.\nWhile affected by  Silence or  Forced Actions, the animations and sounds of Kled's first 3 Violent Tendencies attacks are replaced with default ones.(bug)\nThe first and third attack will instead play  critical strike animations if they strike critically.\nLearning Violent Tendencies will cancel Kled's ongoing attack windup.(unexpected)\nIn contrast, Violent Tendencies coming off cooldown during an ongoing attack windup will not cancel it.\nSuccessfully finishing the basic attack will then cause Violent Tendencies to begin expiring, but will not count as one of the 4 attacks.",
   "spellEffects": "Special",
   "spellshieldable": "False",
   "targeting": "Passive"

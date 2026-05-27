@@ -9,20 +9,19 @@
       "name": "Prowl",
       "affects": "Enemies, Self",
       "blurb": "Innate - Prowl: While in  brush,  Nidalee becomes  ghosted and gains  bonus movement speed for a short time, increased when facing a nearby enemy  champion. These bonuses briefly persist after exiting brush.",
-      "effectRadius": "3000 / 5500",
+      "effectRadius": "3000 • 5500",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Prowl:</span> While in brush, Nidalee gains ghosting and 10% bonus movement speed, increased to 30% while facing a visible enemy champion within 1400 range. The bonuses persist for 2 seconds after leaving brush.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Hunt:</span> Hitting monsters or enemy champions with Javelin Toss or Bushwhack when Nidalee is nearby grants her ghosting and 10% bonus movement speed for 4 seconds and applies a Hunted mark to the target for the same duration, during which they are revealed as well as grant sight of a 300-unit radius around them. The bonus movement speed is increased to 30% while facing a Hunted target. Additionally, the first cast of both Takedown and Pounce against a Hunted target is enhanced.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Hunt:</span> Hitting enemy champions or monsters with Javelin Toss or Bushwhack applies a Hunted mark to the target for 4 seconds, during which they are revealed as well as grant sight of a 300-unit radius around them. If Nidalee is nearby when the target is hit, she gains ghosting and 10% bonus movement speed for 4 seconds, increased to 30% while she is facing a Hunted target. Additionally, the first cast of both Takedown and Pounce against a Hunted target is enhanced.</p>"
         },
         {
           "description": "The bonus movement speed from Prowl and Hunt can stack, but cannot exceed 30%."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/p",
-      "notes": "Bushwhack  reveals and grants  sight around the target for 4 seconds even while Nidalee is not nearby.",
       "targeting": "Passive"
     },
     {
@@ -237,9 +236,9 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/w",
-      "notes": "No additional notes.",
+      "notes": "Bushwhack deals  persistent damage, additionally tagged as  indirect damage, and applies  spell effects.",
       "resource": "Mana",
-      "spellEffects": "dot",
+      "spellEffects": "special",
       "spellshieldable": "True",
       "targeting": "Location",
       "targetRange": "900"
@@ -253,7 +252,7 @@
       "cooldown": "13 / 12 / 11 / 10 / 9",
       "cost": "30 / 35 / 40 / 45 / 50",
       "damageType": "Magic damage",
-      "effectRadius": "200 / 250",
+      "effectRadius": "250",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Killing an enemy while in Cougar Form or using Pounce's Hunt bonus reduces Pounce's current cooldown to a minimum value.</p>",
@@ -301,8 +300,8 @@
       "notes": "This ability always employs Quick cast.\nPounce will not receive the reduced cooldown if the target becomes  Hunted mid-air.\nCasting Pounce on a Hunted target will extend the remaining duration of their  Hunted debuff by 1.5 seconds, up to the original duration.",
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
-      "targeting": "Direction / Unit",
-      "targetRange": "375 / 750"
+      "targeting": "Direction • Unit",
+      "targetRange": "375 • 750"
     },
     {
       "key": "E",

@@ -10,7 +10,7 @@
       "affects": "Enemies, Self",
       "blurb": "Innate:  Orianna is accompanied by  The Ball, which she commands with her  abilities. The Ball attaches to Orianna when she approaches it, and snaps back to her when she moves too far away. The Ball incurs a  brief cooldown on Orianna's abilities whenever it moves.",
       "damageType": "Magic damage",
-      "effectRadius": "1290 / 1355 / 135",
+      "effectRadius": "1290 • 1355 • 135",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - The Ball:</span> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.</p>"

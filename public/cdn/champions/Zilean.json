@@ -10,10 +10,10 @@
       "affects": "Allies",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zilean generates 2 / 3.5 / 5 / 6 / 12 (based on level) experience (does not count towards his own level up) every 5 seconds. Time in a Bottle is on cooldown when the game starts and becomes disabled when everyone on Zilean's team including himself has reached level 18.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zilean generates 2 / 3.5 / 5 / 6 / 12 (based on level) experience (does not count towards his own level up) every 5 seconds. Time in a Bottle is on cooldown when the game starts and becomes disabled when Zilean and his allied champions have reached their maximum level.</p>"
         },
         {
-          "description": "When he has stored enough to level up an allied champion and grant the same amount of experience to himself, he can select them to channel for 1.2 seconds after a 0.5-second cast time. The channel is interrupted and disabled upon entering combat with enemy champions or taking damage from turrets, placing it on a 10-second cooldown. If Zilean interrupts it himself, it is placed on a 1-second cooldown, increased to 2 if he used a basic attack against a turret to do so. Additionally, if Zilean becomes affected by any form of crowd control, the channel is placed on a 10-second cooldown."
+          "description": "When he has stored enough to level up an allied champion and grant the same amount of experience to himself, he can select them to channel for 1.2 seconds after a 0.5-second cast time.The channel is interrupted and disabled upon entering combat with enemy champions or taking damage from turrets, placing it on a 10-second cooldown. If Zilean interrupts it himself, it is placed on a 1-second cooldown, increased to 2 if he used a basic attack against a turret to do so. Additionally, if Zilean becomes affected by any form of crowd control, the channel is placed on a 10-second cooldown."
         },
         {
           "description": "A successful channel will grant an equal amount of experience to the ally to-level-up and Zilean, with a combined minimum of 15% of the stored experience."
@@ -37,7 +37,7 @@
       "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
       "cost": "60 / 65 / 70 / 75 / 80",
       "damageType": "Magic damage",
-      "effectRadius": "350 /  500",
+      "effectRadius": "350 • 500",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zilean throws a ticking time bomb to the target location that briefly grants sight of its surroundings as it travels as well as while lingering in the area. The bomb will attach itself to units that move within the epicenter, or those hit directly at the time of the bomb's landing, revealing them and their surroundings.</p>"
@@ -100,7 +100,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Zilean/ability-icon/w",
-      "notes": "No additional details.",
+      "notes": "Rewind cannot be learnt at level 1.",
       "resource": "Mana",
       "targeting": "Auto"
     },
@@ -188,7 +188,7 @@
     "difficulty": 2
   },
   "lore": "Once a powerful Icathian mage, Zilean became obsessed with the passage of time after witnessing his homeland's destruction by the Void. Unable to spare even a minute to grieve the catastrophic loss, he called upon ancient temporal magic to divine all possible outcomes. Having become functionally immortal, Zilean now drifts through the past, present, and future, bending and warping the flow of time around him, always searching for that elusive moment that will turn back the clock and undo Icathia's destruction.",
-  "patchLastChanged": "25.13",
+  "patchLastChanged": "26.08",
   "positions": [
     "Support"
   ],

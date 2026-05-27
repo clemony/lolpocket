@@ -66,6 +66,6 @@
   "spellEffects": "Single target",
   "spellshieldable": "special",
   "targeting": "Direction",
-  "targetRange": "800 /  80",
+  "targetRange": "800 •  80",
   "tetherRadius": "900"
 }

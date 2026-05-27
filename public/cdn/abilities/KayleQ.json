@@ -40,7 +40,7 @@
       ]
     },
     {
-      "description": "The sword expands upon hitting an enemy, targets struck in the area are dealt magic damage, slowed for 2 seconds, and inflicted with 15% reduced armor and magic resistance for 4 seconds."
+      "description": "The sword expands upon hitting an enemy, with targets struck in the area dealt magic damage, slowed for 2 seconds, and inflicted with 15% reduced armor and magic resistance for 4 seconds."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/q",

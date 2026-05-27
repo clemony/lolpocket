@@ -1,7 +1,7 @@
 {
   "key": "W",
   "name": "Haymaker",
-  "width": "300 / 620 /  70",
+  "width": "300  • 620 •  70",
   "affects": "Self, Enemies",
   "blurb": "Passive:  Sett stores Grit equal to damage taken, which gradually expires after a few seconds.",
   "castTime": "0.75",

@@ -5,7 +5,7 @@
   "castTime": "none",
   "cooldown": "180 / 160 / 140",
   "cost": "100",
-  "effectRadius": "250 : 350 : 465 /  515",
+  "effectRadius": "465 • 515",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Overload's Flux empowered damage is increased.</p>",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ryze channels for 2 seconds to open a portal beneath him, marking the target location as its destination and granting sight of its area. Ryze is able to act while channeling, but the portal will cancel if he is interrupted.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ryze channels for 2 seconds to open a portal beneath him, marking the target location as its destination and granting sight of the target area. Ryze is able to act while channeling, but the portal will cancel if he is interrupted.</p>"
     },
     {
       "description": "Upon completion, Ryze and all allied units within the portal will blink to the location and become rooted, disarmed, silenced and untargetable for 0.75 seconds."
@@ -32,5 +32,5 @@
   "notes": "Blinked units retain the same relative positions to one another upon arrival.\nRealm Warp will teleport allies even if they are in a  zombie state, are  untargetable, or are affected by  crowd control.\nRealm Warp will not teleport allies that are using an ability that preloads UnstoppableForceMarker or are being affected by another ally's Realm Warp first.\nRealm Warp will still teleport an allied  Rift Herald that is winding up its leap.\nRealm Warp has various interactions with  channeled abilities that are being performed by an ally. Some channels will prevent their caster from being teleported and others will not.\nFor channels that do not prevent the teleport, Realm Warp will specifically not apply its  silence to the caster.\nCast times will not prevent the teleport.\nThe following channels will prevent the teleport:\n Caitlyn's  Ace in the Hole\n Galio's  Hero's Entrance\n Kayn's  Umbral Trespass\n Jhin's  Curtain Call\n Warwick's  Jaws of the Beast\n Xerath's  Rite of the Arcane\n Recall /  Empowered Recall\n Teleport /  Unleashed Teleport\nThe following table refers for interactions while Ryze is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nAllowed\n\n\nAbilities\n\nAllowed\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Zhonya's Hourglass\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\nAll summoner spells are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection Grounding effects Immobilizing effects Cast-inhibiting effects",
   "resource": "Mana",
   "targeting": "Location",
-  "targetRange": "3000 / 1000"
+  "targetRange": "1000 • 3000"
 }

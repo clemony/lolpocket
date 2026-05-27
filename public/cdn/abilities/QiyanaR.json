@@ -1,7 +1,7 @@
 {
   "key": "R",
   "name": "Supreme Display of Talent",
-  "width": "280 / 120",
+  "width": "280 • 120",
   "affects": "Enemies, Terrain",
   "blurb": "Active:  Qiyana sweeps a windblast in the target direction that  knocks back enemies hit and stops upon hitting Terrain.",
   "castTime": "0.25",
@@ -51,7 +51,7 @@
   "notes": "The windblast needs only to reach near terrain to trigger the terrain shockwave.\nThe shockwave grants sight along each part of its path for 0.75 seconds.\nArtificial terrain (e.g,  Anivia's  Crystallize,  Taliyah's  Weaver's Wall,  Trundle's  Pillar of Ice) touching map terrain will be treated as a single piece of terrain, even when bridging two pieces of map terrain together; the shockwave will wrap around all connecting terrain. The shockwave's path is determined once it initially spreads; any expired terrain will be treated as if it were still there.\n Projectile-intercepting effects will block the windblast but not the shockwave.\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "SPECIAL",
   "resource": "Mana",
-  "speed": "2000 / 2840",
+  "speed": "2000 • 2840",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
   "targeting": "Direction",

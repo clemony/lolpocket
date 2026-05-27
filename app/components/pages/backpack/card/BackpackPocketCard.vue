@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { Feedback } from "@dnd-kit/dom"
 import { useSortable } from "@dnd-kit/vue/sortable"
 import { parseAbsoluteToLocal } from "@internationalized/date"
 import { useTableInject } from "~/composables/ui/useTableProvider"
+import { namespacedDragGroup } from "~/domain/pocket/helpers/dragLocation"
 import { clickFriendlySensors } from "~/domain/pocket/helpers/sortableSensors"
 import { getSplash, getSplashFromSkinKey } from "~/domain/utils/img"
 
@@ -10,6 +10,8 @@ const props = defineProps<{
   pocket: SortablePocket
   index?: number
 }>()
+
+const emit = defineEmits(["update:is-dragging"])
 
 const pocket = computed(() => {
   return safeObject(props.pocket)
@@ -30,11 +32,6 @@ const date = computedOnce(() => {
 const newLabel = shallowRef<string>("")
 const editing = shallowRef<boolean>(false)
 const toggleEditing = useToggle(editing)
-
-function toggleEdit() {
-  newLabel.value = props.pocket.label || ""
-  toggleEditing()
-}
 
 const champion = computed(
   () => pocket.value._champion || pocket.value.champions?.[0]
@@ -72,11 +69,21 @@ const position = computed(() => {
   return pocket.value._position || pocket.value.positions?.[0]
 })
 const element = useTemplateRef<HTMLElement>("element")
-const handle = useTemplateRef<HTMLElement>("handle")
-
-const { isDragging } = useSortable({
+const { isDragging, sortable } = useSortable({
   ...pocket.value.sortable,
-  type: "grid:pocket",
+  id: computed(() => `grid:pocket:${pocket.value.key}`),
+  data: computed(() => ({
+    item: pocket.value,
+    button: pocket.value.button,
+    kind: "pocket",
+    listType: "grid"
+  })),
+  type: "pocket",
+  accept: "pocket",
+  sensors: clickFriendlySensors,
+  collisionPriority: 3,
+  group: computed(() => namespacedDragGroup("grid", pocket.value.location)),
+  index: computed(() => props.index ?? 0),
   element,
   handle: element
 })
@@ -94,7 +101,7 @@ function onSelectionChange(event: Event, rowId: string) {
   <label
     ref="element"
     :class="
-      cn('relative w-full rounded-4xl p-3', {
+      cn('relative grid size-full rounded-4xl p-3', {
         'ring inset-shadow-xs ring-pc/60 ring-offset-1 ring-offset-p3':
           isRowSelected(pocket.key)
       })
@@ -106,7 +113,12 @@ function onSelectionChange(event: Event, rowId: string) {
       class="peer hidden"
       :value="pocket.key"
       @change="onSelectionChange($event, pocket.key)" />
-
+    <!--
+    <LazyBackpackSidebarGhost
+      v-if="isDragging"
+      :target="sortable.manager.dragOperation?.target"
+      :source="sortable.manager.dragOperation?.source"
+      :item="pocket" /> -->
     <PerspectiveCard>
       <PocketContextMenu
         v-model:open="contextOpen"

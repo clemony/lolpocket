@@ -6,7 +6,7 @@
   "castTime": "none",
   "cooldown": "120 / 100 / 80",
   "cost": "100",
-  "effectRadius": "400 / 400",
+  "effectRadius": "400 •  400",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu enlarges herself or the target allied champion, knocking up nearby enemies for 1 second. For the next 7 seconds, the target gains bonus health and 40% increased size and slows nearby enemies, which lingers for 0.25 seconds.</p>",

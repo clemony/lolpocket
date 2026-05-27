@@ -22,7 +22,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Gate:</span> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying all projectiles targeting him in the process.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Gate:</span> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying enemy projectiles targeting him in the process.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/r",

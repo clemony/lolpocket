@@ -15,7 +15,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Zilean/ability-icon/w",
-  "notes": "No additional details.",
+  "notes": "Rewind cannot be learnt at level 1.",
   "resource": "Mana",
   "targeting": "Auto"
 }

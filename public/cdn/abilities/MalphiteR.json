@@ -28,7 +28,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/r",
-  "notes": "The dash speed can be up-to doubled if Unstoppable Force is targeted at the middle of a wall so that his destination ends up on the other side.\nIt will be decreased if his destination ends up closer to him than his target location.\nIf Malphite dies during his  dash, the ability cancels.\nIf the dash is interrupted without Malphite dying, for instance when he enters  resurrection during Unstoppable Force, he halts and the ability instead affects enemies at the stopped location.",
+  "notes": "Unstoppable Force has no minimum dash range.\nThe dash speed can be up-to doubled if Unstoppable Force is targeted at the middle of a wall so that his destination ends up on the other side.\nIt will be decreased if his destination ends up closer to him than his target location.\nIf Malphite dies during his  dash, the ability cancels.\nIf the dash is interrupted without Malphite dying, for instance when he enters  resurrection during Unstoppable Force, he halts and the ability instead affects enemies at the stopped location.",
   "resource": "Mana",
   "speed": "1500 + 100% movement speed",
   "spellEffects": "aoe",

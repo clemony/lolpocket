@@ -73,7 +73,7 @@
   "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nCasting Rake when an enemy is within 650 radius and 26° angle in front of Talon will reveal him from the fog of war like a targeted cast.(bug)\nThis is because of Rake's internal Cone targeting type, which defaults to \"targeting\" all units in the preset area and thereby trigger revealing the caster if not toggled off for the spell.\nIf Talon dies while Rake is mid-air, the projectiles will still complete their travel.\nThe blades each will fail to return to Talon if he is somehow too far from them after the delay.\nThis maximum distance is 5000 units at ranks 1-4 of Rake, or 20000 units at rank 5 of Rake.(bug)\nThe latter distance is barely achievable between fountains on Summoner's Rift.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "2571 / 2429 / 3000",
+  "speed": "2571 • 2429 • 3000",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
   "targeting": "Direction"

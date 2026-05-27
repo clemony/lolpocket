@@ -61,7 +61,7 @@
   "notes": "Shadow Assault casts a total of 12 blades evenly distributed in all directions. 4 of them travel down the cardinal directions (Relative to the map, not relative to Talon), while all blades have an angle of 30° to one another.\n Spell shield will block a single pass.\nShadow Assault does not cancel Talon's basic attacks.\nShadow Assault has a minimum lifetime of 0.8 seconds before convergence.\nThe blades each will fail to converge on their target (Talon or the attacked target) if the target is more than 20000 units from them.(bug)\nThis distance is barely achievable between fountains on Summoner's Rift.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "2400 / 4000",
+  "speed": "2400 • 4000",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
   "targeting": "Auto"

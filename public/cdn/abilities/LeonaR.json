@@ -7,10 +7,10 @@
   "cooldown": "90 / 75 / 60",
   "cost": "100",
   "damageType": "Magic damage",
-  "effectRadius": "325 / 175 / 800",
+  "effectRadius": "325 • 175 • 800",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Leona calls down a solar flare that strikes upon the target location after 0.625 seconds, granting sight of the area before impact and for another 3 seconds afterwards. Enemies hit are dealt magic damage.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Leona calls down a solar flare that strikes upon the target location after 0.625 seconds, granting sight of the area before impact and for another 3 seconds afterwards. Enemies hit are dealt magic damage and slowed by 80% for 1.75 seconds, and are also stunned for the same duration if they are struck by the epicenter.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -25,9 +25,6 @@
           ]
         }
       ]
-    },
-    {
-      "description": "Targets are also slowed by 80% for 1.75 seconds, or stunned for the same duration if they are hit by the epicenter."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/r",

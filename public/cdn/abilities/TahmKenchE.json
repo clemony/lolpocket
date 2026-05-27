@@ -6,6 +6,7 @@
   "castTime": "0.25",
   "cooldown": "3",
   "cost": "0",
+  "effectRadius": "2400",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.</p>",
@@ -31,7 +32,7 @@
       ]
     },
     {
-      "description": "While Thick Skin is not on cooldown, and after 4 seconds without taking damage, Tahm Kench rapidly consumes his grey health to restore 45% - 100% (based on level) of the amount, healing for 10% of his maximum health every 0.264 seconds."
+      "description": "While Thick Skin is not on cooldown, and after 4 seconds without taking damage, Tahm Kench rapidly consumes his grey health to restore 60% - 100% (based on level) of the amount, healing for 10% of his maximum health every 0.264 seconds."
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds.</p>"

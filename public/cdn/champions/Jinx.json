@@ -193,7 +193,7 @@
       "cooldown": "85 / 65 / 45",
       "cost": "100",
       "damageType": "Physical damage",
-      "effectRadius": "400 /  1000 / 1000",
+      "effectRadius": "400 • 1000 • 1000",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds.</p>"
@@ -281,7 +281,7 @@
       "notes": "Spell shield will not prevent the explosion.\nSuper Mega Death Rocket's projectile has an  icon on the mini-map while it is in flight. It can be seen by only Jinx and her allies.\nThe bonus damage based on missing health is based on each unit's own missing health and not the primary target's.\nUnlike similar spells, Super Mega Death Rocket will not increase it's damage when ranked up while the missile is in flight.(unexpected)\nThis is because the base damage is fixed at a multiple of the damage the rocket initially started with.\nThe bonus AD ratio will still update when AD is gained or lost between the cast and hit of the missile.\nThis ability will cast from wherever the caster is at the start of the cast time.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1700 / 2200",
+      "speed": "1700 • 2200",
       "spellEffects": "Area of effect",
       "spellshieldable": "special",
       "targeting": "Direction",

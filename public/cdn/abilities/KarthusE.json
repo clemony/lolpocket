@@ -23,7 +23,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Karthus surrounds himself in a necrotic aura that deals magic damage every 0.25 seconds to all nearby enemies. Toggling Defile off triggers a final tick of damage.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Karthus surrounds himself in a necrotic aura that deals magic damage every 0.25 seconds to all nearby enemies.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage Per Tick",
@@ -52,11 +52,14 @@
       ]
     },
     {
+      "description": "Toggling Defile off triggers a final tick of damage. Defile is toggled off automatically if Karthus becomes unable to pay its mana cost."
+    },
+    {
       "description": "Defile cannot be toggled off during Death Defied."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/e",
-  "notes": "Toggle abilities do not count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDefile will restore  mana if Karthus destroys an enemy structure.\nDefile re-calculates its damage with each tick based on changes in Karthus's ability power or an increase in the rank of Defile without the need to toggle it off and on again.\nDefile will toggle off automatically if Karthus enters  resurrection.",
+  "notes": "Toggled abilities do not count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDefile will restore  mana if Karthus destroys an enemy structure.\nDefile re-calculates its damage with each tick based on changes in Karthus's ability power or an increase in the rank of Defile without the need to toggle it off and on again.\nDefile will toggle off automatically if Karthus enters  resurrection.",
   "resource": "Mana per second",
   "spellEffects": "aoedot",
   "spellshieldable": "False",

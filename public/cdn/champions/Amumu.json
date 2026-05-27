@@ -64,7 +64,7 @@
       "projectile": "TRUE",
       "rechargeRate": "16 / 15 / 14 / 13 / 12",
       "resource": "Mana",
-      "speed": "2000 / 1800",
+      "speed": "2000 • 1800",
       "spellEffects": "spell",
       "spellshieldable": "special",
       "targeting": "Direction"
@@ -97,6 +97,9 @@
               ]
             }
           ]
+        },
+        {
+          "description": "Despair is toggled off automatically if Amumu becomes unable to pay its mana cost."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/w",

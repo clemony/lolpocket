@@ -1,7 +1,7 @@
 {
   "key": "E",
   "name": "Flawless Duet",
-  "width": "70",
+  "width": "140",
   "affects": "Enemies",
   "blurb": "Active:  Irelia sends a blade to the target location for a short time.\nFlawless Duet can be recast within the duration, and does so automatically after the duration. The recast cannot be  interrupted.",
   "castTime": "None",
@@ -41,7 +41,7 @@
   "notes": "Both casts count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger and it will be considered as an ability activation. This is the only ability with this interaction in the game.\nFlawless Duet will recast automatically at its end during  Defiant Dance despite being disabled.\nFlawless Duet will also recast automatically upon entering  resurrection.\nThe outgoing blades will stop flight upon touching  projectile blocking effects. The converging blades will instead be destroyed upon contact with such effects.\nThe blades will not stun nor deal damage if they fail to converge (i.e  Yasuo's  Wind Wall).\nBoth of Flawless Duet's casts will be buffered and cast when their cooldowns end if the player attempts to cast each within 0.3 seconds of their cooldown ending.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "2000 / Distance ÷ 0.1 s",
+  "speed": "2000 • Distance ÷ 0.1 s",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",
   "targeting": "Location",

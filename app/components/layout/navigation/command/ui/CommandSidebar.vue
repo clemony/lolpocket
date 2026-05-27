@@ -21,16 +21,16 @@ const menu = computed<CommandItem[]>(
           }
         : {},
       {
-        label: "Backpack",
+        label: "Pockets",
         type: "label",
         value: "backpack-label",
         items: [
           {
-            label: "Pockets",
+            label: "Backpack",
             icon: "i-folders",
             value: "backpack-pocket",
             trailingIcon: "",
-            to: "/backpack/all"
+            to: "/backpack/folders"
           },
           {
             label: "New Pocket",

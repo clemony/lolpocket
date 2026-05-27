@@ -16,7 +16,7 @@
       "unique": true,
       "name": "Trinket",
       "effects": "Consume a charge to place an invisible <img src=\"/img/icons/totem-ward.webp\" class=\"tip-icon \" />Totem Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the surrounding area for 90 – 120 (based on average champion level) seconds.",
-      "range": 600
+      "range": 625
     }
   ],
   "stats": {},

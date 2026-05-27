@@ -55,7 +55,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Nami/ability-icon/e",
-  "notes": "Tidecaller's Blessing has a  forgiveness radius of 175 units.\nThe effect will not trigger against structures nor wards.\nThe empowerment given to allies respects  enchantment redirection.\nDamage instances of Tidecaller's Blessing beyond the first do not count as separate applications for the purposes of  Electrocute and  Phase Rush.",
+  "notes": "Tidecaller's Blessing has a  forgiveness radius of 175 units.\nThe effect will not trigger against structures nor wards.\nThe empowerment given to allies respects  enchantment redirection.\nDamage instances of Tidecaller's Blessing beyond the first do not count as separate applications for the purposes of  Electrocute.",
   "resource": "Mana",
   "spellEffects": "proc",
   "spellshieldable": "False",

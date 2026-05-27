@@ -50,7 +50,7 @@ const positionItems = positionSchema.options.map((p) => ({
 }))
 
 interface NewOptions extends DropdownMenuItem {
-  location: string
+  location: string | undefined
   folder?: {
     disabled: boolean
   }
@@ -64,8 +64,9 @@ export const newItemOptions = (options: NewOptions | undefined) =>
     () =>
       [
         ...computed(() =>
-          !options?.folder?.disabled
-            ? [
+          options?.folder?.disabled
+            ? []
+            : [
                 {
                   label: "New Folder",
                   icon: "i-folder-add",
@@ -73,14 +74,13 @@ export const newItemOptions = (options: NewOptions | undefined) =>
                     itemLeadingIcon: " "
                   },
                   onSelect() {
-                    user().newPocketFolder({ location: options?.location })
+                    user().newPocketFolder()
                   }
                 },
                 {
                   type: "separator"
                 }
               ]
-            : []
         ).value,
         {
           label: "New Pocket",
@@ -90,7 +90,7 @@ export const newItemOptions = (options: NewOptions | undefined) =>
             itemLeadingIcon: "**:stroke-[10%] scale-90"
           },
           onClick: () =>
-            newPocket({ location: String(options?.location) ?? undefined })
+            newPocket({ location: String(options?.location) || undefined })
         },
         {
           label: "Pocket Wizard",

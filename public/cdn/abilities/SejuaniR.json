@@ -8,7 +8,7 @@
   "cooldown": "120 / 105 / 90",
   "cost": "100",
   "damageType": "Magic damage",
-  "effectRadius": "450 /  450 /  300",
+  "effectRadius": "450 •  450 • 300",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sejuani throws an ice bola in the target direction that stops upon hitting an enemy champion, dealing magic damage and stunning them for 1 second.</p>",
@@ -48,7 +48,7 @@
       "description": "After 2 seconds, the storm shatters to deal the increased magic damage to enemies within and slow them by 80% for 1 second, as well as revealing them and granting sight of the area for 0.5 seconds."
     },
     {
-      "description": "The enemy hit by the bola is not affected by the storm's effects."
+      "description": "The enemy hit by the bola is unaffected by the storm's effects."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/r",

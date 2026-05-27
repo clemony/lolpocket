@@ -1,5 +1,3 @@
-import type { HTMLAttributes } from "vue"
-
 export interface IconSet {
   key: string
   label: string

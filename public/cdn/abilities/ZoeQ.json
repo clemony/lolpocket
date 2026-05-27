@@ -1,10 +1,10 @@
 {
   "key": "Q",
   "name": "Paddle Star!",
-  "width": "100 / 140",
+  "width": "100 • 140",
   "affects": "Enemies",
   "blurb": "Active:  Zoe shoots a star in the target direction that explodes upon hitting an enemy, dealing magic damage to nearby enemies hit based on the distance travelled.",
-  "castTime": "0.25 / None",
+  "castTime": "0.25 • None",
   "cooldown": "8.5 / 8 / 7.5 / 7 / 6.5",
   "cost": "40 / 45 / 50 / 55 / 60",
   "damageType": "Magic damage",
@@ -59,7 +59,7 @@
   "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  More Sparkles!,  Spellblade and triggering  Force Pulse's passive.\nThe recast radius matches the initial cast radius of the ability, but Zoe can move any amount of distance away from the projectile before reactivating.\nPaddle Star!'s effect radius is centered around the location of the missile as it collides.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1200 / 2500",
+  "speed": "1200 • 2500",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",
   "targeting": "Direction"

@@ -22,7 +22,7 @@
       "unique": true,
       "mythic": false,
       "name": "Flux",
-      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion within 3 seconds of damaging them refunds 15% (+0.15% per 1 Lethality) of your ultimate ability's <b>total</b> cooldown."
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion within 3 seconds of damaging them refunds 10% (+0.25% per 1 Lethality) of your ultimate ability's <b>total</b> cooldown."
     }
   ],
   "stats": {

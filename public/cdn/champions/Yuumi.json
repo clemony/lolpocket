@@ -109,7 +109,7 @@
       "notes": "Prowling Projectile is able to turn clockwise or counter-clockwise at a rate of 90° per 0.5 seconds. The missile can turn a maximum of 243° in both directions combined before accelerating.\nProwling Projectile can be buffered 0.5 seconds before it comes off cooldown.\nThe  Best Friend's empowerment respects  enchantment redirection.\nThe following table refers for interactions while Yuumi is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nN/A\n\n\nAbilities\n\n Detaching and  Final Chapter interrupt.  Zoomies is usable.\n\n\nMovement\n\nN/A\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\nAll summoner spells are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "950 / 850 / 1650",
+      "speed": "950 • 850 • 1650",
       "spellEffects": "Spell",
       "spellshieldable": "True",
       "targeting": "Direction",
@@ -133,7 +133,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Change of Plan:</span> Yuumi detaches from her Anchor and dashes to the target allied champion to attach to them, refreshing the recast. She will detach automatically if her Anchor dies or under certain circumstances. If recast without a valid target, Yuumi will detach and dash 250-units in the target direction, placing You and Me! on a 0.25-second cooldown if it is not already on cooldown.</p>"
         },
         {
-          "description": "Yuumi will be knocked down by any immobilizing or polymorphing crowd control during the dash."
+          "description": "Yuumi will be knocked down by any immobilizing or polymorphing crowd control during the dash to the ally."
         },
         {
           "description": "Yuumi starts with a skill point in You and Me! and Prowling Projectile instead has 6 ranks."
@@ -257,11 +257,11 @@
               "attribute": "Heal per Hit",
               "modifiers": [
                 {
-                  "values": "30 / 40 / 50"
+                  "values": "30 / 50 / 70"
                 },
                 {
                   "unit": "% AP",
-                  "values": "10"
+                  "values": "12"
                 }
               ]
             },
@@ -269,11 +269,11 @@
               "attribute": "Total Heal",
               "modifiers": [
                 {
-                  "values": "150 / 200 / 250"
+                  "values": "150 / 250 / 350"
                 },
                 {
                   "unit": "% AP",
-                  "values": "50"
+                  "values": "60"
                 }
               ]
             }
@@ -324,40 +324,14 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Attached Bonus:</span> Yuumi can steer the direction of the waves if initially cast while attached. Detaching causes her to lose this bonus for the duration. Additionally, Feline Friendship can trigger from also hitting allied champions.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Best Friend Bonus:</span> Final Chapter's heal to the Best Friend is increased by 30%.</p>",
-          "leveling": [
-            {
-              "attribute": "Best Friend Heal per Hit",
-              "modifiers": [
-                {
-                  "values": "39 / 52 / 65"
-                },
-                {
-                  "unit": "% AP",
-                  "values": "13"
-                }
-              ]
-            },
-            {
-              "attribute": "Best Friend Total Heal",
-              "modifiers": [
-                {
-                  "values": "195 / 260 / 325"
-                },
-                {
-                  "unit": "% AP",
-                  "values": "65"
-                }
-              ]
-            }
-          ]
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Best Friend Bonus:</span> Final Chapter's heal to the Best Friend is increased by 30% - 60% (based on level).</p>"
         },
         {
           "description": "While not attached, Yuumi can move while channeling Final Chapter."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/r",
-      "notes": "While Yuumi's anchor is not at full health, the  heal on the anchor is reapplied each time you hit another ally.(bug)\nYuumi becomes  ghosted for the channel and, if not presently attached with  You and Me!, will remain ghosted until she attaches and detaches again.(bug)\nWhile  attached,  Cloud Dragon Soul will not activate until Yuumi detaches.\n Spell shield will only block a single instance of damage.\nYuumi's facing direction during the channel is considered to be in Final Chapter's target direction.\nUsing  Hexflash during the channel will always cause Yuumi to  blink in the target direction of Final Chapter.(bug)\n Feline Friendship will not be triggered if Yuumi and her anchor aren't missing health after the wave hit.\nThe VFX will follow Yuumi's location, but the actual hitbox of each wave won't.\nThe following table refers for interactions while Yuumi is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Prowling Projectile is disabled.  You and Me! and  Zoomies are usable.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Hexflash  Mark  Dash\n\n\nDisabled\n\n Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+      "notes": "Yuumi becomes  ghosted for the channel and, if not presently attached with  You and Me!, will remain ghosted until she attaches and detaches again.(bug)\nWhile  attached,  Cloud Dragon Soul will not activate until Yuumi detaches.\n Spell shield will only block a single instance of damage.\nYuumi's facing direction during the channel is considered to be in Final Chapter's target direction.\nUsing  Hexflash during the channel will always cause Yuumi to  blink in the target direction of Final Chapter.(bug)\n Feline Friendship will not be triggered if Yuumi and her anchor aren't missing health after the wave hit.\nThe VFX will follow Yuumi's location, but the actual hitbox of each wave won't.\nThe following table refers for interactions while Yuumi is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Prowling Projectile is disabled.  You and Me! and  Zoomies are usable.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Hexflash  Mark  Dash\n\n\nDisabled\n\n Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "3000",
@@ -379,7 +353,7 @@
     "difficulty": 1
   },
   "lore": "A magical cat from Bandle City, Yuumi was once the familiar of a yordle enchantress, Norra. When her master mysteriously disappeared, Yuumi became the Keeper of Norra's sentient Book of Thresholds, traveling through portals in its pages to search for her. Yearning for affection, Yuumi seeks friendly companions to partner with on her journey, protecting them with luminous shields and fierce resolve. While Book strives to keep her on task, Yuumi is often drawn to worldly comforts, such as naps and fish. In the end, however, she always returns to her quest to find her friend.",
-  "patchLastChanged": "25.16",
+  "patchLastChanged": "26.08",
   "positions": [
     "Support"
   ],

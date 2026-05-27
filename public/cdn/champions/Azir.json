@@ -42,7 +42,7 @@
       "cooldown": "14 / 12 / 10 / 8 / 6",
       "cost": "70 / 80 / 90 / 100 / 110",
       "damageType": "Magic damage",
-      "effectRadius": "150 / 325",
+      "effectRadius": "150 • 325",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir orders all Sand Soldiers to dash toward the target location, dealing magic damage to all enemies they pass through as well as those in front of them upon arrival, and slowing them by 25% for 1 second.</p>",
@@ -63,14 +63,14 @@
           ]
         },
         {
-          "description": "Enemies hit by subsequent soldiers take no additional damage and are instead slowed by an additional 25% per soldier."
+          "description": "Enemies hit by subsequent soldiers take no additional damage or slow."
         },
         {
           "description": "A summoned Sand Soldier is required to cast this ability."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/q",
-      "notes": "Sand Soldiers dash about 50 units further away from Azir than the target location, making them stab targets slightly further away.\nSand Soldiers will stop their movement upon colliding with  Wind Wall or  Rebuttal, but not  Unbreakable.\nSand Soldiers will automatically turn to face nearby enemy champions after the dash.\nThis happens even if they're in  stealth.(bug)",
+      "notes": "Sand Soldiers dash about 50 units further away from Azir than the target location, making them stab targets slightly further away.\nSand Soldiers will stop their movement upon colliding with  Wind Wall or  Rebuttal, but not  Unbreakable.\nSand Soldiers will automatically turn to face nearby enemy champions after the dash.\nThis happens even if they're in  stealth.(bug)\nIf there are multiple active Sand Soldiers, rather than all soldiers arriving at the target location they make a formation around it instead.\nIf the number of soldiers is 2, then neither will arrive at the location.\nIf the number of soldiers is greater than 2, then 1 soldier will arrive at the location and the rest will arrive around it.\nThis can produce unexpected results as soldiers arrive at different distances and locations and the determination of the placement is undocumented.\nThis has gameplay implications for casting at max range.(bug)",
       "projectile": "SPECIAL",
       "resource": "Mana",
       "spellEffects": "spellaoe",
@@ -92,7 +92,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir summons a Sand Soldier at the target location that is untargetable, lasts 10 seconds, and grants sight of its surroundings. The Sand Soldier expires twice as fast while within range of an enemy turret, and does so instantly if Azir is too far away.Azir periodically stocks a Sand Soldier, up to a maximum of 2.</p>"
         },
         {
-          "description": "When Azir declares a basic attack against an enemy in a soldier's attack range, the Sand Soldier attacks in his stead, thrusting their spear in the target's direction to deal magic damage to enemies struck in a line. Against the primary target, the Sand Soldier's attack applies on-hit and on-attack effects, with on-hit damage reduced to 50% effectiveness. Targets hit beyond the closest take 20% - 100% (based on level) damage. Subsequent Sand Soldiers against the same target deal 25% damage.",
+          "description": "When Azir declares a basic attack against an enemy in a soldier's attack range, the Sand Soldier attacks in his stead, thrusting their spear in the target's direction to deal magic damage to enemies struck in a line. Against the primary target, the Sand Soldier's attack applies on-hit and on-attack effects, with on-hit damage reduced to 50% effectiveness. Targets hit beyond the closest take 20% - 100% (based on level) damage. Subsequent Sand Soldier attacks against the same target deal 25% damage without applying on-hit and on-attack effects.",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -120,7 +120,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/w",
-      "notes": "Soldiers' attacks deal  area damage; against the main target, the damage is additionally tagged as  basic damage.\nIf a soldier's attack hits multiple champions, it will deal damage to them in order of their appearance in the pre-game Loading Screen, the order of which may matter for some effects that trigger just once for the first target hit.\nAzir must rank Arise! as his first ability, and will do so automatically if he reaches level 2 before ranking an ability.\nAzir can only command his soldiers to attack if he is able to declare basic attack commands himself, meaning  crowd control effects that disable attacking, such as  disarm, do not allow him to order his soldiers to attack in his stead.\n Nearsighting effects will only allow Azir to perform attacks from soldiers within his own sight radius.\nCommanding a soldier to attack will trigger  on-attack effects, but will not apply any of these effects to the target hit.\nThe attacks do not apply  life steal.\n Energized will stack but not be consumed.\n Sundered Sky does not apply.\nHowever it does apply with  Runaan's Hurricane for secondary targets if the main target is a champion.\nDamage to enemy champions from Sand Soldier stabs will draw minion aggro even if the enemy champion was not the primary target.(unexpected)\nSand Soldiers can attack  Powder Kegs,  Tentacles, and  Sentinels, but can only damage them if they are the main target of the attack.\nSand Soldiers will attack the closest enemy to Azir when using attack move (or A + RMB / Shift + RMB) or  auto-attack.\nAn exclamation mark (!) will appear above the Sand Soldier's head when within the range of an enemy  turret.",
+      "notes": "Soldiers' attacks deal  area damage; against the main target, the damage is additionally tagged as  basic damage.\nIf a soldier's attack hits multiple champions, it will deal damage to them in order of their appearance in the pre-game Loading Screen, the order of which may matter for some effects that trigger just once for the first target hit.\nAzir must rank Arise! as his first ability, and will do so automatically if he reaches level 2 before ranking an ability.\nAzir can only command his soldiers to attack if he is able to declare basic attack commands himself, meaning  crowd control effects that disable attacking, such as  disarm, do not allow him to order his soldiers to attack in his stead.\n Nearsighting effects will only allow Azir to perform attacks from soldiers within his own sight radius.\nCommanding a soldier to attack will trigger  on-attack effects, but will not apply any of these effects to the target hit.\nThe attacks do not apply  life steal.\n Energized will stack but not be consumed.\n Sundered Sky does not apply.\nHowever it does apply with  Runaan's Hurricane for secondary targets if the main target is a champion.\nThe Soldier's attacks do not apply stacks of  Press the Attack as of V26.09.(bug)\nSince V26.06, Soldier attacks will only generate 1 stack of  Conqueror if the primary target is not the first target hit.(bug)\nDamage to enemy champions from Sand Soldier stabs will draw minion aggro even if the enemy champion was not the primary target.(unexpected)\nSand Soldiers can attack  Powder Kegs,  Tentacles, and  Sentinels, but can only damage them if they are the main target of the attack.\nSand Soldiers will attack the closest enemy to Azir when using attack move (or A + RMB / Shift + RMB) or  auto-attack.\nAn exclamation mark (!) will appear above the Sand Soldier's head when within the range of an enemy  turret.",
       "projectile": "FALSE",
       "rechargeRate": "12 / 10.5 / 9 / 7.5 / 6",
       "resource": "Mana",
@@ -173,11 +173,11 @@
           "description": "If Azir dashes into an enemy champion, he stops and gains a charge of Arise!."
         },
         {
-          "description": "A summoned Sand Soldier is required to cast this ability. Azir can cast of any of his abilities during the dash."
+          "description": "A summoned Sand Soldier is required to cast this ability. Azir can cast any of his abilities during the dash."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/e",
-      "notes": "Azir will track the Sand Soldier if they change locations, such as by  Conquering Sands.",
+      "notes": "Azir will track the Sand Soldier if they change locations, such as by  Conquering Sands.\nMovement and attack commands will be canceled upon cast and cannot be issued again until Azir arrives at his final location.",
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
@@ -250,11 +250,11 @@
       "notes": "The soldier units are spawned only 175 units behind Azir, but do not control the  knock back directly. Each comes with a missile that travels the same path and conveys the damage and knockback effect.\nThe furthest area (from 325 to 175 units behind Azir) is covered by a separate set of missiles with the same effects.\nAll of the soldiers and their missiles will end the charge prematurely when one encounters  Wind Wall /  Unbreakable /  Blade Whirl /  Rebuttal or upon colliding with terrain that they cannot charge through.\nThe charge starts at 0.25 seconds into the cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nWhen the dash of the soldiers comes to a halt, all not-yet-affected enemies on top of the soldiers' landing locations (125 radius) are also knocked back.\nEmperor's Divide will not be canceled if Azir dies during the cast time.\nWhile the soldiers are charging forward, the wall is not impassable terrain.\nThis means enemies that are immune to  airborne effects can pass through the wall while its moving.\nThe wall will count as terrain for the purposes of 'into terrain' effects (e.g.  Condemn,  Dredge Line,  Heroic Charge). This will only affect enemies, allies will pass through the wall in all circumstances, even if knocked into it by an enemy.",
       "projectile": "SPECIAL",
       "resource": "Mana",
-      "speed": "1000 / 1400",
+      "speed": "1000 • 1400",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Direction",
-      "targetRange": "400 / -325"
+      "targetRange": "400 • -325"
     }
   ],
   "adaptiveType": "Magic damage",

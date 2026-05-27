@@ -1,7 +1,7 @@
 {
   "key": "E",
   "name": "Tangle-Barbs",
-  "width": "140 / 200",
+  "width": "140 • 200",
   "affects": "Enemies",
   "blurb": "Active:  Neeko slings a magical spiral in the target direction that deals magic damage and  roots enemies hit.",
   "castTime": "0.25",
@@ -54,7 +54,7 @@
   "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "resource": "Mana",
-  "speed": "1300 / 1500",
+  "speed": "1300 • 1500",
   "spellEffects": "AoE",
   "spellshieldable": "True",
   "targeting": "Direction"

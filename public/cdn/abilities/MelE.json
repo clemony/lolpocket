@@ -7,7 +7,7 @@
   "cooldown": "11 / 10.5 / 10 / 9.5 / 9",
   "cost": "50 / 60 / 70 / 80 / 90",
   "damageType": "Magic damage",
-  "effectRadius": "70 / 70 / 230 / 60",
+  "effectRadius": "70 • 70 • 230 • 60 • 400",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Mel fires an orb in the target direction that grants sight of its surroundings every 0.25 seconds as it travels. Enemies hit by the orb are dealt magic damage and rooted for 1.5 seconds.</p>",

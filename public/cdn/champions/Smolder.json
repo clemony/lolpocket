@@ -12,7 +12,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Super Scorcher Breath:</span> Deals bonus magic damage equal to 40% - 60% (+ 0% - 6%) (based on critical strike chance) of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Achooo!:</span> Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Flap, Flap, Flap:</span> Attacks each deal bonus magic damage equal to 12% of Dragon Practice stacks.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Super Scorcher Breath:</span> Deals bonus magic damage equal to 40% - 60% (+ 0% - 9%) (based on critical strike chance) of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Achooo!:</span> Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Flap, Flap, Flap:</span> Attacks each deal bonus magic damage equal to 12% of Dragon Practice stacks.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/p",
@@ -31,16 +31,16 @@
       "cooldown": "5.5 / 5 / 4.5 / 4 / 3.5",
       "cost": "25",
       "damageType": "Other damage",
-      "effectRadius": "285 / 150",
+      "effectRadius": "285 • 150",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder spits a fireball at the target enemy that deals physical damage, increased by 0% - 50% (+ 0% - 15%) (based on critical strike chance); applies on-hit effects; applies life steal at 50% effectiveness; and triggers on-attack effects. If Super Scorcher Breath kills at least one target, Smolder restores 15 mana.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder spits a fireball at the target enemy that deals physical damage, increased by 0% - 75% (+ 0% - 22.5%) (based on critical strike chance); applies on-hit effects; applies life steal at 50% effectiveness; and triggers on-attack effects. If Super Scorcher Breath kills at least one target, Smolder restores 15 mana.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
               "modifiers": [
                 {
-                  "values": "65 / 80 / 95 / 110 / 125"
+                  "values": "60 / 70 / 80 / 90 / 100"
                 },
                 {
                   "unit": "% bonus AD",
@@ -63,7 +63,7 @@
               "attribute": "Physical Damage",
               "modifiers": [
                 {
-                  "values": "32.5 / 40 / 47.5 / 55 / 62.5"
+                  "values": "30 / 35 / 40 / 45 / 50"
                 },
                 {
                   "unit": "% bonus AD",
@@ -78,10 +78,10 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/q",
-      "notes": "Any applied  Dragon Practice damage is affected by the same damage modifiers as Super Scorcher Breath and does not benefit from the ability's  life steal.\nApplies  default damage for the burn,  spell damage and procs  basic damage required effects for the fireball, and  area damage for the explosions.\nOnly Smolder's damage counts for triggering the execute.\nIf the target is below the threshold while afflicted with the burn, they will be executed on the next instance of damage dealt by Smolder, which includes the burn tick.\nIf Super Scorcher Breath would damage the target to below the execution threshold, they are executed on the same damage instance.\nThe number of additional bolts launched based on  Dragon Practice stacks is rounded up.(unexpected)\nAt 125  Dragon Practice stacks, the fireball will launch 3 bolts.\nAt 225  Dragon Practice stacks, the burn's damage based on the target's health ratio will increase by at least 1.125%.\nSuper Scorcher Breath can only hit enemies once per cast.\nThe minion and monster damage modifier applies only to the physical damage.\nSuper Scorcher Breath's initial fireball, explosion and extra bolts can all be  blocked and  dodged.\nThe application of the burn is negated in all cases.",
+      "notes": "Any applied  Dragon Practice damage is affected by the same damage modifiers as Super Scorcher Breath and does not benefit from the ability's  life steal.\nSuper Scorcher Breath's damage tags:\nThe fireball deals  spell damage and procs  basic damage required effects.\nThe explosion deals  area damage.\nThe burn deals  proc damage.\nOnly Smolder's damage counts for triggering the execute.\nIf the target is below the threshold while afflicted with the burn, they will be executed on the next instance of damage dealt by Smolder, which includes the burn tick.\nIf Super Scorcher Breath would damage the target to below the execution threshold, they are executed on the same damage instance.\nThe number of additional bolts launched based on  Dragon Practice stacks is rounded up.(unexpected)\nAt 125  Dragon Practice stacks, the fireball will launch 3 bolts.\nAt 225  Dragon Practice stacks, the burn's damage based on the target's health ratio will increase by at least 1.125%.\nSuper Scorcher Breath can only hit enemies once per cast.\nThe minion and monster damage modifier applies only to the physical damage.\nSuper Scorcher Breath's initial fireball, explosion and extra bolts can all be  blocked and  dodged.\nThe application of the burn is negated in all cases.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1800 / 900",
+      "speed": "1800 • 900",
       "spellEffects": "special",
       "spellshieldable": "true",
       "targeting": "Unit",
@@ -122,7 +122,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "65"
+                  "values": "50"
                 },
                 {
                   "unit": "% AP",
@@ -138,7 +138,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "125"
+                  "values": "110"
                 },
                 {
                   "unit": "% AP",
@@ -153,7 +153,7 @@
       "notes": "Smolder can't declare basic attacks for a brief moment after the cast time.\n Spell shield can block either the glob or the explosion, but not both.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "2000 / 400",
+      "speed": "2000 • 400",
       "spellEffects": "spellaoe",
       "spellshieldable": "special",
       "targeting": "Direction"
@@ -221,7 +221,7 @@
       "effectRadius": "1000",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire starting from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.</p>",
           "leveling": [
             {
               "attribute": "Self Heal",
@@ -243,11 +243,11 @@
               "attribute": "Physical Damage",
               "modifiers": [
                 {
-                  "values": "200 / 300 / 400"
+                  "values": "150 / 250 / 350"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "110"
+                  "values": "100"
                 },
                 {
                   "unit": "% AP",
@@ -259,11 +259,11 @@
               "attribute": "Increased Physical Damage",
               "modifiers": [
                 {
-                  "values": "300 / 450 / 600"
+                  "values": "225 / 375 / 525"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "165"
+                  "values": "150"
                 },
                 {
                   "unit": "% AP",
@@ -300,7 +300,7 @@
   },
   "fullName": "Ignacarious Gigantareno Rex Le Spes Offerentis",
   "lore": "Hidden amongst the craggy cliffs of the Noxian frontier, under the watchful eyes of his mother, a young dragon is learning what it means to be heir to the Camavoran imperial dragon lineage. Playful and eager to grow up, Smolder looks for any excuse to practice his burgeoning abilities. Though he's still a fledgling, his skills are nothing to sneeze at, easily setting fire to anything that burns.",
-  "patchLastChanged": "26.02",
+  "patchLastChanged": "26.10",
   "positions": [
     "Bottom",
     "Middle",

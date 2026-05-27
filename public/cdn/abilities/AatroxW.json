@@ -69,7 +69,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/w",
-  "notes": "The impact area is oriented relative to Aatrox's position when the projectile hits, not where the projectile originated from.\nThe location that the target is dragged to is not at the target's original location, but slightly closer towards Aatrox's position when the zone expires.\n Spell shield will block the chain's application and initial damage but not the aftereffects of one already applied.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "notes": "The impact area is oriented relative to Aatrox's position when the projectile hits, not where the projectile originated from.\nThe location that the target is dragged to is not at the target's original location, but slightly closer towards Aatrox's position when the zone expires.\n Spell shield will block the chain's application and initial damage but not the aftereffects of one already applied.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.\nThis ability will cast from wherever the caster is at the end of the cast time.\nInfernal Chains maintains its casting angle direction in relation to Aatrox if he moves during the cast time.",
   "projectile": "TRUE",
   "speed": "1800",
   "spellEffects": "spell",

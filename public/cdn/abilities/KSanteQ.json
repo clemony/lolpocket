@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Ntofo Strikes",
-  "width": "100 / 100",
+  "width": "100 • 100",
   "affects": "Enemies, Self",
   "castTime": "0.45 : 0.35 (based on bonus resistances)",
   "cooldown": "3.5",

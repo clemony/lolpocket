@@ -10,7 +10,7 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Viego's basic attacks deal bonus physical damage on-hit. This damage can critically strike for (170% + 21%) damage, has a minimum threshold and is capped at 80 against monsters.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Viego's basic attacks deal bonus physical damage on-hit. This damage can critically strike for (170% + 15%) damage, has a minimum threshold and is capped at 80 against monsters.</p>",
       "leveling": [
         {
           "attribute": "Bonus Physical Damage",

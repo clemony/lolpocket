@@ -103,7 +103,7 @@
       "notes": "Spell shield will not prevent the canister from bouncing.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1800 / 600",
+      "speed": "1800 • 600",
       "spellEffects": "spellaoe",
       "spellshieldable": "Special",
       "targeting": "Unit",
@@ -112,7 +112,7 @@
     {
       "key": "W",
       "name": "Deadly Flourish",
-      "width": "90",
+      "width": "80",
       "affects": "Enemies",
       "blurb": "Passive: Enemy champions that trigger a  Lotus Trap, or take damage from  Jhin or his allies, are marked with  Caught Out for a few seconds.",
       "castTime": "0.75",
@@ -185,7 +185,7 @@
       "cooldown": "2",
       "cost": "30",
       "damageType": "Magic damage",
-      "effectRadius": "260 / 260",
+      "effectRadius": "260 • 260",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Beauty in Death:</span> Whenever Jhin kills an enemy champion, he summons a Blooming Lotus Trap on their corpse.</p>"
@@ -253,7 +253,7 @@
       "width": "160",
       "affects": "Enemies",
       "angle": "60°",
-      "castTime": "1 / 0.25",
+      "castTime": "1 • 0.25",
       "cooldown": "120 / 105 / 90",
       "cost": "100",
       "damageType": "Physical damage",

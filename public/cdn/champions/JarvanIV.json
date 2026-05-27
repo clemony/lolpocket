@@ -28,7 +28,7 @@
     {
       "key": "Q",
       "name": "Dragon Strike",
-      "width": "136 /  300",
+      "width": "136 •  300",
       "affects": "Self, Enemies",
       "blurb": "Active:  Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and  reducing their armor for a short time.",
       "castTime": "0.4",
@@ -71,7 +71,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/q",
-      "notes": "The armor reduction is applied after the damage. The damage dealt does not benefit from it in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDragon Strike will still pull Jarvan IV to  Demacian Standard even if he is  immobilized or  grounded.\n Flash will interrupt the  dash to a  Demacian Standard but Jarvan IV will still  knock up and damage enemies he comes in contact with at the new location.\nCasting Flash right before the dash begins will cause Jarvan IV to be pulled to the flag from the new position.\nEnemies already hit by Dragon Strike cannot be affected more than once.\nThe  knockup also slightly moves the target, landing 50-100 units in a random direction.\nIf Dragon Strike finds multiple Demacian Standards in the range, it will pull Jarvan IV to the one furthest from his position.",
+      "notes": "The armor reduction is applied after the damage. The damage dealt does not benefit from it in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDragon Strike will still pull Jarvan IV to  Demacian Standard even if he is  immobilized or  grounded.\n Flash will interrupt the  dash to a  Demacian Standard but Jarvan IV will still  knock up at the new location.\nCasting Flash right before the dash begins will cause Jarvan IV to be pulled to the flag from the new position.\nEnemies already hit by Dragon Strike cannot be affected more than once.\nThe  knockup also slightly moves the target, landing 50:100 units in a random direction.\nIf Dragon Strike finds multiple Demacian Standards in the range, it will pull Jarvan IV to the one furthest from his position.",
       "resource": "Mana",
       "spellEffects": "Aoe",
       "spellshieldable": "True",
@@ -134,7 +134,7 @@
       "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
       "cost": "55",
       "damageType": "Magic damage",
-      "effectRadius": "200 / 1000 / 700",
+      "effectRadius": "200 • 1000 • 700",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Jarvan IV gains bonus attack speed.</p>",
@@ -188,7 +188,7 @@
       "cooldown": "120 / 105 / 90",
       "cost": "100",
       "damageType": "Physical damage",
-      "effectRadius": "350 / 1700",
+      "effectRadius": "350 • 1700",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.</p>",
@@ -215,9 +215,9 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/r",
-      "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\n Spell shield will block the damage but not the terrain generation.\nIf Jarvan IV's  leap is interrupted by another by another forced movement (eg. old  Skarner's  Impale[2]), the terrain will be generated at Jarvan IV's location when the forced movement ends.\nCataclysm will not deal damage, generate terrain, nor refund its cooldown if Jarvan IV is killed while leaping.\nThe perimeter is made up of 24 units with 95  pathing radius, 65  gameplay radius and 1350  sight radius each. Only every other unit is rendered visible.\n Searing Charge will not destroy the whole ring but only the part that  Ornn collides with.",
+      "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\n Spell shield will block the damage but not the terrain generation.\nIf Jarvan IV's  leap is interrupted by another by another forced movement (eg. old  Skarner's  Impale[2]), the terrain will be generated at Jarvan IV's location when the forced movement ends.\nCataclysm will not deal damage, generate terrain, nor refund its cooldown if Jarvan IV is killed while leaping.\nThe perimeter is made up of 24 units with 95  pathing radius, 65  gameplay radius and 1350  sight radius each. Only every other unit is rendered visible.\n Ornn's  Searing Charge will not destroy the whole ring but only the part that  Ornn collides with.",
       "resource": "Mana",
-      "speed": "Varies",
+      "speed": "Distance to target ÷ 0.35 s",
       "spellEffects": "Aoe",
       "spellshieldable": "Special",
       "targeting": "Unit",

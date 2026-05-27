@@ -32,7 +32,7 @@ const items = computed(() => [
     leadingIcon: "i-lucide-mail",
     label: "Messages",
     unread: unread.value.messages ? unread.value.messages : "0",
-    ui: { leadingIcon: "**:stroke-[2.2]" }
+    ui: { leadingIcon: "" }
   },
   {
     value: "notifications",
@@ -41,7 +41,7 @@ const items = computed(() => [
     unread: unread.value.notifications
       ? unread.value.notifications.toString()
       : "0",
-    ui: { leadingIcon: "**:stroke-[1.1]", trailing: "flex gap-1.5" }
+    ui: { leadingIcon: "**:stroke-[4%]!", trailing: "flex gap-1.5" }
   }
 ])
 </script>
@@ -57,6 +57,7 @@ const items = computed(() => [
     variant="ghost"
     :item
     :ui="{
+      ...item.ui,
       base: cn('h-9! capitalize')
     }"
     @click="emit('update:component', item.value)">

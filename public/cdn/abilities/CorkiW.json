@@ -61,5 +61,5 @@
   "spellEffects": "aoedot",
   "spellshieldable": "False",
   "targeting": "Location",
-  "targetRange": "300 / 600"
+  "targetRange": "300 - 600"
 }

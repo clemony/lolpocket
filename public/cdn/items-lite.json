@@ -686,10 +686,15 @@
       12,
       21
     ],
+    "rank": "Starter",
     "stats": {
-      "attackDamage": 6,
-      "attackSpeed": 15
-    }
+      "attackDamage": 8,
+      "attackSpeed": 15,
+      "omnivamp": 1.5
+    },
+    "tags": [
+      "Marksman"
+    ]
   },
   "1090": {
     "id": 1090,
@@ -872,11 +877,15 @@
       12,
       21
     ],
+    "rank": "Starter",
     "stats": {
-      "magicResistance": 10,
-      "health": 110,
-      "armor": 10
-    }
+      "armor": 10,
+      "health": 140,
+      "magicResistance": 10
+    },
+    "tags": [
+      "Tank"
+    ]
   },
   "1200": {
     "id": 1200,
@@ -2402,9 +2411,9 @@
       1042
     ],
     "stats": {
-      "abilityPower": 70,
-      "attackSpeed": 25,
-      "health": 350,
+      "abilityPower": 60,
+      "attackSpeed": 20,
+      "health": 300,
       "abilityHaste": 20
     },
     "tags": [
@@ -2727,20 +2736,11 @@
         "percentMovespeed": 2
       }
     },
-    "rank": "Legendary",
-    "recipe": [
-      3066,
-      1031
-    ],
     "stats": {
-      "armor": 40,
       "health": 250,
+      "armor": 40,
       "percentMovespeed": 4
-    },
-    "tags": [
-      "Support",
-      "Tank"
-    ]
+    }
   },
   "3003": {
     "id": 3003,
@@ -2886,9 +2886,17 @@
       12,
       21
     ],
+    "rank": "Boots",
+    "recipe": [
+      1001
+    ],
     "stats": {
-      "flatMovespeed": 45
-    }
+      "flatMovespeed": 45,
+      "omnivamp": 4
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3009": {
     "id": 3009,
@@ -4203,11 +4211,12 @@
     "rank": "Legendary",
     "recipe": [
       3144,
-      6690,
+      3113,
       1037
     ],
     "stats": {
-      "attackDamage": 45,
+      "abilityPower": 45,
+      "attackDamage": 40,
       "attackSpeed": 30,
       "percentMovespeed": 4
     },
@@ -4389,7 +4398,7 @@
     ],
     "stats": {
       "abilityPower": 100,
-      "percentMovespeed": 4,
+      "percentMovespeed": 6,
       "abilityHaste": 10
     },
     "tags": [
@@ -5636,6 +5645,9 @@
   "3168": {
     "id": 3168,
     "name": "Immortal Path",
+    "aka": [
+      "boots"
+    ],
     "gold": {
       "base": 0,
       "total": 950,
@@ -5644,9 +5656,17 @@
     "maps": [
       11
     ],
+    "rank": "Boots",
+    "recipe": [
+      3008
+    ],
     "stats": {
-      "flatMovespeed": 45
-    }
+      "flatMovespeed": 45,
+      "omnivamp": 4
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3170": {
     "id": 3170,
@@ -7957,7 +7977,7 @@
       "abilityPower": 35,
       "healAndShieldPower": 10,
       "manaRegen": 125,
-      "abilityHaste": 15
+      "abilityHaste": 10
     },
     "tags": [
       "Support"
@@ -8803,7 +8823,7 @@
       3133
     ],
     "stats": {
-      "attackDamage": 60,
+      "attackDamage": 55,
       "lethality": 18,
       "abilityHaste": 10
     },
@@ -8867,7 +8887,7 @@
     ],
     "stats": {
       "attackDamage": 55,
-      "lethality": 18,
+      "lethality": 10,
       "abilityHaste": 10
     },
     "tags": [
@@ -8892,9 +8912,6 @@
   "6701": {
     "id": 6701,
     "name": "Opportunity",
-    "aka": [
-      "lethality"
-    ],
     "gold": {
       "base": 475,
       "purchasable": false,
@@ -8907,20 +8924,9 @@
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
-      1037,
-      3134,
-      1036
-    ],
     "stats": {
-      "attackDamage": 55,
-      "lethality": 18
-    },
-    "tags": [
-      "Assassin",
-      "Movement"
-    ]
+      "attackDamage": 55
+    }
   },
   "6702": {
     "id": 6702,
@@ -12006,9 +12012,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackDamage": 55,
       "health": 400,
@@ -12581,6 +12584,27 @@
     },
     "maps": [
       30
+    ],
+    "rank": "Legendary",
+    "stats": {},
+    "tags": [
+      "Fighter",
+      "Marksman",
+      "Assassin",
+      "Mage",
+      "Tank",
+      "Support",
+      "Attack damage",
+      "Attack speed",
+      "Onhit effects",
+      "Armor pen",
+      "Ability power",
+      "Mana and reg",
+      "Magic pen",
+      "Health and reg",
+      "Ability haste",
+      "Movement",
+      "Lifesteal vamp"
     ]
   },
   "228020": {
@@ -13061,9 +13085,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "armor": 55,
       "attackSpeed": 50,
@@ -13088,9 +13109,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackDamage": 55,
       "attackSpeed": 45,
@@ -13112,9 +13130,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {}
   },
   "443058": {
@@ -13129,9 +13144,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "armor": 100,
       "health": 300
@@ -13152,9 +13164,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "health": 300,
       "magicResistance": 100
@@ -13178,9 +13187,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "criticalStrikeChance": 50
     },
@@ -13200,9 +13206,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "criticalStrikeChance": 25,
       "health": 900,
@@ -13224,9 +13227,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 80,
       "healAndShieldPower": 15,
@@ -13248,9 +13248,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "armor": 50,
       "magicResistance": 50,
@@ -13277,9 +13274,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {}
   },
   "443069": {
@@ -13297,9 +13291,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackDamage": 45,
       "attackSpeed": 40,
@@ -13324,9 +13315,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "health": 600
     },
@@ -13344,9 +13332,6 @@
       "sell": 1100
     },
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {}
   },
   "443081": {
@@ -13361,12 +13346,10 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackSpeed": 75,
-      "health": 500
+      "health": 500,
+      "percentMovespeed": 4
     },
     "tags": [
       "Tank"
@@ -13400,9 +13383,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackSpeed": 50,
       "percentMovespeed": 5
@@ -13423,9 +13403,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "armor": 65,
       "magicResistance": 65,
@@ -13452,9 +13429,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 90,
       "health": 300,
@@ -13479,9 +13453,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 80,
       "health": 700
@@ -13502,9 +13473,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 85,
       "health": 350,
@@ -13531,9 +13499,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackDamage": 55,
       "health": 350,
@@ -13560,9 +13525,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 100,
       "health": 250,
@@ -13588,9 +13550,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "armor": 35,
       "healAndShieldPower": 12,
@@ -13616,9 +13575,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackDamage": 65,
       "attackSpeed": 30,
@@ -13644,9 +13600,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackDamage": 50,
       "lethality": 20,
@@ -13692,9 +13645,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackSpeed": 60,
       "percentMovespeed": 6
@@ -13712,9 +13662,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackSpeed": 70,
       "percentMovespeed": 8,
@@ -13736,9 +13683,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 80,
       "attackSpeed": 40,
@@ -13763,9 +13707,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackDamage": 70,
       "abilityHaste": 30,
@@ -13787,9 +13728,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 70,
       "health": 200,
@@ -13811,9 +13749,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 70,
       "healAndShieldPower": 18,
@@ -13836,9 +13771,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {}
   },
   "447107": {
@@ -13853,9 +13785,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackSpeed": 50,
       "percentMovespeed": 8
@@ -13876,9 +13805,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 80,
       "percentMovespeed": 4,
@@ -13900,9 +13826,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 80,
       "armor": 30,
@@ -13924,9 +13847,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 85,
       "health": 400,
@@ -13964,9 +13884,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "health": 500,
       "abilityHaste": 20
@@ -13984,9 +13901,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 90,
       "flatMagicPenetration": 12,
@@ -14009,9 +13923,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "armor": 35,
       "attackSpeed": 40,
@@ -14033,9 +13944,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackDamage": 60,
       "lethality": 15,
@@ -14057,9 +13965,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "health": 400,
       "abilityHaste": 30
@@ -14085,9 +13990,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "health": 400,
       "abilityHaste": 15
@@ -14110,9 +14012,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "armor": 30,
       "health": 500,
@@ -14135,9 +14034,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackSpeed": 30
     },
@@ -14158,9 +14054,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "abilityPower": 100,
       "attackDamage": 70
@@ -14182,9 +14075,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "health": 900,
       "abilityHaste": 25
@@ -14205,9 +14095,6 @@
       30
     ],
     "rank": "Special",
-    "recipe": [
-      220007
-    ],
     "stats": {
       "attackSpeed": 30,
       "healAndShieldPower": 15,

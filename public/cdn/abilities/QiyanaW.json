@@ -62,7 +62,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/w",
-  "notes": "Terrashape does not interact with player-generated terrain.\nThe water puddles formed by the  Ocean Rift on  Summoner's Rift count as valid terrain for obtaining the   River element.\nThe  brushes grown by  Ivern's  Brushmaker count for gathering the   Brush element.\nPassive bonus damage from basic attacks can be  blocked.\nThe passive damage works with  Guinsoo's Rageblade's Phantom Hit.\nPENDING FOR TEST:: Passive bonus damage interaction with parrying effects ( dodge,  blind).",
+  "notes": "Terrashape has no minimum dash range.\nTerrashape does not interact with player-generated terrain.\nThe water puddles formed by the  Ocean Rift on  Summoner's Rift count as valid terrain for obtaining the   River element.\nThe  brushes grown by  Ivern's  Brushmaker count for gathering the   Brush element.\nPassive bonus damage from basic attacks can be  blocked.\nPENDING FOR TEST:: Passive bonus damage interaction with parrying effects ( dodge,  blind).",
   "resource": "Mana",
   "speed": "440 + 100% movement speed",
   "spellEffects": "proc",

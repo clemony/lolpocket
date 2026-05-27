@@ -57,10 +57,10 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/e",
-  "notes": "Feared enemies in a  180° total angle within Nocturne's facing direction will trigger Unspeakable Horror's passive.\nCasting Unspeakable Horror may grant Nocturne permanent  ghosting until he has died.(bug)\n Spell shield will block the tether's application but not the damage and aftereffects of one already applied.",
+  "notes": "Unspeakable Horror deals  persistent damage, additionally tagged as  indirect damage, and applies  spell effects.\nFeared enemies in a  180° total angle within Nocturne's facing direction will trigger Unspeakable Horror's passive.\nCasting Unspeakable Horror may grant Nocturne permanent  ghosting until he has died.(bug)\n Spell shield will block the tether's application but not the damage and aftereffects of one already applied.",
   "projectile": "FALSE",
   "resource": "Mana",
-  "spellEffects": "DoT",
+  "spellEffects": "special",
   "spellshieldable": "Special",
   "targeting": "Unit",
   "targetRange": "425",

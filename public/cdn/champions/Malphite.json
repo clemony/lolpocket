@@ -105,10 +105,10 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malphite empowers his next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage on-hit.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malphite empowers his next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range, and deal additional physical damage on-hit.</p>",
           "leveling": [
             {
-              "attribute": "Bonus Physical Damage",
+              "attribute": "Additional Physical Damage",
               "modifiers": [
                 {
                   "values": "30 / 40 / 50 / 60 / 70"
@@ -154,7 +154,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/w",
-      "notes": "The main target is dealt  basic damage, though without applying life steal, while the cone deals  area non- proc damage without applying  spell effects.\nThe cone will trigger  Jax's  Counter Strike damage reduction,  Cheap Shot,  Conqueror,  Dark Harvest,  Summon Aery and  Ocean Dragon Soul.\nIt is also special cased to trigger  Tear of the Goddess.\nThe passive will amplify negative armor, too, if Malphite's armor is dropped that low.\nThe passive's bonus armor stacks with an instance of recursion.\nThe empowered attack:\nBenefits from Thunderclap's cone effect.\nPrevents Malphite from casting  Seismic Shard and  Ground Slam during its windup.\nCannot have its windup canceled by new movement or attack commands, or casting  Unstoppable Force.\nCan have its windup canceled by casting  Hextech Rocketbelt.\nThe cone starts from Malphite's location.\nUnlike similar spells, it does not deal its damage separately to the primary target of the attack(s); if the target is outside the area of effect when struck, it will not take the bonus damage.",
+      "notes": "The main target is dealt  basic damage, though without applying life steal, while the cone deals  area non- proc damage without applying  spell effects.\nThe cone will trigger  Jax's  Counter Strike damage reduction,  Cheap Shot,  Conqueror,  Dark Harvest,  Electrocute,  Summon Aery,  Eclipse,  World Atlas enemy champion proc, and  Ocean Dragon Soul.\nIt is also special cased to trigger  Tear of the Goddess.\nThe cone does not benefit from  Spear of Shojin's damage amp.\nThe passive will amplify negative armor, too, if Malphite's armor is dropped that low.\nThe passive's bonus armor stacks with an instance of recursion.\nThe empowered attack:\nBenefits from Thunderclap's cone effect.\nPrevents Malphite from casting  Seismic Shard and  Ground Slam during its windup.\nCannot have its windup canceled by new movement or attack commands, or casting  Unstoppable Force.\nCan have its windup canceled by casting  Hextech Rocketbelt.\nThe cone starts from Malphite's location.\nUnlike similar spells, it does not deal its damage separately to the primary target of the attack(s); if the target is outside the area of effect when struck, it will not take the additional damage.",
       "resource": "Mana",
       "spellEffects": "special",
       "spellshieldable": "False",
@@ -239,7 +239,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/r",
-      "notes": "The dash speed can be up-to doubled if Unstoppable Force is targeted at the middle of a wall so that his destination ends up on the other side.\nIt will be decreased if his destination ends up closer to him than his target location.\nIf Malphite dies during his  dash, the ability cancels.\nIf the dash is interrupted without Malphite dying, for instance when he enters  resurrection during Unstoppable Force, he halts and the ability instead affects enemies at the stopped location.",
+      "notes": "Unstoppable Force has no minimum dash range.\nThe dash speed can be up-to doubled if Unstoppable Force is targeted at the middle of a wall so that his destination ends up on the other side.\nIt will be decreased if his destination ends up closer to him than his target location.\nIf Malphite dies during his  dash, the ability cancels.\nIf the dash is interrupted without Malphite dying, for instance when he enters  resurrection during Unstoppable Force, he halts and the ability instead affects enemies at the stopped location.",
       "resource": "Mana",
       "speed": "1500 + 100% movement speed",
       "spellEffects": "aoe",
@@ -260,7 +260,7 @@
     "difficulty": 1
   },
   "lore": "A massive creature of living stone, Malphite struggles to impose blessed order on a chaotic world. Birthed as a servitor-shard to an otherworldly obelisk known as the Monolith, he used his tremendous elemental strength to maintain and protect his progenitor, but ultimately failed. The only survivor of the destruction that followed, Malphite now endures Runeterra's soft folk and their fluid temperaments, while struggling to find a new role worthy of the last of his kind.",
-  "patchLastChanged": "26.02",
+  "patchLastChanged": "26.09",
   "positions": [
     "Middle",
     "Support",

@@ -49,7 +49,7 @@
       ]
     },
     {
-      "description": "Kog'Maw then gains a stack of Living Artillery for 8 seconds, refreshing on subsequent casts and stacking up to 9 times."
+      "description": "Kog'Maw then generates a stack of Living Artillery for 8 seconds, refreshing on subsequent casts and stacking up to 9 times."
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Living Artillery:</span> For each stack, Living Artillery's mana cost is increased by 40.</p>"

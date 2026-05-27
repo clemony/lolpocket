@@ -33,7 +33,7 @@
   "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/e",
   "notes": "Abduct counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nSylas will not dash to his target if the chains are blocked by  spell shield.\nThe target will be revealed for 2 seconds if the dash is interrupted.\nAbduct will still apply the  knock up if the target is  untargetable by the end of the dash.\nThis ability will cast from wherever the caster is at the start of the cast time.\nSylas is unable to perform actions while dashing to the target, and becomes able to again after 0.05 seconds of the dash ending.\nSylas will not dash to the target hit if he is  channeling or  dashing from a  Hijacked ability.\nAbduct will not apply the  knock up when this happens.\nIf the chains connect before a pre-channel cast time is complete then Sylas will dash to the target and the ability will cancel.",
   "projectile": "TRUE",
-  "speed": "2500 - 400 / 1800",
+  "speed": "2500 - 400 • 1800",
   "spellEffects": "Single target",
   "spellshieldable": "True",
   "targeting": "Direction"

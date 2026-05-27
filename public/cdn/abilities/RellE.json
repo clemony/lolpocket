@@ -7,7 +7,7 @@
   "cooldown": "14 / 13 / 12 / 11 / 10",
   "cost": "40",
   "damageType": "Magic damage",
-  "effectRadius": "300 / 2200 / 1600",
+  "effectRadius": "300 • 2200 • 1600",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 15% bonus movement speed, increased to 30% while facing the empowered ally or a visible enemy champion.</p>"
@@ -39,6 +39,6 @@
   "resource": "Mana",
   "spellEffects": "spellaoe",
   "spellshieldable": "true",
-  "targeting": "Unit / Auto",
+  "targeting": "Unit • Auto",
   "targetRange": "1200"
 }

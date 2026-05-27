@@ -39,7 +39,7 @@
       ]
     },
     {
-      "description": "Enemies in the black hole are dragged inward until they reach the center, and minions and monsters also have their movement speed reduced to 0. Enemies within the center are executed below 5% (+ 2.6% Stardust)% of their maximum health, excluding epic monsters."
+      "description": "Enemies in the black hole are dragged inward until they reach the center, and minions and monsters also have their movement speed reduced to a static 0. Enemies within the center are executed below 5% (+ 2.6% per 100 Stardust) of their maximum health, excluding epic monsters."
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">After Singularity ends, it generates 1 Stardust for each full second that enemy champions were inside it, as well as varying amounts for enemy units that were killed while being within the area:</span></p>\nChampions and epic monsters grant 2 Stardust.\nLarge minions and monsters grant 2 Stardust.\nSmall minions and monsters grant 1 Stardust."

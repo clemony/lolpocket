@@ -89,7 +89,7 @@
       "cooldown": "15 / 14 / 13 / 12 / 11",
       "cost": "50 / 55 / 60 / 65 / 70",
       "damageType": "Physical damage",
-      "effectRadius": "325 / 650",
+      "effectRadius": "325 • 650",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille sweeps her leg in a cone in the target direction over 1.1 seconds, during which she is ghosted and unable to declare basic attacks. Afterwards, she deals physical damage to all enemies within.</p>",
@@ -246,7 +246,7 @@
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
       "targeting": "Direction",
-      "targetRange": "400 / 800"
+      "targetRange": "400 • 800"
     },
     {
       "key": "R",

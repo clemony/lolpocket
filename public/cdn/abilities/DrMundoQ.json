@@ -38,7 +38,7 @@
           "attribute": "Capped Monster Damage",
           "modifiers": [
             {
-              "values": "300 / 375 / 450 / 525 / 600"
+              "values": "250 / 325 / 400 / 475 / 550"
             }
           ]
         }
@@ -56,5 +56,5 @@
   "spellEffects": "spell",
   "spellshieldable": "true",
   "targeting": "Direction",
-  "targetRange": "1050 /  990"
+  "targetRange": "1050 •  990"
 }

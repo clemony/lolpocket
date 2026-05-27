@@ -7,7 +7,7 @@
   "cooldown": "12",
   "cost": "60 / 70 / 80 / 90 / 100",
   "damageType": "Magic damage",
-  "effectRadius": "400 /  200",
+  "effectRadius": "400 • 200",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nasus unleashes a spirit fire at the target location, granting sight of the area for 2.5 seconds and, after a 0.264 seconds delay, dealing magic damage to enemies within.</p>",

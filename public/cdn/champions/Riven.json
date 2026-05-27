@@ -32,7 +32,7 @@
       "cooldown": "13",
       "cost": "0",
       "damageType": "Physical damage",
-      "effectRadius": "150 / 250 / 200 / 300",
+      "effectRadius": "150 • 250 • 200 • 300",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Riven can activate Broken Wings three times before the ability goes on cooldown, with a 0.3125-second static cooldown between casts. If Riven does not recast the ability within 4 seconds of the previous cast, it goes on cooldown.</p>"
@@ -79,10 +79,10 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/q",
-      "notes": "This ability always employs Quick cast.\nEach cast counts as a single ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nThe basic attack reset is not considered one for  Hail of Blades.\nMoving after using Broken Wings allows Riven to do other actions faster.\nThe Third Cast prevents Riven from using basic attacks and abilities for longer than the other 2 casts.\nThe Third Cast may have an extended dash range when crossing terrain.",
+      "notes": "This ability always employs Quick cast.\nEach cast counts as a single ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nMoving after using Broken Wings allows Riven to do other actions faster.\nThe Third Cast prevents Riven from using basic attacks and abilities for longer than the other 2 casts.\nThe Third Cast may have an extended dash range when crossing terrain.",
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
-      "targeting": "Auto / Unit"
+      "targeting": "Auto • Unit"
     },
     {
       "key": "W",
@@ -93,7 +93,7 @@
       "cooldown": "11 / 10 / 9 / 8 / 7",
       "cost": "0",
       "damageType": "Physical damage",
-      "effectRadius": "300 / 360",
+      "effectRadius": "300 • 360",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Riven emits a flash of runic energy, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.</p>",
@@ -235,7 +235,7 @@
   },
   "fullName": "Konte Riven",
   "lore": "Once a swordmaster in the warhosts of Noxus, Riven is an expatriate in a land she previously tried to conquer. She rose through the ranks on the strength of her conviction and brutal efficiency, and was rewarded with a legendary runic blade and a warband of her own. However, on the Ionian front, Riven's faith in her homeland was tested and ultimately broken. Having severed all ties to the empire, she now seeks to find her place in a shattered world, even as rumors abound that Noxus itself has been reforged...",
-  "patchLastChanged": "26.07",
+  "patchLastChanged": "26.09",
   "positions": [
     "Top"
   ],

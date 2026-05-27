@@ -21,7 +21,7 @@
   "notes": "Clones are counted as champions for this ability's effects and can access the portal, but other  pets cannot.\nTerrain also includes structures.\nMagical Journey's tunnel has a max range of 2600 units (about two screens long)[3].\nMagical Journey will score assists for Bard if an ally that uses it scores a kill or assist shortly after.\nBard can cast Magical Journey while  grounded or  rooted.\nThere is no limit to how many times a given instance of Magical Journey may be used.\nMagical Journey cannot interact with player-created terrain due to its short lifespan.[4]\nAny abilities that continue during normal movement, such as point blank area of effects and various forms of  stealth, will continue during the travel within Magical Journey.\nIf a champion's  dash is  interrupted while inside terrain using Magical Journey, they will be immediately displaced out to the nearest open space, but are not rendered  airborne.\nTaking Magical Journey is considered a  dash, and so will interact with effects such as  Sudden Impact and  knockdown.",
   "projectile": "FALSE",
   "resource": "Mana",
-  "speed": "900 / 1197",
+  "speed": "900 • 1197",
   "targeting": "Direction",
   "targetRange": "900"
 }

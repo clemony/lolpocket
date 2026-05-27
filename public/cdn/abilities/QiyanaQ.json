@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Elemental Wrath",
-  "width": "250 / 200",
+  "width": "250 • 200",
   "affects": "Enemies, Self",
   "blurb": "Active:  Qiyana hurls her blade in the target direction that blasts in a line upon hitting an enemy or max range, dealing physical damage, reduced against enemies beyond the closest. This consumes the current Element to empower the blade with an additional effect.\nBrush: The blade creates a grass field around Qiyana that lasts a short time, granting her  invisibility and  bonus movement speed until she attacks or exits the field.\nRiver: The blast briefly  roots enemies hit, then briefly  slows them.\nTerrain: The blast deals  bonus damage against enemies below half health.",
   "cooldown": "7",
@@ -79,7 +79,7 @@
   "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/q",
   "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nUsing a basic attack breaks the stealth at the start of the attack windup.",
   "projectile": "TRUE",
-  "speed": "1600 / 2000",
+  "speed": "1600 • 2000",
   "spellEffects": "Area of effect",
   "spellshieldable": "true",
   "targeting": "Direction"

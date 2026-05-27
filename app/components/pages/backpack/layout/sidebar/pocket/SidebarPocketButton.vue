@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useSortable } from "@dnd-kit/vue/sortable"
-import { useDragState } from "~/composables/ui/useDragManager"
+import { namespacedDragGroup } from "~/domain/pocket/helpers/dragLocation"
+import type { EditableButtonInstance } from "~~/layers/ui/app/types"
 
 const props = defineProps<{
   item: SortablePocket
@@ -8,78 +9,73 @@ const props = defineProps<{
   index?: number
 }>()
 
+const item = computed(() => props.item)
 const contextOpen = shallowRef<boolean>(false)
 
 const store = pocketStore()
 
-const { editing, randomizeHistoryName, toggleEdit } =
-  useEditableButtonProvider()
-function handleEdit(event: string) {
-  store.updatePocketName(props.item.key, event)
-}
-
-const { dragState } = useDragState()
-
-const droppable = computed(
-  () =>
-    dragState.value.dragging &&
-    (dragState.value.targetType === "folder" ||
-      dragState.value.targetType === "subfolder")
-)
-
 const element = useTemplateRef<HTMLElement>("element")
-const handle = useTemplateRef<HTMLElement>("handle")
+const editing = shallowRef<boolean>(false)
+const button = computed(() => item.value.button?.value)
 
 const { isDragging } = useSortable({
-  ...props.item.sortable,
+  type: "pocket",
+  accept: "pocket",
+  data: computed<PocketDragData>(() => ({
+    item: item.value,
+    button: item.value.button,
+    kind: "pocket",
+    listType: "sidebar"
+  })),
+  id: computed(() => `sidebar:pocket:${item.value.key}`),
+  collisionPriority: 4,
+  disabled: computed(() => editing.value),
+  group: computed(() => namespacedDragGroup("sidebar", item.value.location)),
   index: computed(() => props.index ?? 0),
-  element,
-  handle
+  element
 })
 
-const dragData = computed(
-  () => toValue(props.item.sortable.data) as PocketDragData
-)
+function handleEdit(event: string) {
+  store.updatePocketName(props.item.key, event)
+  editing.value = false
+}
 
-const shared = computed(() => ({
-  avatar: dragData.value.avatar || undefined,
-  label: props.item?.label || " "
-}))
+function handleToggleEdit() {
+  contextOpen.value = false
+  nextTick(() => {
+    editing.value = true
+  })
+}
 </script>
 
 <template>
-  <div
-    ref="element"
-    :data-dragging="isDragging"
-    :data-open="contextOpen"
-    :data-active="$route.path === dragData.to"
-    :data-droppable="droppable"
-    class="group/btn relative flex max-w-full grow overflow-visible rounded-lg">
-    <UTheme :props="{ button: shared }">
-      <PocketContextMenu
-        v-model:open="contextOpen"
-        :pocket="props.item"
-        type="sidebar"
-        @toggle-edit="toggleEdit()">
-        <EditableButton
-          ref="handle"
-          :label="item.label"
-          :avatar="dragData.avatar"
-          :value="item?.label || ''"
-          @update:label="handleEdit($event)">
-          <template #input-actions>
-            <LazyUButton
-              block
-              size="xs"
-              icon="i-sparkle"
-              :ui="{
-                base: 'max-size-6! size-6! max-w-6! min-w-6! rounded-sm'
-              }"
-              @pointerdown.prevent.stop
-              @click.stop.prevent="randomizeHistoryName()" />
-          </template>
-        </EditableButton>
-      </PocketContextMenu>
-    </UTheme>
+  <!--
+
+  -->
+  <div class="w-full">
+    <EditableButton
+      v-if="editing"
+      :model-value="item.label"
+      :avatar="button?.avatar"
+      :randomizable="true"
+      autofocus
+      required
+      @update:model-value="handleEdit($event)" />
+    <PocketContextMenu
+      v-else
+      v-model:open="contextOpen"
+      :disabled="editing || !item"
+      :pocket="item"
+      as-child
+      type="sidebar"
+      @toggle-edit="handleToggleEdit()">
+      <UButton
+        ref="element"
+        :data-dragging="isDragging"
+        :data-open="contextOpen"
+        :data-active="$route.path === button?.to"
+        v-bind="button"
+        :to="undefined" />
+    </PocketContextMenu>
   </div>
 </template>

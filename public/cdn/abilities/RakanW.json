@@ -31,7 +31,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/w",
-  "notes": "Sleep does not count for knocking the dash down.(bug)",
+  "notes": "Grand Entrance has no minimum dash range.\n Sleep does not count for knocking the dash down.(bug)",
   "resource": "Mana",
   "speed": "1700",
   "spellEffects": "spellaoe",

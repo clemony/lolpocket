@@ -64,7 +64,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/w",
-  "notes": "The damage will be dealt if the dash completed uninterrupted, and regardless of how far the target's location is at the end of the dash.\nSylas will heal even if the target champion dies before the dash is completed.\nThe only exception is if the target becomes  untargetable, in which case Kingslayer will have no effect.",
+  "notes": "The damage will be dealt if the dash completed uninterrupted, and regardless of how far the target's location is at the end of the dash.\nSylas will heal even if the target champion dies before the dash is completed.\nThe only exception is if the target becomes  untargetable, in which case Kingslayer will have no effect.\nFacebreaker's cast generates an additional stack of  Hail of Blades despite the ability not  resetting his basic attack timer.(bug)",
   "resource": "Mana",
   "spellEffects": "Single target",
   "spellshieldable": "true",

@@ -18,11 +18,7 @@
           "attribute": "Burst Fire Bonus Magic Damage",
           "modifiers": [
             {
-              "values": "17 / 19 / 21 / 23 / 25"
-            },
-            {
-              "unit": "% bonus AD",
-              "values": "10"
+              "values": "22 / 24 / 26 / 28 / 30"
             },
             {
               "unit": "% AP",
@@ -42,7 +38,7 @@
       ]
     },
     {
-      "description": "Spark Surge's current cooldown is reduced by 0.5 seconds for every champion Zeri hits with charged basic attacks or abilities, increased to 1.5 seconds if she does so with a cast of Burst Fire or Ultrashock Laser that critically strikes."
+      "description": "Spark Surge's current cooldown is reduced by 0.5 seconds whenever Zeri hits at least one enemy with a charged basic attack or Burst Fire, increased to 1.5 seconds if the latter critically strikes."
     },
     {
       "description": "Spark Surge resets Zeri's basic attack timer and Burst Fire's cooldown. Ultrashock Laser and Lightning Crash can be cast during the dash."

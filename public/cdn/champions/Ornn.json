@@ -17,7 +17,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Master Craftsman:</span> Ornn uses his craftsmanship in forgery to upgrade most Legendary items that he and his teammates own into Masterwork items, increasing the gold value of all upgradeable stats on the item by exactly 1000, shared equally among them. When Ornn reaches level 13, the first eligible Legendary item in his inventory is upgraded automatically. For each level after 13 and before 18 (levels 14 - 17, total of 4, once per ally per game), Ornn can upgrade the first eligible Legendary item in an allied champion's inventory into its Masterwork variant. He can do so by selecting the ally while within 600 range, and forges the item's upgrade by performing Living Forge's channel.Additionally, Ornn increases his bonus armor, bonus magic resistance and bonus health by 10% from all sources, further increased by 4% each time he upgrades a Legendary item into a Masterwork item, for a total increase of 30% to each stat after the maximum of 5 upgrades.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Temper:</span> Ornn applies Brittle to enemies hit by Bellows Breath and Call of the Forge God. His basic attacks on-hit against enemies afflicted with Brittle are empowered to knock them back a short distance. Ornn's and allies' immobilizing effects or silences against Brittle enemies will consume the debuff to deal bonus magic damage equal to 9% - 17.94% (based on Ornn's level) of the target's maximum health, capped at 200 - 500 (based on Bellows Breath's rank) against monsters, and cause the crowd control to last 30% longer (if applicable).</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Temper:</span> Ornn applies Brittle to enemies hit by Bellows Breath and Call of the Forge God. His basic attacks on-hit against enemies afflicted with Brittle are empowered to knock them back a short distance over 0.4 seconds. Ornn's and allies' immobilizing effects or silences against Brittle enemies will consume the debuff to deal bonus magic damage equal to 9% - 17.94% (based on Ornn's level) of the target's maximum health, capped at 200 - 500 (based on Bellows Breath's rank) against monsters, and cause the crowd control to last 30% longer (if applicable).</p>"
         },
         {
           "description": "Ornn will prioritize upgrading the first Legendary item eligible for a Masterwork upgrade based on its position in the inventory, detecting each slot until an eligible item is found."
@@ -77,7 +77,7 @@
     {
       "key": "W",
       "name": "Bellows Breath",
-      "affects": "Self / Enemies",
+      "affects": "Self • Enemies",
       "blurb": "Active:  Ornn marches in the target direction with  displacement immunity, belching fire in a cone that continually deals magic damage for a brief time. The final gout of flame will apply  Brittle for a short time.",
       "castTime": "none",
       "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
@@ -150,13 +150,13 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/w",
-      "notes": "Ornn's lunge distance is based on the distance he would travel in the target direction by standard movement over a time period of 0.75 seconds with 35% of his total movement speed.\nHis movement speed during the lunge does not actually change in this case and is only used as a scaling.\nThe scaling is based on the total movement speed Ornn had at the time of casting Bellows Breath.\nIf his total movement speed was less than or equal to an estimated value of 190, then Ornn will not lunge at all.\nWhile lunging, special VFX will be played when Ornn is first affected by  crowd control, even if that crowd control is not resisted by  displacement immunity.\n Spell shield will negate the final instance of damage and prevents  Brittle from being applied.\nOrnn can see the on-target VFX on targets that are being struck even while they are in the fog of war.\nThe following table refers for interactions while Ornn is performing Bellows Breath:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+      "notes": "Ornn's lunge distance is based on the distance he would travel in the target direction by standard movement over a time period of 0.75 seconds with 35% of his total movement speed.\nHis movement speed during the lunge does not actually change in this case and is only used as a scaling.\nThe scaling is based on the total movement speed Ornn had at the time of casting Bellows Breath.\nIf his total movement speed was less than or equal to an estimated value of 190, then Ornn will not lunge at all.\nWhile lunging, special VFX will be played when Ornn is first affected by  crowd control, even if that crowd control is not resisted by  displacement immunity.\n Spell shield will negate the final instance of damage and prevents  Brittle from being applied.\nOrnn can see the on-target VFX on targets that are being struck even while they are in the fog of war.\nBellows Breath's  lunge can pass over thin, player-generated terrain (i.e  Jarvan IV's  Cataclysm) but will otherwise not be able to.(unexpected)\nThe following table refers for interactions while Ornn is performing Bellows Breath:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
       "projectile": "FALSE",
       "resource": "Mana",
       "spellEffects": "aoe",
       "spellshieldable": "Special",
       "targeting": "Direction",
-      "targetRange": "500 / 560"
+      "targetRange": "500 • 560"
     },
     {
       "key": "E",
@@ -166,7 +166,7 @@
       "cooldown": "14 / 13.5 / 13 / 12.5 / 12",
       "cost": "35 / 40 / 45 / 50 / 55",
       "damageType": "Physical damage",
-      "effectRadius": "360 / 150",
+      "effectRadius": "360 • 150",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ornn charges in the target direction, dealing physical damage to enemies he passes through and stopping upon colliding with terrain.</p>",
@@ -206,7 +206,7 @@
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
       "targeting": "Direction",
-      "targetRange": "800 / 650"
+      "targetRange": "800 • 650"
     },
     {
       "key": "R",
@@ -217,7 +217,7 @@
       "cooldown": "140 / 120 / 100",
       "cost": "100",
       "damageType": "Magic damage",
-      "effectRadius": "3000 / 2550",
+      "effectRadius": "3000 • 2550",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ornn sounds his horn, summoning a lava elemental at maximum range from the target direction that stampedes towards his casting position at increasing speed. The elemental deals magic damage to enemies it passes through and slows them for 2 seconds.</p>",
@@ -273,7 +273,7 @@
       "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDespite this, the effects of both casts count as the same cast instance.\nCall of the Forge God cannot be recast while  grounded or  rooted.\n Brittle enemies without  Tenacity of their own will be  stunned for a total of 1.3 seconds.\n Spell shields may only block one pass.\nOrnn becomes locked out of all actions during the recast's dash and for 0.5 seconds afterwards.\nThis ability will cast from wherever the caster is at the start of the cast time.\n Displacement immunity will also resist the application of the  stun.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1600 / 450 / 1250",
+      "speed": "1600 • 450 • 1250",
       "spellEffects": "spellaoe",
       "spellshieldable": "Special",
       "targeting": "Direction",

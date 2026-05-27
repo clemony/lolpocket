@@ -3,7 +3,7 @@
   "name": "Whimsy",
   "affects": "Enemies / Allies / Self",
   "blurb": "Active:  Lulu can cast Whimsy on herself or the target champion.",
-  "castTime": "0.2419 / None",
+  "castTime": "0.2419 • None",
   "cooldown": "18",
   "cost": "65",
   "effects": [

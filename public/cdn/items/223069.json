@@ -5,9 +5,10 @@
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "active": [
+  "passives": [
     {
       "unique": true,
+      "mythic": false,
       "name": "Immolate",
       "effects": "Taking or dealing damage activates this passive for 5 seconds. Deal 20 true damage (+1.5% of your <b>maximum</b> health) true damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 150% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon light:invert\" />minions."
     }

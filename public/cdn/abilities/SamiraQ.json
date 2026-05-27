@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Flair",
-  "width": "120 / 130",
+  "width": "120 • 130",
   "affects": "Self, Enemies",
   "angle": "100°",
   "blurb": "Active:  Samira fires a shot in the target direction that deals physical damage to the first enemy hit.",

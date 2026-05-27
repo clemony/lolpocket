@@ -13,7 +13,7 @@
       "effectRadius": "800",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Echo:</span> Seraphine's basic ability casts each generate a stack of Echo, stacking up to 2 times. At 2 stacks, Seraphine's next basic ability casts an additional time for 1 mana after a 0.033 seconds delay, consuming all Echo stacks after the cast time of the second cast.Seraphine gains maximum stacks of Echo when the game starts and upon respawning.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Echo:</span> Seraphine's basic ability casts each generate a stack of Echo, stacking up to 2 times. At 2 stacks, the next basic ability cast consumes them all to cast an additional time at no cost after a 0.033 seconds delay. Seraphine gains maximum stacks of Echo when the game starts and upon respawning.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Harmony:</span> Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit.</p>"
@@ -23,7 +23,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/p",
-      "notes": "Echo Details:\n\nEcho's current stacks are represented by a counter under Seraphine's health bar, visible to all players. The last stack is highlighted to indicate that an Echo cast is ready.\nSeraphine's basic abilities alternate their icons between 3 different ones each, depending on the current amount of stacks she has.\nThe additional cast must complete for Echo stacks to be consumed; if the cast time does not finish or does not begin at all, or if the ability fails to cast when there is not enough  mana, Seraphine will keep her stacks.\nThe additional cast does not affect the  cooldown of the mimicked ability.\nThe additional cast counts as a separate cast instance for the purpose of e.g.  Electrocute or  Conqueror.\nHarmony Details:\n\nNotes orbit at a radius of 100 from the center of their holder and they fire from this location.\nThe empowered attack can  critically strike.\nThe empowered attack will not trigger and Notes will not be consumed against  wards or jungle plants.\nNotes are fired one after another with a short delay.\nSeraphine can grant Notes to more than 4 allied champions.\nHarmony does not grant Notes to  clones.\nHarmony grants Notes even if the ally is  untargetable.\nThe Notes will fire from allies regardless of how far they are away from Seraphine.\nSeraphine gains a faint blue attack range indicator when there are Notes present.\nOther Details:\n\nSeraphine, while alive, will play music if there is at least one ally champion nearby.\nThis is audible to Seraphine and all allied champions that are in range of Harmony, indicative of if they can receive a Note or not.",
+      "notes": "Echo Details:\n\nEcho's current stacks are represented by a counter under Seraphine's health bar, visible to all players. The last stack is highlighted to indicate that an Echo cast is ready.\nSince all of Seraphine's basic abilities have a cast time, the total delay to cast an Echoed ability is 0.264 seconds + 0.033 seconds = 0.297 seconds total.\nSeraphine's basic abilities alternate their icons between 3 different ones each, depending on the current amount of stacks she has.\nSeraphine's basic abilities gain a 9999 second timer to highlight them with a yellow border.\nThe timer is purely visual and serves no gameplay purpose.\nThe additional cast must complete for Echo stacks to be consumed; if the cast time does not finish, does not begin at all, or if the ability fails to cast, Seraphine will keep her stacks.\nThe additional cast does not affect the  cooldown of the mimicked ability.\nThe additional cast counts as a separate cast instance for the purpose of e.g.  Electrocute or  Conqueror.\nHarmony Details:\n\nNotes orbit at a radius of 100 from the center of their holder and they fire from this location.\nThe empowered attack can  critically strike.\nThe empowered attack will not trigger and Notes will not be consumed against  wards or jungle plants.\nNotes are fired one after another with a short delay.\nSeraphine can grant Notes to more than 4 allied champions.\nHarmony does not grant Notes to  clones.\nHarmony grants Notes even if the ally is  untargetable.\nThe Notes will fire from allies regardless of how far they are away from Seraphine.\nSeraphine gains a faint blue attack range indicator when there are Notes present.\nOther Details:\n\nSeraphine, while alive, will play music if there is at least one ally champion nearby.\nThis is audible to Seraphine and all allied champions that are in range of Harmony, indicative of if they can receive a Note or not.",
       "projectile": "TRUE",
       "speed": "3000",
       "spellEffects": "proc",
@@ -80,7 +80,7 @@
       "notes": "High Note uses a modified icon for the  second and  third stack of  Stage Presence.\nThe maximum damage of High Note uses a  cosmetic critical strike.\nHigh Note will fire from wherever Seraphine is at the end of the cast time.\nThe impact delay depends solely on the missile speed. It is 0 seconds to 0.75 seconds (after end of cast time) within the standard cast radius, but can be increased further by Seraphine being moved away from the cast location during the cast time.\nThe area of effect is covered via expansion in seven distinct rings and targets can only be hit once.\nThe range indicator for the target range has a radius of 950 units, but the center of High Note can only be cast up to 900 units. The area indicator shows the proper 350 area of effect radius and cast location.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1300 / 875",
+      "speed": "1300 • 875",
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
       "targeting": "Location",
@@ -209,7 +209,7 @@
       "width": "320",
       "affects": "Enemies",
       "blurb": "Active:  Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, briefly  charming,  slowing, and  revealing them.",
-      "castTime": "0.5 / 0.5",
+      "castTime": "0.5 • 0.5",
       "cooldown": "160 / 140 / 120",
       "cost": "100",
       "damageType": "Magic damage",
@@ -267,7 +267,7 @@
     "difficulty": 1
   },
   "lore": "Born in Piltover to Zaunite parents, Seraphine can hear the souls of others—the world sings to her, and she sings back. Though these sounds overwhelmed her in her youth, she now draws on them for inspiration, turning the chaos into a symphony. She performs for the sister cities to remind their citizens that they're not alone, that they're stronger together, and that, in her eyes, their potential is limitless.",
-  "patchLastChanged": "26.03",
+  "patchLastChanged": "26.09",
   "positions": [
     "Bottom",
     "Support"

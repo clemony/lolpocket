@@ -26,9 +26,8 @@
               "values": "100"
             },
             {
-              "tooltip": "Scaling per rank:\n70 / 75 / 80 / 85 / 90% AP",
               "unit": "% AP",
-              "values": "70 - 90"
+              "values": "90"
             }
           ]
         }
@@ -45,6 +44,6 @@
   "speed": "1700",
   "spellEffects": "spell",
   "spellshieldable": "Special",
-  "targeting": "Direction",
+  "targeting": "Location",
   "targetRange": "1200"
 }

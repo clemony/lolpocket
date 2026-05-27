@@ -7,7 +7,7 @@
   "cooldown": "0",
   "cost": "0",
   "damageType": "Physical damage",
-  "effectRadius": "345 /  360",
+  "effectRadius": "345 •  360",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gangplank consumes a charge to place a powder keg at the target location that lasts for 25 seconds and will connect to other kegs with overlapping connection radius through a trail of black powder. The keg starts with 3 health and loses 1 every 2 / 1 / 0.5 (based on level) seconds until it is left with 1 health.</p>"

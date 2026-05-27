@@ -9,7 +9,7 @@ import {
 } from "../messages/test-message"
 
 export const testingMenu = (
-  command?: Record<string, () => void>,
+  close?: () => void,
   openLogin?: () => void
 ): {
   label: string
@@ -46,7 +46,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         label: "Fetch User Data",
         icon: "i-lucide-helicopter",
         onClick: () => {
-          if (command && command.close) command.close()
+          if (close) close()
           accountFetch()
         }
       },
@@ -59,7 +59,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         label: "Sign Out",
         icon: "i-log-out",
         onClick: () => {
-          if (command && command.close) close()
+          if (close) close()
           useSignOut()
         }
       },
@@ -67,7 +67,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         label: "Open Login",
         icon: "i-log-in",
         onClick: () => {
-          if (command && command.close) close()
+          if (close) close()
           if (openLogin) openLogin()
         }
       },
@@ -75,7 +75,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         label: "Send test message",
         icon: "i-log-in",
         onClick: () => {
-          if (command && command.close) close()
+          if (close) close()
           user().addInboxMessage(createTestMessage())
         }
       },
@@ -83,7 +83,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         label: "Send test notification",
         icon: "i-alert",
         onClick: () => {
-          if (command && command.close) close()
+          if (close) close()
           user().addInboxNotification(
             createTestNotification() as InboxNotification
           )
@@ -93,7 +93,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         icon: "i-tabler-bread",
         label: "Toast",
         onClick: () => {
-          if (command && command.close) close()
+          if (close) close()
           getToast("With breads")
         }
       }

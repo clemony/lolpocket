@@ -58,10 +58,13 @@
     },
     {
       "description": "Molten Fissure's damage is reduced to 60% against minions and increased to 135% against monsters."
+    },
+    {
+      "description": "Molten Fissure's slow stacks multiplicatively with the slows applied by Grim Visage, Crushing Maw, and Spiraling Despair."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
-  "notes": "Applies  area damage for the explosions and deals  persistent area damage for the lava.\nMolten Fissure's  slow improperly counts as an additive percent movement speed modifier rather than a multiplicative one.(bug)\nThe strength is unaffected by  slow resist as a result of this behavior.\nThis means it can unintentionally stack with the effects of other slows.\nThe shockwaves can only hit each enemy once.\n Spell shield will block an explosion but not the persistent lava damage.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+  "notes": "Applies  area damage for the explosions and deals  persistent area damage for the lava.\nThe shockwaves can only hit each enemy once.\n Spell shield will block an explosion but not the persistent lava damage.\nThis ability will cast from wherever the caster is at the start of the cast time.",
   "projectile": "TRUE",
   "spellEffects": "special",
   "spellshieldable": "special",

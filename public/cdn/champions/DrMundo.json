@@ -68,7 +68,7 @@
               "attribute": "Capped Monster Damage",
               "modifiers": [
                 {
-                  "values": "300 / 375 / 450 / 525 / 600"
+                  "values": "250 / 325 / 400 / 475 / 550"
                 }
               ]
             }
@@ -86,14 +86,14 @@
       "spellEffects": "spell",
       "spellshieldable": "true",
       "targeting": "Direction",
-      "targetRange": "1050 /  990"
+      "targetRange": "1050 •  990"
     },
     {
       "key": "W",
       "name": "Heart Zapper",
       "affects": "Self, Enemies",
       "blurb": "Active:  Dr. Mundo charges up a defibrillator for a few seconds, continually dealing magic damage to nearby enemies and storing a portion of the post-mitigation damage he takes.",
-      "castTime": "None / None",
+      "castTime": "None",
       "cooldown": "17 / 16.5 / 16 / 15.5 / 15",
       "cost": "0",
       "damageType": "Magic damage",
@@ -202,7 +202,7 @@
           ]
         },
         {
-          "description": "Blunt Force Trauma as well as the triggering attack's damage is increased to 140% against minions and 200% against monsters.",
+          "description": "Blunt Force Trauma as well as the triggering attack's damage is increased to 140% against minions and 140% against monsters.",
           "leveling": [
             {
               "attribute": "Minimum Minion Physical Damage",
@@ -232,11 +232,11 @@
               "attribute": "Minimum Monster Physical Damage",
               "modifiers": [
                 {
-                  "values": "10 / 30 / 50 / 70 / 90"
+                  "values": "7 / 21 / 35 / 49 / 63"
                 },
                 {
                   "unit": "% bonus health",
-                  "values": "10"
+                  "values": "7"
                 }
               ]
             },
@@ -244,11 +244,11 @@
               "attribute": "Maximum Monster Physical Damage",
               "modifiers": [
                 {
-                  "values": "14 / 42 / 70 / 98 / 126"
+                  "values": "9.8 / 29.4 / 49 / 68.6 / 88.2"
                 },
                 {
                   "unit": "% bonus health",
-                  "values": "14"
+                  "values": "9.8"
                 }
               ]
             }
@@ -346,7 +346,7 @@
   },
   "fullName": "'Doctor' Mundo",
   "lore": "Utterly mad, tragically homicidal, and horrifyingly purple, Dr. Mundo is what keeps many of Zaun's citizens indoors on particularly dark nights. Now a self-proclaimed physician, he was once a patient of Zaun's most infamous asylum. After \"curing\" the entire staff, Dr. Mundo established his practice in the empty wards that once treated him and began mimicking the highly unethical procedures he had so often experienced himself. With a full cabinet of medicines and zero medical knowledge, he now makes himself more monstrous with each injection and terrifies the hapless \"patients\" who wander near his office.",
-  "patchLastChanged": "25.24",
+  "patchLastChanged": "26.08",
   "positions": [
     "Jungle",
     "Top"

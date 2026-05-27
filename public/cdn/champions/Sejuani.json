@@ -60,7 +60,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/q",
-      "notes": "Champions will slightly be  knocked back, while minions and monsters will instead be slightly  pulled for a fixed distance.\nArctic Assault cannot  knock enemies over terrain.\nCasting  Flash during Arctic Assault will end the dash and affect enemies at the new location.\nUpon colliding with an enemy  champion, Sejuani will  attack them.",
+      "notes": "Arctic Assault has no minimum dash range.\nChampions will be slightly  knocked back, while minions and monsters will instead be slightly  pulled for a fixed distance. Neither can displace through terrain.\nCasting  Flash during Arctic Assault will end the dash and affect enemies at the new location.\nIf the dash collides with an enemy champion, Sejuani will be ordered to basic attack them.",
       "resource": "Mana",
       "speed": "1000",
       "spellEffects": "Area of effect",
@@ -205,7 +205,7 @@
       "cooldown": "120 / 105 / 90",
       "cost": "100",
       "damageType": "Magic damage",
-      "effectRadius": "450 /  450 /  300",
+      "effectRadius": "450 •  450 • 300",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sejuani throws an ice bola in the target direction that stops upon hitting an enemy champion, dealing magic damage and stunning them for 1 second.</p>",
@@ -245,7 +245,7 @@
           "description": "After 2 seconds, the storm shatters to deal the increased magic damage to enemies within and slow them by 80% for 1 second, as well as revealing them and granting sight of the area for 0.5 seconds."
         },
         {
-          "description": "The enemy hit by the bola is not affected by the storm's effects."
+          "description": "The enemy hit by the bola is unaffected by the storm's effects."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/r",

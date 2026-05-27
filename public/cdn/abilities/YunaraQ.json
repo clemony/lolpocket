@@ -96,7 +96,7 @@
   "notes": "Cultivation of Spirit's damage classifications:\n Proc damage for the passive and active on-hit damage.\n Basic damage for the spread attack damage.\nSpread attacks will still deal damage even if Yunara misses her basic attack due to  blind.\nPENDING FOR TEST: Spread attack interaction with parrying effects ( dodge,  block)\nThere is no limit to the number of enemies the empowered attacks can spread to.\nYunara's secondary resource bar gives various context for Cultivation of Spirit. It is visible to the player only.\nWhile Cultivation of Spirit is not active, the bar shows her current Unleash stacks. It is colored white while below maximum stacks and yellow while at maximum stacks.\nAfter Cultivation of Spirit is cast, the bar counts down the buff's duration.\nThis is also true during  Transcend One's Self, which means that the bar effectively also counts down the duration of her Transcendent State.\nIf Yunara begins an attack windup toward the end of the active effects' duration and its launch would take place after it, the effects' duration is extended equal to the attack's windup time, once at most.\nSince the buff ends right after launching Cultivation of Spirit's attack and its effects have already been determined, this allows it to both spread to nearby enemies and generate a stack of Unleash.\nEach bolt from  Runaan's Hurricane's Wind's Fury may trigger its own spread attack (despite the spread attacks not being an on-hit effect).",
   "projectile": "TRUE",
   "resource": "Other",
-  "speed": "10000 / 2000",
+  "speed": "10000 • 2000",
   "spellEffects": "special",
   "spellshieldable": "false",
   "targeting": "Auto"

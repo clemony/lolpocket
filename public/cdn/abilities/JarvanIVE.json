@@ -7,7 +7,7 @@
   "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
   "cost": "55",
   "damageType": "Magic damage",
-  "effectRadius": "200 / 1000 / 700",
+  "effectRadius": "200 • 1000 • 700",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Jarvan IV gains bonus attack speed.</p>",

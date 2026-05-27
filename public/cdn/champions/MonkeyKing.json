@@ -74,7 +74,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/q",
-      "notes": "Crushing Blow triggers on  structures and  wards but the armor reduction is not applied.\nIssuing a Hold command (default J) or Stop command (default S) after Crushing Blow's attack has started will cancel the animation, however the attack will still be launched and Wukong will be unable to move until that point.",
+      "notes": "Crushing Blow's bonus damage is tagged as  basic damage and  spell damage, which allows it to trigger  spell effects.\nCrushing Blow triggers on  structures and  wards but the armor reduction is not applied.\nIssuing a Hold command (default J) or Stop command (default S) after Crushing Blow's attack has started will cancel the animation, however the attack will still be launched and Wukong will be unable to move until that point.",
       "resource": "Mana",
       "spellEffects": "spell",
       "spellshieldable": "True",
@@ -89,10 +89,9 @@
       "cooldown": "22 / 21 / 20 / 19 / 18",
       "cost": "60 / 55 / 50 / 45 / 40",
       "damageType": "Physical damage",
-      "effectRadius": "Clone's attack range",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong enters invisibility for 1 second and dashes in the target direction, leaving behind a clone of himself at his casting position for 3.25 seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong enters invisibility for 1 second and dashes in the target direction, leaving behind a clone of himself at his casting position for 4 seconds.</p>"
         },
         {
           "description": "The clone is untargetable to allies and can basic attack autonomously, prioritizing the last enemy Wukong damaged. It can also gain the effects of Crushing Blow and Nimbus Strike's bonus attack speed, and casts Cyclone whenever Wukong does."
@@ -105,7 +104,7 @@
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "30 / 35 / 40 / 45 / 50"
+                  "values": "40 / 45 / 50 / 55 / 60"
                 }
               ]
             }
@@ -119,10 +118,10 @@
       "notes": "Casting Warrior Trickster during an ability's effects will transfer them to the clone.\n Turret shots instantly kill the clone.\nThe clone is immune to  stasis and  Blast Cone.\nThe clone can still be targeted by allied  auto-targeted effects (e.g.  Heal,  Celestial Blessing).\nUsing a basic attack breaks the stealth at the end of the attack windup.",
       "resource": "Mana",
       "speed": "900",
-      "spellEffects": "pet",
+      "spellEffects": "special",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "100 / 300"
+      "targetRange": "100 - 300"
     },
     {
       "key": "E",
@@ -160,7 +159,7 @@
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "35 / 40 / 45 / 50 / 55"
+                  "values": "40 / 45 / 50 / 55 / 60"
                 }
               ]
             }
@@ -171,13 +170,13 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/e",
-      "notes": "The clones can block non-targeted attacks or abilities for 0.25 seconds after hitting their targets. [2] (unexpected)\nCasting Nimbus Strike interrupts the attack windup of enemies targeting Wukong.(bug)\nNimbus Strike has an offset distance of 75 units from the target dashed to.\nThe ability applies a stack of  Electrocute /  Phase Rush even if the target is  untargetable.",
+      "notes": "The clones can block non-targeted attacks or abilities for 0.25 seconds after hitting their targets. [2] (unexpected)\nCasting Nimbus Strike interrupts the attack windup of enemies targeting Wukong.(bug)\nNimbus Strike has an offset distance of 75 units from the target dashed to.\nThe ability applies a stack of  Electrocute even if the target is  untargetable.",
       "projectile": "FALSE",
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Unit",
-      "targetRange": "625"
+      "targetRange": "650"
     },
     {
       "key": "R",
@@ -188,7 +187,7 @@
       "cooldown": "130 / 110 / 90",
       "cost": "100",
       "damageType": "Physical damage",
-      "effectRadius": "162.5",
+      "effectRadius": "315",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong spins his staff around for up to 2 seconds, becoming ghosted and gaining 20% bonus movement speed. The staff deals physical damage every 0.25 seconds to enemies hit, and can knock them up once for 0.6 seconds. Cyclone will not knock up enemies who were already hit by either Wukong or his clone within the same cast.</p>",
@@ -269,7 +268,7 @@
     "difficulty": 1
   },
   "lore": "Wukong is a vastayan trickster who uses his strength, agility, and intelligence to confuse his opponents and gain the upper hand. After finding a lifelong friend in the warrior known as Master Yi, Wukong became the last student of the ancient martial art known as Wuju. Armed with an enchanted staff, Wukong seeks to prevent Ionia from falling to ruin.",
-  "patchLastChanged": "25.20",
+  "patchLastChanged": "26.10",
   "positions": [
     "Jungle",
     "Top"

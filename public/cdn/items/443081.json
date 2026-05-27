@@ -2,7 +2,7 @@
   "name": "Hexbolt Companion",
   "id": 443081,
   "rank": "Special",
-  "specialRecipe": 220007,
+  "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
   "passives": [
@@ -10,12 +10,25 @@
       "unique": true,
       "mythic": false,
       "name": "Covering Fire",
-      "effects": "While your ally is within 1200 units, your basic attacks on-hit generate a stack of <i>Covering Fire</i>. At 1 stack, your next basic attack consumes them all to cause your ally to fire a bolt at the target, dealing 50 – 100 (based on level) physical damage and applying your ally's on-hit effects at 100% effectiveness."
+      "effects": "Every 10 seconds, Autocast river fires a bolt towards a nearby target, dealing 50 – 100 (based on level) physical damage and applying <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit effects."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Energized",
+      "effects": "Moving and basic attacking generates <i>Energize</i> stacks, up to 100."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Unload",
+      "effects": "Your <img src=\"/img/icons/energized.webp\" class=\"tip-icon \" />energized attacks trigger your Autocast river effects."
     }
   ],
   "stats": {
     "attackSpeed": 75,
-    "health": 500
+    "health": 500,
+    "percentMovespeed": 4
   },
   "description": "75% Attack Speed\n500 Health\n4% Move Speed\n\nCovering Fire\nEvery 10 seconds, Autocast fires a bolt towards a nearby target, dealing  physical damage and applying On-Hit effects.\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nUnload\nYour Energized Attacks trigger your Autocast effects.",
   "gold": {

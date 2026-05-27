@@ -31,7 +31,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/e",
-  "notes": "To achieve a 99%  slow with the empowered attack via  Power Chord, it would require at least 1475 AP.",
+  "notes": "To achieve a 99%  slow with the empowered attack via  Power Chord, it would require at least 1225 AP.",
   "resource": "Mana",
   "targeting": "Auto"
 }

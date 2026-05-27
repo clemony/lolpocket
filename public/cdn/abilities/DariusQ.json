@@ -7,7 +7,7 @@
   "cooldown": "9 / 8 / 7 / 6 / 5",
   "cost": "25 / 30 / 35 / 40 / 45",
   "damageType": "Physical damage",
-  "effectRadius": "240 / 460",
+  "effectRadius": "460",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Darius becomes ghosted for 1 second and hefts his axe for 0.75 seconds, afterward swinging it around himself to deal physical damage to nearby enemies. Enemies within the inner radius take 35% damage.</p>",
@@ -48,6 +48,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/q",
+  "innerRadius": "240",
   "notes": "Decimate will cancel if Darius enters  stasis or uses  Dash during the delay.\nAfter the delay, Decimate will be placed on a 1-second cooldown.",
   "resource": "Mana",
   "spellEffects": "spellaoe",

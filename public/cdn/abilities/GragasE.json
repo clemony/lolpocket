@@ -7,7 +7,7 @@
   "cooldown": "14 / 13.5 / 13 / 12.5 / 12",
   "cost": "50",
   "damageType": "Magic damage",
-  "effectRadius": "180 /  180",
+  "effectRadius": "180 •  180",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gragas charges in the target direction and stops upon colliding with an enemy, dealing magic damage to all nearby enemies, knocking them back, though not through terrain, and stunning them for 1 second.</p>",

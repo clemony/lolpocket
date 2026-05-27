@@ -18,11 +18,11 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "90 / 130 / 170 / 210 / 250"
+              "values": "100 / 135 / 170 / 205 / 240"
             },
             {
               "unit": "% AP",
-              "values": "90"
+              "values": "100"
             }
           ]
         },
@@ -30,11 +30,11 @@
           "attribute": "Non-Champion Damage",
           "modifiers": [
             {
-              "values": "72 / 104 / 136 / 168 / 200"
+              "values": "80 / 108 / 136 / 164 / 192"
             },
             {
               "unit": "% AP",
-              "values": "72"
+              "values": "80"
             }
           ]
         }
@@ -47,5 +47,5 @@
   "speed": "2300",
   "spellEffects": "spellaoe",
   "targeting": "Location",
-  "targetRange": "250 / 650"
+  "targetRange": "250 - 650"
 }

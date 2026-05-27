@@ -25,11 +25,11 @@
       "unique": true,
       "mythic": false,
       "name": "Eminence",
-      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 15 ad (+2 per stack) <b>bonus</b> attack damage for 90 seconds."
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 12 ad (+3 per stack) <b>bonus</b> attack damage for 90 seconds."
     }
   ],
   "stats": {
-    "attackDamage": 60,
+    "attackDamage": 55,
     "lethality": 18,
     "abilityHaste": 10
   },

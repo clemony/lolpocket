@@ -2,7 +2,7 @@
   "key": "R",
   "name": "Collateral Damage",
   "width": "200",
-  "affects": "Enemies / Self",
+  "affects": "Enemies • Self",
   "angle": "60°",
   "blurb": "Active:  Graves  recoils backward and fires an explosive shell in the target direction that deals physical damage to enemies it passes through.",
   "castTime": "0.25",

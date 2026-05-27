@@ -1,7 +1,7 @@
 {
   "key": "W",
   "name": "Battle Roar",
-  "affects": "Self / Enemies",
+  "affects": "Self • Enemies",
   "blurb": "Passive:  Rengar stores grey health equal to a portion of damage taken within a brief moment.",
   "castTime": "none",
   "cooldown": "0.25",
@@ -34,7 +34,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/w",
-  "notes": "Grey health will not be consumed upon casting Battle Roar despite visually appearing so. It will only ever expire after its duration ends.",
+  "notes": "Grey health will not be consumed upon casting Battle Roar despite visually appearing so. It will only ever expire after its duration ends.\nThe ability will visibly attempt to but fail to buffer if cast during a non-ability cast time. [2] (unexpected)",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
   "targeting": "Auto"

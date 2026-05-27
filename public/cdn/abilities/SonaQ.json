@@ -7,7 +7,7 @@
   "cooldown": "8",
   "cost": "50 / 55 / 60 / 65 / 70",
   "damageType": "Magic damage",
-  "effectRadius": "825 /  400",
+  "effectRadius": "825 •  400",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sona sends out bolts of sound to the two nearest visible enemies, prioritizing champions. Each bolt deals magic damage and grants sight of the area around the target for 1 second.Sona gains a stack of Accelerando for each bolt that hits an enemy champion.</p>",

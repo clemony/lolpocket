@@ -12,7 +12,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Ziggs empowers his next basic attack on-attack to deal 20 - 184 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 322 (based on level) (+ 87.5% AP) against structures. ]</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Ziggs empowers his next basic attack to deal 20 - 184 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 322 (based on level) (+ 87.5% AP) against structures. ]</p>"
         },
         {
           "description": "Short Fuse's cooldown is reduced by 4 / 5 / 6 (based on level) seconds whenever Ziggs casts an ability."
@@ -38,7 +38,7 @@
       "effectRadius": "240",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown and each bounce occurring over 0.495 seconds regardless of distance.</p>"
         },
         {
           "description": "The bomb explodes upon landing near an enemy, within terrain, or the final bounce, dealing magic damage to nearby enemies.",
@@ -63,7 +63,7 @@
       "notes": "Bouncing Bomb can be thrown or bounce over units/terrain.\n Spell shield will block the damage of the explosion, but the explosion can still damage other targets in the radius.\nZiggs will throw the bomb from his location at the end of the cast time, towards the pre-clamped cast location, causing the bounces to adjust their angle accordingly.",
       "projectile": "TRUE",
       "resource": "Mana",
-      "speed": "1700 / Fixed time",
+      "speed": "1700",
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
       "targeting": "Location",
@@ -78,7 +78,7 @@
       "cooldown": "20 / 18 / 16 / 14 / 12",
       "cost": "80",
       "damageType": "Magic damage",
-      "effectRadius": "325 /  400",
+      "effectRadius": "325 • 400",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs hurls a charge to the target location, remaining there for 4 seconds and granting sight of the area. Satchel Charge can be recast within the duration, and does so automatically afterwards. If recast while in flight, the charge will explode immediately upon landing.</p>"
@@ -115,7 +115,7 @@
           ]
         },
         {
-          "description": "Ziggs does not dash if he is immobilized or grounded. He can cast any of his abilities during the dash."
+          "description": "Ziggs will not dash from the explosion if he is immobilized or grounded. He can cast any of his abilities during the dash."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/w",
@@ -137,7 +137,7 @@
       "cooldown": "16",
       "cost": "70 / 80 / 90 / 100 / 110",
       "damageType": "Magic damage",
-      "effectRadius": "335 /  135",
+      "effectRadius": "335 •  135",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs scatters a cluster of 11 proximity mines over the target location that grant sight of the area for 2 seconds, arming after 0.5 seconds and lasting for up to 10 seconds.</p>"
@@ -215,10 +215,10 @@
       "cooldown": "120 / 95 / 70",
       "cost": "100",
       "damageType": "Magic damage",
-      "effectRadius": "525",
+      "effectRadius": "525 • 600",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs catapults the Mega Inferno Bomb to the target location, granting sight within a 600 radius around its destination for 4 seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ziggs catapults the Mega Inferno Bomb to the target location, granting sight of the area for 4 seconds.</p>"
         },
         {
           "description": "The bomb explodes upon arrival to deal magic damage to enemies hit, reduced to 65% against those outside of the epicenter.",
@@ -252,7 +252,7 @@
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/r",
       "innerRadius": "250",
-      "notes": "Allies cannot see Mega Inferno Bomb's area indicator until shortly before the blast.\nMega Inferno Bomb takes 2.64 seconds from the start of the cast time to land when Ziggs casts at maximum range (reduced to 1.617 seconds from the start of the cast time when casting within 2700 units).\nWhen cast within 2700 units, Mega Inferno Bomb has a fixed travel time. Beyond that, the travel time is equal to the cast distance divided by the now-fixed missile speed.\nThe area reveal on the target location begins as soon as the cast time is completed and can see into  brush and across terrain.",
+      "notes": "Allies cannot see Mega Inferno Bomb's area indicator until shortly before the blast.\nMega Inferno Bomb takes 2.64 seconds from the start of the cast time to land when cast at maximum range (reduced to 1.617 seconds from the start of the cast time when casting within 2700 units).\nWhen cast within 2700 units, Mega Inferno Bomb has a fixed travel time. Beyond that, the travel time is equal to the cast distance divided by the now-fixed missile speed.\nThe area reveal on the target location begins as soon as the cast time is completed and can see into  brush and across terrain.",
       "projectile": "FALSE",
       "resource": "Mana",
       "speed": "2250",

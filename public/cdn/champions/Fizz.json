@@ -138,7 +138,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/w",
-      "notes": "Applies  spell damage on the empowered attack,  persistent damage on the damage over time effect, and  proc damage on the bonus damage on-hit.\nSeastone Trident's  interactions with  dodging,  blocking, and  blinding effects.\nThe passive bonus damage gets negated by  dodging or  blocking the attack, or if Fizz is  blinded.\nThe active:\nIf the attacked enemy is  dodging or if Fizz is  blinded, the empowered attack won't deal any damage, but the empowered attack won't be consumed.\nIf the attacked enemy is  blocking, the empowered attack won't deal any damage despite being consumed. But the attack will apply the passive bonus damage of Seastone Trident.\nThe empowered attack will trigger against  structures.",
+      "notes": "Applies  spell damage on the empowered attack,  persistent damage additionally tagged as  indirect damage on the damage over time effect, and  proc damage on the bonus damage on-hit.\nSeastone Trident's  interactions with  dodging,  blocking, and  blinding effects.\nThe passive bonus damage gets negated by  dodging or  blocking the attack, or if Fizz is  blinded.\nThe active:\nIf the attacked enemy is  dodging or if Fizz is  blinded, the empowered attack won't deal any damage, but the empowered attack won't be consumed.\nIf the attacked enemy is  blocking, the empowered attack won't deal any damage despite being consumed. But the attack will apply the passive bonus damage of Seastone Trident.\nThe empowered attack will trigger against  structures.",
       "resource": "Mana",
       "spellEffects": "special",
       "spellshieldable": "True",
@@ -189,12 +189,12 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/e",
-      "notes": "This ability always employs Quick cast.\nPlayful counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDetonating the ability early for  Trickster does not.\nThe distance covered during Playful's directed splash is equal to half of Fizz's movement speed.\nPlayful cannot be used for approximately 0.5 seconds after using  Urchin Strike.\n Flash can be used while hopping off the trident, but not while balanced on it.\nFizz can receive aggro while hopping off the trident, but not while balanced on it\nIf the first dash is interrupted, Fizz initiates the hop immediately, and if the second one is, the splash will not occur.\nIn either cases, Fizz loses the untargetability. [2]\nIf Playful is cast while under the effect of a move block, Fizz will not become untargetable and will initiate the hop instantly.(bug)\nIf  Trickster is cast, the splash will not occur.(bug)\nThere is a minimum dash distance of 25 units for Playful.\nIf Fizz casts Playful on top of himself after being teleported (e.g.  Flash,  Recall), the minimum dash distance will not apply.(bug)\nIf Fizz enters  stasis during either Playful or  Trickster, the splash occurs after the stasis ends.",
+      "notes": "This ability always employs Quick cast.\nPlayful counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDetonating the ability early for  Trickster does not.\nThe distance covered during Playful's directed splash is equal to half of Fizz's movement speed.\nPlayful cannot be used for approximately 0.5 seconds after using  Urchin Strike.\n Flash can be used while hopping off the trident, but not while balanced on it.\nFizz can receive aggro while hopping off the trident, but not while balanced on it\nIf the first dash is interrupted, Fizz initiates the hop immediately, and if the second one is, the splash will not occur.\nIn either cases, Fizz loses the untargetability. [2] (unexpected)\nIf Playful is cast while under the effect of a move block, Fizz will not become untargetable and will initiate the hop instantly.(bug)\nIf  Trickster is cast, the splash will not occur.(bug)\nIf Fizz casts Playful on top of himself after  blinking and not moving from the blinked-to spot, the minimum dash distance of 25 units will not apply (casts at 0 range).(bug)\nIf Fizz enters  stasis during either Playful or  Trickster, the splash occurs after the stasis ends.",
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "400"
+      "targetRange": "25 - 400"
     },
     {
       "key": "E",
@@ -225,11 +225,11 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/e",
-      "notes": "This ability always employs Quick cast.\nTrickster does not count as an ability activation.\nBoth  Playful's and Trickster's  dashes may be directed separately.\nTrickster has a minimum dash distance of 75 units.\n Flash cannot be used during the dash.\nThe splash occurs immediately if Fizz encounters terrain that cannot be dashed through (he has to be particularly close to the wall).",
+      "notes": "This ability always employs Quick cast.\nTrickster does not count as an ability activation.\nBoth  Playful's and Trickster's  dashes may be directed separately.\n Flash cannot be used during the dash.\nThe splash occurs immediately if Fizz encounters terrain that cannot be dashed through (he has to be particularly close to the wall).",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Location",
-      "targetRange": "300"
+      "targetRange": "75 - 300"
     },
     {
       "key": "R",

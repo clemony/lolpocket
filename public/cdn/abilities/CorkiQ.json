@@ -7,7 +7,7 @@
   "cooldown": "9 / 8.5 / 8 / 7.5 / 7",
   "cost": "60 / 65 / 70 / 75 / 80",
   "damageType": "Magic damage",
-  "effectRadius": "275 /  500",
+  "effectRadius": "275 •  500",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Corki launches a bomb at the target location that briefly grants sight of its surroundings as it travels and explodes upon impact, dealing magic damage to enemies hit.</p>",

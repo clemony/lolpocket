@@ -11,7 +11,7 @@
   "effectRadius": "210",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies, increased to 150% against monsters.</p>",
       "leveling": [
         {
           "attribute": "Physical Damage",

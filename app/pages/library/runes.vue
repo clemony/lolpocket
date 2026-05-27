@@ -6,7 +6,7 @@ definePageMeta({
   title: "Runes",
   icon: "i-lp-rune",
   description: "Rune paths and the runes within them.",
-  class: "scale-110 **:stroke-[0.3]",
+  class: "scale-110",
   prefix: "Library",
   order: 2
 })

@@ -2,12 +2,12 @@
   "key": "W",
   "name": "Defiant Dance",
   "width": "240",
-  "affects": "Self / Enemies",
-  "castTime": "None / 0.25",
+  "affects": "Self, Enemies",
+  "castTime": "None • 0.25",
   "cooldown": "20 / 18 / 16 / 14 / 12",
   "cost": "70 / 75 / 80 / 85 / 90",
   "damageType": "Physical damage",
-  "effectRadius": "300 /  120",
+  "effectRadius": "300 • 120",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Irelia assumes a defensive stance with her blades to charge for up to 1.5 seconds, during which she reduces incoming physical damage by 40% - 70% (based on level) (+ 7% per 100 AP) and incoming magic damage by 20% - 35% (based on level) (+ 3.5% per 100 AP). Additionally, Defiant Dance's damage increases over the first 0.75 seconds of the channel.</p>"
@@ -62,5 +62,5 @@
   "resource": "Mana",
   "spellEffects": "spellaoe",
   "spellshieldable": "True",
-  "targeting": "Auto / Direction"
+  "targeting": "Auto • Direction"
 }

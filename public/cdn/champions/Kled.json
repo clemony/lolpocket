@@ -27,7 +27,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/p",
-      "notes": "Kled and  Skaarl's health bar is split in two segments, representing each of them respectively.\nWhile Mounted, Kled's health is visually rounded up while  Skaarl's health is rounded down.\nWhile Dismounted, Kled's health is visually rounded down while  Skaarl's health is rounded up.\nExcess damage dealt to  Skaarl counts for the purposes of effects based on damage dealt (eg.  Death's Dance's Ignore Pain,  Stormsurge's Stormraider, item damage trackers).(unexpected)\nIf  Skaarl's health is reduced below 0 by an attack or ability with multiple damage instances, subsequent damage instances from the same cast instance are reduced to 0 damage.\n The Collector's Death is special cased to not affect Kled while he is Mounted, regardless of the duo's combined current health.\nIf  Skaarl's health is reduced below 0 by  Eclipse's Ever Rising Moon, Kled will take the triggering attack's damage.(unexpected)\nWhile  untargetable, Kled rapidly  destroys enemy projectiles targeting him.\nKled's  gameplay radius does not change when becoming Mounted or Dismounted, even though his model size changes visually.\nKled does not receive damage from  Illaoi's  Test of Spirit,  Kayn's  Umbral Trespass, or being  Regurgitated by  Tahm Kench while dismounting.(bug)\nDismounting removes  Speed Shrine's movement speed buff from Kled and prevent him from regaining it for the next 5 seconds, even if he remounts or enters the shrine again.(bug)\nThe  lunge can pass through player-generated terrain.(unexpected)\nBuying items while Kled and  Skaarl's combined current health is lower than Kled's maximum health will cause Kled to dismount upon undoing the purchase and potentially lose health.(bug)\nPENDING FOR TEST: Dismounting with a  spell shield sometimes consumes the spell shield and negates the effects of dismounting.(bug)[2]\nIf Kled would be  executed while Mounted, he is instead only Dismounted.\nThe following table refers for interactions while Kled is lunging:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+      "notes": "Kled and  Skaarl's health bar is split in two segments, representing each of them respectively.\nWhile Mounted, Kled's health is visually rounded up while  Skaarl's health is rounded down.\nWhile Dismounted, Kled's health is visually rounded down while  Skaarl's health is rounded up.\nExcess damage dealt to  Skaarl counts for the purposes of effects based on damage dealt (eg. Lifeline HP threshold,  Death's Dance's Ignore Pain,  Stormsurge's Stormraider, item damage trackers).(unexpected)\nIf Kled dismounts and triggers a lifeline  shield effect from the same damage instance, excess damage dealt to  Skaarl will be dealt to the shield.(unexpected)[2]\nIf  Skaarl's health is reduced below 0 by an attack or ability with multiple damage instances, subsequent damage instances from the same cast instance are reduced to 0 damage.\n The Collector's Death is special cased to not affect Kled while he is Mounted, regardless of the duo's combined current health.\nIf  Skaarl's health is reduced below 0 by  Eclipse's Ever Rising Moon, Kled will take the triggering attack's damage.(unexpected)\nWhile  untargetable, Kled rapidly  destroys enemy projectiles targeting him.\nKled's  gameplay radius does not change when becoming Mounted or Dismounted, even though his model size changes visually.\nKled does not receive damage from  Illaoi's  Test of Spirit,  Kayn's  Umbral Trespass, or being  Regurgitated by  Tahm Kench while dismounting.(bug)\nDismounting removes  Speed Shrine's movement speed buff from Kled and prevent him from regaining it for the next 5 seconds, even if he remounts or enters the shrine again.(bug)\nThe  lunge can pass through player-generated terrain.(unexpected)\nBuying items while Kled and  Skaarl's combined current health is lower than Kled's maximum health will cause Kled to dismount upon undoing the purchase and potentially lose health.(bug)\nPENDING FOR TEST: Dismounting with a  spell shield sometimes consumes the spell shield and negates the effects of dismounting.(bug)[2]\nIf Kled would be  executed while Mounted, he is instead only Dismounted.\nThe following table refers for interactions while Kled is lunging:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
       "speed": "400",
       "targeting": "Passive"
     },
@@ -55,7 +55,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/p",
-      "notes": "Clones are considered to be champions for all of this ability's effects.\n Voidmites, and  Bel'Veth's  Void Remora are not considered to be lane  minions for the purpose of courage generation.\nThe movement speed reduction will apply to Kled's bonus movement speed.\nIf his bonus movement speed would be reduced below 0, his base movement speed is reduced instead equal to the remaining reduction, or by the full amount if he has no bonus movement speed.\nKled will retain the bonus movement speed buff for 1.5 seconds while facing an enemy champion even if that champion is no longer  visible.\nAfter completing a  basic attack against a champion, the bonus movement speed buff is granted for 1.5 seconds regardless of his facing direction.\nThe bonus movement speed buff's value is refreshed when Kled levels up.\nKled will neither gain Courage nor bonus movement speed if his basic attack is  dodged,  blocked,  missed or  parried.\nIt is possible to get the Courage from the fountain but have Kled and  Skaarl reunite outside the fountain.\nSources of increased maximum health that additionally restore current health will restore Kled's current health even if he is DISMOUNTED.\nThe Courage bar is white when under 50 courage, yellow when equal to or above 50 courage, and red at 100 courage.",
+      "notes": "Clones are considered to be champions for all of this ability's effects.\n Voidmites, and  Bel'Veth's  Void Remora are not considered to be lane  minions for the purpose of courage generation.\nThe movement speed reduction will apply to Kled's bonus movement speed.\nIf his bonus movement speed would be reduced below 0, his base movement speed is reduced instead equal to the remaining reduction, or by the full amount if he has no bonus movement speed.\nKled will retain the bonus movement speed buff for 1.5 seconds while facing an enemy champion even if that champion is no longer  visible.\nAfter completing a  basic attack against a champion, the bonus movement speed buff is granted for 1.5 seconds regardless of his facing direction.\nThe bonus movement speed buff's value is refreshed when Kled levels up.\nKled will neither gain Courage nor bonus movement speed if his basic attack is  dodged,  blocked,  missed or  parried.\nIt is possible to get the Courage from the fountain but have Kled and  Skaarl reunite outside the fountain.\nSources of increased maximum health that additionally restore current health will restore Kled's current health even if he is DISMOUNTED.\nThe Courage bar is white when under 50 courage, yellow when equal to or above 50 courage, and red at 100 courage.\nIf Kled enters  stasis during the first 0.25 seconds of reuniting with Skaarl, the remount will be deferred by another 0.25 seconds.\nThis is a remnant of the pre-V25.14 behavior, when entering  stasis or  resurrection during the first 0.25 of the remount sequence would deffer the remount until the end of those effects.",
       "targeting": "Passive"
     },
     {
@@ -70,7 +70,7 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kled throws a bear trap in the target direction that deals physical damage to enemies hit, increased to 150% against minions, small pets, and small monsters. The bear trap collides with the first enemy champion, large pet, or large monster hit, revealing them for 2.5 seconds, and forming a tether between Kled and the target for 1.75 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kled throws a bear trap in the target direction that deals physical damage to enemies hit, increased to 150% against minions, small pets, and small and medium monsters. The bear trap collides with the first enemy champion, large pet, or large monster hit, revealing them for 2.5 seconds, and forming a tether between Kled and the target for 1.75 seconds.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -141,13 +141,13 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/q",
-      "notes": "Applies  spell damage to enemy champions, large monsters and large pets, while applying  area damage to all other enemy units.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe visual effect of Bear Trap on a Rope will appear at Kled's height at the end of cast time and may not portray its  projectile accurately if Kled is  dismounting at the end of cast time.\nPENDING FOR TEST: Is the same true if Kled is  airborne?\nIn addition to its  projectile, Bear Trap on a Rope will check for enemy champions, large monsters and large pets within a 60-unit center-to-edge radius area from the projectile's origin point.\nThe projectile interacts with projectile-blocking effects but the area check doesn't.\n Tibbers,  Daisy and  The Maiden are considered  large pets.\nAll other pets are considered small pets for the purposes of this ability.\nBear Trap on a Rope will not  pull the target if they are in  stasis.\nThe tether cannot be broken within the first 0.25 seconds of its application.\n Rek'Sai's  Void Rush will break the tether upon the beginning of its cast time.(bug)\nThe pull damage is updated dynamically based on Kled's current attack damage.\n Count Kledula has no sound cue for when the tether is broken.(bug)\nThe damage is also increased to 150% against  Neeko disguised as a  ward.",
+      "notes": "Applies  spell damage to enemy champions, large monsters and large pets, while applying  area damage to all other enemy units.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe visual effect of Bear Trap on a Rope will appear at Kled's height at the end of cast time and may not portray its  projectile accurately if Kled is  dismounting at the end of cast time.\nPENDING FOR TEST: Is the same true if Kled is  airborne?\nThe ability will cast to wherever the caster's cursor was at the start of the cast time.\nIn addition to its  projectile, Bear Trap on a Rope will check for enemy champions, large monsters and large pets within a 60-unit center-to-edge radius area from the projectile's origin point.\nThe projectile interacts with projectile-blocking effects but the area check doesn't.\n Tibbers,  Daisy and  The Maiden are considered  large pets.\nAll other pets are considered small pets for the purposes of this ability.\nBear Trap on a Rope will not  pull the target if they are in  stasis.\nThe tether cannot be broken within the first 0.25 seconds of its application.\n Rek'Sai's  Void Rush will break the tether upon the beginning of its cast time.(bug)\nThe pull damage is updated dynamically based on Kled's current attack damage.\n Count Kledula has no sound cue for when the tether is broken.(bug)\nThe damage is also increased to 150% against  Neeko disguised as a  ward.",
       "projectile": "TRUE",
       "speed": "1600",
       "spellEffects": "special",
       "spellshieldable": "True",
       "targeting": "Direction",
-      "tetherRadius": "625"
+      "tetherRadius": "800 : 625 (based on time active)"
     },
     {
       "key": "Q",
@@ -212,11 +212,11 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/q",
-      "notes": "Applies  spell damage to champions and  area damage to non-champions.\nThe backwards  dash from Pocket Pistol can pass terrain.\nPocket Pistol can be cast while  grounded or  rooted but Kled will not dash backwards.\nThis ability will cast from wherever the caster is at the end of the cast time.\nIn addition to its  projectiles, Pocket Pistol will check for enemy champions within a 55-unit center-to-edge radius area from the projectiles' origin point.\nThe projectiles interact with projectile-blocking effects but the area check doesn't.\n Black Cleaver will specifically apply a stack for every pellet hit.\n Spell shield will negate multiple pellets if they hit at the same time.\nEven if the first pellet is negated, subsequent non-negated pellets will still only deal 20% of the damage.\nPellets will restore Courage when colliding with units protected by  spell shield, but will not restore Courage when colliding with  Fiora's  Riposte.\nPENDING FOR TEST: Pocket Pistol will have no charges if Kled  dismounts and triggers  Transcendence at the same time.(bug)\nPENDING FOR TEST: Pocket Pistol will falsely visually appear to have another charge ready if the end of its cast time coincides with a charge being stocked.(bug)\nThe following table refers for interactions while Kled is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Recall  Mark\n\n\nDisabled\n\n Flash  Teleport  Hexflash  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\nBuffering Interactions\n\nAttempting to use any effect that would be buffered until the end of the cast time will instead delay it until the end of the dash, even if that effect is usable during the dash.",
+      "notes": "Applies  spell damage to champions and  area damage to non-champions.\nThe backwards  dash from Pocket Pistol can pass terrain.\nPocket Pistol can be cast while  grounded or  rooted but Kled will not dash backwards.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe ability will cast to wherever the caster's cursor was at the start of the cast time.\nIn addition to its  projectiles, Pocket Pistol will check for enemy champions within a 55-unit center-to-edge radius area from the projectiles' origin point.\nThe projectiles interact with projectile-blocking effects but the area check doesn't.\n Black Cleaver will specifically apply a stack for every pellet hit.\n Spell shield will negate multiple pellets if they hit at the same time.\nEven if the first pellet is negated, subsequent non-negated pellets will still only deal 20% of the damage.\nPellets will restore Courage when colliding with units protected by  spell shield, but will not restore Courage when colliding with  Fiora's  Riposte.\nPENDING FOR TEST: Pocket Pistol will have no charges if Kled  dismounts and triggers  Transcendence at the same time.(bug)\nPENDING FOR TEST: Pocket Pistol will falsely visually appear to have another charge ready if the end of its cast time coincides with a charge being stocked.(bug)\nThe following table refers for interactions while Kled is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Recall  Mark\n\n\nDisabled\n\n Flash  Teleport  Hexflash  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\nBuffering Interactions\n\nAttempting to use any effect that would be buffered until the end of the cast time will instead delay it until the end of the dash, even if that effect is usable during the dash.",
       "projectile": "TRUE",
       "rechargeRate": "18 / 16 / 14 / 12 / 10",
       "resource": "Charge",
-      "speed": "3000 / 1025",
+      "speed": "3000 • 1025",
       "spellEffects": "special",
       "spellshieldable": "True",
       "targeting": "Direction"
@@ -234,10 +234,10 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kled periodically gains Violent Tendencies, which starts expiring upon his next basic attack.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Violent Tendencies:</span> Kled gains 150% bonus attack speed on his next 4 basic attacks within 4 seconds. The fourth attack is empowered to deal bonus physical damage. The damage based on the target's health is capped at 200 against monsters.Violent Tendencies' current cooldown is reduced by 0.5 seconds on-hit, increased to 1.5 against champions.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Violent Tendencies:</span> Kled gains 150% bonus attack speed on his next 4 basic attacks within 4 seconds. The fourth attack is empowered to deal additional physical damage. The damage based on the target's health is capped at 200 against monsters.Violent Tendencies' current cooldown is reduced by 0.5 seconds on-hit, increased to 1.5 against champions.</p>",
           "leveling": [
             {
-              "attribute": "Bonus Physical Damage",
+              "attribute": "Additional Physical Damage",
               "modifiers": [
                 {
                   "values": "20 / 30 / 40 / 50 / 60"
@@ -252,10 +252,10 @@
           ]
         },
         {
-          "description": "Against structures, the fourth attack deals modified bonus physical damage.",
+          "description": "Against structures, the fourth attack deals modified additional physical damage.",
           "leveling": [
             {
-              "attribute": "Structure Bonus Damage",
+              "attribute": "Structure Additional Damage",
               "modifiers": [
                 {
                   "values": "62 / 64.02 / 66.05 / 68.07 / 70.1 / 72.12 / 74.14 / 76.17 / 78.19 / 80.22 / 82.24 / 84.27 / 86.29 / 88.31 / 90.34 / 92.36 / 94.39 / 96.41"
@@ -270,7 +270,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/w",
-      "notes": "Violent Tendencies' bonus damage is applied as a separate damage instance from the attack that triggers it.\nThis causes  Black Cleaver's Carve to be applied twice.(unexpected)\nThis damage instance is applied before the damage of the attack.\nViolent Tendencies' bonus damage is tagged as  basic damage and  spell damage, which allows it to trigger spell effects.\nThe bonus damage applies  life steal.\nAttacking a plant or  ward will not activate Violent Tendencies.\nAttacking either while Violent Tendencies is already active will still consume an attack.\nKled gains attack speed even on non-Violent Tendencies attacks as long as the ability is not on cooldown.\nWhile affected by  Silence or  Forced Actions, the animations and sounds of Kled's first 3 Violent Tendencies attacks are replaced with default ones.(bug)\nThe first and third attack will  instead play  critical strike animations if they strike critically.\nLearning Violent Tendencies will cancel Kled's ongoing attack windup.(bug)\nIn contrast, Violent Tendencies coming off cooldown during an ongoing attack windup will not cancel it.\nSuccessfully finishing the basic attack will then cause Violent Tendencies to begin expiring, but will not count as one of the 4 attacks.",
+      "notes": "Violent Tendencies' additional damage is applied as a separate damage instance from the attack that triggers it.\nThis causes  Black Cleaver's Carve to be applied twice.(unexpected)\nThis damage instance is applied before the damage of the attack.\nViolent Tendencies will proc  on-hit effects even if the additional damage kills the target.\nViolent Tendencies' additional damage is tagged as  basic damage and  spell damage, which allows it to trigger  spell effects.\nThe additional damage applies  life steal.\nAttacking a plant or  ward will not activate Violent Tendencies.\nAttacking either while Violent Tendencies is already active will still consume an attack.\nKled gains attack speed even on non-Violent Tendencies attacks as long as the ability is not on cooldown.\nWhile affected by  Silence or  Forced Actions, the animations and sounds of Kled's first 3 Violent Tendencies attacks are replaced with default ones.(bug)\nThe first and third attack will instead play  critical strike animations if they strike critically.\nLearning Violent Tendencies will cancel Kled's ongoing attack windup.(unexpected)\nIn contrast, Violent Tendencies coming off cooldown during an ongoing attack windup will not cancel it.\nSuccessfully finishing the basic attack will then cause Violent Tendencies to begin expiring, but will not count as one of the 4 attacks.",
       "spellEffects": "Special",
       "spellshieldable": "False",
       "targeting": "Passive"
@@ -278,7 +278,6 @@
     {
       "key": "E",
       "name": "Jousting",
-      "width": "230",
       "affects": "Enemies",
       "blurb": "Active:  Skaarl  dashes in the target direction, dealing physical damage to enemies she passes through and marking enemy  champions hit. The mark  reveals the target for a short time, during which Jousting can be recast.",
       "castTime": "none",
@@ -287,7 +286,7 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skaarl dashes in the target direction, though not through terrain, dealing physical damage to enemies she passes through and pulling minions, pets and small monsters hit towards her.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skaarl dashes in the target direction, though not through terrain, dealing physical damage to enemies she passes through and pulling minions, pets, and small and medium monsters hit towards her.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -336,7 +335,7 @@
       "spellEffects": "aoe",
       "spellshieldable": "True",
       "targeting": "Direction / Auto",
-      "targetRange": "550 /  765"
+      "targetRange": "550 •  765"
     },
     {
       "key": "E",
@@ -366,22 +365,10 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kled & Skaarl charge toward the target location, automatically navigating terrain along the way, during which they are ghosted, immune to crowd control and revealed to enemy champions in a 1250 radius. If the charge does not complete within 15 seconds, it will end prematurely. The charge is interrupted instantly if Kled dismounts during it.</p>"
         },
         {
-          "description": "While charging, the duo gain a shield for every 0.25 seconds of traveling, up to 10% - 100% of the maximum shield amount over 2.25 seconds. The shield lasts for 1.75 seconds to 2 seconds upon finishing the charge. Additionally, the duo trails a directional draft in their wake, lasting 9 seconds. Allied units other than lane minions following the draft gain Mr. Kled's Wild Ride. After 0.5 seconds of charging, the duo gain bonus movement speed every 0.25 seconds, up to 950 total movement speed over 3 seconds.",
+          "description": "While charging, the duo gain an initial shield, plus an additional amount for every 0.25 seconds of traveling, up to a cap at 2 seconds. The shield lasts for 2 seconds upon finishing the charge. Additionally, the duo trails a directional draft in their wake, lasting 9 seconds. Allied units other than lane minions following the draft gain Mr. Kled's Wild Ride. After 0.5 seconds of charging, the duo gain bonus movement speed every 0.25 seconds, up to 950 total movement speed over 3 seconds.",
           "leveling": [
             {
-              "attribute": "Minimum Shield",
-              "modifiers": [
-                {
-                  "values": "20 / 30 / 40"
-                },
-                {
-                  "unit": "% bonus AD",
-                  "values": "30"
-                }
-              ]
-            },
-            {
-              "attribute": "Maximum Shield",
+              "attribute": "Total Shield",
               "modifiers": [
                 {
                   "values": "200 / 300 / 400"
@@ -389,6 +376,30 @@
                 {
                   "unit": "% bonus AD",
                   "values": "300"
+                }
+              ]
+            },
+            {
+              "attribute": "Initial Shield",
+              "modifiers": [
+                {
+                  "values": "40 / 60 / 80"
+                },
+                {
+                  "unit": "% bonus AD",
+                  "values": "60"
+                }
+              ]
+            },
+            {
+              "attribute": "Shield Per Instance",
+              "modifiers": [
+                {
+                  "values": "20 / 30 / 40"
+                },
+                {
+                  "unit": "% bonus AD",
+                  "values": "30"
                 }
               ]
             }
@@ -430,12 +441,12 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/r",
-      "notes": "During the charge the duo gain (950 − (starting movement speed)) ÷ 12 × (time ÷ 0.25) bonus movement speed\nThe bonus movement speed is not affected by movement speed caps.\nThe charge will not give any movement speed to the duo if they have more than [ 1440 raw movement speed ][ 950 after movement speed soft caps ].\nThe trail will not give Kled and his allies any movement speed out-of-champion-combat if they have more than [ 840 raw movement speed ][ 650 after movement speed soft caps ].\nMovement speed is granted by facing the direction of the draft and lasts for 0.528 seconds upon exiting the trail or facing another direction.\n Voidmites, and  Bel'Veth's  Void Remora are considered to be lane  minions for the purpose of Mr. Kled's Wild Ride.\nKled will re-path if his current path is blocked by a newly created terrain (either player created or by the  Mountainous Rift).\nThe charge will continue towards the target location even if Kled's location changes drastically.\nKled will mark his path with an indicator visible to him and his allies.\nKled's pathing indicator will not account for changes in Kled's pathing.\nKled's pathing indicator will sometimes display a path different from his real path.(bug) [4]\n Axiom Arcanist only increases the first instance of shield gained.(bug)\nWhile charging, if any out of  sight enemy  champions were within 500 range of Kled during the last second, Kled locks on to the closest visible enemy champion within 800 range in his facing direction, and begins dashing toward them.\nIf Kled passes over the charge's target location, the charge will end even during the dash.(bug)\nIf the charge ends before, or during the dash, the dash will not:\nGenerate a shield;\nTrail a directional draft, applying Mr. Kled's Wild Ride;\nDisable summoner spells and items.\nKled sometimes fails to lock on to valid targets in range.(bug) [5]\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest trigger at the end of the charge or at the end of the dash, whichever comes last, even if the charge ends before or during the dash.\nKled and  Skaarl will track the target if they change locations.\nThey will dash to the target's previous location if the target moves beyond 2500 units of the dash's beginning location.\nIf the target moves 2500 or more units away from Kled and  Skaarl during the dash, it will be interrupted.\nIf the dash does not complete within 9 seconds, Kled and  Skaarl will continue to track their target, but will be able to cast spells, and will not be able to collide with enemy champions.\nWhile dashing, Kled will mark his target with an indicator visible to both teams.\nThe damage dealt is based on time spent traveling before the beginning of the dash.\nIt is possible for Kled to briefly lose his  crowd control immunity while colliding with an enemy champion, which can cause the  dash, and its subsequent damage and  displacement to be interrupted.(bug) [6]\nUnits  knocked back by Chaaaaaaaarge!!!  knockback can pass through terrain if it is player-generated, or if they are already inside it.(unexpected)\nThe  airborne debuff is removed early when the forced movement stops.\nThe following table refers for interactions while Kled is charging:\n Ghost is also disabled, contrary to the table below.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A\n\nThe following table refers for interactions while Kled is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A\n\nEvery summoner spell is disabled, but summoner spells that aren't disabled while Kled is charging will not visually appear disabled.(bug)\nNo summoner spells or items are disabled if the charge ends before or during the dash.(bug)\nBuffering Interactions\n\nNothing can be buffered during the charge.\nMovement and attack commands, as well as  Bear Trap on a Rope and  Jousting can be buffered during the dash.",
-      "speed": "1000 / 600",
+      "notes": "The Charge\n\nWhile charging, if any out of  sight enemy  champions were within 500 range of Kled during the last second, Kled locks on to the closest visible enemy champion within 800 range in his facing direction, and begins dashing toward them.\nDuring the charge the duo gain (950 − (starting movement speed)) ÷ 12 × (time ÷ 0.25) bonus movement speed\nThe bonus movement speed is not affected by movement speed caps.\nThe charge will not give any movement speed to the duo if they have more than [ 1440 raw movement speed ][ 950 after movement speed soft caps ].\nThe trail will not give Kled and his allies any movement speed out-of-champion-combat if they have more than [ 840 raw movement speed ][ 650 after movement speed soft caps ].\nMovement speed is granted by facing the direction of the draft and lasts for 0.528 seconds upon exiting the trail or facing another direction.\n Voidmites, and  Bel'Veth's  Void Remora are considered to be lane  minions for the purpose of Mr. Kled's Wild Ride.\nKled will re-path if his current path is blocked by a newly created terrain (either player created or by the  Mountainous Rift).\nThe charge will continue towards the target location even if Kled's location changes drastically.\nKled will mark his path with an indicator visible to him and his allies.\nKled's pathing indicator will not account for changes in Kled's pathing.\nKled's pathing indicator will sometimes display a path different from his real path.(bug) [4]\nKled's  shield generation is based upon a global 0.25 second timer, not based on when the ability is cast or when it ends.(unexpected)\nFor example, this means that Kled will take an additional 0.25 seconds to generate the maximum shield amount if the ability was cast immediately after the last tick of the global timer.\nFor example, this means that Kled's shield will expire 0.25 seconds sooner if his charge ends immediately before the next tick of the global timer.\n Axiom Arcanist only increases the first instance of shield gained.(bug)\nThe Dash\n\nIf Kled passes over the charge's target location, the charge will end even during the dash.(bug)\nIf the charge ends before, or during the dash, the dash will not:\nGenerate a shield;\nTrail a directional draft, applying Mr. Kled's Wild Ride;\nDisable summoner spells and items.\nKled sometimes fails to lock on to valid targets in range.(bug) [5]\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest trigger at the end of the charge or at the end of the dash, whichever comes last, even if the charge ends before or during the dash.\nKled and  Skaarl will track the target if they change locations.\nThey will dash to the target's previous location if the target moves beyond 2500 units of the dash's beginning location.\nIf the target moves 2500 or more units away from Kled and  Skaarl during the dash, it will be interrupted.\nIf the dash does not complete within 9 seconds, Kled and  Skaarl will continue to track their target, but will be able to cast spells, and will not be able to collide with enemy champions.\nWhile dashing, Kled will mark his target with an indicator visible to both teams.\nThe damage dealt is based on time spent traveling before the beginning of the dash.\nIt is possible for Kled to briefly lose his  crowd control immunity while colliding with an enemy champion, which can cause the  dash, and its subsequent damage and  displacement to be interrupted.(bug) [6]\nUnits knocked back by Chaaaaaaaarge!!!  knockback can pass through terrain if it is player-generated, or if they are already inside it.(unexpected)\nThe  airborne debuff is removed early when the forced movement stops.\nBuffering Interactions\n\nNothing can be buffered during the charge.\nMovement and attack commands, as well as  Bear Trap on a Rope and  Jousting can be buffered during the dash.\nInteraction Tables\n\nThe following table refers for interactions while Kled is charging:\n Ghost is also disabled, contrary to the table below.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A\n\nThe following table refers for interactions while Kled is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A\n\nEvery summoner spell is disabled, but summoner spells that aren't disabled while Kled is charging will not visually appear disabled.(bug)\nNo summoner spells or items are disabled if the charge ends before or during the dash.(bug)",
+      "speed": "1000 • 600",
       "spellEffects": "spell",
       "spellshieldable": "True",
       "targeting": "location",
-      "targetRange": "3500 / 3750 / 4000 / 4250 / 4500"
+      "targetRange": "500 - (3500 / 3750 / 4000 / 4250 / 4500)"
     },
     {
       "key": "R",

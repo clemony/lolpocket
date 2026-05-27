@@ -11,14 +11,14 @@
   ],
   "buildsInto": [
     {
-      "id": 3146,
-      "name": "Hextech Gunblade",
-      "gold": 3000
-    },
-    {
       "id": 3139,
       "name": "Mercurial Scimitar",
       "gold": 3200
+    },
+    {
+      "id": 3146,
+      "name": "Hextech Gunblade",
+      "gold": 3000
     },
     {
       "id": 3072,

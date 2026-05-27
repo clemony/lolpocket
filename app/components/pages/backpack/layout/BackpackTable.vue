@@ -32,11 +32,13 @@ const { children, childKey, childData } = useFolderChildren(
 const data = computed<SortablePocket[]>(() => {
   return [
     ...children.value,
-    ...computed(() => {
-      if (id !== "folders") return []
-      else return subfolders.value.flatMap((f) => toValue(f.children))
-    }).value?.filter(Boolean)
-  ].filter(Boolean) as SortablePocket[]
+    ...computed(
+      () =>
+        toValue(routeFolder.value.subfolders)?.flatMap((f) =>
+          toValue(f.children)?.filter(Boolean)
+        ) as SortablePocket[]
+    ).value
+  ]
 })
 
 const activePocketItem = ref<Pocket | undefined>()

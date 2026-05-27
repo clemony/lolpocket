@@ -10,7 +10,7 @@
   "effectRadius": "160",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karthus conjures a blast at the target location that detonates after 0.528 seconds to 0.759 seconds, granting sight of the area and dealing magic damage to all enemies within, doubled when only one target is struck.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karthus conjures a blast at the target location that detonates after 0.528 seconds − 0.759 seconds, granting sight of the area and dealing magic damage to all enemies within, doubled when only one target is struck.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",

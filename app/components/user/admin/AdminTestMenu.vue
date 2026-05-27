@@ -15,19 +15,19 @@ const props = defineProps<{
 const user = useSupabaseUser()
 const isAdmin = computed(() => user.value?.app_metadata?.user_role === "admin")
 
-const command = inject<Record<string, () => void>>("command")
+const { command } = useApp()
 const overlay = useOverlay()
 const login = overlay.create(LazyAuthModal, {
   destroyOnClose: true,
   props: { type: "logIn" }
 })
-const menu = computed(() => testingMenu(command, login.open))
+const menu = computed(() => testingMenu(command.close, login.open))
 const open = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <div v-if="isAdmin" class="h-max w-full p-1">
-    <UPopover v-model:open="open" :disabled="!isAdmin" v-bind="props.popover">
+  <div class="h-max w-full p-1">
+    <UPopover v-model:open="open" v-bind="props.popover">
       <UButton
         v-bind="props.button"
         :label="menu.label"

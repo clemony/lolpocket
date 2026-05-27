@@ -6,7 +6,7 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zed's basic attacks on-hit against targets below 50% maximum health are empowered to deal 6% / 8% / 10% (based on level) of the target's maximum health as bonus magic damage.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zed's basic attacks on-hit against targets below 50% maximum health are empowered to deal 5% / 7.5% / 10% (based on level) of the target's maximum health as bonus magic damage.</p>"
     },
     {
       "description": "Against monsters, Contempt for the Weak deals 75% damage and is capped at 175."

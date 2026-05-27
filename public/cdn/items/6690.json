@@ -11,11 +11,6 @@
   ],
   "buildsInto": [
     {
-      "id": 3087,
-      "name": "Statikk Shiv",
-      "gold": 3000
-    },
-    {
       "id": 4003,
       "name": "Lifeline",
       "gold": 1600

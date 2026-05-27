@@ -6,10 +6,10 @@
   "castTime": "none",
   "cooldown": "8",
   "cost": "50",
-  "effectRadius": "550 / 600",
+  "effectRadius": "550",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin slows nearby enemies marked by Tempest, decaying over 4 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin slows nearby enemies marked by Tempest, decaying in strength over 4 seconds.</p>",
       "leveling": [
         {
           "attribute": "Slow",
@@ -27,9 +27,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/e",
-  "notes": "Tempest's reveal is not removed when Lee Sin casts Cripple.\nCripple cannot be cast without a marked target within 550 range.",
   "resource": "Energy",
-  "speed": "1600",
   "spellshieldable": "True",
   "targeting": "Proximity"
 }

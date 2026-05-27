@@ -16,9 +16,9 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/p",
-  "notes": "The splash damage will critically strike when the basic attack does, but will not deal any bonus damage.\nCall of the Freljord range to be shared with allies is based on Nunu and Willump's location.\nIf no ally is prioritized based on their stats, it will be given to the one closest to them.\nEnemies that can trigger Call of the Freljord have a marker overhead.\nThis marker isn't present on inhibitors or the nexus (because they cannot hold buffs and debuffs including the one that hosts this VFX), but they still trigger Call of the Freljord when attacked.\nCall of the Freljord's maximum remaining duration is 44 seconds.\nThe buff has no cap for its maximum total duration.",
+  "notes": "Enemies that can trigger Call of the Freljord have a marker overhead.\nThis marker isn't present on inhibitors or the nexus (because they cannot hold buffs and debuffs including the one that hosts this VFX), but they still trigger Call of the Freljord when attacked.\nCall of the Freljord range to be shared with allies is based on Nunu and Willump's location.\nIf no ally is prioritized based on their stats, it will be given to the one closest to them.\nThe cone deals  AoE  basic damage (though without applying  spell effects).\nThe splash damage will critically strike when the basic attack does, but will not deal any bonus damage.\nCall of the Freljord's maximum remaining duration is 44 seconds.\nThe buff has no cap for its maximum total duration.",
   "onTargetCdStatic": "10",
-  "spellEffects": "periodic",
+  "spellEffects": "special",
   "targeting": "Passive",
-  "targetRange": "1000 / 700"
+  "targetRange": "1000 • 700"
 }

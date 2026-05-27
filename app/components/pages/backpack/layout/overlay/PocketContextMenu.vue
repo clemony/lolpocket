@@ -147,7 +147,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
 </script>
 
 <template>
-  <Menu
+  <ContextMenu
     v-slot="{ open }"
     v-bind="forwarded"
     :items="pocketActions ?? []"
@@ -162,5 +162,5 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
         e === false && subopen === true ? () => {} : emit('update:open', e)
     ">
     <slot :open />
-  </Menu>
+  </ContextMenu>
 </template>

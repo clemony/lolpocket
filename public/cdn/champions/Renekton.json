@@ -33,7 +33,7 @@
       "cooldown": "7",
       "cost": "0",
       "damageType": "Physical damage",
-      "effectRadius": "400 / 480",
+      "effectRadius": "400 • 480",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renekton cleaves around himself, dealing physical damage to nearby enemies and healing himself for each enemy hit, up to a cap.</p>",
@@ -213,7 +213,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/w",
-      "notes": "Each strike of Ruthless Predator deals  basic damage, but the first strike also triggers spell effects by also being tagged as  spell damage.\nIf the target becomes  untargetable or  dies during the empowered attack's cast time, it is cancelled but not consumed.\nThe empowered attack will not trigger against  structures.\nThe first two attacks of the  empowered version will generate fury.(bug)\nThe third attack will remove any fury gained since the first attack.\nThis includes fury generated via  Dominus.(bug)\nThis will fail to remove fury gained through a  Guinsoo's Rageblade's Phantom Hit which has triggered on the first attack.(bug)\nThis will not fail to remove fury gained through  Dusk and Dawn's Spellblade.\nEven if empowered Ruthless Predator is blocked by a  spell shield, it will still destroy any existing damage  shields on the target.\nRuthless Predator does not cause Renekton to attack twice/thrice. Effects that trigger  on-attack or interact with the attack windup will only trigger once and thus do not interact with Ruthless Predator. (e.g.  Lethal Tempo,  Hail of Blades).",
+      "notes": "Each strike of Ruthless Predator deals  basic damage, but the first strike also triggers spell effects by also being tagged as  spell damage.\nIf the target becomes  untargetable or  dies during the empowered attack's cast time, it is cancelled but not consumed.\nEach strike of Ruthless Predator counts as a separate cast instance for effects such as  Electrocute and  Eclipse's Ever Rising Moon.\nThe empowered attack will not trigger against  structures.\nThe first two attacks of the  empowered version will generate fury.(bug)\nThe third attack will remove any fury gained since the first attack.\nThis includes fury generated via  Dominus.(bug)\nThis will fail to remove fury gained through a  Guinsoo's Rageblade's Phantom Hit which has triggered on the first attack.(bug)\nThis will not fail to remove fury gained through  Dusk and Dawn's Spellblade.\nEven if empowered Ruthless Predator is blocked by a  spell shield, it will still destroy any existing damage  shields on the target.\nRuthless Predator does not cause Renekton to attack twice/thrice. Effects that trigger  on-attack or interact with the attack windup will only trigger once and thus do not interact with Ruthless Predator. (e.g.  Lethal Tempo,  Hail of Blades).",
       "spellEffects": "Special",
       "spellshieldable": "True",
       "targeting": "Auto"

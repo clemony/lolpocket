@@ -8,7 +8,7 @@
   "cooldown": "140 / 120 / 100",
   "cost": "100",
   "damageType": "Physical damage",
-  "effectRadius": "1060 /  1000",
+  "effectRadius": "1060 •  1000",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xayah leaps into the air, becoming ghosted and untargetable for 1.5 seconds. After 1 second, she shoots 5 Feathers in a cone in the target direction that deal physical damage to enemies hit.</p>",
