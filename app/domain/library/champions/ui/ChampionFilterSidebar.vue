@@ -5,6 +5,7 @@ import type {
   CheckboxGroupProps,
   StepperItem
 } from "@nuxt/ui"
+import type { TabValue } from "~/domain/library/utils/viewMode"
 
 const { roles } = defineProps<{
   roles: CheckboxGroupItem[]
@@ -57,7 +58,7 @@ const attackStep = ref<StepperItem[]>([
       <!-- view -->
       <ViewToggle
         variant="label"
-        @update:tab-model="(e) => emit('updateTab', e)" />
+        @update:tab-model="(e: TabValue) => emit('updateTab', e)" />
       <!-- reset -->
       <UButton
         variant="outline"

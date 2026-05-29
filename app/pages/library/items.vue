@@ -2,7 +2,7 @@
 import { itemQuotes } from "#shared/constants/items/itemQuotes"
 import { rankToItem } from "#shared/constants/items/rankToItem"
 import type { ArrayOrNested, CheckboxGroupItem, TabsItem } from "@nuxt/ui"
-import type { TabValue } from "~/components/pages/library/viewMode"
+import type { TabValue } from "~/domain/library/utils/viewMode"
 import { statIndex } from "~~/shared/constants/common/stat-index"
 import { itemTags } from "~~/shared/constants/items/itemTags"
 
@@ -23,10 +23,10 @@ const tabModel = shallowRef<TabValue>(0)
 const component = computed(() =>
   tabModel.value === 0
     ? defineAsyncComponent(
-        () => import("~/components/pages/library/items/LibraryItemGrid.vue")
+        () => import("~/domain/library/items/LibraryItemGrid.vue")
       )
     : defineAsyncComponent(
-        () => import("~/components/pages/library/items/LibraryItemTable.vue")
+        () => import("~/domain/library/items/LibraryItemTable.vue")
       )
 )
 
@@ -72,7 +72,7 @@ const items = computed<Record<string, CheckboxItem[]>>(() => ({
             }
           } as InputClearUi
         "
-        @update:model-value="(e) => (filters.query = e)" />
+        @update:model-value="(e: string) => (filters.query = e)" />
     </template>
     <template #toolbar-content>
       <LazyItemFilterToolbar :items />

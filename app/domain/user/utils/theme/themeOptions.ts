@@ -1,11 +1,11 @@
 import {
   getThemeAccentOption,
   themeAccentOptions
-} from "~/components/user/utils/settings/theme/themeAccent"
+} from "~/domain/user/utils/theme/themeAccent"
 import {
   colorModeIconClass,
   colorModes
-} from "~/components/user/utils/settings/theme/themeBase"
+} from "~/domain/user/utils/theme/themeBase"
 
 export const themeMenu = () => {
   const themePreference = useThemePreference()

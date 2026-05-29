@@ -69,13 +69,6 @@ function handleToggleEdit() {
       as-child
       @toggle-edit="handleToggleEdit()">
       <slot name="button" :context-open="contextOpen" />
-      <!--      <UButton
-        ref="element"
-        :data-dragging="isDragging"
-        :data-open="contextOpen"
-        :data-active="$route.path === button?.to"
-        v-bind="button"
-        :to="undefined" /> -->
     </PocketContextMenu>
   </div>
 </template>

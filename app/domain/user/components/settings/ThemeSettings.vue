@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { themeAccentOptions } from "~/components/user/utils/settings/theme/themeAccent"
-import { colorModes } from "~/components/user/utils/settings/theme/themeBase"
+import { themeAccentOptions } from "~/domain/user/utils/theme/themeAccent"
+import { colorModes } from "~/domain/user/utils/theme/themeBase"
 
 const { orientation } = defineProps<{
   orientation?: "vertical" | "horizontal"

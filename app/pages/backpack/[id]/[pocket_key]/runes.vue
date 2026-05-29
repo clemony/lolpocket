@@ -2,10 +2,8 @@
 import { addRuneSet } from "~/domain/pocket/utils/manage/addPocketModules"
 
 definePageMeta({
-  name: "pocket-runes",
   title: "runes",
   order: 3,
-  path: "/backpack/:id/:pocket_key/runes",
   props: true,
   search: false
 })

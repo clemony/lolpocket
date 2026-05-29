@@ -86,7 +86,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
     {
       ...contextOpen(p.label ?? ""),
       onSelect() {
-        navigateTo(`/backpack/${p.location || "folders"}/pocket/${p.key}`)
+        navigateTo(`/backpack/${p.location || "folders"}/${p.key}`)
       }
     },
     {

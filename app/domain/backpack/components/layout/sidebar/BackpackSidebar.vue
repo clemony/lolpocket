@@ -24,7 +24,8 @@ const tabList = computed(() => [
   },
   {
     label: "Pocket",
-    value: "pocket"
+    value: "pocket",
+    slot: "pocket"
   }
 ])
 
@@ -72,8 +73,8 @@ const currentTab = shallowRef<string>("backpack")
                 'group-active/trigger:border-b group-active/trigger:border-b-p0 group-active/trigger:font-semibold',
               indicator: 'rounded-t-2xl!',
               content: cn(
-                'mt-0! max-h-full w-full overflow-x-hidden overflow-y-auto border-t bg-p0 py-4 drop-shadow-sm drop-shadow-black/6',
-                currentTab === 'pocket' ? 'rounded-tr-none!' : ''
+                'mt-0! max-h-full w-full overflow-x-hidden overflow-y-auto border-t bg-p0 py-4 drop-shadow-sm drop-shadow-black/6'
+                //currentTab === 'pocket' ? 'rounded-tr-none!' : ''
               )
             }">
             <template #list-trailing>
@@ -89,13 +90,13 @@ const currentTab = shallowRef<string>("backpack")
                 variant="ghost"
                 size="sm"
                 :ui="{
-                  base: 'mb-0.5',
+                  base: 'mb-0.5 ml-1',
                   leadingIcon: cn('size-4.5 **:stroke-[10%]!')
                 }" />
             </template>
             <template #backpack>
               <div
-                ref="element"
+                v-motion="{ layout: true }"
                 class="z-auto flex w-full flex-col items-center gap-0.5 overflow-x-hidden px-2">
                 <template v-for="(item, index) in defaults" :key="item.id">
                   <LazySidebarSortableFolder
@@ -108,6 +109,9 @@ const currentTab = shallowRef<string>("backpack")
             <template #search>
               <BackpackSidebarSearchResults />
             </template>
+            <template #pocket>
+              <BackpackPocketSidebar />
+            </template>
           </UTabs>
           <div
             v-else
@@ -118,6 +122,10 @@ const currentTab = shallowRef<string>("backpack")
           </div>
         </div>
       </SidebarTheme>
+    </template>
+    <template #footer>
+      <Icon name="i-material-symbols-sticker-add-outline" class="" />
+      <Icon name="i-material-symbols-new-window" class="" />
     </template>
   </UDashboardSidebar>
 </template>

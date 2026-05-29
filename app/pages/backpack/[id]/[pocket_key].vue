@@ -24,13 +24,13 @@ const selectedSet = computed(() => {
 </script>
 
 <template>
-  <NuxtLayout
-    v-if="pocket && route.name !== 'pocket-core'"
-    class="z-auto grid min-h-screen w-4/5 justify-self-center bg-p0 px-14"
-    name="tab"
-    :pocket>
-    <NuxtPage v-if="pocket" :pocket="pocket" />
-  </NuxtLayout>
-
-  <NuxtPage v-else :pocket="pocket" />
+  <div>
+    <NuxtLayout
+      v-if="pocket && route.name !== 'pocket-core'"
+      name="folder"
+      class="z-auto grid min-h-screen w-4/5 justify-self-center bg-p0 px-14"
+      :pocket>
+      <NuxtPage :pocket="pocket" />
+    </NuxtLayout>
+  </div>
 </template>

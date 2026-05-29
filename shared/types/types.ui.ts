@@ -19,6 +19,11 @@ export type TooltipSize = "sm" | "md" | "lg"
 export type DataOrientation = "vertical" | "horizontal"
 export type DataAlign = "top" | "middle" | "bottom"
 
+export interface Coordinates {
+  x: number
+  y: number
+}
+
 export type ControlKey = "sidebar" | "command" | "settings"
 
 export interface UiControl {

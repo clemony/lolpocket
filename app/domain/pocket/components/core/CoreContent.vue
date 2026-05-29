@@ -39,12 +39,7 @@ const championTitle = computed(() =>
       </div>
 
       <div
-        class="grid-rows-max grid h-fit w-full place-items-center pt-20.5 *:w-full">
-        <MainRuneSelect :pocket>
-          <CoreRuneTrigger :pocket />
-        </MainRuneSelect>
-        <MainSpellSelect class="size-14" :pocket />
-      </div>
+        class="grid-rows-max grid h-fit w-full place-items-center pt-20.5 *:w-full"></div>
     </div>
     <div class="flex w-full flex-col gap-4 pt-22">
       <div class="h-16">

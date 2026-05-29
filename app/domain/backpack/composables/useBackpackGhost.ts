@@ -1,11 +1,6 @@
 import { isSortable } from "@dnd-kit/dom/sortable"
 import { useDragDropMonitor } from "@dnd-kit/vue"
-import type {
-  BackpackGhostData,
-  BackpackListType,
-  GhostState
-} from "~/domain/backpack/types"
-import type { Draggable, Droppable, Manager, Sortable } from "~/types"
+import type { BackpackGhostData, GhostState } from "~/domain/backpack/types"
 
 const DEFAULT_ANCHOR = { x: 0.5, y: 0.5 }
 
@@ -23,7 +18,7 @@ export function dataLabel(data: BackpackGhostData | undefined) {
   return typeof label === "string" ? label : undefined
 }
 
-function listTypeFromGroup(group: unknown): BackpackListType | undefined {
+function listTypeFromGroup(group: unknown): ListType | undefined {
   const value = String(group ?? "")
 
   if (value.startsWith("grid:")) return "grid"

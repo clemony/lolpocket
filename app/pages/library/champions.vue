@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { positionToChamp } from "#shared/constants/champions/positionToChamp"
 import type { ArrayOrNested, CheckboxGroupItem, TabsItem } from "@nuxt/ui"
-import type { TabValue } from "~/components/pages/library/viewMode"
+import type { TabValue } from "~/domain/library/utils/viewMode"
 import { roleToChamp } from "~~/shared/constants/champions/roleToChamp"
 definePageMeta({
   title: "Champions",
@@ -16,12 +16,10 @@ const tabModel = shallowRef<TabValue>(0)
 const component = computed(() =>
   tabModel.value === 0
     ? defineAsyncComponent(
-        () =>
-          import("~/components/pages/library/champions/LibraryChampionGrid.vue")
+        () => import("~/domain/library/champions/LibraryChampionGrid.vue")
       )
     : defineAsyncComponent(
-        () =>
-          import("~/components/pages/library/champions/LibraryChampionTable.vue")
+        () => import("~/domain/library/champions/LibraryChampionTable.vue")
       )
 )
 
@@ -55,7 +53,7 @@ onMounted(() => {
       <ChampionFilterSidebar
         v-model:tab-model="tabModel"
         :roles
-        @update-tab="(e) => (tabModel = e)" />
+        @update-tab="(e: TabValue) => (tabModel = e)" />
     </template>
     <template v-if="collapsed || smallerThanLg" #toolbar>
       <LazyChampionFilterToolbar :roles />

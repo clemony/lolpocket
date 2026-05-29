@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { TabValue } from "~/components/pages/library/viewMode"
-import { tabData } from "~/components/pages/library/viewMode"
+import type { TabValue } from "~/domain/library/utils/viewMode"
+import { tabData } from "~/domain/library/utils/viewMode"
 const { variant } = defineProps<{
   variant?: "default" | "label"
 }>()

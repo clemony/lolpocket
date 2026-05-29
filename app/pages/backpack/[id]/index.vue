@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useFolders } from "~/domain/backpack/composables/useFolder"
+
 const props = defineProps<{
   folder: SortableFolder
   view: string
@@ -8,24 +10,24 @@ definePageMeta({
   id: "backpack",
   icon: "i-folder",
   layout: false,
+  props: true,
   iconKey: "folder",
   prefix: "Backpack",
   order: 1
 })
 
-const items = computed(() => props.folder?.subfolders)
+const { routeFolder } = useFolders()
 </script>
 
 <template>
   <div>
     <NuxtLayout name="folder">
-      <BackpackGrid :folder />
+      <BackpackGrid :folder="routeFolder" />
       <template v-if="folder?.subfolders?.value.length">
         <BackpackGrid
           v-for="(item, i) in folder.subfolders.value"
           :key="item.id"
-          :folder="item"
-          :index="i" />
+          :folder="item" />
       </template>
     </NuxtLayout>
   </div>

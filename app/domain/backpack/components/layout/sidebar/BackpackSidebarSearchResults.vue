@@ -102,15 +102,15 @@ function toggle() {
   <div class="inset-0 flex size-full flex-col">
     <div
       v-if="search.length <= 2 || (search.length > 2 && !results.length)"
-      class="flex w-full flex-col gap-12 px-6 py-12">
-      <UEmpty
+      class="flex w-full flex-col gap-12 p-20 px-6 pb-10">
+      <UCard
         size="sm"
         variant="outline"
-        icon="i-search"
+        :ui="{ root: 'max-w-60 self-center p-4! text-center' }"
         title="Search"
         description="Find pockets or folders within your backpack." />
 
-      <div class="flex w-full flex-col gap-1">
+      <div class="mt-14 flex w-full flex-col gap-4">
         <div
           v-for="suggestion in searchSuggestions"
           :key="suggestion.label"
@@ -121,7 +121,7 @@ function toggle() {
           <div
             :class="
               cn(
-                'flex w-full flex-wrap gap-x-2 gap-y-3',
+                'flex w-full flex-wrap gap-x-2 gap-y-4',
                 suggestion.ui?.container
               )
             ">
@@ -132,7 +132,7 @@ function toggle() {
               icon="i-hash"
               :ui="{
                 label: 'text-xs',
-                base: 'max-h-6 w-min max-w-min gap-0 bg-p2/20 px-2.5',
+                base: 'max-h-6 w-min max-w-min gap-0 bg-p2/70 px-2.5 inset-ring-p2 hover:bg-p3! hover:inset-ring-p4/50',
                 leadingIcon: 'size-3.5'
               }"
               :label="item.label"

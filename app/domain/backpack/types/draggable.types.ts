@@ -1,13 +1,13 @@
 import type { Data } from "@dnd-kit/abstract"
 
-export type BackpackListType = "grid" | "sidebar"
+export type ListType = "grid" | "sidebar"
 
 export type BackpackGhostData = Data & {
   bounding?: DOMRect
   button?: MaybeRefOrGetter<Record<string, unknown> | undefined>
   item?: Folder | Pocket | SortableFolder | SortablePocket
   kind?: "folder" | "pocket" | "subfolder"
-  listType?: BackpackListType
+  listType?: ListType
 }
 
 export interface GhostState {

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { AvatarProps } from "@nuxt/ui"
 import { pocketSidebarContextUi } from "~/domain/pocket/utils/menu/contextActions"
 defineOptions({
   inheritAttrs: false
@@ -15,6 +16,10 @@ defineOptions({
       badge: { size: 'xs', color: 'neutral' }
     }"
     :ui="{
+      avatar: {
+        image: 'translate-y-1 scale-180',
+        root: 'overflow-hidden shadow-xs drop-shadow-xs'
+      },
       button: {
         base: cn(
           'relative my-0! w-full max-w-full gap-2.5 hover:bg-p1',
@@ -37,7 +42,7 @@ defineOptions({
           '',
 
           /* trailing */
-          '[&_.trailing-icon]:transition-rotate [&_.trailing-icon]:pointer-events-none [&_.trailing-icon]:-ml-1 [&_.trailing-icon]:size-4.5 [&_.trailing-icon]:shrink-0 [&_.trailing-icon]:align-icon [&_.trailing-icon]:opacity-50 [&_.trailing-icon]:duration-200 [&_.trailing-icon]:open:-rotate-180 [&_.trailing-icon]:hover:opacity-100 targetted:[&_.trailing-icon]:text-nc targetted:[&_.trailing-icon]:opacity-100'
+          '[&_.trailing-icon]:transition-rotate [&_.trailing-icon]:pointer-events-none [&_.trailing-icon]:-ml-1 [&_.trailing-icon]:size-4.5 [&_.trailing-icon]:shrink-0 [&_.trailing-icon]:align-icon [&_.trailing-icon]:opacity-50 [&_.trailing-icon]:duration-200 [&_.trailing-icon]:hover:opacity-100 data-[collapsed=false]:[&_.trailing-icon]:-rotate-180 targetted:[&_.trailing-icon]:text-nc targetted:[&_.trailing-icon]:opacity-100'
         ),
         leadingAvatar: 'pointer-events-none -translate-x-0.5',
         trailingIcon: cn(
@@ -57,7 +62,14 @@ defineOptions({
         leadingAvatar: '-translate-x-0.5',
         base: 'w-full scrollbar-none overflow-x-scroll pr-14 pl-10.75 text-start align-baseline text-sm font-medium tracking-tight select-all'
       },
-      contextMenu: pocketSidebarContextUi
+      contextMenu: pocketSidebarContextUi,
+      collapsible: {
+        root: 'w-full max-w-full overflow-hidden',
+        content: cn(
+          'relative my-0! ml-4.5 grid max-h-fit w-full max-w-[calc(100%-var(--spacing)*4.5)] auto-rows-auto gap-y-1.5 overflow-hidden py-0.5 pr-4 pl-2.5',
+          'before:pointer-events-none before:absolute before:inset-y-2 before:left-px before:w-px before:border-l before:border-l-p4/60'
+        )
+      }
     }">
     <slot />
   </UTheme>

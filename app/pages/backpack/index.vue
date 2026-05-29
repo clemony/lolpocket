@@ -1,5 +1,5 @@
 <script lang="ts" setup>
 definePageMeta({
-  middleware: () => navigateTo("/backpack/folders", { replace: true })
+  middleware: () => navigateTo("/backpack/:id", { replace: true })
 })
 </script>

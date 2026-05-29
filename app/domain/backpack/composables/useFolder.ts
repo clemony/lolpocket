@@ -20,6 +20,30 @@ function pocketLocation(location: unknown) {
   return normalizeDragLocation(location, "folders")
 }
 
+export function routeFolderId(value: unknown) {
+  let id = value
+
+  if (Array.isArray(value)) {
+    id = value[0]
+    for (let index = value.length - 1; index >= 0; index--) {
+      if (typeof value[index] === "string") {
+        id = value[index]
+        break
+      }
+    }
+  }
+
+  return typeof id === "string" && id.length ? id : "folders"
+}
+
+export function resolveRouteFolder(
+  complete: SortableFolder[],
+  fallback: SortableFolder,
+  id: string
+) {
+  return complete.find((folder) => folder.id === id) ?? fallback
+}
+
 const mapPocket = (p: Pocket): SortablePocket => {
   const location = computed(() => pocketLocation(p.location))
 
@@ -29,13 +53,8 @@ const mapPocket = (p: Pocket): SortablePocket => {
       label: p.label,
       avatar: {
         src: getSplashFromSkinKey(p.skin, "tile"),
-        size: "xs" as AvatarProps["size"],
-        ui: {
-          image: "scale-180 translate-y-1",
-          root: "overflow-hidden shadow-xs drop-shadow-xs"
-        }
-      },
-      to: `/backpack/${location.value}/${p.key}`
+        size: "xs" as AvatarProps["size"]
+      }
     })),
     id: computed(() => p.key)
   }
@@ -58,7 +77,6 @@ function mapFolder(
         sidebarFolderRefs.value[folder.id] === true ? "open" : "closed"
       ],
       label: folder.label,
-      trailingIcon: count ? "i-up" : undefined,
       ui: {
         leadingIcon: icons?.class || undefined
       }
@@ -66,10 +84,6 @@ function mapFolder(
   }
 }
 
-/*       onClick() {
-        if (!folder.id || !children.value.length) return
-        sidebarFolderRefs.value[folder.id] = !sidebarFolderRefs.value[folder.id]
-      } */
 export interface UseFoldersReturn {
   subfolders: ComputedRef<SortableFolder[]>
   pinned: ComputedRef<SortableFolder>
@@ -175,19 +189,10 @@ const [providePocketFolderState, useInjectedFolders] = createInjectionState(
 
     const complete = computed(() => [...defaults.value, ...subfolders.value])
 
-    const routeId = computed(() => {
-      const value = route.params.id
-      const id = Array.isArray(value) ? value[0] : value
+    const routeId = computed(() => routeFolderId(route.params.id))
 
-      return id || "folders"
-    })
-
-    const routeFolder = computed(
-      () =>
-        complete.value.find(
-          (folder) =>
-            folder.id === routeId.value || folder.location === routeId.value
-        ) ?? folders.value
+    const routeFolder = computed(() =>
+      resolveRouteFolder(complete.value, folders.value, routeId.value)
     )
 
     return {

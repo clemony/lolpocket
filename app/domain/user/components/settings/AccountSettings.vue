@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { accountOptions } from "~/components/user/utils/settings/data/accountOptions"
 import {
   validateField,
   validateRefHistory
 } from "~/composables/utils/validateField"
+import { accountOptions } from "~/domain/user/utils/settings/accountOptions"
 
 const { orientation = "horizontal" } = defineProps<{
   orientation?: "vertical" | "horizontal"

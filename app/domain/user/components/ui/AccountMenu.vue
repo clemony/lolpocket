@@ -5,8 +5,8 @@ import type {
   PopoverProps,
   UserProps
 } from "@nuxt/ui"
-import { userMenuItems } from "~/components/user/ui/userMenuItems"
-import { asDropdownItem } from "../../layout/navigation/command/build/helpers"
+import { asDropdownItem } from "~/components/layout/navigation/command/build/helpers"
+import { userMenuItems } from "~/domain/user/components/ui/userMenuItems"
 
 type AvatarSize = ButtonProps["size"] | UserProps["size"]
 

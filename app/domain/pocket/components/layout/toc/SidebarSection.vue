@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 import { useDragOperation, useDroppable } from "@dnd-kit/vue"
 import { useSortable } from "@dnd-kit/vue/sortable"
-import { normalizeDragLocation } from "~/domain/backpack/utils/dragData"
+import {
+  isPocketDragData,
+  normalizeDragLocation
+} from "~/domain/backpack/utils/dragData"
 import { clickFriendlySensors } from "~/utils/plugins/dnd.sortableSensors"
 
 const props = withDefaults(
@@ -27,11 +30,13 @@ const open = computed<boolean>(
   () => sidebarFolderRefs.value[safeItem.value.id] ?? false
 )
 
-const { source } = useDragOperation()
+const dragOperation = useDragOperation()
 const visibleChildren = computed(() =>
   children.value.filter((child) => {
-    if (source?.data?.value?.key !== child.key) return true
-    return source?.data.value.listSource === "sidebar"
+    const data = dragOperation.source?.data
+
+    if (!isPocketDragData(data) || data.item.key !== child.key) return true
+    return data.listType === "sidebar"
   })
 )
 
@@ -39,11 +44,16 @@ const { isDropTarget } = useDroppable({
   id: computed(() => `droppable-${safeItem.value.id}`),
   accept: "pocket",
   collisionPriority: 2,
+  data: computed(() => ({
+    item: safeItem.value,
+    kind: "section",
+    listType: "sidebar"
+  })),
   element: handle
 })
 
-function folderSortableGroup(location: string | undefined) {
-  return `folder:${location ?? "folders"}`
+function sectionSortableGroup(location: string | undefined) {
+  return `section:${location ?? "sections"}`
 }
 
 const isDefaultFolder = backpackFolderKeys.includes(
@@ -51,15 +61,15 @@ const isDefaultFolder = backpackFolderKeys.includes(
 )
 const location = isDefaultFolder
   ? normalizeDragLocation(safeItem.value.location, "default")
-  : normalizeDragLocation(safeItem.value.location, "folders")
+  : normalizeDragLocation(safeItem.value.location, "sections")
 const sortableFolder = { ...safeItem.value, location }
-const type = isDefaultFolder ? "folder" : "subfolder"
+const type = isDefaultFolder ? "section" : "subsection"
 const { isDragging } = useSortable({
   id: computed(() => safeItem.value.id),
   type,
   sensors: clickFriendlySensors,
   accept: type,
-  group: computed(() => folderSortableGroup(location)),
+  group: computed(() => sectionSortableGroup(location)),
 
   data: computed(() => ({
     kind: type,
@@ -81,30 +91,19 @@ const { isDragging } = useSortable({
       v-if="safeItem.id"
       v-model:open="sidebarFolderRefs[safeItem.id]"
       as="div"
-      :default-open="!!children.length"
-      :ui="{
-        root: cn(
-          'group/collapse-child w-full max-w-full overflow-hidden',
-          type === 'subfolder' ? 'group/subfolder' : 'group/mainfolder'
-        ),
-        content: cn(
-          'relative my-0! ml-4.5 grid max-h-fit w-full max-w-[calc(100%-var(--spacing)*4.5)] auto-rows-auto gap-y-1.5 overflow-hidden py-0.5 pr-4 pl-2.5',
-          'before:pointer-events-none before:absolute before:inset-y-2 before:left-px before:w-px before:border-l before:border-l-p4/60'
-        )
-      }">
-      <SidebarFolderButton
+      :default-open="!!children.length">
+      <!--  <SidebarFolderButton
         ref="handle"
         :is-dragging="computed(() => isDragging)"
         :is-targetted="computed(() => isDropTarget)"
         :open="computed<boolean>(() => open)"
-        :folder="safeItem"
-        @click.stop />
+        :section="safeItem" />
       <template #content>
         <div
-          v-if="item.subfolders?.value.length"
+          v-if="item.subsections?.value.length"
           class="flex w-full max-w-full flex-col gap-0.5">
           <SidebarSortableFolder
-            v-for="(sub, i) in item.subfolders.value"
+            v-for="(sub, i) in item.subsections.value"
             :key="sub.id"
             :index="i"
             :item="sub" />
@@ -118,7 +117,7 @@ const { isDragging } = useSortable({
             :item="child"
             @dblclick.stop.prevent />
         </div>
-      </template>
+      </template>-->
     </UCollapsible>
   </div>
 </template>

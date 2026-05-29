@@ -106,7 +106,9 @@ export const tabsTheme = defineUiTheme({
         indicator: "border-b-p0!",
         label: "after:bg-p0 group-not-[.background-tab]/trigger:after:bg-p0",
         leadingIcon: "",
-        trigger: "border-border"
+        content: "border-x border-b border-p3",
+        trigger:
+          "border-x border-t border-transparent data-[state=active]:border-p3"
       }
     },
     {
@@ -117,10 +119,10 @@ export const tabsTheme = defineUiTheme({
         root: "tabs-dark tabs border-0! [--tab-bg:var(--color-neutral)]! [--tab-inset-color:var(--color-n2)]!",
         list: "border-0!",
         label:
-          "group-data-[state-active]/trigger:text-nc! group-data-[state-active]/trigger:**:text-nc! group-not-[.background-tab]/trigger:after:bg-n0",
+          "group-data-[state=active]/trigger:text-nc! group-data-[state=active]/trigger:**:text-nc! group-not-[.background-tab]/trigger:after:bg-n0",
         trigger: "border-0!",
         leadingIcon:
-          "group-data-[state-active]/trigger:text-nc! group-data-[state-active]/trigger:**:text-nc!"
+          "group-data-[state=active]/trigger:text-nc! group-data-[state=active]/trigger:**:text-nc!"
       }
     },
     {

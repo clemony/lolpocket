@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 import type { PopoverProps } from "@nuxt/ui"
+import { accountUpdate } from "~/domain/user/composables/accountUpdate"
+import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
 import {
   getThemeAccentOption,
   themeAccentOptions
-} from "~/components/user/utils/settings/theme/themeAccent"
+} from "~/domain/user/utils/theme/themeAccent"
 import {
   colorModeIconClass,
   colorModes
-} from "~/components/user/utils/settings/theme/themeBase"
-import { accountUpdate } from "~/domain/user/composables/accountUpdate"
-import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
+} from "~/domain/user/utils/theme/themeBase"
 
 const props = defineProps<{
   button: ButtonPropsExt

@@ -8,10 +8,7 @@ const props = defineProps<{
   style?: HTMLAttributes["style"]
 }>()
 
-const emit = defineEmits(["update:is-dragging"])
-
 const pocket = safeObject(computed(() => props.pocket))
-console.log("🥸 - pocket:", pocket)
 
 const userStore = user()
 const { account } = storeToRefs(userStore)
@@ -42,8 +39,6 @@ const image = computed(() => {
       : championImage("centered")
   }
 })
-
-const splash = computed(() => championImage("centered"))
 
 const position = computed(() => {
   return pocket.value?._position || pocket.value?.positions?.[0]
@@ -78,7 +73,7 @@ const runes = computed(() => {
     class="relative grid size-full rounded-4xl p-3">
     <UCard
       :ui="{
-        root: 'group/card relative w-full drop-shadow-md transition-transform duration-200 ease-out',
+        root: 'group/card animate-in fade-in relative w-full drop-shadow-md transition-transform duration-200 ease-out',
         header: 'px-3!!',
         body: 'z-auto w-full gap-0! bg-transparent px-0! pt-0! pb-2!',
         footer:

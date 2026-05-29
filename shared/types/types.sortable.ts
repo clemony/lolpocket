@@ -1,4 +1,10 @@
-import type { UniqueIdentifier } from "@dnd-kit/abstract"
+import type { Data, UniqueIdentifier } from "@dnd-kit/abstract"
+import type {
+  Draggable as _Draggable,
+  Droppable as _Droppable,
+  DragDropManager
+} from "@dnd-kit/dom"
+
 import type { UseDroppableInput } from "@dnd-kit/vue"
 import type { UseSortableInput } from "@dnd-kit/vue/sortable"
 import type { ButtonProps } from "@nuxt/ui"
@@ -7,6 +13,14 @@ import type {
   RouteLocationAsRelativeGeneric
 } from "vue-router"
 import type { IconSet } from "~~/layers/ui/app/assets/icons/icon-sets"
+
+export type Draggable = _Draggable<Data>
+export type Droppable = _Droppable<Data>
+export type Sortable = Draggable | Droppable
+
+export type Manager = DragDropManager<Data, Draggable, Droppable>
+
+export type ListType = "grid" | "sidebar"
 
 export type SortableProps = Omit<UseSortableInput, "id"> & {
   id: MaybeRefOrGetter<UniqueIdentifier>
@@ -20,6 +34,8 @@ export interface FolderDragData {
 export interface PocketDragData {
   kind: "pocket"
   item: Pocket
+  listType: ListType
+  button?: ComputedRef<ButtonProps>
 }
 
 export const backpackFolderKeys = [
@@ -53,5 +69,5 @@ export interface SortableFolder extends Folder {
 export interface SortablePocket extends Pocket {
   id: ComputedRef<string>
   sortable?: Omit<UseSortableInput, "index"> & { index?: ComputedRef<number> }
-  button?: ComputedRef<Omit<ButtonProps, "prefetch">>
+  button?: ComputedRef<ButtonProps>
 }

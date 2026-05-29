@@ -1,19 +1,13 @@
 <script lang="ts" setup>
-import { useDragOperation } from "@dnd-kit/vue"
+import { useVisiblePocketChildren } from "~/domain/backpack/composables/useVisiblePocketChildren"
 
 const { folder } = defineProps<{
   folder: SortableFolder
 }>()
+console.log("🥸 - folder:", folder)
 
 const children = computed(() => toValue(folder?.children))
-
-const { source } = useDragOperation()
-const visibleChildren = computed(() =>
-  children.value?.filter((child) => {
-    if (source?.data?.value?.key !== child.key) return true
-    return source?.data.value.listSource === "grid"
-  })
-)
+const visibleChildren = useVisiblePocketChildren(children, "grid")
 </script>
 
 <template>

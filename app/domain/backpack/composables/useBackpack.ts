@@ -1,6 +1,8 @@
 import type { AcceptableValue } from "reka-ui"
 import type { InjectionKey } from "vue"
 import type { ViewMode } from "~/domain/backpack/types"
+import type { BackpackFolderKey } from "~~/shared/types/types.sortable"
+import { backpackFolderKeys } from "~~/shared/types/types.sortable"
 
 export interface BackpackInject {
   sidebarCollapsed: Ref<boolean>
@@ -16,6 +18,26 @@ export interface BackpackInject {
   collapseAllFolders: () => void
   path: Ref<string | null | undefined>
 }
+
+export function backpackTabFolderId(value: unknown) {
+  let id = value
+
+  if (Array.isArray(value)) {
+    id = value[0]
+    for (let index = value.length - 1; index >= 0; index--) {
+      if (typeof value[index] === "string") {
+        id = value[index]
+        break
+      }
+    }
+  }
+
+  return typeof id === "string" &&
+    backpackFolderKeys.includes(id as BackpackFolderKey)
+    ? id
+    : "folders"
+}
+
 export function useBackpackProvider(): BackpackInject {
   const route = useRoute()
 
@@ -47,7 +69,7 @@ export function useBackpackProvider(): BackpackInject {
   watch(
     () => id.value,
     (value) => {
-      folderId.value = String(value ?? "folders")
+      folderId.value = backpackTabFolderId(value)
     },
     { immediate: true }
   )
@@ -55,7 +77,7 @@ export function useBackpackProvider(): BackpackInject {
   const toggleSearch = useToggle(searchVisible)
 
   function onFolderUpdate(e: AcceptableValue | undefined) {
-    const value = String(e ?? "folders")
+    const value = backpackTabFolderId(e)
 
     folderId.value = value
     id.value = value
