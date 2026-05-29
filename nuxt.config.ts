@@ -8,6 +8,26 @@ const isCFPages = process.env.CF_PAGES === "1"
 const nitroPreset = isCFPages ? "cloudflare_pages" : "cloudflare_module"
 const isProduction = process.env.NODE_ENV === "production"
 
+const components = [
+  "about",
+  "backpack",
+  "editor",
+  "pocket",
+  "calculator",
+  "champions",
+  "items",
+  "library",
+  "nexus",
+  "pocket",
+  "riot",
+  "stats",
+  "summoner",
+  "user"
+].map((c) => ({
+  path: `~/domain/${c}/components`,
+  pathPrefix: false
+}))
+
 export default defineNuxtConfig({
   imports: {
     global: true,
@@ -63,7 +83,8 @@ export default defineNuxtConfig({
     {
       path: "~/components",
       pathPrefix: false
-    }
+    },
+    ...components
   ],
   css: ["./layers/ui/app/css/tailwind.css"],
   image: {

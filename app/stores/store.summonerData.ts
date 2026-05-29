@@ -1,9 +1,9 @@
 //
 import { skinIndex } from "#shared/constants/champions/skin-index"
-import { useTimeline } from "~/domain/match/useTimeline"
 import { aggregateAllies } from "~/domain/stats/aggregateAllies"
 import { useChampionStats } from "~/domain/stats/useChampionStats"
 import { getOrFetchAllMastery } from "~/domain/summoner/mastery/getOrFetchMastery"
+import { useTimeline } from "~/domain/summoner/match/useTimeline"
 import { getSplash, getSplashFromSkinKey } from "~/domain/utils/img"
 
 export const sData = defineStore("summonerData", () => {

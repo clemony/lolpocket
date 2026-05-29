@@ -1,5 +1,5 @@
 import type { CommandPaletteGroup, CommandPaletteItem } from "@nuxt/ui"
-import { externalResources } from "~/domain/lp/external/externalResources"
+import { externalResources } from "~/domain/about/external/externalResources.js"
 import ChampionCommand from "../reference-cards/ChampionCommand.vue"
 import ItemCommand from "../reference-cards/ItemCommand.vue"
 import RuneCommand from "../reference-cards/RuneCommand.vue"

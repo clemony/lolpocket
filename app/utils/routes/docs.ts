@@ -2,7 +2,7 @@ import type { AvatarProps } from "@nuxt/ui"
 import {
   externalResources,
   officialResources
-} from "~/domain/lp/external/externalResources"
+} from "~/domain/about/external/externalResources"
 
 const shared = {
   target: "_blank",

@@ -1,5 +1,9 @@
 type SortDirection = "asc" | "desc"
 
+export function deepCopy<T>(obj: T): T {
+  return JSON.parse(JSON.stringify(obj))
+}
+
 export const safeObject = <T extends object>(v?: T | null): T => (v ?? {}) as T
 
 export function Object_assign<T extends AnyObj, S extends readonly AnyObj[]>(

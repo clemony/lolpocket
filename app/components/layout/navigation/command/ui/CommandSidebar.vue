@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps, ChipProps } from "@nuxt/ui"
-import { newPocket } from "~/domain/pocket/newPocket"
+import { newPocket } from "~/domain/pocket/utils/newPocket"
 import type { CommandGroup, CommandItem } from "../build/useCommandGroups"
 
 const { activeComponent } = defineProps<{

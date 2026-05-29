@@ -1,7 +1,7 @@
 // shared/schemas/user.ts
 
 import * as v from "valibot"
-import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
+import { pocketTitleIndex } from "~/domain/about/content/pocket-title-index"
 
 // username
 export const usernameSchema = v.union([

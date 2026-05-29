@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
-import { useBackpack } from "~/domain/backpack/useBackpack"
-import { useFolders } from "~/domain/pocket/folder/useFolder"
+import { useBackpack } from "~/domain/backpack/composables/useBackpack"
+import { useFolders } from "~/domain/backpack/composables/useFolder"
 
 const { defaults, routeFolder } = useFolders()
 const { folderId, sidebarCollapsed, onFolderUpdate, toggleSidebar } =

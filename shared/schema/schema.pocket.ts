@@ -1,5 +1,5 @@
 import * as v from "valibot"
-import { generateName } from "~/domain/pocket/helpers/generateStrings"
+import { generateName } from "~/domain/utils/generateStrings"
 import { pathIndex } from "~~/shared/constants/runes/pathIndex"
 
 // role schema

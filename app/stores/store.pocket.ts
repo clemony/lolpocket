@@ -1,4 +1,4 @@
-import { normalizeDragLocation } from "~/domain/pocket/helpers/dragLocation"
+import { normalizeDragLocation } from "~/domain/backpack/utils/dragData"
 
 export const pocketStore = defineStore(
   "pocketStore",

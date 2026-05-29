@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { accountFetch } from "~/composables/account/accountFetch"
+import { accountFetch } from "~/domain/user/composables/accountFetch"
 
 definePageMeta({
   path: "/auth/redirect",

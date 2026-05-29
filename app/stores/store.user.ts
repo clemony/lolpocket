@@ -1,7 +1,7 @@
 import { nowInstantString } from "#shared/utils"
 import { skinKeyFromUrl } from "#shared/utils/img-url"
 import * as v from "valibot"
-import { backpackFolders } from "~/domain/pocket/folder/defaultFolders"
+import { backpackFolders } from "~/domain/backpack/utils/folder/defaultFolders"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 import { backpackFolderKeys } from "~~/shared/types/types.sortable"
 

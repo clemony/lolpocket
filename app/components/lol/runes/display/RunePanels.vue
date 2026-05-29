@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useRunes } from "~/domain/match/useRunes"
+import { useRunes } from "~/domain/summoner/match/useRunes"
 import { pathIndex } from "~~/shared/constants/runes/pathIndex"
 
 const props = defineProps<{

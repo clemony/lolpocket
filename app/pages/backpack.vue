@@ -1,17 +1,13 @@
 <script lang="ts" setup>
+import { DragDropManager, Feedback } from "@dnd-kit/dom"
 import { DragDropProvider, DragOverlay } from "@dnd-kit/vue"
 import { useTableProvider } from "~/composables/ui/useTableProvider"
-import { provideBackpack } from "~/domain/backpack/useBackpack"
+import { provideBackpack } from "~/domain/backpack/composables/useBackpack"
 import {
   useFolders,
   usePocketFolderProvider
-} from "~/domain/pocket/folder/useFolder"
-
-import { provideDragManager } from "~/composables/ui/useDragManager"
-import { onSidebarDragEnd } from "~/domain/pocket/helpers/sidebarDrag"
-
-usePocketFolderProvider()
-useTableProvider()
+} from "~/domain/backpack/composables/useFolder"
+import { onDragEnd } from "~/domain/backpack/utils/dragEvents"
 
 definePageMeta({
   title: "Backpack",
@@ -23,13 +19,17 @@ definePageMeta({
   order: 1
 })
 
+usePocketFolderProvider()
+useTableProvider()
 const { routeFolder } = useFolders()
-const store = pocketStore()
 const { view } = provideBackpack()
 
-const sidebarRef = useTemplateRef<{ sidebarRef: HTMLElement }>("sidebarRef")
-const sidebar = computed(() => sidebarRef.value?.sidebarRef)
-const provider = provideDragManager({ reference: sidebar })
+const manager = new DragDropManager({
+  plugins: (defaults) => [
+    ...defaults,
+    Feedback.configure({ feedback: "default" })
+  ]
+})
 </script>
 
 <template>
@@ -39,21 +39,15 @@ const provider = provideDragManager({ reference: sidebar })
       :ui="{
         base: 'max-h-[calc(100vh-var(--ui-header-height)] w-full flex-1 translate-y-(--ui-header-height) gap-4 overflow-hidden px-8 py-7'
       }">
-      <DragDropProvider
-        :manager="provider.manager"
-        @drag-end="onSidebarDragEnd">
-        <BackpackSidebar ref="sidebarRef" />
+      <DragDropProvider :manager="manager" @drag-end="onDragEnd($event)">
+        <BackpackSidebar />
         <UDashboardPanel resizable>
           <NuxtPage :folder="routeFolder" :view />
         </UDashboardPanel>
 
-        <DragOverlay
-          tag="div"
-          :drop-animation="null"
-          class="pointer-events-none size-0 opacity-0" />
-        <Teleport to="body">
+        <DragOverlay tag="div" class="pointer-events-none absolute size-full">
           <SortableBackpackGhost />
-        </Teleport>
+        </DragOverlay>
       </DragDropProvider>
     </UDashboardGroup>
   </Layout>

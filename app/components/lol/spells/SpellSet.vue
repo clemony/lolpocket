@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { removeSpellSet } from "~/domain/pocket/modifyPocket"
+import { removeSpellSet } from "~/domain/pocket/utils/manage/modifyPocket"
 
 const props = defineProps<{
   set: SpellSet

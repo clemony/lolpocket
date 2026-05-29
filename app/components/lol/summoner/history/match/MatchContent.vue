@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useTimeline } from "~/domain/match/useTimeline"
+import { useTimeline } from "~/domain/summoner/match/useTimeline.js"
 import LazyMatchScoreboard from "./scoreboard/MatchScoreboard.vue"
 
 defineOptions({

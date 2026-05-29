@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { settingsUpdate } from "~/composables/account/settingsUpdate"
+import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
 
 definePageMeta({
   title: "Profile",

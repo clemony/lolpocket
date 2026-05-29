@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { privacyPolicy } from "~/domain/lp/policies/privacy-policy"
+import { privacyPolicy } from "~/domain/about/policies/privacy-policy"
 
 definePageMeta({
   title: "Privacy Policy",
   description: "Information regarding how your data is used.",
   icon: "lucide:shield-check",
   class: "scale-110",
-  prefix: "Docs",
+  prefix: "Docs"
 })
 </script>
 

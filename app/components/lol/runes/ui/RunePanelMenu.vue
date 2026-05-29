@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { deleteRuneSet } from "~/domain/pocket/modifyPocket"
+import { deleteRuneSet } from "~/domain/pocket/utils/manage/modifyPocket"
 
 const props = defineProps<{
   pocket: Pocket

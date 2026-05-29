@@ -5,7 +5,7 @@ import type {
   NavigationMenuItem,
   PageLink
 } from "@nuxt/ui"
-import { contactInfo } from "~/domain/lp/contact/contactInfo"
+import { contactInfo } from "~/domain/about/contact/contactInfo"
 import { riotDisclaimer } from "~/domain/riot/riot-disclaimer"
 
 const { copied, copy, isSupported, text } = useClipboard({

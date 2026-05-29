@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { addRuneSet } from "~/domain/pocket/addPocketModules"
+import { addRuneSet } from "~/domain/pocket/utils/manage/addPocketModules"
 
 definePageMeta({
   name: "pocket-runes",
@@ -38,7 +38,7 @@ function handleAdd() {
         loop: true
       }">
       <CarouselContent
-        class="scrollbar-none ml-0 w-fit max-w-full overflow-x-scroll overscroll-auto scroll-smooth"
+        class="ml-0 w-fit max-w-full scrollbar-none overflow-x-scroll overscroll-auto scroll-smooth"
         as-child>
         <div
           v-for="(thumbSet, index) in pocket?.runes ?? []"

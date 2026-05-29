@@ -1,11 +1,11 @@
 import { getEmptyAccount, getEmptySettings } from "#shared/schema"
-import type { ThemeAccent } from "~/components/user/settings/theme/themeAccent"
+import { accountUpdate } from "~/domain/user/composables/accountUpdate"
+import type { ThemeAccent } from "~/domain/user/utils/theme/themeAccent"
 import {
   defaultThemeAccent,
   normalizeThemeAccent
-} from "~/components/user/settings/theme/themeAccent"
-import { colorModes } from "~/components/user/settings/theme/themeBase"
-import { accountUpdate } from "~/composables/account/accountUpdate"
+} from "~/domain/user/utils/theme/themeAccent"
+import { colorModes } from "~/domain/user/utils/theme/themeBase"
 
 export function normalizeThemePreference(value?: string) {
   return colorModes.includes(value ?? "") ? value! : "system"

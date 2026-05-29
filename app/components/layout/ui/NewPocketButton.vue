@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps, KbdProps } from "@nuxt/ui"
-import { newPocket } from "~/domain/pocket/newPocket"
+import { newPocket } from "~/domain/pocket/utils/newPocket"
 
 type KbdUi = KbdProps["ui"] & { wrapper?: HTMLAttributes["class"] }
 type Kbd = KbdProps & { ui?: KbdUi }

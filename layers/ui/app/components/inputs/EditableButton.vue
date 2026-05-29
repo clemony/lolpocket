@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { Tooltip } from "#components"
 import type { ButtonProps, InputProps } from "@nuxt/ui"
-import { generateName } from "~/domain/pocket/helpers/generateStrings"
+import { generateName } from "~/domain/utils/generateStrings"
 
 const props = defineProps<
   InputProps & {
