@@ -36,7 +36,7 @@ const selectedRune = ref<number | null>(null)
         v-if="selectedPath"
         :key="selectedPath"
         :current-path="selectedPath ?? null" />
-
+      <!--
       <Tabs v-model:model-value="selectedPath">
         <TabsList
           class="field-box h-19 w-full grid-cols-5 items-center justify-evenly rounded-xl! bg-p2/40 shadow-warm">
@@ -56,7 +56,7 @@ const selectedRune = ref<number | null>(null)
           <TabIndicator round />
         </TabsList>
       </Tabs>
-
+ -->
       <!--       <KeystoneSelect
         v-model:selected="selectedRune"
         :runes="Object.values(pathRecord[selectedPath]?.slots?.[0])"

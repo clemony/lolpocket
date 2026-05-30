@@ -11,36 +11,26 @@ const tab = ref("stats")
       </div> -->
 
   <div class="size-full px-3 pt-26">
-    <Tabs class="" default-value="stats">
-      <TabsList class="grid h-11 w-full max-w-110 grid-cols-3">
-        <TabsTrigger value="stats">
-          Stat Totals
-        </TabsTrigger>
+    <div class="" default-value="stats">
+      <div class="grid h-11 w-full max-w-110 grid-cols-3">
+        <div value="stats">Stat Totals</div>
 
-        <TabsTrigger value="effects">
-          Item Effects
-        </TabsTrigger>
+        <div value="effects">Item Effects</div>
 
-        <TabsTrigger value="options">
-          Options
-        </TabsTrigger>
+        <div value="options">Options</div>
+      </div>
 
-        <TabIndicator />
-      </TabsList>
-
-      <TabsContent class="mt-8 w-full rounded-lg bg-p0" value="stats">
+      <div class="mt-8 w-full rounded-lg bg-p0" value="stats">
         <LazyCalculatorStatTotals />
-      </TabsContent>
+      </div>
 
-      <LazyTabsContent class="m-0" value="effects">
-        effects
-      </LazyTabsContent>
+      <div class="m-0" value="effects">effects</div>
 
-      <LazyTabsContent class="m-0" value="options">
+      <div class="m-0" value="options">
         <CalculatorMenu />
 
         <LazyCalculatorOptions />
-      </LazyTabsContent>
-    </Tabs>
+      </div>
+    </div>
   </div>
 </template>

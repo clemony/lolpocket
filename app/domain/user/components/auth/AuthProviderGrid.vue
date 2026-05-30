@@ -3,7 +3,7 @@ import {
   providers,
   supabaseProviders
 } from "~/domain/about/external/authProviders"
-import { useSignIn } from "./useAuth"
+import { useSignIn } from "../../composables/useAuth"
 </script>
 
 <template>

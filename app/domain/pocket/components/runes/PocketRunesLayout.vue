@@ -56,7 +56,7 @@ function handleDelete() {
         class="relative flex w-1/2 max-w-114 min-w-90 flex-col gap-8">
         <RunesBlurb layout-id="path1" :current-path="set.primary?.path" />
 
-        <Tabs
+        <!-- TODO fix        <Tabs
           v-model:model-value="set.primary.path"
           @update:model-value="handlePath1()">
           <TabsList
@@ -70,7 +70,7 @@ function handleDelete() {
             <TabIndicator class="-ml-0.75 size-16!" round />
           </TabsList>
         </Tabs>
-
+ -->
         <Keystones
           v-if="pocket"
           :set="set"

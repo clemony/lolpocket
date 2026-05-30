@@ -10,10 +10,6 @@ import { useBackpackColumns } from "~/domain/backpack/composables/useBackpackCol
 import { useFolders } from "~/domain/backpack/composables/useFolder"
 import { columnOrder, onColumnDragEnd } from "../utils/dragTable"
 
-defineProps<{
-  folder?: SortableFolder
-}>()
-
 const { routeFolder } = useFolders()
 const { tableApi, rowSelection, columnPinning, columnVisibility, sorting } =
   useTableInject<Pocket>()

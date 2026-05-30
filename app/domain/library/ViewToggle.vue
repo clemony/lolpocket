@@ -78,7 +78,7 @@ watch(
     v-else
     :data-tip="tabData[tab]?.label"
     class="tooltip pointer-events-auto tooltip-left">
-    <Toggle
+    <UButton
       v-model:model-value="tabToggle"
       square
       color="base"

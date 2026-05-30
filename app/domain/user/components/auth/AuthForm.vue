@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import type { FormSubmitEvent } from "@nuxt/ui"
 import * as v from "valibot"
-import { formType } from "./formType"
-import { useSignInWithEmail } from "./useAuth"
+import { useSignInWithEmail } from "../../composables/useAuth"
+import { formType } from "../../utils/auth/formType"
 
 const { type } = defineProps<{
   type: "logIn" | "signUp"

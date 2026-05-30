@@ -14,7 +14,8 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
 </script>
 
 <template>
-  <Tabs
+  fix
+  <!--   <Tabs
     :model-value="set.keystone ?? undefined"
     class="relative grid h-28 w-114 max-w-114 place-items-center overflow-hidden"
     as="div"
@@ -65,5 +66,5 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
         :key="i"
         class="size-18 place-self-center rounded-full" />
     </div>
-  </Tabs>
+  </Tabs> -->
 </template>

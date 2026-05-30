@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { ButtonProps, CheckboxGroupProps, RadioGroupProps } from "@nuxt/ui"
-import type { ToggleButtonProps } from "~~/layers/ui/app/variants/toggle"
 
 defineOptions({
   inheritAttrs: false
@@ -9,7 +8,7 @@ const { items } = defineProps<{
   items: Record<string, CheckboxItem[]>
 }>()
 const { filters } = storeToRefs(is())
-const btnProps: ButtonProps & ToggleButtonProps = {
+const btnProps: ButtonProps = {
   size: "xl",
   color: "base",
   variant: "solid",
@@ -50,7 +49,7 @@ const radioProps = {
   <span
     :data-tip="filters.purchasable ? 'Purchasable Items' : 'All Items'"
     class="tooltip tooltip-left">
-    <Toggle
+    <UButton
       v-model:model-value="filters.purchasable"
       tabindex="-1"
       size="lg"

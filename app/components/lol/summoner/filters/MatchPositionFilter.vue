@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { mapPositions } from "#shared/constants/misc/positions"
 import type { SelectProps, TabsProps } from "@nuxt/ui"
-import { useMatchRoles } from "~/domain/summoner/match/useMatchRoles"
+import { useMatchRoles } from "~/domain/summoner/composables/match/useMatchRoles"
 
 interface QueueFiltersProps {
   type?: "tabs" | "select"

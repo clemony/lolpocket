@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { resolveSummoner } from "~/domain/summoner/resolveSummoner"
+import { resolveSummoner } from "~/domain/summoner/composables/resolveSummoner"
 import { extractIdentifierFromRoute } from "~/domain/summoner/utils/extractIdentifierFromRoute"
 
 definePageMeta({

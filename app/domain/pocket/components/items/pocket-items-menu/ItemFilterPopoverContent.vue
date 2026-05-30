@@ -76,30 +76,30 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
       <div
         class="sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l border-l-p3 py-3">
         <ItemMapRadio />
-        <ToggleGroup
+        <UFieldGroup
           v-model:model-value="is().filters.sort"
           class="gap-0"
           type="single"
           as-child>
-          <ToggleGroup orientation="vertical">
-            <ToggleGroupItem size="sq-9" value="alpha-asc">
+          <UFieldGroup orientation="vertical">
+            <UButton size="sm_" value="alpha-asc">
               <span class="text-[10px] font-semibold uppercase">A-Z</span>
-            </ToggleGroupItem>
-            <ToggleGroupItem size="sq-9" value="alpha-desc">
+            </UButton>
+            <UButton size="sm_" value="alpha-desc">
               <span class="text-[10px] font-semibold uppercase">Z-A</span>
-            </ToggleGroupItem>
-            <ToggleGroupItem size="sq-9" value="price-asc">
+            </UButton>
+            <UButton size="sm_" value="price-asc">
               <span class="text-[10px] font-semibold uppercase">$-</span>
-            </ToggleGroupItem>
-            <ToggleGroupItem size="sq-9" value="price-desc">
+            </UButton>
+            <UButton size="sm_" value="price-desc">
               <span class="text-[10px] font-semibold uppercase">$+</span>
-            </ToggleGroupItem>
-          </ToggleGroup>
-        </ToggleGroup>
+            </UButton>
+          </UFieldGroup>
+        </UFieldGroup>
         <!-- shop -->
 
         <Grow class="max-w-14" />
-        <ShopToggle class="border-b4/60! border" size="sq-9" />
+        <ShopToggle class="border-b4/60! border" size="sm_" />
         <UButton color="neutral" square size="sm" @click="is().clearFilters()">
           <icon class="size-4" name="reset" />
         </UButton>

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { InboxMessage } from "#shared/types"
 import { themes } from "~/domain/about/ui/theme"
-import { useSignOut } from "../auth/useAuth"
+import { useSignOut } from "../../composables/useAuth"
 
 const summoner = computed(() => user().summoner)
 

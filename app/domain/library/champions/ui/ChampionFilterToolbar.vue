@@ -11,7 +11,7 @@ const { filters } = storeToRefs(is())
     :trailing-icon="filters.purchasable ? '' : 'i-infinity'"
     :label="filters.purchasable ? 'Purchasable Items' : 'All Items'"
     side="left">
-    <Toggle
+    <UButton
       v-model:model-value="filters.purchasable"
       active-color="neutral"
       :active="filters.purchasable"

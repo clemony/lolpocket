@@ -16,7 +16,9 @@ export const kbdTheme = defineUiTheme({
       ghost: ""
     },
     size: {
-      sm: "h-4 min-w-[16px] text-[11px] [&[square]]:w-4 [&[square]]:min-w-4",
+      sm: "h-4 min-w-[16px] text-2xs [&[square]]:w-4 [&[square]]:min-w-4",
+
+      sm_: "h-4.5 min-w-[16px] rounded-sm text-xs [&[square]]:w-4.5 [&[square]]:min-w-4.5",
       md: "h-5 w-fit min-w-[20px] rounded-md text-sm [&[square]]:w-5 [&[square]]:min-w-5",
       lg: "h-6 w-fit min-w-[24px] rounded-md text-[12px] [&[square]]:w-6 [&[square]]:min-w-6",
       xl: "h-7 w-fit min-w-6 rounded-md text-[12px] [&[square]]:w-7 [&[square]]:min-w-6"
@@ -27,7 +29,7 @@ export const kbdTheme = defineUiTheme({
     {
       color: "base",
       variant: "solid",
-      class: "noise bg-p1 text-n3 ring ring-p4/80"
+      class: "noise border-b border-b-p3 bg-p0 text-n3 ring ring-p4"
     },
     {
       color: "base",
@@ -72,9 +74,9 @@ export const kbdTheme = defineUiTheme({
       class: "bg-n3 text-nc ring ring-n4 ring-inset"
     }
   ],
-  baseVariants: {
+  defaultVariants: {
     color: "base",
-    variant: "outline",
+    variant: "solid",
     size: "md"
   }
 })

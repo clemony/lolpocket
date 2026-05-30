@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { LazyReport } from "#components"
 import type { ButtonProps } from "@nuxt/ui"
+import { useFollowSummoner } from "~/domain/summoner/composables/useFollowSummoner"
 import { offsetTooltipContent } from "~~/layers/ui/app/variants/tooltip"
 
 const props = withDefaults(
@@ -55,13 +56,21 @@ const btnProps: ButtonProps & { tabindex?: string } = {
   size: "sm",
   tabindex: "-1"
 }
+
+const { isSelf, isFavorite, tooltipText, update } = useFollowSummoner(summoner)
 </script>
 
 <template>
   <div class="grid w-full grid-cols-4 items-center gap-1.5">
-    <FollowButton
+    <HeartButton
+      v-if="summoner"
       v-bind="btnProps"
-      :ui="{ base: 'min-h-9! grow shadow-none drop-shadow-none' }" />
+      :ui="{ base: 'min-h-9! grow shadow-none drop-shadow-none' }"
+      :size
+      :tooltip-text="tooltipText"
+      :disabled="isSelf"
+      :checked="computed(() => isSelf || isFavorite)"
+      @update:model-value="update($event)" />
     <UTooltip
       v-for="(v, i) in toolbar"
       :key="i"

@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import type { InboxMessage } from "#shared/types"
-import { markRead, sortedMessages, toggleRead } from "./inbox-management"
+import {
+  markRead,
+  sortedMessages,
+  toggleRead
+} from "../../utils/messages/inbox-management"
 
 defineOptions({
   meta: {

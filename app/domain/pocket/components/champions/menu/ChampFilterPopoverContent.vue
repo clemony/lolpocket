@@ -63,26 +63,26 @@ const { filters } = storeToRefs(champFilter())
       </div>
       <div
         class="sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l border-l-p3 py-3">
-        <ToggleGroup
+        <UFieldGroup
           v-model:model-value="filters.sort"
           class="gap-0"
           type="single"
           as-child>
-          <ToggleGroup orientation="vertical">
-            <ToggleGroupItem size="sq-9" value="az">
+          <UFieldGroup orientation="vertical">
+            <UButton size="sm_" value="az">
               <icon class="size-5" name="qlementine-icons:sort-alpha-asc-16" />
-            </ToggleGroupItem>
-            <ToggleGroupItem size="sq-9" value="za">
+            </UButton>
+            <UButton size="sm_" value="za">
               <icon class="size-5" name="qlementine-icons:sort-alpha-desc-16" />
-            </ToggleGroupItem>
-            <ToggleGroupItem size="sq-9" value="release-newest">
+            </UButton>
+            <UButton size="sm_" value="release-newest">
               <span class="text-[10px] font-semibold uppercase">New</span>
-            </ToggleGroupItem>
-            <ToggleGroupItem size="sq-9" value="release-oldest">
+            </UButton>
+            <UButton size="sm_" value="release-oldest">
               <span class="text-[10px] font-semibold uppercase">Old</span>
-            </ToggleGroupItem>
-          </ToggleGroup>
-        </ToggleGroup>
+            </UButton>
+          </UFieldGroup>
+        </UFieldGroup>
         <Grow class="max-w-14" />
         <UButton
           color="neutral"

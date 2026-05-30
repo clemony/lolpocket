@@ -39,15 +39,15 @@ export const tabsTheme = defineUiTheme({
       lift: {
         list: "tabs-lift-list tabs-lift z-4! tabs flex h-auto items-center rounded-none border-0! p-0",
         root: "h-auto p-0",
-        indicator: "tab-active absolute z-2 w-full rounded-b-none! border-b!",
+        indicator:
+          "tab-active tab z-2 w-full translate-y-px overflow-visible! rounded-b-none! border-b-0! first:before:[--radius-start:unset]",
         leadingIcon:
           "[color:unset] opacity-60 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100",
         trigger:
-          "group/trigger tab z-5! flex items-center rounded-b-none! border-b-0 font-medium! tracking-normal",
-        label:
-          "pointer-events-none w-full leading-none after:absolute after:bottom-0 after:left-0 after:z-6 after:h-px after:w-full group-not-active/trigger:after:hidden group-data-[state-active]/trigger:after:opacity-100 group-data-[state-inactive]/trigger:after:opacity-0",
+          "group/trigger relative z-4! flex items-center rounded-b-none! border-0! font-medium! tracking-normal after:absolute after:bottom-0 after:left-0 after:z-6 after:h-px after:w-[calc(100%+10px)] after:-translate-x-[5px] not-active:after:hidden data-[state=active]:after:opacity-100 data-[state=inactive]:after:opacity-0",
+        label: "pointer-events-none w-full leading-none",
         content:
-          "tabs-content tabs-lift-content z-0 -translate-y-px overflow-hidden rounded-4xl border-x border-b"
+          "tabs-content tabs-lift-content z-0 overflow-hidden rounded-4xl"
       },
       outline: {}
     },
@@ -103,12 +103,11 @@ export const tabsTheme = defineUiTheme({
       variant: "lift",
       class: {
         root: "tabs-light tabs",
-        indicator: "border-b-p0!",
-        label: "after:bg-p0 group-not-[.background-tab]/trigger:after:bg-p0",
+        indicator: "after:bg-p0",
+        label: "",
         leadingIcon: "",
         content: "border-x border-b border-p3",
-        trigger:
-          "border-x border-t border-transparent data-[state=active]:border-p3"
+        trigger: "border-transparent"
       }
     },
     {
@@ -129,11 +128,10 @@ export const tabsTheme = defineUiTheme({
       color: "primary",
       variant: "lift",
       class: {
-        indicator: "bg-p1",
-        root: "tabs border-0! [--tab-bg:var(--color-p1)]! [--tab-inset-color:var(--color-border)]!",
+        indicator: "bg-p1 [--tab-bg:var(--color-p1)]",
+        root: "[--tab-bg:var(--color-p1)]! [--tab-inset-color:var(--color-border)]!",
         list: "border-0!",
-        label: "group-not-[.background-tab]/trigger:after:bg-p1",
-        trigger: "border-b-0! [--tab-bg:var(--color-p1)]!",
+        trigger: "[--tab-bg:var(--color-p1)]!",
         content: "border border-t-0! border-border"
       }
     },

@@ -2,8 +2,8 @@
 import type { FormSubmitEvent } from "@nuxt/ui"
 import { parse } from "valibot"
 import { extractReadableText } from "~~/shared/utils/tiptap/extractReadableText"
-import type { ReportOption } from "./reportOptions"
-import { reportOptions } from "./reportOptions"
+import type { ReportOption } from "../../../utils/user/reportOptions"
+import { reportOptions } from "../../../utils/user/reportOptions"
 
 const { button, comment } = defineProps<{
   comment: CommentData
@@ -76,9 +76,7 @@ function handleOpenUpdate(open: boolean) {
     @update:open="handleOpenUpdate">
     <slot v-if="button" :report="threadStore.report()">
       <UButton as-child>
-        <button class="text-xs hover:underline">
-          Report
-        </button>
+        <button class="text-xs hover:underline">Report</button>
       </UButton>
     </slot>
 

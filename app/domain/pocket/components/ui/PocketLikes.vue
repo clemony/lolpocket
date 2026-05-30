@@ -14,7 +14,7 @@ const favorites = computed({
   set: (value: string[]) => {
     const settings = user().settings
     if (settings) settings.favorite_pockets = value
-  },
+  }
 })
 
 function handleLike() {
@@ -25,28 +25,16 @@ function handleLike() {
 </script>
 
 <template>
-  <Label
+  <HeartButton
+    :checked="favorites.includes(pocket.key)"
+    :label="pocket.likes"
+    :disabled="pocket.uuid === user().account?.puuid"
     :class="
       cn(
         'has-checked: group/x h-6 gap-1.5! rounded-full pr-2.5 pl-2 inset-shadow-xs ring-pc/50 ring-offset-p2 duration-0 hover:ring hover:ring-offset-1 has-not-checked:*:opacity-40 has-checked:*:opacity-100',
         className
       )
     "
-    variant="outline">
-    <input
-      v-model="favorites"
-      class="peer hidden"
-      :disabled="pocket.uuid === user().account?.puuid"
-      type="checkbox"
-      :value="pocket.key"
-      @change="handleLike()" />
-    <span class="relative grid size-4 place-items-center overflow-hidden">
-      <icon
-        class="group-hover/x:text-tint-domination/20! group-has-checked/x:text-tint-domination/20 absolute size-6.5! -translate-y-[0.5px] ds-2xs transition-colors duration-200 group-has-not-checked/x:text-pc/30"
-        name="heart-sm" />
-    </span>
-    <span class="text-xs! font-semibold">
-      {{ pocket.likes }}
-    </span>
-  </Label>
+    variant="outline"
+    @update:model-value="handleLike()" />
 </template>

@@ -36,37 +36,23 @@ const tabs = ref("abilities")
       </header>
     </div>
 
-    <Tabs
+    <UTabs
       v-model:model-value="tabs"
+      :items="['abilities', 'stats', 'bio'].map((t) => ({ value: t, slot: t }))"
       class="size-full max-h-full overflow-hidden"
+      label-key="value"
       if="champion">
-      <TabsList class="relative h-10 w-full grid-cols-3 rounded-none bg-p3!">
-        <TabsTrigger value="abilities">
-          Abilities
-        </TabsTrigger>
-
-        <TabsTrigger value="stats">
-          Stats
-        </TabsTrigger>
-
-        <TabsTrigger value="bio">
-          Bio
-        </TabsTrigger>
-
-        <TabIndicator />
-      </TabsList>
-
-      <TabsContent class="max-h-full overflow-y-auto" value="abilities">
+      <template #abilities>
         <AbilityData v-if="champion" :abilities="champion.abilities" />
-      </TabsContent>
+      </template>
 
-      <TabsContent value="stats">
+      <template #stats>
         <ChampionBio v-if="champion" :champion="champion" />
-      </TabsContent>
+      </template>
 
-      <TabsContent value="bio">
+      <template #bio>
         <ChampionBasicData v-if="champion" :champion="champion" />
-      </TabsContent>
-    </Tabs>
+      </template>
+    </UTabs>
   </div>
 </template>

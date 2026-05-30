@@ -316,6 +316,10 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: [
+        "@dnd-kit/dom",
+        "@dnd-kit/dom/sortable",
+        "@dnd-kit/vue",
+        "@dnd-kit/vue/sortable",
         "valibot",
         "dexie",
         "clsx",

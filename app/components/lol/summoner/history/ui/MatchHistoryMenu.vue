@@ -23,17 +23,14 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
         'z-2 flex h-20 w-full max-w-110 flex-nowrap items-center gap-3 overflow-hidden bg-p0/94 px-1 backdrop-blur-md transition-all duration-300'
       )
     ">
-    <Toggle
-      v-model:model-value="open"
-      class="bg-transparent! fx-0 hover:fx-1 on:bg-transparent!"
-      on="inset"
-      hover="inset"
+    <UButton
+      :icon="open ? 'left-to-line' : 'right-to-line'"
       square
       size="lg"
       variant="ghost"
       @update:model-value="emit('open', open)">
-      <Icon class="" :name="open ? 'left-to-line' : 'right-to-line'" />
-    </Toggle>
+      <input v-model="open" type="checkbox" class="peer hidden" />
+    </UButton>
 
     <UPopover>
       <UButton

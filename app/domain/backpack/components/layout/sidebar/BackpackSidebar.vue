@@ -69,9 +69,10 @@ const currentTab = shallowRef<string>("backpack")
               leadingIcon: 'hidden',
               list: 'h-11 pr-3',
               trigger: 'h-11',
-              label:
-                'group-active/trigger:border-b group-active/trigger:border-b-p0 group-active/trigger:font-semibold',
-              indicator: 'rounded-t-2xl!',
+              label: 'group-active/trigger:font-semibold',
+              indicator: cn('h-11 rounded-t-2xl!', {
+                'first:before:[--radius-start:none]': currentTab === 'backpack'
+              }),
               content: cn(
                 'mt-0! max-h-full w-full overflow-x-hidden overflow-y-auto border-t bg-p0 py-4 drop-shadow-sm drop-shadow-black/6'
                 //currentTab === 'pocket' ? 'rounded-tr-none!' : ''

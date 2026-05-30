@@ -1,30 +1,32 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="w-full">
-    <h2 class="">
-      Item Sets
-    </h2>
-    <p class="inline-block leading-6 tracking-tight">
+  <UPageHeader
+    title="Item Sets"
+    :ui="{ description: 'inline-block leading-7 tracking-tight' }">
+    <template #description>
       Drag items from the list at the right. Items are draggable & re-orderable
       within sets and between them. Select
 
-      <icon
-        class="drop-shadow-text mx-1 mb-1.5 inline-block size-4 shrink-0 text-pc **:stroke-[1.8]"
-        name="gg:check-o" />
+      <Icon
+        class="mx-0.5 inline size-4.5 align-icon text-pc drop-shadow-sm"
+        name="i-check-circle" />
 
       a set and
 
-      <UKbd value="meta" />
+      <div
+        class="mx-1 inline-flex shrink-0 items-center gap-1.5 align-middle leading-none">
+        <UKbd square size="sm_" value="meta" class="font-bold" />
 
-      <span class="px-1 text-lg">+</span>
+        <span class="text-lg leading-none font-semibold">+</span>
 
-      <icon
-        class="drop-shadow-text mr-1 mb-0.5 inline-block size-4.5 shrink-0 scale-x-105 scale-y-95 text-pc"
-        name="ph:mouse-left-click-fill" />
+        <Icon
+          class="inline size-4.25 align-baseline text-pc drop-shadow-sm **:stroke-[7.5%]!"
+          name="i-mouse-right" />
+      </div>
 
       an item from the main list to quick add. Drag entire sets to reorder set
       list.
-    </p>
-  </div>
+    </template>
+  </UPageHeader>
 </template>

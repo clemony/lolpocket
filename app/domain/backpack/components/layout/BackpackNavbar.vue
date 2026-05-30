@@ -157,7 +157,7 @@ const collapseTrigger: ButtonProps = {
 </script>
 
 <template>
-  <div class="flex grow items-end justify-end self-end">
+  <div class="flex h-10 grow -translate-y-0.5 justify-end self-end">
     <div class="flex items-center gap-2 rounded-xl px-3">
       <LazyUDropdownMenu
         :content="{
@@ -183,11 +183,10 @@ const collapseTrigger: ButtonProps = {
         color="primary"
         size="md"
         :ui="{
-          root: 'w-max self-end',
-          list: 'shrink-0 self-end px-0',
+          root: 'w-max',
+          list: 'shrink-0 px-0',
           label: 'hidden',
-          trigger:
-            'background-tab isolate w-16 rounded-t-3xl bg-transparent! data-[state=active]:border-b! data-[state=active]:border-b-p3!',
+          trigger: 'w-16',
           indicator: 'h-10 rounded-t-3xl',
           leadingIcon: cn('size-4.5')
         }">

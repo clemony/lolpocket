@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
+import { useFollowSummoner } from "~/domain/summoner/composables/useFollowSummoner"
 
 const {
   variant = "outline",
   class: className,
   size = "md",
   tooltipPlacement = "bottom",
-  update,
+  update: refresh,
   warning
 } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -29,6 +30,8 @@ const menu = {
 
 const btnClass = "fx-0!"
 const { summoner } = storeToRefs(sSession())
+
+const { isSelf, isFavorite, tooltipText, update } = useFollowSummoner(summoner)
 </script>
 
 <template>
@@ -40,7 +43,7 @@ const { summoner } = storeToRefs(sSession())
       )
     ">
     <UpdateSummoner
-      v-if="update"
+      v-if="refresh"
       class="col-span-4! **:text-nc!"
       color="neutral"
       :size />
@@ -75,10 +78,13 @@ const { summoner } = storeToRefs(sSession())
         :summoner="summoner" />
     </Tooltip>
 
-    <FollowButton
+    <HeartButton
       v-if="summoner"
       :class="cn('[&_svg]:size-9.5! [&_svg]:**:stroke-1', btnClass)"
       :size
-      :summoner="summoner" />
+      :tooltip-text="tooltipText"
+      :disabled="isSelf"
+      :checked="computed(() => isSelf || isFavorite)"
+      @update:model-value="update($event)" />
   </div>
 </template>

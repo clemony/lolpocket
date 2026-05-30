@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Feedback } from "@dnd-kit/dom"
+import { DragDropProvider } from "@dnd-kit/vue"
 const props = defineProps<{
   pocket: Pocket
 }>()
@@ -28,24 +30,41 @@ const tabValues = [
     value: "calculator"
   }
 ]
+
+function onDragEnd(e: any) {}
 </script>
 
 <template>
-  <div class="z-auto size-full min-h-screen pt-22">
-    <div class="z-auto flex w-full gap-16">
-      <div v-if="pocket" class="z-auto w-2/5">
-        <ItemsHeader />
-        <div class="sticky -top-44 z-2 w-full self-start">
-          <div
-            class="max-h-[calc(100vh-5.5rem)] scrollbar-none overflow-x-visible overflow-y-auto pr-2">
-            <ItemSets :pocket="pocket" />
-          </div>
-        </div>
-      </div>
-      <div class="z-auto flex w-3/5 flex-col">
-        <PocketItemFilters />
-        <LazyDraggableItemList />
-      </div>
-    </div>
+  <div class="flex flex-1">
+    <DragDropProvider
+      :plugins="
+        (defaults) => [
+          ...defaults,
+          Feedback.configure({
+            dropAnimation: {
+              duration: 170,
+              easing: 'cubic-bezier(0.2, 0, 0, 1)'
+            }
+          })
+        ]
+      "
+      @drag-end="onDragEnd($event)">
+      <UDashboardPanel v-if="pocket">
+        <template #header>
+          <ItemsHeader />
+        </template>
+        <template #body>
+          <ItemSets :pocket="pocket" />
+        </template>
+      </UDashboardPanel>
+      <UDashboardPanel class="z-auto flex w-3/5 flex-col">
+        <template #header>
+          <PocketItemFilters />
+        </template>
+        <template #body>
+          <LazyDraggableItemList />
+        </template>
+      </UDashboardPanel>
+    </DragDropProvider>
   </div>
 </template>

@@ -1,53 +1,44 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
+import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
-const {
-  class: className,
-  pocket: p,
-  size = "2xs"
-} = defineProps<{
-  class?: HTMLAttributes["class"]
-  pocket: Pocket
-  size?: ButtonProps["size"]
-}>()
+const props = withDefaults(
+  defineProps<
+    ButtonProps & {
+      pocket: Pocket
+    }
+  >(),
+  {
+    variant: "ghost",
+    size: "sm_",
+    square: true
+  }
+)
 
-const pocket = computed(() => p)
+const delegated = reactiveOmit(props, "class", "pocket")
+const { settings } = storeToRefs(user())
 </script>
 
 <template>
-  <Label
-    v-if="pocket"
-    label="{
-      content:
-        pocketStore().pinned.includes(pocket.key) === true ? 'Unpin' : 'Pin',
-      theme: 'neutral',
-      placement: 'bottom',
-    }"
-    variant="ghost"
-    base="btn"
-    :size
-    hover="neutral"
-    :class="
-      cn(
-        'group/pin pointer-events-auto size-7! rounded-full *:absolute *:mt-px *:size-4.25',
-        className
-      )
-    ">
-    <!--     <input
-      v-model="pocketStore().pinned"
+  <UButton
+    v-if="settings"
+    v-model="settings.pinned_pockets"
+    :value="String(props.pocket?.key)"
+    v-bind="delegated"
+    as="label"
+    :icon="
+      settings.pinned_pockets.includes(String(props.pocket?.key))
+        ? 'i-pin-solid'
+        : 'i-pin'
+    "
+    :ui="{
+      base: 'rounded-xl',
+      leadingIcon: iconSets.pinned?.class
+    }">
+    <input
+      v-model="settings.pinned_pockets"
       type="checkbox"
-      class="peer hidden" /> -->
-
-    <icon
-      class="*:stroke-[1.8] group-hover/pin:opacity-0 peer-checked:opacity-0"
-      name="pin" />
-
-    <icon
-      class="opacity-0 group-hover/pin:not-checked:text-pc/50 group-hover/pin:not-checked:opacity-100 peer-checked:opacity-90"
-      name="pin-solid" />
-
-    <icon
-      class="opacity-0 peer-checked:text-pc group-hover/pin:peer-checked:opacity-80"
-      name="iconoir:pin-slash-solid" />
-  </Label>
+      class="peer hidden"
+      :value="String(props.pocket?.key)" />
+  </UButton>
 </template>

@@ -51,10 +51,10 @@ const btnUi = {
 const videoComponent = computed(() => {
   if (!currentPost.value || !hasVideo(currentPost.value)) return null
   const reddit = defineAsyncComponent(
-    () => import("~~/layers/ui/app/components/media/Video.vue")
+    () => import("~~/layers/ui/app/components/media/player/Video.vue")
   )
   const youtube = defineAsyncComponent(
-    () => import("~~/layers/ui/app/components/media/YoutubePlayer.vue")
+    () => import("~~/layers/ui/app/components/media/player/YoutubePlayer.vue")
   )
 
   if (
@@ -113,7 +113,7 @@ const videoComponent = computed(() => {
     <template #body>
       <div :key="String(currentPost?.id ?? currentPost?.source_id ?? '')">
         <div
-          class="scrollbar-none relative size-full max-h-[88vh] overflow-x-hidden overflow-y-auto rounded-6xl">
+          class="relative size-full max-h-[88vh] scrollbar-none overflow-x-hidden overflow-y-auto rounded-6xl">
           <div
             v-if="currentPost && hasVideo(currentPost)"
             class="aspect-video rounded-6xl shadow-sm inset-ring inset-ring-neutral drop-shadow-md">

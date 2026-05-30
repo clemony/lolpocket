@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { ReportOption } from "./reportOptions"
-import { reportOptions } from "./reportOptions"
+import type { ReportOption } from "../../../utils/user/reportOptions"
+import { reportOptions } from "../../../utils/user/reportOptions"
 
 const emit = defineEmits<{ close: [boolean] }>()
 

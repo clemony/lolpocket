@@ -1,14 +1,9 @@
 <script lang="ts" setup>
-defineProps<{
-  folder: SortableFolder
-  view: string
-}>()
-
 definePageMeta({
   title: "Backpack",
   id: "backpack",
   icon: "i-folder",
-  layout: false,
+  layout: "folder-layout",
   iconKey: "folder",
   prefix: "Backpack",
   order: 1
@@ -16,9 +11,5 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
-    <NuxtLayout name="folder">
-      <BackpackTable :folder />
-    </NuxtLayout>
-  </div>
+  <BackpackTable />
 </template>

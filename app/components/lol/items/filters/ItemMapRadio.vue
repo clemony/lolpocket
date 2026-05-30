@@ -1,7 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <Tabs v-model:model-value="is().filters.map" orientation="vertical">
+  fix
+  <!-- <Tabs v-model:model-value="is().filters.map" orientation="vertical">
     <TabsList
       class="w-11! grid-rows-4 gap-4! p-1"
       variant="none"
@@ -41,5 +42,5 @@
         orientation="vertical"
         contrast />
     </TabsList>
-  </Tabs>
+  </Tabs> -->
 </template>

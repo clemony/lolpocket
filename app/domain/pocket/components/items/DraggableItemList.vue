@@ -34,19 +34,16 @@ watch(
       ]"
       class="grid w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-between gap-4 pt-6 select-none"
       layout="position">
-      <AnimatePresence>
-        <motion.div
-          v-for="item in is().filtered"
-          :key="item"
-          :transition="{
-            duration: 0.2
-          }"
-          layout="position">
-          <LazyItemTooltip :id="item" class="aspect-square size-20" />
-        </motion.div>
-      </AnimatePresence>
+      <div v-for="item in is().filtered" :key="item">
+        <HoverIcon
+          :id="item"
+          type="item"
+          :ui="{
+            root: 'size-18'
+          }" />
+      </div>
     </motion.div>
-    <TransitionScalePop
+    <div
       v-if="is().filtered.length < is().defaultFilterLength"
       class="z-2 grid w-full place-items-center pt-32">
       <UButton
@@ -59,6 +56,6 @@ watch(
         </span>
         <icon class="size-3.5" name="reset" />
       </UButton>
-    </TransitionScalePop>
+    </div>
   </div>
 </template>

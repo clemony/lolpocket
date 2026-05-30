@@ -1,6 +1,9 @@
 <script lang="ts" setup>
-import type { createTestMessage } from "../test-message"
-import { createTestNotification, expandTestTemplate } from "../test-message"
+import type { createTestMessage } from "../../../utils/messages/test-message"
+import {
+  createTestNotification,
+  expandTestTemplate
+} from "../../../utils/messages/test-message"
 
 const { message } = defineProps<{
   message: InboxNotification

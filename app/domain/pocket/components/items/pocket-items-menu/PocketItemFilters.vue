@@ -7,11 +7,8 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 </script>
 
 <template>
-  <!--   <div class="w-full justify-self-center mx-auto px-4  items-center sticky py-0 -top-50  z-1 bg-p0/86 backdrop-blur-sm  relative rounded-lg  gap-4 flex flex-col before:border-p0"></div> -->
-  <div
-    class="sticky -top-55 z-1 flex w-full flex-col items-center gap-4 pt-4 before:absolute before:top-0 before:-left-1 before:box-content before:size-full before:border-4 before:border-p0 before:bg-p0/96 before:backdrop-blur-sm">
-    <div
-      class="flex h-14 w-full flex-nowrap items-center justify-start gap-4 pr-1.5">
+  <UDashboardToolbar>
+    <UPopover>
       <UButton
         class="pr-4"
         color="neutral"
@@ -20,14 +17,12 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
         <icon class="size-4.5" name="add" />
         Set
       </UButton>
-      <UPopover>
+      <template #content>
         <LazyItemFilterPopoverContent />
-      </UPopover>
-    </div>
+      </template>
+    </UPopover>
 
-    <div
-      v-auto-animate
-      class="flex w-full scrollbar-none flex-wrap justify-start gap-4 overflow-x-auto">
+    <UPopover>
       <UButton
         v-if="is().filters.rank"
         class="pr-2"
@@ -38,7 +33,7 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
         {{ is().filters.rank }}
         <icon class="size-4 **:stroke-[2.1]" name="x" />
       </UButton>
-      <template v-if="is().filters.tags.length">
+      <template v-if="is().filters.tags.length" #content>
         <ItemTagButton
           v-for="(tag, i) in is().filters.tags"
           :key="tag"
@@ -46,15 +41,15 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
           :active="true"
           :tag />
       </template>
-      <template v-if="is().filters.stats.length">
-        <ItemStatButton
-          v-for="(stat, i) in is().filters.stats"
-          :key="stat"
-          clear
-          active
-          :stat
-          @click="is().filters.stats.splice(i, 1)" />
-      </template>
-    </div>
-  </div>
+    </UPopover>
+    <template v-if="is().filters.stats.length">
+      <ItemStatButton
+        v-for="(stat, i) in is().filters.stats"
+        :key="stat"
+        clear
+        active
+        :stat
+        @click="is().filters.stats.splice(i, 1)" />
+    </template>
+  </UDashboardToolbar>
 </template>

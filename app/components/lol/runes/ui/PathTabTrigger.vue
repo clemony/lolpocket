@@ -16,7 +16,7 @@ const emit = defineEmits(["update:path"])
 </script>
 
 <template>
-  <TabsTrigger
+  <UButton
     class="group relative aspect-square size-15 shrink-0 place-self-center rounded-full disabled:pointer-events-none"
     :value="value"
     :class="cn('', className)">
@@ -28,5 +28,5 @@ const emit = defineEmits(["update:path"])
     </div>
 
     <slot />
-  </TabsTrigger>
+  </UButton>
 </template>

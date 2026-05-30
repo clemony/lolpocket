@@ -153,6 +153,7 @@ export const icon = {
     "wifi-low": "lucide:wifi-low", //'i-lucide-wifi-low
 
     "right-click": "ph:mouse-right-click-fill", //'i-right-click'
+    "mouse-right": "hugeicons:mouse-right-click-02", //i-hugeicons-mouse-right-click-02
     click: "i-mingcute-cursor-3-fill", //'i-click'
     cursor: "i-mingcute-cursor-2-fill", //'i-cursor'
 
