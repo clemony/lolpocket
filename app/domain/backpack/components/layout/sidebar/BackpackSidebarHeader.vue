@@ -1,15 +1,13 @@
 <script lang="ts" setup>
 import type { MaybeElementRef } from "@vueuse/core"
 import { useBackpack } from "~/domain/backpack/composables/useBackpack"
+import { useBackpackSearch } from "~/domain/backpack/composables/useBackpackSearch"
 
-const { search, toggleSearch, sidebarCollapsed } = useBackpack()
 const userStore = user()
-watch(
-  () => sidebarCollapsed.value,
-  (v) => {
-    console.log("💠 - watch - newVal:", v)
-  }
-)
+
+const { sidebarCollapsed } = useBackpack()
+const { items, searchTerm, modelValue, clear } = useBackpackSearch()
+
 const input = useTemplateRef<{
   inputRef?: HTMLInputElement | { value?: HTMLInputElement | null } | null
 }>("input")
@@ -30,14 +28,7 @@ whenever(subSearchPressed, () => {
   focused.value = true
 })
 
-watch(
-  () => focused.value,
-  (v) => {
-    if (v && v === true) toggleSearch(true)
-  }
-)
-
-function closeSearch() {
+/* function closeSearch() {
   focused.value = false
   toggleSearch(false)
 }
@@ -45,7 +36,7 @@ function closeSearch() {
 function handleClear() {
   if (search.value) search.value = ""
   closeSearch()
-}
+} */
 </script>
 
 <template>
@@ -71,7 +62,7 @@ function handleClear() {
           </template>
           <template #content>
             <UInput
-              v-model:model-value="search"
+              v-model:model-value="searchTerm"
               variant="none"
               size="lg"
               placeholder="Search Backpack..."
@@ -83,7 +74,7 @@ function handleClear() {
               }"
               icon="i-search">
               <template #trailing>
-                <LazyInputClear v-if="search" @click="search = ''" />
+                <LazyInputClear v-if="searchTerm" @click="searchTerm = ''" />
                 <span v-else />
               </template>
             </UInput>
@@ -114,29 +105,28 @@ function handleClear() {
             leadingIcon: cn('size-4.5 rotate-90 **:stroke-[10%]!')
           }" />
       </div>
-      <UInput
+      <UInputMenu
         v-else
         ref="input"
-        v-model:model-value="search"
+        v-model:model-value="modelValue"
+        v-model:search-term="searchTerm"
+        :items="items"
+        open-on-focus
         icon="i-search"
         variant="outline"
-        :size="sidebarCollapsed ? 'md' : 'lg'"
+        size="lg"
         :ui="{
           base: 'grow rounded-xl px-3 text-sm ring-p3/80',
           root: 'relative h-13! min-h-13! w-full max-w-full min-w-12 grow p-0!'
         }">
         <template #trailing>
-          <LazyInputClear
-            v-if="search"
-            size="sm"
-            @clear-input="handleClear()" />
+          <LazyInputClear v-if="searchTerm" size="sm" @clear-input="clear()" />
           <LazyUButton
             v-else-if="focused === true"
             color="transparent"
             size="sm"
             icon="i-x"
-            @pointerdown.prevent.stop
-            @click.stop="closeSearch" />
+            @pointerdown.prevent.stop />
           <div v-else class="inline-flex items-center">
             <UKbd
               v-for="(k, i) in subSearchKeys"
@@ -147,7 +137,7 @@ function handleClear() {
               :value="k" />
           </div>
         </template>
-      </UInput>
+      </UInputMenu>
     </div>
   </div>
 </template>

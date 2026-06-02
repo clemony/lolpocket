@@ -1,18 +1,6 @@
 import type { RouteRecordNormalized } from "vue-router"
+import type { RouteItem, RouteReturn } from "~/types/route.types"
 
-export interface RouteItem {
-  value: string | number | undefined
-  label: string
-  icon?: string
-  iconFill?: string
-  class?: string
-  id?: string
-  to?: string
-  description?: string
-  order?: number
-  auth?: boolean
-}
-export type RouteReturn = Record<string, RouteItem[]>
 export const buildRouteItem = (record: RouteRecordNormalized): RouteItem => ({
   id: record.path,
   label: String(record.meta?.title || record.name),

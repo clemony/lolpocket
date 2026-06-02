@@ -1,16 +1,16 @@
 //
 import { unref } from "vue"
-import { aggregateAllies } from "~/domain/stats/aggregateAllies"
-import type { ChampionPairStats } from "~/domain/stats/aggregateDuos"
-import { aggregateDuos } from "~/domain/stats/aggregateDuos"
-import type { AggregatedSkills } from "~/domain/stats/aggregateSkills"
-import { aggregateSkills } from "~/domain/stats/aggregateSkills"
-import { useAggregateSingleChampion } from "~/domain/stats/useAggregateSingleChampion"
-import type { ItemSlotOrder } from "~/domain/stats/useChampionItemTimelineStats"
-import { useChampionItemTimelineStats } from "~/domain/stats/useChampionItemTimelineStats"
-import { useChampionRuneStats } from "~/domain/stats/useChampionRuneStats"
-import type { SpellStats } from "~/domain/stats/useChampionSpellStats"
-import { useChampionSpellStats } from "~/domain/stats/useChampionSpellStats"
+import { aggregateAllies } from "~/domain/summoner/stats/aggregateAllies"
+import type { ChampionPairStats } from "~/domain/summoner/stats/aggregateDuos"
+import { aggregateDuos } from "~/domain/summoner/stats/aggregateDuos"
+import type { AggregatedSkills } from "~/domain/summoner/stats/aggregateSkills"
+import { aggregateSkills } from "~/domain/summoner/stats/aggregateSkills"
+import { useAggregateSingleChampion } from "~/domain/summoner/stats/useAggregateSingleChampion"
+import type { ItemSlotOrder } from "~/domain/summoner/stats/useChampionItemTimelineStats"
+import { useChampionItemTimelineStats } from "~/domain/summoner/stats/useChampionItemTimelineStats"
+import { useChampionRuneStats } from "~/domain/summoner/stats/useChampionRuneStats"
+import type { SpellStats } from "~/domain/summoner/stats/useChampionSpellStats"
+import { useChampionSpellStats } from "~/domain/summoner/stats/useChampionSpellStats"
 
 export const sChampion = defineStore("summonerChampion", () => {
   const { summoner } = storeToRefs(sSession())
@@ -37,9 +37,7 @@ export const sChampion = defineStore("summonerChampion", () => {
         )
       )
       .map((m: MatchData) => {
-        const player = m.participants.find(
-          (p: Player) => p.puuid === id.value
-        )
+        const player = m.participants.find((p: Player) => p.puuid === id.value)
         const timeline = timelines.value?.find(
           (tl: PlayerTimeline) => tl.matchId === m.matchId
         )

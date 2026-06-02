@@ -38,10 +38,11 @@ const forwarded = useForwardPropsEmits(delegated, emit)
       icon="i-x"
       :ui="{
         leadingIcon: cn(
-          '**:stroke-[2.5]',
+          '**:stroke-[14%]!',
           color === 'neutral'
-            ? '**:stroke-[2.6]'
-            : 'opacity-50 group-hover/btn:opacity-100'
+            ? '**:stroke-[16%]!'
+            : 'opacity-50 group-hover/btn:opacity-100',
+          props.leadingIcon
         ),
         base: cn('anchor pointer-events-auto shrink-0', ui?.base)
       }"

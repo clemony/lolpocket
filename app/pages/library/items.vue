@@ -23,10 +23,10 @@ const tabModel = shallowRef<TabValue>(0)
 const component = computed(() =>
   tabModel.value === 0
     ? defineAsyncComponent(
-        () => import("~/domain/library/items/LibraryItemGrid.vue")
+        () => import("~/domain/library/components/items/LibraryItemGrid.vue")
       )
     : defineAsyncComponent(
-        () => import("~/domain/library/items/LibraryItemTable.vue")
+        () => import("~/domain/library/components/items/LibraryItemTable.vue")
       )
 )
 

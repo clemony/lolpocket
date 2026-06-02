@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import {
+  providePostModal,
+  usePostModal
+} from "~/domain/nexus/composables/usePostModal"
+import {
   buildPatchPost,
   buildPbePost,
   buildRedditPost
-} from "~/components/lol/external/posts/post_cards"
-import {
-  providePostModal,
-  usePostModal
-} from "~/components/lol/external/posts/usePostModal"
+} from "~/domain/nexus/utils/post_cards"
 
 definePageMeta({
   title: "News",

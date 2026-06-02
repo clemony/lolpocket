@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { LazyAuthModal } from "#components"
 import type { DropdownMenuItem, PopoverProps } from "@nuxt/ui"
+import { testingMenu } from "~/domain/user/utils/user/testingMenu"
 import {
   asDropdownItem,
   mergeBtnUi
-} from "~/components/layout/navigation/command/build/helpers"
-import { testingMenu } from "./testingMenu"
+} from "~/layout/components/navigation/command/build/helpers"
 
 const props = defineProps<{
   button: ButtonPropsExt

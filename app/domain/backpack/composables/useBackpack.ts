@@ -7,14 +7,11 @@ import { backpackFolderKeys } from "~~/shared/types/types.sortable"
 export interface BackpackInject {
   sidebarCollapsed: Ref<boolean>
   view: Ref<ViewMode>
-  search: Ref<string>
-  searchVisible: Ref<boolean>
   folderId: Ref<string>
   folderName: Ref<string>
   sidebarFolderRefs: Ref<Record<string, boolean>>
   onFolderUpdate: (e: AcceptableValue | undefined) => void
   toggleSidebar: () => void
-  toggleSearch: (value?: boolean) => void
   collapseAllFolders: () => void
   path: Ref<string | null | undefined>
 }
@@ -46,13 +43,11 @@ export function useBackpackProvider(): BackpackInject {
 
   const path = ref<string | null>()
   const view = ref<ViewMode>("gallery")
-  const search = ref<string>("")
   const id = useRouteParams("id")
 
   const folderId = ref<string>("folders")
   const folderName = ref<string>("Backpack")
   const activeTab = ref<string>("Backpack")
-  const searchVisible = ref<boolean>(false)
 
   const backpackFolderOpen = ref<boolean>(true)
   const sidebarFolderRefs = ref<Record<string, boolean>>({})
@@ -73,8 +68,6 @@ export function useBackpackProvider(): BackpackInject {
     },
     { immediate: true }
   )
-
-  const toggleSearch = useToggle(searchVisible)
 
   function onFolderUpdate(e: AcceptableValue | undefined) {
     const value = backpackTabFolderId(e)
@@ -98,9 +91,6 @@ export function useBackpackProvider(): BackpackInject {
     onFolderUpdate,
     folderId,
     folderName,
-    search,
-    searchVisible,
-    toggleSearch,
     view,
     path
   }
@@ -108,9 +98,9 @@ export function useBackpackProvider(): BackpackInject {
 export const BackpackKey = Symbol("BackpackKey") as InjectionKey<BackpackInject>
 export function provideBackpack() {
   const state = useBackpackProvider()
-  provideLocal(BackpackKey, state)
+  provide(BackpackKey, state)
   if (!state) throw new Error("No backpack provided")
-  return injectLocal(BackpackKey, state)
+  return state
 }
 
 export function useBackpack() {

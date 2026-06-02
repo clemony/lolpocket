@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { motion } from "motion-v"
-import { useItemFilter } from "~/domain/items/useItemFilter"
+import { useItemFilter } from "~/domain/library/composables/useItemFilter"
 
 const props = withDefaults(
   defineProps<{
@@ -11,8 +11,8 @@ const props = withDefaults(
     dark?: boolean
   }>(),
   {
-    placeholder: "Search Items...",
-  },
+    placeholder: "Search Items..."
+  }
 )
 
 const emit = defineEmits(["update:query"])
@@ -74,25 +74,25 @@ const variants = {
   collapsed: {
     borderRadius: "100%",
     gap: 0,
-    padding: 0,
+    padding: 0
   },
   expanded: {
     width: "220px",
     borderRadius: "1.2rem",
     gap: "10px",
-    padding: "10px",
-  },
+    padding: "10px"
+  }
 }
 
 const inputVariants = {
   collapsed: {
     width: 0,
-    opacity: 0,
+    opacity: 0
   },
   expanded: {
     width: "200px",
-    opacity: 100,
-  },
+    opacity: 100
+  }
 }
 
 const { clearFilters, filters, setFilter } = useItemFilter()
@@ -107,14 +107,14 @@ watchEffect(() => {
     :class="
       cn(
         'bgneutral/84 btn relative flex btn-circle items-center rounded-full border text-nc btn-neutral',
-        props.class,
+        props.class
       )
     "
     :variants="variants"
     initial="collapsed"
     :transition="{
       duration: 0.3,
-      ease: 'easeOut',
+      ease: 'easeOut'
     }"
     while-hover="expanded"
     :animate="searchQuery !== undefined ? 'expanded' : 'collapsed'">

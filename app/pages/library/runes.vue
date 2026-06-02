@@ -6,7 +6,7 @@ definePageMeta({
   title: "Runes",
   icon: "i-lp-rune",
   description: "Rune paths and the runes within them.",
-  class: "scale-110",
+  class: "scale-110 **:stroke-[3%]!",
   prefix: "Library",
   order: 2
 })
@@ -16,7 +16,7 @@ const selectedRune = ref<number | null>(null)
 </script>
 
 <template>
-  <transition-slide
+  <div
     class="dr-2000 relative flex size-full justify-center gap-14 pt-54"
     group>
     <div
@@ -67,7 +67,7 @@ const selectedRune = ref<number | null>(null)
         :runes="pathRecord[selectedPath]?.slots.slice(1)"
         @update:rune="(e) => (selectedRune = e)" /> -->
     </div>
-  </transition-slide>
+  </div>
 </template>
 
 <style></style>

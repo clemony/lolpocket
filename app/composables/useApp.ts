@@ -1,3 +1,6 @@
+import { LazyCommandDialog } from "#components"
+import type { RouteReturn } from "~/types/route.types"
+
 const [useAppProvider, useAppInject] = createInjectionState(() => {
   const routes = buildRoutes()
   const settingsState = shallowRef<boolean>(false)
@@ -5,6 +8,14 @@ const [useAppProvider, useAppInject] = createInjectionState(() => {
 
   const toggleSettings = useToggle(settingsState)
   const toggleCommand = useToggle(commandState)
+
+  const overlay = useOverlay()
+
+  const modal = overlay.create(LazyCommandDialog)
+
+  async function openCommand() {
+    modal.open()
+  }
   return {
     routes,
     settings: {
@@ -15,7 +26,8 @@ const [useAppProvider, useAppInject] = createInjectionState(() => {
     command: {
       state: commandState,
       toggle: toggleCommand,
-      close: () => (commandState.value = false)
+      close: () => (commandState.value = false),
+      open: openCommand
     }
   }
 })
@@ -33,7 +45,8 @@ export function useApp() {
       command: {
         state: shallowRef<boolean>(false),
         toggle: () => {},
-        close: () => {}
+        close: () => {},
+        open: () => {}
       }
       /*     sidebar: {
         open: shallowRef<boolean>(false),

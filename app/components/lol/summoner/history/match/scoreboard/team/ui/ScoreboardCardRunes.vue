@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Path from "~/components/common/icon/Path.vue"
+import Path from "~/components/icon/Path.vue"
 
 const { player, classes } = defineProps<{
   player: Player

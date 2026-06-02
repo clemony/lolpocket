@@ -1,9 +1,7 @@
 import { LazyAuthModal } from "#components"
-import type { ButtonProps, DropdownMenuItem } from "@nuxt/ui"
-import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
+import type { ButtonProps } from "@nuxt/ui"
 import { getSummonerIcon } from "~/domain/utils/img"
 import { useSignOut } from "../../composables/useAuth"
-import { testingMenu } from "../admin/testingMenu"
 
 export function useUserAccountItem() {
   const { summoner, account } = storeToRefs(user())

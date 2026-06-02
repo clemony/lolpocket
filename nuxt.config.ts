@@ -1,7 +1,5 @@
 import tailwindcss from "@tailwindcss/vite"
-import path from "node:path"
 import process from "node:process"
-import { fileURLToPath } from "node:url"
 import { colors as uiThemeColors } from "./layers/ui/app/theme/colors"
 
 const isCFPages = process.env.CF_PAGES === "1"
@@ -13,14 +11,11 @@ const components = [
   "backpack",
   "editor",
   "pocket",
+  "home",
   "calculator",
-  "champions",
-  "items",
   "library",
   "nexus",
   "pocket",
-  "riot",
-  "stats",
   "summoner",
   "user"
 ].map((c) => ({
@@ -82,6 +77,10 @@ export default defineNuxtConfig({
   components: [
     {
       path: "~/components",
+      pathPrefix: false
+    },
+    {
+      path: "~/layout/components",
       pathPrefix: false
     },
     ...components

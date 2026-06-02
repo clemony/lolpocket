@@ -3,7 +3,7 @@ import { getSplashFromSkinKey } from "~/domain/utils/img"
 import { useScrollProvider } from "~~/layers/lib/app/composables/navigation/useElementScroll"
 
 definePageMeta({
-  title: "Guide",
+  title: "guide",
   order: 0,
   search: false
 })

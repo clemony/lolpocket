@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { AvatarProps } from "@nuxt/ui"
-import { pocketSidebarContextUi } from "~/domain/pocket/utils/menu/contextActions"
+import { pocketSidebarContextUi } from "~/domain/backpack/utils/folder/ui"
 defineOptions({
   inheritAttrs: false
 })
@@ -20,17 +20,30 @@ defineOptions({
         image: 'translate-y-1 scale-180',
         root: 'overflow-hidden shadow-xs drop-shadow-xs'
       },
+      fieldGroup: {
+        base: cn(
+          'cursor-context relative w-full max-w-full overflow-hidden rounded-lg p-0 hover:divide-x! hover:bg-p1',
+          /* dragging */
+          'dragging:bg-p1/80 dragging:inset-ring! dragging:inset-ring-p2! dragging:backdrop-blur-sm',
+
+          /* active */
+          'group-open/btn:bg-p1 group-active/btn:bg-p1 open:bg-p1',
+
+          /* targetted */
+          'targetted:bg-neutral targetted:text-nc targetted:[&_span]:text-nc!'
+        )
+      },
       button: {
         base: cn(
-          'relative my-0! w-full max-w-full gap-2.5 hover:bg-p1',
+          'cursor-context relative my-0! grow gap-2.5 hover:bg-p1',
           /* badge label */
-          '[&_.label]:w-full [&_.label]:truncate [&_.label]:text-start [&_.label]:align-baseline [&_.label]:text-md [&_.label]:font-medium [&_.label]:tracking-tight',
+          '[&_.label]:w-full [&_.label]:truncate [&_.label]:text-start [&_.label]:align-baseline [&_.label]:text-md [&_.label]:font-medium [&_.label]:tracking-tight hover:[&_.label]:underline',
 
           /* dragging */
           'dragging:bg-p1/80 dragging:inset-ring! dragging:inset-ring-p2! dragging:backdrop-blur-sm',
 
           /* active */
-          'group-open/btn:bg-p1 group-active/btn:bg-p1',
+          'group-open/btn:bg-p1 group-active/btn:bg-p1 open:bg-p1',
 
           /* targetted */
           'targetted:bg-neutral targetted:text-nc targetted:[&_span]:text-nc!',
@@ -51,10 +64,10 @@ defineOptions({
         leadingIcon:
           'pointer-events-none group-targetted/btn:text-nc! group-targetted/btn:**:text-nc!',
         label:
-          'pointer-events-none truncate text-start align-baseline text-sm font-medium tracking-tight'
+          'pointer-events-none truncate text-start align-baseline text-sm font-medium tracking-tight group-hover/btn:underline'
       },
       badge: {
-        base: 'pointer-events-none h-4.25! shrink-0 rounded-[0.44rem] px-1.5',
+        base: 'pointer-events-none h-4.25! shrink-0 rounded-[0.44rem]! px-1.5',
         label: 'text-xs font-semibold'
       },
       input: {

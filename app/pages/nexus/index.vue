@@ -3,7 +3,7 @@ import {
   buildPatchPost,
   buildPbePost,
   buildRedditPost
-} from "~/components/lol/external/posts/post_cards"
+} from "~/domain/nexus/utils/post_cards"
 import { patchIndex } from "~~/shared/constants/patch-index"
 definePageMeta({
   title: "Nexus",

@@ -20,10 +20,10 @@ export interface MatchFilter {
   amount?: number
   champion?: number | null
   date?: MaybeRef<DateRange>
-  ignoreRole?: boolean
+  ignorePosition?: boolean
   patch?: number | null
   queue?: number
-  role?: string | null
+  position?: string | null
 }
 
 export interface MatchTeam {

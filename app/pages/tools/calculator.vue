@@ -41,7 +41,6 @@ console.log("💠 - is().calculatorSets:", is().calculatorSet)
 
     <ResizablePanel
       class="relative flex h-full justify-center overflow-y-auto pt-8">
-      <DraggableItemList />
     </ResizablePanel>
   </ResizablePanelGroup>
 </template>

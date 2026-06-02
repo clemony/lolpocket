@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps, DropdownMenuItem, DropdownMenuProps } from "@nuxt/ui"
-import { newItemOptions } from "~/domain/pocket/utils/menu/createMenu"
+import { newItemOptions } from "~/domain/backpack/utils/folder/createMenu"
 
 interface Option {
   disabled?: boolean
@@ -41,7 +41,7 @@ const open = shallowRef<boolean>(false)
     v-bind="props.menu"
     v-model:open="open"
     size="lg"
-    :items="newItemOptions({ location: props.options?.location }).value"
+    :items="newItemOptions(props.options?.location).value"
     component="dropdown"
     :orientation="props?.collapsed ? 'vertical' : 'horizontal'"
     :ui="{

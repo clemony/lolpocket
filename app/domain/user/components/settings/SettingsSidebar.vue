@@ -35,7 +35,10 @@ onClickOutside(sidebar, () => {
     :ui="{
       header:
         'inline-flex h-(--ui-header-height) w-full shrink-0 items-center px-6! align-baseline',
-      root: 'z-10! h-screen max-h-screen divide-y overflow-hidden bg-p0 p-0! ease-out [--sidebar-width:26rem]',
+      root: cn(
+        'z-10! h-screen max-h-screen divide-y overflow-hidden bg-p0 p-0! ease-out [--sidebar-width:26rem]',
+        props?.ui?.root
+      ),
       body: 'h-max w-full max-w-full flex-1 grow gap-0 overflow-x-hidden p-0'
     }">
     <template #header>

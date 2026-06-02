@@ -2,7 +2,7 @@
 import {
   providePostModal,
   usePostModal
-} from "~/components/lol/external/posts/usePostModal"
+} from "~/domain/nexus/composables/usePostModal"
 const {
   public: { postalBaseUrl }
 } = useRuntimeConfig()

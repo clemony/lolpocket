@@ -1,4 +1,4 @@
-import { getOrFetchAllMastery } from "~/domain/summoner/mastery/getOrFetchMastery"
+import { getOrFetchAllMastery } from "~/domain/summoner/composables/mastery/getOrFetchMastery"
 
 export async function getMasteryMap(puuid: string, region: string) {
   const list = await getOrFetchAllMastery(puuid, region)

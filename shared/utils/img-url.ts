@@ -1,8 +1,8 @@
 import { skinIndex } from "#shared/constants/champions/skin-index"
-import { bgArt } from "#shared/constants/misc/bg-art"
 import type { Skin, SkinKey, SplashType } from "#shared/types/types.champion"
 import { champKeyById } from "#shared/utils/dataHelpers"
 import { getRandom } from "~~/layers/lib/shared/utils/array"
+import { bgArt } from "~~/shared/constants/riot/bg-art"
 
 const CDRAGON_ASSET_BASE =
   "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/"
@@ -31,7 +31,7 @@ const championPathToKeyMap = new Map(
 )
 
 function normalizeChampionKey(keyOrId: string | number): string {
-  return typeof keyOrId === "number" ? champKeyById(keyOrId) ?? "" : keyOrId
+  return typeof keyOrId === "number" ? (champKeyById(keyOrId) ?? "") : keyOrId
 }
 
 function skinIdToFolderId(championKey: string, skinId: string): string {
@@ -75,7 +75,7 @@ export function getSkinKey(
 
 export function parseSkinKey(
   skinKey: string | null | undefined
-): { championKey: string, skinId: string, skinSlug: string } | null {
+): { championKey: string; skinId: string; skinSlug: string } | null {
   if (!skinKey) return null
 
   const [championKey, skinId, skinSlug, ...rest] = skinKey.split(":")
@@ -84,15 +84,19 @@ export function parseSkinKey(
   return { championKey, skinId: normalizeSkinId(skinId), skinSlug }
 }
 
-export function getSkinFromKey(skinKey: string | null | undefined): Skin | null {
+export function getSkinFromKey(
+  skinKey: string | null | undefined
+): Skin | null {
   const parsed = parseSkinKey(skinKey)
   if (!parsed) return null
 
-  return skinIndex[parsed.championKey]?.find(
-    (skin) =>
-      normalizeSkinId(skin.id) === parsed.skinId &&
-      skinNameSlug(skin.name) === parsed.skinSlug
-  ) ?? null
+  return (
+    skinIndex[parsed.championKey]?.find(
+      (skin) =>
+        normalizeSkinId(skin.id) === parsed.skinId &&
+        skinNameSlug(skin.name) === parsed.skinSlug
+    ) ?? null
+  )
 }
 
 function findSkinBySplashKey(championKey: string, key: string): Skin | null {
@@ -135,10 +139,7 @@ export function getSplash(
   return `${CDRAGON_ASSET_BASE}${champ}/skins/${folder}/images/${partialUrl}.jpg`
 }
 
-export function getLoadScreen(
-  keyOrId: string | number,
-  skin?: Skin
-): string {
+export function getLoadScreen(keyOrId: string | number, skin?: Skin): string {
   return getSplash(keyOrId, "load", skin)
 }
 
@@ -197,16 +198,17 @@ export function skinKeyFromUrl(url: string): SkinKey | null {
   if (skinFromFile) return getSkinKey(championKey, skinFromFile)
 
   const skinFolderMatch = skinFolder.match(SKIN_FOLDER_RE)
-  const id = skinFolder === "base"
-    ? "0"
-    : skinFolderMatch?.[1] != null
-      ? String(Number(skinFolderMatch[1]))
-      : null
+  const id =
+    skinFolder === "base"
+      ? "0"
+      : skinFolderMatch?.[1] != null
+        ? String(Number(skinFolderMatch[1]))
+        : null
   if (!id) return null
 
-  const matchingSkins = skinIndex[championKey]?.filter(
-    (skin) => normalizeSkinId(skin.id) === id
-  ) ?? []
+  const matchingSkins =
+    skinIndex[championKey]?.filter((skin) => normalizeSkinId(skin.id) === id) ??
+    []
   const skin = matchingSkins.length === 1 ? matchingSkins[0] : null
 
   return skin ? getSkinKey(championKey, skin) : null

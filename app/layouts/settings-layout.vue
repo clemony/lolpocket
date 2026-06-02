@@ -1,6 +1,10 @@
 <script lang="ts" setup>
-const route = useRoute()
-const { settings } = useApp().routes
+import type { PageLinkRouteItem } from "~/types/route.types"
+
+const { useRouteGroups } = routeStore()
+const settings = computed(
+  () => useRouteGroups().value?.settings?.items as PageLinkRouteItem[]
+)
 </script>
 
 <template>
@@ -24,7 +28,7 @@ const { settings } = useApp().routes
           </UPageAside>
         </template>
         <UPageBody class="w-full space-y-8">
-          <UPageHeader :title="String(route.meta?.title)" />
+          <UPageHeader :title="String($route.meta?.title)" />
 
           <UTheme
             :ui="{

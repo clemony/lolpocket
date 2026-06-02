@@ -69,7 +69,7 @@ const { isSelf, isFavorite, tooltipText, update } = useFollowSummoner(summoner)
       :size
       :tooltip-text="tooltipText"
       :disabled="isSelf"
-      :checked="computed(() => isSelf || isFavorite)"
+      :checked="isSelf || isFavorite"
       @update:model-value="update($event)" />
     <UTooltip
       v-for="(v, i) in toolbar"

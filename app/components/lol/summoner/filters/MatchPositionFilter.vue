@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { mapPositions } from "#shared/constants/misc/positions"
 import type { SelectProps, TabsProps } from "@nuxt/ui"
-import { useMatchRoles } from "~/domain/summoner/composables/match/useMatchRoles"
+import { useMatchPositions } from "~/domain/summoner/composables/match/useMatchPositions"
 
 interface QueueFiltersProps {
   type?: "tabs" | "select"
@@ -19,13 +19,16 @@ const { summoner } = storeToRefs(sSession())
 const store = matchFilter()
 const { filter } = storeToRefs(store)
 
-const roles = computed(() => {
+const positions = computed(() => {
   if (!sMatches().matches || !summoner?.value) return []
 
-  const matchRoles = useMatchRoles(summoner?.value?.puuid, sMatches().matches)
+  const matchPositions = useMatchPositions(
+    summoner?.value?.puuid,
+    sMatches().matches
+  )
 
   return mapPositions.map((p) => {
-    const find = matchRoles?.find((r) => r.name === p.label)
+    const find = matchPositions?.find((r) => r.name === p.label)
     return {
       ...p,
       value: p.label,
@@ -35,16 +38,16 @@ const roles = computed(() => {
   })
 })
 
-const roleModel = computed({
-  get: () => filter?.value.role ?? "all",
-  set: (val) => store.setFilter("role", val ?? "all")
+const positionModel = computed({
+  get: () => filter?.value.position ?? "all",
+  set: (val) => store.setFilter("position", val ?? "all")
 })
 </script>
 
 <template>
   <UTabs
     v-if="props.type === 'tabs'"
-    v-model:model-value="roleModel"
+    v-model:model-value="positionModel"
     size="md"
     :ui="{
       root: 'w-full',
@@ -52,7 +55,7 @@ const roleModel = computed({
       trigger: 'relative gap-0 p-0',
       leadingIcon: 'size-5'
     }"
-    :items="roles"
+    :items="positions"
     default-value="all">
     <template #leading="{ item }">
       <UTooltip
@@ -70,8 +73,8 @@ const roleModel = computed({
   <USelect
     v-else-if="props.type === 'select'"
     v-bind="select"
-    v-model:model-value="roleModel"
-    :icon="`i-lp-${roleModel?.toLowerCase()}`"
+    v-model:model-value="positionModel"
+    :icon="`i-lp-${positionModel?.toLowerCase()}`"
     :content="{ position: 'item-aligned' }"
-    :items="roles" />
+    :items="positions" />
 </template>

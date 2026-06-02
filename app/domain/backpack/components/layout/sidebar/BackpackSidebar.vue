@@ -1,9 +1,9 @@
 <script lang="ts" setup>
+import type { ButtonProps } from "@nuxt/ui"
 import type { ShallowRef } from "vue"
 import { useBackpack } from "~/domain/backpack/composables/useBackpack"
 import { useFolders } from "~/domain/backpack/composables/useFolder"
-const { sidebarCollapsed, search, searchVisible, folderId, sidebarFolderRefs } =
-  useBackpack()
+const { sidebarCollapsed, toggleSidebar } = useBackpack()
 
 const selected = shallowRef<SortablePocket | undefined>()
 
@@ -17,12 +17,6 @@ const tabList = computed(() => [
     icon: "i-backpack"
   },
   {
-    label: "Search",
-    value: "search",
-    slot: "search",
-    icon: "i-search"
-  },
-  {
     label: "Pocket",
     value: "pocket",
     slot: "pocket"
@@ -30,6 +24,24 @@ const tabList = computed(() => [
 ])
 
 const currentTab = shallowRef<string>("backpack")
+
+const toggle = computed<ButtonProps>(() => ({
+  variant: "ghost",
+  color: "neutral",
+  size: "md",
+  ui: {
+    base: cn("anchor mx-2", {
+      "": sidebarCollapsed.value
+    }),
+    leadingIcon: "size-4.5"
+  },
+  icon: sidebarCollapsed.value
+    ? "i-icon-park-outline-left-expand"
+    : "i-icon-park-outline-left-bar",
+  onClick() {
+    toggleSidebar()
+  }
+}))
 </script>
 
 <template>
@@ -67,33 +79,19 @@ const currentTab = shallowRef<string>("backpack")
             variant="lift"
             :ui="{
               leadingIcon: 'hidden',
-              list: 'h-11 pr-3',
+              list: 'h-11',
               trigger: 'h-11',
               label: 'group-active/trigger:font-semibold',
               indicator: cn('h-11 rounded-t-2xl!', {
-                'first:before:[--radius-start:none]': currentTab === 'backpack'
+                'first:before:[--radius-end:none]': currentTab === 'pocket'
               }),
               content: cn(
-                'mt-0! max-h-full w-full overflow-x-hidden overflow-y-auto border-t bg-p0 py-4 drop-shadow-sm drop-shadow-black/6'
-                //currentTab === 'pocket' ? 'rounded-tr-none!' : ''
+                'mt-0! max-h-full w-full overflow-x-hidden overflow-y-auto rounded-tl-4xl! border-t bg-p0 py-4 drop-shadow-sm drop-shadow-black/6',
+                currentTab === 'pocket' ? 'rounded-tr-none!' : ''
               )
             }">
-            <template #list-trailing>
-              <FolderOptionsMenu
-                icon="i-more"
-                square
-                :menu="{
-                  content: {
-                    align: 'end',
-                    side: 'bottom'
-                  }
-                }"
-                variant="ghost"
-                size="sm"
-                :ui="{
-                  base: 'mb-0.5 ml-1',
-                  leadingIcon: cn('size-4.5 **:stroke-[10%]!')
-                }" />
+            <template #list-leading>
+              <UButton v-bind="toggle" />
             </template>
             <template #backpack>
               <div
@@ -106,9 +104,6 @@ const currentTab = shallowRef<string>("backpack")
                     :item="item" />
                 </template>
               </div>
-            </template>
-            <template #search>
-              <BackpackSidebarSearchResults />
             </template>
             <template #pocket>
               <BackpackPocketSidebar />

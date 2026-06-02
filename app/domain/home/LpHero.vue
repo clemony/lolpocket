@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { heroDisplays } from "~/domain/riot/media/video"
+import { heroDisplays } from "~~/shared/constants/riot/video"
 
 const video = heroDisplays[0] ?? { url: "", class: "" }
 </script>

@@ -1,0 +1,41 @@
+<script setup lang="ts">
+import type { ButtonProps } from "@nuxt/ui"
+import { mapPositions } from "~~/shared/constants/misc/positions"
+
+const {
+  variant = "ghost",
+  class: className,
+  clear = false
+} = defineProps<{
+  class?: HTMLAttributes["class"]
+  clear?: boolean
+  variant?: ButtonProps["variant"]
+}>()
+</script>
+
+<template>
+  <Listbox
+    v-model:model-value="champFilter().filters.position"
+    :multiple="false">
+    <ListboxContent as-child>
+      <UButton
+        v-if="champFilter().filters.position && clear"
+        class="order-first hover:*:opacity-100"
+        :variant
+        square
+        size="sm"
+        @click="champFilter().filters.position = ''">
+        <icon class="size-4" name="x" />
+      </UButton>
+
+      <BaseListboxItem
+        v-for="position in mapPositions.filter((p) => p.label !== 'All')"
+        :key="position.label"
+        class="bg-transparent fx-0"
+        :value="position.label"
+        as-child>
+        <PositionBadge :variant size="sm" :position />
+      </BaseListboxItem>
+    </ListboxContent>
+  </Listbox>
+</template>

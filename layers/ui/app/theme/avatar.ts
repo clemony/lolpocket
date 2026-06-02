@@ -50,6 +50,9 @@ export const avatarTheme = defineUiTheme({
       },
       "7xl": {
         root: "size-16 text-2xl"
+      },
+      "8xl": {
+        root: "size-18 text-2xl"
       }
     }
   },

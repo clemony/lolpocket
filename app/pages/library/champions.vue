@@ -16,10 +16,12 @@ const tabModel = shallowRef<TabValue>(0)
 const component = computed(() =>
   tabModel.value === 0
     ? defineAsyncComponent(
-        () => import("~/domain/library/champions/LibraryChampionGrid.vue")
+        () =>
+          import("~/domain/library/components/champions/LibraryChampionGrid.vue")
       )
     : defineAsyncComponent(
-        () => import("~/domain/library/champions/LibraryChampionTable.vue")
+        () =>
+          import("~/domain/library/components/champions/LibraryChampionTable.vue")
       )
 )
 

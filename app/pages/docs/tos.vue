@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { riotDisclaimer } from "~/domain/riot/riot-disclaimer"
+import { riotDisclaimer } from "~~/shared/constants/riot/riot-disclaimer"
 
 definePageMeta({
   title: "Terms & Conditions",
   description: "Information concerning general app usage.",
   icon: "lucide:scale",
-  prefix: "Docs",
+  prefix: "Docs"
 })
 </script>
 

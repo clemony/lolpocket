@@ -35,7 +35,7 @@ const { sidebarFolderRefs } = storeToRefs(pocketStore())
 </script>
 
 <template>
-  <label role="button" class="w-full">
+  <div>
     <EditableButton
       v-if="editing"
       :model-value="item.label"
@@ -53,36 +53,37 @@ const { sidebarFolderRefs } = storeToRefs(pocketStore())
       @toggle-edit="handleToggleEdit()"
       @update:icon-key="editFolderIcon(item, $event)">
       <HintTooltip
-        :disabled="!!props.folder.children?.value?.length || editing"
+        :disabled="props.folder.children?.value?.length !== 0 || editing"
         as-child
         side="right"
         label="Empty">
-        <UButton
-          :data-collapsed="!sidebarFolderRefs[item.id]"
+        <UFieldGroup
           :data-dragging="isDragging?.value"
           :data-targetted="isTargetted?.value"
           :data-open="contextOpen"
-          :data-active="$route.path === item.to"
-          v-bind="button"
-          :to="`/backpack/${item.id}`">
-          <template #trailing>
-            <UBadge v-if="item?.count" :label="item?.count || 0" />
-            <UButton
-              :disabled="!item.children?.value?.length"
-              size="sm"
-              square
-              variant="ghost"
-              icon="i-up"
-              :ui="{
-                base: 'anchor -mr-1 size-8 hover:bg-p0! hover:shadow-xs',
-                leadingIcon: 'trailing-icon mx-0!'
-              }"
-              @click.stop.prevent="
-                sidebarFolderRefs[item.id] = !sidebarFolderRefs[item.id]
-              " />
-          </template>
-        </UButton>
+          :data-active="$route.path === item.to">
+          <UButton v-bind="button" :to="`/backpack/${item.id}`">
+            <template #trailing>
+              <UBadge v-if="item?.count" :label="item?.count || 0" />
+            </template>
+          </UButton>
+          <UButton
+            :data-collapsed="!sidebarFolderRefs[item.id]"
+            :disabled="!item.children?.value?.length"
+            variant="ghost"
+            color="neutral"
+            icon="i-up"
+            :ui="{
+              base: 'anchor max-w-9 shadow-none drop-shadow-none hover:bg-p0! hover:inset-shadow-xs disabled:bg-transparent! disabled:inset-ring-0!',
+              leadingIcon: 'trailing-icon mx-0!',
+              trailingIcon:
+                'group-disabled/btn:opacity-100 hover:text-nc hover:opacity-100'
+            }"
+            @click.stop.prevent="
+              sidebarFolderRefs[item.id] = !sidebarFolderRefs[item.id]
+            " />
+        </UFieldGroup>
       </HintTooltip>
     </FolderContextMenu>
-  </label>
+  </div>
 </template>

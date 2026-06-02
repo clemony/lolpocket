@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 definePageMeta({
-  layout: "backpack-layout",
+  layout: false,
   search: false
 })
 
 const route = useRoute("pocket")
+console.log("🥸 - route:", route)
 const store = pocketStore()
 const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 /* const mainSet = computed(() => {
@@ -22,8 +23,8 @@ const selectedSet = computed(() => {
 </script>
 
 <template>
-  <UDashboardPanel resizable class="flex w-full flex-col">
+  <div class="contents">
     <PocketHeader :pocket="pocket" />
     <NuxtPage :pocket="pocket" />
-  </UDashboardPanel>
+  </div>
 </template>

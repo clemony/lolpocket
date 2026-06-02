@@ -3,47 +3,11 @@ import type { PocketPinButton } from "#components"
 import { UButton } from "#components"
 import type { ButtonProps, DropdownMenuItem } from "@nuxt/ui"
 import { useBackpack } from "~/domain/backpack/composables/useBackpack"
+import { pocketRouteItems } from "~/domain/pocket/utils/pocketRouteItems"
 
 const route = useRoute("pocket")
 const store = pocketStore()
 const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
-
-const folderItems = computed(() => [
-  {
-    label: "Guide",
-    icon: ""
-  },
-  {
-    label: "Champions",
-    icon: ""
-  },
-  {
-    label: "Items",
-    icon: ""
-  },
-  {
-    label: "Runes",
-    icon: ""
-  }
-])
-const { sidebarCollapsed, toggleSidebar } = useBackpack()
-const toggle = computed<ButtonProps>(() => ({
-  variant: "ghost",
-  color: "neutral",
-  size: "md",
-  ui: {
-    base: cn("anchor", {
-      "": sidebarCollapsed.value
-    }),
-    leadingIcon: "size-4.5"
-  },
-  icon: sidebarCollapsed.value
-    ? "i-icon-park-outline-left-expand"
-    : "i-icon-park-outline-left-bar",
-  onClick() {
-    toggleSidebar()
-  }
-}))
 
 const dropdownOpen = shallowRef<boolean>(false)
 const options = computed<DropdownMenuItem[]>(() => {
@@ -66,7 +30,7 @@ const tabs = shallowRef<string>("")
 onMounted(() => {
   const t = route.path.split("/")
   if (t && t.length === 4) tabs.value = "Guide"
-  if (t && t.length === 5) tabs.value = t.pop() as string
+  if (t && t.length === 5) tabs.value = capitalize(t.pop() as string)
 })
 </script>
 
@@ -83,7 +47,7 @@ onMounted(() => {
     :content="false"
     size="lg"
     color="base"
-    :items="folderItems"
+    :items="pocketRouteItems"
     value-key="label"
     @update:model-value="
       navigateTo(`/backpack/folders/${pocket?.key}/${tabs.toLowerCase()}`)
@@ -91,7 +55,6 @@ onMounted(() => {
     <template #list-leading>
       <div class="relative flex w-64 shrink-0 grow self-center pr-6 pl-1">
         <div class="absolute inset-0 flex -translate-y-6 items-center gap-2">
-          <UButton v-bind="toggle" />
           <PocketIconSelect v-if="pocket" :pocket />
           <h1 class="truncate text-4xl">
             {{ pocket?.label }}
@@ -100,7 +63,7 @@ onMounted(() => {
       </div>
     </template>
     <template #list-trailing>
-      <PocketLikes v-if="pocket" :pocket />
+      <PocketLikes v-if="pocket" :ui="{ base: 'mr-2 ml-3' }" :pocket />
       <PocketPinButton v-if="pocket" :pocket />
       <UDropdownMenu
         v-model:open="dropdownOpen"

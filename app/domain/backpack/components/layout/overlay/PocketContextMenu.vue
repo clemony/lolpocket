@@ -5,16 +5,16 @@ import type {
   ContextMenuProps
 } from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
-import { useBackpack } from "~/domain/backpack/composables/useBackpack"
-import { deleteFolderWithConfirm } from "~/domain/backpack/utils/folder/deleteFolder"
-import { deletePocket } from "~/domain/pocket/utils/manage/deletePocket"
-import { duplicatePocket } from "~/domain/pocket/utils/manage/duplicate"
+
 import {
-  collapseAllBtn,
-  contextOpen,
-  pocketSidebarContextUi
-} from "~/domain/pocket/utils/menu/contextActions"
-import { useSortMenu } from "~/domain/pocket/utils/menu/sortMenu"
+  collapseAllItem,
+  deleteItem,
+  openItem,
+  separatorItem
+} from "~/domain/backpack/utils/folder/menuItems"
+import { useSortMenu } from "~/domain/backpack/utils/folder/sortMenu"
+import { pocketSidebarContextUi } from "~/domain/backpack/utils/folder/ui"
+import { duplicatePocket } from "~/domain/pocket/utils/manage/duplicate"
 
 defineOptions({
   inheritAttrs: false
@@ -36,19 +36,7 @@ const item = computed(() => props.pocket)
 const subopen = shallowRef<boolean>(false)
 const delegated = reactiveOmit(props, "class", "pocket")
 const forwarded = useForwardPropsEmits(delegated, emit)
-const { collapseAllFolders } = useBackpack()
 const sortMenu = useSortMenu()
-const collapseAllItem = computed(() =>
-  toMenuItem(collapseAllBtn(collapseAllFolders))
-)
-
-const handleDelete = async () => {
-  if (!item.value) return
-
-  if (user().localSettings.confirm_pocket_delete === false && item.value)
-    return deletePocket(item.value.key)
-  else deleteFolderWithConfirm(item.value?.key)
-}
 
 const { settings } = storeToRefs(user())
 const pocketActions = computed<ContextMenuItem[] | null>(() => {
@@ -72,7 +60,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
           p.trashed_at = undefined
         }
       }
-    ] as ContextMenuItem[]
+    ]
 
   return [
     {
@@ -83,15 +71,8 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
       }
     },
 
-    {
-      ...contextOpen(p.label ?? ""),
-      onSelect() {
-        navigateTo(`/backpack/${p.location || "folders"}/${p.key}`)
-      }
-    },
-    {
-      type: "separator" as ContextMenuItem["type"]
-    },
+    openItem(p.label ?? "", p.key, "pocket"),
+    separatorItem,
     {
       label: "Rename",
       icon: "i-lucide-text-cursor-input",
@@ -106,18 +87,9 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
         duplicatePocket(p as Pocket)
       }
     },
-    {
-      type: "separator" as ContextMenuItem["type"]
-    },
+    separatorItem,
     ...computed(() =>
-      props.type === "sidebar"
-        ? [
-            collapseAllItem.value,
-            {
-              type: "separator" as ContextMenuItem["type"]
-            }
-          ]
-        : []
+      props.type === "sidebar" ? [collapseAllItem, separatorItem] : []
     ).value.filter(Boolean),
     settings.value
       ? {
@@ -132,16 +104,8 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
         }
       : {},
     sortMenu.value,
-    {
-      type: "separator" as ContextMenuItem["type"]
-    },
-    {
-      label: "Delete",
-      icon: "i-trash",
-      onSelect() {
-        p.key && deletePocket(p.key)
-      }
-    }
+    separatorItem,
+    deleteItem(p.key, "pocket")
   ].filter(Boolean)
 })
 </script>

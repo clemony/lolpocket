@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { roleKey } from "~/domain/stats/helpers/normalizeRole"
+import { matchPositionKey } from "~/domain/summoner/stats/helpers/normalizePosition"
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -16,16 +16,16 @@ const items = [{ label: "Synergy" }, { label: "Counter" }]
     :class="cn('flex flex-col gap-3', className)">
     <UTabs v-model:model-value="view" class="w-44" :items />
     <template v-if="duos?.[view]">
-      <ChampStatRow v-for="(role, i) in duos[view]" :key="i">
+      <ChampStatRow v-for="(position, i) in duos[view]" :key="i">
         <ChampStatLabel
           separator
           type="synergy"
-          :icon="[`role:${roleKey[i]}`, 'size-8 ds-2xs']" />
+          :icon="[`position:${matchPositionKey[i]}`, 'size-8 ds-2xs']" />
         <ChampStatRowWrapper
-          v-if="role && role?.length"
+          v-if="position && position?.length"
           :class="cn('', className)">
           <ChampStatObjectWrapper
-            v-for="c in role"
+            v-for="c in position"
             :id="c.championId"
             :key="c.championId"
             type="synergy"

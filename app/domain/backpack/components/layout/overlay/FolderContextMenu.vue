@@ -5,20 +5,18 @@ import type {
   ContextMenuProps
 } from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
-import { useBackpack } from "~/domain/backpack/composables/useBackpack"
+import { magicPocketMenu } from "~/domain/backpack/utils/folder/magicPocketMenu"
 import {
-  deleteFolder,
-  deleteFolderWithConfirm
-} from "~/domain/backpack/utils/folder/deleteFolder"
+  collapseAllItem,
+  deleteItem,
+  newFolderItem,
+  newPocketItem,
+  openItem,
+  separatorItem
+} from "~/domain/backpack/utils/folder/menuItems"
 
-import {
-  collapseAllBtn,
-  contextOpen,
-  newPocketContext,
-  pocketSidebarContextUi
-} from "~/domain/pocket/utils/menu/contextActions"
-import { useSortMenu } from "~/domain/pocket/utils/menu/sortMenu"
-import { newPocket } from "~/domain/pocket/utils/newPocket"
+import { useSortMenu } from "~/domain/backpack/utils/folder/sortMenu"
+import { pocketSidebarContextUi } from "~/domain/backpack/utils/folder/ui"
 import { iconSets } from "~~/layers/ui/app/assets/icons/icon-sets"
 
 const props = withDefaults(
@@ -43,94 +41,49 @@ const emit = defineEmits<
 const subopen = shallowRef<boolean>(false)
 const delegated = reactiveOmit(props, "class", "folder")
 const forwarded = useForwardPropsEmits(delegated, emit)
-const routeId = useRouteParams("id")
-const { collapseAllFolders } = useBackpack()
 const sortMenu = useSortMenu()
-const collapseAllItem = computed(() =>
-  toMenuItem(collapseAllBtn(collapseAllFolders))
-)
-
-const iconList = computed(() =>
-  Object.values(iconSets).filter((i) => !["archive", "trash"].includes(i.key))
-)
 
 function handleChange(iconKey: string) {
   emit("update:icon-key", iconKey)
 }
-const handleDelete = async () => {
-  if (user().localSettings.confirm_folder_delete === false && props.folder)
-    return deleteFolder(props.folder.id)
-  else deleteFolderWithConfirm(props.folder?.id)
-}
+
 const folderActions = computed(() => {
   if (!props.folder || !props.folder.id) return []
   else if (props.folder.id === "folders")
     return [
-      {
-        ...contextOpen("Backpack"),
-        onClick: () => navigateTo("/backpack/folders")
-      },
-      {
-        type: "separator" as ContextMenuItem["type"]
-      },
-      {
-        ...newPocketContext(String("Backpack")),
-        onSelect: () => newPocket()
-      } as ContextMenuItem,
+      openItem("Backpack", "folders", "nav"),
+      separatorItem,
+      newFolderItem("folders"),
+      separatorItem,
+      newPocketItem("folders"),
+      ...magicPocketMenu("folders").value,
+      separatorItem,
       sortMenu.value
     ]
   else if (props.folder.id === "archive")
-    return [
-      {
-        ...contextOpen("Archive"),
-        onSelect() {
-          navigateTo("/backpack/archive")
-        }
-      },
-      sortMenu.value
-    ]
+    return [openItem("Archive", "archive", "nav"), sortMenu.value]
   else if (props.folder.id === "trash")
     return [
-      {
-        ...contextOpen("Trash"),
-        onSelect() {
-          navigateTo("/backpack/trash")
-        }
-      },
+      openItem("Trash", "trash", "nav"),
       sortMenu.value,
-      {
-        type: "separator"
-      },
+      separatorItem,
       {
         label: "Empty Trash",
         icon: "i-trash"
       }
     ]
   return [
-    {
-      ...contextOpen(String(props.folder?.label ?? "")),
-      onClick: () => (routeId.value = String(props.folder?.id))
-    },
-    {
-      type: "separator"
-    },
-
-    {
-      ...newPocketContext(String(props.folder.label ?? "")),
-      onClick: () =>
-        newPocket({
-          location: props.folder?.location || String(props.folder?.id)
-        })
-    },
-    {
-      type: "separator"
-    },
-
+    openItem(props.folder?.label, props.folder?.id, "param"),
+    separatorItem,
+    newPocketItem(String(props.folder.label ?? "")),
+    separatorItem,
     {
       label: "Rename",
       icon: "i-text-input",
       ui: { leadingIcon: "**:stroke-[2.4]! " },
-      onClick: () => emit("toggleEdit", true)
+      onSelect() {
+        emit("toggleEdit", true)
+      }
     },
     {
       label: "Edit Folder Icon",
@@ -140,24 +93,12 @@ const folderActions = computed(() => {
         item: "relative"
       }
     },
-    {
-      type: "separator" as ContextMenuItem["type"]
-    },
-    collapseAllItem.value,
-    {
-      type: "separator"
-    },
+    separatorItem,
+    collapseAllItem,
+    separatorItem,
     sortMenu.value,
-    {
-      type: "separator"
-    },
-    {
-      label: "Delete",
-      onSelect() {
-        handleDelete()
-      },
-      icon: "i-trash"
-    }
+    separatorItem,
+    deleteItem(props.folder.id, "folder")
   ].filter(Boolean) as ContextMenuItem[]
 })
 </script>

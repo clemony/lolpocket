@@ -22,7 +22,7 @@ export const matchFilter = defineStore("match-filter", () => {
     champion: null,
     patch: undefined,
     queue: 0,
-    role: "all",
+    position: "all",
     date: { end: undefined, start: undefined }
   })
 
@@ -51,7 +51,7 @@ export const matchFilter = defineStore("match-filter", () => {
     if (!puuid) return arr
 
     const empty =
-      !f.ally && !f.champion && !f.patch && !f.queue && f.role === "all"
+      !f.ally && !f.champion && !f.patch && !f.queue && f.position === "all"
 
     if (empty) return arr
 
@@ -155,10 +155,10 @@ export function matchFilters(
     ally,
     champion,
     date,
-    ignoreRole = false,
+    ignorePosition = false,
     patch,
     queue,
-    role
+    position
   } = filterOptions
 
   const player = match.participants.find((p) => p.puuid === puuid)
@@ -176,8 +176,11 @@ export function matchFilters(
   const matchesPlayer =
     !ally || ally === "" || match.participants.some((p) => p.puuid === ally)
 
-  const matchesRole =
-    ignoreRole || !role || role === "all" || player.role === role
+  const matchesPosition =
+    ignorePosition ||
+    !position ||
+    position === "all" ||
+    player.role === position
 
   const dateValue = toValue(date)
   const matchesDate =
@@ -190,6 +193,6 @@ export function matchFilters(
     matchesChampion &&
     matchesPlayer &&
     matchesDate &&
-    matchesRole
+    matchesPosition
   )
 }

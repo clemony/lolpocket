@@ -10,7 +10,7 @@ export const inputTheme = defineUiTheme({
     trailing: "absolute inset-y-0 end-0 flex items-center",
     trailingIcon: "shrink-0 text-p5",
     base: [
-      "peer flex size-[inherit] shrink-0 appearance-none items-center rounded-lg border-0 placeholder:text-pc/40 focus-within:outline-0 focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75",
+      "peer flex size-[inherit] shrink-0 appearance-none items-center rounded-lg border-0 ring-0 placeholder:text-pc/40 focus-within:outline-0 focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75",
       "transition-colors"
     ]
   },
@@ -26,10 +26,9 @@ export const inputTheme = defineUiTheme({
         "bg-transparent text-pc hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
       none: "bg-transparent text-pc",
       outline:
-        "bg-transparent ring inset-shadow-xs delay-0 focus-visible:shadow-xs focus-visible:ring-offset-0",
+        "bg-transparent inset-shadow-xs inset-ring delay-0 focus-visible:shadow-xs focus-visible:ring-offset-0",
 
-      solid:
-        "fx-depth fx-noise bg-p1 text-pc inset-ring inset-ring-p2 hover:bg-p2 focus:bg-p2 disabled:bg-p1/50",
+      solid: "fx-depth fx-noise text-pc inset-ring",
       soft: "bg-p1/50 text-pc hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
       subtle: "bg-p1 text-pc ring ring-p3 ring-inset",
       "ghost-outline":
@@ -110,7 +109,13 @@ export const inputTheme = defineUiTheme({
       color: "base",
       variant: ["outline", "solid"],
       class:
-        "text-pc ring-p3/80 hover:bg-transparent hover:ring-pc/70 focus-visible:bg-transparent focus-visible:ring-1 focus-visible:inset-shadow-sm focus-visible:ring-pc/70 focus-visible:ring-offset-p3 disabled:bg-p1/40"
+        "focus-visible:inset-ring-offset-p3 text-pc inset-ring-p3/80 hover:bg-transparent hover:inset-ring-pc/70 focus-visible:bg-transparent focus-visible:inset-shadow-sm focus-visible:inset-ring-1 focus-visible:inset-ring-pc/70 disabled:bg-p1"
+    },
+    {
+      color: "base",
+      variant: "solid",
+      class: "bg-p0! inset-ring-border",
+      highlight: true
     },
     {
       color: "base",

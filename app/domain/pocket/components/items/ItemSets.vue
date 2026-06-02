@@ -38,30 +38,7 @@ watch(items, (newItemSets) => {
 <template>
   <div
     class="overflow-x-visble inset-0 flex min-h-fit min-w-146 flex-col gap-8 pt-1 pb-33">
-    <div
-      v-draggable="[
-        pocket.items,
-        {
-          group: {
-            name: 'sets'
-          },
-          sort: true,
-          bubbleScroll: false,
-          scroll: false,
-          delay: 0,
-          animation: 300,
-          'force-fallback': true,
-          fallbackTolerance: 0,
-          fallbackOnBody: true,
-          'prevent-on-filter': true,
-          ghostClass: 'item-set-ghost',
-          chosenClass: 'item-set-chosen',
-          dragClass: 'item-set-drag',
-          filter: '.item'
-        }
-      ]"
-      class="z-0 flex w-full flex-col gap-8 pt-6"
-      group>
+    <div class="z-0 flex w-full flex-col gap-8 pt-6" group>
       <!-- <div class="absolute bottom-2 right-3 opacity-0 group-hover/set:opacity-40 tldr-30 hover:opacity-100  handle">
           <icon name="ph:arrows-out-line-vertical" class="rotate-180 size-5 shrink-0" />
         </div> -->
