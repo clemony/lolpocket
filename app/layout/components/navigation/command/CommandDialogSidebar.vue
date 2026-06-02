@@ -52,18 +52,18 @@ function navigate(to: string) {
         </UButton>
       </div>
     </template>
-    <RouteGroup
+    <CommandGroup
       v-if="groupMap?.nexus"
       :items="groupMap.nexus"
       class="border-y-0" />
     <SidebarProfileGrid />
 
-    <RouteGroup
+    <CommandGroup
       v-if="groupMap?.tools"
       :items="groupMap.tools"
       class="border-y-0" />
 
-    <RouteGroup
+    <CommandGroup
       v-if="groupMap?.library"
       class="w-full items-start"
       :ui="{

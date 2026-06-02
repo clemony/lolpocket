@@ -118,11 +118,11 @@ export const routeStore = defineStore(
     const routeGroups = ref<RouteGroupReturn>()
 
     const useRouteGroups = () => {
-      if (!routes.value) setRoutes()
-      if (!routeGroups.value)
-        routeGroups.value = buildRouteGroups(
-          routes.value as RouteReturn
-        ) as RouteGroupReturn
+      /*   if (!routes.value)  */ setRoutes()
+      /*    if (!routeGroups.value) */
+      routeGroups.value = buildRouteGroups(
+        routes.value as RouteReturn
+      ) as RouteGroupReturn
 
       return routeGroups
     }

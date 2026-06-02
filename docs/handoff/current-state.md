@@ -10,6 +10,7 @@ Keep it short, current, and biased toward what the next session needs to know.
 
 ## Recently Touched Areas
 
+- `@nuxt/ui@4.8.1` is patched via `patches/@nuxt__ui@4.8.1.patch` so Nuxt UI component props accept repo-local custom variant strings again.
 - Cloudflare Pages build configuration now targets the correct Pages preset in `nuxt.config.ts`.
 - `DEPLOY.md` documents the supported Pages and Worker deploy paths.
 - The server-side Riot request queue was refactored to remove global-scope timers for Cloudflare Pages compatibility.
@@ -19,7 +20,7 @@ Keep it short, current, and biased toward what the next session needs to know.
 
 ## Known Issues
 
-- `lolpocket` has unrelated TypeScript failures caused by missing Vue component imports in several UI areas.
+- `pnpm exec nuxt typecheck --logLevel silent` now fails on `app/pages/backpack/[id]/[pocket_key].vue` because `layout: "pocket-layout"` is not part of Nuxt's generated layout union.
 - Nuxt dev emits a duplicated `useAppConfig` auto-import warning. This looks upstream and is likely tied to Nitro auto-import collection rather than app code.
 - Zodiak should now resolve locally, but browser verification is still worth doing after any typography changes.
 
