@@ -83,6 +83,7 @@ export const twBg: Record<string, string> = {
   riot: "bg-neutral!",
   google: "bg-google!",
   discord: "bg-discord!",
+  twitch: "bg-twitch!",
   support: "bg-insp",
   mid: "bg-sorc",
   jungle: "bg-res",
@@ -164,6 +165,11 @@ export const twRing: Record<string, string> = {
   res: "ring-res",
   dom: "ring-dom",
   primary: "ring-",
+
+  riot: "ring-neutral!",
+  google: "ring-google!",
+  discord: "ring-discord!",
+  twitch: "ring-twitch!",
   "primary-500": "ring-n5",
   "insp-500": "ring-insp-500",
   "sorc-500": "ring-sorc-500",
@@ -203,5 +209,19 @@ export const twDropShadow: Record<string, string> = {
   sorc: "drop-shadow-(--color-sorc-700)",
   pre: "drop-shadow-(--color-pre-700)",
   res: "drop-shadow-(--color-res-700)",
-  dom: "drop-shadow-(--color-dom-700)"
+  dom: "drop-shadow-(--color-dom-700)",
+  primary: "drop-shadow-p1",
+  base: "drop-shadow-p0",
+  secondary: "drop-shadow-p2"
+}
+
+export const twTextShadow: Record<string, string> = {
+  insp: "text-shadow-(--color-insp-700)",
+  sorc: "text-shadow-(--color-sorc-700)",
+  pre: "text-shadow-(--color-pre-700)",
+  res: "text-shadow-(--color-res-700)",
+  dom: "text-shadow-(--color-dom-700)",
+  primary: "text-shadow-p1",
+  base: "text-shadow-p0",
+  secondary: "text-shadow-p2"
 }

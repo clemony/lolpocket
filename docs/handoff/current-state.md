@@ -15,14 +15,17 @@ Keep it short, current, and biased toward what the next session needs to know.
 - `DEPLOY.md` documents the supported Pages and Worker deploy paths.
 - The server-side Riot request queue was refactored to remove global-scope timers for Cloudflare Pages compatibility.
 - Local Zodiak font wiring was cleaned up to use self-hosted files from `layers/ui/public/fonts/Zodiak`.
+- `useObjectData` now centralizes command reference-card CDN path resolution for item, rune, champion, and ability data, including champion numeric-id to key lookup.
 - `postal-worker` now carries Reddit `metadata.spoiler` through the post normalization pipeline.
 - `postal-worker` patch metadata scraping now falls back to article HTML for author and date extraction.
+- Nuxt dev scripts set `TMPDIR=/tmp` so `@nuxt/vite-builder@4.4.7` does not generate an overlong macOS vite-node IPC socket path under `/var/folders/.../T`.
 
 ## Known Issues
 
 - `pnpm exec nuxt typecheck --logLevel silent` now fails on `app/pages/backpack/[id]/[pocket_key].vue` because `layout: "pocket-layout"` is not part of Nuxt's generated layout union.
 - Nuxt dev emits a duplicated `useAppConfig` auto-import warning. This looks upstream and is likely tied to Nitro auto-import collection rather than app code.
 - Zodiak should now resolve locally, but browser verification is still worth doing after any typography changes.
+- `public/cdn/runes` currently contains `.ts` files while existing runtime fetch paths use `/cdn/runes/:id.json`; rune command cards keep index fallbacks until the CDN export shape is aligned.
 
 ## Cross-Repo Notes
 

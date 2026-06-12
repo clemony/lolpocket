@@ -13,7 +13,7 @@ const config = {
   tailwindPreserveDuplicates: false,
   tailwindPreserveWhitespace: false,
   tailwindStylesheet: "./layers/ui/app/css/tailwind.css",
-  trailingComma: "none",
+  trailingComma: "es5",
   overrides: [
     {
       files: ["*.json", "*.jsonc", "*.json5"],

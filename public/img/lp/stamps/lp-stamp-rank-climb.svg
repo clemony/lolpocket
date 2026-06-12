@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <title>LP rank climb postage stamp</title>
+  <style>
+    .ink { stroke: #000000; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: #000000; stroke: none; }
+    .txt { fill: #000000; font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif; font-weight: 700; text-anchor: middle; }
+    .mono { fill: #000000; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; text-anchor: middle; }
+    .micro { font-size: 14px; }
+    .small { font-size: 18px; }
+    .label { font-size: 24px; }
+    .mid { font-size: 34px; }
+    .big { font-size: 72px; }
+  </style>
+  
+    <rect class="ink" x="126" y="40" width="168" height="340" rx="8" stroke-width="5"/>
+    <rect class="ink" x="146" y="62" width="128" height="296" rx="4" stroke-width="2" stroke-dasharray="10 7"/>
+    <text class="txt label" x="210" y="112">RANK</text>
+    <text class="txt label" x="210" y="154">CLIMB</text>
+    <path class="ink" d="M165 184 L255 184" stroke-width="3"/>
+    <path class="ink" d="M174 294 L174 250 L204 250 L204 216 L235 216 L235 176" stroke-width="7"/>
+    <path class="ink" d="M224 177 L235 176 L235 188" stroke-width="4"/>
+    <text class="txt big" x="210" y="334">LP</text>
+  
+</svg>

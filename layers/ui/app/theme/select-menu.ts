@@ -88,7 +88,7 @@ export const selectMenuTheme = defineUiTheme({
         empty: "p-2.5 text-xs"
       },
       md: {
-        base: "gap-1.5 px-2.5 py-1.5 text-sm",
+        base: "h-10 gap-1.5 px-2.5 py-1.5 text-sm",
         leading: "ps-2.5",
         trailing: "pe-2.5",
         leadingIcon: "size-5",
@@ -105,20 +105,22 @@ export const selectMenuTheme = defineUiTheme({
         input: "max-h-10"
       },
       lg: {
-        base: "gap-2 px-3 py-2 text-sm",
+        base: "h-12 gap-2 rounded-xl px-3 py-2 text-sm",
         leading: "ps-3",
         trailing: "pe-3",
         leadingIcon: "size-5",
         leadingAvatarSize: "2xs",
         trailingIcon: "size-4",
-        label: "gap-2 p-2 text-xs",
-        item: "gap-2 p-2 text-sm",
+
+        label: "gap-1.5 p-1.5 text-xs",
+        item: "gap-1.5 p-1.5 text-sm",
         itemLeadingIcon: "size-5",
         itemLeadingAvatarSize: "2xs",
         itemLeadingChip: "size-5",
         itemLeadingChipSize: "md",
         itemTrailingIcon: "size-4",
-        empty: "p-3 text-sm"
+        empty: "p-2.5 text-sm",
+        input: "max-h-10"
       },
       xl: {
         base: "gap-2 px-3 py-2 text-base",
@@ -139,7 +141,7 @@ export const selectMenuTheme = defineUiTheme({
     },
     variant: {
       outline:
-        "bg-default text-pc ring ring-accented ring-inset hover:bg-p1 disabled:bg-default",
+        "bg-transparent text-pc ring ring-accented ring-inset hover:bg-p1 disabled:bg-default",
       soft: "bg-p1/50 text-pc hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
       subtle:
         "bg-p1 text-pc ring ring-accented ring-inset hover:bg-accented/75 disabled:bg-p1",

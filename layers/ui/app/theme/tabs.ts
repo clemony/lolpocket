@@ -44,8 +44,9 @@ export const tabsTheme = defineUiTheme({
         leadingIcon:
           "[color:unset] opacity-60 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100",
         trigger:
-          "group/trigger relative z-4! flex items-center rounded-b-none! border-0! font-medium! tracking-normal after:absolute after:bottom-0 after:left-0 after:z-6 after:h-px after:w-[calc(100%+10px)] after:-translate-x-[5px] not-active:after:hidden data-[state=active]:after:opacity-100 data-[state=inactive]:after:opacity-0",
-        label: "pointer-events-none w-full leading-none",
+          "group/trigger relative z-4! flex items-center rounded-b-none! border-0! font-medium tracking-normal after:absolute after:bottom-0 after:left-0 after:z-6 after:h-px after:w-[calc(100%+10px)] after:-translate-x-[5px] not-active:after:hidden data-[state=active]:after:opacity-100 data-[state=inactive]:after:opacity-0",
+        label:
+          "pointer-events-none w-full leading-none opacity-50 group-hover/trigger:opacity-100 group-active/trigger:opacity-100",
         content:
           "tabs-content tabs-lift-content z-0 overflow-hidden rounded-4xl"
       },
@@ -90,7 +91,7 @@ export const tabsTheme = defineUiTheme({
         leadingAvatarSize: "2xs"
       },
       xl: {
-        indicator: "rounded-6xl",
+        indicator: "rounded-4xl",
         trigger: "gap-0 p-0",
         leadingIcon: "size-5",
         leadingAvatarSize: "xs"
@@ -104,8 +105,8 @@ export const tabsTheme = defineUiTheme({
       class: {
         root: "tabs-light tabs",
         indicator: "after:bg-p0",
-        label: "",
-        leadingIcon: "",
+        label: "text-pc",
+        leadingIcon: "text-pc",
         content: "border-x border-b border-p3",
         trigger: "border-transparent"
       }

@@ -13,7 +13,7 @@ const visibleChildren = useVisiblePocketChildren(children, "grid")
 <template>
   <div
     :id="folder.id"
-    class="flex h-18 w-[calc(100%-2rem)] flex-nowrap items-center justify-between justify-self-center border-b border-p3/60 px-2">
+    class="mx-auto flex h-16 w-[calc(100%-2rem)] shrink-0 flex-nowrap items-center justify-between justify-self-center border-b border-p3/60 px-2">
     <div class="flex items-center gap-2">
       <h3 class="text-md! font-medium text-pc/80">
         {{ folder.label }}
@@ -52,7 +52,7 @@ const visibleChildren = useVisiblePocketChildren(children, "grid")
   </div>
   <div
     v-else
-    class="relative col-span-full grid size-full max-h-90 place-items-center group-has-[.sortable-ghost]/sortable:hidden">
+    class="relative col-span-full grid size-full h-94 shrink-0 place-items-center group-has-[.sortable-ghost]/sortable:hidden">
     <UBadge label="Empty" variant="outline" />
   </div>
 </template>

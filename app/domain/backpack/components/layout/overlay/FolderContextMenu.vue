@@ -5,7 +5,6 @@ import type {
   ContextMenuProps
 } from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
-import { magicPocketMenu } from "~/domain/backpack/utils/folder/magicPocketMenu"
 import {
   collapseAllItem,
   deleteItem,
@@ -13,7 +12,8 @@ import {
   newPocketItem,
   openItem,
   separatorItem
-} from "~/domain/backpack/utils/folder/menuItems"
+} from "~/domain/app/utils/menuItems"
+import { magicPocketMenu } from "~/domain/backpack/utils/folder/magicPocketMenu"
 
 import { useSortMenu } from "~/domain/backpack/utils/folder/sortMenu"
 import { pocketSidebarContextUi } from "~/domain/backpack/utils/folder/ui"

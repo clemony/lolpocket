@@ -62,8 +62,6 @@ const app = useAppProvider()
             " />
         </NuxtLayout>
       </div>
-      <!--       <LazySidebar /> -->
-      <LazySettingsSidebar />
       <LazyReportDialog
         v-if="account && reportComment"
         :comment="reportComment" />

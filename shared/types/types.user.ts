@@ -1,3 +1,4 @@
+import type { AvatarProps, UserProps } from "@nuxt/ui"
 import type { Inbox } from "."
 
 export const regionKeys = [
@@ -23,19 +24,45 @@ export type Region = (typeof regionKeys)[number]
 
 export type AccountData = Account & Summoner
 
-export type ProviderKey<K extends string> =
+export type ProviderKey<K extends string = string> =
   | "email"
   | "google"
   | "discord"
   | "twitch"
   | "riot"
-export type SbProviderKey<K extends string> = "discord" | "google" | "twitch"
+
+export type SbProviderKey<K extends string = string> =
+  | "discord"
+  | "google"
+  | "twitch"
 
 export interface ProviderIdentity {
   provider: string
   description: string
   avatar: string
   name: string
+}
+
+export interface ProviderType {
+  label: ProviderKey
+  class: string
+  icon: string
+  avatar?: string | ((icon: string) => string)
+}
+
+export interface ProviderProps {
+  label: string
+  connected?: boolean
+  avatar?: {
+    src?: string
+    icon?: string
+    size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl"
+    alt?: string
+  }
+  icon?: string
+  class?: string
+  description?: string
+  name?: string
 }
 
 export interface LocalSettings {
@@ -53,6 +80,10 @@ export interface Identifier {
   icon?: string
   region?: string
   tag?: string
+}
+
+export type DisplayIdentifier = UserProps & {
+  value: string
 }
 
 export interface Identity {

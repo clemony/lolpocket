@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1330" viewBox="0 0 1780 1330" fill="none">
+  <title>LP postage stamp sheet</title>
+  <style>
+    .ink { stroke: #000000; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: #000000; stroke: none; }
+    .txt { fill: #000000; font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif; font-weight: 700; text-anchor: middle; }
+    .mono { fill: #000000; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; text-anchor: middle; }
+    .micro { font-size: 14px; }
+    .small { font-size: 18px; }
+    .label { font-size: 24px; }
+    .mid { font-size: 34px; }
+    .big { font-size: 72px; }
+  </style>
+  <g transform="translate(50 35)" aria-label="LP personal trends postage stamp">
+
+    <circle class="ink" cx="210" cy="210" r="170" stroke-width="4"/>
+<circle class="ink" cx="210" cy="210" r="156" stroke-width="2" stroke-dasharray="22 8 3 8"/>
+<circle class="ink" cx="210" cy="210" r="92" stroke-width="3"/>
+    <path class="fill" d="M84 203 L86.31 207.69 L91 210 L86.31 212.31 L84 217 L81.69 212.31 L77 210 L81.69 207.69 Z"/>
+    <path class="fill" d="M336 203 L338.31 207.69 L343 210 L338.31 212.31 L336 217 L333.69 212.31 L329 210 L333.69 207.69 Z"/>
+    <text class="txt label" x="210" y="112">LOLPOCKET</text>
+    <text class="txt small" x="210" y="326">PERSONAL TRENDS</text>
+    <text class="txt big" x="210" y="198">LP</text>
+    <path class="ink" d="M150 240 L176 222 L199 231 L224 205 L251 214 L276 184" stroke-width="6"/>
+    <path class="ink" d="M268 184 L276 184 L276 192" stroke-width="4"/>
+    <text class="mono small" x="210" y="280">06.03.26</text>
+  
+</g>
+<g transform="translate(470 35)" aria-label="LP post game report postage stamp">
+
+    <rect class="ink" x="44" y="76" width="332" height="268" rx="18" stroke-width="5" stroke-dasharray="14 8"/>
+    <rect class="ink" x="66" y="98" width="288" height="224" rx="10" stroke-width="3"/>
+    <path class="ink" d="M66 126 L66 98" stroke-width="3"/>
+<path class="ink" d="M66 98 L94 98" stroke-width="3"/>
+<path class="ink" d="M326 98 L354 98" stroke-width="3"/>
+<path class="ink" d="M354 98 L354 126" stroke-width="3"/>
+<path class="ink" d="M66 294 L66 322" stroke-width="3"/>
+<path class="ink" d="M66 322 L94 322" stroke-width="3"/>
+<path class="ink" d="M326 322 L354 322" stroke-width="3"/>
+<path class="ink" d="M354 294 L354 322" stroke-width="3"/>
+    <text class="txt label" x="210" y="136">POST GAME</text>
+    <text class="txt mid" x="210" y="171">REPORT</text>
+    <path class="ink" d="M104 200 L316 200" stroke-width="3"/>
+    <path class="ink" d="M136 266 L210 218 L284 266 M136 266 L284 266 M164 248 L256 248" stroke-width="3"/>
+    <path class="ink" d="M210 218 L210 266" stroke-width="3"/>
+    <text class="mono micro" x="116" y="294">KDA</text>
+    <text class="mono micro" x="210" y="294">GOLD</text>
+    <text class="mono micro" x="304" y="294">OBJ</text>
+    <text class="txt micro" x="210" y="328">LP MATCH MAIL</text>
+  
+</g>
+<g transform="translate(890 35)" aria-label="LP global benchmark postage stamp">
+
+    <circle class="ink" cx="210" cy="210" r="169" stroke-width="3"/>
+<circle class="ink" cx="210" cy="210" r="150" stroke-width="5"/>
+<circle class="ink" cx="210" cy="210" r="112" stroke-width="2" stroke-dasharray="4 9"/>
+    <text class="txt small" x="210" y="88">GLOBAL DATA</text>
+    <text class="txt small" x="210" y="348">LOCAL GAINS</text>
+    <text class="txt mid" x="210" y="150">LP</text>
+    <path class="ink" d="M148 276 L292 276" stroke-width="3"/>
+    <rect class="ink" x="160" y="230" width="20" height="46" rx="2" stroke-width="3"/>
+    <rect class="ink" x="198" y="206" width="20" height="70" rx="2" stroke-width="3"/>
+    <rect class="ink" x="236" y="184" width="20" height="92" rx="2" stroke-width="3"/>
+    <path class="ink" d="M151 215 C178 218 195 200 215 204 C242 210 255 180 282 184" stroke-width="4"/>
+  
+</g>
+<g transform="translate(1310 35)" aria-label="LP rank climb postage stamp">
+
+    <rect class="ink" x="126" y="40" width="168" height="340" rx="8" stroke-width="5"/>
+    <rect class="ink" x="146" y="62" width="128" height="296" rx="4" stroke-width="2" stroke-dasharray="10 7"/>
+    <text class="txt label" x="210" y="112">RANK</text>
+    <text class="txt label" x="210" y="154">CLIMB</text>
+    <path class="ink" d="M165 184 L255 184" stroke-width="3"/>
+    <path class="ink" d="M174 294 L174 250 L204 250 L204 216 L235 216 L235 176" stroke-width="7"/>
+    <path class="ink" d="M224 177 L235 176 L235 188" stroke-width="4"/>
+    <text class="txt big" x="210" y="334">LP</text>
+  
+</g>
+<g transform="translate(50 455)" aria-label="LP win more postage stamp">
+
+    <path class="ink" d="M118 72 H302 L358 152 V268 L302 348 H118 L62 268 V152 Z" stroke-width="5"/>
+    <path class="ink" d="M132 96 H288 L332 160 V260 L288 324 H132 L88 260 V160 Z" stroke-width="2" stroke-dasharray="16 8 4 8"/>
+    <path class="fill" d="M122 204 L123.98 208.02 L128 210 L123.98 211.98 L122 216 L120.02 211.98 L116 210 L120.02 208.02 Z"/>
+    <path class="fill" d="M298 204 L299.98 208.02 L304 210 L299.98 211.98 L298 216 L296.02 211.98 L292 210 L296.02 208.02 Z"/>
+    <text class="txt small" x="210" y="146">POSITIVE</text>
+    <text class="txt mid" x="210" y="207">WIN MORE</text>
+    <path class="ink" d="M126 230 L294 230" stroke-width="3"/>
+    <path class="ink" d="M142 276 L178 254 L206 264 L242 228 L278 236" stroke-width="5"/>
+    <path class="ink" d="M268 232 L278 236 L272 246" stroke-width="4"/>
+    <text class="mono micro" x="210" y="306">TREND VERIFIED</text>
+  
+</g>
+<g transform="translate(470 455)" aria-label="LP lane phase postage stamp">
+
+    <circle class="ink" cx="210" cy="210" r="166" stroke-width="4"/>
+<circle class="ink" cx="210" cy="210" r="148" stroke-width="2"/>
+<circle class="ink" cx="210" cy="210" r="86" stroke-width="3"/>
+    <text class="txt label" x="210" y="112">LANE PHASE</text>
+    <text class="txt small" x="210" y="326">EARLY EDGE</text>
+    <path class="ink" d="M160 268 L268 160" stroke-width="5"/>
+    <path class="ink" d="M150 204 L210 152 L270 204" stroke-width="4"/>
+    <path class="ink" d="M150 252 C190 236 230 236 270 252" stroke-width="4"/>
+    <path class="ink" d="M178 176 L242 240" stroke-width="2" stroke-dasharray="7 7"/>
+    <text class="txt label" x="210" y="284">LP</text>
+    <path class="fill" d="M112 204 L113.98 208.02 L118 210 L113.98 211.98 L112 216 L110.02 211.98 L106 210 L110.02 208.02 Z"/>
+    <path class="fill" d="M308 204 L309.98 208.02 L314 210 L309.98 211.98 L308 216 L306.02 211.98 L302 210 L306.02 208.02 Z"/>
+  
+</g>
+<g transform="translate(890 455)" aria-label="LP queue ready ticket postage stamp">
+
+    <rect class="ink" x="48" y="104" width="324" height="212" rx="12" stroke-width="5"/>
+    <rect class="ink" x="70" y="126" width="280" height="168" rx="8" stroke-width="2"/>
+    <path class="ink" d="M142 126 L142 294" stroke-width="2" stroke-dasharray="6 8"/>
+    <path class="ink" d="M278 126 L278 294" stroke-width="2" stroke-dasharray="6 8"/>
+    <text class="txt label" x="210" y="164">QUEUE READY</text>
+    <text class="txt big" x="210" y="224">LP</text>
+    <text class="mono mid" x="106" y="226">A1</text>
+    <text class="mono small" x="314" y="212">2347</text>
+    <text class="mono small" x="314" y="238">34-1</text>
+    <text class="mono micro" x="210" y="276">MATCH PASS</text>
+  
+</g>
+<g transform="translate(1310 455)" aria-label="LP champion pool postage stamp">
+
+    <circle class="ink" cx="210" cy="210" r="170" stroke-width="3" stroke-dasharray="18 8"/>
+<circle class="ink" cx="210" cy="210" r="150" stroke-width="4"/>
+<circle class="ink" cx="210" cy="210" r="84" stroke-width="3"/>
+    <text class="txt label" x="210" y="112">CHAMPION POOL</text>
+    <text class="txt small" x="210" y="326">BEST PICKS</text>
+    <rect class="ink" x="151" y="182" width="30" height="42" rx="6" stroke-width="3"/>
+<rect class="ink" x="191" y="182" width="30" height="42" rx="6" stroke-width="3"/>
+<rect class="ink" x="231" y="182" width="30" height="42" rx="6" stroke-width="3"/>
+    <circle class="ink" cx="166" cy="204" r="8" stroke-width="3"/>
+<circle class="ink" cx="206" cy="204" r="8" stroke-width="3"/>
+<circle class="ink" cx="246" cy="204" r="8" stroke-width="3"/>
+    <text class="txt mid" x="210" y="272">LP</text>
+    <path class="fill" d="M118 204 L119.98 208.02 L124 210 L119.98 211.98 L118 216 L116.02 211.98 L112 210 L116.02 208.02 Z"/>
+    <path class="fill" d="M302 204 L303.98 208.02 L308 210 L303.98 211.98 L302 216 L300.02 211.98 L296 210 L300.02 208.02 Z"/>
+  
+</g>
+<g transform="translate(50 875)" aria-label="LP positive trend approved postage stamp">
+
+    <rect class="ink" x="70" y="72" width="280" height="276" rx="12" stroke-width="5"/>
+    <rect class="ink" x="92" y="96" width="236" height="228" rx="8" stroke-width="2" stroke-dasharray="12 8 3 8"/>
+    <text class="txt mid" x="210" y="134">APPROVED</text>
+    <path class="ink" d="M116 166 L304 166" stroke-width="3"/>
+    <text class="txt small" x="210" y="198">POSITIVE TREND</text>
+    <rect class="ink" x="134" y="236" width="20" height="34" stroke-width="3"/>
+    <rect class="ink" x="174" y="218" width="20" height="52" stroke-width="3"/>
+    <rect class="ink" x="214" y="198" width="20" height="72" stroke-width="3"/>
+    <rect class="ink" x="254" y="176" width="20" height="94" stroke-width="3"/>
+    <path class="ink" d="M124 270 L296 270" stroke-width="3"/>
+    <text class="mono micro" x="210" y="304">LP VERIFIED</text>
+  
+</g>
+<g transform="translate(470 875)" aria-label="LP global benchmark hex postage stamp">
+
+    <path class="ink" d="M210 58 L342 132 L342 288 L210 362 L78 288 L78 132 Z" stroke-width="5"/>
+    <path class="ink" d="M210 86 L318 146 L318 274 L210 334 L102 274 L102 146 Z" stroke-width="2" stroke-dasharray="7 8"/>
+    <text class="txt small" x="210" y="142">GLOBAL</text>
+    <text class="txt label" x="210" y="184">BENCHMARK</text>
+    <path class="ink" d="M140 206 L280 206" stroke-width="3"/>
+    <text class="txt big" x="210" y="260">LP</text>
+    <text class="mono micro" x="210" y="302">VS EVERYONE</text>
+    <path class="fill" d="M128 204 L129.98 208.02 L134 210 L129.98 211.98 L128 216 L126.02 211.98 L122 210 L126.02 208.02 Z"/>
+    <path class="fill" d="M292 204 L293.98 208.02 L298 210 L293.98 211.98 L292 216 L290.02 211.98 L286 210 L290.02 208.02 Z"/>
+  
+</g>
+<g transform="translate(890 875)" aria-label="LP match intel postage stamp">
+
+    <rect class="ink" x="42" y="96" width="336" height="228" rx="16" stroke-width="5"/>
+    <rect class="ink" x="64" y="118" width="292" height="184" rx="10" stroke-width="2"/>
+    <path class="ink" d="M108 118 L108 302" stroke-width="2"/>
+    <path class="ink" d="M312 118 L312 302" stroke-width="2"/>
+    <text class="txt label" x="210" y="154">MATCH INTEL</text>
+    <path class="ink" d="M158 238 L190 206 L216 224 L262 178" stroke-width="6"/>
+    <path class="ink" d="M250 178 L262 178 L262 190" stroke-width="4"/>
+    <text class="txt small" x="210" y="274">GOOD HABITS</text>
+    <text class="mono small" x="86" y="212">LP</text>
+    <text class="mono small" x="334" y="212">GG</text>
+  
+</g>
+<g transform="translate(1310 875)" aria-label="LP wavy postage cancellation lines">
+
+    <path class="ink" d="M70 172 C112 142 148 202 190 172 S268 142 310 172 S374 202 410 172" stroke-width="5"/>
+    <path class="ink" d="M70 198 C112 168 148 228 190 198 S268 168 310 198 S374 228 410 198" stroke-width="5"/>
+    <path class="ink" d="M70 224 C112 194 148 254 190 224 S268 194 310 224 S374 254 410 224" stroke-width="5"/>
+    <path class="ink" d="M70 250 C112 220 148 280 190 250 S268 220 310 250 S374 280 410 250" stroke-width="5"/>
+    <path class="ink" d="M70 276 C112 246 148 306 190 276 S268 246 310 276 S374 306 410 276" stroke-width="5"/>
+  
+</g>
+</svg>

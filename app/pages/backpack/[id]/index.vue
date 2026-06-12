@@ -7,6 +7,7 @@ definePageMeta({
   icon: "i-folder",
   layout: false,
   iconKey: "folder",
+  type: "folder",
   prefix: "Backpack",
   order: 1
 })

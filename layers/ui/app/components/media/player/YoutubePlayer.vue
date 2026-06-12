@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type * as YouTube from "youtube"
 import type { MediaControlState } from "./mediaControls"
 import { mediaControlsKey } from "./mediaControls"
 
@@ -24,9 +23,9 @@ const emit = defineEmits(["ready"])
 interface LoadedYouTubeApi {
   Player: new (
     elt: HTMLElement | string,
-    options?: YouTube.PlayerOptions
-  ) => YouTube.Player
-  PlayerState: typeof YouTube.PlayerState
+    options?: YT.PlayerOptions
+  ) => YT.Player
+  PlayerState: typeof YT.PlayerState
   ready: (handler: () => void) => void
 }
 
@@ -35,7 +34,7 @@ const { onLoaded } = useScriptYouTubePlayer({
 })
 
 const video = useTemplateRef<HTMLDivElement>("video")
-const player = ref<YouTube.Player | null>(null)
+const player = ref<YT.Player | null>(null)
 const youtubeApi = shallowRef<LoadedYouTubeApi | null>(null)
 const playing = ref(false)
 const waiting = ref(true)
@@ -168,7 +167,7 @@ onLoaded(async ({ YT: api }) => {
       rel: 0
     },
     events: {
-      onReady(event) {
+      onReady(event: YT.PlayerEvent) {
         if (props.muted) event.target.mute()
         else event.target.unMute()
 

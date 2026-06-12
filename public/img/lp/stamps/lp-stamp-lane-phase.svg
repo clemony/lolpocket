@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <title>LP lane phase postage stamp</title>
+  <style>
+    .ink { stroke: #000000; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: #000000; stroke: none; }
+    .txt { fill: #000000; font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif; font-weight: 700; text-anchor: middle; }
+    .mono { fill: #000000; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; text-anchor: middle; }
+    .micro { font-size: 14px; }
+    .small { font-size: 18px; }
+    .label { font-size: 24px; }
+    .mid { font-size: 34px; }
+    .big { font-size: 72px; }
+  </style>
+  
+    <circle class="ink" cx="210" cy="210" r="166" stroke-width="4"/>
+<circle class="ink" cx="210" cy="210" r="148" stroke-width="2"/>
+<circle class="ink" cx="210" cy="210" r="86" stroke-width="3"/>
+    <text class="txt label" x="210" y="112">LANE PHASE</text>
+    <text class="txt small" x="210" y="326">EARLY EDGE</text>
+    <path class="ink" d="M160 268 L268 160" stroke-width="5"/>
+    <path class="ink" d="M150 204 L210 152 L270 204" stroke-width="4"/>
+    <path class="ink" d="M150 252 C190 236 230 236 270 252" stroke-width="4"/>
+    <path class="ink" d="M178 176 L242 240" stroke-width="2" stroke-dasharray="7 7"/>
+    <text class="txt label" x="210" y="284">LP</text>
+    <path class="fill" d="M112 204 L113.98 208.02 L118 210 L113.98 211.98 L112 216 L110.02 211.98 L106 210 L110.02 208.02 Z"/>
+    <path class="fill" d="M308 204 L309.98 208.02 L314 210 L309.98 211.98 L308 216 L306.02 211.98 L302 210 L306.02 208.02 Z"/>
+  
+</svg>

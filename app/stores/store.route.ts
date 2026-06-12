@@ -1,12 +1,12 @@
 import { externalResources } from "~/domain/about/external/externalResources"
-import { referenceItems } from "~/layout/components/navigation/command/build/lolCommands"
+import { referenceItems } from "~/domain/app/components/navigation/command/build/lolCommands"
 import type {
   CommandRouteItem,
   RouteGroup,
   RouteItem,
   RouteReturn
 } from "~/types/route.types"
-import { buildRouteItem } from "~/utils/routes/useRouteGroups"
+import { routeItem } from "~/utils/routes/useRouteGroups"
 
 type RouteGroupReturn = Record<string, RouteGroup<RouteItem>>
 
@@ -14,9 +14,11 @@ export const routeStore = defineStore(
   "route-store",
   () => {
     const routes = ref<RouteReturn>()
+    const routeGroups = shallowRef<RouteGroupReturn>()
 
     function setRoutes() {
       routes.value = buildRoutes()
+      routeGroups.value = undefined
     }
 
     function buildRouteGroups(routes: RouteReturn): RouteGroupReturn {
@@ -49,7 +51,7 @@ export const routeStore = defineStore(
           value: "Library-command",
           label: "Library",
           description: "Browse and filter complete data.",
-          items: routes.library?.map((r) => buildRouteItem(r))
+          items: routes.library?.map((r) => routeItem(r))
         },
         docs: {
           value: "docs-command",
@@ -115,11 +117,19 @@ export const routeStore = defineStore(
       if (!reference.value) reference.value = buildReference()
     }
 
-    const routeGroups = ref<RouteGroupReturn>()
-
     const useRouteGroups = () => {
-      /*   if (!routes.value)  */ setRoutes()
-      /*    if (!routeGroups.value) */
+      if (!routes.value) setRoutes()
+      if (!routeGroups.value) {
+        routeGroups.value = buildRouteGroups(
+          routes.value as RouteReturn
+        ) as RouteGroupReturn
+      }
+
+      return routeGroups
+    }
+
+    function refreshRouteGroups() {
+      setRoutes()
       routeGroups.value = buildRouteGroups(
         routes.value as RouteReturn
       ) as RouteGroupReturn
@@ -130,6 +140,7 @@ export const routeStore = defineStore(
     return {
       routes,
       setRoutes,
+      refreshRouteGroups,
       useRouteGroups
     }
   },

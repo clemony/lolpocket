@@ -37,9 +37,7 @@ const card = {
   )
 }
 
-const chosenLabel = computed(
-  () => skinNameFromKey(currentSkin.value) ?? ""
-)
+const chosenLabel = computed(() => skinNameFromKey(currentSkin.value) ?? "")
 
 const { getMatchesForSummoner } = useIndexedDB()
 const accountPuuid = computed(
@@ -88,9 +86,7 @@ async function openSplashSelect() {
       @click="handleSkin(null)">
       <div :class="card.wrapper">
         <div :class="card.header">
-          <h4 :class="card.title">
-            Automatic
-          </h4>
+          <h4 :class="card.title">Automatic</h4>
         </div>
         <p :class="card.description">
           Displays your most played champion in recent games.
@@ -129,13 +125,9 @@ async function openSplashSelect() {
      -->
       <div :class="card.wrapper">
         <div :class="card.header">
-          <h4 :class="card.title">
-            Custom
-          </h4>
+          <h4 :class="card.title">Custom</h4>
         </div>
-        <p :class="card.description">
-          Pick your favorite. No more Yuumi.
-        </p>
+        <p :class="card.description">Pick your favorite. No more Yuumi.</p>
         <div :class="card.footer">
           <UBadge
             :color="!currentSkin ? 'transparent' : 'neutral'"

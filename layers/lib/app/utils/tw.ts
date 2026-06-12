@@ -8,15 +8,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-type UiValue = ClassValue | Record<string, unknown> | undefined
-type UiObject = Record<string, UiValue>
+export type UiValue = ClassValue | Record<string, string> | undefined
+export type UiProps = Record<string, UiValue>
 
-function isPlainObject(value: unknown): value is Record<string, unknown> {
+function isPlainObject(value: unknown): value is UiProps {
   return typeof value === "object" && value !== null && !Array.isArray(value)
 }
 
-function mergeUiObject(...sources: Array<Record<string, unknown> | undefined>) {
-  const result: Record<string, unknown> = {}
+function mergeUiProps(...sources: Array<UiProps | undefined>) {
+  const result: UiProps = {}
 
   for (const source of sources) {
     if (!source) continue
@@ -32,7 +32,7 @@ function mergeUiObject(...sources: Array<Record<string, unknown> | undefined>) {
       }
 
       if (isPlainObject(currentValue) && isPlainObject(nextValue)) {
-        result[key] = mergeUiObject(currentValue, nextValue)
+        result[key] = mergeUiProps(currentValue, nextValue)
         continue
       }
 
@@ -48,10 +48,10 @@ function mergeUiObject(...sources: Array<Record<string, unknown> | undefined>) {
   return result
 }
 
-export function mergeUi<T extends Record<string, unknown>>(
+export function mergeUi<T extends UiProps>(
   ...sources: Array<Partial<T> | undefined>
 ): Partial<T> {
-  return mergeUiObject(...sources) as Partial<T>
+  return mergeUiProps(...sources) as Partial<T>
 }
 
 export function cssVar(name: string) {
@@ -75,4 +75,17 @@ export const twStatusSize: TwRecord = {
   md: "status-md",
   lg: "status-lg",
   xl: "status-xl"
+}
+
+export const twIndex: Record<number, HTMLAttributes["class"]> = {
+  0: "z-0",
+  1: "z-1",
+  2: "z-2",
+  3: "z-3",
+  4: "z-4",
+  5: "z-5",
+  6: "z-6",
+  7: "z-7",
+  8: "z-8",
+  9: "z-9"
 }

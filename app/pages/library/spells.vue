@@ -7,7 +7,8 @@ definePageMeta({
   iconFill: "i-book-fill",
   order: 3,
   prefix: "Library",
-  description: "Don't forget the petricite!",
+  description: "Browse the entire spell library.",
+  blurb: "Don't forget the petricite!",
   class: "**:stroke-[2.1]!",
   keys: [
     "summoner",
@@ -20,8 +21,8 @@ definePageMeta({
     "smite",
     "teleport",
     "cleanse",
-    "exhaust"
-  ]
+    "exhaust",
+  ],
 })
 
 const selectedSpellId = ref(1)
@@ -95,9 +96,7 @@ const selectedSpell = computed(
               :src="`/img/spell/${selectedSpell.id}.webp`" />
 
             <div class="items-between grid h-full py-2">
-              <p class="font-medium">
-                Summoner
-              </p>
+              <p class="font-medium">Summoner</p>
 
               <h1 class="text-5xl tracking-tight drop-shadow-2xs">
                 {{ selectedSpell.name }}
@@ -111,21 +110,15 @@ const selectedSpell = computed(
             <li
               v-if="selectedSpell.cd"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Cooldown:
-              </p>
+              <p class="font-semibold tracking-tight">Cooldown:</p>
 
-              <p class="font-medium">
-                {{ selectedSpell.cd }} seconds
-              </p>
+              <p class="font-medium">{{ selectedSpell.cd }} seconds</p>
             </li>
 
             <li
               v-if="selectedSpell.charges"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Charges:
-              </p>
+              <p class="font-semibold tracking-tight">Charges:</p>
 
               <p class="font-medium">
                 {{ selectedSpell.charges }}
@@ -135,13 +128,9 @@ const selectedSpell = computed(
             <li
               v-if="selectedSpell.recharge"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Recharge Time:
-              </p>
+              <p class="font-semibold tracking-tight">Recharge Time:</p>
 
-              <p class="font-medium">
-                {{ selectedSpell.recharge }} seconds
-              </p>
+              <p class="font-medium">{{ selectedSpell.recharge }} seconds</p>
             </li>
           </ul>
         </div>

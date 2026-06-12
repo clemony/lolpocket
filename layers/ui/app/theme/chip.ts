@@ -57,8 +57,8 @@ export const chipTheme = defineUiTheme({
       md: "h-[8px] min-w-[8px] text-[7px]",
       lg: "h-[9px] min-w-[9px] text-[8px]",
       xl: "h-[10px] min-w-[10px] text-[8px]",
-      "2xl": "h-[11px] min-w-[11px] text-[9px]! font-bold",
-      "3xl": "h-[12px] min-w-[12px] text-[10px]"
+      "2xl": "h-[11px] min-w-[11px] text-[8px]! font-bold",
+      "3xl": "h-[12px] min-w-[12px] text-[8px] font-bold"
     },
     standalone: {
       false: "absolute"
@@ -67,7 +67,7 @@ export const chipTheme = defineUiTheme({
   compoundVariants: [
     {
       class:
-        "translate-x-[calc(50%-2px)] -translate-y-[calc(50%-3px)] transform",
+        "translate-x-[calc(50%-0px)] -translate-y-[calc(50%-0px)] transform",
       inset: false,
       position: "top-right"
     },

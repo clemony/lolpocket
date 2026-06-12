@@ -12,7 +12,7 @@ definePageMeta({
   path: "/nexus",
   class: "",
   icon: "i-nexus",
-  description: "",
+  description: "Ready to recall?",
   order: 0
 })
 

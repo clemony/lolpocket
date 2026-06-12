@@ -25,7 +25,7 @@ definePageMeta({
     <UDashboardGroup
       unit="rem"
       :ui="{
-        base: 'max-h-[calc(100vh-var(--ui-header-height)] w-full flex-1 translate-y-(--ui-header-height) gap-4 overflow-hidden px-8 py-7'
+        base: 'size-full max-h-[calc(100vh-var(--ui-header-height)] flex-1 translate-y-(--ui-header-height) gap-4 overflow-hidden px-8 pt-0 pb-7'
       }">
       <DragDropProvider
         :plugins="

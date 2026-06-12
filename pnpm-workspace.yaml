@@ -18,5 +18,3 @@ allowBuilds:
   unrs-resolver: true
   vue-demi: true
   workerd: true
-patchedDependencies:
-  '@nuxt/ui@4.8.1': patches/@nuxt__ui@4.8.1.patch

@@ -108,7 +108,7 @@ watch(
           :data
           :columns
           :ui="{
-            tbody: 'pocket-table-tbody pb-4',
+            tbody: 'pocket-table-tbody max-w-full pb-4',
             thead: 'overflow-hidden bg-p0 py-0',
             th: 'max-h-10 bg-p0 py-0 text-center first:pl-3 data-[pinned=left]:z-2',
             tr: cn(
@@ -126,7 +126,7 @@ watch(
               'group-hover/row:data-[pinned=left]:bg-p2',
               'group-hover/row:group-data-[selected=true]/row:data-[pinned=left]:bg-p2'
             ),
-            root: 'tabs-content relative z-0 size-full w-full overflow-auto rounded-4xl bg-p0 shadow-sm',
+            root: 'tabs-content relative z-0 size-full w-full max-w-full overflow-auto rounded-4xl bg-p0 shadow-sm',
             empty: 'm-auto'
           }"
           @select="onSelect"

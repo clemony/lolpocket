@@ -122,7 +122,7 @@ export const icon = {
     "win-key": "streamline:logos:microsoft-windows-logo-3-solid", //'i-win-key'
     "x-solid": "teenyicons:x-circle-solid", //'i-x-solid'
     and: "lucide:ampersand", //'i-and'
-    backspace: "cil:backspace", //'i-backspace'
+    backspace: "heroicons:backspace", // i-heroicons-backspace
     command: "lucide:command", //'i-command'
     i: "ion:information-sharp", //'i-i'
     info: "ri:information-2-line", //'i-info'
@@ -177,6 +177,7 @@ export const icon = {
     github: "ph:github-logo", //'i-github'
     google: "fe:google", //'i-google'
     twitch: "i-streamline-logos-twitch-logo-solid",
+    "twitch-fill": "ion:social-twitch", //i-ion-social-twitch
     riot: "streamline-logos:riot-games-logo-solid", //'i-riot'
 
     "exit-fullscreen": "lucide:scan-line", //'i-exit-fullscreen'
@@ -192,7 +193,7 @@ export const icon = {
     "circle-big-dot": "clarity:dot-circle-line", //'i-circle-big-dot'
     "circle-dot": "lucide:circle-dot", //'i-circle-dot'
     dot: "lucide:dot", //'i-dot'
-    heart: "gg:heart", //'i-heart'
+    heart: "proicons:heart", //'i-proicons-heart'
     "heart-fill": "teenyicons:heart-solid", //'i-heart-fill'
     "heart-sm": "teenyicons:heart-small-solid", //'i-heart-sm'
     "heart-sm-outline": "teenyicons:heart-small-outline", //'i-heart-sm-outline'
@@ -210,7 +211,7 @@ export const icon = {
 
     key: "lucide:key-round", //'i-key'
     "pin-solid": "iconoir:pin-solid", //'i-pin-solid'
-    backpack: "tabler:briefcase", //'i-backpack'
+    backpack: "radix-icons:backpack", //'i-radix-icons-backpack
     "bar-chart": "lucide:chart-no-axes-column", //'i-bar-chart'
     "bell-ring": "lucide:bell-ring", //'i-bell-ring'
     book: "i-tdesign-book", //'i-book'

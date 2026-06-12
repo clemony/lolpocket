@@ -17,15 +17,12 @@ const props = withDefaults(
 )
 const emit = defineEmits(["clearInput"])
 
-const id = crypto.randomUUID()
-
 const delegated = reactiveOmit(props, "class")
 const forwarded = useForwardPropsEmits(delegated, emit)
 </script>
 
 <template>
   <label
-    :for="id"
     :class="
       cn(
         'group/label -mr-1 hidden h-12 w-10 shrink-0 cursor-pointer place-items-center group-focus-within/input:grid',
@@ -33,15 +30,12 @@ const forwarded = useForwardPropsEmits(delegated, emit)
       )
     ">
     <UButton
-      :id
       v-bind="forwarded"
       icon="i-x"
       :ui="{
         leadingIcon: cn(
-          '**:stroke-[14%]!',
-          color === 'neutral'
-            ? '**:stroke-[16%]!'
-            : 'opacity-50 group-hover/btn:opacity-100',
+          'opacity-50 **:stroke-[14%]! group-hover/btn:opacity-100',
+          color === 'neutral' ? '' : '',
           props.leadingIcon
         ),
         base: cn('anchor pointer-events-auto shrink-0', ui?.base)

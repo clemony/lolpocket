@@ -60,31 +60,47 @@ onMounted(() => {
 </script>
 
 <template>
-  <UCard as-child :ui="{ body: 'w-full divide-y py-4!', root: 'w-full' }">
-    <UFormField
-      size="lg"
-      :label="localDataOption.label"
+  <FormWrapper>
+    <UCard
       :ui="{
-        root: 'w-full grow-0',
-        wrapper: 'mb-2 border-b border-b-p3/80 px-4 pb-4'
+        body: 'w-full px-0! py-4!',
+        header: 'pt-2! pb-4!',
+        root: 'w-full divide-y px-1',
+        footer: 'px-0! pt-7!'
       }">
-      <template #hint>
-        <HintTooltip :label="localDataOption.text" />
+      <template #header>
+        <UFormField
+          size="lg"
+          :label="localDataOption.label"
+          :ui="{
+            root: 'w-full grow-0',
+            label: 'text-pc/90',
+            wrapper: 'py-0!',
+            description: 'text-sm text-n5'
+          }">
+          <template #hint>
+            <HintTooltip :text="localDataOption.text" />
+          </template>
+          <template #description>
+            Remove stored data from your browser's cache. If you're having
+            issues updating matches, you can try this or
+            <ULink
+              class="inline underline decoration-dotted hover:decoration-solid">
+              contact&nbsp;support </ULink
+            >.
+          </template>
+        </UFormField>
       </template>
-      <template #description>
-        Remove stored data from your browser's cache. If you're having issues
-        updating matches, you can try this or
-        <ULink
-          class="inline underline decoration-dotted hover:decoration-solid">
-          contact&nbsp;support </ULink
-        >.
-      </template>
-
-      <div class="flex w-full flex-col px-4">
-        <div
+      <template #default>
+        <UPageCard
           v-for="item in data"
           :key="item.id"
-          class="flex w-full max-w-full items-center justify-between overflow-hidden py-3 last:pb-0!">
+          variant="ghost"
+          orientation="horizontal"
+          :ui="{
+            root: 'w-full max-w-full overflow-hidden p-0!',
+            container: 'flex! flex-row justify-between p-0! py-4!'
+          }">
           <div class="flex flex-col">
             <h5 class="text-md font-semibold">
               {{ item.label }}
@@ -94,29 +110,34 @@ onMounted(() => {
             </p>
           </div>
           <UButton
-            :color="!item.count ? 'primary' : 'neutral'"
+            :color="!item.count ? 'secondary' : 'neutral'"
             size="md"
             icon="i-trash"
             :disabled="pendingKey !== null || !item.count"
             :loading="pendingKey === item.id"
             :ui="{
-              base: 'anchor size-9 max-h-9 max-w-9 rounded-xl',
-              leadingIcon: '**:stroke-[2.2]'
+              base: 'anchor rounded-xl disabled:bg-p3 disabled:shadow-none disabled:inset-ring-p4/40 disabled:drop-shadow-none disabled:fx-1!'
             }"
             @click="clearDataset(item)" />
-        </div>
+        </UPageCard>
+      </template>
 
+      <template #footer>
         <UButton
           v-bind="clearAll"
           block
+          icon="i-backspace"
+          size="lg"
+          :color="!clearAll.count ? 'secondary' : 'neutral'"
           :disabled="!clearAll.count"
           :loading="pendingKey === clearAll.id"
           :ui="{
-            base: 'rounded-xl',
-            leadingIcon: '**:stroke-[2.2]'
+            base: 'justify-between rounded-xl px-4 disabled:bg-p3 disabled:shadow-none disabled:inset-ring-p4/40 disabled:drop-shadow-none disabled:fx-1!',
+            leadingIcon: '-scale-x-100 group-disabled/btn:opacity-30',
+            label: 'w-full text-end group-disabled/btn:opacity-40'
           }"
           @click="clearDataset(clearAll)" />
-      </div>
-    </UFormField>
-  </UCard>
+      </template>
+    </UCard>
+  </FormWrapper>
 </template>

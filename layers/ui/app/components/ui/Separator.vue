@@ -11,7 +11,7 @@ const props = withDefaults(
   {
     position: "start",
     underline: false,
-    labelPosition: "start"
+    labelPosition: "start",
   }
 )
 
@@ -24,80 +24,85 @@ const separatorVariants = tv({
       "pointer-events-none flex flex-nowrap items-center gap-1 font-medium whitespace-nowrap select-none",
     label:
       "pointer-events-none flex flex-nowrap items-center gap-1 font-medium whitespace-nowrap select-none",
-    separator: "pointer-events-none flex-1 shrink-0 grow bg-current"
+    separator: "pointer-events-none flex-1 shrink-0 grow bg-current",
   },
   variants: {
     color: {
       base: {
         label: "text-pc",
         trailing: "text-pc",
-        separator: "bg-p1"
+        separator: "bg-p1",
       },
       neutral: {
         label: "text-nc/50 group-hover/collapse:text-nc",
         separator: "bg-nc/10",
-        trailing: "text-nc/50 group-hover/collapse:text-nc"
+        trailing: "text-nc/50 group-hover/collapse:text-nc",
       },
       secondary: {
         label: "text-pc",
         trailing: "text-pc",
-        separator: "bg-p2"
+        separator: "bg-p2",
       },
       tertiary: {
         label: "text-pc",
         trailing: "text-pc",
-        separator: "bg-p3/80"
-      }
+        separator: "bg-p3/80",
+      },
+      p4: {
+        label: "text-pc",
+        trailing: "text-pc",
+        separator: "bg-p4/60",
+      },
     },
     underline: {
       true: {
         label: "text-pc/60 group-hover/btn:text-pc group-hover/btn:underline",
         separator: "group-hover/collapse:brightness-86",
-        leading: "**:text-pc/60 group-hover/btn:**:text-pc"
-      }
+        leading: "**:text-pc/60 group-hover/btn:**:text-pc",
+      },
     },
     labelVisible: {
       true: {},
       false: {
-        label: "hidden"
-      }
+        label: "hidden",
+      },
     },
     position: {
       center: {},
       end: {},
-      start: {}
+      start: {},
     },
     labelPosition: {
       center: {},
       end: {},
-      start: {}
+      start: {},
     },
     orientation: {
       vertical: {
         root: "flex-col justify-center",
         label: "flex flex-col items-center",
-        separator: "h-full w-px"
+        separator: "h-full w-px",
       },
       horizontal: {
         root: "flex items-center",
         label: "flex items-center",
-        separator: "h-px max-h-px w-full"
-      }
+        separator: "h-px max-h-px w-full",
+      },
     },
     size: {
       xs: {
-        label: "text-2xs font-medium"
+        label: "text-2xs font-medium",
       },
       sm: {
-        label: "text-xs font-medium"
+        label: "text-xs font-medium",
       },
       md: {
-        label: "text-sm font-medium"
+        label: "text-sm font-medium",
       },
       lg: {
-        label: "text-md font-medium"
-      }
-    }
+        label: "text-md font-medium",
+      },
+    },
   },
   compoundVariants: [
     {
@@ -106,8 +111,8 @@ const separatorVariants = tv({
       class: {
         label: "order-last ml-3",
         separator: "order-1",
-        leading: "order-first mr-1"
-      }
+        leading: "order-first mr-1",
+      },
     },
     {
       position: "start",
@@ -116,8 +121,8 @@ const separatorVariants = tv({
         label: "order-1 mr-2",
         leading: "order-first",
         separator: "order-2",
-        trailing: "order-3 ml-2"
-      }
+        trailing: "order-3 ml-2",
+      },
     },
     {
       position: "start",
@@ -125,17 +130,17 @@ const separatorVariants = tv({
       class: {
         label: "order-2 mx-2",
         separator: "order-1",
-        leading: "order-first"
-      }
-    }
+        leading: "order-first",
+      },
+    },
   ],
   defaultVariants: {
     color: "tertiary",
     position: "start",
     labelPosition: "start",
     size: "md",
-    orientation: "horizontal"
-  }
+    orientation: "horizontal",
+  },
 })
 
 const styles = computed(() =>
@@ -146,7 +151,7 @@ const styles = computed(() =>
     orientation: props.orientation,
     underline: props.underline,
     labelVisible: Boolean(props.label),
-    labelPosition: props.labelPosition
+    labelPosition: props.labelPosition,
   })
 )
 </script>

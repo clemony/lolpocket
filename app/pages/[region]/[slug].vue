@@ -8,7 +8,7 @@ definePageMeta({
   name: "summoner-profile",
   command: defineAsyncComponent(
     () =>
-      import("~/layout/components/navigation/command/route/SummonerCommand.vue")
+      import("~/domain/app/components/navigation/command/route/SummonerCommand.vue")
   )
 })
 

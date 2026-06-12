@@ -68,18 +68,15 @@ const switchProps: SwitchProps = {
   as: "label",
   size: "sm",
   ui: {
-    root: "gap-2.5 pr-4 pb-4 pl-4",
-    label: "mb-0.5 justifyStart gap-1.5",
-    container: "orderLast mb-1 selfEnd"
+    container: "self-start"
   },
   trueValue: true,
-  falseValue: false,
-  color: "card"
+  falseValue: false
 }
 </script>
 
 <template>
-  <div class="space-y-9">
+  <FormWrapper save>
     <template v-for="(set, i) in communicationOptions">
       <UFormField
         v-for="group in set"
@@ -87,7 +84,7 @@ const switchProps: SwitchProps = {
         size="lg"
         :label="group.legend">
         <template v-if="group.description" #hint>
-          <HintTooltip :label="group.description" />
+          <HintTooltip :text="group.description" />
         </template>
         <template #label>
           <h4 class="inline-flex items-center gap-2.5">
@@ -125,5 +122,5 @@ const switchProps: SwitchProps = {
         </div>
       </UFormField>
     </template>
-  </div>
+  </FormWrapper>
 </template>

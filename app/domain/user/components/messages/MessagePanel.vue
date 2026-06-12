@@ -1,59 +1,82 @@
 <script lang="ts" setup>
-import type { InboxMessage } from "#shared/types"
-import {
-  markRead,
-  sortedMessages,
-  toggleRead
-} from "../../utils/messages/inbox-management"
+import { UButton } from "#components"
+import type { ButtonProps } from "@nuxt/ui"
+import { inboxButtonProps, useInbox } from "~/domain/user/composables/useInbox"
+import type {
+  Box,
+  CommandButton,
+  CommandMessage
+} from "~/domain/user/types/inbox.types"
 
-defineOptions({
-  meta: {
-    name: "Inbox",
-    badge: computed(
-      () =>
-        ((user().inbox?.messages ?? []) as InboxMessage[]).filter(
-          (m: InboxMessage) => !m.read_at
-        ).length
-    ).value,
-    class: "**:stroke-1.5",
-    icon: "lucide:mail"
-  }
-})
+const { activeComponent } = defineProps<{
+  activeComponent?: string | null
+}>()
+const emit = defineEmits(["updateModal"])
+
+function updateModal() {
+  emit("updateModal", true)
+}
+const inbox = computed<Record<string, Box> | undefined>(
+  () => useInbox(() => updateModal).value
+)
+
+const active = safeObject(
+  computed(() => inbox.value?.[activeComponent ?? "inbox"]).value
+)
 </script>
 
 <template>
-  <aside>
-    <SidebarHeaderWrapper>
-      <template #header>
-        <SidebarTitleDropdown title="Inbox">
-          <template #content>
-            <InboxDropdownMenu />
-          </template>
-        </SidebarTitleDropdown>
-      </template>
-      <template #subheader>
-        <div class="px-3">
-          <UInput
-            class="input mb-3 h-12 bg-p0!"
-            placeholder="Search messages..." />
-        </div>
-      </template>
-    </SidebarHeaderWrapper>
-
-    <div class="-mt-4 flex! w-full flex-col items-start gap-0 overflow-hidden">
-      <template v-if="user().inbox?.messages.length">
-        <MessagePreview
-          v-for="(message, i) in sortedMessages"
-          :key="message.id"
-          :message="message"
-          :i="i" />
-      </template>
-
-      <div v-else class="grid h-44 w-full place-items-center">
-        <span class="overflow-hidden text-sm text-nowrap drop-shadow-2xs">
-          {{ `No mail right now!` }}
-        </span>
+  <div
+    class="relative flex size-full max-h-180 grow flex-col justify-between overflow-hidden">
+    <div
+      class="inline-flex h-9 w-full items-center justify-between border-b border-b-p3 px-2 py-0.5 text-sm">
+      <h6 class="text-sm font-semibold opacity-90">
+        {{ active.label }}
+      </h6>
+      <div class="flex items-center gap-2">
+        <HintTooltip
+          v-for="action in active.actions"
+          :key="action.label"
+          v-bind="action.tooltip">
+          <UButton v-bind="action" />
+        </HintTooltip>
+        <HintTooltip side="bottom" label="Communication Settings">
+          <UButton
+            v-bind="inboxButtonProps"
+            icon="i-gear"
+            :ui="{ leadingIcon: 'size-4 **:stroke-[2.1]' }" />
+        </HintTooltip>
       </div>
     </div>
-  </aside>
+    <UScrollArea
+      v-if="active.items && active.items.length"
+      v-slot="{ item, index }"
+      virtualize
+      :ui="{
+        root: 'h-166 max-h-166',
+        viewport: 'divide-y-p3/80 divide-y px-0!'
+      }"
+      :items="active.items">
+      <component
+        :is="item.component"
+        v-if="item?.component"
+        :key="index"
+        :index
+        :message="item"
+        v-bind="(item as CommandButton)?.props ?? undefined"
+        @click="(item as CommandMessage)?.onClick" />
+    </UScrollArea>
+    <div v-else class="grid size-full h-166 grow place-items-center">
+      <UEmpty variant="outline" v-bind="active.empty" />
+    </div>
+    <!-- FOOTER -->
+    <div
+      class="sticky bottom-0 flex h-9 max-h-9 w-full max-w-full flex-nowrap items-center justify-between overflow-hidden border-t border-t-p3/80">
+      <div>
+        <UButton v-bind="inboxButtonProps" to="/docs/tos" label="Terms" />
+        <span class="text-[9px] opacity-60">|</span>
+        <UButton v-bind="inboxButtonProps" to="/docs/privacy" label="Privacy" />
+      </div>
+    </div>
+  </div>
 </template>

@@ -2,10 +2,10 @@
 import { SplitterPanel as ResizablePanel } from "reka-ui"
 
 definePageMeta({
-  name: "calculator",
+  name: "Calculator",
   prefix: "Tools",
   icon: "i-ui-calc",
-  description: "Min-max your builds with stat analysis.",
+  description: "Quick min-maxxing.",
   class: "scale-99 **:stroke-[1.6]"
 })
 

@@ -5,10 +5,10 @@ import { pathRecord } from "#shared/constants/runes/pathRecord"
 definePageMeta({
   title: "Runes",
   icon: "i-lp-rune",
-  description: "Rune paths and the runes within them.",
+  description: "The complete collection of runes and keystones.",
   class: "scale-110 **:stroke-[3%]!",
   prefix: "Library",
-  order: 2
+  order: 2,
 })
 
 const selectedPath = ref<number>(830)

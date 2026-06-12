@@ -38,7 +38,7 @@ const {
 } = defineProps<IconProps>()
 
 const tt = computed<TooltipPropsExt>(() => safeObject(tooltip))
-const ava = computed<AvatarPropsExt>(() => safeObject(avatar))
+const ap = computed<AvatarPropsExt>(() => safeObject(avatar))
 
 const invisibleBg = {
   root: "bg-transparent shadow-none ring-0 inset-shadow-none noise-0",
@@ -89,10 +89,10 @@ const types: Record<DomainType, ResolvedType> = {
   },
   status: {
     label: summoner?.name ?? "",
-    component: MatchStatus,
+    component: undefined,
     pin: false,
     src: getSummonerIcon(summoner?.icon) ?? "",
-    props: { map }
+    props: { summoner }
   },
   summoner: {
     label: summoner?.name ?? "",
@@ -120,26 +120,20 @@ const mergedTooltip = computed<TooltipPropsExt>(() => ({
   <Avatar
     v-bind="{
       tooltip: mergedTooltip,
-      ...ava,
+      ...ap,
       ...item.avatar,
-      src: ava.src ?? item.src,
+      src: ap.src ?? item.src,
       ui: {
         root: cn(
-          { 'hover-3d': ava.effects !== false },
+          { 'hover-3d': ap.effects !== false },
           item?.avatar?.ui?.root,
-          ava.ui?.root
+          ap.ui?.root
         ),
-        image: cn(item?.avatar?.ui?.image, ava.ui?.image)
+        image: cn(item?.avatar?.ui?.image, ap.ui?.image)
       }
     }"
     @click.stop>
-    <Ping
-      v-if="type === 'status' && summoner"
-      :color="summoner?.color ?? 'insp'"
-      :size="ava?.status?.size ?? 'md'"
-      inset
-      :class="cn('right-0 bottom-0', ava?.status?.class)" />
-    <template v-if="ava.effects !== false">
+    <template v-if="ap.effects !== false">
       <div v-for="i in 8" :key="i" />
     </template>
     <template v-if="item.component" #content>

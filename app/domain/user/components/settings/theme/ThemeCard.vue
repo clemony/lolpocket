@@ -25,10 +25,20 @@ const quote = computed(() => modeQuote[mode])
 const previewTheme = computed(() =>
   mode === "system" ? systemTheme.value : mode
 )
+
+const theme = useTemplateRef<HTMLElement>("theme")
+const { focused } = useFocus(theme)
+
+function complete() {
+  if (focused.value === true) emit("select", mode)
+}
+onKeyStroke("escape", (e) => complete())
+onKeyDown("enter", (e) => complete())
 </script>
 
 <template>
   <UCard
+    ref="theme"
     :value="mode"
     :data-theme="previewTheme"
     :data-accent="themeAccent"
@@ -37,7 +47,7 @@ const previewTheme = computed(() =>
     :ui="{
       body: 'h-32 w-full grow pt-7!',
       root: cn(
-        'group/quote hover-ring relative flex size-full! h-74! w-66 max-w-66 grow cursor-pointer flex-col items-start justify-center gap-5 overflow-hidden rounded-xl bg-p0 px-6 text-pc shadow-sm shadow-black/16 drop-shadow-sm select-none',
+        'group/quote relative flex size-full! h-74 w-66 grow cursor-pointer flex-col items-start justify-center gap-5 overflow-hidden rounded-4xl bg-p0 px-6 text-pc shadow-sm shadow-black/16 drop-shadow-sm select-none hover:ring hover:ring-pc/60',
         {
           'ring-p4 ring-offset-n2 ring-1 ring-offset-3':
             mode === user().settings?.theme
@@ -46,10 +56,8 @@ const previewTheme = computed(() =>
       ),
       footer: 'justify-self-end pb-4!'
     }"
-    @click="emit('select', mode)"
-    @keydown.enter.prevent="emit('select', mode)"
-    @keydown.space.prevent="emit('select', mode)">
-    <h4 class="pl-0.5 text-xl leading-10 font-black capitalize">
+    @click="emit('select', mode)">
+    <h4 class="pl-0.5 text-xl leading-10 font-bold capitalize">
       {{ mode }}
     </h4>
     <p

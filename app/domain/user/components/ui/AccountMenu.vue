@@ -3,20 +3,17 @@ import type {
   ButtonProps,
   DropdownMenuItem,
   PopoverProps,
-  UserProps
+  UserProps,
 } from "@nuxt/ui"
 import { userMenuItems } from "~/domain/user/utils/user/userMenuItems"
-import { asDropdownItem } from "~/layout/components/navigation/command/build/helpers"
 
 type AvatarSize = ButtonProps["size"] | UserProps["size"]
 
 const props = withDefaults(
   defineProps<
     Omit<ButtonProps, "prefetch"> & {
-      avatarSize?: AvatarSize
       class?: HTMLAttributes["class"]
       content?: DropdownMenuItem["content"]
-      user?: UserProps
     }
   >(),
   {
@@ -25,12 +22,11 @@ const props = withDefaults(
     activeColor: "primary",
     color: "secondary",
     size: "md",
-    avatarSize: "md",
-    block: true
+    block: true,
   }
 )
 
-const delegated = reactiveOmit(props, "avatarSize", "class", "content", "user")
+const delegated = reactiveOmit(props, "class", "content", "color")
 const subProps: { button: ButtonPropsExt; popover: PopoverProps } = {
   button: {
     ...delegated,
@@ -40,16 +36,16 @@ const subProps: { button: ButtonPropsExt; popover: PopoverProps } = {
       base: "max-h-9! h-9!",
       label: "grow text-start capitalize",
       trailingIcon:
-        "transition-translate duration-200 ease-spring-soft group-active/btn:translate-x-1 group-open/popover:translate-x-1"
-    }
+        "transition-translate duration-200 ease-spring-soft group-active/btn:translate-x-1 group-open/popover:translate-x-1",
+    },
   },
   popover: {
     mode: "hover",
     content: { side: "right", align: "start", sideOffset: 2, alignOffset: -2 },
-    ui: { content: "w-64 h-max rounded-xl p-0" }
-  }
+    ui: { content: "w-64 h-max rounded-xl p-0" },
+  },
 }
-const { close } = useApp().command
+
 const { summoner } = safeObject(storeToRefs(user()))
 const open = shallowRef<boolean>(false)
 const menu = computed(() => userMenuItems(close))
@@ -69,35 +65,25 @@ const isAdmin = computed(() => {
       v-model:open="open"
       :content="{
         side: 'top',
-        sideOffset: 2
+        sideOffset: 2,
       }"
       :ui="{
         root: 'flex flex-col px-1',
         content:
-          'w-(--reka-popover-trigger-width)! space-y-px divide-y divide-p3 shadow-none drop-shadow-sm drop-shadow-black/5'
+          'w-(--reka-popover-trigger-width)! space-y-px divide-y divide-p3 shadow-none drop-shadow-sm drop-shadow-black/5',
       }">
-      <UButton
+      <MatchStatus
+        v-if="summoner"
         v-bind="delegated"
-        size="xl"
         :active="open"
         :ui="{
-          base: cn(
-            'w-full justify-between px-2 inset-shadow-none!',
-            props.ui?.base
-          ),
-          trailingIcon:
-            'size-4 translate-x-px opacity-60 group-open/btn:opacity-100 group-hover/btn:opacity-100'
+          ...delegated.ui,
         }"
-        trailing-icon="i-up-down">
-        <MatchStatus
-          v-if="summoner"
-          v-bind="props?.user"
-          :ui="props.user?.ui"
-          :summoner="summoner"
-          variant="user" />
-      </UButton>
+        trailing-icon="i-up-down"
+        :summoner="summoner"
+        component="user" />
+
       <template #content>
-        <LazyAdminTestMenu v-if="isAdmin" v-bind="subProps" />
         <DevOnly><LazyAdminTestMenu v-bind="subProps" /></DevOnly>
 
         <div v-for="(group, i) in menu" :key="i" class="p-1">
@@ -112,7 +98,7 @@ const isAdmin = computed(() => {
               leadingIcon: cn(
                 asDropdownItem(item)?.ui?.itemLeadingIcon,
                 item?.ui?.leadingIcon
-              )
+              ),
             }"
             :icon="item.icon"
             :label="item.label"

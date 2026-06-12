@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <title>LP champion pool postage stamp</title>
+  <style>
+    .ink { stroke: #000000; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: #000000; stroke: none; }
+    .txt { fill: #000000; font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif; font-weight: 700; text-anchor: middle; }
+    .mono { fill: #000000; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; text-anchor: middle; }
+    .micro { font-size: 14px; }
+    .small { font-size: 18px; }
+    .label { font-size: 24px; }
+    .mid { font-size: 34px; }
+    .big { font-size: 72px; }
+  </style>
+  
+    <circle class="ink" cx="210" cy="210" r="170" stroke-width="3" stroke-dasharray="18 8"/>
+<circle class="ink" cx="210" cy="210" r="150" stroke-width="4"/>
+<circle class="ink" cx="210" cy="210" r="84" stroke-width="3"/>
+    <text class="txt label" x="210" y="112">CHAMPION POOL</text>
+    <text class="txt small" x="210" y="326">BEST PICKS</text>
+    <rect class="ink" x="151" y="182" width="30" height="42" rx="6" stroke-width="3"/>
+<rect class="ink" x="191" y="182" width="30" height="42" rx="6" stroke-width="3"/>
+<rect class="ink" x="231" y="182" width="30" height="42" rx="6" stroke-width="3"/>
+    <circle class="ink" cx="166" cy="204" r="8" stroke-width="3"/>
+<circle class="ink" cx="206" cy="204" r="8" stroke-width="3"/>
+<circle class="ink" cx="246" cy="204" r="8" stroke-width="3"/>
+    <text class="txt mid" x="210" y="272">LP</text>
+    <path class="fill" d="M118 204 L119.98 208.02 L124 210 L119.98 211.98 L118 216 L116.02 211.98 L112 210 L116.02 208.02 Z"/>
+    <path class="fill" d="M302 204 L303.98 208.02 L308 210 L303.98 211.98 L302 216 L300.02 211.98 L296 210 L300.02 208.02 Z"/>
+  
+</svg>

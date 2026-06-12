@@ -2,37 +2,39 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const fieldGroupVariant = {
   fieldGroup: {
-    horizontal: 'not-only:first:rounded-e-none not-only:last:rounded-s-none not-last:not-first:rounded-none focus-visible:z-[1]',
-    vertical: 'not-only:first:rounded-b-none not-only:last:rounded-t-none not-last:not-first:rounded-none focus-visible:z-[1]'
+    horizontal:
+      "not-only:first:rounded-e-none not-only:last:rounded-s-none not-last:not-first:rounded-none focus-visible:z-[1]",
+    vertical:
+      "not-only:first:rounded-b-none not-only:last:rounded-t-none not-last:not-first:rounded-none focus-visible:z-[1]"
   }
 }
 
 export const fieldGroupVariantWithRoot = {
   fieldGroup: {
     horizontal: {
-      root: 'group has-focus-visible:z-[1]',
-      base: 'group-not-only:group-first:rounded-e-none group-not-only:group-last:rounded-s-none group-not-last:group-not-first:rounded-none'
+      root: "group has-focus-visible:z-[1]",
+      base: "group-not-only:group-first:rounded-e-none group-not-only:group-last:rounded-s-none group-not-last:group-not-first:rounded-none"
     },
     vertical: {
-      root: 'group has-focus-visible:z-[1]',
-      base: 'group-not-only:group-first:rounded-b-none group-not-only:group-last:rounded-t-none group-not-last:group-not-first:rounded-none'
+      root: "group has-focus-visible:z-[1]",
+      base: "group-not-only:group-first:rounded-b-none group-not-only:group-last:rounded-t-none group-not-last:group-not-first:rounded-none"
     }
   }
 }
 
 export const fieldGroupTheme = defineUiTheme({
-  base: 'relative',
+  base: "group/field relative",
   variants: {
     size: {
-      xs: '',
-      sm: '',
-      md: '',
-      lg: '',
-      xl: ''
+      xs: "",
+      sm: "",
+      md: "",
+      lg: "",
+      xl: ""
     },
     orientation: {
-      horizontal: 'inline-flex -space-x-px',
-      vertical: 'flex flex-col -space-y-px'
+      horizontal: "inline-flex -space-x-px",
+      vertical: "flex flex-col -space-y-px"
     }
   }
 })

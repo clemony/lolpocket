@@ -1,116 +1,95 @@
 <script lang="ts" setup>
-import type { SidebarProps, TabsItem } from "@nuxt/ui"
-import { tabContent } from "../../utils/settings/settingsProps"
-const props = withDefaults(defineProps<SidebarProps>(), {
-  variant: "sidebar",
-  collapsible: "offcanvas",
-  side: "right"
-})
+import type { TabsItem } from "@nuxt/ui"
+import { sidebarTabContent } from "~/domain/user/utils/settings/settingsProps"
+
 const emit = defineEmits(["search", "open"])
 
-const { close, toggle, state } = useApp().settings
-const tab = defineModel<string>("tab", { default: "App" })
+const tab = shallowRef<string>("App")
 
 const session = useSupabaseSession()
-const { settings } = useApp().routes
+const { useRouteGroups } = routeStore()
+
+const settings = computed(() => useRouteGroups().value?.settings?.items)
 const settingsTabs = computed<TabsItem[]>(() => {
-  if (!settings) return [] as TabsItem[]
-  return settings.map((i) => ({
-    ...i,
-    disabled: i.auth && !!session.value?.access_token,
-    ui: { leadingIcon: cn(String(i.class)) }
-  }))
-})
-const sidebar = shallowRef<HTMLElement>()
-onClickOutside(sidebar, () => {
-  if (close) close()
+  if (!settings.value) return [] as TabsItem[]
+  return settings.value.map((i) => {
+    return {
+      ...i,
+      disabled: i.auth && !session.value?.access_token,
+      ui: { leadingIcon: cn(String(i.class)) },
+    }
+  })
 })
 </script>
 
 <template>
-  <USidebar
-    ref="sidebar"
-    v-model:open="state"
-    v-bind="props"
-    :ui="{
-      header:
-        'inline-flex h-(--ui-header-height) w-full shrink-0 items-center px-6! align-baseline',
-      root: cn(
-        'z-10! h-screen max-h-screen divide-y overflow-hidden bg-p0 p-0! ease-out [--sidebar-width:26rem]',
-        props?.ui?.root
-      ),
-      body: 'h-max w-full max-w-full flex-1 grow gap-0 overflow-x-hidden p-0'
-    }">
-    <template #header>
-      <!-- header -->
-      <ULink class="grow cursor-pointer" to="/">
-        <h2>Settings</h2>
-      </ULink>
-      <h6>{{ tab }}</h6>
+  <SlidebarWrapper title="Settings">
+    <template #subtitle>
+      <UBadge :label="tab" class="-translate-x-2" />
     </template>
-    <div
-      class="flex h-13 w-full shrink-0 items-center justify-start border-b border-b-p3/80">
-      <UTabs
-        :model-value="tab"
-        :items="settingsTabs"
-        variant="pill"
-        size="md"
-        color="neutral"
-        :ui="{
-          root: 'px-3',
-          label: 'hidden',
-          list: 'gap-2 rounded-4xl border-0 bg-transparent px-2 ring-0 inset-shadow-none inset-ring-0',
-          trigger:
-            'h-full rounded-xl duration-0 not-active:hover:bg-p2 not-active:hover:inset-ring-p3 not-active:hover:fx-1',
-          indicator: 'rounded-xl'
-        }">
-        <template #leading="{ item }">
-          <UTooltip
-            :delay-duration="1800"
-            :text="item.label"
-            as="div"
-            :ui="{
-              content:
-                'data-[state=delayed-open]:animate-in data-[state=delayed-open]:slide-in-from-bottom'
-            }"
-            :content="{ side: 'bottom' }">
-            <div class="absolute inset-0 grid size-full place-items-center">
-              <Icon
-                :name="item.icon"
-                :class="
-                  cn(
-                    'size-4.5 text-pc/70 **:stroke-[2.2] group-active:text-nc',
-                    item.ui?.leadingIcon
-                  )
-                " />
-            </div>
-          </UTooltip>
-        </template>
-      </UTabs>
-    </div>
 
-    <div class="w-full max-w-full grow overflow-x-hidden p-6! pr-0.5">
-      <UTheme
-        :ui="{
-          form: {
-            base: 'flex w-full max-w-full flex-col gap-8'
-          },
-          formField: {
-            root: 'w-full max-w-full min-w-87 grow',
-            label: 'capitalize',
-            container: 'flex flex-col gap-4',
-            labelWrapper: '',
-            wrapper: ''
-          },
-          input: { root: 'w-full' }
-        }">
-        <FormWrapper>
-          <component
-            :is="tabContent[tab]?.component"
-            v-if="tabContent[tab]?.component"
-            orientation="vertical" />
-        </FormWrapper>
-      </UTheme>
-    </div>
-  </USidebar>
+    <template #description>
+      <div class="flex h-13 w-full shrink-0 items-center justify-start">
+        <UTabs
+          v-model:model-value="tab"
+          :items="settingsTabs"
+          :ui="{ label: 'hidden' }">
+          <template #leading="{ item }">
+            <UTooltip :text="item.label" :content="{ side: 'top' }">
+              <div class="absolute inset-0 grid size-full place-items-center">
+                <Icon
+                  :name="item.icon"
+                  :class="
+                    cn(
+                      'size-4.5 text-nc/80 group-hover/trigger:group-not-active/trigger:text-nc group-active/trigger:text-pc group-hover/trigger:group-active/trigger:text-pc',
+                      item.ui?.leadingIcon
+                    )
+                  " />
+              </div>
+            </UTooltip>
+          </template>
+        </UTabs>
+      </div>
+    </template>
+
+    <UTheme
+      :props="{
+        formField: {
+          size: 'lg',
+        },
+      }"
+      :ui="{
+        separator: {
+          border: 'border-p4/70',
+        },
+        form: {
+          base: 'flex w-full max-w-full flex-col gap-8 text-pc',
+        },
+        formField: {
+          root: 'w-full max-w-full min-w-87 overflow-visible text-pc',
+          container: 'flex flex-col gap-2 text-pc',
+          help: 'hidden',
+          description: 'hidden',
+          label:
+            'inline-flex items-center align-baseline text-sm! font-medium! tracking-normal text-pc/70 capitalize **:text-sm',
+          labelWrapper:
+            'inline-flex w-full grow items-center align-baseline text-pc',
+          wrapper: 'mb-1.5',
+        },
+        /*         card: {
+          root: 'h-max! w-full rounded-xl bg-transparent shadow-none ring-p4/60 group-hover:ring-pc/70!',
+          body: 'grid w-full grid-cols-[36px_auto_24px] items-center gap-3 overflow-hidden p-4! px-3!'
+        }, */
+        switch: {
+          root: 'py-4! shadow-none hover:inset-shadow-sm hover:inset-ring! hover:inset-ring-p3 hover:ring-offset-1 hover:ring-offset-pc/60',
+          container: 'mt-0 self-center',
+          label: 'pr-2 font-semibold',
+        },
+      }">
+      <component
+        :is="sidebarTabContent[tab]?.component"
+        v-if="sidebarTabContent[tab]?.component"
+        orientation="vertical" />
+    </UTheme>
+  </SlidebarWrapper>
 </template>

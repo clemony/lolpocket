@@ -10,12 +10,12 @@ const emit = defineEmits(["toggleSidebar", "updateTab"])
 
 definePageMeta({
   title: "Items",
-  description: "A full list of items and stat details.",
+  description: "The full library of items and stat details.",
   icon: "i-lucide-sword",
   iconFill: "i-lp-sword-fill",
   prefix: "Library",
   class: "scale-110 **:stroke-2!",
-  order: 1
+  order: 1,
 })
 
 const quote = computed(() => getRandom(itemQuotes))
@@ -42,14 +42,14 @@ const items = computed<Record<string, CheckboxItem[]>>(() => ({
       value: s.id,
       label: s.name,
       icon: `i-stat-${s.id}`,
-      color: s.color
+      color: s.color,
     })),
   tags: Object.values(itemTags).map((t) => ({
     value: t.id,
     label: t.name,
     icon: t.icon,
-    color: t.color
-  }))
+    color: t.color,
+  })),
 }))
 </script>
 
@@ -68,8 +68,8 @@ const items = computed<Record<string, CheckboxItem[]>>(() => ({
           {
             base: 'rounded-xl focus-within:ring-0!',
             clear: {
-              base: 'padding-2 not-before:*:z-1 rounded-full opacity-90 ring-0 outline-nc/90 **:text-pc! before:absolute before:z-0 before:size-4 before:rounded-full before:bg-n5 hover:bg-transparent! hover:opacity-100'
-            }
+              base: 'padding-2 not-before:*:z-1 rounded-full opacity-90 ring-0 outline-nc/90 **:text-pc! before:absolute before:z-0 before:size-4 before:rounded-full before:bg-n5 hover:bg-transparent! hover:opacity-100',
+            },
           } as InputClearUi
         "
         @update:model-value="(e: string) => (filters.query = e)" />
@@ -111,10 +111,10 @@ const items = computed<Record<string, CheckboxItem[]>>(() => ({
               label: 'Reset',
               ui: {
                 base: 'pr-4 pl-3.25',
-                leadingIcon: 'text-nc'
+                leadingIcon: 'text-nc',
               },
-              color: 'neutral'
-            }
+              color: 'neutral',
+            },
           ]"
           @click="is().clearFilters()" />
       </div>

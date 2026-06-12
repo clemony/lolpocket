@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <title>LP positive trend approved postage stamp</title>
+  <style>
+    .ink { stroke: #000000; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: #000000; stroke: none; }
+    .txt { fill: #000000; font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif; font-weight: 700; text-anchor: middle; }
+    .mono { fill: #000000; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; text-anchor: middle; }
+    .micro { font-size: 14px; }
+    .small { font-size: 18px; }
+    .label { font-size: 24px; }
+    .mid { font-size: 34px; }
+    .big { font-size: 72px; }
+  </style>
+  
+    <rect class="ink" x="70" y="72" width="280" height="276" rx="12" stroke-width="5"/>
+    <rect class="ink" x="92" y="96" width="236" height="228" rx="8" stroke-width="2" stroke-dasharray="12 8 3 8"/>
+    <text class="txt mid" x="210" y="134">APPROVED</text>
+    <path class="ink" d="M116 166 L304 166" stroke-width="3"/>
+    <text class="txt small" x="210" y="198">POSITIVE TREND</text>
+    <rect class="ink" x="134" y="236" width="20" height="34" stroke-width="3"/>
+    <rect class="ink" x="174" y="218" width="20" height="52" stroke-width="3"/>
+    <rect class="ink" x="214" y="198" width="20" height="72" stroke-width="3"/>
+    <rect class="ink" x="254" y="176" width="20" height="94" stroke-width="3"/>
+    <path class="ink" d="M124 270 L296 270" stroke-width="3"/>
+    <text class="mono micro" x="210" y="304">LP VERIFIED</text>
+  
+</svg>

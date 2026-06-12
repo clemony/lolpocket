@@ -1,4 +1,9 @@
-export type SeparatorColor = "base" | "neutral" | "secondary" | "tertiary"
+export type SeparatorColor =
+  | "base"
+  | "neutral"
+  | "secondary"
+  | "tertiary"
+  | "p4"
 export type SeparatorPosition = "start" | "center" | "end"
 export type SeparatorOrientation = "horizontal" | "vertical"
 export type SeparatorSize = "xs" | "sm" | "md" | "lg"

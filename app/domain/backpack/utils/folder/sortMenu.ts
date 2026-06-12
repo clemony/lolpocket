@@ -1,5 +1,5 @@
 import type { ContextMenuItem } from "@nuxt/ui"
-import { separatorItem } from "~/domain/backpack/utils/folder/menuItems"
+import { separatorItem } from "~/domain/app/utils/menuItems"
 
 export function useSortMenu() {
   const account = user()
@@ -7,7 +7,7 @@ export function useSortMenu() {
 
   return computed<ContextMenuItem>(() => {
     return {
-      label: "Sort by",
+      label: "Sort & Group",
       icon: "i-tabler-sort-ascending",
       ui: {
         leadingIcon: "scale-120",
@@ -77,6 +77,30 @@ export function useSortMenu() {
           onSelect($event) {
             $event.preventDefault()
             localSettings.value.sidebar_sort_mode = "asc"
+          }
+        },
+        separatorItem,
+        {
+          label: "Group by",
+          type: "label",
+          ui: {
+            label: "pb-0!"
+          }
+        },
+        {
+          label: "Folder",
+          icon: "i-folder",
+          type: "checkbox",
+          ui: {
+            itemLeadingIcon: "**:stroke-[2.3]"
+          }
+        },
+        {
+          label: "Patch",
+          icon: "i-lp-riot-circle",
+          type: "checkbox",
+          ui: {
+            itemLeadingIcon: "scale-102"
           }
         }
         /*

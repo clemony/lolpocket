@@ -6,74 +6,75 @@ type Props = TooltipProps &
     label?: string
     type?: "hint" | "info" | "required"
     button?: ButtonProps
+    color?: "base" | "neutral"
   }
 
 const props = withDefaults(defineProps<Props>(), {
-  sideOffset: 10,
-  side: "left",
-  align: "end",
-  arrow: false,
+  arrow: true,
   type: "hint",
   button: () => ({
     size: "xs",
-    variant: "ghost",
-    icon: "i-ri-question-line"
-  })
+    variant: "link",
+    icon: "i-ri-question-line",
+  }),
 })
 
 const btnUi = computed(() =>
   mergeUi(
     {
       base: "anchor -translate-y-px max-size-5",
-      leadingIcon: "size-3.75 opacity-30 group-hover/btn:opacity-100"
+      leadingIcon: "size-3.75 opacity-50 group-hover/btn:opacity-100",
     },
     props.button.ui as Record<string, HTMLAttributes["class"]>
   )
 )
 
-const tooltipContent = reactivePick(
-  props,
-  "side",
-  "sideOffset",
-  "align",
-  "alignOffset"
-)
+const tooltipProps = reactiveOmit(props, "side", "type", "button")
 
 const icons = {
   hint: "i-ri-question-line",
   info: "i-ri-information-line",
-  required: "i-f7-asterisk-circle"
+  required: "i-lucide:asterisk",
 }
 
-const showArrow = computed(() => !!props.arrow)
 const tooltipText = computed(() =>
-  props.type === "required" ? "Required" : props.label || props.text
+  props.type === "required" ? "Required" : props.text
 )
-const arrowUi = [
-  "pointer-events-none absolute z-1 w-5 h-4 shrink-0 bg-neutral/82 drop-shadow-sm",
 
-  "group-data-[side=left]/tt:top-1/2 group-data-[side=left]/tt:-right-3.5 group-data-[side=left]/tt:-translate-y-1/2 group-data-[side=left]/tt:[clip-path:polygon(0_0,100%_50%,0_100%)]",
-  "group-data-[side=right]/tt:top-1/2 group-data-[side=right]/tt:-left-3.5 group-data-[side=right]/tt:-translate-y-1/2 group-data-[side=right]/tt:[clip-path:polygon(100%_0,0_50%,100%_100%)]",
-
-  "group-data-[side=top]/tt:left-4.75 group-data-[side=top]/tt:-bottom-2 group-data-[side=top]/tt:-translate-x-full group-data-[side=top]/tt:[clip-path:polygon(0_0,100%_0,100%_25%,8%_100%)]  group-data-[side=top]/tt:mask-t-to-92% group-data-[side=top]/tt:mask-t-from-50% group-data-[side=top]/tt:mask-radial-at-top-left group-data-[side=top]/tt:mask-radial-farthest-side",
-
-  "group-data-[side=bottom]/tt:left-4.75 group-data-[side=bottom]/tt:-top-2 group-data-[side=bottom]/tt:-translate-x-full group-data-[side=bottom]/tt:[clip-path:polygon(8%_0,100%_75%,100%_100%,0%_100%)] group-data-[side=bottom]/tt:mask-b-from-46% mask-radial-from-94%  group-data-[side=bottom]/tt:mask-radial-at-bottom-left group-data-[side=bottom]/tt:mask-radial-farthest-side"
-]
+const side = computed(() =>
+  props.side || props.type === "required" ? "left" : "top"
+)
 
 const open = shallowRef<boolean>(false)
 </script>
 
 <template>
   <UTooltip
+    v-bind="tooltipProps"
     v-model:open="open"
-    :content="tooltipContent"
-    :arrow
-    :disabled="props.disabled"
     :text="tooltipText"
+    :content="{
+      side,
+    }"
     :ui="{
-      content:
-        'relative z-999! h-max! max-h-max! w-fit max-w-66 overflow-visible rounded-md!',
-      text: 'break-spaces w-fit text-pretty'
+      ...props?.ui,
+      content: cn(
+        'relative z-999! h-max! max-h-max! w-fit max-w-66 overflow-visible rounded-r-2xl',
+        tooltipProps.ui?.content,
+        {
+          ' bg-p1! text-pc ring-p3 ring-offset-p0': props.color === 'base',
+        }
+      ),
+      arrow: cn(
+        {
+          'fill-p1! stroke-p3': props.color === 'base',
+          'translate-y-0': ['top', 'bottom'].includes(
+            String(props.content?.side)
+          ),
+        },
+        tooltipProps.ui?.arrow
+      ),
+      text: cn('break-spaces w-fit text-pretty', tooltipProps.ui?.text),
     }"
     @click="open = true">
     <slot>

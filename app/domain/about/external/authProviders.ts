@@ -1,4 +1,5 @@
 import { getSummonerIcon } from "~/domain/utils/img"
+import type { ProviderType } from "~~/shared/types"
 
 export const supabaseProviders: SbProviderKey<string>[] = [
   "google",
@@ -6,12 +7,6 @@ export const supabaseProviders: SbProviderKey<string>[] = [
   "twitch"
 ]
 
-export interface ProviderType {
-  label: ProviderKey<string>
-  class: string
-  icon: string
-  avatar?: string | ((icon: string) => string)
-}
 export const providers: Record<
   Exclude<ProviderKey<string>, "email">,
   ProviderType
@@ -35,6 +30,6 @@ export const providers: Record<
   twitch: {
     label: "twitch",
     class: "",
-    icon: "i-twitch"
+    icon: "i-twitch-fill"
   }
 }

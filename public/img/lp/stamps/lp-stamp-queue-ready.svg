@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <title>LP queue ready ticket postage stamp</title>
+  <style>
+    .ink { stroke: #000000; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: #000000; stroke: none; }
+    .txt { fill: #000000; font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif; font-weight: 700; text-anchor: middle; }
+    .mono { fill: #000000; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; text-anchor: middle; }
+    .micro { font-size: 14px; }
+    .small { font-size: 18px; }
+    .label { font-size: 24px; }
+    .mid { font-size: 34px; }
+    .big { font-size: 72px; }
+  </style>
+  
+    <rect class="ink" x="48" y="104" width="324" height="212" rx="12" stroke-width="5"/>
+    <rect class="ink" x="70" y="126" width="280" height="168" rx="8" stroke-width="2"/>
+    <path class="ink" d="M142 126 L142 294" stroke-width="2" stroke-dasharray="6 8"/>
+    <path class="ink" d="M278 126 L278 294" stroke-width="2" stroke-dasharray="6 8"/>
+    <text class="txt label" x="210" y="164">QUEUE READY</text>
+    <text class="txt big" x="210" y="224">LP</text>
+    <text class="mono mid" x="106" y="226">A1</text>
+    <text class="mono small" x="314" y="212">2347</text>
+    <text class="mono small" x="314" y="238">34-1</text>
+    <text class="mono micro" x="210" y="276">MATCH PASS</text>
+  
+</svg>

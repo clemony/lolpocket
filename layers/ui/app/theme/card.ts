@@ -10,13 +10,15 @@ export const cardTheme = defineUiTheme({
   variants: {
     variant: {
       link: "",
-      ghost: "",
+      ghost: {
+        root: "text-pc"
+      },
       highlight: "",
       ring: "",
       outline: {
-        root: "text-pc ring-p3"
+        root: "bg-transparent text-pc ring-p3"
       },
-      default: {
+      solid: {
         footer: "text-pc",
         body: "text-pc",
         header: "text-pc",
@@ -31,7 +33,7 @@ export const cardTheme = defineUiTheme({
     }
   },
   defaultVariants: {
-    variant: "default"
+    variant: "solid"
   }
 })
 

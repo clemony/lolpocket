@@ -7,13 +7,12 @@ const { card } = defineProps<{
 }>()
 
 definePageMeta({
-  name: "card",
-  title: "Card Creator",
-  description: "Create a sharable pocket snapshot card.", //send your friends a pocket shot.
+  title: "Postcard Editor",
+  description: "Create & share pockets!", //send your friends a pocket shot.
 
   prefix: "Tools",
-  icon: "lucide:square-pen",
-  class: "**:stroke-[2.2]"
+  icon: "i-ui-postcard",
+  class: "**:stroke-[1.7%]!"
 })
 
 // todo nuxt bg here

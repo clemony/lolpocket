@@ -45,8 +45,6 @@ export function resolveRouteFolder(
 }
 
 const mapPocket = (p: Pocket): SortablePocket => {
-  const location = computed(() => pocketLocation(p.location))
-
   return {
     ...p,
     button: computed(() => ({

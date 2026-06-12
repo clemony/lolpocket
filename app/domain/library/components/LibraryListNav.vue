@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-const { library } = useApp().routes
+const { useRouteGroups } = routeStore()
+const { library } = safeObject(useRouteGroups().value)
 const nav = computed(() =>
-  library?.filter((l) => l.label !== useRoute().meta?.title)
+  library?.items?.filter((l) => l.label !== useRoute().meta?.title)
 )
 </script>
 

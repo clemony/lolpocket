@@ -11,7 +11,7 @@ import {
   deleteItem,
   openItem,
   separatorItem
-} from "~/domain/backpack/utils/folder/menuItems"
+} from "~/domain/app/utils/menuItems"
 import { useSortMenu } from "~/domain/backpack/utils/folder/sortMenu"
 import { pocketSidebarContextUi } from "~/domain/backpack/utils/folder/ui"
 import { duplicatePocket } from "~/domain/pocket/utils/manage/duplicate"

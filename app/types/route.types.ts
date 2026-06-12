@@ -14,13 +14,13 @@ import type { HTMLAttributes } from "vue"
 export type RouteReturn = Record<string, RouteItem[]>
 
 export interface RouteItem {
-  value: string | number | undefined
+  value?: string | number | undefined
   label: string
   icon?: string
   iconFill?: string
   type?: string
   class?: string
-  to: string
+  to?: string
   description?: string
   auth?: boolean
   id?: string
@@ -32,37 +32,28 @@ export interface RouteItem {
   keys?: string[]
   children?: RouteItem[]
   slot?: string
+  onClick?: () => void
   ui?: Record<string, HTMLAttributes["class"] | undefined>
 }
 
-/* export interface DropdownRouteItem extends RouteItem {
-  ui: DropdownMenuItem["ui"]
-}
-
-export interface ContextRouteItem extends RouteItem {
-  ui: ContextMenuItem["ui"]
-}
-
-export interface TabRouteItem extends RouteItem {
-  ui: TabsItem["ui"]
-}
- */
 type UiType = "label" | "separator"
 type ButtonTypes = ButtonProps["type"] & UiType
 
-export interface ButtonRouteItem extends Exclude<RouteItem, ButtonProps> {}
+export type ButtonRouteItem = RouteItem &
+  Omit<ButtonProps, "type"> & {
+    badge?: BadgeProps
+    item?: ButtonRouteItem
+    type?: ButtonTypes
+  }
 
 export type CommandRouteType = Omit<
   RouteItem & CommandPaletteItem,
   "to" | "value"
 >
-export interface CommandRouteItem
-  extends
-    Omit<
-      RouteItem,
-      "to" | "value" | "children" | "class" | "icon" | "label" | "ui"
-    >,
-    CommandPaletteItem {
+export interface CommandRouteEx extends Omit<
+  RouteItem,
+  "to" | "value" | "children" | "class" | "icon" | "label" | "ui"
+> {
   to?: string
   value?: string | number
   children?: CommandRouteItem[]
@@ -71,6 +62,7 @@ export interface CommandRouteItem
   ui?: CommandPaletteItem["ui"]
 }
 
+export type CommandRouteItem = CommandRouteEx & CommandPaletteItem
 export interface DropdownRouteItem extends Partial<
   Exclude<RouteItem, DropdownMenuItem>
 > {
@@ -89,6 +81,7 @@ export interface RouteGroup<T> {
   label?: string
   searchable?: boolean
   description?: string
+  class?: string
   component?: Component
   keys?: string[]
   highlight?: boolean

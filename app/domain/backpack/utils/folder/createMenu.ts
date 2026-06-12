@@ -1,9 +1,6 @@
 import type { DropdownMenuItem } from "@nuxt/ui"
+import { newFolderItem, newPocketItem } from "~/domain/app/utils/menuItems"
 import { magicPocketMenu } from "~/domain/backpack/utils/folder/magicPocketMenu"
-import {
-  newFolderItem,
-  newPocketItem
-} from "~/domain/backpack/utils/folder/menuItems"
 
 export const newItemOptions = (
   location: string | undefined,

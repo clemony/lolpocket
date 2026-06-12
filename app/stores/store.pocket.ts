@@ -157,27 +157,35 @@ export const pocketStore = defineStore(
     }
     const sidebarFolderRefs = ref<Record<string, boolean>>({})
 
+    function collapseAllFolders() {
+      for (const key in sidebarFolderRefs.value) {
+        sidebarFolderRefs.value[key] = false
+      }
+    }
     return {
       //
       downloadCard,
       pinned,
       pocketCardRef,
+      pocketsByKey,
+      pocketIndexes,
+      pockets,
+      tags,
+
+      // helpers
       updatePocketName,
       updatePocketSort,
       setPocketTags,
       setPocketPublic,
       togglePublic,
-      pockets,
-      tags,
-
-      // helpers
       getPocket,
       getRuneSet,
       getItemSet,
       getSpellSet,
-      pocketsByKey,
-      pocketIndexes,
       map,
+
+      //
+      collapseAllFolders,
       sidebarFolderRefs
     }
   },

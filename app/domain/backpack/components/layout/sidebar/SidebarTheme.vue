@@ -22,7 +22,7 @@ defineOptions({
       },
       fieldGroup: {
         base: cn(
-          'cursor-context relative w-full max-w-full overflow-hidden rounded-lg p-0 hover:divide-x! hover:bg-p1',
+          'cursor-context hover:divide-x-p3! divide-x-transparent! relative w-full max-w-full divide-x! overflow-hidden rounded-lg p-0 hover:bg-p1',
           /* dragging */
           'dragging:bg-p1/80 dragging:inset-ring! dragging:inset-ring-p2! dragging:backdrop-blur-sm',
 
@@ -35,7 +35,7 @@ defineOptions({
       },
       button: {
         base: cn(
-          'cursor-context relative my-0! grow gap-2.5 hover:bg-p1',
+          'cursor-context relative my-0! grow gap-2.5 border-transparent hover:bg-p1',
           /* badge label */
           '[&_.label]:w-full [&_.label]:truncate [&_.label]:text-start [&_.label]:align-baseline [&_.label]:text-md [&_.label]:font-medium [&_.label]:tracking-tight hover:[&_.label]:underline',
 

@@ -1,6 +1,6 @@
 import { SparkleIcon } from "#components"
 import type { ContextMenuItem } from "@nuxt/ui"
-import { separatorItem } from "~/domain/backpack/utils/folder/menuItems"
+import { separatorItem } from "~/domain/app/utils/menuItems"
 import { newRandomPocket } from "~/domain/pocket/utils/newRandomPocket"
 import { itemLabelUi } from "~~/layers/ui/app/variants/menu"
 

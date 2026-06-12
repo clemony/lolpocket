@@ -71,7 +71,7 @@ const date = computed(
         v-model:open="detailsOpen"
         :ui="{
           root: 'w-full shrink-0 overflow-hidden',
-          content: 'bg-p1 px-0'
+          content: 'border-b border-p3 px-0'
         }">
         <div class="flex items-center gap-2 px-3.5">
           <label

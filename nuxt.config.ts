@@ -8,6 +8,7 @@ const isProduction = process.env.NODE_ENV === "production"
 
 const components = [
   "about",
+  "app",
   "backpack",
   "editor",
   "pocket",
@@ -70,17 +71,18 @@ export default defineNuxtConfig({
   // app
   typescript: {
     strict: true,
-    typeCheck: process.env.NODE_ENV === "development"
+    typeCheck: process.env.NODE_ENV === "development",
+    tsConfig: {
+      compilerOptions: {
+        types: ["youtube"]
+      }
+    }
   },
 
   // UI
   components: [
     {
       path: "~/components",
-      pathPrefix: false
-    },
-    {
-      path: "~/layout/components",
       pathPrefix: false
     },
     ...components

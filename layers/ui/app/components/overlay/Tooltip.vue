@@ -5,7 +5,7 @@ import type {
   TooltipContentEmits,
   TooltipContentProps
 } from "reka-ui"
-import { Primitive } from "reka-ui"
+import { Primitive, TooltipArrow } from "reka-ui"
 
 const props = withDefaults(
   defineProps<
@@ -51,12 +51,12 @@ const emit = defineEmits(["pinned", "unpinned"])
 
 const open = shallowRef<boolean>(false)
 const pinned = shallowRef<boolean>(false)
-const anchor = ref({ x: 0, y: 0 })
-const placement = ref<{ side: Side; alignOffset: number }>({
+const anchor = shallowRef({ x: 0, y: 0 })
+const placement = shallowRef<{ side: Side; alignOffset: number }>({
   side: "bottom",
   alignOffset: 0
 })
-const flipOffset = ref({ x: 0, y: 0 })
+const flipOffset = shallowRef({ x: 0, y: 0 })
 const triggerRef = ref<unknown>(null)
 const contentRef = ref<HTMLElement | null>(null)
 let rafId = 0
@@ -72,6 +72,13 @@ const isPinned = computed(() => props?.pinned ?? pinned.value)
 const isTooltipOpen = computed(() =>
   props?.disabled ? false : props?.pinned ? true : open.value
 )
+const zeroOffset = { x: 0, y: 0 }
+const flipOffsets: Record<Side, { x: number; y: number }> = {
+  top: { x: 0, y: 3 },
+  right: { x: -3, y: 0 },
+  bottom: { x: 0, y: -3 },
+  left: { x: 3, y: 0 }
+}
 
 function resolveElement(target: unknown): Element | null {
   if (target instanceof Element) return target
@@ -90,18 +97,7 @@ function getInertiaFactor() {
 }
 
 function getFlipOffset(side: Side) {
-  const distance = 3
-
-  switch (side) {
-    case "top":
-      return { x: 0, y: distance }
-    case "right":
-      return { x: -distance, y: 0 }
-    case "bottom":
-      return { x: 0, y: -distance }
-    case "left":
-      return { x: distance, y: 0 }
-  }
+  return flipOffsets[side]
 }
 
 function getOppositeSide(side: Side): Side {
@@ -124,10 +120,42 @@ function playFlipSlide(side: Side) {
 
   flipRafId = requestAnimationFrame(() => {
     flipRafId = requestAnimationFrame(() => {
-      flipOffset.value = { x: 0, y: 0 }
+      flipOffset.value = zeroOffset
       flipRafId = 0
     })
   })
+}
+
+function setAnchor(x: number, y: number) {
+  if (anchor.value.x === x && anchor.value.y === y) return
+
+  anchor.value = { x, y }
+}
+
+function setPlacement(side: Side, alignOffset: number) {
+  const current = placement.value
+  if (current.side === side && current.alignOffset === alignOffset) return
+
+  placement.value = { side, alignOffset }
+}
+
+function getDistanceForSide(
+  side: Side,
+  top: number,
+  right: number,
+  bottom: number,
+  left: number
+) {
+  switch (side) {
+    case "top":
+      return top
+    case "right":
+      return right
+    case "bottom":
+      return bottom
+    case "left":
+      return left
+  }
 }
 
 function clearOpenTimer() {
@@ -177,51 +205,59 @@ function scheduleClose() {
 }
 
 function setAnchorFromPointer(x: number, y: number) {
-  anchor.value = { x, y }
+  setAnchor(x, y)
 
   const triggerEl = resolveElement(triggerRef.value)
   if (!triggerEl) {
-    placement.value = {
-      side: props?.side ?? "bottom",
-      alignOffset: props?.alignOffset ?? 0
-    }
+    setPlacement(props?.side ?? "bottom", props?.alignOffset ?? 0)
     return
   }
 
   const rect = triggerEl.getBoundingClientRect()
   const clampedX = Math.min(Math.max(x, rect.left), rect.right)
   const clampedY = Math.min(Math.max(y, rect.top), rect.bottom)
-  const distances: Record<Side, number> = {
-    top: clampedY - rect.top,
-    right: rect.right - clampedX,
-    bottom: rect.bottom - clampedY,
-    left: clampedX - rect.left
+  const topDistance = clampedY - rect.top
+  const rightDistance = rect.right - clampedX
+  const bottomDistance = rect.bottom - clampedY
+  const leftDistance = clampedX - rect.left
+  let nextCursorSide: Side = "top"
+  let nearestDistance = topDistance
+
+  if (rightDistance < nearestDistance) {
+    nextCursorSide = "right"
+    nearestDistance = rightDistance
   }
-  const nextCursorSide = (Object.entries(distances).sort(
-    (a, b) => a[1] - b[1]
-  )[0]?.[0] ?? "bottom") as Side
+  if (bottomDistance < nearestDistance) {
+    nextCursorSide = "bottom"
+    nearestDistance = bottomDistance
+  }
+  if (leftDistance < nearestDistance) {
+    nextCursorSide = "left"
+    nearestDistance = leftDistance
+  }
+
   const currentCursorSide = props?.flip
     ? getOppositeSide(placement.value.side)
     : placement.value.side
+  const currentDistance = getDistanceForSide(
+    currentCursorSide,
+    topDistance,
+    rightDistance,
+    bottomDistance,
+    leftDistance
+  )
   const cursorSide =
-    distances[currentCursorSide] <=
-    distances[nextCursorSide] + sideSwitchHysteresis
+    currentDistance <= nearestDistance + sideSwitchHysteresis
       ? currentCursorSide
       : nextCursorSide
   const side = props?.flip ? getOppositeSide(cursorSide) : cursorSide
 
   if (side === "top" || side === "bottom") {
-    placement.value = {
-      side,
-      alignOffset: clampedX - rect.left
-    }
+    setPlacement(side, clampedX - rect.left)
     return
   }
 
-  placement.value = {
-    side,
-    alignOffset: clampedY - rect.top
-  }
+  setPlacement(side, clampedY - rect.top)
 }
 
 function scheduleAnchorUpdate() {
@@ -394,6 +430,16 @@ const resolvedSide = computed(
 const disableClosingTrigger = computed(
   () => props?.disableClosingTrigger || props?.interactive
 )
+const arrowProps = computed(() =>
+  typeof props?.arrow === "object" ? props.arrow : { rounded: true }
+)
+const tooltipUi = computed(() => ({
+  content: cn("z-200", props?.ui?.content),
+  arrow: props?.ui?.arrow
+}))
+const motionStyle = computed(() => ({
+  transform: `translate3d(${flipOffset.value.x}px, ${flipOffset.value.y}px, 0)`
+}))
 
 watch(resolvedSide, (side, previousSide) => {
   if (!open.value) return
@@ -409,12 +455,12 @@ defineExpose({ pinned, isOpen: open })
   <UTooltip
     :disable-closing-trigger="true"
     :disabled
-    :arrow="arrow"
+    :arrow="false"
     :open="isTooltipOpen"
     :delay-duration="0"
     :disable-hoverable-content="!interactive"
     :reference="reference"
-    :ui="{ content: cn('z-200', props?.ui?.content), arrow: props?.ui?.arrow }"
+    :ui="tooltipUi"
     :content="contentProps"
     @update:open="onTooltipOpenChange">
     <Primitive
@@ -429,15 +475,13 @@ defineExpose({ pinned, isOpen: open })
       <slot :pinned />
     </Primitive>
 
-    <template #content>
+    <template #content="{ ui: tooltipContentUi }">
       <div
         ref="contentRef"
-        :style="{
-          transform: `translate3d(${flipOffset.x}px, ${flipOffset.y}px, 0)`
-        }"
+        :style="motionStyle"
         :class="
           cn(
-            'inline-flex items-center gap-1.5 align-baseline transition-transform duration-150 ease-out will-change-transform motion-reduce:transition-none',
+            'lp-tooltip-motion relative inline-flex items-center gap-1.5 align-baseline transition-transform duration-150 ease-out will-change-transform motion-reduce:transition-none',
             props?.ui?.content
           )
         ">
@@ -479,6 +523,10 @@ defineExpose({ pinned, isOpen: open })
               " />
           </div>
         </slot>
+        <TooltipArrow
+          v-if="arrow"
+          v-bind="arrowProps"
+          :class="tooltipContentUi.arrow({ class: props?.ui?.arrow })" />
       </div>
     </template>
   </UTooltip>

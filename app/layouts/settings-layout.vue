@@ -31,6 +31,9 @@ const settings = computed(
           <UPageHeader :title="String($route.meta?.title)" />
 
           <UTheme
+            :props="{
+              switch: { color: 'card' }
+            }"
             :ui="{
               form: {
                 base: 'flex w-full max-w-170 flex-col gap-12'
@@ -38,9 +41,19 @@ const settings = computed(
               formField: {
                 root: 'max-w-full min-w-90 grow',
                 container: 'flex flex-col gap-4',
-                wrapper: ''
+                wrapper: '',
+                hint: 'hidden'
               },
-              input: { root: 'w-full' }
+              input: { root: 'w-full' },
+              card: {
+                root: 'h-max! w-full rounded-xl bg-transparent group-hover:ring-pc/70!',
+                body: 'pointer-events-none grid w-full items-center gap-3 overflow-hidden p-4!'
+              },
+              switch: {
+                root: 'py-4!',
+                container: 'mt-0 self-center',
+                label: 'pr-2'
+              }
             }">
             <FormWrapper>
               <slot />

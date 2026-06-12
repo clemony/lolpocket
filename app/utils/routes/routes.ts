@@ -6,7 +6,7 @@ export const buildRouteItem = (record: RouteRecordNormalized): RouteItem => ({
   label: String(record.meta?.title || record.name),
   description: String(record.meta?.description),
   value: String(record.meta?.title || record.name),
-  iconFill: asString(record.meta?.fillIcon) ?? undefined,
+  iconFill: asString(record.meta?.iconFill) ?? undefined,
   icon: asString(record.meta?.icon) ?? undefined,
   to: record.path ?? undefined,
   class: asString(record.meta?.class) ?? undefined,

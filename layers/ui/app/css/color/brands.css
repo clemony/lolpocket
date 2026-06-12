@@ -1,7 +1,12 @@
-
-
+@theme {
+  --ui-riot: #000;
+  --ui-google: oklch(57% 40% 23deg);
+  --ui-discord: oklch(58% 48% 273deg);
+  --ui-twitch: oklch(58% 42% 300deg);
+}
 @theme inline {
-  --color-google: oklch(57% 40% 23deg);
-  --color-discord: oklch(58% 48% 273deg);
-  --color-twitch: oklch(57% 56% 297deg);
+  --color-google: var(--ui-google);
+  --color-discord: var(--ui-discord);
+  --color-twitch: var(--ui-twitch);
+  --color-riot: var(--ui-riot);
 }

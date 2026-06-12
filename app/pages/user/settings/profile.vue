@@ -5,13 +5,13 @@ definePageMeta({
   title: "Profile",
   order: 2,
   description:
-    "Set your public profile display settings and hide your annoyances.",
+    "Set your publically available info and how others see you on lolpocket.",
   icon: "i-lucide-circle-user-round",
   layout: "settings-layout",
   class: "",
   path: "/settings/profile",
   auth: true,
-  prefix: "Settings"
+  prefix: "Settings",
   /* middleware: 'confirm-auth', */
 })
 </script>

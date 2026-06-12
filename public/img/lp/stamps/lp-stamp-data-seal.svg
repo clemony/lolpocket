@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <title>LP global benchmark hex postage stamp</title>
+  <style>
+    .ink { stroke: #000000; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: #000000; stroke: none; }
+    .txt { fill: #000000; font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif; font-weight: 700; text-anchor: middle; }
+    .mono { fill: #000000; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; text-anchor: middle; }
+    .micro { font-size: 14px; }
+    .small { font-size: 18px; }
+    .label { font-size: 24px; }
+    .mid { font-size: 34px; }
+    .big { font-size: 72px; }
+  </style>
+  
+    <path class="ink" d="M210 58 L342 132 L342 288 L210 362 L78 288 L78 132 Z" stroke-width="5"/>
+    <path class="ink" d="M210 86 L318 146 L318 274 L210 334 L102 274 L102 146 Z" stroke-width="2" stroke-dasharray="7 8"/>
+    <text class="txt small" x="210" y="142">GLOBAL</text>
+    <text class="txt label" x="210" y="184">BENCHMARK</text>
+    <path class="ink" d="M140 206 L280 206" stroke-width="3"/>
+    <text class="txt big" x="210" y="260">LP</text>
+    <text class="mono micro" x="210" y="302">VS EVERYONE</text>
+    <path class="fill" d="M128 204 L129.98 208.02 L134 210 L129.98 211.98 L128 216 L126.02 211.98 L122 210 L126.02 208.02 Z"/>
+    <path class="fill" d="M292 204 L293.98 208.02 L298 210 L293.98 211.98 L292 216 L290.02 211.98 L286 210 L290.02 208.02 Z"/>
+  
+</svg>

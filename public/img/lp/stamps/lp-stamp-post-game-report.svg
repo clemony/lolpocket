@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <title>LP post game report postage stamp</title>
+  <style>
+    .ink { stroke: #000000; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: #000000; stroke: none; }
+    .txt { fill: #000000; font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif; font-weight: 700; text-anchor: middle; }
+    .mono { fill: #000000; font-family: "Courier New", ui-monospace, monospace; font-weight: 700; text-anchor: middle; }
+    .micro { font-size: 14px; }
+    .small { font-size: 18px; }
+    .label { font-size: 24px; }
+    .mid { font-size: 34px; }
+    .big { font-size: 72px; }
+  </style>
+  
+    <rect class="ink" x="44" y="76" width="332" height="268" rx="18" stroke-width="5" stroke-dasharray="14 8"/>
+    <rect class="ink" x="66" y="98" width="288" height="224" rx="10" stroke-width="3"/>
+    <path class="ink" d="M66 126 L66 98" stroke-width="3"/>
+<path class="ink" d="M66 98 L94 98" stroke-width="3"/>
+<path class="ink" d="M326 98 L354 98" stroke-width="3"/>
+<path class="ink" d="M354 98 L354 126" stroke-width="3"/>
+<path class="ink" d="M66 294 L66 322" stroke-width="3"/>
+<path class="ink" d="M66 322 L94 322" stroke-width="3"/>
+<path class="ink" d="M326 322 L354 322" stroke-width="3"/>
+<path class="ink" d="M354 294 L354 322" stroke-width="3"/>
+    <text class="txt label" x="210" y="136">POST GAME</text>
+    <text class="txt mid" x="210" y="171">REPORT</text>
+    <path class="ink" d="M104 200 L316 200" stroke-width="3"/>
+    <path class="ink" d="M136 266 L210 218 L284 266 M136 266 L284 266 M164 248 L256 248" stroke-width="3"/>
+    <path class="ink" d="M210 218 L210 266" stroke-width="3"/>
+    <text class="mono micro" x="116" y="294">KDA</text>
+    <text class="mono micro" x="210" y="294">GOLD</text>
+    <text class="mono micro" x="304" y="294">OBJ</text>
+    <text class="txt micro" x="210" y="328">LP MATCH MAIL</text>
+  
+</svg>

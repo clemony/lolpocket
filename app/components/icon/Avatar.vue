@@ -23,17 +23,17 @@ const props = withDefaults(defineProps<AvatarProps & AvatarWrapperProps>(), {
 //i-eos-icons-hourglass
 const emit = defineEmits(["loaded"])
 const tt = computed(() => safeObject(props.tooltip))
-const ava = computed(() => props)
+const ap = computed(() => props)
 
 const loaded = ref(false)
 const resolvedSrc = shallowRef<string | undefined>(undefined)
 let preloadToken = 0
 
 const delegated = reactiveOmit(props, "class", "tooltip", "effects", "spinner")
-const hasSrc = computed(() => Boolean(ava.value.src?.trim()))
+const hasSrc = computed(() => Boolean(ap.value.src?.trim()))
 
 watch(
-  () => ava.value.src,
+  () => ap.value.src,
   (src) => {
     preloadToken += 1
     const currentToken = preloadToken
@@ -87,8 +87,8 @@ const ui = computed<NonNullable<AvatarProps["ui"]>>(
       {
         root: cn(
           "group/icon relative",
-          ava.value.round ? "rounded-full" : "rounded-lg",
-          ava.value.ui?.root,
+          ap.value.round ? "rounded-full" : "rounded-lg",
+          ap.value.ui?.root,
           { "z-5! hover:z-5!": isPinned.value }
         ),
 
@@ -96,26 +96,26 @@ const ui = computed<NonNullable<AvatarProps["ui"]>>(
           "z-1 size-[inherit] rounded-[inherit] shadow-sm drop-shadow-sm drop-shadow-black/10",
           {
             "scale-105 ring ring-n0/60! ring-offset-p1":
-              isPinned.value && ava.value.effects !== false,
+              isPinned.value && ap.value.effects !== false,
             "ring-offset-3!":
               isPinned.value &&
-              ava.value.effects !== false &&
-              ["md", "lg", "xl"].includes(String(ava.value.size)),
+              ap.value.effects !== false &&
+              ["md", "lg", "xl"].includes(String(ap.value.size)),
             "hover:scale-115": ["xs", "sm", "2xs"].includes(
-              String(ava.value.size)
+              String(ap.value.size)
             ),
             "repeat-1 scale-115 animate-heartbeat-sm ring-offset-2! not-hover:duration-500!":
-              ["xs", "sm", "2xs"].includes(String(ava.value.size)) &&
+              ["xs", "sm", "2xs"].includes(String(ap.value.size)) &&
               isPinned.value &&
-              ava.value.effects !== false
+              ap.value.effects !== false
           }
         ),
         icon: cn("size-5 opacity-60", {
           "pointer-events-none absolute size-4 animate-spin place-self-center! text-nc":
-            ava.value.spinner
+            ap.value.spinner
         })
       },
-      ava.value?.ui
+      ap.value?.ui
     ) as NonNullable<AvatarProps["ui"]>
 )
 </script>
@@ -149,7 +149,7 @@ const ui = computed<NonNullable<AvatarProps["ui"]>>(
         :alt="tt.label ?? props.alt ?? 'an icon'"
         @click="handlePinClick" />
       <LazyUSkeleton
-        v-if="hasSrc && !ava.spinner && !loaded"
+        v-if="hasSrc && !ap.spinner && !loaded"
         class="pointer-events-none block size-full rounded-[inherit]" />
       <slot />
     </div>

@@ -9,10 +9,8 @@ export interface BackpackInject {
   view: Ref<ViewMode>
   folderId: Ref<string>
   folderName: Ref<string>
-  sidebarFolderRefs: Ref<Record<string, boolean>>
   onFolderUpdate: (e: AcceptableValue | undefined) => void
   toggleSidebar: () => void
-  collapseAllFolders: () => void
   path: Ref<string | null | undefined>
 }
 
@@ -47,10 +45,8 @@ export function useBackpackProvider(): BackpackInject {
 
   const folderId = ref<string>("folders")
   const folderName = ref<string>("Backpack")
-  const activeTab = ref<string>("Backpack")
 
   const backpackFolderOpen = ref<boolean>(true)
-  const sidebarFolderRefs = ref<Record<string, boolean>>({})
 
   watch(
     () => route.path,
@@ -76,18 +72,9 @@ export function useBackpackProvider(): BackpackInject {
     id.value = value
   }
 
-  function collapseAllFolders() {
-    backpackFolderOpen.value = false
-    for (const key in sidebarFolderRefs.value) {
-      sidebarFolderRefs.value[key] = false
-    }
-  }
-
   return {
     sidebarCollapsed,
     toggleSidebar,
-    sidebarFolderRefs,
-    collapseAllFolders,
     onFolderUpdate,
     folderId,
     folderName,

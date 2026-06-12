@@ -23,7 +23,7 @@ export const feedCategories: Record<FeedKey, FeedProps> = {
     label: "Esports",
     id: "Esports",
     trailingIcon: "i-proicons-trophy",
-    ui: { trailingIcon: "**:stroke-[1.8] scale-110" }
+    ui: { trailingIcon: "**:stroke-[7.5%]! scale-110" }
   },
   Gameplay: {
     label: "Gameplay",
@@ -40,6 +40,6 @@ export const feedCategories: Record<FeedKey, FeedProps> = {
     label: "Humor",
     id: "Humor",
     trailingIcon: "i-proicons-emoji-laughter",
-    ui: { trailingIcon: "scale-110 **:stroke-[1.8] " }
+    ui: { trailingIcon: "scale-110 **:stroke-[7.5%]! " }
   }
 }

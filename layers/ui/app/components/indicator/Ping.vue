@@ -1,47 +1,44 @@
 <script lang="ts" setup>
-const {
-  class: className,
-  color,
-  size = "md",
-  inset,
-  inline = false
-} = defineProps<{
-  class?: HTMLAttributes["class"]
-  color: string
-  size?: string
-  inset?: boolean
-  inline?: boolean
-}>()
+import type { ChipProps } from "@nuxt/ui"
+
+const props = withDefaults(
+  defineProps<
+    ChipProps & {
+      size?: string
+    }
+  >(),
+  {
+    color: "diminuendo",
+    size: "md",
+    inset: true
+  }
+)
+
+const delegated = reactiveOmit(props, "class", "color")
 </script>
 
 <template>
-  <div
-    :class="
-      cn(
-        'z-2 inline-grid place-items-center rounded-full *:[grid-area:1/1]',
-        {
-          'before:absolute before:z-0 before:size-full before:scale-160 before:place-self-center before:rounded-full before:bg-p0':
-            inset
-        },
-        inline ? 'relative' : 'absolute',
-        className
-      )
-    ">
-    <div
-      :class="
-        cn(
-          'z-1 status animate-ping rounded-full saturate-110',
-          twStatusSize[size],
-          twBg[color]
-        )
-      " />
-    <div
-      :class="
-        cn(
-          'z-2 status rounded-full saturate-110',
-          twStatusSize[size],
-          twBg[color]
-        )
-      " />
-  </div>
+  <UChip
+    v-bind="delegated"
+    :ui="{ ...props.ui, base: cn('ring-2', props.ui?.base) }">
+    <template #content>
+      <div class="anchor relative size-full rounded-full bg-[#fff]">
+        <div
+          :class="
+            cn(
+              'absolute z-1 status size-full animate-ping rounded-full saturate-110',
+              twBg[props.color]
+            )
+          " />
+        <div
+          :class="
+            cn(
+              'absolute z-2 status size-full rounded-full saturate-110',
+              twBg[props.color]
+            )
+          " />
+      </div>
+    </template>
+    <slot />
+  </UChip>
 </template>

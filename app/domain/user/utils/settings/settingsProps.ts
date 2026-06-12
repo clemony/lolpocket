@@ -1,4 +1,5 @@
 import {
+  LazyAccountPanel,
   LazyAccountSettings,
   LazyAppSettings,
   LazyCommunicationSettings,
@@ -24,6 +25,34 @@ export const tabContent: Record<string, SettingsContent> = {
   },
   Account: {
     component: LazyAccountSettings,
+    onSubmit: (p) => saveAccount(p)
+  },
+  Profile: {
+    component: LazyProfileSettings,
+    onSubmit: (p) => saveProfile(p)
+  },
+  Theme: {
+    component: LazyThemeSettings,
+    onSubmit: (p) => saveAccount(p)
+  },
+  Feed: {
+    component: LazyFeedSettings,
+    onSubmit: (p) => saveAccount(p)
+  },
+  Communication: {
+    component: LazyCommunicationSettings,
+    onSubmit: (p) => saveAccount(p)
+  }
+}
+
+//sidebar
+export const sidebarTabContent: Record<string, SettingsContent> = {
+  App: {
+    component: LazyAppSettings,
+    onSubmit: (p) => saveAccount(p)
+  },
+  Account: {
+    component: LazyAccountPanel,
     onSubmit: (p) => saveAccount(p)
   },
   Profile: {

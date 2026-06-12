@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { Tooltip } from "#components"
 import type { ButtonProps, InputProps } from "@nuxt/ui"
 import { generateName } from "~/domain/utils/generateStrings"
 
@@ -12,7 +11,7 @@ const props = defineProps<
   }
 >()
 
-const emit = defineEmits(["update:model-value"])
+const emit = defineEmits(["update:modelValue"])
 
 const delegated = reactiveOmit(props, "editable", "randomizable", "actions")
 
@@ -24,12 +23,7 @@ const element = useTemplateRef<HTMLElement & { input: HTMLInputElement }>(
 
 const input = computed(() => element.value?.input)
 
-function focusInput() {
-  void nextTick(() => {
-    input?.value?.focus()
-    input.value?.select()
-  })
-}
+const { focused } = useFocus(input)
 
 const modelValue = defineModel("modelValue", {
   default: ""
@@ -38,34 +32,37 @@ const modelValue = defineModel("modelValue", {
 function randomizeLabel() {
   if (!modelValue.value) return
   modelValue.value = generateName()
-  focusInput()
+  focus()
 }
+
 watch(editing, (value) => {
   if (!value) return
-
   modelValue.value = props.modelValue ?? ""
-  focusInput()
+  focused.value = true
 })
 
 onMounted(() => {
   if (props.modelValue) modelValue.value = props.modelValue
-  focusInput()
+  focused.value = true
 })
 
 function onComplete() {
-  emit("update:model-value", modelValue.value)
+  emit("update:modelValue", modelValue.value)
   editing.value = false
 }
 
+function precheck(e: Event) {
+  if (focused.value === true) {
+    e.preventDefault()
+    onComplete()
+  }
+}
+
+onClickOutside(element, (event: MouseEvent) => precheck(event))
+onKeyStroke("escape", (e) => precheck(e))
+onKeyDown("enter", (e) => precheck(e))
 defineExpose({
   modelValue: readonly(computed(() => modelValue.value))
-})
-
-onClickOutside(element, () => onComplete())
-
-onKeyStroke("escape", (e) => {
-  e.preventDefault()
-  onComplete()
 })
 </script>
 
@@ -74,8 +71,7 @@ onKeyStroke("escape", (e) => {
     v-bind="delegated"
     ref="element"
     :data-editing="editing"
-    @keydown.enter.prevent="onComplete"
-    @keydown.escape.prevent="onComplete"
+    @focusout="onComplete"
     @blur="onComplete">
     <template #trailing>
       <div class="flex w-fit! shrink-0 items-center gap-px">

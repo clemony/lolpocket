@@ -33,6 +33,17 @@ export const switchTheme = defineUiTheme({
           "inline-flex size-full grow items-center justify-between gap-2 text-md leading-7 font-semibold! capitalize",
         container: "mt-2 self-start group-hover:before:ring-pc/80",
         description: "text-sm text-n5"
+      },
+
+      list: {
+        root: "flex cursor-pointer items-center gap-2 rounded-xl px-4 py-3 hover:bg-p2 hover:shadow-none hover:inset-ring hover:inset-ring-p3/80",
+        base: "focus-visible:outline-neutral data-[state=checked]:bg-neutral",
+        wrapper: "w-full grow",
+        icon: "group-data-[state=checked]:text-highlighted",
+        label:
+          "inline-flex size-full grow items-center justify-between gap-2 text-md leading-7 font-semibold! capitalize",
+        container: "g mt-2 self-start",
+        description: "text-sm text-n5"
       }
     }
   },
