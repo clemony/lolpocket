@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 05/27/2026 01:35:56 PM CDT
+// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
 
 export const statToItem: Record<string, number[]> = {
   "flatMovespeed": [
@@ -379,6 +379,7 @@ export const statToItem: Record<string, number[]> = {
     3011,
     3040,
     3041,
+    3087,
     3089,
     3100,
     3102,
@@ -1001,8 +1002,11 @@ export const statToItem: Record<string, number[]> = {
   ],
   "omnivamp": [
     1055,
+    1086,
     2517,
+    3008,
     3146,
+    3168,
     224403,
     226630,
     447103
@@ -1152,7 +1156,6 @@ export const statToItem: Record<string, number[]> = {
     6697,
     6698,
     6699,
-    6701,
     223185,
     224004,
     446691,
@@ -1234,6 +1237,7 @@ export const statToItem: Record<string, number[]> = {
     323504,
     443054,
     443055,
+    443081,
     443083,
     443090,
     443193,

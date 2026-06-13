@@ -232,6 +232,7 @@ export const icon = {
     "paint-bucket": "lucide:paint-bucket", //'i-paint-bucket'
     paintbrush: "lucide:paintbrush-vertical", //'i-paintbrush'
     "panel-dash": "lucide:panel-top-dashed", //'i-panel-dash'
+    paw: "lucide:paw-print", //i-lucide-paw-print
 
     loading: "mingcute:loading-fill", //'i-loading'
     party: "lucide:party-popper", //'i-party'
@@ -254,6 +255,6 @@ export const icon = {
     energy: "hugeicons:zap", //'i-energy'
     fury: "hugeicons:fire-02", //'i-fury'
     pathing: "hugeicons:cursor-circle-selection-02", //'i-pathing'
-    range: "hugeicons:target-03" //'i-range'
-  }
+    range: "hugeicons:target-03", //'i-range'
+  },
 }

@@ -33,7 +33,7 @@
     "percentMovespeed": 4,
     "abilityHaste": 20
   },
-  "description": "80 Ability Power\n20 Ability Haste\n4% Move Speed\n\nHelix\nMoving, attacking, and dealing damage with an ability grants 30 Energized stacks and triggers Energized Attacks if it is ready.\n\nSpiral Out\nOn Energized Attack, gain a Rune stack for the rest of the round. Then fire a missile at the target for each Rune stack, dealing  magic damage.",
+  "description": "80 Ability Power\n20 Ability Haste\n4% Move Speed\n\nHelix\nMoving, attacking, and dealing damage with an ability grants 30 Energized stacks and triggers Energized Actions if it is ready.\n\nSpiral Out\nOn Energized Action, gain a Rune stack for the rest of the round. Then fire a missile at the target for each Rune stack, dealing  magic damage.",
   "gold": {
     "base": 2750,
     "purchasable": true,

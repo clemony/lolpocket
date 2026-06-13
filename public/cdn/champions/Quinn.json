@@ -166,7 +166,7 @@
       "affects": "Self",
       "castTime": "0.25",
       "cooldown": "3",
-      "cost": "100 / 50 / 0",
+      "cost": "50 / 25 / 0",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn channels for 2 seconds, signaling Valor to pair up. Upon completion, he picks her up and they unite, increasing her total movement speed, granting her ghosting, and allowing her to cast Skystrike. Behind Enemy Lines can be recast after 0.5 seconds during the channel.</p>",
@@ -204,7 +204,7 @@
       "blurb": "Active:  Quinn disbands from  Valor and rains arrows down around her, dealing physical damage to nearby enemies.",
       "castTime": "none",
       "cooldown": "3",
-      "cost": "100 / 50 / 0",
+      "cost": "50 / 25 / 0",
       "damageType": "Physical damage",
       "effectRadius": "700",
       "effects": [

@@ -1,12 +1,14 @@
-// Updated Patch 16.10 - 05/27/2026 01:35:56 PM CDT
+// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
 export const bootIndex: number[] = [
   1001,
   3006,
+  3008,
   3009,
   3020,
   3047,
   3111,
   3158,
+  3168,
   3170,
   3171,
   3173,
@@ -30,9 +32,11 @@ export const rankToItem: Record<string, number[]> = {
     1056,
     1082,
     1083,
+    1086,
     1101,
     1102,
     1103,
+    1120,
     2049,
     2050,
     2051,
@@ -125,7 +129,6 @@ export const rankToItem: Record<string, number[]> = {
     2525,
     2526,
     2530,
-    3002,
     3003,
     3004,
     3026,
@@ -232,12 +235,12 @@ export const rankToItem: Record<string, number[]> = {
     6697,
     6698,
     6699,
-    6701,
     8010,
     8020,
     223039,
     224004,
-    228001
+    228001,
+    228009
   ],
   "Special": [
     1111,

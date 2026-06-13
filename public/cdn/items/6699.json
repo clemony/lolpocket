@@ -52,10 +52,10 @@
   },
   "description": "55 Attack Damage\n10 Lethality\n10 Ability Haste\n\nGalvanize\nDamaging an Enemy Champions with an ability triggers Energized if it is ready.\n\nFirmament\nYour Energized Attack deals % target's Current Health as bonus physical damage and grants you bonus Lethality for 4 seconds.",
   "gold": {
-    "base": 863,
+    "base": 963,
     "purchasable": true,
-    "total": 2900,
-    "sell": 2030
+    "total": 3000,
+    "sell": 2100
   },
   "maps": [
     11,

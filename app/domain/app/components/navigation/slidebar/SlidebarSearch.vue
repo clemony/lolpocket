@@ -30,7 +30,13 @@ const fuse = computed(
 
 const results = computed(() => {
   const term = query.value?.trim()
-  return term ? fuse.value.search(term, { limit: 50 }).map((r) => r.item) : []
+  return term
+    ? fuse.value
+        .search(term, {
+          /* limit: 50  */
+        })
+        .map((r) => r.item)
+    : []
 })
 
 const groupedResults = computed(() =>
@@ -118,9 +124,10 @@ function onClick(item: SidebarSearchEntry) {
           <template #trailing>
             <LazyInputClear
               color="neutral"
-              variant="outline"
+              variant="ghost"
               :ui="{
-                base: 'ring-0 inset-ring-0 group-hover/label:**:text-nc! hover:bg-transparent! hover:fx-0!',
+                base: 'ring-0 inset-ring-0 **:text-nc! group-hover/label:**:text-nc! hover:bg-transparent! hover:fx-0!',
+                leadingIcon: 'text-nc!',
               }"
               @clear-input="query = ''" />
           </template>
@@ -128,13 +135,15 @@ function onClick(item: SidebarSearchEntry) {
       </div>
     </template>
     <template #default>
-      <div class="grid auto-rows-max grid-cols-1 gap-1 pt-36 pb-6">
-        <template v-if="results.length">
-          <UTooltip
-            v-for="(item, i) in results"
-            :key="i"
-            arrow
-            :text="groups[item.group]?.tip">
+      <UScrollArea
+        v-if="results.length"
+        :virtualize="{
+          estimateSize: 42,
+        }"
+        :items="results"
+        class="grid h-[100vh] max-h-[100vh] auto-rows-max grid-cols-1 gap-1 pt-36 pb-6">
+        <template #default="{ item }">
+          <UTooltip arrow :text="groups[item.group]?.tip">
             <UButton
               variant="ghost"
               size="xl"
@@ -195,72 +204,71 @@ function onClick(item: SidebarSearchEntry) {
             </UButton>
           </UTooltip>
         </template>
+      </UScrollArea>
 
-        <template v-else>
-          <ul class="mb-12 w-full space-y-12">
-            <li class="flex w-full flex-col gap-14">
-              <div class="px-2">
-                <Separator label="Summoner Search" color="p4" />
-              </div>
-              <ul
-                class="text-balanced inline-block w-fit justify-center self-center rounded-2xl px-6 py-4 text-center align-baseline text-sm leading-6.5 font-medium text-n3 inset-ring inset-ring-p4/60">
-                <li>Start a text search with the</li>
-                <li>
-                  summoner's name, then
-                  <UKbd value="tab" class="mx-px inline-flex bg-p0/60" />
-                  to the
-                </li>
-                <li>tag field.</li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="w-full space-y-6">
-            <li class="w-full">
-              <ul class="flex w-full flex-col gap-4">
-                <li class="px-2">
-                  <Separator label="Categories" color="p4" />
-                </li>
-                <UButton
-                  v-for="(item, i) in Object.values(groups)"
-                  :key="i"
-                  size="xl"
-                  block
+      <div v-else class="grid auto-rows-max grid-cols-1 gap-1 pt-36 pb-6">
+        <ul class="mb-12 w-full space-y-12">
+          <li class="flex w-full flex-col gap-14">
+            <div class="px-2">
+              <Separator label="Summoner Search" color="p4" />
+            </div>
+            <ul
+              class="text-balanced inline-block w-fit justify-center self-center rounded-2xl px-6 py-4 text-center align-baseline text-sm leading-6.5 font-medium text-n3 inset-ring inset-ring-p4/60">
+              <li>Start a text search with the</li>
+              <li>
+                summoner's name, then
+                <UKbd value="tab" class="mx-px inline-flex bg-p0/60" />
+                to the
+              </li>
+              <li>tag field.</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="w-full space-y-6">
+          <li class="w-full">
+            <ul class="flex w-full flex-col gap-4">
+              <li class="px-2">
+                <Separator label="Categories" color="p4" />
+              </li>
+              <UButton
+                v-for="(item, i) in Object.values(groups)"
+                :key="i"
+                size="xl"
+                block
+                :ui="{
+                  base: 'rounded-xl shadow-none! drop-shadow-none! hover:bg-p2! hover:inset-ring! hover:inset-ring-p4/60',
+                }"
+                variant="ghost"
+                as="li"
+                @click="query = item.label">
+                <UUser
+                  size="sm"
                   :ui="{
-                    base: 'rounded-xl shadow-none! drop-shadow-none! hover:bg-p2! hover:inset-ring! hover:inset-ring-p4/60',
+                    ...item.ui,
+                    root: 'w-full gap-3',
+                    name: 'capitalize',
+                    wrapper: 'text-start',
                   }"
-                  variant="ghost"
-                  as="li"
-                  @click="query = item.label">
-                  <UUser
-                    size="sm"
-                    :ui="{
+                  :avatar="{
+                    icon: item.icon,
+                    ui: {
                       ...item.ui,
-                      root: 'w-full gap-3',
-                      name: 'capitalize',
-                      wrapper: 'text-start',
-                    }"
-                    :avatar="{
-                      icon: item.icon,
-                      ui: {
-                        ...item.ui,
-                        icon: cn(
-                          'z-3! size-4.5 text-nc! **:text-nc!',
-                          item.ui?.icon
-                        ),
-                      },
-                    }"
-                    :name="item.label"
-                    :description="item.description" />
-                </UButton>
-              </ul>
-            </li>
+                      icon: cn(
+                        'z-3! size-4.5 text-nc! **:text-nc!',
+                        item.ui?.icon
+                      ),
+                    },
+                  }"
+                  :name="item.label"
+                  :description="item.description" />
+              </UButton>
+            </ul>
+          </li>
 
-            <li class="border-t border-p4/50 px-3 py-6 font-medium opacity-90">
-              Know what you're looking for? Search directly by a name or
-              keyword.
-            </li>
-          </ul>
-        </template>
+          <li class="border-t border-p4/50 px-3 py-6 font-medium opacity-90">
+            Know what you're looking for? Search directly by a name or keyword.
+          </li>
+        </ul>
       </div>
     </template>
   </SlidebarWrapper>

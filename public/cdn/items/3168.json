@@ -6,7 +6,7 @@
     {
       "id": 3008,
       "name": "Gluttonous Greaves",
-      "gold": 950
+      "gold": 1000
     }
   ],
   "specialRecipe": 0,
@@ -33,12 +33,12 @@
     "flatMovespeed": 45,
     "omnivamp": 4
   },
-  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 1% Omnivamp on Champion takedown, stacking up to 6 times.\n\nNow and Forever\nWhile above half Health, deal 5% increased damage. \n\nWhile below half Health, gain 15% increased healing, shielding, and regeneration.",
+  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 0.6% Omnivamp on Champion takedown, stacking up to 10 times.\n\nNow and Forever\nWhile above half Health, deal 5% increased damage. \n\nWhile below half Health, gain 15% increased healing, shielding, and regeneration.",
   "gold": {
     "base": 0,
     "purchasable": true,
-    "total": 950,
-    "sell": 665
+    "total": 1000,
+    "sell": 700
   },
   "maps": [
     11

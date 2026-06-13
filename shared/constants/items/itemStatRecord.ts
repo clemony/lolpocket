@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 05/27/2026 01:35:56 PM CDT
+// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
 
 export interface StatRecord {
   "abilityHaste"?: number;
@@ -109,8 +109,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackDamage": 7
   },
   "1086": {
-    "attackDamage": 6,
-    "attackSpeed": 15
+    "attackDamage": 8,
+    "attackSpeed": 15,
+    "omnivamp": 1.5
   },
   "1111": {
     "armor": 25,
@@ -122,9 +123,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "tenacity": 30
   },
   "1120": {
-    "magicResistance": 10,
-    "health": 110,
-    "armor": 10
+    "armor": 10,
+    "health": 140,
+    "magicResistance": 10
   },
   "1500": {
     "armorPenetration": 30
@@ -202,9 +203,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityPower": 30
   },
   "2510": {
-    "abilityPower": 70,
-    "attackSpeed": 25,
-    "health": 350,
+    "abilityPower": 60,
+    "attackSpeed": 20,
+    "health": 300,
     "abilityHaste": 20
   },
   "2512": {
@@ -259,8 +260,8 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "armor": 30
   },
   "3002": {
-    "armor": 40,
     "health": 250,
+    "armor": 40,
     "percentMovespeed": 4
   },
   "3003": {
@@ -281,7 +282,8 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "flatMovespeed": 45
   },
   "3008": {
-    "flatMovespeed": 45
+    "flatMovespeed": 45,
+    "omnivamp": 4
   },
   "3009": {
     "flatMovespeed": 55
@@ -465,7 +467,8 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "percentMovespeed": 4
   },
   "3087": {
-    "attackDamage": 45,
+    "abilityPower": 45,
+    "attackDamage": 40,
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
@@ -494,7 +497,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "3100": {
     "abilityPower": 100,
-    "percentMovespeed": 4,
+    "percentMovespeed": 6,
     "abilityHaste": 10
   },
   "3102": {
@@ -671,7 +674,8 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityHaste": 15
   },
   "3168": {
-    "flatMovespeed": 45
+    "flatMovespeed": 45,
+    "omnivamp": 4
   },
   "3170": {
     "flatMovespeed": 65
@@ -1058,7 +1062,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityPower": 35,
     "healAndShieldPower": 10,
     "manaRegen": 125,
-    "abilityHaste": 15
+    "abilityHaste": 10
   },
   "6617": {
     "abilityPower": 25,
@@ -1195,7 +1199,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityHaste": 20
   },
   "6697": {
-    "attackDamage": 60,
+    "attackDamage": 55,
     "lethality": 18,
     "abilityHaste": 10
   },
@@ -1206,7 +1210,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "6699": {
     "attackDamage": 55,
-    "lethality": 18,
+    "lethality": 10,
     "abilityHaste": 10
   },
   "6700": {
@@ -1215,8 +1219,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "percentMovespeed": 5
   },
   "6701": {
-    "attackDamage": 55,
-    "lethality": 18
+    "attackDamage": 55
   },
   "8001": {
     "health": 650
@@ -2041,7 +2044,8 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "443081": {
     "attackSpeed": 75,
-    "health": 500
+    "health": 500,
+    "percentMovespeed": 4
   },
   "443083": {
     "health": 1100,

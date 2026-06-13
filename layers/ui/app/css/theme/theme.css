@@ -223,4 +223,27 @@
       transform: translateX(8px);
     }
   }
+
+  @keyframes collapsible-width-open {
+    from {
+      opacity: 0.5;
+      max-width: 0;
+    }
+    to {
+      opacity: 1;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  @keyframes collapsible-width-close {
+    from {
+      opacity: 1;
+      max-width: 100%;
+      width: 100%;
+    }
+    to {
+      opacity: 0.5;
+      max-width: 0;
+    }
+  }
 }

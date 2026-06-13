@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 05/27/2026 01:35:56 PM CDT
+// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
 
 export const itemToNickname: Record<number, string> = {
   "1027": "Blue",
@@ -88,6 +88,7 @@ export const itemToNickname: Record<number, string> = {
   "3153": "Mist",
   "3157": "Wooglets",
   "3165": "Nmst",
+  "3168": "Boots",
   "3170": "Boots",
   "3171": "Boots",
   "3173": "Boots",
@@ -149,7 +150,6 @@ export const itemToNickname: Record<number, string> = {
   "6697": "Lethality",
   "6698": "Lethality",
   "6699": "Lethality",
-  "6701": "Lethality",
   "223039": "Wreckoning",
   "224403": "Burn",
   "226630": "Slurp",

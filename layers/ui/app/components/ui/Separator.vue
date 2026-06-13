@@ -34,9 +34,9 @@ const separatorVariants = tv({
         separator: "bg-p1",
       },
       neutral: {
-        label: "text-nc/50 group-hover/collapse:text-nc",
+        label: "text-nc/50",
         separator: "bg-nc/10",
-        trailing: "text-nc/50 group-hover/collapse:text-nc",
+        trailing: "text-nc/50",
       },
       secondary: {
         label: "text-pc",

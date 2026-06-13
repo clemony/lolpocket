@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 05/27/2026 01:36:11 PM CDT
+// Updated Patch 16.10 - 06/12/2026 12:04:00 PM CDT
 import type { Skin } from "#shared/types"
 
 type CompactSkin = readonly [

@@ -16,15 +16,17 @@ Keep it short, current, and biased toward what the next session needs to know.
 - The server-side Riot request queue was refactored to remove global-scope timers for Cloudflare Pages compatibility.
 - Local Zodiak font wiring was cleaned up to use self-hosted files from `layers/ui/public/fonts/Zodiak`.
 - `useObjectData` now centralizes command reference-card CDN path resolution for item, rune, champion, and ability data, including champion numeric-id to key lookup.
+- Slidebar info popovers now use a fixed 8-slot pool and reuse closed or oldest open slots instead of growing by index.
+- Slidebar info popover cards now render outside footer layout flow with clamped cascade offsets, so new cards layer near prior cards without pushing existing cards upward.
+- Slidebar/modal state is split between `useDraggableInfoModalPool` for slot lifecycle and `useDraggableInfoModal` for one-card drag measurement and viewport constraints.
+- Slidebar info popovers track monotonic z-index values, so opening or grabbing a card brings that card to the front without changing its placement.
 - `postal-worker` now carries Reddit `metadata.spoiler` through the post normalization pipeline.
 - `postal-worker` patch metadata scraping now falls back to article HTML for author and date extraction.
-- Nuxt dev scripts set `TMPDIR=/tmp` so `@nuxt/vite-builder@4.4.7` does not generate an overlong macOS vite-node IPC socket path under `/var/folders/.../T`.
+- `AGENTS.md` now allows read-only subagents for external docs lookup and other narrow independent exploration or verification tasks.
 
 ## Known Issues
 
-- `pnpm exec nuxt typecheck --logLevel silent` now fails on `app/pages/backpack/[id]/[pocket_key].vue` because `layout: "pocket-layout"` is not part of Nuxt's generated layout union.
 - Nuxt dev emits a duplicated `useAppConfig` auto-import warning. This looks upstream and is likely tied to Nitro auto-import collection rather than app code.
-- Zodiak should now resolve locally, but browser verification is still worth doing after any typography changes.
 - `public/cdn/runes` currently contains `.ts` files while existing runtime fetch paths use `/cdn/runes/:id.json`; rune command cards keep index fallbacks until the CDN export shape is aligned.
 
 ## Cross-Repo Notes
@@ -50,14 +52,12 @@ Keep it short, current, and biased toward what the next session needs to know.
 ## Open Questions
 
 - Should `postal-worker` also gain its own `AGENTS.md` for faster orientation.
-- Should the Zodiak setup expose additional utility classes for variable font axes such as optical size while leaving weight controlled by Tailwind utilities.
 - Should `experimental.nitroAutoImports` remain enabled if the duplicated `useAppConfig` warning becomes noisy enough to justify reducing dev magic.
 
 ## Next Good Starting Points
 
 - Redeploy the latest Pages build and confirm the global-scope worker error is gone.
-- Verify the self-hosted Zodiak font renders in the browser with `font-serif` and Tailwind weight utilities.
-- Decide whether to clean up the unrelated missing-component TypeScript failures to restore a clean `tsc` pass.
+- Keep an eye on slidebar popover placement in live UI after further modal sizing changes.
 
 ## Update Format
 

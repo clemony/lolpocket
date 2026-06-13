@@ -9,7 +9,7 @@ const {
   class: className,
   item,
   stats,
-  masterwork
+  masterwork,
 } = defineProps<{
   item: Item
   class?: HTMLAttributes["class"]
@@ -21,13 +21,11 @@ const mw = computed(() => {
     return safeObject(item.masterwork?.stats)
   return null
 })
-console.log("🥸 - mw:", mw)
 const bonus = computed(() => {
   if (typeof item.masterwork === "object")
     return safeObject(item.masterwork?.bonusStats)
   return null
 })
-console.log("🥸 - bonus:", bonus)
 </script>
 
 <template>

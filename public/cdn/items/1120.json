@@ -18,7 +18,7 @@
     "health": 140,
     "magicResistance": 10
   },
-  "description": "110 Health\n10 Armor\n10 Magic Resist\n\nHelping Hand\nAttacks deal 5 bonus physical damage to minions.",
+  "description": "140 Health\n10 Armor\n10 Magic Resist\n\nHelping Hand\nAttacks deal 5 bonus physical damage to minions.",
   "gold": {
     "base": 450,
     "purchasable": true,

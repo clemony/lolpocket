@@ -99,7 +99,7 @@
       "affects": "Enemies",
       "blurb": "Active: Shyvana  shields herself for a short time, with the shield strength increased for every nearby enemy champion. For the same duration, she gains  bonus move speed, increased while facing enemy champions. Inferno Aegis can be recast while the shield holds and does so automatically after it expires or is broken.",
       "castTime": "none",
-      "cooldown": "13 / 12 / 11 / 10 / 9",
+      "cooldown": "13 / 12.25 / 11.5 / 10.75 / 10",
       "cost": "0",
       "damageType": "Magic damage",
       "effectRadius": "350 •  2000 •  600",
@@ -366,7 +366,7 @@
     "attackSpeed": 0.6
   },
   "statsPerLevel": {
-    "hp": 100,
+    "hp": 95,
     "armor": 4,
     "magicResist": 2.1,
     "hpRegen": 0.7,

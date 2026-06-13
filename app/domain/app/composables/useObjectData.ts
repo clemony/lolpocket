@@ -1,8 +1,12 @@
 import type { AcceptableValue } from "reka-ui"
 import type { MaybeRefOrGetter } from "vue"
+import type { SidebarSearchEntry } from "~/domain/app/utils/searchEntries"
 import { championIndex } from "~~/shared/constants/champions/championIndex"
+import { championToTitle } from "~~/shared/constants/champions/championToTitle"
+import { itemRank } from "~~/shared/constants/items/itemRank"
+import { itemRankColor } from "~~/shared/constants/items/itemRankColor"
 
-interface ObjectDataMap {
+export interface ObjectDataMap {
   ability: Ability
   champion: Champion
   item: Item
@@ -11,8 +15,26 @@ interface ObjectDataMap {
 
 export type ObjectDataType = keyof ObjectDataMap
 type ObjectDataId = string | number
-type Onnfdi = ValuesOf<ObjectDataMap>
-interface UseObjectDataOptions<TType extends ObjectDataType> {
+type MaybeObjectDataType = ObjectDataType | null | undefined
+
+export type ObjectDataFor<TType extends MaybeObjectDataType> =
+  TType extends ObjectDataType ? ObjectDataMap[TType] : never
+
+type Page = SidebarSearchEntry
+// EXTENSION
+export interface XObjectDataMap extends ObjectDataMap {
+  champion: Champion
+  page: Page
+  spell: Spell
+}
+export type XObjectDataType = keyof XObjectDataMap
+export type XMaybeObjectDataType = XObjectDataType | null | undefined
+export type XObjectDataFor<TTType extends XMaybeObjectDataType> =
+  TTType extends XObjectDataType ? XObjectDataMap[TTType] : never
+
+// ----------- //*
+
+interface UseObjectDataOptions<TType extends MaybeObjectDataType> {
   id: MaybeRefOrGetter<AcceptableValue>
   type: MaybeRefOrGetter<TType>
   map?: MaybeRefOrGetter<number | undefined>
@@ -41,10 +63,10 @@ function resolveChampionCdnId(id: ObjectDataId) {
 }
 
 export function resolveObjectDataPath(
-  type: ObjectDataType,
+  type: MaybeObjectDataType,
   id: ObjectDataId | undefined
 ) {
-  if (id === undefined || id === "") return null
+  if (!type || id === undefined || id === "") return null
 
   const resolvedId = type === "champion" ? resolveChampionCdnId(id) : id
   if (!resolvedId) return null
@@ -52,7 +74,7 @@ export function resolveObjectDataPath(
   return `/cdn/${objectDataDirectories[type]}/${resolvedId}.json`
 }
 
-export function useObjectData<TType extends ObjectDataType>(
+export function useObjectData<TType extends MaybeObjectDataType>(
   opt: UseObjectDataOptions<TType>
 ) {
   const sourceId = computed(() => normalizeId(toValue(opt.id)))
@@ -61,7 +83,7 @@ export function useObjectData<TType extends ObjectDataType>(
   const typeRef = computed(() => toValue(opt.type))
   const path = computed(() => resolveObjectDataPath(typeRef.value, idRef.value))
 
-  const { clear, data, execute, status } = useFetch<ObjectDataMap[TType]>(
+  const { clear, data, execute, status } = useFetch<ObjectDataFor<TType>>(
     () => path.value ?? "",
     {
       server: false,
@@ -72,6 +94,20 @@ export function useObjectData<TType extends ObjectDataType>(
       dedupe: "cancel",
     }
   )
+
+  const subtitle = computed(() => {
+    if (!data.value) return
+    if (typeRef.value === "champion")
+      return championToTitle[(data.value as Champion).key]
+    else if (typeRef.value === "item") return itemRank[idRef.value as number]
+  })
+
+  const color = computed(() => {
+    if (typeRef.value !== "item") return undefined
+    return (data.value as Item).rank
+      ? itemRankColor[String((data.value as Item).rank)]
+      : undefined
+  })
 
   function updateObject(newId: AcceptableValue) {
     overrideId.value = normalizeId(newId)
@@ -97,8 +133,11 @@ export function useObjectData<TType extends ObjectDataType>(
     status,
     updateObject,
     typeRef,
+    subtitle,
+    color,
   }
 }
 
-export type ObjectDataReturn<TType extends ObjectDataType = ObjectDataType> =
-  ReturnType<typeof useObjectData<TType>>
+export type ObjectDataReturn<
+  TType extends MaybeObjectDataType = ObjectDataType,
+> = ReturnType<typeof useObjectData<TType>>

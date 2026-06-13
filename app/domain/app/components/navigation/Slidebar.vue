@@ -7,8 +7,8 @@ import {
   LazySocialPanel,
 } from "#components"
 import type { TabsItem } from "@nuxt/ui"
+import { useDraggableInfoModalPool } from "~/domain/app/composables/useDraggableInfoModalPool"
 import type { SlidebarEvent } from "~/domain/app/types/layout.types"
-import type { SidebarSearchEntry } from "~/domain/app/utils/searchEntries"
 
 const { tab, setTab } = defineProps<{
   tab: string
@@ -37,16 +37,8 @@ watch(
 )
 
 const { summoner } = storeToRefs(user())
-const popoverOpen = shallowRef<Record<number, boolean>>({})
-const currentItems = shallowRef<SidebarSearchEntry[]>([])
-
-function handlePopover(e: SidebarSearchEntry) {
-  console.log("🥸 - handlePopover - e:", e)
-  if (currentItems.value.some((i) => i.id === e.id)) return
-  if (currentItems.value.length > 8) currentItems.value.shift()
-  const length = currentItems.value.push(e)
-  popoverOpen.value[length - 1] = true
-}
+const { bringPopoverToFront, openPopover, popoverSlots, setPopoverOpen } =
+  useDraggableInfoModalPool()
 
 const items: TabsItem[] = [
   {
@@ -137,7 +129,7 @@ onMounted(() => {
         'max-w-110 divide-y-0! bg-transparent text-pc shadow-none ring-0!',
       //close: 'fixed top-3 right-3'
       footer:
-        'pointer-events-none fixed inset-0 top-0 left-0 z-4! grid h-screen! w-screen! place-items-center',
+        'pointer-events-none fixed inset-0 top-0 left-0 z-4! h-screen! w-screen!',
     }"
     @update:open="close()">
     <template #header>
@@ -213,18 +205,20 @@ onMounted(() => {
         <component
           :is="component"
           v-if="component"
-          @open-popover="handlePopover($event)" />
+          @open-popover="openPopover($event)" />
       </SlidebarTheme>
     </template>
 
     <template #footer>
-      <template v-if="currentItems.length">
-        <DraggableInfoModal
-          v-for="(item, i) in currentItems"
-          :key="i"
-          v-model:open="popoverOpen[i]"
-          :item="item" />
-      </template>
+      <DraggableInfoModal
+        v-for="slot in popoverSlots"
+        :key="slot.id"
+        :open="slot.open"
+        :item="slot.item"
+        :placement-index="slot.placementIndex"
+        :z-index="slot.zIndex"
+        @grab="bringPopoverToFront(slot.id)"
+        @update:open="setPopoverOpen(slot.id, $event)" />
     </template>
   </USlideover>
 

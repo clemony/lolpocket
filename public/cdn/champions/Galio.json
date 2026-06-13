@@ -36,7 +36,7 @@
       "blurb": "Active:  Galio fires two windblasts that converge to the target location, dealing magic damage to enemies hit.",
       "castTime": "0.25",
       "cooldown": "11 / 10 / 9 / 8 / 7",
-      "cost": "70 / 75 / 80 / 85 / 90",
+      "cost": "60 / 65 / 70 / 75 / 80",
       "damageType": "Magic damage",
       "effectRadius": "150",
       "effects": [

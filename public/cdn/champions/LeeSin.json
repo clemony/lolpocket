@@ -117,7 +117,7 @@
       "name": "Safeguard",
       "blurb": "Active:  Lee Sin  dashes to the target allied unit. If the ally is a  champion, both they and Lee Sin gain a  shield for a short time upon his arrival and Safeguard's cooldown is  halved.\nLee Sin can self-cast Safeguard to shield himself.",
       "castTime": "none",
-      "cooldown": "12",
+      "cooldown": "7",
       "cost": "50",
       "effects": [
         {
@@ -157,7 +157,7 @@
       "affects": "Self",
       "blurb": "Active:  Lee Sin gains  omnivamp for a few seconds.",
       "castTime": "none",
-      "cooldown": "12",
+      "cooldown": "7",
       "cost": "50",
       "effects": [
         {

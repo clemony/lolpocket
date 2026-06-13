@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 05/27/2026 01:35:56 PM CDT
+// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
 
 export const tagToItem: Record<string, number[]> = {
   "Movement": [
@@ -7,6 +7,7 @@ export const tagToItem: Record<string, number[]> = {
     2138,
     2512,
     3006,
+    3008,
     3009,
     3020,
     3041,
@@ -26,6 +27,7 @@ export const tagToItem: Record<string, number[]> = {
     3142,
     3152,
     3158,
+    3168,
     3170,
     3171,
     3173,
@@ -33,8 +35,8 @@ export const tagToItem: Record<string, number[]> = {
     3175,
     4629,
     6631,
-    6701,
-    223005
+    223005,
+    228009
   ],
   "Mage": [
     1004,
@@ -99,6 +101,7 @@ export const tagToItem: Record<string, number[]> = {
     6657,
     8010,
     228002,
+    228009,
     443062,
     444636,
     444637,
@@ -128,7 +131,6 @@ export const tagToItem: Record<string, number[]> = {
     2049,
     2051,
     2065,
-    3002,
     3024,
     3050,
     3067,
@@ -161,6 +163,7 @@ export const tagToItem: Record<string, number[]> = {
     6621,
     8020,
     228001,
+    228009,
     443063,
     447123
   ],
@@ -177,6 +180,7 @@ export const tagToItem: Record<string, number[]> = {
     1101,
     1102,
     1103,
+    1120,
     2022,
     2050,
     2051,
@@ -185,7 +189,6 @@ export const tagToItem: Record<string, number[]> = {
     2504,
     2524,
     2525,
-    3002,
     3024,
     3044,
     3050,
@@ -219,6 +222,7 @@ export const tagToItem: Record<string, number[]> = {
     8020,
     223069,
     228001,
+    228009,
     443054,
     443058,
     443059,
@@ -297,6 +301,7 @@ export const tagToItem: Record<string, number[]> = {
     223039,
     223185,
     226630,
+    228009,
     446632,
     447103,
     447116,
@@ -317,6 +322,7 @@ export const tagToItem: Record<string, number[]> = {
     1054,
     1055,
     1083,
+    1086,
     1101,
     1102,
     1103,
@@ -363,6 +369,7 @@ export const tagToItem: Record<string, number[]> = {
     6673,
     6675,
     6676,
+    228009,
     443055,
     443069,
     443090,
@@ -417,9 +424,9 @@ export const tagToItem: Record<string, number[]> = {
     6697,
     6698,
     6699,
-    6701,
     223185,
     224004,
+    228009,
     443060,
     446691,
     446693,
@@ -452,7 +459,8 @@ export const tagToItem: Record<string, number[]> = {
     3508,
     3748,
     6662,
-    6670
+    6670,
+    228009
   ],
   "Lifesteal vamp": [
     1055,
@@ -461,20 +469,23 @@ export const tagToItem: Record<string, number[]> = {
     1102,
     1103,
     2140,
-    4633
+    4633,
+    228009
   ],
   "Mana and reg": [
     1056,
     2139,
     3112,
-    3508
+    3508,
+    228009
   ],
   "Health and reg": [
     2003,
     2031,
     2138,
     2143,
-    6673
+    6673,
+    228009
   ],
   "Consumable": [
     2003,
@@ -501,25 +512,30 @@ export const tagToItem: Record<string, number[]> = {
   ],
   "Ability power": [
     2139,
-    2142
+    2142,
+    228009
   ],
   "Attack damage": [
     2140,
     2142,
-    3053
+    3053,
+    228009
   ],
   "Armor pen": [
     3071,
     3134,
-    3302
+    3302,
+    228009
   ],
   "Ability haste": [
     3073,
     3118,
-    3161
+    3161,
+    228009
   ],
   "Magic pen": [
-    3302
+    3302,
+    228009
   ],
   "Trinket": [
     3330,
@@ -539,6 +555,7 @@ export const tagToItem: Record<string, number[]> = {
     7050
   ],
   "Attack speed": [
-    3504
+    3504,
+    228009
   ]
 }

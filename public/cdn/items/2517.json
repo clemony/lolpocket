@@ -41,7 +41,7 @@
     "omnivamp": 5,
     "tenacity": 20
   },
-  "description": "65 Attack Damage\n5% Omnivamp\n20% Tenacity\n\nFamine\nGain  Ability Haste.\n\nFeast\nWhen a champion that you damaged within 3 seconds dies, gain 15% Omnivamp for 8 seconds. ",
+  "description": "65 Attack Damage\n5% Omnivamp\n20% Tenacity\n\nFamine\nGain Ability Haste based on your Bonus AD.\n\nFeast\nWhen a champion that you damaged recently dies, gain Omnivamp for a moderate duration. ",
   "gold": {
     "base": 825,
     "purchasable": true,

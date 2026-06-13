@@ -17,7 +17,7 @@
     "abilityPower": 100,
     "attackDamage": 70
   },
-  "description": "70 Attack Damage\n100 Ability Power\n\nThe Path Between\nThreshold 130 bonus AD and 180 AP: Chakram orbit you, dealing continuous damage to enemies they strike.\n\nSpirit World: Gain Ability Power and Ability Haste.\nMaterial World: Gain Attack Damage and Attack Speed.",
+  "description": "70 Attack Damage\n100 Ability Power\n\nThe Path Between\nThreshold 100 bonus AD and 140 AP: Chakram orbit you, dealing continuous damage to enemies they strike.\n\nSpirit World: Gain Ability Power and Ability Haste.\nMaterial World: Gain Attack Damage and Attack Speed.",
   "gold": {
     "base": 2750,
     "purchasable": true,

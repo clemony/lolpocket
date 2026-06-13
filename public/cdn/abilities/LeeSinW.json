@@ -4,7 +4,7 @@
   "affects": "Self",
   "blurb": "Active:  Lee Sin gains  omnivamp for a few seconds.",
   "castTime": "none",
-  "cooldown": "12",
+  "cooldown": "7",
   "cost": "50",
   "effects": [
     {

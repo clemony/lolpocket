@@ -2877,9 +2877,9 @@
     "id": 3008,
     "name": "Gluttonous Greaves",
     "gold": {
-      "base": 650,
-      "total": 950,
-      "sell": 665
+      "base": 700,
+      "total": 1000,
+      "sell": 700
     },
     "maps": [
       11,
@@ -5650,8 +5650,8 @@
     ],
     "gold": {
       "base": 0,
-      "total": 950,
-      "sell": 665
+      "total": 1000,
+      "sell": 700
     },
     "maps": [
       11
@@ -8869,9 +8869,9 @@
       "lethality"
     ],
     "gold": {
-      "base": 863,
-      "total": 2900,
-      "sell": 2030
+      "base": 963,
+      "total": 3000,
+      "sell": 2100
     },
     "maps": [
       11,
@@ -12582,9 +12582,6 @@
       "total": 2500,
       "sell": 1250
     },
-    "maps": [
-      30
-    ],
     "rank": "Legendary",
     "stats": {},
     "tags": [

@@ -132,14 +132,14 @@ export const inputTheme = defineUiTheme({
     },
     {
       color: "neutral",
-      class: "ring ring-nc ring-inset",
+      class: "ring ring-nc ring-inset selection:bg-p3/70 selection:text-pc",
       highlight: true,
     },
     {
       color: "neutral",
       variant: "soft",
       class:
-        "bg-n2 text-nc ring ring-n5 ring-inset placeholder:text-nc/70 hover:bg-n2/90 focus:bg-n2 disabled:bg-neutral/86 *:first:[&_svg]:text-nc",
+        "bg-n2 text-nc ring ring-n5 ring-inset selection:bg-p3/70 selection:text-pc placeholder:text-nc/70 hover:bg-n2/90 focus:bg-n2 disabled:bg-neutral/86 *:first:[&_svg]:text-nc",
     },
     {
       class: "ps-7",

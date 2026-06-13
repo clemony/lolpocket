@@ -5,7 +5,7 @@
   "blurb": "Active:  Quinn disbands from  Valor and rains arrows down around her, dealing physical damage to nearby enemies.",
   "castTime": "none",
   "cooldown": "3",
-  "cost": "100 / 50 / 0",
+  "cost": "50 / 25 / 0",
   "damageType": "Physical damage",
   "effectRadius": "700",
   "effects": [

@@ -12,7 +12,7 @@ const props = withDefaults(
     size: "xs",
     square: true,
     variant: "ghost",
-    color: "base"
+    color: "base",
   }
 )
 const emit = defineEmits(["clearInput"])
@@ -34,11 +34,11 @@ const forwarded = useForwardPropsEmits(delegated, emit)
       icon="i-x"
       :ui="{
         leadingIcon: cn(
-          'opacity-50 **:stroke-[14%]! group-hover/btn:opacity-100',
+          'opacity-50 **:stroke-[12%]! group-hover/btn:opacity-100',
           color === 'neutral' ? '' : '',
           props.leadingIcon
         ),
-        base: cn('anchor pointer-events-auto shrink-0', ui?.base)
+        base: cn('anchor pointer-events-auto shrink-0', ui?.base),
       }"
       square
       @click.stop="emit('clearInput')" />
