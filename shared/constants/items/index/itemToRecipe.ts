@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
+// Updated Patch 16.12 - 06/13/2026 10:59:17 AM CDT
 
 export const itemRecipe: Record<string, number[] | null> = {
   "1011": [
@@ -232,8 +232,8 @@ export const itemRecipe: Record<string, number[] | null> = {
   ],
   "3073": [
     2021,
-    3044,
-    1042
+    1042,
+    3044
   ],
   "3074": [
     3077,
@@ -572,7 +572,7 @@ export const itemRecipe: Record<string, number[] | null> = {
     1036
   ],
   "4005": [
-    3108,
+    1026,
     4642
   ],
   "4401": [

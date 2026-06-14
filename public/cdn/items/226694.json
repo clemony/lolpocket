@@ -1,9 +1,9 @@
 {
   "id": 226694,
   "name": "Serylda's Grudge",
-  "description": "40 Attack Damage\n40% Armor Penetration\n10 Ability Haste\n\nBitter Cold\nDamaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
+  "description": "50 Attack Damage\n40% Armor Penetration\n15 Ability Haste\n\nBitter Cold\nDamaging Abilities Slow enemies below 50% Health by 50% for 1 second.",
   "stats": {
-    "attackDamage": 40
+    "attackDamage": 50
   },
   "gold": {
     "base": 2500,

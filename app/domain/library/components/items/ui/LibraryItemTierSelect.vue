@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { RadioGroupItem, TabsItem } from "@nuxt/ui"
-import { rankToItem } from "~~/shared/constants/items/rankToItem"
+import { rankToItem } from "~~/shared/constants/items/index/rankToItem"
 
 const { collapsed } = defineProps<{
   collapsed?: boolean

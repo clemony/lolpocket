@@ -1,11 +1,9 @@
-import { itemRecipe } from "~~/shared/constants/items/itemRecipe"
-import { mapToItem } from "~~/shared/constants/items/mapToItem"
-import {
-  bootIndex,
-  rankToItem,
-  supportItemIndex
-} from "~~/shared/constants/items/rankToItem"
-import { unpurchasableItems } from "~~/shared/constants/items/unpurchasableItems"
+import { itemRecipe } from "~~/shared/constants/items/index/itemToRecipe"
+import { mapToItem } from "~~/shared/constants/items/index/mapToItem"
+import { bootIndex } from "~~/shared/constants/items/collection/bootItems"
+import { supportItemIndex } from "~~/shared/constants/items/collection/supportItems"
+import { rankToItem } from "~~/shared/constants/items/index/rankToItem"
+import { unpurchasableItems } from "~~/shared/constants/items/collection/unpurchasableItems"
 
 export function generateItemSet(map?: MapKey, position?: PositionKey) {
   const count = position === "support" ? 4 : position === "bot" ? 6 : 5

@@ -1,7 +1,7 @@
 {
   "id": 222504,
   "name": "Kaenic Rookern",
-  "description": "350 Health\n80 Magic Resist\n\nMagebane\nAfter not taking magic damage for 15 seconds, gain a magic shield. ",
+  "description": "350 Health\n80 Magic Resist\n\nMagebane\nAfter not taking magic damage for 10 seconds, gain a magic shield. ",
   "stats": {
     "magicResistance": 80,
     "health": 350

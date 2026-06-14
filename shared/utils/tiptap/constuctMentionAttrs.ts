@@ -1,5 +1,5 @@
 import { champKeyToRole } from "#shared/constants/champions/champKeyToRole"
-import { itemRank } from "#shared/constants/items/itemRank"
+import { itemRank } from "#shared/constants/items/index/itemToRank"
 import { runeToPath } from "#shared/constants/runes/runeToPath"
 import { attrsToProps } from "~~/shared/utils/tiptap/attrsToProps"
 

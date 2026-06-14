@@ -8,6 +8,8 @@ import type {
 import Fuse from "fuse.js"
 import type { SidebarSearchEntry } from "~/domain/app/utils/searchEntries"
 import { searchEntries } from "~/domain/app/utils/searchEntries"
+import { unavailableItems } from "~~/shared/constants/items/collection/unavailableItems"
+import { unpurchasableItems } from "~~/shared/constants/items/collection/unpurchasableItems"
 
 const emit = defineEmits(["openPopover"])
 
@@ -28,7 +30,7 @@ const fuse = computed(
     })
 )
 
-const results = computed(() => {
+const results = computed<SidebarSearchEntry[]>(() => {
   const term = query.value?.trim()
   return term
     ? fuse.value
@@ -39,9 +41,19 @@ const results = computed(() => {
     : []
 })
 
-const groupedResults = computed(() =>
-  Object.groupBy(results.value, (r) => r.group)
-)
+const filteredResults = computed(() => {
+  console.log("🥸 - results.value:", results.value)
+  if (query.value !== "item") return results.value
+  const notBuy = new Set(unpurchasableItems)
+  const notAvailable = new Set(
+    Object.values(unavailableItems).flatMap((i) => i)
+  )
+  const a = results.value
+    .filter((i) => !notBuy.has(Number.parseInt(i.id)))
+    .filter((i) => !notAvailable.has(Number.parseInt(i.id)))
+  console.log("🥸 - a:", a)
+  return a
+})
 
 const groups: Record<
   string,
@@ -140,7 +152,7 @@ function onClick(item: SidebarSearchEntry) {
         :virtualize="{
           estimateSize: 42,
         }"
-        :items="results"
+        :items="filteredResults"
         class="grid h-[100vh] max-h-[100vh] auto-rows-max grid-cols-1 gap-1 pt-36 pb-6">
         <template #default="{ item }">
           <UTooltip arrow :text="groups[item.group]?.tip">

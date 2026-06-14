@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemRankColor } from "#shared/constants/items/itemRankColor"
+import { itemRankColor } from "~~/shared/constants/items/collection/itemRankColor"
 
 const ranks = computed(() => Object.keys(itemRankColor))
 console.log("🌱 - ranks:", ranks)

@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
+// Updated Patch 16.12 - 06/13/2026 10:53:06 AM CDT
 import type { Index } from "#shared/types"
 
 export const itemIndex: Index[] = [
@@ -2173,6 +2173,11 @@ export const itemIndex: Index[] = [
     "name": "Shardblade"
   },
   {
+    "id": 220013,
+    "key": "item",
+    "name": "Poro-Snax"
+  },
+  {
     "id": 221011,
     "key": "item",
     "name": "Giant's Belt"
@@ -2831,11 +2836,6 @@ export const itemIndex: Index[] = [
     "id": 226657,
     "key": "item",
     "name": "Rod of Ages"
-  },
-  {
-    "id": 226660,
-    "key": "item",
-    "name": "Bami's Cinder"
   },
   {
     "id": 226662,

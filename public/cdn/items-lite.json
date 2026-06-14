@@ -3864,8 +3864,8 @@
     "rank": "Legendary",
     "recipe": [
       2021,
-      3044,
-      1042
+      1042,
+      3044
     ],
     "stats": {
       "attackDamage": 40,
@@ -4216,7 +4216,7 @@
     ],
     "stats": {
       "abilityPower": 45,
-      "attackDamage": 40,
+      "attackDamage": 45,
       "attackSpeed": 30,
       "percentMovespeed": 4
     },
@@ -5986,9 +5986,7 @@
         "armor": 30
       },
       "bonusStats": {
-        "magicResistance": 5,
-        "health": 50,
-        "armor": 5
+        "health": 50
       }
     },
     "rank": "Legendary",
@@ -5998,9 +5996,9 @@
       1033
     ],
     "stats": {
-      "armor": 25,
+      "armor": 30,
       "health": 200,
-      "magicResistance": 25,
+      "magicResistance": 30,
       "abilityHaste": 10
     },
     "tags": [
@@ -7190,9 +7188,9 @@
       "flag"
     ],
     "gold": {
-      "base": 500,
-      "total": 2250,
-      "sell": 1575
+      "base": 650,
+      "total": 2400,
+      "sell": 1680
     },
     "maps": [
       11,
@@ -7204,20 +7202,17 @@
       "upgradeId": 324005,
       "stats": {
         "abilityPower": 65
-      },
-      "bonusStats": {
-        "abilityPower": 5
       }
     },
     "rank": "Legendary",
     "recipe": [
-      3108,
+      1026,
       4642
     ],
     "stats": {
-      "abilityPower": 60,
-      "manaRegen": 125,
-      "abilityHaste": 20
+      "abilityPower": 65,
+      "manaRegen": 150,
+      "abilityHaste": 15
     },
     "tags": [
       "Support"
@@ -10007,6 +10002,16 @@
       30
     ]
   },
+  "220013": {
+    "id": 220013,
+    "name": "Poro-Snax",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
   "221011": {
     "id": 221011,
     "name": "Giant's Belt",
@@ -10294,7 +10299,7 @@
     ],
     "stats": {
       "criticalStrikeChance": 25,
-      "attackDamage": 50
+      "attackDamage": 55
     }
   },
   "222524": {
@@ -10548,7 +10553,7 @@
     ],
     "stats": {
       "criticalStrikeChance": 25,
-      "attackDamage": 55
+      "attackDamage": 75
     }
   },
   "223032": {
@@ -10893,8 +10898,8 @@
       30
     ],
     "stats": {
-      "health": 333,
-      "attackDamage": 35,
+      "health": 375,
+      "attackDamage": 40,
       "attackSpeed": 25
     }
   },
@@ -10943,7 +10948,7 @@
     ],
     "stats": {
       "abilityPower": 45,
-      "attackDamage": 40,
+      "attackDamage": 45,
       "attackSpeed": 30,
       "percentMovespeed": 4
     }
@@ -10975,7 +10980,7 @@
       30
     ],
     "stats": {
-      "magicResistance": 40,
+      "magicResistance": 45,
       "attackSpeed": 50
     }
   },
@@ -11577,7 +11582,7 @@
     ],
     "stats": {
       "attackDamage": 30,
-      "attackSpeed": 25
+      "attackSpeed": 40
     }
   },
   "223504": {
@@ -12117,22 +12122,6 @@
       "abilityPower": 60
     }
   },
-  "226660": {
-    "id": 226660,
-    "name": "Bami's Cinder",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 150
-    }
-  },
   "226662": {
     "id": 226662,
     "name": "Iceborn Gauntlet",
@@ -12225,7 +12214,7 @@
       30
     ],
     "stats": {
-      "attackDamage": 40,
+      "attackDamage": 50,
       "attackSpeed": 35,
       "percentMovespeed": 7
     }
@@ -12334,7 +12323,7 @@
       30
     ],
     "stats": {
-      "attackDamage": 40
+      "attackDamage": 50
     }
   },
   "226695": {
@@ -12409,7 +12398,7 @@
       30
     ],
     "stats": {
-      "attackDamage": 50
+      "attackDamage": 60
     }
   },
   "226701": {
@@ -12953,9 +12942,9 @@
     "id": 324005,
     "name": "Imperial Mandate",
     "gold": {
-      "base": 600,
-      "total": 2750,
-      "sell": 1925
+      "base": 650,
+      "total": 2400,
+      "sell": 1680
     },
     "maps": [
       11

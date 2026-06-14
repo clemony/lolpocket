@@ -1,5 +1,5 @@
-import { bootIndex } from "~~/shared/constants/items/rankToItem"
-import { roleItems } from "~~/shared/constants/items/roleItemIndex"
+import { bootIndex } from "~~/shared/constants/items/collection/bootItems"
+import { roleItems } from "~~/shared/constants/items/collection/roleItems"
 interface QuestItemSet {
   quest?: number
   src?: string

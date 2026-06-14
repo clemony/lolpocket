@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
+// Updated Patch 16.12 - 06/13/2026 10:59:17 AM CDT
 
 export const statToItem: Record<string, number[]> = {
   "flatMovespeed": [
@@ -254,7 +254,6 @@ export const statToItem: Record<string, number[]> = {
     226653,
     226656,
     226657,
-    226660,
     226662,
     226664,
     226665,

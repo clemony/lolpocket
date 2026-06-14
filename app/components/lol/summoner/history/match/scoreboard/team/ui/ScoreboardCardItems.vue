@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { roleItems } from "#shared/constants/items/roleItemIndex"
+import { roleItems } from "#shared/constants/items/collection/roleItems"
 
 const {
   class: className,

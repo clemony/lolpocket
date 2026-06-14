@@ -29,7 +29,7 @@
     "abilityPower": 110,
     "flatMagicPenetration": 15
   },
-  "description": "110 Ability Power\n15 Magic Penetration\n\nCinderbloom\nMagic and true damage Critically Strikes enemies below 40% Health, dealing 20% increased damage. ",
+  "description": "110 Ability Power\n15 Magic Penetration\n\nCinderbloom\nMagic and true damage Critically Strike enemies below 40% Health, dealing 20% increased damage. ",
   "gold": {
     "base": 900,
     "purchasable": true,

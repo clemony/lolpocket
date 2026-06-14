@@ -1,5 +1,5 @@
 import { championIndex } from "#shared/constants/champions/championIndex"
-import { itemIndex } from "#shared/constants/items/itemIndex"
+import { itemIndex } from "#shared/constants/items/collection/itemIndex"
 
 const leadingArticles = ["My", "This", "The", "A"]
 const middleArticles = ["the", "my", "this", "your", "their"]

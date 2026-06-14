@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { UseSlidebar } from "~/domain/app/types/layout.types"
+import type { UseSidebar } from "~/domain/app/types/layout.types"
 import type {
   ButtonRouteItem,
   RouteGroup,
@@ -10,7 +10,7 @@ const props = defineProps<{
   group: RouteGroup<ButtonRouteItem>
 }>()
 
-const slidebar = inject<UseSlidebar>("slidebar")
+const slidebar = inject<UseSidebar>("slidebar")
 </script>
 
 <template>

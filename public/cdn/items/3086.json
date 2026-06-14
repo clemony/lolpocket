@@ -31,11 +31,6 @@
       "gold": 3500
     },
     {
-      "id": 4403,
-      "name": "The Golden Spatula",
-      "gold": 7187
-    },
-    {
       "id": 2512,
       "name": "Fiendhunter Bolts",
       "gold": 2650
@@ -49,6 +44,11 @@
       "id": 3094,
       "name": "Rapid Firecannon",
       "gold": 2650
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
     }
   ],
   "specialRecipe": 0,

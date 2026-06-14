@@ -1,13 +1,13 @@
-import { itemIndex } from "#shared/constants/items/itemIndex"
-import { itemPrice } from "#shared/constants/items/itemPrice"
-import { mapToItem } from "#shared/constants/items/mapToItem"
-import { rankToItem } from "#shared/constants/items/rankToItem"
-import { statToItem } from "#shared/constants/items/statToItem"
-import { tagToItem } from "#shared/constants/items/tagToItem"
-import { unpurchasableItems } from "#shared/constants/items/unpurchasableItems"
+import { itemIndex } from "#shared/constants/items/collection/itemIndex"
+import { itemPrice } from "#shared/constants/items/index/itemToPrice"
+import { mapToItem } from "#shared/constants/items/index/mapToItem"
+import { rankToItem } from "#shared/constants/items/index/rankToItem"
+import { statToItem } from "#shared/constants/items/index/statToItem"
+import { tagToItem } from "#shared/constants/items/index/tagToItem"
+import { unpurchasableItems } from "#shared/constants/items/collection/unpurchasableItems"
 import equal from "fast-deep-equal/es6"
 import type { AcceptableValue } from "reka-ui"
-import { itemToNickname } from "~~/shared/constants/items/itemToNickname"
+import { itemToNickname } from "~~/shared/constants/items/index/itemToNickname"
 
 export interface ItemFilter {
   map: number

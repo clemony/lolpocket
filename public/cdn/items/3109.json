@@ -30,7 +30,7 @@
       "unique": true,
       "mythic": false,
       "name": "Sacrifice",
-      "effects": "While your <i>Worthy</i> ally is tethered to you and you are above 30% of your <b>maximum</b> health, redirect 12% of the pre-mitigation physical damage and magic damage damage they take to you as the respective damage type. Additionally, you <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal for 10% of the post-mitigation damage dealt by your <i>Worthy</i> ally to champions."
+      "effects": "While your <i>Worthy</i> ally is tethered to you and you are above 30% of your <b>maximum</b> health, redirect 14% of the pre-mitigation physical damage and magic damage damage they take to you as the respective damage type. Additionally, you <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal for 12% of the post-mitigation damage dealt by your <i>Worthy</i> ally to champions."
     }
   ],
   "active": [
@@ -47,7 +47,7 @@
     "healthRegen": 100,
     "abilityHaste": 10
   },
-  "description": "200 Health\n40 Armor\n10 Ability Haste\n100% Base Health Regen\n\nSacrifice\nWhile near your Worthy ally, take 12% of the damage they receive and heal for 10% of the damage they deal to champions.Pledge (0s)\nDesignate an ally as Worthy.",
+  "description": "200 Health\n40 Armor\n10 Ability Haste\n100% Base Health Regen\n\nSacrifice\nWhile near your Worthy ally, take 14% of the damage they receive and heal for 12% of the damage they deal to champions.Pledge (0s)\nDesignate an ally as Worthy.",
   "gold": {
     "base": 400,
     "purchasable": true,

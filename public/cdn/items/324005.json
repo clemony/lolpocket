@@ -1,15 +1,15 @@
 {
   "id": 324005,
   "name": "Imperial Mandate",
-  "description": "65 Ability Power\n20 Ability Haste\n150% Base Mana Regen\n\nCoordinated Fire (0s) per target\nSlowing or Immobilizing an enemy champion marks them for 5 seconds. Ally champion damage detonates the mark, dealing magic damage equal to 10% of current health. ",
+  "description": "65 Ability Power\n15 Ability Haste\n150% Base Mana Regen\n\nControl\nGain 15 Ability Haste for your abilities with Immobilizing effects.\n\nCommand\nOn Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.\n",
   "stats": {
     "abilityPower": 65
   },
   "gold": {
-    "base": 600,
+    "base": 650,
     "purchasable": true,
-    "total": 2750,
-    "sell": 1925
+    "total": 2400,
+    "sell": 1680
   },
   "maps": [
     11

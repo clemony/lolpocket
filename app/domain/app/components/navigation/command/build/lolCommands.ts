@@ -1,6 +1,6 @@
 import type { CommandRouteItem } from "~/types/route.types"
 import { championIndex } from "~~/shared/constants/champions/championIndex"
-import { itemIndex } from "~~/shared/constants/items/itemIndex"
+import { itemIndex } from "~~/shared/constants/items/collection/itemIndex"
 import { spellIndex } from "~~/shared/constants/misc/spell-index"
 import { runeIndex } from "~~/shared/constants/runes/runeIndex"
 import { componentClass } from "./styles"

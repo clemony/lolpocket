@@ -30,12 +30,12 @@
     }
   ],
   "stats": {
-    "armor": 25,
+    "armor": 30,
     "health": 200,
-    "magicResistance": 25,
+    "magicResistance": 30,
     "abilityHaste": 10
   },
-  "description": "200 Health\n25 Armor\n25 Magic Resist\n10 Ability Haste\n\nDevotion\nGrant nearby allies a 290 - 360 Shield that decays over 2.5 seconds.",
+  "description": "200 Health\n30 Armor\n30 Magic Resist\n10 Ability Haste\n\nDevotion\nGrant nearby allies a 290 - 360 Shield that decays over 2.5 seconds.",
   "gold": {
     "base": 700,
     "purchasable": true,
@@ -56,9 +56,7 @@
       "armor": 30
     },
     "bonusStats": {
-      "magicResistance": 5,
-      "health": 50,
-      "armor": 5
+      "health": 50
     }
   },
   "tags": [

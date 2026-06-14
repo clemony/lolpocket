@@ -30,7 +30,7 @@
     "health": 500,
     "percentMovespeed": 4
   },
-  "description": "75% Attack Speed\n500 Health\n4% Move Speed\n\nCovering Fire\nEvery 10 seconds, Autocast fires a bolt towards a nearby target, dealing  physical damage and applying On-Hit effects.\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nUnload\nYour Energized Attacks trigger your Autocast effects.",
+  "description": "70 Attack Damage\n50% Attack Speed\n6% Move Speed\n\nCovering Fire\nEvery 10 seconds, Autocast fires a bolt towards a nearby target, dealing  physical damage and applying On-Hit effects.\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nUnload\nYour Energized Attacks trigger your Autocast effects.",
   "gold": {
     "base": 2750,
     "purchasable": true,

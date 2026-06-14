@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
+// Updated Patch 16.12 - 06/13/2026 10:59:17 AM CDT
 
 export const mapToItem: Record<number, number[]> = {
   "11": [
@@ -985,7 +985,6 @@ export const mapToItem: Record<number, number[]> = {
     226653,
     226655,
     226657,
-    226660,
     226662,
     226664,
     226665,
@@ -1009,7 +1008,6 @@ export const mapToItem: Record<number, number[]> = {
     228005,
     228006,
     228008,
-    228009,
     228020,
     443054,
     443055,

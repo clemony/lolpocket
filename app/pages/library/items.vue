@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { itemQuotes } from "#shared/constants/items/itemQuotes"
-import { rankToItem } from "#shared/constants/items/rankToItem"
+import { rankToItem } from "#shared/constants/items/index/rankToItem"
 import type { ArrayOrNested, CheckboxGroupItem, TabsItem } from "@nuxt/ui"
 import type { TabValue } from "~/domain/library/utils/viewMode"
 import { statIndex } from "~~/shared/constants/common/stat-index"
-import { itemTags } from "~~/shared/constants/items/itemTags"
+import { itemQuotes } from "~~/shared/constants/items/collection/itemQuotes"
+import { itemTags } from "~~/shared/constants/items/collection/itemTags"
 
 const emit = defineEmits(["toggleSidebar", "updateTab"])
 

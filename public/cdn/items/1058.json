@@ -24,14 +24,14 @@
       "gold": 3200
     },
     {
-      "id": 4403,
-      "name": "The Golden Spatula",
-      "gold": 7187
-    },
-    {
       "id": 3089,
       "name": "Rabadon's Deathcap",
       "gold": 3500
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
     }
   ],
   "specialRecipe": 0,

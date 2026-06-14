@@ -1,5 +1,5 @@
 import { championIndex } from "#shared/constants/champions/championIndex"
-import { itemIndex } from "#shared/constants/items/itemIndex"
+import { itemIndex } from "#shared/constants/items/collection/itemIndex"
 import { runeIndex } from "#shared/constants/runes/runeIndex"
 import { spellIndex } from "~~/shared/constants/misc/spell-index"
 

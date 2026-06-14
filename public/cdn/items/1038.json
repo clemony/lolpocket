@@ -29,11 +29,6 @@
       "gold": 3000
     },
     {
-      "id": 4403,
-      "name": "The Golden Spatula",
-      "gold": 7187
-    },
-    {
       "id": 3026,
       "name": "Guardian Angel",
       "gold": 3200
@@ -42,6 +37,11 @@
       "id": 3031,
       "name": "Infinity Edge",
       "gold": 3500
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
     }
   ],
   "specialRecipe": 0,

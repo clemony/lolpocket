@@ -4,8 +4,8 @@
   "rank": "Legendary",
   "buildsFrom": [
     {
-      "id": 3108,
-      "name": "Fiendish Codex",
+      "id": 1026,
+      "name": "Blasting Wand",
       "gold": 850
     },
     {
@@ -25,21 +25,27 @@
     {
       "unique": true,
       "mythic": false,
-      "name": "Coordinated Fire",
-      "effects": "Non-<img src=\"/img/icons/basic-attack.webp\" class=\"tip-icon \" />basic attack cast instance that <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slow or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />immobilize enemy champions mark them for 5 seconds. Allied champions that damage marked enemies consume the mark to deal 10% of the target's <b>current</b> health <b>bonus</b> magic damage (9 second cooldown per target, shared between all users of <b>Imperial Mandate</b>; starts upon mark application)."
+      "name": "Control",
+      "effects": "Abilities with <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />immobilizing effects have their cooldown reduced equivalent to 15 ability haste."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Command",
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />Immobilizing an enemy champion marks them as <i>Vulnerable</i> for 4 seconds, increasing the damage they take from all sources by 6%. Subsequent immobilizes against a target extend the duration of the effect."
     }
   ],
   "stats": {
-    "abilityPower": 60,
-    "manaRegen": 125,
-    "abilityHaste": 20
+    "abilityPower": 65,
+    "manaRegen": 150,
+    "abilityHaste": 15
   },
-  "description": "60 Ability Power\n20 Ability Haste\n125% Base Mana Regen\n\nCoordinated Fire (0s) per target\nSlowing or Immobilizing an enemy champion marks them for 5 seconds. Ally champion damage detonates the mark, dealing magic damage equal to 10% of current health. ",
+  "description": "65 Ability Power\n15 Ability Haste\n150% Base Mana Regen\n\nControl\nGain 15 Ability Haste for your abilities with Immobilizing effects.\n\nCommand\nOn Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.\n",
   "gold": {
-    "base": 500,
+    "base": 650,
     "purchasable": true,
-    "total": 2250,
-    "sell": 1575
+    "total": 2400,
+    "sell": 1680
   },
   "maps": [
     11,
@@ -51,9 +57,6 @@
     "upgradeId": 324005,
     "stats": {
       "abilityPower": 65
-    },
-    "bonusStats": {
-      "abilityPower": 5
     }
   },
   "tags": [

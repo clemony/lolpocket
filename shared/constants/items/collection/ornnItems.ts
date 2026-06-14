@@ -1,7 +1,7 @@
-// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
+// Updated Patch 16.12 - 06/13/2026 10:53:06 AM CDT
 import type { Index } from "#shared/types"
 
-export const ornnItemIndex: Index[] = [
+export const ornnItems: Index[] = [
   {
     "id": 322065,
     "key": "item",

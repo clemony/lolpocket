@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { itemPrice } from "#shared/constants/items/itemPrice"
-import { itemRank } from "#shared/constants/items/itemRank"
+import { itemPrice } from "#shared/constants/items/index/itemToPrice"
+import { itemRank } from "#shared/constants/items/index/itemToRank"
+import { mapToItem } from "#shared/constants/items/index/mapToItem"
 import {
   itemQualityText,
-  itemRankColor
-} from "#shared/constants/items/itemRankColor"
-import { mapToItem } from "#shared/constants/items/mapToItem"
-import { ornnItemIndex } from "~~/shared/constants/items/ornnItemIndex"
+  itemRankColor,
+} from "~~/shared/constants/items/collection/itemRankColor"
+import { ornnItems } from "~~/shared/constants/items/collection/ornnItems"
 
 const { id, map, layout } = defineProps<{
   id: number
@@ -20,13 +20,13 @@ const idRef = computed(() => id ?? 0)
 const {
   data: item,
   status,
-  execute
+  execute,
 } = useFetch<Item>(() => `/cdn/items/${idRef.value}.json`, {
   server: false,
   lazy: true,
   immediate: false,
   key: () => `item-${idRef.value}`,
-  watch: [idRef]
+  watch: [idRef],
 })
 const filteredFrom = computed(() => {
   if (!item.value || !item.value?.buildsFrom) return null
@@ -40,7 +40,7 @@ const filteredInto = computed(() => {
   return item.value?.buildsInto?.filter((i) =>
     map
       ? mapToItem[map]?.includes(i.id) &&
-        !ornnItemIndex.map((i) => i.id).includes(i.id)
+        !ornnItems.map((i) => i.id).includes(i.id)
       : i
   )
 })
@@ -114,7 +114,7 @@ const masterworkUpgradeId = computed(() => {
         </div>
       </div>
       <div
-        class="scrollbar-none max-h-82 w-full shrink-0 overflow-y-auto text-sm">
+        class="max-h-82 w-full shrink-0 scrollbar-none overflow-y-auto text-sm">
         <div
           class="relative flex w-full shrink-0 flex-col overflow-x-hidden px-2 pb-0 *:last:mb-3">
           <span
@@ -176,7 +176,7 @@ const masterworkUpgradeId = computed(() => {
                   size="md"
                   spinner
                   :ui="{
-                    root: 'bg-n3/70 ring-nc ring-offset-n1 hover:ring-1 hover:ring-offset-2'
+                    root: 'bg-n3/70 ring-nc ring-offset-n1 hover:ring-1 hover:ring-offset-2',
                   }"
                   :label="`${fromItem.name} ‑ ${fromItem.gold}g`" />
 
@@ -211,7 +211,7 @@ const masterworkUpgradeId = computed(() => {
                 :src="`/img/item/${buildItem.id}.webp`"
                 :alt="buildItem.name"
                 :ui="{
-                  root: 'bg-n3/70 ring-nc ring-offset-n1 hover:ring-1 hover:ring-offset-2'
+                  root: 'bg-n3/70 ring-nc ring-offset-n1 hover:ring-1 hover:ring-offset-2',
                 }" />
             </div>
           </template>
@@ -230,13 +230,11 @@ const masterworkUpgradeId = computed(() => {
       icon="i-streamline-freehand-work-from-home-user-pet-cat"
       size="xs"
       :ui="{
-        root: 'max-h-[inherit] text-nc'
+        root: 'max-h-[inherit] text-nc',
       }"
       title="Item not found.">
       <template #description>
-        <ULink class="inline" underline>
-          Clem
-        </ULink> may have moved this from
+        <ULink class="inline" underline> Clem </ULink> may have moved this from
         it's previous location. Try refreshing to see if we've found it.
       </template>
     </LazyUEmpty>

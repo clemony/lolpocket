@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemTags } from "#shared/constants/items/itemTags"
+import { itemTags } from "~~/shared/constants/items/collection/itemTags"
 </script>
 
 <template>

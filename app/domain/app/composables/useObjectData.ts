@@ -3,8 +3,8 @@ import type { MaybeRefOrGetter } from "vue"
 import type { SidebarSearchEntry } from "~/domain/app/utils/searchEntries"
 import { championIndex } from "~~/shared/constants/champions/championIndex"
 import { championToTitle } from "~~/shared/constants/champions/championToTitle"
-import { itemRank } from "~~/shared/constants/items/itemRank"
-import { itemRankColor } from "~~/shared/constants/items/itemRankColor"
+import { itemRankColor } from "~~/shared/constants/items/collection/itemRankColor"
+import { itemRank } from "~~/shared/constants/items/index/itemToRank"
 
 export interface ObjectDataMap {
   ability: Ability

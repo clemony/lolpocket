@@ -173,14 +173,16 @@ const styles = computed(() =>
       v-if="props.position === 'center'"
       :class="styles.separator({ class: props.ui?.separator })" />
 
-    <span
-      v-if="props.trailingIcon || props.trailing"
-      :class="styles.trailing({ class: props.ui?.trailing })">
-      <span v-if="props.trailing">{{ props.trailing }}</span>
-      <Icon
-        v-if="props.trailingIcon"
-        :name="props.trailingIcon"
-        :class="styles.trailingIcon({ class: props.ui?.trailingIcon })" />
-    </span>
+    <slot name="trailing">
+      <span
+        v-if="props.trailingIcon || props.trailing"
+        :class="styles.trailing({ class: props.ui?.trailing })">
+        <span v-if="props.trailing">{{ props.trailing }}</span>
+        <Icon
+          v-if="props.trailingIcon"
+          :name="props.trailingIcon"
+          :class="styles.trailingIcon({ class: props.ui?.trailingIcon })" />
+      </span>
+    </slot>
   </div>
 </template>

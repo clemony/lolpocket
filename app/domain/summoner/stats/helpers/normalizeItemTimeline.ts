@@ -1,4 +1,4 @@
-import { itemRank } from "#shared/constants/items/itemRank"
+import { itemRank } from "#shared/constants/items/index/itemToRank"
 
 export const TEN_MINUTES = 10 * 60 * 1000
 

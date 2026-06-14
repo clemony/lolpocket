@@ -1,7 +1,7 @@
 {
   "id": 226621,
   "name": "Dawncore",
-  "description": "45 Ability Power\n16% Heal and Shield Power\n200% Base Mana Regen\n\nFirst Light\nGain 3% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
+  "description": "45 Ability Power\n12% Heal and Shield Power\n200% Base Mana Regen\n\nFirst Light\nGain 3% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
   "stats": {
     "abilityPower": 45
   },

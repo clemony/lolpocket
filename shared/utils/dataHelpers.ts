@@ -1,15 +1,15 @@
 import { abilityIdToName } from "#shared/constants/champions/abilityIdToName"
 import { champKeyToRole } from "#shared/constants/champions/champKeyToRole"
 import { championIndex } from "#shared/constants/champions/championIndex"
-import { itemIndex } from "#shared/constants/items/itemIndex"
-import { itemRank } from "#shared/constants/items/itemRank"
-import { itemRankColor } from "#shared/constants/items/itemRankColor"
+import { itemIndex } from "#shared/constants/items/collection/itemIndex"
+import { itemRank } from "#shared/constants/items/index/itemToRank"
 import { mapIndex } from "#shared/constants/misc/map-index"
 import { patchIndex } from "#shared/constants/patch-index"
 import { pathIndex } from "#shared/constants/runes/pathIndex"
 import { pathToColor } from "#shared/constants/runes/pathToColor"
 import { runeIndex } from "#shared/constants/runes/runeIndex"
 import { shardRegistry } from "#shared/constants/runes/shards"
+import { itemRankColor } from "~~/shared/constants/items/collection/itemRankColor"
 import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 //

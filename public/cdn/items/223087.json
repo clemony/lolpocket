@@ -1,10 +1,10 @@
 {
   "id": 223087,
   "name": "Statikk Shiv",
-  "description": "40 Attack Damage\n45 Ability Power\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nYour Energized Attacks fire chain lightning, applying On-Hit effects and dealing magic damage to up to  targets.\n\nElectroshock \nBasic Attacks grant extra Energized stacks.",
+  "description": "45 Attack Damage\n45 Ability Power\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nYour Energized Attacks fire chain lightning, applying On-Hit effects and dealing magic damage to up to  targets.\n\nElectroshock \nBasic Attacks grant extra Energized stacks.",
   "stats": {
     "abilityPower": 45,
-    "attackDamage": 40,
+    "attackDamage": 45,
     "attackSpeed": 30,
     "percentMovespeed": 4
   },

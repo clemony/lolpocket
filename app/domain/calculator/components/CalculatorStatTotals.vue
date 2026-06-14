@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { statIndex } from "#shared/constants/common/stat-index"
-import { itemStatRecord } from "#shared/constants/items/itemStatRecord"
+import { itemStatRecord } from "#shared/constants/items/collection/itemStatRecord"
 
 const checkedStats = ref<StatIndex[]>([])
 

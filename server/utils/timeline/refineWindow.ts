@@ -1,4 +1,4 @@
-import { itemRecipe } from "#shared/constants/items/itemRecipe"
+import { itemRecipe } from "#shared/constants/items/index/itemToRecipe"
 
 export function refineWindow(
   window: { events: ItemEvent[]; timestamp: number },

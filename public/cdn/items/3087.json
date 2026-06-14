@@ -44,11 +44,11 @@
   ],
   "stats": {
     "abilityPower": 45,
-    "attackDamage": 40,
+    "attackDamage": 45,
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
-  "description": "40 Attack Damage\n45 Ability Power\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nYour Energized Attacks fire chain lightning, applying On-Hit effects and dealing magic damage to nearby targets.\n\nElectroshock \nBasic Attacks grant extra Energized stacks.",
+  "description": "45 Attack Damage\n45 Ability Power\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nYour Energized Attacks fire chain lightning, applying On-Hit effects and dealing magic damage to nearby targets.\n\nElectroshock \nBasic Attacks grant extra Energized stacks.",
   "gold": {
     "base": 625,
     "purchasable": true,

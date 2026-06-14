@@ -4,12 +4,10 @@ const {
   data,
   type,
   unique,
-  layout
 } = defineProps<{
   data: Effect
   type: string
   class?: HTMLAttributes["class"]
-  layout?: string
   unique?: HTMLAttributes["class"]
 }>()
 </script>
@@ -17,18 +15,25 @@ const {
 <template>
   <div
     :class="
-      cn('w-full gap-x-1 align-middle leading-normal text-pretty', className)
+      cn(
+        'mb-2 w-full gap-x-1 px-1.5 align-middle leading-normal text-pretty',
+        className
+      )
     ">
     <span
       v-if="data.unique"
-      :class="cn('tracking-tight italic', unique ? unique : 'text-gold/80!')">
+      :class="
+        cn('tracking-tight italic', unique ? unique : 'text-mustard/80!')
+      ">
       Unique {{ type }}
       <template v-if="!data.name">:&nbsp;</template>
     </span>
 
     <span
       v-if="data.name"
-      :class="cn('tracking-tight italic', unique ? unique : 'text-gold/80!')">
+      :class="
+        cn('tracking-tight italic', unique ? unique : 'text-mustard/80!')
+      ">
       -&nbsp;{{ data.name }}:&nbsp;
     </span>
 

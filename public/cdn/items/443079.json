@@ -12,7 +12,7 @@
     {
       "unique": true,
       "name": "Supercharged",
-      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon \" />Airborne) from your champion and grants you <img src=\"/img/icons/cc-immune.webp\" class=\"tip-icon \" />total crowd control immunity for the next 3 seconds."
+      "effects": "Become immune to the first Immobilizing effect that hits you (30s Cooldown) and drops a canister nearby. Pick up the canister to restore max Health and reduce the Cooldown by 15 seconds."
     }
   ],
   "stats": {

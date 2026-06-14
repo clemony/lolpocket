@@ -1,9 +1,9 @@
 {
   "id": 226699,
   "name": "Voltaic Cyclosword",
-  "description": "50 Attack Damage\n18 Lethality\n20 Ability Haste\n\nGalvanize\nDamaging an Enemy Champions with an ability triggers Energized if it is ready.\n\nFirmament\nYour Energized Attack deals % target's Current Health as bonus physical damage and grants you  Lethality for 4 seconds.",
+  "description": "60 Attack Damage\n20 Lethality\n20 Ability Haste\n\nGalvanize\nDamaging an Enemy Champions with an ability triggers Energized if it is ready.\n\nFirmament\nYour Energized Attack deals % target's Current Health as bonus physical damage and grants you  Lethality for 4 seconds.",
   "stats": {
-    "attackDamage": 50
+    "attackDamage": 60
   },
   "gold": {
     "base": 2500,

@@ -19,6 +19,11 @@
       "gold": 1200
     },
     {
+      "id": 3009,
+      "name": "Boots of Swiftness",
+      "gold": 1000
+    },
+    {
       "id": 3111,
       "name": "Mercury's Treads",
       "gold": 1250
@@ -36,11 +41,6 @@
     {
       "id": 3008,
       "name": "Gluttonous Greaves",
-      "gold": 1000
-    },
-    {
-      "id": 3009,
-      "name": "Boots of Swiftness",
       "gold": 1000
     },
     {

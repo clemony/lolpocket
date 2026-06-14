@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
+// Updated Patch 16.12 - 06/13/2026 10:53:06 AM CDT
 
 export interface StatRecord {
   "abilityHaste"?: number;
@@ -468,7 +468,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "3087": {
     "abilityPower": 45,
-    "attackDamage": 40,
+    "attackDamage": 45,
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
@@ -727,9 +727,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "lifesteal": 5
   },
   "3190": {
-    "armor": 25,
+    "armor": 30,
     "health": 200,
-    "magicResistance": 25,
+    "magicResistance": 30,
     "abilityHaste": 10
   },
   "3193": {
@@ -903,9 +903,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "percentMovespeed": 4
   },
   "4005": {
-    "abilityPower": 60,
-    "manaRegen": 125,
-    "abilityHaste": 20
+    "abilityPower": 65,
+    "manaRegen": 150,
+    "abilityHaste": 15
   },
   "4010": {
     "health": 350,
@@ -1310,7 +1310,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "222523": {
     "criticalStrikeChance": 25,
-    "attackDamage": 50
+    "attackDamage": 55
   },
   "222524": {
     "magicResistance": 25,
@@ -1371,7 +1371,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "223031": {
     "criticalStrikeChance": 25,
-    "attackDamage": 55
+    "attackDamage": 75
   },
   "223032": {
     "attackDamage": 45,
@@ -1454,8 +1454,8 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "armor": 60
   },
   "223078": {
-    "health": 333,
-    "attackDamage": 35,
+    "health": 375,
+    "attackDamage": 40,
     "attackSpeed": 25
   },
   "223084": {
@@ -1468,7 +1468,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "223087": {
     "abilityPower": 45,
-    "attackDamage": 40,
+    "attackDamage": 45,
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
@@ -1476,7 +1476,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityPower": 65
   },
   "223091": {
-    "magicResistance": 40,
+    "magicResistance": 45,
     "attackSpeed": 50
   },
   "223094": {
@@ -1632,7 +1632,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
   },
   "223302": {
     "attackDamage": 30,
-    "attackSpeed": 25
+    "attackSpeed": 40
   },
   "223504": {
     "abilityPower": 40,
@@ -1779,9 +1779,6 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 350,
     "abilityPower": 60
   },
-  "226660": {
-    "health": 150
-  },
   "226662": {
     "health": 300,
     "armor": 45
@@ -1807,7 +1804,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "percentMovespeed": 7
   },
   "226672": {
-    "attackDamage": 40,
+    "attackDamage": 50,
     "attackSpeed": 35,
     "percentMovespeed": 7
   },
@@ -1834,7 +1831,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackDamage": 55
   },
   "226694": {
-    "attackDamage": 40
+    "attackDamage": 50
   },
   "226695": {
     "attackDamage": 55
@@ -1849,7 +1846,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackDamage": 50
   },
   "226699": {
-    "attackDamage": 50
+    "attackDamage": 60
   },
   "226701": {
     "attackDamage": 50

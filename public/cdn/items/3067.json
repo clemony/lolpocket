@@ -76,11 +76,6 @@
       "gold": 2200
     },
     {
-      "id": 4403,
-      "name": "The Golden Spatula",
-      "gold": 7187
-    },
-    {
       "id": 2502,
       "name": "Unending Despair",
       "gold": 2800
@@ -144,6 +139,11 @@
       "id": 328020,
       "name": "Abyssal Mask",
       "gold": 2850
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
     },
     {
       "id": 4629,

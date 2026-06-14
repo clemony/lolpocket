@@ -16,11 +16,11 @@ const props = defineProps<{
   placementIndex?: number
   zIndex?: number
 }>()
-const emit = defineEmits<{
-  grab: []
-}>()
+
+const emit = defineEmits(["grab", "update:open"])
 const open = defineModel<boolean>("open", { default: false })
 const modalKey = computed(() => `${props.item.group}:${props.item.id}`)
+const expanded = shallowRef<boolean>(false)
 
 const { dragConstraints, modalRef, modalStyle, updateDragConstraints } =
   useDraggableInfoModal({
@@ -57,7 +57,7 @@ function handlePointerDown() {
 
 <template>
   <AnimatePresence>
-    <UCard
+    <div
       v-if="open"
       :key="modalKey"
       ref="modalRef"
@@ -86,17 +86,18 @@ function handlePointerDown() {
         },
       }"
       :style="modalCardStyle"
-      :ui="{
-        root: 'pointer-events-auto! absolute top-1/2 left-1/2 h-max min-h-64 max-w-240 min-w-70 rounded-5xl border-n3 bg-n1/90 backdrop-blur-md',
-        body: 'p-0',
-        header: '',
-      }"
+      :class="
+        cn(
+          'pointer-events-auto! absolute top-1/2 left-1/2 h-max min-h-64 w-full touch-none rounded-5xl border border-n3 bg-n1/90 backdrop-blur-md backdrop-brightness-70 transition-[max-width] duration-400 ease-out',
+          expanded ? 'max-w-100' : 'max-w-84'
+        )
+      "
       @pointerdown.capture="handlePointerDown">
       <UButton
         variant="ghost"
         icon="i-x"
         :ui="{
-          base: 'anchor absolute! top-1.5 right-2 h-6! max-h-6! w-6 max-w-6! min-w-6! overflow-visible rounded-full after:absolute after:size-10 after:place-self-center after:rounded-full hover:bg-n4/60! hover:inset-ring-n4!',
+          base: 'anchor absolute! top-2.5 right-3 z-5! hover:bg-n4/60! hover:inset-ring-n4!',
           leadingIcon: 'text-nc/40 group-hover/btn:text-nc',
         }"
         size="xs"
@@ -107,7 +108,8 @@ function handlePointerDown() {
         :is="cardComponent"
         v-if="data.status.value === 'success' && data"
         :object-data="data"
-        @open-objedct="" />
+        @update:expanded="expanded = $event"
+        @update:open="emit('update:open', $event)" />
 
       <div v-else-if="data.status.value === 'pending'"></div>
 
@@ -124,6 +126,6 @@ function handlePointerDown() {
           if we've found it.
         </template>
       </LazyUEmpty>
-    </UCard>
+    </div>
   </AnimatePresence>
 </template>

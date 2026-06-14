@@ -8,7 +8,7 @@ import {
 } from "#components"
 import type { TabsItem } from "@nuxt/ui"
 import { useDraggableInfoModalPool } from "~/domain/app/composables/useDraggableInfoModalPool"
-import type { SlidebarEvent } from "~/domain/app/types/layout.types"
+import type { SidebarEvent, UseSidebar } from "~/domain/app/types/layout.types"
 
 const { tab, setTab } = defineProps<{
   tab: string
@@ -98,15 +98,16 @@ const component = computed<Record<string, Component> | undefined>(
     })[currentTab.value]
 )
 
-function close(e?: SlidebarEvent) {
+function close(e?: SidebarEvent) {
   if (e?.onClick) e.onClick()
   if (e?.to) navigateTo(e?.to)
 
   emit("close")
 }
 
-provide("slidebar", {
+provide<UseSidebar>("sidebar", {
   close,
+  openPopover,
 })
 
 onMounted(() => {

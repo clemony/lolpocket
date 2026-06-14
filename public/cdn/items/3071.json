@@ -44,7 +44,7 @@
     "health": 400,
     "abilityHaste": 20
   },
-  "description": "40 Attack Damage\n400 Health\n20 Ability Haste\n\nCarve\nDealing physical damage to champions reduces their Armor by 6% for 6 seconds. (stacks 5 times).\n\nFervor\nDealing physical damage grants 20 Move Speed for 2 seconds.",
+  "description": "40 Attack Damage\n400 Health\n20 Ability Haste\n\nCarve\nDealing physical damage to champions reduces the target's Armor by 6% for 6 seconds. (stacks 5 times).\n\nFervor\nDealing physical damage grants 20 Move Speed for 2 seconds.",
   "gold": {
     "base": 225,
     "purchasable": true,

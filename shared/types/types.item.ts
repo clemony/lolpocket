@@ -1,4 +1,4 @@
-import type { StatRecord } from "~~/shared/constants/items/itemStatRecord"
+import type { StatRecord } from "~~/shared/constants/items/collection/itemStatRecord"
 
 export interface Item {
   id: number
