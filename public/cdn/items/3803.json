@@ -54,7 +54,7 @@
     "health": 300,
     "mana": 375
   },
-  "description": "300 Health\n375 Mana\n\nEternity\nRestores 10% of the damage taken from champions as Mana. \nCasting an Ability heals for 25% of Mana spent.",
+  "description": "<div class=\"effect-stats\">300 Health<br>375 Mana</div><br><br><span class=\"effect-passive-text\">Eternity</span><br>Restores <span class=\"effect-blue-text\">10% of the damage taken</span> from champions as <span class=\"effect-blue-text\">Mana</span>. <br>Casting an Ability <span class=\"effect-green-text\">heals for 25% of Mana</span> spent.",
   "gold": {
     "base": 200,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 4014,
   "name": "Frozen Mallet",
-  "description": "60% Attack Speed\n600 Health\n\n\nEncroaching Frost: On-Hit, apply a stacking {{ Item_Melee_Ranged_Split }} move speed slow for 1.5 seconds. This effect stacks up to 35%.\n\n{{ Item_Melee_Ranged_Rules }}\n",
+  "description": "<div class=\"effect-stats\">60% Attack Speed<br>600 Health</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Encroaching Frost:</span> <span class=\"effect-red-text\">On-Hit</span>, apply a stacking {{ Item_Melee_Ranged_Split }} move speed slow for 1.5 seconds. This effect stacks up to 35%.<br><br>{{ Item_Melee_Ranged_Rules }}<br>",
   "stats": {
     "health": 600,
     "attackSpeed": 60

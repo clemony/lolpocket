@@ -20,7 +20,7 @@
     "abilityPower": 80,
     "health": 700
   },
-  "description": "80 Ability Power\n700 Health\n\nSinister Pact\nGain +1.5% Ability Power and 1.5% Move Speed per 100 Missing Health, up to 45%.",
+  "description": "<div class=\"effect-stats\">80 Ability Power<br>700 Health</div><br><br><span class=\"effect-passive-text\">Sinister Pact</span><br>Gain <span class=\"effect-purple-text\">+1.5% Ability Power</span> and <span class=\"effect-gray-text\">1.5% Move Speed</span> per <span class=\"effect-green-text\">100 Missing Health</span>, up to 45%.",
   "gold": {
     "base": 2750,
     "purchasable": true,

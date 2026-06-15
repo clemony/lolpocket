@@ -35,7 +35,7 @@
     "health": 400,
     "abilityHaste": 10
   },
-  "description": "45 Attack Damage\n400 Health\n10 Ability Haste\n\nLightshield Strike\nYour first Attack against a champion Critically Strikes and restores Health.",
+  "description": "<div class=\"effect-stats\">45 Attack Damage<br>400 Health<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Lightshield Strike</span><br>Your first Attack against a champion Critically Strikes and <span class=\"effect-green-text\">restores Health</span>.",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -46,8 +46,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226610,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>350 Health<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Lightshield Strike</span><br>Your first Attack against a champion Critically Strikes and <span class=\"effect-green-text\">restores Health</span>.",
+    "stats": {
+      "health": 350,
+      "attackDamage": 40
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter"
   ]

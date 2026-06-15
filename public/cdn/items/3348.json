@@ -13,7 +13,7 @@
     }
   ],
   "stats": {},
-  "description": "UNIQUE Active - Hunter's Sight: An arcane mist grants vision in the target area for 5 seconds, revealing enemy champions and granting True Sight of traps in the area for 3 seconds (30 second cooldown).",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">UNIQUE Active - Hunter's Sight:</span> An arcane mist grants vision in the target area for 5 seconds, revealing enemy champions and granting True Sight of traps in the area for 3 seconds (30 second cooldown).",
   "gold": {
     "base": 0,
     "purchasable": false,

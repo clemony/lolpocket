@@ -47,7 +47,7 @@
     "health": 500,
     "percentMovespeed": 4
   },
-  "description": "40 Attack Damage\n500 Health\n4% Move Speed\n\nSkipper\nEvery fifth Attack against champions and epic monsters deals bonus physical damage, increased against Structures.\n\nBoarding Party\nNearby allied siege and super minions gain Armor and Magic Resist.",
+  "description": "<div class=\"effect-stats\">40 Attack Damage<br>500 Health<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Skipper</span><br>Every fifth Attack against champions and epic monsters deals <span class=\"effect-orange-text\">bonus physical damage</span>, increased against Structures.<br><br><span class=\"effect-passive-text\">Boarding Party</span><br>Nearby allied siege and super minions gain <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span>.",
   "gold": {
     "base": 175,
     "purchasable": true,
@@ -57,8 +57,23 @@
   "maps": [
     11,
     12,
-    21
+    21,
+    30
   ],
+  "arena": {
+    "id": 223181,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>500 Health<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Skipper</span><br>Every fifth Attack against champions and epic monsters deals <span class=\"effect-orange-text\"> bonus physical damage</span>, increased to <span class=\"effect-orange-text\"></span> against structures.<br><br><span class=\"effect-passive-text\">Solo Party</span><br>While no allied champions are within 1500 range, you gain  <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span>.",
+    "stats": {
+      "health": 500,
+      "attackDamage": 40,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter"
   ]

@@ -44,7 +44,7 @@
     "health": 300,
     "abilityHaste": 20
   },
-  "description": "300 Health\n60 Ability Power\n20 Ability Haste\n20% Attack Speed\n\nSpellblade (0s)\nAfter using an Ability, your next Attack deals  bonus magic damage and heals you for  On-Hit and then applies On-Hit effects an additional time.",
+  "description": "<div class=\"effect-stats\">300 Health<br>60 Ability Power<br>20 Ability Haste<br>20% Attack Speed</div><br><br><span class=\"effect-passive-text\">Spellblade</span> (0s)<br>After using an Ability, your next Attack deals <span class=\"effect-purple-text\"> bonus magic damage</span> and <span class=\"effect-green-text\">heals you for </span> <span class=\"effect-red-text\">On-Hit</span> and then applies <span class=\"effect-red-text\">On-Hit</span> effects an additional time.",
   "gold": {
     "base": 300,
     "purchasable": true,
@@ -55,8 +55,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222510,
+    "description": "<div class=\"effect-stats\">300 Health<br>60 Ability Power<br>20 Ability Haste<br>20% Attack Speed</div><br><br><span class=\"effect-passive-text\">Spellblade</span> (0s)<br>After using an Ability, your next Attack deals <span class=\"effect-purple-text\"> bonus magic damage</span> and <span class=\"effect-green-text\">heals you for </span> <span class=\"effect-red-text\">On-Hit</span> and then applies <span class=\"effect-red-text\">On-Hit</span> effects an additional time.",
+    "stats": {
+      "health": 300,
+      "abilityPower": 60,
+      "attackSpeed": 20
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
   "tags": [
     "Onhit effects"
   ]

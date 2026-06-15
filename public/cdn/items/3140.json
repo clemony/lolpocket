@@ -39,7 +39,7 @@
   "stats": {
     "magicResistance": 30
   },
-  "description": "30 Magic Resist\n\nQuicksilver\nRemove all crowd control debuffs (excluding Airborne).",
+  "description": "<div class=\"effect-stats\">30 Magic Resist</div><br><br><span class=\"effect-active-text\">Quicksilver</span><br>Remove all crowd control debuffs (excluding Airborne).",
   "gold": {
     "base": 900,
     "purchasable": true,

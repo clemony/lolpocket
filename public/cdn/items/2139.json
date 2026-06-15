@@ -10,7 +10,7 @@
     "blue"
   ],
   "stats": {},
-  "description": "Consume\nGrants 50 Ability Power and 15% Mana Regen for 3 minutes. While active, damaging a champion or turret deals 25 bonus true damage (5s against champions).",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Consume</span><br>Grants <span class=\"effect-purple-text\">50 Ability Power</span> and <span class=\"effect-blue-text\">15% Mana Regen</span> for 3 minutes. While active, damaging a champion or turret deals <span class=\"effect-orange-text\">25 bonus true damage</span> (5s against champions).",
   "gold": {
     "base": 500,
     "purchasable": true,

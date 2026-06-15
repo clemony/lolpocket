@@ -1,4 +1,4 @@
-// Updated Patch 16.12 - 06/13/2026 10:53:06 AM CDT
+// Updated Patch 16.12 - 06/15/2026 12:59:23 AM CDT
 import type { Index } from "#shared/types"
 
 export const itemIndex: Index[] = [
@@ -1443,11 +1443,6 @@ export const itemIndex: Index[] = [
     "name": "Imperial Mandate"
   },
   {
-    "id": 4010,
-    "key": "item",
-    "name": "Bloodletter's Curse"
-  },
-  {
     "id": 4011,
     "key": "item",
     "name": "Sword of Blossoming Dawn"
@@ -2183,11 +2178,6 @@ export const itemIndex: Index[] = [
     "name": "Giant's Belt"
   },
   {
-    "id": 221026,
-    "key": "item",
-    "name": "Blasting Wand"
-  },
-  {
     "id": 221031,
     "key": "item",
     "name": "Chain Vest"
@@ -2213,11 +2203,6 @@ export const itemIndex: Index[] = [
     "name": "Negatron Cloak"
   },
   {
-    "id": 221058,
-    "key": "item",
-    "name": "Needlessly Large Rod"
-  },
-  {
     "id": 222022,
     "key": "item",
     "name": "Glowing Mote"
@@ -2226,76 +2211,6 @@ export const itemIndex: Index[] = [
     "id": 222051,
     "key": "item",
     "name": "Guardian's Horn"
-  },
-  {
-    "id": 222065,
-    "key": "item",
-    "name": "Shurelya's Battlesong"
-  },
-  {
-    "id": 222141,
-    "key": "item",
-    "name": "Cappa Juice"
-  },
-  {
-    "id": 222502,
-    "key": "item",
-    "name": "Unending Despair"
-  },
-  {
-    "id": 222503,
-    "key": "item",
-    "name": "Blackfire Torch"
-  },
-  {
-    "id": 222504,
-    "key": "item",
-    "name": "Kaenic Rookern"
-  },
-  {
-    "id": 222510,
-    "key": "item",
-    "name": "Dusk and Dawn"
-  },
-  {
-    "id": 222512,
-    "key": "item",
-    "name": "Fiendhunter Bolts"
-  },
-  {
-    "id": 222517,
-    "key": "item",
-    "name": "Endless Hunger"
-  },
-  {
-    "id": 222522,
-    "key": "item",
-    "name": "Actualizer"
-  },
-  {
-    "id": 222523,
-    "key": "item",
-    "name": "Hexoptics C44"
-  },
-  {
-    "id": 222524,
-    "key": "item",
-    "name": "Bandlepipes"
-  },
-  {
-    "id": 222525,
-    "key": "item",
-    "name": "Protoplasm Harness"
-  },
-  {
-    "id": 222526,
-    "key": "item",
-    "name": "Whispering Circlet"
-  },
-  {
-    "id": 222530,
-    "key": "item",
-    "name": "Diadem of Songs"
   },
   {
     "id": 223001,
@@ -2308,34 +2223,9 @@ export const itemIndex: Index[] = [
     "name": "Trailblazer"
   },
   {
-    "id": 223003,
-    "key": "item",
-    "name": "Archangel's Staff"
-  },
-  {
-    "id": 223004,
-    "key": "item",
-    "name": "Manamune"
-  },
-  {
     "id": 223005,
     "key": "item",
     "name": "Ghostcrawlers"
-  },
-  {
-    "id": 223006,
-    "key": "item",
-    "name": "Berserker's Greaves"
-  },
-  {
-    "id": 223008,
-    "key": "item",
-    "name": "Gluttonous Greaves"
-  },
-  {
-    "id": 223009,
-    "key": "item",
-    "name": "Boots of Swiftness"
   },
   {
     "id": 223011,
@@ -2343,69 +2233,9 @@ export const itemIndex: Index[] = [
     "name": "Chemtech Putrifier"
   },
   {
-    "id": 223020,
-    "key": "item",
-    "name": "Sorcerer's Shoes"
-  },
-  {
-    "id": 223026,
-    "key": "item",
-    "name": "Guardian Angel"
-  },
-  {
-    "id": 223031,
-    "key": "item",
-    "name": "Infinity Edge"
-  },
-  {
-    "id": 223032,
-    "key": "item",
-    "name": "Yun Tal Wildarrows"
-  },
-  {
-    "id": 223033,
-    "key": "item",
-    "name": "Mortal Reminder"
-  },
-  {
-    "id": 223036,
-    "key": "item",
-    "name": "Lord Dominik's Regards"
-  },
-  {
     "id": 223039,
     "key": "item",
     "name": "Atma's Reckoning"
-  },
-  {
-    "id": 223040,
-    "key": "item",
-    "name": "Seraph's Embrace"
-  },
-  {
-    "id": 223042,
-    "key": "item",
-    "name": "Muramana"
-  },
-  {
-    "id": 223046,
-    "key": "item",
-    "name": "Phantom Dancer"
-  },
-  {
-    "id": 223047,
-    "key": "item",
-    "name": "Plated Steelcaps"
-  },
-  {
-    "id": 223050,
-    "key": "item",
-    "name": "Zeke's Convergence"
-  },
-  {
-    "id": 223053,
-    "key": "item",
-    "name": "Sterak's Gage"
   },
   {
     "id": 223057,
@@ -2413,19 +2243,9 @@ export const itemIndex: Index[] = [
     "name": "Sheen"
   },
   {
-    "id": 223065,
-    "key": "item",
-    "name": "Spirit Visage"
-  },
-  {
     "id": 223067,
     "key": "item",
     "name": "Kindlegem"
-  },
-  {
-    "id": 223068,
-    "key": "item",
-    "name": "Sunfire Aegis"
   },
   {
     "id": 223069,
@@ -2433,104 +2253,9 @@ export const itemIndex: Index[] = [
     "name": "Void Immolation"
   },
   {
-    "id": 223071,
-    "key": "item",
-    "name": "Black Cleaver"
-  },
-  {
-    "id": 223072,
-    "key": "item",
-    "name": "Bloodthirster"
-  },
-  {
-    "id": 223073,
-    "key": "item",
-    "name": "Experimental Hexplate"
-  },
-  {
-    "id": 223074,
-    "key": "item",
-    "name": "Ravenous Hydra"
-  },
-  {
-    "id": 223075,
-    "key": "item",
-    "name": "Thornmail"
-  },
-  {
-    "id": 223078,
-    "key": "item",
-    "name": "Trinity Force"
-  },
-  {
-    "id": 223084,
-    "key": "item",
-    "name": "Heartsteel"
-  },
-  {
-    "id": 223085,
-    "key": "item",
-    "name": "Runaan's Hurricane"
-  },
-  {
-    "id": 223087,
-    "key": "item",
-    "name": "Statikk Shiv"
-  },
-  {
-    "id": 223089,
-    "key": "item",
-    "name": "Rabadon's Deathcap"
-  },
-  {
-    "id": 223091,
-    "key": "item",
-    "name": "Wit's End"
-  },
-  {
-    "id": 223094,
-    "key": "item",
-    "name": "Rapid Firecannon"
-  },
-  {
-    "id": 223095,
-    "key": "item",
-    "name": "Stormrazor"
-  },
-  {
-    "id": 223100,
-    "key": "item",
-    "name": "Lich Bane"
-  },
-  {
-    "id": 223102,
-    "key": "item",
-    "name": "Banshee's Veil"
-  },
-  {
     "id": 223105,
     "key": "item",
     "name": "Aegis of the Legion"
-  },
-  {
-    "id": 223107,
-    "key": "item",
-    "name": "Redemption"
-  },
-  {
-    "id": 223109,
-    "key": "item",
-    "name": "Knight's Vow"
-  },
-  {
-    "id": 223110,
-    "key": "item",
-    "name": "Frozen Heart"
-  },
-  {
-    "id": 223111,
-    "key": "item",
-    "name": "Mercury's Treads"
   },
   {
     "id": 223112,
@@ -2538,114 +2263,9 @@ export const itemIndex: Index[] = [
     "name": "Guardian's Orb"
   },
   {
-    "id": 223115,
-    "key": "item",
-    "name": "Nashor's Tooth"
-  },
-  {
-    "id": 223116,
-    "key": "item",
-    "name": "Rylai's Crystal Scepter"
-  },
-  {
-    "id": 223118,
-    "key": "item",
-    "name": "Malignance"
-  },
-  {
-    "id": 223119,
-    "key": "item",
-    "name": "Winter's Approach"
-  },
-  {
-    "id": 223121,
-    "key": "item",
-    "name": "Fimbulwinter"
-  },
-  {
-    "id": 223124,
-    "key": "item",
-    "name": "Guinsoo's Rageblade"
-  },
-  {
-    "id": 223135,
-    "key": "item",
-    "name": "Void Staff"
-  },
-  {
-    "id": 223137,
-    "key": "item",
-    "name": "Cryptbloom"
-  },
-  {
-    "id": 223139,
-    "key": "item",
-    "name": "Mercurial Scimitar"
-  },
-  {
-    "id": 223142,
-    "key": "item",
-    "name": "Youmuu's Ghostblade"
-  },
-  {
-    "id": 223143,
-    "key": "item",
-    "name": "Randuin's Omen"
-  },
-  {
-    "id": 223146,
-    "key": "item",
-    "name": "Hextech Gunblade"
-  },
-  {
-    "id": 223152,
-    "key": "item",
-    "name": "Hextech Rocketbelt"
-  },
-  {
-    "id": 223153,
-    "key": "item",
-    "name": "Blade of The Ruined King"
-  },
-  {
-    "id": 223156,
-    "key": "item",
-    "name": "Maw of Malmortius"
-  },
-  {
-    "id": 223157,
-    "key": "item",
-    "name": "Zhonya's Hourglass"
-  },
-  {
-    "id": 223158,
-    "key": "item",
-    "name": "Ionian Boots of Lucidity"
-  },
-  {
-    "id": 223161,
-    "key": "item",
-    "name": "Spear of Shojin"
-  },
-  {
-    "id": 223165,
-    "key": "item",
-    "name": "Morellonomicon"
-  },
-  {
-    "id": 223172,
-    "key": "item",
-    "name": "Zephyr"
-  },
-  {
     "id": 223177,
     "key": "item",
     "name": "Guardian's Blade"
-  },
-  {
-    "id": 223181,
-    "key": "item",
-    "name": "Hullbreaker"
   },
   {
     "id": 223184,
@@ -2658,49 +2278,9 @@ export const itemIndex: Index[] = [
     "name": "Guardian's Dirk"
   },
   {
-    "id": 223190,
-    "key": "item",
-    "name": "Locket of the Iron Solari"
-  },
-  {
     "id": 223193,
     "key": "item",
     "name": "Gargoyle Stoneplate"
-  },
-  {
-    "id": 223222,
-    "key": "item",
-    "name": "Mikael's Blessing"
-  },
-  {
-    "id": 223302,
-    "key": "item",
-    "name": "Terminus"
-  },
-  {
-    "id": 223504,
-    "key": "item",
-    "name": "Ardent Censer"
-  },
-  {
-    "id": 223508,
-    "key": "item",
-    "name": "Essence Reaver"
-  },
-  {
-    "id": 223742,
-    "key": "item",
-    "name": "Dead Man's Plate"
-  },
-  {
-    "id": 223748,
-    "key": "item",
-    "name": "Titanic Hydra"
-  },
-  {
-    "id": 223814,
-    "key": "item",
-    "name": "Edge of Night"
   },
   {
     "id": 224004,
@@ -2708,34 +2288,9 @@ export const itemIndex: Index[] = [
     "name": "Spectral Cutlass"
   },
   {
-    "id": 224005,
-    "key": "item",
-    "name": "Imperial Mandate"
-  },
-  {
-    "id": 224401,
-    "key": "item",
-    "name": "Force of Nature"
-  },
-  {
     "id": 224403,
     "key": "item",
     "name": "The Golden Spatula"
-  },
-  {
-    "id": 224628,
-    "key": "item",
-    "name": "Horizon Focus"
-  },
-  {
-    "id": 224629,
-    "key": "item",
-    "name": "Cosmic Drive"
-  },
-  {
-    "id": 224633,
-    "key": "item",
-    "name": "Riftmaker"
   },
   {
     "id": 224636,
@@ -2753,64 +2308,14 @@ export const itemIndex: Index[] = [
     "name": "Crown of the Shattered Queen"
   },
   {
-    "id": 224645,
-    "key": "item",
-    "name": "Shadowflame"
-  },
-  {
-    "id": 224646,
-    "key": "item",
-    "name": "Stormsurge"
-  },
-  {
     "id": 226035,
     "key": "item",
     "name": "Silvermere Dawn"
   },
   {
-    "id": 226333,
-    "key": "item",
-    "name": "Death's Dance"
-  },
-  {
-    "id": 226609,
-    "key": "item",
-    "name": "Chempunk Chainsword"
-  },
-  {
-    "id": 226610,
-    "key": "item",
-    "name": "Sundered Sky"
-  },
-  {
-    "id": 226616,
-    "key": "item",
-    "name": "Staff of Flowing Water"
-  },
-  {
-    "id": 226617,
-    "key": "item",
-    "name": "Moonstone Renewer"
-  },
-  {
-    "id": 226620,
-    "key": "item",
-    "name": "Echoes of Helia"
-  },
-  {
-    "id": 226621,
-    "key": "item",
-    "name": "Dawncore"
-  },
-  {
     "id": 226630,
     "key": "item",
     "name": "Goredrinker"
-  },
-  {
-    "id": 226631,
-    "key": "item",
-    "name": "Stridebreaker"
   },
   {
     "id": 226632,
@@ -2823,34 +2328,9 @@ export const itemIndex: Index[] = [
     "name": "Liandry's Anguish"
   },
   {
-    "id": 226655,
-    "key": "item",
-    "name": "Luden's Echo"
-  },
-  {
     "id": 226656,
     "key": "item",
     "name": "Everfrost"
-  },
-  {
-    "id": 226657,
-    "key": "item",
-    "name": "Rod of Ages"
-  },
-  {
-    "id": 226662,
-    "key": "item",
-    "name": "Iceborn Gauntlet"
-  },
-  {
-    "id": 226664,
-    "key": "item",
-    "name": "Hollow Radiance"
-  },
-  {
-    "id": 226665,
-    "key": "item",
-    "name": "Jak'Sho, The Protean"
   },
   {
     "id": 226667,
@@ -2863,69 +2343,14 @@ export const itemIndex: Index[] = [
     "name": "Galeforce"
   },
   {
-    "id": 226672,
-    "key": "item",
-    "name": "Kraken Slayer"
-  },
-  {
-    "id": 226673,
-    "key": "item",
-    "name": "Immortal Shieldbow"
-  },
-  {
     "id": 226675,
     "key": "item",
     "name": "Navori Flickerblades"
   },
   {
-    "id": 226676,
-    "key": "item",
-    "name": "The Collector"
-  },
-  {
     "id": 226691,
     "key": "item",
     "name": "Duskblade of Draktharr"
-  },
-  {
-    "id": 226692,
-    "key": "item",
-    "name": "Eclipse"
-  },
-  {
-    "id": 226693,
-    "key": "item",
-    "name": "Prowler's Claw"
-  },
-  {
-    "id": 226694,
-    "key": "item",
-    "name": "Serylda's Grudge"
-  },
-  {
-    "id": 226695,
-    "key": "item",
-    "name": "Serpent's Fang"
-  },
-  {
-    "id": 226696,
-    "key": "item",
-    "name": "Axiom Arc"
-  },
-  {
-    "id": 226697,
-    "key": "item",
-    "name": "Hubris"
-  },
-  {
-    "id": 226698,
-    "key": "item",
-    "name": "Profane Hydra"
-  },
-  {
-    "id": 226699,
-    "key": "item",
-    "name": "Voltaic Cyclosword"
   },
   {
     "id": 226701,
@@ -2971,11 +2396,6 @@ export const itemIndex: Index[] = [
     "id": 228009,
     "key": "item",
     "name": "Multitool"
-  },
-  {
-    "id": 228020,
-    "key": "item",
-    "name": "Abyssal Mask"
   },
   {
     "id": 443054,
@@ -3046,11 +2466,6 @@ export const itemIndex: Index[] = [
     "id": 443081,
     "key": "item",
     "name": "Hexbolt Companion"
-  },
-  {
-    "id": 443083,
-    "key": "item",
-    "name": "Warmog's Armor"
   },
   {
     "id": 443090,
@@ -3161,11 +2576,6 @@ export const itemIndex: Index[] = [
     "id": 447110,
     "key": "item",
     "name": "Moonflair Spellblade"
-  },
-  {
-    "id": 447111,
-    "key": "item",
-    "name": "Overlord's Bloodmail"
   },
   {
     "id": 447112,

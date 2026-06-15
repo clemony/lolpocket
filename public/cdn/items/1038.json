@@ -53,7 +53,7 @@
   "stats": {
     "attackDamage": 40
   },
-  "description": "40 Attack Damage\n\n",
+  "description": "<div class=\"effect-stats\">40 Attack Damage</div><br><br>",
   "gold": {
     "base": 1300,
     "purchasable": true,

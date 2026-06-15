@@ -17,24 +17,27 @@
   }
 
   .layer.back {
-    transform: translateZ(-20px) rotateX(calc(var(--ty) * 2deg)) rotateY(calc(var(--tx) * -2deg)) scale(1.02);
+    transform: translateZ(-20px) rotateX(calc(var(--ty) * 2deg))
+      rotateY(calc(var(--tx) * -2deg)) scale(1.02);
     opacity: 0.9;
     transition-duration: 650ms;
   }
 
   .layer.mid {
-    transform: translateZ(0px) rotateX(calc(var(--ty) * 4deg)) rotateY(calc(var(--tx) * -4deg));
+    transform: translateZ(0px) rotateX(calc(var(--ty) * 4deg))
+      rotateY(calc(var(--tx) * -4deg));
     transition-duration: 500ms;
   }
 
   .layer.front {
-    transform: translateZ(20px) rotateX(calc(var(--ty) * 7deg)) rotateY(calc(var(--tx) * -7deg)) scale(1.05);
+    transform: translateZ(20px) rotateX(calc(var(--ty) * 7deg))
+      rotateY(calc(var(--tx) * -7deg)) scale(1.05);
     filter: drop-shadow(0 0 1.25rem #6cf6);
     transition-duration: 400ms;
   }
 
   .layer.front::after {
-    content: ' ';
+    content: " ";
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at 50% 40%, #ffffff33, transparent 60%);

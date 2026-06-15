@@ -1,7 +1,7 @@
 {
   "id": 323004,
   "name": "Manamune",
-  "description": "35 Attack Damage\n500 Mana\n15 Ability Haste\n\nAwe\nGain  bonus Attack Damage.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grants 6.5 max Mana (doubled vs. champions).\nTransforms into Muramana at 360 max Mana.",
+  "description": "<div class=\"effect-stats\">35 Attack Damage<br>500 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-orange-text\"> bonus Attack Damage</span>.<br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 4 charges)<br>Landing Attacks and Abilities grants <span class=\"effect-blue-text\">6.5 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Muramana</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
   "stats": {
     "mana": 500,
     "attackDamage": 35

@@ -80,7 +80,7 @@
   "stats": {
     "magicResistance": 20
   },
-  "description": "20 Magic Resist\n\n",
+  "description": "<div class=\"effect-stats\">20 Magic Resist</div><br><br>",
   "gold": {
     "base": 400,
     "purchasable": true,

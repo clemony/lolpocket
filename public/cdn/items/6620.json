@@ -34,7 +34,7 @@
     "manaRegen": 125,
     "abilityHaste": 20
   },
-  "description": "35 Ability Power\n200 Health\n20 Ability Haste\n125% Base Mana Regen\n\nSoul Siphon\nGain 30% of pre-mitigation damage dealt to champions as Soul Charges. Healing or Shielding an ally consumes all Soul Charges to restore Health.",
+  "description": "<div class=\"effect-stats\">35 Ability Power<br>200 Health<br>20 Ability Haste<br>125% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Soul Siphon</span><br>Gain 30% of pre-mitigation damage dealt to champions as Soul Charges. Healing or Shielding an ally consumes all <span class=\"effect-passive-text\">Soul Charges</span> to restore <span class=\"effect-green-text\">Health</span>.",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -45,8 +45,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226620,
+    "description": "<div class=\"effect-stats\">40 Ability Power<br>300 Health<br>30 Ability Haste<br>150% Base Mana Regen</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Soul Siphon:</span> Damaging a champion grants a <span class=\"effect-passive-text\">Soul Shard</span>. Healing or Shielding an ally consumes all <span class=\"effect-passive-text\">Soul Shards</span> to restore Health and deals magic damage per Shard to the nearest enemy champion.<br>",
+    "stats": {
+      "health": 300,
+      "abilityPower": 40
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 326620,
     "stats": {

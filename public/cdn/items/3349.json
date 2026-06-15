@@ -1,7 +1,7 @@
 {
   "id": 3349,
   "name": "Lucent Singularity",
-  "description": "Lucent Singularity",
+  "description": "<div class=\"effect-stats\"></div><br><br>Lucent Singularity",
   "gold": {
     "base": 0,
     "purchasable": false,

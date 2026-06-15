@@ -40,7 +40,7 @@
     "attackDamage": 45,
     "health": 450
   },
-  "description": "45 Attack Damage\n450 Health\n\nDragonforce \nGain 25 Basic Ability Haste.\n\nFocused Will \nDealing damage with Abilities increases your Champion's Ability and Passive damage by 3% for 6 seconds. (stacks 4 times).",
+  "description": "<div class=\"effect-stats\">45 Attack Damage<br>450 Health</div><br><br><span class=\"effect-passive-text\">Dragonforce</span> <br>Gain 25 Basic Ability Haste.<br><br><span class=\"effect-passive-text\">Focused Will</span> <br>Dealing damage with Abilities increases your Champion's Ability and Passive damage by 3% for 6 seconds. (stacks 4 times).",
   "gold": {
     "base": 675,
     "purchasable": true,
@@ -51,8 +51,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223161,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>350 Health</div><br><br><span class=\"effect-passive-text\">Dragonforce</span> <br>Gain 25 Basic Ability Haste.<br><br><span class=\"effect-passive-text\">Focused Will</span> <br>Dealing damage with Abilities increases your Champion's Ability and Passive damage by 3% for 6 seconds. (stacks 4 times).",
+    "stats": {
+      "health": 350,
+      "attackDamage": 40
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Ability haste"

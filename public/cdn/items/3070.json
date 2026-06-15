@@ -52,7 +52,7 @@
   "stats": {
     "mana": 240
   },
-  "description": "240 Mana\n\nManaflow (8s, max 4 charges)\nLanding Abilities grants 3 max Mana (doubled vs. champions), up to 360.\n\nHelping Hand\nAttacks deal an additional 5 physical damage to minions.",
+  "description": "<div class=\"effect-stats\">240 Mana</div><br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 4 charges)<br>Landing Abilities grants <span class=\"effect-blue-text\">3 max Mana</span> (doubled vs. champions), up to <span class=\"effect-blue-text\">360</span>.<br><br><span class=\"effect-passive-text\">Helping Hand</span><br>Attacks deal an additional <span class=\"effect-orange-text\">5 physical damage</span> to minions.",
   "gold": {
     "base": 400,
     "purchasable": true,

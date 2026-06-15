@@ -1,7 +1,7 @@
 {
   "id": 664403,
   "name": "The Golden Spatula",
-  "description": "90 Attack Damage\n125 Ability Power\n30% Attack Speed\n25% Critical Strike Chance\n250 Health\n10 Armor\n10 Magic Resist\n250 Mana\n20 Ability Haste\n10% Life Steal\n100% Base Health Regen\n100% Base Mana Regen\n\n\"It must do something...\nDeclined, it does EVERYTHING\"",
+  "description": "<div class=\"effect-stats\">90 Attack Damage<br>125 Ability Power<br>30% Attack Speed<br>25% Critical Strike Chance<br>250 Health<br>10 Armor<br>10 Magic Resist<br>250 Mana<br>20 Ability Haste<br>10% Life Steal<br>100% Base Health Regen<br>100% Base Mana Regen</div><br><br>\"It must do something...<br>Declined, it does EVERYTHING\"",
   "stats": {
     "magicResistance": 10,
     "mana": 250,

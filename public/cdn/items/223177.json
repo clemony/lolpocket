@@ -1,7 +1,7 @@
 {
   "id": 223177,
   "name": "Guardian's Blade",
-  "description": "25 Attack Damage\n250 Health\n15 Ability Haste\n\n",
+  "description": "<div class=\"effect-stats\">25 Attack Damage<br>250 Health<br>15 Ability Haste</div><br><br>",
   "stats": {
     "health": 250,
     "attackDamage": 25

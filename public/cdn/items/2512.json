@@ -37,7 +37,7 @@
     "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
-  "description": "45% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nNight Vigil\nGain 30 Ultimate Ability Haste.\n\nOpening Barrage\nAfter casting your Ultimate, your next 3 basic attacks gain 50% Attack Speed and Critically Strike for 80% of your normal Critical Strike damage for 8 seconds. If an attack would already Critically Strike, instead it deals 15% bonus true damage.",
+  "description": "<div class=\"effect-stats\">45% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Night Vigil</span><br>Gain 30 Ultimate Ability Haste.<br><br><span class=\"effect-passive-text\">Opening Barrage</span><br>After casting your Ultimate, your next 3 basic attacks gain <span class=\"effect-gold-text\">50% Attack Speed</span> and Critically Strike for 80% of your normal Critical Strike damage for 8 seconds. If an attack would already Critically Strike, instead it deals <span class=\"effect-orange-text\">15% bonus true damage</span>.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -48,8 +48,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222512,
+    "description": "<div class=\"effect-stats\">40% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Night Vigil</span><br>Gain 30 Ultimate Ability Haste.<br><br><span class=\"effect-passive-text\">Opening Barrage</span> (0s)<br>After casting your Ultimate, your next 3 basic attacks within 8 seconds gain <span class=\"effect-gold-text\">50% Attack Speed</span> and Critically Strike for 75% of your normal Critical Strike damage. If an attack would already Critically Strike, it deals normal Critical Strike damage and also deals <span class=\"effect-orange-text\">10% bonus true damage</span>.",
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackSpeed": 40,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman",
     "Movement"

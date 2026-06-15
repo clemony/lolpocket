@@ -37,7 +37,7 @@
     "healthRegen": 75,
     "manaRegen": 75
   },
-  "description": "200 Health\n75% Base Health Regen\n75% Base Mana Regen\n9 Gold Per 10 Seconds\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage On-Hit. If the target is a champion, they take increased damage for 4 seconds.Active (4 charges)\nPlaces an Invisible Stealth Ward that grants vision.",
+  "description": "<div class=\"effect-stats\">200 Health<br>75% Base Health Regen<br>75% Base Mana Regen<br>9 Gold Per 10 Seconds</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>. If the target is a champion, they take increased damage for 4 seconds.<span class=\"effect-active-text\">Active</span> (4 charges)<br>Places an Invisible Stealth Ward that grants vision.",
   "gold": {
     "base": 0,
     "purchasable": true,

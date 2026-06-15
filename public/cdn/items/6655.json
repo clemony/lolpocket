@@ -31,7 +31,7 @@
     "mana": 600,
     "abilityHaste": 10
   },
-  "description": "100 Ability Power\n600 Mana\n10 Ability Haste\n\nEcho\nDamaging Abilities fire 6 Echoes that deal bonus magic damage to the target and nearby enemies. Remaining Echoes fire on the primary target, dealing 20% damage.\n",
+  "description": "<div class=\"effect-stats\">100 Ability Power<br>600 Mana<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Echo</span><br>Damaging Abilities fire 6 Echoes that deal <span class=\"effect-purple-text\">bonus magic damage</span> to the target and nearby enemies. Remaining Echoes fire on the primary target, dealing 20% damage.<br>",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -42,8 +42,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226655,
+    "description": "<div class=\"effect-stats\">85 Ability Power<br>600 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Echo</span><br>Damaging Abilities consume all the charges to deal an additional magic damage to the target and one additional nearby target per charge. If there are insufficient targets in range, for each remaining shot, repeat the damage on the primary target.",
+    "stats": {
+      "mana": 600,
+      "abilityPower": 85
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

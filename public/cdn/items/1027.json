@@ -28,7 +28,7 @@
   "stats": {
     "mana": 300
   },
-  "description": "300 Mana\n\n",
+  "description": "<div class=\"effect-stats\">300 Mana</div><br><br>",
   "gold": {
     "base": 300,
     "purchasable": true,

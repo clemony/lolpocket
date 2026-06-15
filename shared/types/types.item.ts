@@ -21,8 +21,11 @@ export interface Item {
   specialRecipe?: string | number
   stats?: Record<string, number>
   tags?: string[]
+  arena?: ArenaItem
   masterwork?: boolean | MasterworkStats
 }
+
+export type ArenaItem = Omit<Item, "arena" | "maps" | "name" | "tags">
 
 export interface MasterworkStats {
   upgradeId: number
@@ -70,6 +73,7 @@ export interface ItemLite {
   recipe?: number[]
   stats?: Record<string, number>
   tags?: string[]
+  arena?: ArenaItem
 }
 
 export type CalculatorSet = [number, number, number, number, number, number]

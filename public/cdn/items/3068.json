@@ -40,7 +40,7 @@
     "health": 350,
     "abilityHaste": 10
   },
-  "description": "350 Health\n50 Armor\n10 Ability Haste\n\nImmolate\nAfter taking or dealing damage, deal magic damage per second to nearby enemies for 3 seconds. ",
+  "description": "<div class=\"effect-stats\">350 Health<br>50 Armor<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\">magic damage</span> per second to nearby enemies for 3 seconds. ",
   "gold": {
     "base": 600,
     "purchasable": true,
@@ -51,8 +51,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223068,
+    "description": "<div class=\"effect-stats\">350 Health<br>40 Armor<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\"> magic damage</span> per second to nearby enemies for 3 seconds. ",
+    "stats": {
+      "health": 350,
+      "armor": 40
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Tank"
   ]

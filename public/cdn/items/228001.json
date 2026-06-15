@@ -32,7 +32,7 @@
     "health": 650,
     "abilityHaste": 20
   },
-  "description": "650 Health\n20 Ability Haste\n\nVendetta:\nTake reduced damage against your Nemesis. They have reduced Tenacity while near you.\n\nActive can be cast at global range.\n\n\"She swore to dedicate her life to his destruction...\"Active - Vow: Choose a Nemesis (90s).",
+  "description": "<div class=\"effect-stats\">650 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Vendetta:</span><br>Take reduced damage against your Nemesis. They have reduced Tenacity while near you.<br><br>Active can be cast at global range.<br><br>\"She swore to dedicate her life to his destruction...\"<span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Vow:</span> Choose a Nemesis (90s).",
   "gold": {
     "base": 2500,
     "purchasable": true,

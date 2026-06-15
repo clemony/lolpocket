@@ -38,7 +38,7 @@
     "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
-  "description": "40% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nTranscendence\nAttacks reduce Basic Ability cooldowns by 15% of their remaining cooldown.",
+  "description": "<div class=\"effect-stats\">40% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Transcendence</span><br>Attacks reduce Basic Ability cooldowns by 15% of their remaining cooldown.",
   "gold": {
     "base": 950,
     "purchasable": true,

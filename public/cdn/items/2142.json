@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "\n\nJuices do not stack with themselves, but you can have multiple different ones active.Active - Consume: Automatically activates on Combat Start. Drink to gain 30+ 10% bonus Ability Power or 18+ 10% bonus Attack Damage for the next round.\n\nMade with 100% real cherries. Warning: May cause imbiber to deal tons of damage.",
+  "description": "<div class=\"effect-stats\"></div><br><br><br><br>Juices do not stack with themselves, but you can have multiple different ones active.<span class=\"effect-active-text\">Active - Consume:</span> Automatically activates on Combat Start. Drink to gain <span class=\"effect-purple-text\">30+ 10% bonus Ability Power</span> or <span class=\"effect-orange-text\">18+ 10% bonus Attack Damage</span> for the next round.<br><br>Made with 100% real cherries. Warning: May cause imbiber to deal tons of damage.",
   "gold": {
     "base": 500,
     "purchasable": true,

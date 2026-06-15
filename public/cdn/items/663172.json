@@ -1,7 +1,7 @@
 {
   "id": 663172,
   "name": "Zephyr",
-  "description": "40% Attack Speed\n8% Move Speed\n25 Ability Haste\n20% Tenacity\n\nLike the Wind\nGain 5% Move Speed On-Hit for 6 seconds, stacking up to 25% Move Speed.",
+  "description": "<div class=\"effect-stats\">40% Attack Speed<br>8% Move Speed<br>25 Ability Haste<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">Like the Wind</span><br>Gain 5% Move Speed <span class=\"effect-red-text\">On-Hit</span> for 6 seconds, stacking up to 25% Move Speed.",
   "stats": {
     "attackSpeed": 40,
     "percentMovespeed": 8

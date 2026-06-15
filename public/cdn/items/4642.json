@@ -72,7 +72,7 @@
     "manaRegen": 100,
     "abilityHaste": 10
   },
-  "description": "20 Ability Power\n100% Base Mana Regen\n10 Ability Haste\n\n",
+  "description": "<div class=\"effect-stats\">20 Ability Power<br>100% Base Mana Regen<br>10 Ability Haste</div><br><br>",
   "gold": {
     "base": 50,
     "purchasable": true,

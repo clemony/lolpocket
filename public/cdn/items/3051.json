@@ -46,7 +46,7 @@
     "attackDamage": 20,
     "attackSpeed": 20
   },
-  "description": "20 Attack Damage\n20% Attack Speed\n\n",
+  "description": "<div class=\"effect-stats\">20 Attack Damage<br>20% Attack Speed</div><br><br>",
   "gold": {
     "base": 250,
     "purchasable": true,

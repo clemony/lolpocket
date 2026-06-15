@@ -10,7 +10,7 @@
     "attackSpeed": 15,
     "omnivamp": 1.5
   },
-  "description": "8 Attack Damage\n15% Attack Speed\n1.5% Omnivamp\n\n",
+  "description": "<div class=\"effect-stats\">8 Attack Damage<br>15% Attack Speed<br>1.5% Omnivamp</div><br><br>",
   "gold": {
     "base": 400,
     "purchasable": true,

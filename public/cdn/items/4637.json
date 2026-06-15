@@ -1,7 +1,7 @@
 {
   "id": 4637,
   "name": "Demonic Embrace",
-  "description": "75 Ability Power\n350 Health\n\n\nAzakana's Gaze: Dealing Ability damage burns enemies for {{ Item_Melee_Ranged_Split }} max Health magic damage every second for 4 seconds. Dark Pact: Gain 2% of your bonus Health as Ability Power. \n\nAzakana's Gaze deals a maximum of 40 damage to monsters.",
+  "description": "<div class=\"effect-stats\">75 Ability Power<br>350 Health</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Azakana's Gaze:</span> Dealing Ability damage burns enemies for {{ Item_Melee_Ranged_Split }} <span class=\"effect-purple-text\">max Health magic damage</span> every second for 4 seconds. <span class=\"effect-list\"><span class=\"effect-passive-text\">Dark Pact:</span> Gain 2% of your <span class=\"effect-green-text\">bonus Health</span> as <span class=\"effect-purple-text\">Ability Power</span>. <br><br><span class=\"effect-passive-text\">Azakana's Gaze</span> deals a maximum of 40 damage to monsters.",
   "stats": {
     "health": 350,
     "abilityPower": 75

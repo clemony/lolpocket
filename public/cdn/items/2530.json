@@ -25,7 +25,7 @@
     "mana": 1000,
     "manaRegen": 100
   },
-  "description": "200 Health\n8% Heal and Shield Power\n1000 Mana\n100% Base Mana Regen\n\nHarmony\nGain % Heal and Shield Power.\n\nConsonance\nWhile you or any ally you've healed or shielded in the last 3 seconds is in combat with champions, each second, heal the lowest health nearby ally champion.",
+  "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>1000 Mana<br>100% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Harmony</span><br>Gain % Heal and Shield Power.<br><br><span class=\"effect-passive-text\">Consonance</span><br>While you or any ally you've healed or shielded in the last 3 seconds is in combat with champions, each second, heal the lowest health nearby ally champion.",
   "gold": {
     "base": 2250,
     "purchasable": false,
@@ -36,8 +36,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222530,
+    "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>1000 Mana<br>100% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Harmony</span><br>Gain % Heal and Shield Power.<br><br><span class=\"effect-passive-text\">Consonance</span><br>While you or any ally you've healed or shielded in the last 3 seconds is in combat with champions, each second, heal the lowest health nearby ally champion for .",
+    "stats": {
+      "mana": 1000,
+      "health": 200
+    },
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
   "masterwork": {
     "upgradeId": 322530,
     "stats": {

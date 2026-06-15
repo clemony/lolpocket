@@ -45,7 +45,7 @@
     "lifesteal": 12,
     "abilityHaste": 15
   },
-  "description": "65 Attack Damage\n15 Ability Haste\n12% Life Steal\n\nCleave\nAttacks deal physical damage to nearby enemies.Ravenous Crescent\nDeal physical damage to enemies around you. \nYour Life Steal applies to this damage.",
+  "description": "<div class=\"effect-stats\">65 Attack Damage<br>15 Ability Haste<br>12% Life Steal</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> to nearby enemies.<span class=\"effect-active-text\">Ravenous Crescent</span><br>Deal <span class=\"effect-orange-text\">physical damage</span> to enemies around you. <br>Your Life Steal applies to this damage.",
   "gold": {
     "base": 150,
     "purchasable": true,
@@ -56,8 +56,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223074,
+    "description": "<div class=\"effect-stats\">70 Attack Damage<br>15 Ability Haste<br>15% Life Steal</div><br><br><span class=\"effect-passive-text\">Cleave:</span> Attacks and Abilities deal physical damage to other nearby enemies. Activate to hit nearby enemies.<br><span class=\"effect-active-text\">Ravenous Crescent</span><br>Deal <span class=\"effect-orange-text\">physical damage</span> to enemies around you. <br>Your <span class=\"effect-red-text\">Life Steal</span> applies to this damage.",
+    "stats": {
+      "attackDamage": 70,
+      "lifesteal": 15
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter"
   ]

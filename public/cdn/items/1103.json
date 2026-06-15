@@ -27,7 +27,7 @@
     }
   ],
   "stats": {},
-  "description": "Jungle Companions\nSummon a Mosstomper that assists you against monsters.\n\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it completes your Jungle Quest and grants a Shield while out of combat and after killing large monsters.",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-passive-text\">Jungle Companions</span><br>Summon a Mosstomper that assists you against monsters.<br><br>The companion grows as you hunt monsters, empowering your <span class=\"effect-purple-text\">Smite</span>. When fully grown, it completes your Jungle Quest and grants a Shield while out of combat and after killing large monsters.",
   "gold": {
     "base": 450,
     "purchasable": true,

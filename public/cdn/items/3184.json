@@ -13,7 +13,7 @@
     "health": 150,
     "lifesteal": 5
   },
-  "description": "25 Attack Damage\n150 Health\n5% Life Steal\n\n",
+  "description": "<div class=\"effect-stats\">25 Attack Damage<br>150 Health<br>5% Life Steal</div><br><br>",
   "gold": {
     "base": 950,
     "purchasable": true,

@@ -27,7 +27,7 @@
     "health": 400,
     "abilityHaste": 15
   },
-  "description": "85 Adaptive Force\n400 Health\n15 Ability Haste\n\nSpark (5s) Cooldown\nAttack or Ability hits against an enemy champion Burn them for  magic damage over 3 seconds.\n\nCleansing Flame (0s) per champion\nApplying a Burn to an enemy champion creates a nearby Blaze for 5 seconds. While in a Blaze, you gain  Move Speed and restore  Health per second, while enemies take  magic damage per second.\n\nThe size and strength of each Blaze scale the number unique Burn sources you have.",
+  "description": "<div class=\"effect-stats\">85 Adaptive Force<br>400 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spark</span> (5s) Cooldown<br>Attack or Ability hits against an enemy champion Burn them for <span class=\"effect-purple-text\"> magic damage</span> over 3 seconds.<br><br><span class=\"effect-passive-text\">Cleansing Flame</span> (0s) per champion<br>Applying a Burn to an enemy champion creates a nearby Blaze for 5 seconds. While in a Blaze, you gain <span class=\"effect-gray-text\"> Move Speed</span> and restore <span class=\"effect-green-text\"> Health</span> per second, while enemies take <span class=\"effect-purple-text\"> magic damage</span> per second.<br><br>The size and strength of each Blaze scale the number unique Burn sources you have.",
   "gold": {
     "base": 2750,
     "purchasable": true,

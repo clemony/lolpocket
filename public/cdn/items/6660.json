@@ -44,7 +44,7 @@
     "health": 150,
     "abilityHaste": 5
   },
-  "description": "150 Health\n5 Ability Haste\n\nImmolate\nAfter taking or dealing damage, deal magic damage to nearby enemies for 3 seconds.",
+  "description": "<div class=\"effect-stats\">150 Health<br>5 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\">magic damage</span> to nearby enemies for 3 seconds.",
   "gold": {
     "base": 250,
     "purchasable": true,

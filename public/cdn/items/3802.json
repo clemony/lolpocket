@@ -80,7 +80,7 @@
     "mana": 300,
     "abilityHaste": 10
   },
-  "description": "40 Ability Power\n300 Mana\n10 Ability Haste\n\nEnlighten\nLevelling up restores 20% max Mana over 3 seconds.",
+  "description": "<div class=\"effect-stats\">40 Ability Power<br>300 Mana<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Enlighten</span><br>Levelling up restores <span class=\"effect-blue-text\">20% max Mana</span> over 3 seconds.",
   "gold": {
     "base": 250,
     "purchasable": true,

@@ -14,7 +14,7 @@
     }
   ],
   "stats": {},
-  "description": "Unanimity\nGain a percent of your teammate's Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste, increased significantly if they also have Twin Mask and are alive.",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-passive-text\">Unanimity</span><br>Gain a percent of your teammate's <span class=\"effect-green-text\">Health</span>, <span class=\"effect-gold-text\">Armor</span>, <span class=\"effect-blue-text\">Magic Resist</span>, <span class=\"effect-orange-text\">Attack Damage</span>, <span class=\"effect-purple-text\">Ability Power</span>, <span class=\"effect-gold-text\">Attack Speed</span>, and Ability Haste, increased significantly if they also have Twin Mask and are alive.",
   "gold": {
     "base": 2750,
     "purchasable": false,

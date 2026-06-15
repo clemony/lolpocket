@@ -30,7 +30,7 @@
     "magicResistance": 45,
     "abilityHaste": 15
   },
-  "description": "350 Health\n45 Magic Resist\n15 Ability Haste\n\nUnmake\nNearby enemy champions take 12% more magic damage.",
+  "description": "<div class=\"effect-stats\">350 Health<br>45 Magic Resist<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Unmake</span><br>Nearby enemy champions take 12% more <span class=\"effect-purple-text\">magic damage</span>.",
   "gold": {
     "base": 1000,
     "purchasable": true,
@@ -41,8 +41,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 228020,
+    "description": "<div class=\"effect-stats\">350 Health<br>50 Magic Resist<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Unmake</span><br>Nearby enemy champions take <span class=\"effect-purple-text\">12% more magic damage</span>.",
+    "stats": {
+      "magicResistance": 50,
+      "health": 350
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 328020,
     "stats": {

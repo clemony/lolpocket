@@ -74,7 +74,7 @@ function handlePointerDown() {
         dragConstraints,
         initial: {
           opacity: 0,
-          y: 30,
+          y: 10,
         },
         animate: {
           opacity: 1,
@@ -82,7 +82,7 @@ function handlePointerDown() {
         },
         exit: {
           opacity: 0,
-          y: 30,
+          y: 10,
         },
       }"
       :style="modalCardStyle"
@@ -97,7 +97,7 @@ function handlePointerDown() {
         variant="ghost"
         icon="i-x"
         :ui="{
-          base: 'anchor absolute! top-2.5 right-3 z-5! hover:bg-n4/60! hover:inset-ring-n4!',
+          base: 'anchor absolute! top-2.5 right-2.5 z-5! hover:bg-n4/60! hover:inset-ring-n4!',
           leadingIcon: 'text-nc/40 group-hover/btn:text-nc',
         }"
         size="xs"

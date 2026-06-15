@@ -65,7 +65,7 @@
   "stats": {
     "abilityPower": 45
   },
-  "description": "45 Ability Power\n\nRevved\nDamaging a champion deals bonus magic damage.",
+  "description": "<div class=\"effect-stats\">45 Ability Power</div><br><br><span class=\"effect-passive-text\">Revved</span><br>Damaging a champion deals <span class=\"effect-purple-text\">bonus magic damage</span>.",
   "gold": {
     "base": 300,
     "purchasable": true,

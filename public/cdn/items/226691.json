@@ -1,7 +1,7 @@
 {
   "id": 226691,
   "name": "Duskblade of Draktharr",
-  "description": "60 Attack Damage\n22 Lethality\n15 Ability Haste\n\n\nNightstalker: Your Abilities deal up to an additional 16% damage based on the target's missing health. When a champion that you have damaged within the last 3 seconds dies, you become Untargetable from non-structures for 1.5 seconds (30(0s)) until your next action.\n\nMythic Passive: Grants all other Legendary items 5 Ability Haste and 5 Move Speed.\n",
+  "description": "<div class=\"effect-stats\">60 Attack Damage<br>22 Lethality<br>15 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Nightstalker:</span> Your Abilities deal up to an additional 16% damage based on the target's missing health. When a champion that you have damaged within the last 3 seconds dies, you become Untargetable from non-structures for 1.5 seconds (30(0s)) until your next action.<br><br>Mythic Passive: Grants all other <span class=\"effect-gold-text\">Legendary</span> items 5 Ability Haste and 5 Move Speed.<br>",
   "stats": {
     "attackDamage": 60
   },

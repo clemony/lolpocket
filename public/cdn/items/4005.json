@@ -40,7 +40,7 @@
     "manaRegen": 150,
     "abilityHaste": 15
   },
-  "description": "65 Ability Power\n15 Ability Haste\n150% Base Mana Regen\n\nControl\nGain 15 Ability Haste for your abilities with Immobilizing effects.\n\nCommand\nOn Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.\n",
+  "description": "<div class=\"effect-stats\">65 Ability Power<br>15 Ability Haste<br>150% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Control</span><br>Gain 15 Ability Haste for your abilities with Immobilizing effects.<br><br><span class=\"effect-passive-text\">Command</span><br>On Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.<br>",
   "gold": {
     "base": 650,
     "purchasable": true,
@@ -51,8 +51,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 224005,
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>15 Ability Haste<br>150% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Control</span><br>Gain 15 Ability Haste for your abilities with Immobilizing effects.<br><br><span class=\"effect-passive-text\">Command</span><br>On Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.<br>",
+    "stats": {
+      "abilityPower": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 324005,
     "stats": {

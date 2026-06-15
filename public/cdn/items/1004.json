@@ -25,7 +25,7 @@
   "stats": {
     "manaRegen": 50
   },
-  "description": "50% Base Mana Regen\n\n",
+  "description": "<div class=\"effect-stats\">50% Base Mana Regen</div><br><br>",
   "gold": {
     "base": 200,
     "purchasable": true,

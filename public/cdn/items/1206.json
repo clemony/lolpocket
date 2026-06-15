@@ -1,7 +1,7 @@
 {
   "id": 1206,
   "name": "Mid Lane Quest Reward",
-  "description": "Rewards\n• Upgrade boots to tier 3\n• +8% bonus Attack Damage and Ability Power",
+  "description": "<div class=\"effect-stats\"></div><br><br>Rewards<br>• Upgrade boots to tier 3<br>• +8% bonus Attack Damage and Ability Power",
   "gold": {
     "base": 0,
     "purchasable": false,

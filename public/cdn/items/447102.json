@@ -21,7 +21,7 @@
     "attackSpeed": 40,
     "health": 300
   },
-  "description": "80 Ability Power\n40% Attack Speed\n300 Health\n\nZZ'Rot (0s)\nOn Attack or when damaging an enemy with an ability, summon 8 Voidgrubs to Attack the target. Voidgrubs deal  magic damage and live for up to 3 seconds.\n\nWhen you die, spawn 6.",
+  "description": "<div class=\"effect-stats\">80 Ability Power<br>40% Attack Speed<br>300 Health</div><br><br><span class=\"effect-passive-text\">ZZ'Rot</span> (0s)<br>On Attack or when damaging an enemy with an ability, summon 8 Voidgrubs to Attack the target. Voidgrubs deal <span class=\"effect-purple-text\"> magic damage</span> and live for up to 3 seconds.<br><br>When you die, spawn 6.",
   "gold": {
     "base": 2750,
     "purchasable": true,

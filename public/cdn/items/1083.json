@@ -19,7 +19,7 @@
   "stats": {
     "attackDamage": 7
   },
-  "description": "7 Attack Damage\n\nReap\nRestore 3 Health On-Hit.\nKilling minions grants 1 gold, up to 100. Reaching the limit grants another 350 gold.\n",
+  "description": "<div class=\"effect-stats\">7 Attack Damage</div><br><br><span class=\"effect-passive-text\">Reap</span><br>Restore <span class=\"effect-green-text\">3 Health</span> <span class=\"effect-red-text\">On-Hit</span>.<br>Killing minions grants <span class=\"effect-gold-text\">1 gold</span>, up to <span class=\"effect-gold-text\">100</span>. Reaching the limit grants another <span class=\"effect-gold-text\">350 gold</span>.<br>",
   "gold": {
     "base": 450,
     "purchasable": true,

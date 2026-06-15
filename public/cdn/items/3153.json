@@ -48,7 +48,7 @@
     "attackSpeed": 25,
     "lifesteal": 10
   },
-  "description": "40 Attack Damage\n25% Attack Speed\n10% Life Steal\n\nMist's Edge\nAttacks deal a percentage of enemy's current Health as bonus physical damage On-Hit.\n\nClawing Shadows\nAttacking a champion 3 times Slows them by 30% for 1 second.",
+  "description": "<div class=\"effect-stats\">40 Attack Damage<br>25% Attack Speed<br>10% Life Steal</div><br><br><span class=\"effect-passive-text\">Mist's Edge</span><br>Attacks deal <span class=\"effect-orange-text\">a percentage</span> of enemy's current Health as <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>.<br><br><span class=\"effect-passive-text\">Clawing Shadows</span><br>Attacking a champion 3 times Slows them by 30% for 1 second.",
   "gold": {
     "base": 725,
     "purchasable": true,
@@ -59,8 +59,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223153,
+    "description": "<div class=\"effect-stats\">30 Attack Damage<br>20% Attack Speed<br>10% Life Steal</div><br><br><span class=\"effect-passive-text\">Mist's Edge</span><br>Attacks apply an additional enemy current Health physical damage <span class=\"effect-red-text\">On-Hit</span>.<br><br><span class=\"effect-passive-text\">Clawing Shadows</span> (0s)<br>Attacking a champion 3 times Slows them.",
+    "stats": {
+      "attackDamage": 30,
+      "attackSpeed": 20,
+      "lifesteal": 10
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Marksman",

@@ -25,7 +25,7 @@ const forwarded = useForwardPropsEmits(delegated, emit)
   <label
     :class="
       cn(
-        'group/label -mr-1 hidden h-12 w-10 shrink-0 cursor-pointer place-items-center group-focus-within/input:grid',
+        'group/label -mr-1 grid h-12 w-10 shrink-0 cursor-pointer place-items-center group-has-placeholder-shown/input:hidden',
         props.class
       )
     ">

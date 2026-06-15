@@ -30,7 +30,7 @@
     "healthRegen": 100,
     "magicResistance": 80
   },
-  "description": "400 Health\n80 Magic Resist\n100% Base Health Regen\n\nMagebane\nAfter not taking magic damage for 15 seconds, gain a magic shield. ",
+  "description": "<div class=\"effect-stats\">400 Health<br>80 Magic Resist<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Magebane</span><br>After not taking magic damage for 15 seconds, gain a <span class=\"effect-blue-text\">magic shield</span>. ",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -41,8 +41,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222504,
+    "description": "<div class=\"effect-stats\">350 Health<br>80 Magic Resist</div><br><br><span class=\"effect-passive-text\">Magebane</span><br>After not taking magic damage for 10 seconds, gain a <span class=\"effect-blue-text\">magic shield</span>. ",
+    "stats": {
+      "magicResistance": 80,
+      "health": 350
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Tank"
   ]

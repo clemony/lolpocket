@@ -41,7 +41,7 @@
     "attackDamage": 30,
     "attackSpeed": 25
   },
-  "description": "30 Attack Damage\n30 Ability Power\n25% Attack Speed\n\nWrath\nAttacks deal 30 bonus magic damage On-Hit.\n\nSeething Strike\nAttacks grant 8% Attack Speed for 3 seconds. (stacks 4 times). \nWhile fully stacked, every third Attack applies On-Hit effects twice.",
+  "description": "<div class=\"effect-stats\">30 Attack Damage<br>30 Ability Power<br>25% Attack Speed</div><br><br><span class=\"effect-passive-text\">Wrath</span><br>Attacks deal <span class=\"effect-purple-text\">30 bonus magic damage <span class=\"effect-red-text\">On-Hit</span></span>.<br><br><span class=\"effect-passive-text\">Seething Strike</span><br>Attacks grant <span class=\"effect-gold-text\">8% Attack Speed</span> for 3 seconds. (stacks 4 times). <br>While fully stacked, every third Attack applies <span class=\"effect-red-text\">On-Hit</span> effects twice.",
   "gold": {
     "base": 1025,
     "purchasable": true,
@@ -52,8 +52,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223124,
+    "description": "<div class=\"effect-stats\">20 Attack Damage<br>25 Ability Power<br>25% Attack Speed</div><br><br>Attacks apply <span class=\"effect-purple-text\">30 magic damage <span class=\"effect-red-text\">On-Hit</span></span>.<br><br><span class=\"effect-passive-text\">Seething Strike</span><br>Basic attacks grant <span class=\"effect-gold-text\">8% Attack Speed</span>, stacking up to 4 times for a maximum of <span class=\"effect-gold-text\"> Attack Speed</span>. While fully stacked, every third Attack applies your <span class=\"effect-red-text\">On-Hit</span> effects twice.",
+    "stats": {
+      "abilityPower": 25,
+      "attackDamage": 20,
+      "attackSpeed": 25
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Marksman",

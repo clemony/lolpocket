@@ -42,7 +42,7 @@
     "health": 350,
     "abilityHaste": 15
   },
-  "description": "75 Ability Power\n350 Health\n15 Ability Haste\n\nGrievous Wounds\nDealing magic damage to champions applies 40% Wounds for 3 seconds.",
+  "description": "<div class=\"effect-stats\">75 Ability Power<br>350 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Grievous Wounds</span><br>Dealing <span class=\"effect-purple-text\">magic damage</span> to champions applies 40% Wounds for 3 seconds.",
   "gold": {
     "base": 400,
     "purchasable": true,
@@ -53,8 +53,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223165,
+    "description": "<div class=\"effect-stats\">90 Ability Power<br>250 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Affliction</span><br>Dealing <span class=\"effect-purple-text\">magic damage</span> applies 40% Grievous Wounds to enemy champions for 3 seconds.<br><br><b class=\"effect-bold-text\">If an enemy heals for more than 60% of their maximum health while continously affected by Grievous Wounds, it is increased to 80% Grievous Wounds.</b><br><br>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+    "stats": {
+      "health": 250,
+      "abilityPower": 90
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage",
     "Support"

@@ -45,7 +45,7 @@
   "stats": {
     "armor": 40
   },
-  "description": "40 Armor\n\nRock Solid\nReduce incoming damage from Attacks.",
+  "description": "<div class=\"effect-stats\">40 Armor</div><br><br><span class=\"effect-passive-text\">Rock Solid</span><br>Reduce incoming damage from Attacks.",
   "gold": {
     "base": 400,
     "purchasable": true,

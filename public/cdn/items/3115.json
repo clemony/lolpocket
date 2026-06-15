@@ -38,7 +38,7 @@
     "attackSpeed": 50,
     "abilityHaste": 15
   },
-  "description": "80 Ability Power\n50% Attack Speed\n15 Ability Haste\n\nIcathian Bite\nAttacks deal bonus magic damage On-Hit.",
+  "description": "<div class=\"effect-stats\">80 Ability Power<br>50% Attack Speed<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Icathian Bite</span><br>Attacks deal <span class=\"effect-purple-text\">bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -49,8 +49,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223115,
+    "description": "<div class=\"effect-stats\">70 Ability Power<br>45% Attack Speed<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Icathian Bite</span><br>Attacks apply magic damage <span class=\"effect-red-text\">On-Hit</span>.",
+    "stats": {
+      "abilityPower": 70,
+      "attackSpeed": 45
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman",
     "Mage",

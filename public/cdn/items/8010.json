@@ -30,7 +30,7 @@
     "health": 400,
     "abilityHaste": 15
   },
-  "description": "65 Ability Power\n400 Health\n15 Ability Haste\n\nVile Decay\nDealing magic damage with abilities or passives to champions reduces their Magic Resist by 7.5% for 6 seconds. (Stacks 4 times).",
+  "description": "<div class=\"effect-stats\">65 Ability Power<br>400 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Vile Decay</span><br>Dealing <span class=\"effect-purple-text\">magic damage</span> with abilities or passives to champions reduces their <span class=\"effect-blue-text\">Magic Resist by 7.5%</span> for 6 seconds. (Stacks 4 times).",
   "gold": {
     "base": 750,
     "purchasable": true,
@@ -41,8 +41,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 4010,
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Vile Decay</span><br>Dealing <span class=\"effect-purple-text\">magic damage</span> with abilities or passives to champions reduces their <span class=\"effect-blue-text\">Magic Resist by 7.5%</span> for 6 seconds. (Stacks 4 times).",
+    "stats": {
+      "health": 350,
+      "abilityPower": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

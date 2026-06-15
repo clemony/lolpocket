@@ -13,7 +13,7 @@
     "health": 80,
     "omnivamp": 2.5
   },
-  "description": "10 Attack Damage\n80 Health\n2.5% Omnivamp\n\n",
+  "description": "<div class=\"effect-stats\">10 Attack Damage<br>80 Health<br>2.5% Omnivamp</div><br><br>",
   "gold": {
     "base": 450,
     "purchasable": true,

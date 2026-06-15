@@ -14,7 +14,7 @@
     }
   ],
   "stats": {},
-  "description": "Cannon Barrage additionally fires a mega-cannonball at the center of the Barrage, dealing bonus true damage and Slowing.",
+  "description": "<div class=\"effect-stats\"></div><br><br>Cannon Barrage additionally fires a mega-cannonball at the center of the Barrage, dealing <span class=\"effect-orange-text\">bonus true damage</span> and Slowing.",
   "gold": {
     "base": 0,
     "purchasable": false,

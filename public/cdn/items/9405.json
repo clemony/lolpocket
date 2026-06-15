@@ -1,7 +1,7 @@
 {
   "id": 9405,
   "name": "Grizzly Smash",
-  "description": "Illaoi slams the ground with her idol, dealing damage in an area around the impact and spawning a tentacle that will attack nearby enemies. There is a chance to summon a GIANT TENTACLE that deals increased damage.\n\nDamage, Ability Haste, Area Size, Duration",
+  "description": "<div class=\"effect-stats\"></div><br><br>Illaoi slams the ground with her idol, dealing damage in an area around the impact and spawning a tentacle that will attack nearby enemies. There is a chance to summon a GIANT TENTACLE that deals increased damage.<br><br>Damage, Ability Haste, Area Size, Duration",
   "gold": {
     "base": 0,
     "purchasable": true,

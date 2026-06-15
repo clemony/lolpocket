@@ -33,7 +33,7 @@
     "flatMovespeed": 45,
     "omnivamp": 4
   },
-  "description": "45 Move Speed\n4% Omnivamp\n\nSlay\nGain 0.6% Omnivamp on Champion takedown, stacking up to 10 times.\n\nNow and Forever\nWhile above half Health, deal 5% increased damage. \n\nWhile below half Health, gain 15% increased healing, shielding, and regeneration.",
+  "description": "<div class=\"effect-stats\">45 Move Speed<br>4% Omnivamp</div><br><br><span class=\"effect-passive-text\">Slay</span><br>Gain 0.6% Omnivamp on Champion takedown, stacking up to 10 times.<br><br><span class=\"effect-passive-text\">Now and Forever</span><br>While above half Health, deal 5% increased damage. <br><br>While below half Health, gain 15% increased healing, shielding, and regeneration.",
   "gold": {
     "base": 0,
     "purchasable": true,

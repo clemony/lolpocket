@@ -26,7 +26,7 @@
     "abilityPower": 18,
     "health": 90
   },
-  "description": "18 Ability Power\n90 Health\n\nDrain\nRestore 1 Mana every second, increased to 2 Mana per second for 5 seconds after dealing damage to an enemy champion. If you can't gain Mana, heal for 45% of this value instead.\n\nHelping Hand\nAttacks deal 5 bonus physical damage to minions.",
+  "description": "<div class=\"effect-stats\">18 Ability Power<br>90 Health</div><br><br><span class=\"effect-passive-text\">Drain</span><br>Restore <span class=\"effect-blue-text\">1 Mana</span> every second, increased to <span class=\"effect-blue-text\">2 Mana</span> per second for 5 seconds after dealing damage to an enemy champion. If you can't gain Mana, <span class=\"effect-green-text\">heal for 45%</span> of this value instead.<br><br><span class=\"effect-passive-text\">Helping Hand</span><br>Attacks deal <span class=\"effect-orange-text\">5 bonus physical damage</span> to minions.",
   "gold": {
     "base": 400,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 9289,
   "name": "FC Limited Express",
-  "description": "A train randomly drives through enemies. Trains generate explosions in their wake and knock up enemies. Enemies killed have a chance to drop gold.\n\nDamage, Ability Haste, Crit Chance, Armor",
+  "description": "<div class=\"effect-stats\"></div><br><br>A train randomly drives through enemies. Trains generate explosions in their wake and knock up enemies. Enemies killed have a chance to drop gold.<br><br>Damage, Ability Haste, Crit Chance, Armor",
   "gold": {
     "base": 0,
     "purchasable": true,

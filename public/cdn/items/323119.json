@@ -1,7 +1,7 @@
 {
   "id": 323119,
   "name": "Winter's Approach",
-  "description": "550 Health\n500 Mana\n15 Ability Haste\n\nAwe\nGain  Health.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grant 6.5 max Mana (doubled vs. champions).\nTransforms into Fimbulwinter at 360 max Mana.",
+  "description": "<div class=\"effect-stats\">550 Health<br>500 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-green-text\"> Health</span>.<br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 4 charges)<br>Landing Attacks and Abilities grant <span class=\"effect-blue-text\">6.5 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Fimbulwinter</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
   "stats": {
     "mana": 500,
     "health": 550

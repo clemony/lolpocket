@@ -34,7 +34,7 @@
     "manaRegen": 125,
     "abilityHaste": 10
   },
-  "description": "35 Ability Power\n10% Heal and Shield Power\n125% Base Mana Regen\n10 Ability Haste\n\nRapids\nHealing or Shielding an ally grants you both 40 Ability Power and 15 Ability Haste for 6 seconds.",
+  "description": "<div class=\"effect-stats\">35 Ability Power<br>10% Heal and Shield Power<br>125% Base Mana Regen<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Rapids</span><br>Healing or Shielding an ally grants you both <span class=\"effect-purple-text\">40 Ability Power</span> and 15 Ability Haste for 6 seconds.",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -45,8 +45,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226616,
+    "description": "<div class=\"effect-stats\">65 Ability Power<br>14% Heal and Shield Power<br>150% Base Mana Regen<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Rapids</span><br>Healing or Shielding an ally grants you both <span class=\"effect-purple-text\">40 Ability Power</span> and 15 Ability Haste for 6 seconds.",
+    "stats": {
+      "abilityPower": 65
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 326616,
     "stats": {

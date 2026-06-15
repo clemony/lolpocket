@@ -1,7 +1,7 @@
 {
   "id": 9308,
   "name": "Bunny Hop",
-  "description": "Riven passively gains Move Speed and gains charge as she moves. At max charge she jumps forward, dealing damage in an area. Every second cast knocks up.\n\nEvolve:  Movement Speed\n\nDamage, Area Size, Crit Chance, Movement Speed ",
+  "description": "<div class=\"effect-stats\"></div><br><br>Riven passively gains Move Speed and gains charge as she moves. At max charge she jumps forward, dealing damage in an area. Every second cast knocks up.<br><br>Evolve:  Movement Speed<br><br>Damage, Area Size, Crit Chance, Movement Speed ",
   "gold": {
     "base": 0,
     "purchasable": true,

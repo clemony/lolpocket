@@ -70,7 +70,7 @@
   "stats": {
     "attackSpeed": 10
   },
-  "description": "10% Attack Speed\n\n",
+  "description": "<div class=\"effect-stats\">10% Attack Speed</div><br><br>",
   "gold": {
     "base": 250,
     "purchasable": true,

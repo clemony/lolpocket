@@ -24,7 +24,7 @@
     }
   ],
   "stats": {},
-  "description": "Active (2 charges)\nRestores 100 Health over 12 seconds. \nRefills upon visiting the shop.",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active</span> (2 charges)<br>Restores <span class=\"effect-green-text\">100 Health</span> over 12 seconds. <br>Refills upon visiting the shop.",
   "gold": {
     "base": 150,
     "purchasable": true,

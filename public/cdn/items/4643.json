@@ -1,7 +1,7 @@
 {
   "id": 4643,
   "name": "Vigilant Wardstone",
-  "description": "250 Health\n20 Ability Haste\n25 Armor\n30 Magic Resist\n\nArcane Cache\nThis item can store up to 3 purchased Control Wards.\n\nBehold\nIncrease your Stealth Ward and Control Ward placement caps by 1.",
+  "description": "<div class=\"effect-stats\">250 Health<br>20 Ability Haste<br>25 Armor<br>30 Magic Resist</div><br><br><span class=\"effect-passive-text\">Arcane Cache</span><br>This item can store up to 3 purchased Control Wards.<br><br><span class=\"effect-passive-text\">Behold</span><br>Increase your Stealth Ward and Control Ward placement caps by 1.",
   "stats": {
     "magicResistance": 30,
     "health": 250,

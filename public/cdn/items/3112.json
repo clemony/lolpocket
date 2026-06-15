@@ -17,7 +17,7 @@
     "abilityPower": 50,
     "health": 150
   },
-  "description": "50 Ability Power\n150 Health\n\n\nRecovery: Restores 10 Mana every 5 seconds. If you can't gain mana, restores 15 Health instead.\n",
+  "description": "<div class=\"effect-stats\">50 Ability Power<br>150 Health</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Recovery:</span> Restores <span class=\"effect-blue-text\">10 Mana</span> every 5 seconds. If you can't gain mana, restores <span class=\"effect-green-text\">15 Health</span> instead.<br>",
   "gold": {
     "base": 950,
     "purchasable": true,

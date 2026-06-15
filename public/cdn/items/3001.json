@@ -1,7 +1,7 @@
 {
   "id": 3001,
   "name": "Evenshroud",
-  "description": "200 Health\n30 Armor\n30 Magic Resist\n20 Ability Haste\n\n\nCoruscation: After Immobilizing champions or being Immobilized, cause that target and all nearby enemy champions to take 7% increased damage for 5 seconds. \n\nMythic Passive: Grants all other Legendary items 5 Armor and Magic Resist.",
+  "description": "<div class=\"effect-stats\">200 Health<br>30 Armor<br>30 Magic Resist<br>20 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Coruscation:</span> After Immobilizing champions or being Immobilized, cause that target and all nearby enemy champions to take 7% increased damage for 5 seconds. <br><br>Mythic Passive: Grants all other <span class=\"effect-gold-text\">Legendary</span> items 5 <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span>.",
   "stats": {
     "magicResistance": 30,
     "health": 200,

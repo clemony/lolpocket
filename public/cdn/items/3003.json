@@ -51,7 +51,7 @@
     "mana": 600,
     "abilityHaste": 25
   },
-  "description": "70 Ability Power\n600 Mana\n25 Ability Haste\n\nAwe\nGain Ability Power equal to 1% bonus Mana.\n\nManaflow (8s, max 5 charges)\nLanding Abilities grants 5 max Mana (doubled vs. champions).\nTransforms into Seraph's Embrace at 360 max Mana.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>600 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain Ability Power equal to <span class=\"effect-blue-text\">1% bonus Mana.</span><br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 5 charges)<br>Landing Abilities grants <span class=\"effect-blue-text\">5 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Seraph's Embrace</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -62,8 +62,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223003,
+    "description": "<div class=\"effect-stats\">55 Ability Power<br>600 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span> <br>Gain Ability Power equal to <span class=\"effect-blue-text\">2% bonus Mana.</span><br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Seraph's Embrace</span>.",
+    "stats": {
+      "mana": 600,
+      "abilityPower": 55
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 323003,
     "stats": {

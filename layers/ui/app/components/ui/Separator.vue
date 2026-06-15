@@ -166,7 +166,9 @@ const styles = computed(() =>
       :class="styles.leading({ class: props.ui?.leadingIcon })" />
 
     <span v-if="props.label" :class="cn(styles.label(), props.ui?.label)">
-      <span>{{ props.label }}</span>
+      <slot name="label"
+        ><span>{{ props.label }}</span></slot
+      >
     </span>
 
     <span

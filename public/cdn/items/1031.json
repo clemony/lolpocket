@@ -72,7 +72,7 @@
   "stats": {
     "armor": 40
   },
-  "description": "40 Armor\n\n",
+  "description": "<div class=\"effect-stats\">40 Armor</div><br><br>",
   "gold": {
     "base": 500,
     "purchasable": true,

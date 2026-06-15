@@ -118,6 +118,19 @@
   "1026": {
     "id": 1026,
     "name": "Blasting Wand",
+    "arena": {
+      "id": 221026,
+      "description": "<div class=\"effect-stats\">45 Ability Power</div><br><br>",
+      "stats": {
+        "abilityPower": 45
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": false,
+        "total": 500,
+        "sell": 350
+      }
+    },
     "gold": {
       "base": 850,
       "total": 850,
@@ -127,6 +140,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Basic",
@@ -605,6 +619,19 @@
     "aka": [
       "nlr"
     ],
+    "arena": {
+      "id": 221058,
+      "description": "<div class=\"effect-stats\">120 Ability Power</div><br><br>",
+      "stats": {
+        "abilityPower": 120
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": false,
+        "total": 500,
+        "sell": 0
+      }
+    },
     "gold": {
       "base": 1200,
       "total": 1200,
@@ -614,6 +641,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Basic",
@@ -1826,6 +1854,19 @@
       "shurelya",
       "reverie"
     ],
+    "arena": {
+      "id": 222065,
+      "description": "<div class=\"effect-stats\">55 Ability Power<br>15 Ability Haste<br>6% Move Speed<br>150% Base Mana Regen</div><br><br><span class=\"effect-active-text\">Inspiring Speech</span><br>Grants nearby allies Move Speed for a few seconds.",
+      "stats": {
+        "abilityPower": 55,
+        "percentMovespeed": 6
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 400,
       "total": 2200,
@@ -1835,6 +1876,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -1944,6 +1986,15 @@
   "2141": {
     "id": 2141,
     "name": "Cappa Juice",
+    "arena": {
+      "id": 222141,
+      "description": "<div class=\"effect-stats\"></div><br><br>Helps you get on a head.<span class=\"effect-active-text\">Active - Consume:</span> This juice does nothing.<br>",
+      "gold": {
+        "base": 500,
+        "total": 500,
+        "sell": 500
+      }
+    },
     "gold": {
       "base": 300,
       "total": 300,
@@ -1951,7 +2002,8 @@
     },
     "maps": [
       11,
-      12
+      12,
+      30
     ],
     "rank": "Consumable",
     "stats": {},
@@ -2248,6 +2300,19 @@
   "2501": {
     "id": 2501,
     "name": "Overlord's Bloodmail",
+    "arena": {
+      "id": 447111,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>400 Health</div><br><br><span class=\"effect-passive-text\">Tyranny</span><br>Gain <span class=\"effect-orange-text\"> AD</span> equal to <span class=\"effect-green-text\">3% Bonus HP</span>.<br><br><span class=\"effect-passive-text\">Retribution</span><br>Gain up to <span class=\"effect-orange-text\">17.5% increased AD</span> based on your percent missing Health.",
+      "stats": {
+        "health": 400,
+        "attackDamage": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 1000,
       "total": 3300,
@@ -2257,6 +2322,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2276,6 +2342,19 @@
   "2502": {
     "id": 2502,
     "name": "Unending Despair",
+    "arena": {
+      "id": 222502,
+      "description": "<div class=\"effect-stats\">350 Health<br>50 Armor<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Anguish</span><br>Every 4 seconds while in combat with champions, deal <span class=\"effect-purple-text\">magic damage</span> to nearby enemy champions and <span class=\"effect-green-text\">heal for 250%</span> of the damage dealt.",
+      "stats": {
+        "health": 350,
+        "armor": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 800,
       "total": 2800,
@@ -2285,6 +2364,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2308,6 +2388,19 @@
     "aka": [
       "bft"
     ],
+    "arena": {
+      "id": 222503,
+      "description": "<div class=\"effect-stats\">60 Ability Power<br>600 Mana<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Baleful Blaze</span><br>Dealing damage with Abilities causes enemies to burn. This damage increases to Monsters.<br><br><span class=\"effect-passive-text\">Blackfire</span><br>For each enemy Champion, Epic Monster, and Large Monster affected by your <span class=\"effect-passive-text\">Baleful Blaze</span>, gain <span class=\"effect-purple-text\">Ability Power</span>. ",
+      "stats": {
+        "mana": 600,
+        "abilityPower": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 700,
       "total": 2800,
@@ -2317,6 +2410,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2336,6 +2430,19 @@
   "2504": {
     "id": 2504,
     "name": "Kaenic Rookern",
+    "arena": {
+      "id": 222504,
+      "description": "<div class=\"effect-stats\">350 Health<br>80 Magic Resist</div><br><br><span class=\"effect-passive-text\">Magebane</span><br>After not taking magic damage for 10 seconds, gain a <span class=\"effect-blue-text\">magic shield</span>. ",
+      "stats": {
+        "magicResistance": 80,
+        "health": 350
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 800,
       "total": 2900,
@@ -2345,6 +2452,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2392,6 +2500,20 @@
     "aka": [
       "Spellblade"
     ],
+    "arena": {
+      "id": 222510,
+      "description": "<div class=\"effect-stats\">300 Health<br>60 Ability Power<br>20 Ability Haste<br>20% Attack Speed</div><br><br><span class=\"effect-passive-text\">Spellblade</span> (0s)<br>After using an Ability, your next Attack deals <span class=\"effect-purple-text\"> bonus magic damage</span> and <span class=\"effect-green-text\">heals you for </span> <span class=\"effect-red-text\">On-Hit</span> and then applies <span class=\"effect-red-text\">On-Hit</span> effects an additional time.",
+      "stats": {
+        "health": 300,
+        "abilityPower": 60,
+        "attackSpeed": 20
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 300,
       "total": 3100,
@@ -2401,6 +2523,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2423,6 +2546,20 @@
   "2512": {
     "id": 2512,
     "name": "Fiendhunter Bolts",
+    "arena": {
+      "id": 222512,
+      "description": "<div class=\"effect-stats\">40% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Night Vigil</span><br>Gain 30 Ultimate Ability Haste.<br><br><span class=\"effect-passive-text\">Opening Barrage</span> (0s)<br>After casting your Ultimate, your next 3 basic attacks within 8 seconds gain <span class=\"effect-gold-text\">50% Attack Speed</span> and Critically Strike for 75% of your normal Critical Strike damage. If an attack would already Critically Strike, it deals normal Critical Strike damage and also deals <span class=\"effect-orange-text\">10% bonus true damage</span>.",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackSpeed": 40,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 850,
       "total": 2650,
@@ -2432,6 +2569,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2452,6 +2590,18 @@
   "2517": {
     "id": 2517,
     "name": "Endless Hunger",
+    "arena": {
+      "id": 222517,
+      "description": "<div class=\"effect-stats\">60 Attack Damage<br>5% Omnivamp<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">Famine</span><br>Gain Ability Haste based on your Bonus AD.<br><br><span class=\"effect-passive-text\">Feast</span><br>When a champion that you damaged recently dies, gain Omnivamp for a moderate duration. ",
+      "stats": {
+        "attackDamage": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 825,
       "total": 3100,
@@ -2461,6 +2611,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2510,6 +2661,19 @@
   "2522": {
     "id": 2522,
     "name": "Actualizer",
+    "arena": {
+      "id": 222522,
+      "description": "<div class=\"effect-stats\">90 Ability Power<br>300 Mana<br>10 Ability Haste</div><br><br><span class=\"effect-active-text\">Mana Made Real</span> (0s)<br>For 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.",
+      "stats": {
+        "mana": 300,
+        "abilityPower": 90
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 750,
       "total": 2800,
@@ -2519,6 +2683,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2538,6 +2703,19 @@
   "2523": {
     "id": 2523,
     "name": "Hexoptics C44",
+    "arena": {
+      "id": 222523,
+      "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Magnification</span><br>Deal up to 10% increased damage with Attacks, based on how far away the enemy is (max damage at 500 range).<br><br><span class=\"effect-passive-text\">Arcane Aim</span><br>When a champion that you damaged within 3 seconds dies, gain 150 additional attack range for 15 seconds. ",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 55
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 275,
       "total": 2800,
@@ -2547,6 +2725,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2566,6 +2745,20 @@
   "2524": {
     "id": 2524,
     "name": "Bandlepipes",
+    "arena": {
+      "id": 222524,
+      "description": "<div class=\"effect-stats\">200 Health<br>10 Ability Haste<br>25 Armor<br>25 Magic Resist</div><br><br><span class=\"effect-passive-text\">Fanfare</span><br>Slowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you <span class=\"effect-gray-text\">35 Move Speed</span>. While you have Fanfare, nearby allies, including yourself, gain <span class=\"effect-gold-text\"> Attack Speed</span>.",
+      "stats": {
+        "magicResistance": 25,
+        "health": 200,
+        "armor": 25
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 800,
       "total": 2300,
@@ -2575,6 +2768,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2596,6 +2790,18 @@
   "2525": {
     "id": 2525,
     "name": "Protoplasm Harness",
+    "arena": {
+      "id": 222525,
+      "description": "<div class=\"effect-stats\">600 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Lifeline</span> (0s)<br>Taking damage that would reduce your Health below 30% causes you to gain <span class=\"effect-green-text\"> maximum Health</span> for 5 seconds, then heal <span class=\"effect-green-text\"> Health</span> over the duration. While regenerating Health, you gain 15% increased Size, 10% Move Speed, and 25% Tenacity. ",
+      "stats": {
+        "health": 600
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 800,
       "total": 2500,
@@ -2605,6 +2811,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -2626,6 +2833,19 @@
     "aka": [
       "tear"
     ],
+    "arena": {
+      "id": 222526,
+      "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>75% Base Mana Regen<br>300 Mana</div><br><br><span class=\"effect-passive-text\">Holy</span><br>Gain <span class=\"effect-blue-text\"> Heal and Shield Power.</span><br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Diadem of Songs</span>.",
+      "stats": {
+        "mana": 300,
+        "health": 200
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 850,
       "total": 2250,
@@ -2635,6 +2855,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -2663,6 +2884,20 @@
   "2530": {
     "id": 2530,
     "name": "Diadem of Songs",
+    "arena": {
+      "id": 222530,
+      "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>1000 Mana<br>100% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Harmony</span><br>Gain % Heal and Shield Power.<br><br><span class=\"effect-passive-text\">Consonance</span><br>While you or any ally you've healed or shielded in the last 3 seconds is in combat with champions, each second, heal the lowest health nearby ally champion for .",
+      "stats": {
+        "mana": 1000,
+        "health": 200
+      },
+      "gold": {
+        "base": 2500,
+        "purchasable": false,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 2250,
       "purchasable": false,
@@ -2673,6 +2908,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -2750,6 +2986,19 @@
       "seraph's embrace",
       "tear"
     ],
+    "arena": {
+      "id": 223003,
+      "description": "<div class=\"effect-stats\">55 Ability Power<br>600 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span> <br>Gain Ability Power equal to <span class=\"effect-blue-text\">2% bonus Mana.</span><br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Seraph's Embrace</span>.",
+      "stats": {
+        "mana": 600,
+        "abilityPower": 55
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 450,
       "total": 2900,
@@ -2759,6 +3008,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -2790,6 +3040,19 @@
       "Muramana",
       "tear"
     ],
+    "arena": {
+      "id": 223004,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>600 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain bonus <span class=\"effect-orange-text\">Attack Damage equal to </span>. <br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Muramana</span>.",
+      "stats": {
+        "mana": 600,
+        "attackDamage": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 1100,
       "total": 2900,
@@ -2799,6 +3062,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -2848,6 +3112,19 @@
       "boots",
       "zerker"
     ],
+    "arena": {
+      "id": 223006,
+      "description": "<div class=\"effect-stats\">35% Attack Speed<br>55 Move Speed</div><br><br>",
+      "stats": {
+        "flatMovespeed": 55,
+        "attackSpeed": 35
+      },
+      "gold": {
+        "base": 500,
+        "total": 500,
+        "sell": 350
+      }
+    },
     "gold": {
       "base": 300,
       "total": 1100,
@@ -2857,6 +3134,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Boots",
@@ -2876,6 +3154,18 @@
   "3008": {
     "id": 3008,
     "name": "Gluttonous Greaves",
+    "arena": {
+      "id": 223008,
+      "description": "<div class=\"effect-stats\">45 Move Speed<br>4% Omnivamp</div><br><br><span class=\"effect-passive-text\">Slay</span><br>Gain 0.6% Omnivamp on Champion takedown, stacking up to 10 times.",
+      "stats": {
+        "flatMovespeed": 45
+      },
+      "gold": {
+        "base": 500,
+        "total": 500,
+        "sell": 350
+      }
+    },
     "gold": {
       "base": 700,
       "total": 1000,
@@ -2884,7 +3174,8 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      30
     ],
     "rank": "Boots",
     "recipe": [
@@ -2904,6 +3195,18 @@
     "aka": [
       "swifties"
     ],
+    "arena": {
+      "id": 223009,
+      "description": "<div class=\"effect-stats\">70 Move Speed</div><br><br>The strength of movement slowing effects is reduced by 40%.",
+      "stats": {
+        "flatMovespeed": 70
+      },
+      "gold": {
+        "base": 500,
+        "total": 500,
+        "sell": 350
+      }
+    },
     "gold": {
       "base": 700,
       "total": 1000,
@@ -2913,6 +3216,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Boots",
@@ -2999,6 +3303,18 @@
       "boots",
       "sorcs"
     ],
+    "arena": {
+      "id": 223020,
+      "description": "<div class=\"effect-stats\">20 Magic Penetration<br>55 Move Speed</div><br><br>",
+      "stats": {
+        "flatMovespeed": 55
+      },
+      "gold": {
+        "base": 500,
+        "total": 500,
+        "sell": 350
+      }
+    },
     "gold": {
       "base": 800,
       "total": 1100,
@@ -3008,6 +3324,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Boots",
@@ -3072,13 +3389,27 @@
     "aka": [
       "ga"
     ],
+    "arena": {
+      "id": 223026,
+      "description": "<div class=\"effect-stats\">55 Attack Damage<br>45 Armor</div><br><br><span class=\"effect-passive-text\">Saving Grace:</span><br>Upon taking lethal damage, restores <span class=\"effect-green-text\">50% base Health</span> and <span class=\"effect-blue-text\">100% max Mana</span> after 4 seconds of stasis. This effect has a one round cooldown.<br>",
+      "stats": {
+        "armor": 45,
+        "attackDamage": 55
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 800,
       "total": 3200,
       "sell": 1280
     },
     "maps": [
-      11
+      11,
+      30
     ],
     "rank": "Legendary",
     "recipe": [
@@ -3101,6 +3432,19 @@
     "aka": [
       "ie"
     ],
+    "arena": {
+      "id": 223031,
+      "description": "<div class=\"effect-stats\">75 Attack Damage<br>25% Critical Strike Chance<br>30% Critical Strike Damage</div><br><br>",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 75
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 725,
       "total": 3500,
@@ -3110,6 +3454,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3134,6 +3479,19 @@
       "arrow",
       "yuntal"
     ],
+    "arena": {
+      "id": 223032,
+      "description": "<div class=\"effect-stats\">45 Attack Damage<br>40% Attack Speed<br>0% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Practice Makes Lethal</span><br>On-Attack, gain Critical Strike Chance permanently up to 25%.<br><br><span class=\"effect-passive-text\">Flurry</span><br>On-Attacking an enemy champion, gain 30% Attack Speed for 6 seconds (30 second cooldown). <br>Attacks reduce this cooldown by 1 second, increased to 2 seconds for Critical Strikes.",
+      "stats": {
+        "attackDamage": 45,
+        "attackSpeed": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 850,
       "total": 3100,
@@ -3143,6 +3501,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3166,6 +3525,19 @@
       "grievous",
       "grievous wounds"
     ],
+    "arena": {
+      "id": 223033,
+      "description": "<div class=\"effect-stats\">30 Attack Damage<br>30% Armor Penetration<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Sepsis</span><br>Dealing physical damage applies 40% Grievous Wounds to enemy champions for 3 seconds.<br><br><b class=\"effect-bold-text\">If an enemy heals for more than 60% of their maximum health while continously affected by Grievous Wounds, it is increased to 80% Grievous Wounds.</b><br><br>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 30
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 150,
       "total": 3000,
@@ -3175,6 +3547,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3232,6 +3605,19 @@
       "ldr",
       "doms"
     ],
+    "arena": {
+      "id": 223036,
+      "description": "<div class=\"effect-stats\">30 Attack Damage<br>40% Armor Penetration<br>25% Critical Strike Chance</div><br><br>",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 30
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 550,
       "total": 3300,
@@ -3241,6 +3627,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3277,6 +3664,20 @@
   "3040": {
     "id": 3040,
     "name": "Seraph's Embrace",
+    "arena": {
+      "id": 223040,
+      "description": "<div class=\"effect-stats\">60 Ability Power<br>1200 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain Ability Power equal to <span class=\"effect-blue-text\">4% bonus Mana.</span> (0).<br><br><span class=\"effect-passive-text\">Lifeline</span><br>Upon taking damage that would reduce your Health below 30%, gain a <span class=\"effect-blue-text\">350 + 0% current Mana Shield</span> for 3s (0s).",
+      "stats": {
+        "mana": 1200,
+        "abilityPower": 60
+      },
+      "gold": {
+        "base": 2500,
+        "purchasable": false,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 2900,
       "purchasable": false,
@@ -3287,6 +3688,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -3336,6 +3738,20 @@
   "3042": {
     "id": 3042,
     "name": "Muramana",
+    "arena": {
+      "id": 223042,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>1000 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain bonus Attack Damage based on Mana. <br><br><span class=\"effect-passive-text\">Shock</span><br>Attacks against champions deal additional physical damage.",
+      "stats": {
+        "mana": 1000,
+        "attackDamage": 40
+      },
+      "gold": {
+        "base": 2500,
+        "purchasable": false,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 2900,
       "purchasable": false,
@@ -3346,6 +3762,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -3408,6 +3825,20 @@
     "aka": [
       "pd"
     ],
+    "arena": {
+      "id": 223046,
+      "description": "<div class=\"effect-stats\">60% Attack Speed<br>8% Move Speed<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Spectral Waltz</span><br>Become Ghosted.",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackSpeed": 60,
+        "percentMovespeed": 8
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 950,
       "total": 2650,
@@ -3417,6 +3848,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3442,6 +3874,19 @@
       "boots",
       "ninja tabi"
     ],
+    "arena": {
+      "id": 223047,
+      "description": "<div class=\"effect-stats\">25 Armor<br>30 Move Speed</div><br><br>Reduces incoming damage from Attacks by 14%.",
+      "stats": {
+        "flatMovespeed": 30,
+        "armor": 25
+      },
+      "gold": {
+        "base": 500,
+        "total": 500,
+        "sell": 350
+      }
+    },
     "gold": {
       "base": 600,
       "total": 1200,
@@ -3451,6 +3896,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Boots",
@@ -3472,6 +3918,20 @@
     "aka": [
       "haroldandkumar"
     ],
+    "arena": {
+      "id": 223050,
+      "description": "<div class=\"effect-stats\">300 Health<br>25 Armor<br>15 Ability Haste<br>30 Magic Resist</div><br><br><span class=\"effect-passive-text\">Frostfire Tempest</span><br>Casting your Ultimate summons a storm around you for 5 seconds. The storm deals <span class=\"effect-purple-text\"> magic damage</span> per second to enemy champions and Slows them by 30%.",
+      "stats": {
+        "magicResistance": 30,
+        "health": 300,
+        "armor": 25
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 700,
       "total": 2200,
@@ -3481,6 +3941,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -3555,6 +4016,18 @@
       "shield",
       "sterak's cage"
     ],
+    "arena": {
+      "id": 223053,
+      "description": "<div class=\"effect-stats\">300 Health<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">The Claws that Catch</span><br>Gain <span class=\"effect-orange-text\"> bonus Attack Damage</span>.<br><br><span class=\"effect-passive-text\">Lifeline</span> (0s)<br>Upon taking damage that would reduce your <span class=\"effect-green-text\">Health below 30%</span>, gain a <span class=\"effect-blue-text\"> Shield</span> decaying over 4.5 seconds.",
+      "stats": {
+        "health": 300
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 775,
       "total": 3200,
@@ -3564,6 +4037,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3618,6 +4092,19 @@
     "aka": [
       "sv"
     ],
+    "arena": {
+      "id": 223065,
+      "description": "<div class=\"effect-stats\">300 Health<br>40 Magic Resist<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Boundless Vitality</span><br>Increases all <span class=\"effect-green-text\">Healing</span> and <span class=\"effect-blue-text\"> Shielding</span> effectiveness on you by 30%.",
+      "stats": {
+        "magicResistance": 40,
+        "health": 300
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 650,
       "total": 2700,
@@ -3627,6 +4114,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3717,6 +4205,19 @@
       "sunborn",
       "sunfire"
     ],
+    "arena": {
+      "id": 223068,
+      "description": "<div class=\"effect-stats\">350 Health<br>40 Armor<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\"> magic damage</span> per second to nearby enemies for 3 seconds. ",
+      "stats": {
+        "health": 350,
+        "armor": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 600,
       "total": 2700,
@@ -3726,6 +4227,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3786,6 +4288,19 @@
     "aka": [
       "bc"
     ],
+    "arena": {
+      "id": 223071,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>350 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Carve</span><br>Dealing <span class=\"effect-orange-text\">physical damage</span> to champions reduces the target's <span class=\"effect-gold-text\">Armor by 6%</span> for 6 seconds. (Stacks 5 times).<br><br><span class=\"effect-passive-text\">Fervor</span><br>Dealing <span class=\"effect-orange-text\">physical damage</span> grants <span class=\"effect-gray-text\">20 Move Speed</span> for 2 seconds.",
+      "stats": {
+        "health": 350,
+        "attackDamage": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 225,
       "total": 3000,
@@ -3795,6 +4310,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3822,6 +4338,19 @@
       "bt",
       "healsword"
     ],
+    "arena": {
+      "id": 223072,
+      "description": "<div class=\"effect-stats\">70 Attack Damage<br>18% Life Steal</div><br><br><span class=\"effect-passive-text\">Ichorshield</span><br>Convert excess healing from your <span class=\"effect-red-text\">Life Steal</span> to a <span class=\"effect-blue-text\">Shield</span>.",
+      "stats": {
+        "attackDamage": 70,
+        "lifesteal": 18
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 325,
       "total": 3400,
@@ -3831,6 +4360,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3850,6 +4380,20 @@
   "3073": {
     "id": 3073,
     "name": "Experimental Hexplate",
+    "arena": {
+      "id": 223073,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>30% Attack Speed<br>450 Health</div><br><br><span class=\"effect-passive-text\">Hexcharged</span><br>Gain 30 Ultimate Ability Haste.<br><br><span class=\"effect-passive-text\">Overdrive</span><br>After casting your Ultimate, gain <span class=\"effect-gold-text\">% Attack Speed</span> and <span class=\"effect-gray-text\">% Move Speed</span> for 8 seconds. ",
+      "stats": {
+        "health": 450,
+        "attackDamage": 40,
+        "attackSpeed": 30
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 500,
       "total": 3000,
@@ -3859,6 +4403,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3884,6 +4429,19 @@
     "aka": [
       "rav hydra"
     ],
+    "arena": {
+      "id": 223074,
+      "description": "<div class=\"effect-stats\">70 Attack Damage<br>15 Ability Haste<br>15% Life Steal</div><br><br><span class=\"effect-passive-text\">Cleave:</span> Attacks and Abilities deal physical damage to other nearby enemies. Activate to hit nearby enemies.<br><span class=\"effect-active-text\">Ravenous Crescent</span><br>Deal <span class=\"effect-orange-text\">physical damage</span> to enemies around you. <br>Your <span class=\"effect-red-text\">Life Steal</span> applies to this damage.",
+      "stats": {
+        "attackDamage": 70,
+        "lifesteal": 15
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 150,
       "total": 3300,
@@ -3893,6 +4451,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -3916,6 +4475,19 @@
     "aka": [
       "grievous wounds"
     ],
+    "arena": {
+      "id": 223075,
+      "description": "<div class=\"effect-stats\">300 Health<br>60 Armor</div><br><br><span class=\"effect-passive-text\">Thorns:</span><br>When struck by an Attack, deal damage to the attacker and apply 40% Grievous Wounds if they are a champion.<br><br>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+      "stats": {
+        "health": 300,
+        "armor": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 450,
       "total": 2450,
@@ -3925,6 +4497,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -4018,6 +4591,20 @@
       "tons of damage",
       "33333"
     ],
+    "arena": {
+      "id": 223078,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>25% Attack Speed<br>375 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack is enhanced with additional physical damage.<br><br><span class=\"effect-passive-text\">Quicken</span><br>Basic attacks grant Move Speed.<br><br>",
+      "stats": {
+        "health": 375,
+        "attackDamage": 40,
+        "attackSpeed": 25
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 133,
       "total": 3333,
@@ -4027,6 +4614,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4076,6 +4664,19 @@
   "3083": {
     "id": 3083,
     "name": "Warmog's Armor",
+    "arena": {
+      "id": 443083,
+      "description": "<div class=\"effect-stats\">1100 Health<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Warmog's Heart</span><br>Requires 1350 <span class=\"effect-green-text\">bonus Health</span>.<br><br>Restore <span class=\"effect-green-text\"> Health</span> per second. If you have not taken damage within 4 seconds, restore an additional <span class=\"effect-green-text\"> Health</span> per second.",
+      "stats": {
+        "health": 1100,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2750,
+        "total": 2750,
+        "sell": 1100
+      }
+    },
     "gold": {
       "base": 500,
       "total": 3100,
@@ -4085,6 +4686,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4110,6 +4712,18 @@
       "Boy Band",
       "BoyBand"
     ],
+    "arena": {
+      "id": 223084,
+      "description": "<div class=\"effect-stats\">700 Health</div><br><br><span class=\"effect-passive-text\">Colossal Consumption</span> (0s) per target<br>Charge up a powerful attack against a champion over time while near them. The charged attack deals bonus physical damage and grants permanent max Health.<br><br><span class=\"effect-passive-text\">Goliath</span><br>Gain increased size based on Total Health. ",
+      "stats": {
+        "health": 700
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 400,
       "total": 3000,
@@ -4119,6 +4733,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4138,6 +4753,20 @@
   "3085": {
     "id": 3085,
     "name": "Runaan's Hurricane",
+    "arena": {
+      "id": 223085,
+      "description": "<div class=\"effect-stats\">45% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Wind's Fury</span><br>When Attacking, bolts are fired at up to 2 enemies near the target. Bolts apply <span class=\"effect-red-text\">On-Hit</span> effects and can Critically Strike.<br><br>Item is for Ranged champions only.",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackSpeed": 45,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 850,
       "total": 2650,
@@ -4147,6 +4776,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4197,6 +4827,21 @@
   "3087": {
     "id": 3087,
     "name": "Statikk Shiv",
+    "arena": {
+      "id": 223087,
+      "description": "<div class=\"effect-stats\">45 Attack Damage<br>45 Ability Power<br>30% Attack Speed<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Electrospark</span><br>Your Energized Attacks fire chain lightning, applying <span class=\"effect-red-text\">On-Hit</span> effects and dealing <span class=\"effect-purple-text\">magic damage</span> to up to  targets.<br><br><span class=\"effect-passive-text\">Electroshock</span> <br>Basic Attacks grant extra Energized stacks.",
+      "stats": {
+        "abilityPower": 45,
+        "attackDamage": 45,
+        "attackSpeed": 30,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 625,
       "total": 3000,
@@ -4206,6 +4851,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4236,6 +4882,18 @@
       "witchcap",
       "wooglets"
     ],
+    "arena": {
+      "id": 223089,
+      "description": "<div class=\"effect-stats\">65 Ability Power</div><br><br><span class=\"effect-passive-text\">Magical Opus</span><br>Increases your total <span class=\"effect-purple-text\">Ability Power by 30%</span>.",
+      "stats": {
+        "abilityPower": 65
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 1100,
       "total": 3500,
@@ -4245,6 +4903,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4262,6 +4921,19 @@
   "3091": {
     "id": 3091,
     "name": "Wit's End",
+    "arena": {
+      "id": 223091,
+      "description": "<div class=\"effect-stats\">50% Attack Speed<br>45 Magic Resist<br>20% Tenacity</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Fray:</span> Attacks apply magic damage On-Hit and grant Move Speed.",
+      "stats": {
+        "magicResistance": 45,
+        "attackSpeed": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 550,
       "total": 2800,
@@ -4271,6 +4943,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4299,6 +4972,20 @@
       "rapidfire",
       "rfc"
     ],
+    "arena": {
+      "id": 223094,
+      "description": "<div class=\"effect-stats\">30% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Energized</span><br>Moving and Attacking generates an Energized Attack.<br><br><span class=\"effect-passive-text\">Sharpshooter</span><br>Your Energized Attack applies <span class=\"effect-purple-text\">200 bonus magic damage</span>. In addition, Energized attacks gain up to 35% bonus Attack Range.<br>",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackSpeed": 30,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 850,
       "total": 2650,
@@ -4308,6 +4995,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4346,6 +5034,20 @@
       "energize",
       "Windblade"
     ],
+    "arena": {
+      "id": 223095,
+      "description": "<div class=\"effect-stats\">50 Attack Damage<br>20% Attack Speed<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Energized</span><br>Moving and Attacking generates an Energized Attack.<br><br><span class=\"effect-passive-text\">Bolt</span><br>Your Energized Attack applies <span class=\"effect-purple-text\"> bonus magic damage</span> and grants <span class=\"effect-gray-text\">45% Move Speed</span> for 2s.<br><br><b class=\"effect-bold-text\">Energized stacks twice as fast in Arena.</b><br>",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 50,
+        "attackSpeed": 20
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 700,
       "total": 3200,
@@ -4355,6 +5057,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4379,6 +5082,19 @@
     "aka": [
       "Spellblade"
     ],
+    "arena": {
+      "id": 223100,
+      "description": "<div class=\"effect-stats\">80 Ability Power<br>10% Move Speed<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span> (0s)<br>After using an Ability, your next Attack is enhanced with an additional <span class=\"effect-purple-text\"> magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
+      "stats": {
+        "abilityPower": 80,
+        "percentMovespeed": 10
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 250,
       "total": 2900,
@@ -4388,6 +5104,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4414,6 +5131,19 @@
       "spellshield",
       "spell shield"
     ],
+    "arena": {
+      "id": 223102,
+      "description": "<div class=\"effect-stats\">80 Ability Power<br>40 Magic Resist</div><br><br><span class=\"effect-passive-text\">Annul</span><br>Grants a <span class=\"effect-blue-text\">Spell Shield</span> that blocks the next enemy Ability.<br><br>Item cooldown is restarted if you take damage from champions before it is completed.",
+      "stats": {
+        "magicResistance": 40,
+        "abilityPower": 80
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 200,
       "total": 3000,
@@ -4423,6 +5153,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4460,6 +5191,18 @@
     "aka": [
       "burn"
     ],
+    "arena": {
+      "id": 223107,
+      "description": "<div class=\"effect-stats\">30 Ability Power<br>15 Ability Haste<br>100% Base Mana Regen<br>12% Heal and Shield Power</div><br><br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Intervention</span><br>Target an area within. After 2.5 seconds, call down a beam of light to restore Health to allies and damage enemy champions.",
+      "stats": {
+        "abilityPower": 30
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 850,
       "total": 2300,
@@ -4469,6 +5212,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -4532,6 +5276,19 @@
     "aka": [
       "kv"
     ],
+    "arena": {
+      "id": 223109,
+      "description": "<div class=\"effect-stats\">400 Health<br>50 Armor<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Sacrifice</span><br>While near your Worthy ally, take 12% of the damage they receive and <span class=\"effect-green-text\">heal for 12% of the damage they deal</span> to Champions.<br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Pledge</span><br>Designate an ally who is Worthy.",
+      "stats": {
+        "health": 400,
+        "armor": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 400,
       "total": 2300,
@@ -4541,6 +5298,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -4577,6 +5335,19 @@
     "aka": [
       "fh"
     ],
+    "arena": {
+      "id": 223110,
+      "description": "<div class=\"effect-stats\">90 Armor<br>450 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Winter's Caress</span><br>Reduces the <span class=\"effect-gold-text\">Attack Speed</span> of nearby enemies.",
+      "stats": {
+        "mana": 450,
+        "armor": 90
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 600,
       "total": 2500,
@@ -4586,6 +5357,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -4620,6 +5392,19 @@
       "boots",
       "mercs"
     ],
+    "arena": {
+      "id": 223111,
+      "description": "<div class=\"effect-stats\">30 Magic Resist<br>30 Move Speed<br>30% Tenacity</div><br><br>",
+      "stats": {
+        "magicResistance": 30,
+        "flatMovespeed": 30
+      },
+      "gold": {
+        "base": 500,
+        "total": 500,
+        "sell": 350
+      }
+    },
     "gold": {
       "base": 550,
       "total": 1250,
@@ -4629,6 +5414,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Boots",
@@ -4732,6 +5518,19 @@
     "aka": [
       "nashors"
     ],
+    "arena": {
+      "id": 223115,
+      "description": "<div class=\"effect-stats\">70 Ability Power<br>45% Attack Speed<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Icathian Bite</span><br>Attacks apply magic damage <span class=\"effect-red-text\">On-Hit</span>.",
+      "stats": {
+        "abilityPower": 70,
+        "attackSpeed": 45
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 500,
       "total": 2900,
@@ -4741,6 +5540,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4766,6 +5566,19 @@
     "aka": [
       "rylais"
     ],
+    "arena": {
+      "id": 223116,
+      "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health</div><br><br><span class=\"effect-passive-text\">Rimefrost</span><br>Damaging Abilities Slow enemies by 30% for 1 second.",
+      "stats": {
+        "health": 350,
+        "abilityPower": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 450,
       "total": 2600,
@@ -4775,6 +5588,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4816,6 +5630,19 @@
     "aka": [
       "burn"
     ],
+    "arena": {
+      "id": 223118,
+      "description": "<div class=\"effect-stats\">70 Ability Power<br>600 Mana<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Scorn</span><br>Your Ultimate spells gain Ability Haste.<br><br><span class=\"effect-passive-text\">Hatefog</span><br>Damaging a champion with your Ultimate Burns the ground beneath them, dealing damage and reducing their Magic Resist. ",
+      "stats": {
+        "mana": 600,
+        "abilityPower": 70
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 650,
       "total": 2700,
@@ -4825,6 +5652,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -4849,6 +5677,19 @@
       "Fimbulwinter",
       "tear"
     ],
+    "arena": {
+      "id": 223119,
+      "description": "<div class=\"effect-stats\">400 Health<br>600 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Awe:</span> Gain bonus <span class=\"effect-green-text\">Health equal to Total Mana</span>.<span class=\"effect-list\"><span class=\"effect-passive-text\">Mana Charge:</span> <b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Fimbulwinter</span>.",
+      "stats": {
+        "mana": 600,
+        "health": 400
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 300,
       "total": 2400,
@@ -4858,6 +5699,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -4885,6 +5727,20 @@
   "3121": {
     "id": 3121,
     "name": "Fimbulwinter",
+    "arena": {
+      "id": 223121,
+      "description": "<div class=\"effect-stats\">400 Health<br>1000 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Awe:</span> Gain bonus Health based on Mana.<span class=\"effect-list\"><span class=\"effect-passive-text\">Everlasting:</span> Immobilizing or Slowing an enemy champion grants a Shield. The Shield is increased if more than one enemy is nearby.",
+      "stats": {
+        "mana": 1000,
+        "health": 400
+      },
+      "gold": {
+        "base": 2500,
+        "purchasable": false,
+        "total": 2500,
+        "sell": 1750
+      }
+    },
     "gold": {
       "base": 2400,
       "purchasable": false,
@@ -4895,6 +5751,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -4951,6 +5808,20 @@
   "3124": {
     "id": 3124,
     "name": "Guinsoo's Rageblade",
+    "arena": {
+      "id": 223124,
+      "description": "<div class=\"effect-stats\">20 Attack Damage<br>25 Ability Power<br>25% Attack Speed</div><br><br>Attacks apply <span class=\"effect-purple-text\">30 magic damage <span class=\"effect-red-text\">On-Hit</span></span>.<br><br><span class=\"effect-passive-text\">Seething Strike</span><br>Basic attacks grant <span class=\"effect-gold-text\">8% Attack Speed</span>, stacking up to 4 times for a maximum of <span class=\"effect-gold-text\"> Attack Speed</span>. While fully stacked, every third Attack applies your <span class=\"effect-red-text\">On-Hit</span> effects twice.",
+      "stats": {
+        "abilityPower": 25,
+        "attackDamage": 20,
+        "attackSpeed": 25
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 1025,
       "total": 3000,
@@ -4960,6 +5831,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5074,6 +5946,18 @@
   "3135": {
     "id": 3135,
     "name": "Void Staff",
+    "arena": {
+      "id": 223135,
+      "description": "<div class=\"effect-stats\">65 Ability Power<br>40% Magic Penetration</div><br><br>",
+      "stats": {
+        "abilityPower": 65
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 1050,
       "total": 3000,
@@ -5083,6 +5967,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5101,6 +5986,18 @@
   "3137": {
     "id": 3137,
     "name": "Cryptbloom",
+    "arena": {
+      "id": 223137,
+      "description": "<div class=\"effect-stats\">60 Ability Power<br>30% Magic Penetration<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Life from Death</span><br>When a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that <span class=\"effect-green-text\">heals</span>.",
+      "stats": {
+        "abilityPower": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 200,
       "total": 3000,
@@ -5110,6 +6007,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5136,6 +6034,20 @@
       "quicksilver sash",
       "silvermere dawn"
     ],
+    "arena": {
+      "id": 223139,
+      "description": "<div class=\"effect-stats\">45 Attack Damage<br>40 Magic Resist<br>10% Life Steal</div><br><br><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Quicksilver:</span> Remove all crowd control debuffs and gain Move Speed.",
+      "stats": {
+        "magicResistance": 40,
+        "attackDamage": 45,
+        "lifesteal": 10
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 125,
       "total": 3200,
@@ -5145,6 +6057,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5203,6 +6116,19 @@
       "lethality",
       "haste"
     ],
+    "arena": {
+      "id": 223142,
+      "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Haunt</span> <br>Gain <span class=\"effect-gray-text\"> Move Speed</span> while out of combat.<br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Wraith Step</span><br>Gain Move Speed and Ghosting.",
+      "stats": {
+        "attackDamage": 55,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 675,
       "total": 2800,
@@ -5212,6 +6138,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5233,6 +6160,19 @@
   "3143": {
     "id": 3143,
     "name": "Randuin's Omen",
+    "arena": {
+      "id": 223143,
+      "description": "<div class=\"effect-stats\">300 Health<br>75 Armor</div><br><br><span class=\"effect-passive-text\">Resilience</span><br>Critical Strikes deal 30% less damage to you.<br><br><span class=\"effect-active-text\">Humility</span><br>Slow nearby enemies.<br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Humility</span><br>Briefly Slow nearby enemies by 70% for 2 seconds.",
+      "stats": {
+        "health": 300,
+        "armor": 75
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 800,
       "total": 2700,
@@ -5242,6 +6182,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5317,6 +6258,19 @@
   "3146": {
     "id": 3146,
     "name": "Hextech Gunblade",
+    "arena": {
+      "id": 223146,
+      "description": "<div class=\"effect-stats\">90 Ability Power<br>45 Attack Damage<br>15% Omnivamp</div><br><br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Lightning Bolt</span><br>Shocks the target enemy champion, dealing <span class=\"effect-purple-text\"> magic damage</span> and Slowing them by 25% for 1.5 seconds.",
+      "stats": {
+        "abilityPower": 90,
+        "attackDamage": 45
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 600,
       "total": 3000,
@@ -5326,6 +6280,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -5391,6 +6346,19 @@
       "protobelt",
       "rocket belt"
     ],
+    "arena": {
+      "id": 223152,
+      "description": "<div class=\"effect-stats\">95 Ability Power<br>400 Health<br>20 Ability Haste</div><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Supersonic:</span> Dash in target direction, unleashing an arc of magic missiles that deal damage.",
+      "stats": {
+        "health": 400,
+        "abilityPower": 95
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 300,
       "total": 2650,
@@ -5400,6 +6368,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5427,6 +6396,20 @@
       "botrk",
       "mist"
     ],
+    "arena": {
+      "id": 223153,
+      "description": "<div class=\"effect-stats\">30 Attack Damage<br>20% Attack Speed<br>10% Life Steal</div><br><br><span class=\"effect-passive-text\">Mist's Edge</span><br>Attacks apply an additional enemy current Health physical damage <span class=\"effect-red-text\">On-Hit</span>.<br><br><span class=\"effect-passive-text\">Clawing Shadows</span> (0s)<br>Attacking a champion 3 times Slows them.",
+      "stats": {
+        "attackDamage": 30,
+        "attackSpeed": 20,
+        "lifesteal": 10
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 725,
       "total": 3200,
@@ -5436,6 +6419,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5488,6 +6472,19 @@
   "3156": {
     "id": 3156,
     "name": "Maw of Malmortius",
+    "arena": {
+      "id": 223156,
+      "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Ability Haste<br>40 Magic Resist</div><br><br><span class=\"effect-passive-text\">Lifeline</span><br>Upon taking magic damage that would reduce Health below 30%, gain a magic damage Shield. When <span class=\"effect-passive-text\">Lifeline</span> triggers, gain Omnivamp until the end of combat.  ",
+      "stats": {
+        "magicResistance": 40,
+        "attackDamage": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 750,
       "total": 3100,
@@ -5497,6 +6494,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5525,6 +6523,19 @@
       "Witchcap",
       "Wooglets"
     ],
+    "arena": {
+      "id": 223157,
+      "description": "<div class=\"effect-stats\">80 Ability Power<br>50 Armor</div><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Stasis:</span> You become Invulnerable and Untargetable for 2.5 seconds, but are prevented from taking any other actions during this time <b class=\"effect-bold-text\">(120s)</b>.",
+      "stats": {
+        "abilityPower": 80,
+        "armor": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 450,
       "total": 3250,
@@ -5534,6 +6545,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5552,6 +6564,18 @@
   "3158": {
     "id": 3158,
     "name": "Ionian Boots of Lucidity",
+    "arena": {
+      "id": 223158,
+      "description": "<div class=\"effect-stats\">40 Ability Haste<br>45 Move Speed</div><br><br>Gain 10 Summoner Spell Haste.",
+      "stats": {
+        "flatMovespeed": 45
+      },
+      "gold": {
+        "base": 500,
+        "total": 500,
+        "sell": 350
+      }
+    },
     "gold": {
       "base": 350,
       "total": 900,
@@ -5561,6 +6585,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Boots",
@@ -5579,6 +6604,19 @@
   "3161": {
     "id": 3161,
     "name": "Spear of Shojin",
+    "arena": {
+      "id": 223161,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>350 Health</div><br><br><span class=\"effect-passive-text\">Dragonforce</span> <br>Gain 25 Basic Ability Haste.<br><br><span class=\"effect-passive-text\">Focused Will</span> <br>Dealing damage with Abilities increases your Champion's Ability and Passive damage by 3% for 6 seconds. (stacks 4 times).",
+      "stats": {
+        "health": 350,
+        "attackDamage": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 675,
       "total": 3100,
@@ -5588,6 +6626,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5615,6 +6654,19 @@
       "last shadow",
       "nmst"
     ],
+    "arena": {
+      "id": 223165,
+      "description": "<div class=\"effect-stats\">90 Ability Power<br>250 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Affliction</span><br>Dealing <span class=\"effect-purple-text\">magic damage</span> applies 40% Grievous Wounds to enemy champions for 3 seconds.<br><br><b class=\"effect-bold-text\">If an enemy heals for more than 60% of their maximum health while continously affected by Grievous Wounds, it is increased to 80% Grievous Wounds.</b><br><br>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+      "stats": {
+        "health": 250,
+        "abilityPower": 90
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 400,
       "total": 2850,
@@ -5624,6 +6676,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5722,6 +6775,19 @@
   "3172": {
     "id": 3172,
     "name": "Gunmetal Greaves",
+    "arena": {
+      "id": 223172,
+      "description": "<div class=\"effect-stats\">50% Attack Speed<br>10% Move Speed<br>30 Ability Haste<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">Like the Wind</span><br>Gain 5% Move Speed <span class=\"effect-red-text\">On-Hit</span> for 6 seconds, stacking up to 25% Move Speed.",
+      "stats": {
+        "attackSpeed": 50,
+        "percentMovespeed": 10
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 0,
       "total": 1100,
@@ -5730,6 +6796,7 @@
     "maps": [
       11,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -5911,6 +6978,20 @@
       "pirate",
       "yarrr"
     ],
+    "arena": {
+      "id": 223181,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>500 Health<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Skipper</span><br>Every fifth Attack against champions and epic monsters deals <span class=\"effect-orange-text\"> bonus physical damage</span>, increased to <span class=\"effect-orange-text\"></span> against structures.<br><br><span class=\"effect-passive-text\">Solo Party</span><br>While no allied champions are within 1500 range, you gain  <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span>.",
+      "stats": {
+        "health": 500,
+        "attackDamage": 40,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 175,
       "total": 3000,
@@ -5919,7 +7000,8 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      30
     ],
     "rank": "Legendary",
     "recipe": [
@@ -5967,6 +7049,20 @@
   "3190": {
     "id": 3190,
     "name": "Locket of the Iron Solari",
+    "arena": {
+      "id": 223190,
+      "description": "<div class=\"effect-stats\">400 Health<br>25 Armor<br>35 Magic Resist<br>25 Ability Haste</div><br><br><span class=\"effect-active-text\">Devotion</span><br>Grant nearby allies a <span class=\"effect-blue-text\">Shield</span>, decaying over time.",
+      "stats": {
+        "magicResistance": 35,
+        "health": 400,
+        "armor": 25
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 700,
       "total": 2200,
@@ -5976,6 +7072,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -6061,6 +7158,18 @@
       "michael",
       "mikael"
     ],
+    "arena": {
+      "id": 223222,
+      "description": "<div class=\"effect-stats\">400 Health<br>100% Base Mana Regen<br>12% Heal and Shield Power</div><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Purify</span><br>Restore Health and Remove all crowd control debuffs (except Knockups and Suppression) from an ally champion.",
+      "stats": {
+        "health": 400
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 900,
       "total": 2300,
@@ -6070,6 +7179,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -6103,6 +7213,19 @@
       "bow",
       "sentinel"
     ],
+    "arena": {
+      "id": 223302,
+      "description": "<div class=\"effect-stats\">30 Attack Damage<br>40% Attack Speed</div><br><br><span class=\"effect-passive-text\">Shadow</span><br>Attacks deal <span class=\"effect-purple-text\">30 bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.<br><br><span class=\"effect-passive-text\">Juxtaposition</span><br>Alternate between Light and Dark Attacks against champions: <span class=\"effect-list\">Light Attacks grant <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> for 5s. <span class=\"effect-list\">Dark Attacks grant 8% <span class=\"effect-gold-text\">Armor Penetration</span> and <span class=\"effect-blue-text\">Magic Penetration</span> for 5s. ",
+      "stats": {
+        "attackDamage": 30,
+        "attackSpeed": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 1100,
       "total": 3000,
@@ -6112,6 +7235,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -6327,6 +7451,19 @@
     "aka": [
       "censer"
     ],
+    "arena": {
+      "id": 223504,
+      "description": "<div class=\"effect-stats\">40 Ability Power<br>12% Heal and Shield Power<br>150% Base Mana Regen<br>6% Move Speed</div><br><br><span class=\"effect-passive-text\">Sanctify</span><br>Healing or Shielding another ally enhances you both for 6 seconds, granting your Attacks <span class=\"effect-gold-text\">40% Attack Speed</span> and <span class=\"effect-purple-text\">25 magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
+      "stats": {
+        "abilityPower": 40,
+        "percentMovespeed": 6
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 700,
       "total": 2200,
@@ -6336,6 +7473,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -6372,6 +7510,19 @@
       "er",
       "Spellblade"
     ],
+    "arena": {
+      "id": 223508,
+      "description": "<div class=\"effect-stats\">50 Attack Damage<br>20 Ability Haste<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> and grants <span class=\"effect-blue-text\">Mana</span> <span class=\"effect-red-text\">On-Hit</span>.",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 500,
       "total": 3050,
@@ -6381,6 +7532,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -6472,6 +7624,20 @@
       "gangplank",
       "juggernaut"
     ],
+    "arena": {
+      "id": 223742,
+      "description": "<div class=\"effect-stats\">300 Health<br>40 Armor<br>7% Move Speed</div><br><br><span class=\"effect-passive-text\">Shipwrecker</span><br>While moving, build up  Move Speed. Your next Attack discharges built up Move Speed to deal damage. If dealt by a Melee champion at top speed, the Attack also Slows the target.<br><br><span class=\"effect-passive-text\">Unsinkable</span><br>The strength of movement slowing effects is reduced.",
+      "stats": {
+        "health": 300,
+        "armor": 40,
+        "percentMovespeed": 7
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 900,
       "total": 2900,
@@ -6481,6 +7647,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -6506,6 +7673,19 @@
       "beefer",
       "juggernaut"
     ],
+    "arena": {
+      "id": 223748,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>400 Health</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Colossus:</span> Gain bonus <span class=\"effect-orange-text\">Attack Damage based off of bonus Health</span>.<span class=\"effect-list\"><span class=\"effect-passive-text\">Cleave:</span> Attacks apply additional damage <span class=\"effect-red-text\">On-Hit</span>, creating a shockwave that deals damage to enemies behind the target.<span class=\"effect-active-text\">Titanic Crescent</span><br>Empower your next <span class=\"effect-passive-text\">Cleave</span> to deal <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span> and deal <span class=\"effect-orange-text\">bonus physical damage</span> to enemies behind the target.",
+      "stats": {
+        "health": 400,
+        "attackDamage": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 50,
       "total": 3300,
@@ -6515,6 +7695,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -6633,6 +7814,19 @@
       "spellshield",
       "spell shield"
     ],
+    "arena": {
+      "id": 223814,
+      "description": "<div class=\"effect-stats\">45 Attack Damage<br>14 Lethality<br>375 Health</div><br><br><span class=\"effect-passive-text\">Annul</span> (0s)<br>Gain a Spell Shield that blocks the next enemy Ability.<br><br>Item's cooldown is restarted if you take damage before it is completed.",
+      "stats": {
+        "health": 375,
+        "attackDamage": 45
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 850,
       "total": 3000,
@@ -6642,6 +7836,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7187,6 +8382,18 @@
       "banner of command",
       "flag"
     ],
+    "arena": {
+      "id": 224005,
+      "description": "<div class=\"effect-stats\">60 Ability Power<br>15 Ability Haste<br>150% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Control</span><br>Gain 15 Ability Haste for your abilities with Immobilizing effects.<br><br><span class=\"effect-passive-text\">Command</span><br>On Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.<br>",
+      "stats": {
+        "abilityPower": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 650,
       "total": 2400,
@@ -7196,6 +8403,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -7217,22 +8425,6 @@
     "tags": [
       "Support"
     ]
-  },
-  "4010": {
-    "id": 4010,
-    "name": "Bloodletter's Curse",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "abilityPower": 60
-    }
   },
   "4011": {
     "id": 4011,
@@ -7370,6 +8562,20 @@
     "aka": [
       "fon"
     ],
+    "arena": {
+      "id": 224401,
+      "description": "<div class=\"effect-stats\">400 Health<br>50 Magic Resist<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Absorb</span><br>Taking <span class=\"effect-purple-text\">magic damage</span> from enemy Champions grants a stack of Steadfast (max 10) for 7 seconds. Enemy Immobilizing effects grant an additional 2 stacks.<br><br><span class=\"effect-passive-text\">Dissipate</span><br>While at 10 stacks of Steadfast, gain <span class=\"effect-blue-text\">50 Magic Resist</span> and <span class=\"effect-gray-text\">14% increased Move Speed</span>.<br><br>One spell can add a new stack of Steadfast every 1 second.",
+      "stats": {
+        "magicResistance": 50,
+        "health": 400,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 750,
       "total": 2800,
@@ -7379,6 +8585,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7444,6 +8651,18 @@
       "lock on",
       "snipe"
     ],
+    "arena": {
+      "id": 224628,
+      "description": "<div class=\"effect-stats\">90 Ability Power<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Hypershot</span><br>Dealing Ability damage to champions at 600 range or greater Reveals them for 6 seconds. <br><br><span class=\"effect-passive-text\">Focus</span><br>When <span class=\"effect-passive-text\">Hypershot</span> is triggered, Reveal all other enemy champions within 1400 range of them for 3 seconds.",
+      "stats": {
+        "abilityPower": 90
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 600,
       "total": 2700,
@@ -7453,6 +8672,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7475,6 +8695,20 @@
     "aka": [
       "cooldown hat"
     ],
+    "arena": {
+      "id": 224629,
+      "description": "<div class=\"effect-stats\">65 Ability Power<br>350 Health<br>35 Ability Haste<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Spelldance</span><br>Dealing <span class=\"effect-purple-text\">magic</span> or <span class=\"effect-orange-text\">true damage</span> to champions grants <span class=\"effect-gray-text\"> Move Speed</span> for 4 seconds.",
+      "stats": {
+        "health": 350,
+        "abilityPower": 65,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 450,
       "total": 3000,
@@ -7484,6 +8718,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7570,6 +8805,19 @@
     "aka": [
       "velkoz"
     ],
+    "arena": {
+      "id": 224633,
+      "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Void Corruption</span><br>For each second in combat with enemy champions, deal 2% bonus damage, up to 8%. At maximum strength, gain <span class=\"effect-red-text\">Omnivamp</span>.<br><br><span class=\"effect-passive-text\">Void Infusion</span><br>Gain 2% of your <span class=\"effect-green-text\">bonus Health</span> as <span class=\"effect-purple-text\">Ability Power</span>.",
+      "stats": {
+        "health": 350,
+        "abilityPower": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 950,
       "total": 3100,
@@ -7579,6 +8827,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7750,6 +8999,18 @@
   "4645": {
     "id": 4645,
     "name": "Shadowflame",
+    "arena": {
+      "id": 224645,
+      "description": "<div class=\"effect-stats\">90 Ability Power<br>10 Magic Penetration</div><br><br><span class=\"effect-passive-text\">Cinderbloom</span><br><span class=\"effect-purple-text\">Magic</span> and <span class=\"effect-orange-text\">true damage</span> Critically Strikes enemies below 40% Health, dealing 15% increased damage. ",
+      "stats": {
+        "abilityPower": 90
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 900,
       "total": 3200,
@@ -7759,6 +9020,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7777,6 +9039,19 @@
   "4646": {
     "id": 4646,
     "name": "Stormsurge",
+    "arena": {
+      "id": 224646,
+      "description": "<div class=\"effect-stats\">90 Ability Power<br>15 Magic Penetration<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Stormraider</span><br>Dealing 25% of a champion's maximum Health within 2.5s applies <span class=\"effect-passive-text\">Squall</span> to them and grants <span class=\"effect-gray-text\">25% Move Speed</span> for 1.5 seconds.<br><br><span class=\"effect-passive-text\">Squall</span><br>After 2 seconds, deal <span class=\"effect-purple-text\">magic damage</span>. If the target dies before <span class=\"effect-passive-text\">Squall</span> triggers, it damages nearby enemies and you gain <span class=\"effect-gray-text\">25% Move Speed</span> for 1.5 seconds.",
+      "stats": {
+        "abilityPower": 90,
+        "percentMovespeed": 4
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 800,
       "total": 2800,
@@ -7786,6 +9061,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7848,6 +9124,19 @@
     "aka": [
       "dd"
     ],
+    "arena": {
+      "id": 226333,
+      "description": "<div class=\"effect-stats\">60 Attack Damage<br>10 Ability Haste<br>45 Armor</div><br><br><span class=\"effect-passive-text\">Ignore Pain</span><br>Damage taken is dealt to you over time instead.<br><br><span class=\"effect-passive-text\">Defy</span><br>Champion takedowns cleanse <span class=\"effect-passive-text\">Ignore Pain's</span> remaining damage pool and restore Health over time.",
+      "stats": {
+        "armor": 45,
+        "attackDamage": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 275,
       "total": 3300,
@@ -7857,6 +9146,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7881,6 +9171,19 @@
       "grievous",
       "grievous wounds"
     ],
+    "arena": {
+      "id": 226609,
+      "description": "<div class=\"effect-stats\">45 Attack Damage<br>450 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Hackshorn</span><br>Dealing physical damage applies 40% Grievous Wounds to enemy champions for 3 seconds.<br><br><b class=\"effect-bold-text\">If an enemy heals for more than 60% of their maximum health while continously affected by Grievous Wounds, it is increased to 80% Grievous Wounds.</b><br><br>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+      "stats": {
+        "health": 450,
+        "attackDamage": 45
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 250,
       "total": 3000,
@@ -7890,6 +9193,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7911,6 +9215,19 @@
   "6610": {
     "id": 6610,
     "name": "Sundered Sky",
+    "arena": {
+      "id": 226610,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>350 Health<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Lightshield Strike</span><br>Your first Attack against a champion Critically Strikes and <span class=\"effect-green-text\">restores Health</span>.",
+      "stats": {
+        "health": 350,
+        "attackDamage": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 500,
       "total": 3100,
@@ -7920,6 +9237,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -7943,6 +9261,18 @@
     "aka": [
       "nami"
     ],
+    "arena": {
+      "id": 226616,
+      "description": "<div class=\"effect-stats\">65 Ability Power<br>14% Heal and Shield Power<br>150% Base Mana Regen<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Rapids</span><br>Healing or Shielding an ally grants you both <span class=\"effect-purple-text\">40 Ability Power</span> and 15 Ability Haste for 6 seconds.",
+      "stats": {
+        "abilityPower": 65
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 800,
       "total": 2250,
@@ -7952,6 +9282,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -7984,6 +9315,19 @@
     "aka": [
       "yuumi"
     ],
+    "arena": {
+      "id": 226617,
+      "description": "<div class=\"effect-stats\">35 Ability Power<br>200 Health<br>30 Ability Haste<br>125% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Starlit Grace</span><br><span class=\"effect-green-text\">Healing</span> or <span class=\"effect-blue-text\">shielding</span> yourself or an ally chains to the other champion, <span class=\"effect-green-text\">healing 20%</span> or <span class=\"effect-blue-text\">shielding 25%</span> of the original amount.",
+      "stats": {
+        "health": 200,
+        "abilityPower": 35
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 500,
       "total": 2200,
@@ -7993,6 +9337,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -8027,6 +9372,19 @@
     "aka": [
       "spooky cup"
     ],
+    "arena": {
+      "id": 226620,
+      "description": "<div class=\"effect-stats\">40 Ability Power<br>300 Health<br>30 Ability Haste<br>150% Base Mana Regen</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Soul Siphon:</span> Damaging a champion grants a <span class=\"effect-passive-text\">Soul Shard</span>. Healing or Shielding an ally consumes all <span class=\"effect-passive-text\">Soul Shards</span> to restore Health and deals magic damage per Shard to the nearest enemy champion.<br>",
+      "stats": {
+        "health": 300,
+        "abilityPower": 40
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 500,
       "total": 2200,
@@ -8036,6 +9394,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -8069,6 +9428,18 @@
     "aka": [
       "dawncore"
     ],
+    "arena": {
+      "id": 226621,
+      "description": "<div class=\"effect-stats\">45 Ability Power<br>12% Heal and Shield Power<br>200% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">First Light</span><br>Gain <span class=\"effect-green-text\">3% Heal and Shield Power</span> and <span class=\"effect-purple-text\">10 Ability Power</span> per <span class=\"effect-blue-text\">100% Base Mana Regen</span>.",
+      "stats": {
+        "abilityPower": 45
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 450,
       "total": 2500,
@@ -8078,6 +9449,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -8125,6 +9497,20 @@
       "kneecapper",
       "whipchain"
     ],
+    "arena": {
+      "id": 226631,
+      "description": "<div class=\"effect-stats\">40 Attack Damage<br>15% Attack Speed<br>375 Health</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> to nearby enemies.<br><span class=\"effect-active-text\">Breaking Shockwave</span><br>Deal <span class=\"effect-orange-text\">physical damage</span> and Slow nearby enemies by 40%.<br>Gain <span class=\"effect-gray-text\">40% decaying Move Speed</span> per champion hit for 3 seconds.",
+      "stats": {
+        "health": 375,
+        "attackDamage": 40,
+        "attackSpeed": 15
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 750,
       "total": 3300,
@@ -8134,6 +9520,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8201,6 +9588,19 @@
   "6655": {
     "id": 6655,
     "name": "Luden's Echo",
+    "arena": {
+      "id": 226655,
+      "description": "<div class=\"effect-stats\">85 Ability Power<br>600 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Echo</span><br>Damaging Abilities consume all the charges to deal an additional magic damage to the target and one additional nearby target per charge. If there are insufficient targets in range, for each remaining shot, repeat the damage on the primary target.",
+      "stats": {
+        "mana": 600,
+        "abilityPower": 85
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 450,
       "total": 2750,
@@ -8210,6 +9610,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8247,6 +9648,20 @@
     "aka": [
       "RoA"
     ],
+    "arena": {
+      "id": 226657,
+      "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health<br>300 Mana</div><br><br><span class=\"effect-passive-text\">Timeless</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item gains an additional <span class=\"effect-purple-text\">50 Ability Power</span>, <span class=\"effect-green-text\">300 Health</span>, and <span class=\"effect-blue-text\">400 Mana</span>, and you gain a level.<br><br><span class=\"effect-passive-text\">Eternity</span><br>Taking damage from champions restores 7% of premitigation damage as <span class=\"effect-blue-text\">Mana</span>. Casting an ability heals for 25% of <span class=\"effect-blue-text\">Mana</span> spent, up to <span class=\"effect-green-text\">20 Health</span> per cast, per second.",
+      "stats": {
+        "mana": 300,
+        "health": 350,
+        "abilityPower": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 450,
       "total": 2600,
@@ -8256,6 +9671,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -8320,6 +9736,19 @@
       "frozen",
       "frozen gauntlet"
     ],
+    "arena": {
+      "id": 226662,
+      "description": "<div class=\"effect-stats\">300 Health<br>45 Armor<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span> and creates a frost field for 2s that Slows.",
+      "stats": {
+        "health": 300,
+        "armor": 45
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 800,
       "total": 2900,
@@ -8329,6 +9758,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8354,6 +9784,19 @@
     "aka": [
       "catastrophe"
     ],
+    "arena": {
+      "id": 226664,
+      "description": "<div class=\"effect-stats\">450 Health<br>40 Magic Resist<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\">magic damage</span> per second to nearby enemies for 3 seconds. <br><br><span class=\"effect-passive-text\">Desolate</span><br>Killing an enemy deals <span class=\"effect-purple-text\">magic damage</span> around them.",
+      "stats": {
+        "magicResistance": 40,
+        "health": 450
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 650,
       "total": 2800,
@@ -8363,6 +9806,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8386,6 +9830,20 @@
     "aka": [
       "Jak'Sho, The Protean"
     ],
+    "arena": {
+      "id": 226665,
+      "description": "<div class=\"effect-stats\">350 Health<br>35 Armor<br>35 Magic Resist</div><br><br><span class=\"effect-passive-text\">Voidborn Resilience</span><br>After 5 seconds of champion combat, increase your bonus <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> by 40% until end of combat.<br><br>",
+      "stats": {
+        "magicResistance": 35,
+        "health": 350,
+        "armor": 35
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 650,
       "total": 3200,
@@ -8395,6 +9853,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8477,6 +9936,20 @@
     "aka": [
       "Kraken Slayer"
     ],
+    "arena": {
+      "id": 226672,
+      "description": "<div class=\"effect-stats\">50 Attack Damage<br>35% Attack Speed<br>7% Move Speed</div><br><br><span class=\"effect-passive-text\">Bring It Down</span><br>Every third Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>, increased based on their missing Health.",
+      "stats": {
+        "attackDamage": 50,
+        "attackSpeed": 35,
+        "percentMovespeed": 7
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 325,
       "total": 3000,
@@ -8486,6 +9959,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8506,6 +9980,19 @@
   "6673": {
     "id": 6673,
     "name": "Immortal Shieldbow",
+    "arena": {
+      "id": 226673,
+      "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Lifeline</span><br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-blue-text\">Shield</span> for 3 seconds.",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 55
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 825,
       "total": 3000,
@@ -8515,6 +10002,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8571,6 +10059,19 @@
       "gun",
       "lethality"
     ],
+    "arena": {
+      "id": 226676,
+      "description": "<div class=\"effect-stats\">45 Attack Damage<br>12 Lethality<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Death</span><br>Your damage executes champions that are <span class=\"effect-green-text\">below 5% Health</span>.<br><br><span class=\"effect-passive-text\">Taxes</span><br>Champion kills grant <span class=\"effect-gold-text\">125 bonus gold</span>.",
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 45
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 525,
       "total": 3000,
@@ -8580,6 +10081,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -8664,6 +10166,18 @@
     "aka": [
       "lethality"
     ],
+    "arena": {
+      "id": 226692,
+      "description": "<div class=\"effect-stats\">50 Attack Damage<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Ever Rising Moon</span><br>Hitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a <span class=\"effect-blue-text\">Shield</span> for 2 seconds.",
+      "stats": {
+        "attackDamage": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 625,
       "total": 2900,
@@ -8673,6 +10187,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8714,6 +10229,18 @@
     "aka": [
       "slow"
     ],
+    "arena": {
+      "id": 226694,
+      "description": "<div class=\"effect-stats\">50 Attack Damage<br>40% Armor Penetration<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Bitter Cold</span><br>Damaging Abilities Slow enemies <span class=\"effect-green-text\">below 50% Health</span> by 50% for 1 second.",
+      "stats": {
+        "attackDamage": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 500,
       "total": 3000,
@@ -8723,6 +10250,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8745,6 +10273,18 @@
     "aka": [
       "lethality"
     ],
+    "arena": {
+      "id": 226695,
+      "description": "<div class=\"effect-stats\">55 Attack Damage<br>19 Lethality</div><br><br><span class=\"effect-passive-text\">Shield Reaver</span><br>Dealing damage to an enemy champion reduces any shields they gain. When you damage an enemy who is unaffected by Shield Reaver, reduce all shields on them.<br><br>Item performance differs for melee and ranged users.",
+      "stats": {
+        "attackDamage": 55
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 625,
       "total": 2500,
@@ -8754,6 +10294,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8772,6 +10313,18 @@
   "6696": {
     "id": 6696,
     "name": "Axiom Arc",
+    "arena": {
+      "id": 226696,
+      "description": "<div class=\"effect-stats\">45 Attack Damage<br>18 Lethality<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Apophthegm</span><br><b class=\"effect-bold-text\">Your Ultimate Abilities deal 20% increased damage</b>.",
+      "stats": {
+        "attackDamage": 45
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 363,
       "total": 2750,
@@ -8781,6 +10334,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8803,6 +10357,18 @@
     "aka": [
       "lethality"
     ],
+    "arena": {
+      "id": 226697,
+      "description": "<div class=\"effect-stats\">50 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Eminence</span><br>When a champion that you have damaged with the last 3 seconds dies, gain <span class=\"effect-orange-text\">15 Attack Damage</span> <b class=\"effect-bold-text\">for the rest of the round</b>, or until slain. Eminence's <span class=\"effect-orange-text\">Attack Damage is permanently increased by 2</span> each time this triggers.",
+      "stats": {
+        "attackDamage": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 750,
       "total": 2800,
@@ -8810,7 +10376,8 @@
     },
     "maps": [
       11,
-      21
+      21,
+      30
     ],
     "rank": "Legendary",
     "recipe": [
@@ -8832,6 +10399,18 @@
     "aka": [
       "lethality"
     ],
+    "arena": {
+      "id": 226698,
+      "description": "<div class=\"effect-stats\">50 Attack Damage<br>18 Lethality<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> to nearby enemies.<br><span class=\"effect-active-text\">Heretical Cleave</span> (0s)<br>Deal <span class=\"effect-orange-text\"> physical damage</span> around you.",
+      "stats": {
+        "attackDamage": 50
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 313,
       "total": 2850,
@@ -8841,6 +10420,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8863,6 +10443,18 @@
     "aka": [
       "lethality"
     ],
+    "arena": {
+      "id": 226699,
+      "description": "<div class=\"effect-stats\">60 Attack Damage<br>20 Lethality<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Galvanize</span><br>Damaging an Enemy Champions with an ability triggers Energized if it is ready.<br><br><span class=\"effect-passive-text\">Firmament</span><br>Your Energized Attack deals <span class=\"effect-orange-text\">%</span> target's Current Health as <span class=\"effect-orange-text\">bonus physical damage</span> and grants you <span class=\"effect-red-text\"> Lethality</span> for 4 seconds.",
+      "stats": {
+        "attackDamage": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 963,
       "total": 3000,
@@ -8872,6 +10464,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -8979,6 +10572,19 @@
   "8010": {
     "id": 8010,
     "name": "Bloodletter's Curse",
+    "arena": {
+      "id": 4010,
+      "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Vile Decay</span><br>Dealing <span class=\"effect-purple-text\">magic damage</span> with abilities or passives to champions reduces their <span class=\"effect-blue-text\">Magic Resist by 7.5%</span> for 6 seconds. (Stacks 4 times).",
+      "stats": {
+        "health": 350,
+        "abilityPower": 60
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 750,
       "total": 2900,
@@ -8988,6 +10594,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "rank": "Legendary",
@@ -9007,6 +10614,19 @@
   "8020": {
     "id": 8020,
     "name": "Abyssal Mask",
+    "arena": {
+      "id": 228020,
+      "description": "<div class=\"effect-stats\">350 Health<br>50 Magic Resist<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Unmake</span><br>Nearby enemy champions take <span class=\"effect-purple-text\">12% more magic damage</span>.",
+      "stats": {
+        "magicResistance": 50,
+        "health": 350
+      },
+      "gold": {
+        "base": 2500,
+        "total": 2500,
+        "sell": 1250
+      }
+    },
     "gold": {
       "base": 1000,
       "total": 2650,
@@ -9016,6 +10636,7 @@
       11,
       12,
       21,
+      30,
       35
     ],
     "masterwork": {
@@ -10025,22 +11646,6 @@
       "health": 300
     }
   },
-  "221026": {
-    "id": 221026,
-    "name": "Blasting Wand",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 45
-    }
-  },
   "221031": {
     "id": 221031,
     "name": "Chain Vest",
@@ -10106,22 +11711,6 @@
       "magicResistance": 30
     }
   },
-  "221058": {
-    "id": 221058,
-    "name": "Needlessly Large Rod",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 0
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 120
-    }
-  },
   "222022": {
     "id": 222022,
     "name": "Glowing Mote",
@@ -10143,228 +11732,6 @@
     "stats": {
       "health": 300,
       "healthRegen": 4
-    }
-  },
-  "222065": {
-    "id": 222065,
-    "name": "Shurelya's Battlesong",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 55,
-      "percentMovespeed": 6
-    }
-  },
-  "222141": {
-    "id": 222141,
-    "name": "Cappa Juice",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 500
-    },
-    "maps": [
-      30
-    ]
-  },
-  "222502": {
-    "id": 222502,
-    "name": "Unending Despair",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "armor": 50
-    }
-  },
-  "222503": {
-    "id": 222503,
-    "name": "Blackfire Torch",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 600,
-      "abilityPower": 60
-    }
-  },
-  "222504": {
-    "id": 222504,
-    "name": "Kaenic Rookern",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 80,
-      "health": 350
-    }
-  },
-  "222510": {
-    "id": 222510,
-    "name": "Dusk and Dawn",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 300,
-      "abilityPower": 60,
-      "attackSpeed": 20
-    }
-  },
-  "222512": {
-    "id": 222512,
-    "name": "Fiendhunter Bolts",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackSpeed": 40,
-      "percentMovespeed": 4
-    }
-  },
-  "222517": {
-    "id": 222517,
-    "name": "Endless Hunger",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 60
-    }
-  },
-  "222522": {
-    "id": 222522,
-    "name": "Actualizer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 300,
-      "abilityPower": 90
-    }
-  },
-  "222523": {
-    "id": 222523,
-    "name": "Hexoptics C44",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackDamage": 55
-    }
-  },
-  "222524": {
-    "id": 222524,
-    "name": "Bandlepipes",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 25,
-      "health": 200,
-      "armor": 25
-    }
-  },
-  "222525": {
-    "id": 222525,
-    "name": "Protoplasm Harness",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 600
-    }
-  },
-  "222526": {
-    "id": 222526,
-    "name": "Whispering Circlet",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 300,
-      "health": 200
-    }
-  },
-  "222530": {
-    "id": 222530,
-    "name": "Diadem of Songs",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 1000,
-      "health": 200
     }
   },
   "223001": {
@@ -10396,38 +11763,6 @@
       "percentMovespeed": 6
     }
   },
-  "223003": {
-    "id": 223003,
-    "name": "Archangel's Staff",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 600,
-      "abilityPower": 55
-    }
-  },
-  "223004": {
-    "id": 223004,
-    "name": "Manamune",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 600,
-      "attackDamage": 40
-    }
-  },
   "223005": {
     "id": 223005,
     "name": "Ghostcrawlers",
@@ -10447,52 +11782,6 @@
       "Movement"
     ]
   },
-  "223006": {
-    "id": 223006,
-    "name": "Berserker's Greaves",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "flatMovespeed": 55,
-      "attackSpeed": 35
-    }
-  },
-  "223008": {
-    "id": 223008,
-    "name": "Gluttonous Greaves",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "flatMovespeed": 45
-    }
-  },
-  "223009": {
-    "id": 223009,
-    "name": "Boots of Swiftness",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "flatMovespeed": 70
-    }
-  },
   "223011": {
     "id": 223011,
     "name": "Chemtech Putrifier",
@@ -10507,101 +11796,6 @@
     ],
     "stats": {
       "abilityPower": 35
-    }
-  },
-  "223020": {
-    "id": 223020,
-    "name": "Sorcerer's Shoes",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "flatMovespeed": 55
-    }
-  },
-  "223026": {
-    "id": 223026,
-    "name": "Guardian Angel",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "armor": 45,
-      "attackDamage": 55
-    }
-  },
-  "223031": {
-    "id": 223031,
-    "name": "Infinity Edge",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackDamage": 75
-    }
-  },
-  "223032": {
-    "id": 223032,
-    "name": "Yun Tal Wildarrows",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 45,
-      "attackSpeed": 40
-    }
-  },
-  "223033": {
-    "id": 223033,
-    "name": "Mortal Reminder",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackDamage": 30
-    }
-  },
-  "223036": {
-    "id": 223036,
-    "name": "Lord Dominik's Regards",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackDamage": 30
     }
   },
   "223039": {
@@ -10627,105 +11821,6 @@
       "Fighter"
     ]
   },
-  "223040": {
-    "id": 223040,
-    "name": "Seraph's Embrace",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 1200,
-      "abilityPower": 60
-    }
-  },
-  "223042": {
-    "id": 223042,
-    "name": "Muramana",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 1000,
-      "attackDamage": 40
-    }
-  },
-  "223046": {
-    "id": 223046,
-    "name": "Phantom Dancer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackSpeed": 60,
-      "percentMovespeed": 8
-    }
-  },
-  "223047": {
-    "id": 223047,
-    "name": "Plated Steelcaps",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "flatMovespeed": 30,
-      "armor": 25
-    }
-  },
-  "223050": {
-    "id": 223050,
-    "name": "Zeke's Convergence",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 30,
-      "health": 300,
-      "armor": 25
-    }
-  },
-  "223053": {
-    "id": 223053,
-    "name": "Sterak's Gage",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 300
-    }
-  },
   "223057": {
     "id": 223057,
     "name": "Sheen",
@@ -10734,22 +11829,6 @@
       "purchasable": false,
       "total": 2500,
       "sell": 1750
-    }
-  },
-  "223065": {
-    "id": 223065,
-    "name": "Spirit Visage",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 40,
-      "health": 300
     }
   },
   "223067": {
@@ -10763,22 +11842,6 @@
     },
     "stats": {
       "health": 200
-    }
-  },
-  "223068": {
-    "id": 223068,
-    "name": "Sunfire Aegis",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "armor": 40
     }
   },
   "223069": {
@@ -10805,251 +11868,6 @@
       "Tank"
     ]
   },
-  "223071": {
-    "id": 223071,
-    "name": "Black Cleaver",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "attackDamage": 40
-    }
-  },
-  "223072": {
-    "id": 223072,
-    "name": "Bloodthirster",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 70,
-      "lifesteal": 18
-    }
-  },
-  "223073": {
-    "id": 223073,
-    "name": "Experimental Hexplate",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 450,
-      "attackDamage": 40,
-      "attackSpeed": 30
-    }
-  },
-  "223074": {
-    "id": 223074,
-    "name": "Ravenous Hydra",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 70,
-      "lifesteal": 15
-    }
-  },
-  "223075": {
-    "id": 223075,
-    "name": "Thornmail",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 300,
-      "armor": 60
-    }
-  },
-  "223078": {
-    "id": 223078,
-    "name": "Trinity Force",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 375,
-      "attackDamage": 40,
-      "attackSpeed": 25
-    }
-  },
-  "223084": {
-    "id": 223084,
-    "name": "Heartsteel",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 700
-    }
-  },
-  "223085": {
-    "id": 223085,
-    "name": "Runaan's Hurricane",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackSpeed": 45,
-      "percentMovespeed": 4
-    }
-  },
-  "223087": {
-    "id": 223087,
-    "name": "Statikk Shiv",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 45,
-      "attackDamage": 45,
-      "attackSpeed": 30,
-      "percentMovespeed": 4
-    }
-  },
-  "223089": {
-    "id": 223089,
-    "name": "Rabadon's Deathcap",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 65
-    }
-  },
-  "223091": {
-    "id": 223091,
-    "name": "Wit's End",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 45,
-      "attackSpeed": 50
-    }
-  },
-  "223094": {
-    "id": 223094,
-    "name": "Rapid Firecannon",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackSpeed": 30,
-      "percentMovespeed": 4
-    }
-  },
-  "223095": {
-    "id": 223095,
-    "name": "Stormrazor",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackDamage": 50,
-      "attackSpeed": 20
-    }
-  },
-  "223100": {
-    "id": 223100,
-    "name": "Lich Bane",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 80,
-      "percentMovespeed": 10
-    }
-  },
-  "223102": {
-    "id": 223102,
-    "name": "Banshee's Veil",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 40,
-      "abilityPower": 80
-    }
-  },
   "223105": {
     "id": 223105,
     "name": "Aegis of the Legion",
@@ -11064,69 +11882,6 @@
       "armor": 30
     }
   },
-  "223107": {
-    "id": 223107,
-    "name": "Redemption",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 30
-    }
-  },
-  "223109": {
-    "id": 223109,
-    "name": "Knight's Vow",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 400,
-      "armor": 50
-    }
-  },
-  "223110": {
-    "id": 223110,
-    "name": "Frozen Heart",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 450,
-      "armor": 90
-    }
-  },
-  "223111": {
-    "id": 223111,
-    "name": "Mercury's Treads",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 30,
-      "flatMovespeed": 30
-    }
-  },
   "223112": {
     "id": 223112,
     "name": "Guardian's Orb",
@@ -11137,327 +11892,6 @@
     },
     "stats": {
       "abilityPower": 55
-    }
-  },
-  "223115": {
-    "id": 223115,
-    "name": "Nashor's Tooth",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 70,
-      "attackSpeed": 45
-    }
-  },
-  "223116": {
-    "id": 223116,
-    "name": "Rylai's Crystal Scepter",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "abilityPower": 60
-    }
-  },
-  "223118": {
-    "id": 223118,
-    "name": "Malignance",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 600,
-      "abilityPower": 70
-    }
-  },
-  "223119": {
-    "id": 223119,
-    "name": "Winter's Approach",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 600,
-      "health": 400
-    }
-  },
-  "223121": {
-    "id": 223121,
-    "name": "Fimbulwinter",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 1000,
-      "health": 400
-    }
-  },
-  "223124": {
-    "id": 223124,
-    "name": "Guinsoo's Rageblade",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 25,
-      "attackDamage": 20,
-      "attackSpeed": 25
-    }
-  },
-  "223135": {
-    "id": 223135,
-    "name": "Void Staff",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 65
-    }
-  },
-  "223137": {
-    "id": 223137,
-    "name": "Cryptbloom",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 60
-    }
-  },
-  "223139": {
-    "id": 223139,
-    "name": "Mercurial Scimitar",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 40,
-      "attackDamage": 45,
-      "lifesteal": 10
-    }
-  },
-  "223142": {
-    "id": 223142,
-    "name": "Youmuu's Ghostblade",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 55,
-      "percentMovespeed": 4
-    }
-  },
-  "223143": {
-    "id": 223143,
-    "name": "Randuin's Omen",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 300,
-      "armor": 75
-    }
-  },
-  "223146": {
-    "id": 223146,
-    "name": "Hextech Gunblade",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 90,
-      "attackDamage": 45
-    }
-  },
-  "223152": {
-    "id": 223152,
-    "name": "Hextech Rocketbelt",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 400,
-      "abilityPower": 95
-    }
-  },
-  "223153": {
-    "id": 223153,
-    "name": "Blade of The Ruined King",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 30,
-      "attackSpeed": 20,
-      "lifesteal": 10
-    }
-  },
-  "223156": {
-    "id": 223156,
-    "name": "Maw of Malmortius",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 40,
-      "attackDamage": 50
-    }
-  },
-  "223157": {
-    "id": 223157,
-    "name": "Zhonya's Hourglass",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 80,
-      "armor": 50
-    }
-  },
-  "223158": {
-    "id": 223158,
-    "name": "Ionian Boots of Lucidity",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "flatMovespeed": 45
-    }
-  },
-  "223161": {
-    "id": 223161,
-    "name": "Spear of Shojin",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "attackDamage": 40
-    }
-  },
-  "223165": {
-    "id": 223165,
-    "name": "Morellonomicon",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 250,
-      "abilityPower": 90
-    }
-  },
-  "223172": {
-    "id": 223172,
-    "name": "Zephyr",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackSpeed": 50,
-      "percentMovespeed": 10
     }
   },
   "223177": {
@@ -11471,23 +11905,6 @@
     "stats": {
       "health": 250,
       "attackDamage": 25
-    }
-  },
-  "223181": {
-    "id": 223181,
-    "name": "Hullbreaker",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 500,
-      "attackDamage": 40,
-      "percentMovespeed": 4
     }
   },
   "223184": {
@@ -11523,23 +11940,6 @@
       "Assassin"
     ]
   },
-  "223190": {
-    "id": 223190,
-    "name": "Locket of the Iron Solari",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 35,
-      "health": 400,
-      "armor": 25
-    }
-  },
   "223193": {
     "id": 223193,
     "name": "Gargoyle Stoneplate",
@@ -11552,118 +11952,6 @@
     "stats": {
       "magicResistance": 60,
       "armor": 60
-    }
-  },
-  "223222": {
-    "id": 223222,
-    "name": "Mikael's Blessing",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 400
-    }
-  },
-  "223302": {
-    "id": 223302,
-    "name": "Terminus",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 30,
-      "attackSpeed": 40
-    }
-  },
-  "223504": {
-    "id": 223504,
-    "name": "Ardent Censer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 40,
-      "percentMovespeed": 6
-    }
-  },
-  "223508": {
-    "id": 223508,
-    "name": "Essence Reaver",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackDamage": 50
-    }
-  },
-  "223742": {
-    "id": 223742,
-    "name": "Dead Man's Plate",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 300,
-      "armor": 40,
-      "percentMovespeed": 7
-    }
-  },
-  "223748": {
-    "id": 223748,
-    "name": "Titanic Hydra",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 400,
-      "attackDamage": 40
-    }
-  },
-  "223814": {
-    "id": 223814,
-    "name": "Edge of Night",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 375,
-      "attackDamage": 45
     }
   },
   "224004": {
@@ -11686,38 +11974,6 @@
     "tags": [
       "Assassin"
     ]
-  },
-  "224005": {
-    "id": 224005,
-    "name": "Imperial Mandate",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 60
-    }
-  },
-  "224401": {
-    "id": 224401,
-    "name": "Force of Nature",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 50,
-      "health": 400,
-      "percentMovespeed": 4
-    }
   },
   "224403": {
     "id": 224403,
@@ -11753,54 +12009,6 @@
       "percentMovespeed": 10,
       "abilityHaste": 20,
       "omnivamp": 15
-    }
-  },
-  "224628": {
-    "id": 224628,
-    "name": "Horizon Focus",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 90
-    }
-  },
-  "224629": {
-    "id": 224629,
-    "name": "Cosmic Drive",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "abilityPower": 65,
-      "percentMovespeed": 4
-    }
-  },
-  "224633": {
-    "id": 224633,
-    "name": "Riftmaker",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "abilityPower": 60
     }
   },
   "224636": {
@@ -11846,37 +12054,6 @@
       "abilityPower": 85
     }
   },
-  "224645": {
-    "id": 224645,
-    "name": "Shadowflame",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 90
-    }
-  },
-  "224646": {
-    "id": 224646,
-    "name": "Stormsurge",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 90,
-      "percentMovespeed": 4
-    }
-  },
   "226035": {
     "id": 226035,
     "name": "Silvermere Dawn",
@@ -11890,116 +12067,6 @@
       "magicResistance": 40,
       "health": 300,
       "attackDamage": 40
-    }
-  },
-  "226333": {
-    "id": 226333,
-    "name": "Death's Dance",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "armor": 45,
-      "attackDamage": 60
-    }
-  },
-  "226609": {
-    "id": 226609,
-    "name": "Chempunk Chainsword",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 450,
-      "attackDamage": 45
-    }
-  },
-  "226610": {
-    "id": 226610,
-    "name": "Sundered Sky",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 350,
-      "attackDamage": 40
-    }
-  },
-  "226616": {
-    "id": 226616,
-    "name": "Staff of Flowing Water",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 65
-    }
-  },
-  "226617": {
-    "id": 226617,
-    "name": "Moonstone Renewer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 200,
-      "abilityPower": 35
-    }
-  },
-  "226620": {
-    "id": 226620,
-    "name": "Echoes of Helia",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 300,
-      "abilityPower": 40
-    }
-  },
-  "226621": {
-    "id": 226621,
-    "name": "Dawncore",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "abilityPower": 45
     }
   },
   "226630": {
@@ -12026,23 +12093,6 @@
     "tags": [
       "Fighter"
     ]
-  },
-  "226631": {
-    "id": 226631,
-    "name": "Stridebreaker",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 375,
-      "attackDamage": 40,
-      "attackSpeed": 15
-    }
   },
   "226632": {
     "id": 226632,
@@ -12074,22 +12124,6 @@
       "abilityPower": 50
     }
   },
-  "226655": {
-    "id": 226655,
-    "name": "Luden's Echo",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 600,
-      "abilityPower": 85
-    }
-  },
   "226656": {
     "id": 226656,
     "name": "Everfrost",
@@ -12103,72 +12137,6 @@
       "mana": 600,
       "health": 250,
       "abilityPower": 70
-    }
-  },
-  "226657": {
-    "id": 226657,
-    "name": "Rod of Ages",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "mana": 300,
-      "health": 350,
-      "abilityPower": 60
-    }
-  },
-  "226662": {
-    "id": 226662,
-    "name": "Iceborn Gauntlet",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 300,
-      "armor": 45
-    }
-  },
-  "226664": {
-    "id": 226664,
-    "name": "Hollow Radiance",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 40,
-      "health": 450
-    }
-  },
-  "226665": {
-    "id": 226665,
-    "name": "Jak'Sho, The Protean",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 35,
-      "health": 350,
-      "armor": 35
     }
   },
   "226667": {
@@ -12202,39 +12170,6 @@
       "percentMovespeed": 7
     }
   },
-  "226672": {
-    "id": 226672,
-    "name": "Kraken Slayer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 50,
-      "attackSpeed": 35,
-      "percentMovespeed": 7
-    }
-  },
-  "226673": {
-    "id": 226673,
-    "name": "Immortal Shieldbow",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackDamage": 55
-    }
-  },
   "226675": {
     "id": 226675,
     "name": "Navori Flickerblades",
@@ -12252,22 +12187,6 @@
       "percentMovespeed": 4
     }
   },
-  "226676": {
-    "id": 226676,
-    "name": "The Collector",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "attackDamage": 45
-    }
-  },
   "226691": {
     "id": 226691,
     "name": "Duskblade of Draktharr",
@@ -12277,126 +12196,6 @@
       "total": 2500,
       "sell": 1750
     },
-    "stats": {
-      "attackDamage": 60
-    }
-  },
-  "226692": {
-    "id": 226692,
-    "name": "Eclipse",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 50
-    }
-  },
-  "226693": {
-    "id": 226693,
-    "name": "Prowler's Claw",
-    "gold": {
-      "base": 2750,
-      "total": 2750,
-      "sell": 1100
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 55
-    }
-  },
-  "226694": {
-    "id": 226694,
-    "name": "Serylda's Grudge",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 50
-    }
-  },
-  "226695": {
-    "id": 226695,
-    "name": "Serpent's Fang",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 55
-    }
-  },
-  "226696": {
-    "id": 226696,
-    "name": "Axiom Arc",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 45
-    }
-  },
-  "226697": {
-    "id": 226697,
-    "name": "Hubris",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 50
-    }
-  },
-  "226698": {
-    "id": 226698,
-    "name": "Profane Hydra",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "attackDamage": 50
-    }
-  },
-  "226699": {
-    "id": 226699,
-    "name": "Voltaic Cyclosword",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
     "stats": {
       "attackDamage": 60
     }
@@ -12592,22 +12391,6 @@
       "Movement",
       "Lifesteal vamp"
     ]
-  },
-  "228020": {
-    "id": 228020,
-    "name": "Abyssal Mask",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "magicResistance": 50,
-      "health": 350
-    }
   },
   "322065": {
     "id": 322065,
@@ -13341,22 +13124,6 @@
       "Tank"
     ]
   },
-  "443083": {
-    "id": 443083,
-    "name": "Warmog's Armor",
-    "gold": {
-      "base": 2750,
-      "total": 2750,
-      "sell": 1100
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 1100,
-      "percentMovespeed": 4
-    }
-  },
   "443090": {
     "id": 443090,
     "name": "Reaper's Toll",
@@ -13601,11 +13368,26 @@
     "aka": [
       "lethality"
     ],
+    "arena": {
+      "id": 226693,
+      "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>15 Ability Haste</div><br><br><span class=\"effect-active-text\">Sandswipe</span><br>Dash through target enemy, dealing a part of the target's <span class=\"effect-green-text\">maximum Health</span> as <span class=\"effect-orange-text\">bonus Physical Damage</span>. For the next 3 seconds, you deal increased damage to the target.",
+      "stats": {
+        "attackDamage": 55
+      },
+      "gold": {
+        "base": 2750,
+        "total": 2750,
+        "sell": 1100
+      }
+    },
     "gold": {
       "base": 1000,
       "total": 1000,
       "sell": 400
     },
+    "maps": [
+      30
+    ],
     "rank": "Special",
     "recipe": [
       220007
@@ -13841,22 +13623,6 @@
     "tags": [
       "Mage"
     ]
-  },
-  "447111": {
-    "id": 447111,
-    "name": "Overlord's Bloodmail",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ],
-    "stats": {
-      "health": 400,
-      "attackDamage": 40
-    }
   },
   "447112": {
     "id": 447112,

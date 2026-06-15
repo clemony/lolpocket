@@ -24,7 +24,7 @@
     "mana": 1000,
     "abilityHaste": 15
   },
-  "description": "35 Attack Damage\n1000 Mana\n15 Ability Haste\n\nAwe\nGain 2% max Mana as bonus Attack Damage.\n\nShock\nAttacks against champions deal 1.2% max Mana as bonus physical damage On-Hit. \nDamaging Abilities against champions deal 3% - 4% max Mana as bonus physical damage.",
+  "description": "<div class=\"effect-stats\">35 Attack Damage<br>1000 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-orange-text\">2% max Mana as bonus Attack Damage</span>.<br><br><span class=\"effect-passive-text\">Shock</span><br>Attacks against champions deal <span class=\"effect-orange-text\">1.2% max Mana as bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>. <br>Damaging Abilities against champions deal <span class=\"effect-orange-text\">3% - 4% max Mana as bonus physical damage</span>.",
   "gold": {
     "base": 2900,
     "purchasable": false,
@@ -35,8 +35,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223042,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>1000 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain bonus Attack Damage based on Mana. <br><br><span class=\"effect-passive-text\">Shock</span><br>Attacks against champions deal additional physical damage.",
+    "stats": {
+      "mana": 1000,
+      "attackDamage": 40
+    },
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
   "masterwork": {
     "upgradeId": 323042,
     "stats": {

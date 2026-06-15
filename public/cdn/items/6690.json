@@ -38,7 +38,7 @@
     "attackDamage": 15,
     "percentMovespeed": 4
   },
-  "description": "15 Attack Damage\n4% Move Speed\n\n",
+  "description": "<div class=\"effect-stats\">15 Attack Damage<br>4% Move Speed</div><br><br>",
   "gold": {
     "base": 425,
     "purchasable": true,

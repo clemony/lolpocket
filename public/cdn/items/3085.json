@@ -30,7 +30,7 @@
     "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
-  "description": "40% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nWind's Fury\nAttacks fire bolts at 2 additional enemies near the target.\nEach bolt deals physical damage and applies On-Hit effects.",
+  "description": "<div class=\"effect-stats\">40% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Wind's Fury</span><br>Attacks fire bolts at 2 additional enemies near the target.<br>Each bolt deals <span class=\"effect-orange-text\">physical damage</span> and applies <span class=\"effect-red-text\">On-Hit</span> effects.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -41,8 +41,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223085,
+    "description": "<div class=\"effect-stats\">45% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Wind's Fury</span><br>When Attacking, bolts are fired at up to 2 enemies near the target. Bolts apply <span class=\"effect-red-text\">On-Hit</span> effects and can Critically Strike.<br><br>Item is for Ranged champions only.",
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackSpeed": 45,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman",
     "Onhit effects",

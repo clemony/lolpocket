@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "Active - Consume: Roll to gain 5 additional rerolls.\n\nFor when skill isn't enough.",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Roll to gain 5 additional rerolls.<br><br>For when skill isn't enough.",
   "gold": {
     "base": 0,
     "purchasable": false,

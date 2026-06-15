@@ -30,7 +30,7 @@
     "health": 600,
     "abilityHaste": 20
   },
-  "description": "600 Health\n20 Ability Haste\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% causes you to gain  maximum Health for 5 seconds, then heal  Health over the duration. While regenerating Health, you gain 15% increased Size, 10% Move Speed, and 25% Tenacity. ",
+  "description": "<div class=\"effect-stats\">600 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Lifeline</span> (0s)<br>Taking damage that would reduce your Health below 30% causes you to gain <span class=\"effect-green-text\"> maximum Health</span> for 5 seconds, then heal <span class=\"effect-green-text\"> Health</span> over the duration. While regenerating Health, you gain 15% increased Size, 10% Move Speed, and 25% Tenacity. ",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -41,8 +41,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222525,
+    "description": "<div class=\"effect-stats\">600 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Lifeline</span> (0s)<br>Taking damage that would reduce your Health below 30% causes you to gain <span class=\"effect-green-text\"> maximum Health</span> for 5 seconds, then heal <span class=\"effect-green-text\"> Health</span> over the duration. While regenerating Health, you gain 15% increased Size, 10% Move Speed, and 25% Tenacity. ",
+    "stats": {
+      "health": 600
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
   "tags": [
     "Tank"
   ]

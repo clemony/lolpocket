@@ -50,7 +50,7 @@
     "mana": 500,
     "abilityHaste": 15
   },
-  "description": "550 Health\n500 Mana\n15 Ability Haste\n\nAwe\nGain  Health.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grant 3 max Mana (doubled vs. champions).\nTransforms into Fimbulwinter at 360 max Mana.",
+  "description": "<div class=\"effect-stats\">550 Health<br>500 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-green-text\"> Health</span>.<br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 4 charges)<br>Landing Attacks and Abilities grant <span class=\"effect-blue-text\">3 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Fimbulwinter</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
   "gold": {
     "base": 300,
     "purchasable": true,
@@ -61,8 +61,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223119,
+    "description": "<div class=\"effect-stats\">400 Health<br>600 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Awe:</span> Gain bonus <span class=\"effect-green-text\">Health equal to Total Mana</span>.<span class=\"effect-list\"><span class=\"effect-passive-text\">Mana Charge:</span> <b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Fimbulwinter</span>.",
+    "stats": {
+      "mana": 600,
+      "health": 400
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 323119,
     "stats": {

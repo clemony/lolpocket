@@ -1,7 +1,7 @@
 {
   "id": 667112,
   "name": "Flesheater",
-  "description": "55 Adaptive Force\n500 Health\n\nHack the Meat\nDealing damage shreds 3 Armor and Magic Resist for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability.\n\nCannibalize\nOn Champion Takedown, steal 10% of their stats and size for the rest of the round.",
+  "description": "<div class=\"effect-stats\">55 Adaptive Force<br>500 Health</div><br><br><span class=\"effect-passive-text\">Hack the Meat</span><br>Dealing damage shreds 3 <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability.<br><br><span class=\"effect-passive-text\">Cannibalize</span><br>On Champion Takedown, steal 10% of their stats and size for the rest of the round.",
   "stats": {
     "health": 500
   },

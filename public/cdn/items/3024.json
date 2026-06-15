@@ -39,7 +39,7 @@
     "mana": 300,
     "abilityHaste": 10
   },
-  "description": "25 Armor\n300 Mana\n10 Ability Haste\n\n",
+  "description": "<div class=\"effect-stats\">25 Armor<br>300 Mana<br>10 Ability Haste</div><br><br>",
   "gold": {
     "base": 50,
     "purchasable": true,

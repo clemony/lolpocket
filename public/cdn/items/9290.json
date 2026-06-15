@@ -1,7 +1,7 @@
 {
   "id": 9290,
   "name": "Vayne's Chromablades",
-  "description": "Fires projectiles that bounce off walls, damaging all enemies they pass through. Arrows deal more damage each time they bounce.\n\nDamage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><br><br>Fires projectiles that bounce off walls, damaging all enemies they pass through. Arrows deal more damage each time they bounce.<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

@@ -38,7 +38,7 @@
     "healAndShieldPower": 16,
     "manaRegen": 100
   },
-  "description": "45 Ability Power\n16% Heal and Shield Power\n100% Base Mana Regen\n\nFirst Light\nGain 2% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>16% Heal and Shield Power<br>100% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">First Light</span><br>Gain <span class=\"effect-green-text\">2% Heal and Shield Power</span> and <span class=\"effect-purple-text\">10 Ability Power</span> per 100% Base Mana Regen.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -49,8 +49,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226621,
+    "description": "<div class=\"effect-stats\">45 Ability Power<br>12% Heal and Shield Power<br>200% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">First Light</span><br>Gain <span class=\"effect-green-text\">3% Heal and Shield Power</span> and <span class=\"effect-purple-text\">10 Ability Power</span> per <span class=\"effect-blue-text\">100% Base Mana Regen</span>.",
+    "stats": {
+      "abilityPower": 45
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 326621,
     "stats": {

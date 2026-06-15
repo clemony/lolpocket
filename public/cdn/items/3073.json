@@ -41,7 +41,7 @@
     "attackSpeed": 20,
     "health": 450
   },
-  "description": "40 Attack Damage\n20% Attack Speed\n450 Health\n\nHexcharged\nGain 30 Ultimate Ability Haste.\n\nOverdrive\nAfter casting your Ultimate, gain % Attack Speed and % Move Speed for 8 seconds. ",
+  "description": "<div class=\"effect-stats\">40 Attack Damage<br>20% Attack Speed<br>450 Health</div><br><br><span class=\"effect-passive-text\">Hexcharged</span><br>Gain 30 Ultimate Ability Haste.<br><br><span class=\"effect-passive-text\">Overdrive</span><br>After casting your Ultimate, gain <span class=\"effect-gold-text\">% Attack Speed</span> and <span class=\"effect-gray-text\">% Move Speed</span> for 8 seconds. ",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -52,8 +52,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223073,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>30% Attack Speed<br>450 Health</div><br><br><span class=\"effect-passive-text\">Hexcharged</span><br>Gain 30 Ultimate Ability Haste.<br><br><span class=\"effect-passive-text\">Overdrive</span><br>After casting your Ultimate, gain <span class=\"effect-gold-text\">% Attack Speed</span> and <span class=\"effect-gray-text\">% Move Speed</span> for 8 seconds. ",
+    "stats": {
+      "health": 450,
+      "attackDamage": 40,
+      "attackSpeed": 30
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
   "tags": [
     "Fighter",
     "Ability haste",

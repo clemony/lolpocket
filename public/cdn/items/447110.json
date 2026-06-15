@@ -18,7 +18,7 @@
     "health": 400,
     "tenacity": 30
   },
-  "description": "85 Ability Power\n400 Health\n30% Tenacity\n\nRelentless\nWhen you use an Ability, reset your auto attack timer and gain 90% Attack Speed for your next 2 Attacks.\n\nWhen you Attack, reduce your non-Dash and Blink Abilities Ability Cooldowns by 0.5 seconds.",
+  "description": "<div class=\"effect-stats\">85 Ability Power<br>400 Health<br>30% Tenacity</div><br><br><span class=\"effect-passive-text\">Relentless</span><br>When you use an Ability, reset your auto attack timer and gain <span class=\"effect-gold-text\">90% Attack Speed</span> for your next 2 Attacks.<br><br>When you Attack, reduce your non-Dash and Blink Abilities Ability Cooldowns by 0.5 seconds.",
   "gold": {
     "base": 2750,
     "purchasable": true,

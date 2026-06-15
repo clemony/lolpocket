@@ -1,7 +1,7 @@
 {
   "id": 6677,
   "name": "Rageknife",
-  "description": "25% Attack Speed\n\n\nWrath: Attacks apply 20 magic damage On-Hit.Seething Strike: Basic attacks grant 5% Attack Speed, stacking up to 3 times for a maximum of  Attack Speed.",
+  "description": "<div class=\"effect-stats\">25% Attack Speed</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Wrath:</span> Attacks apply <span class=\"effect-purple-text\">20 magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.<span class=\"effect-list\"><span class=\"effect-passive-text\">Seething Strike:</span> Basic attacks grant <span class=\"effect-gold-text\">5% Attack Speed</span>, stacking up to 3 times for a maximum of <span class=\"effect-gold-text\"> Attack Speed</span>.",
   "stats": {
     "attackSpeed": 25
   },

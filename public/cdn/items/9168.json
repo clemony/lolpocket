@@ -1,7 +1,7 @@
 {
   "id": 9168,
   "name": "Locked Weapon Slot",
-  "description": "Prove yourself, and Miss Fortune will approve an inventory upgrade.\n\n[Unlocked by completing achievements.]",
+  "description": "<div class=\"effect-stats\"></div><br><br>Prove yourself, and Miss Fortune will approve an inventory upgrade.<br><br>[Unlocked by completing achievements.]",
   "gold": {
     "base": 0,
     "purchasable": true,

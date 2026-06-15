@@ -19,7 +19,7 @@
     "percentMagicPenetration": 30,
     "percentMovespeed": 5
   },
-  "description": "60 Ability Power\n5% Move Speed\n22% Armor Penetration\n30% Magic Penetration\n\nGiant Slayer\nDeal up to 15% bonus damage against champions with greater max Health than you.\n\nMax damage increase reached when Health difference is greater than 2500.",
+  "description": "<div class=\"effect-stats\">60 Ability Power<br>5% Move Speed<br>22% Armor Penetration<br>30% Magic Penetration</div><br><br><span class=\"effect-passive-text\">Giant Slayer</span><br>Deal up to 15% bonus damage against champions with greater max Health than you.<br><br>Max damage increase reached when Health difference is greater than 2500.",
   "gold": {
     "base": 2500,
     "purchasable": true,

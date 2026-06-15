@@ -1,7 +1,7 @@
 {
   "id": 3859,
   "name": "Targon's Buckler",
-  "description": "10 Ability Power\n100 Health\n75% Base Health Regen\n3 Gold Per 10 Seconds\n\n\nSpoils of War: While nearby an allied champion, Attacks execute minions below 0% of their max Health. Killing a minion grants the same kill gold to the nearest allied champion. These effects recharge every 0 seconds (Max 0 charges).Quest: Earn 1000 gold from this item to transform it into Bulwark of the Mountain. \n\nThis item grants reduced gold from minions if anyone on your team with this item kill excessive numbers of them.\n\nACTIVE\nWard \nPlace an Invisible Stealth Ward that grants vision. Stores 0 Stealth Wards, which refill upon visiting the shop. ",
+  "description": "<div class=\"effect-stats\">10 Ability Power<br>100 Health<br>75% Base Health Regen<br>3 Gold Per 10 Seconds</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Spoils of War:</span> While nearby an allied champion, Attacks execute minions below 0% of their max Health. Killing a minion grants the same kill gold to the nearest allied champion. These effects recharge every 0 seconds (Max 0 charges).<span class=\"effect-list\"><span class=\"effect-passive-text\">Quest:</span> Earn 1000 gold from this item to transform it into <span class=\"effect-gold-text\">Bulwark of the Mountain</span>. <br><br>This item grants reduced gold from minions if anyone on your team with this item kill excessive numbers of them.<br><br><br><br><span class=\"effect-active-text\">ACTIVE</span><br><span class=\"effect-active-text\">Ward</span> <br>Place an Invisible Stealth Ward that grants vision. Stores 0 Stealth Wards, which refill upon visiting the shop. ",
   "stats": {
     "health": 100,
     "abilityPower": 10

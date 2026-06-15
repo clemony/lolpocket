@@ -135,7 +135,7 @@
   "stats": {
     "attackDamage": 10
   },
-  "description": "10 Attack Damage\n\n",
+  "description": "<div class=\"effect-stats\">10 Attack Damage</div><br><br>",
   "gold": {
     "base": 350,
     "purchasable": true,

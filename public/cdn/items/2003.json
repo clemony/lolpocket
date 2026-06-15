@@ -10,7 +10,7 @@
     "red"
   ],
   "stats": {},
-  "description": "Consume\nRestores 120 Health over 15 seconds.",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Consume</span><br>Restores <span class=\"effect-green-text\">120 Health</span> over 15 seconds.",
   "gold": {
     "base": 50,
     "purchasable": true,

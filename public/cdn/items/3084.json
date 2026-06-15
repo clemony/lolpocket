@@ -46,7 +46,7 @@
     "health": 900,
     "healthRegen": 100
   },
-  "description": "900 Health\n100% Base Health Regen\n\nColossal Consumption (0s) per target\nIf an enemy champion is nearby for a few seconds, your next Attack against them deals 70 plus 6% of your max Health as bonus physical damage and grants 10% of the damage as max Health.\n\nGoliath\nFor each 1000 max Health, gain 3% increased size, up to 30%. ",
+  "description": "<div class=\"effect-stats\">900 Health<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Colossal Consumption</span> (0s) per target<br>If an enemy champion is nearby for a few seconds, your next Attack against them deals <span class=\"effect-orange-text\">70 plus 6%</span> of your max Health as <span class=\"effect-orange-text\">bonus physical damage</span> and grants <span class=\"effect-green-text\">10%</span> of the damage as <span class=\"effect-green-text\">max Health.</span><br><br><span class=\"effect-passive-text\">Goliath</span><br>For each <span class=\"effect-green-text\">1000 max Health</span>, gain 3% increased size, up to 30%. ",
   "gold": {
     "base": 400,
     "purchasable": true,
@@ -57,8 +57,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223084,
+    "description": "<div class=\"effect-stats\">700 Health</div><br><br><span class=\"effect-passive-text\">Colossal Consumption</span> (0s) per target<br>Charge up a powerful attack against a champion over time while near them. The charged attack deals bonus physical damage and grants permanent max Health.<br><br><span class=\"effect-passive-text\">Goliath</span><br>Gain increased size based on Total Health. ",
+    "stats": {
+      "health": 700
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Tank"
   ]

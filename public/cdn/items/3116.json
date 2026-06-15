@@ -37,7 +37,7 @@
     "abilityPower": 65,
     "health": 400
   },
-  "description": "65 Ability Power\n400 Health\n\nRimefrost\nDamaging Abilities Slow enemies by 30% for 1 second.",
+  "description": "<div class=\"effect-stats\">65 Ability Power<br>400 Health</div><br><br><span class=\"effect-passive-text\">Rimefrost</span><br>Damaging Abilities Slow enemies by 30% for 1 second.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -48,8 +48,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223116,
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health</div><br><br><span class=\"effect-passive-text\">Rimefrost</span><br>Damaging Abilities Slow enemies by 30% for 1 second.",
+    "stats": {
+      "health": 350,
+      "abilityPower": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

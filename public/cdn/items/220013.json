@@ -1,7 +1,7 @@
 {
   "id": 220013,
   "name": "Poro-Snax",
-  "description": "Active - Consume: Serves a scrumptious scoop to a nearby Poro, causing it to grow in size.\n\nThis savory blend of Avarosan hen and Freljordian herbs—now finished with a touch of refined Demacian sugarcraft—contains the essential nutrients necessary to keep your Poro positively radiant.\n\nAll proceeds will be donated towards the Cloudfield Youth Choir. Help a Demacian child afford an etwahl, today!",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Serves a scrumptious scoop to a nearby Poro, causing it to grow in size.<br><br>This savory blend of Avarosan hen and Freljordian herbs—now finished with a touch of refined Demacian sugarcraft—contains the essential nutrients necessary to keep your Poro positively radiant.<br><br>All proceeds will be donated towards the Cloudfield Youth Choir. Help a Demacian child afford an etwahl, today!",
   "gold": {
     "base": 0,
     "purchasable": false,

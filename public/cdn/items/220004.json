@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "Active - Consume: Automatically open a semi-random selection for a Legendary Mage item.",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Automatically open a semi-random selection for a Legendary Mage item.",
   "gold": {
     "base": 2250,
     "purchasable": true,

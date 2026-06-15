@@ -1,7 +1,7 @@
 {
   "id": 3850,
   "name": "Spellthief's Edge",
-  "description": "10 Ability Power\n25 Health\n25% Base Mana Regen\n2 Gold Per 10 Seconds\n\n\nTribute: While nearby an ally champion, damaging Abilities and Attacks against champions or buildings grant 20 gold. This can occur up to 3 times every 36 seconds.Quest: Earn 500 gold from this item to transform it into Frostfang, gaining Active - Warding.\n\nThis item grants reduced gold from minions if anyone on your team with this item kill excessive numbers of them.",
+  "description": "<div class=\"effect-stats\">10 Ability Power<br>25 Health<br>25% Base Mana Regen<br>2 Gold Per 10 Seconds</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Tribute:</span> While nearby an ally champion, damaging Abilities and Attacks against champions or buildings grant 20 gold. This can occur up to 3 times every 36 seconds.<span class=\"effect-list\"><span class=\"effect-passive-text\">Quest:</span> Earn 500 gold from this item to transform it into <span class=\"effect-gray-text\">Frostfang</span>, gaining <span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Warding</span>.<br><br>This item grants reduced gold from minions if anyone on your team with this item kill excessive numbers of them.",
   "stats": {
     "health": 25,
     "abilityPower": 10

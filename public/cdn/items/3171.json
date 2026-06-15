@@ -33,7 +33,7 @@
     "flatMovespeed": 45,
     "abilityHaste": 20
   },
-  "description": "20 Ability Haste\n45 Move Speed\n\nIonian Insight\nGain 20 Summoner Spell Haste.\n\nNoxian Haste\nEmpowering or protecting allies with abilities, dealing damage to enemy Champions with abilities, or casting a Summoner Spell grants  Move Speed for 4 seconds.\n\nNoxian Haste can only be triggered once per Ability cast.",
+  "description": "<div class=\"effect-stats\">20 Ability Haste<br>45 Move Speed</div><br><br><span class=\"effect-passive-text\">Ionian Insight</span><br>Gain 20 Summoner Spell Haste.<br><br><span class=\"effect-passive-text\">Noxian Haste</span><br>Empowering or protecting allies with abilities, dealing damage to enemy Champions with abilities, or casting a Summoner Spell grants <span class=\"effect-gray-text\"> Move Speed</span> for 4 seconds.<br><br>Noxian Haste can only be triggered once per Ability cast.",
   "gold": {
     "base": 0,
     "purchasable": true,

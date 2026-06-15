@@ -21,7 +21,7 @@
     "abilityPower": 95,
     "percentMagicPenetration": 40
   },
-  "description": "95 Ability Power\n40% Magic Penetration\n\n",
+  "description": "<div class=\"effect-stats\">95 Ability Power<br>40% Magic Penetration</div><br><br>",
   "gold": {
     "base": 1050,
     "purchasable": true,
@@ -32,8 +32,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223135,
+    "description": "<div class=\"effect-stats\">65 Ability Power<br>40% Magic Penetration</div><br><br>",
+    "stats": {
+      "abilityPower": 65
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

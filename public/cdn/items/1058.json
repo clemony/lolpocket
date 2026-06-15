@@ -43,7 +43,7 @@
   "stats": {
     "abilityPower": 65
   },
-  "description": "65 Ability Power\n\n",
+  "description": "<div class=\"effect-stats\">65 Ability Power</div><br><br>",
   "gold": {
     "base": 1200,
     "purchasable": true,
@@ -54,8 +54,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 221058,
+    "description": "<div class=\"effect-stats\">120 Ability Power</div><br><br>",
+    "stats": {
+      "abilityPower": 120
+    },
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 0
+    }
+  },
   "tags": [
     "Mage"
   ]

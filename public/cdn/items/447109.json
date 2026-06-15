@@ -18,7 +18,7 @@
     "armor": 30,
     "magicResistance": 30
   },
-  "description": "80 Ability Power\n30 Armor\n30 Magic Resist\n\nWatch Them Fall\nOn Immobilize or Grounding an enemy champion, summon a comet above them. The comet lands after 1 second, dealing additional  magic damage in the area. This effect has a 6s cooldown per target per spell cast.",
+  "description": "<div class=\"effect-stats\">80 Ability Power<br>30 Armor<br>30 Magic Resist</div><br><br><span class=\"effect-passive-text\">Watch Them Fall</span><br>On Immobilize or Grounding an enemy champion, summon a comet above them. The comet lands after 1 second, dealing additional <span class=\"effect-purple-text\"> magic damage</span> in the area. This effect has a 6s cooldown per target per spell cast.",
   "gold": {
     "base": 2750,
     "purchasable": true,

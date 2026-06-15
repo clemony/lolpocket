@@ -22,7 +22,7 @@
     "attackSpeed": 50,
     "percentMovespeed": 5
   },
-  "description": "50% Attack Speed\n55 Armor\n5% Move Speed\n\nGash\nAttacks apply  true damage on hit.",
+  "description": "<div class=\"effect-stats\">50% Attack Speed<br>55 Armor<br>5% Move Speed</div><br><br><span class=\"effect-passive-text\">Gash</span><br>Attacks apply  true damage on hit.",
   "gold": {
     "base": 2750,
     "purchasable": true,

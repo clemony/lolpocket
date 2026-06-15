@@ -27,7 +27,7 @@
     "abilityPower": 20,
     "health": 100
   },
-  "description": "20 Ability Power\n100 Health\n\nGlory\nTakedowns grant Glory, up to 25. 10 Glory is lost on death.\nGain 5 Ability Power per Glory and 10% Move Speed at 10 or higher Glory.",
+  "description": "<div class=\"effect-stats\">20 Ability Power<br>100 Health</div><br><br><span class=\"effect-passive-text\">Glory</span><br>Takedowns grant <span class=\"effect-passive-text\">Glory</span>, up to 25. 10 <span class=\"effect-passive-text\">Glory</span> is lost on death.<br>Gain <span class=\"effect-purple-text\">5 Ability Power</span> per <span class=\"effect-passive-text\">Glory</span> and <span class=\"effect-gray-text\">10% Move Speed</span> at 10 or higher <span class=\"effect-passive-text\">Glory</span>.",
   "gold": {
     "base": 1150,
     "purchasable": true,

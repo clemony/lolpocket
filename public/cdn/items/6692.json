@@ -38,7 +38,7 @@
     "attackDamage": 60,
     "abilityHaste": 15
   },
-  "description": "60 Attack Damage\n15 Ability Haste\n\nEver Rising Moon\nHitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a Shield for 2 seconds.",
+  "description": "<div class=\"effect-stats\">60 Attack Damage<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Ever Rising Moon</span><br>Hitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a <span class=\"effect-blue-text\">Shield</span> for 2 seconds.",
   "gold": {
     "base": 625,
     "purchasable": true,
@@ -49,8 +49,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226692,
+    "description": "<div class=\"effect-stats\">50 Attack Damage<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Ever Rising Moon</span><br>Hitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a <span class=\"effect-blue-text\">Shield</span> for 2 seconds.",
+    "stats": {
+      "attackDamage": 50
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter"
   ]

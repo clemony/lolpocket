@@ -101,7 +101,7 @@
     "abilityPower": 25,
     "abilityHaste": 10
   },
-  "description": "25 Ability Power\n10 Ability Haste\n\n",
+  "description": "<div class=\"effect-stats\">25 Ability Power<br>10 Ability Haste</div><br><br>",
   "gold": {
     "base": 200,
     "purchasable": true,

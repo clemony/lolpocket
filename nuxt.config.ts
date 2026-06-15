@@ -315,6 +315,9 @@ export default defineNuxtConfig({
     }
   },
   vite: {
+    resolve: {
+      dedupe: ["reka-ui"]
+    },
     optimizeDeps: {
       include: [
         "@dnd-kit/dom",

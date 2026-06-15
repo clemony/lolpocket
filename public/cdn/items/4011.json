@@ -25,7 +25,7 @@
     "health": 200,
     "abilityHaste": 15
   },
-  "description": "45 Ability Power\n200 Health\n12% Heal and Shield Power\n15 Ability Haste\n\nEffervescence\nGain +1.2% Attack Speed for every 1% Heal and Shield Power you have. \n\nPeppermint\nOn-Hit, heal the lowest health ally champion near you for , prioritizing lower health allies.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>200 Health<br>12% Heal and Shield Power<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Effervescence</span><br>Gain +<span class=\"effect-gold-text\">1.2% Attack Speed</span> for every <span class=\"effect-green-text\">1% Heal and Shield Power</span> you have. <br><br><span class=\"effect-passive-text\">Peppermint</span><br><span class=\"effect-red-text\">On-Hit</span>, <span class=\"effect-green-text\">heal the lowest health</span> ally champion near you for , prioritizing lower health allies.",
   "gold": {
     "base": 2500,
     "purchasable": true,

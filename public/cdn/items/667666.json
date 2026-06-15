@@ -1,7 +1,7 @@
 {
   "id": 667666,
   "name": "The Collector",
-  "description": "50 Attack Damage\n10 Lethality\n25% Critical Strike Chance\n\nDeath\nYour damage executes champions that are below 5% Health.\n\nTaxes\nChampion kills grant 25 bonus gold.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>10 Lethality<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Death</span><br>Your damage executes champions that are below 5% Health.<br><br><span class=\"effect-passive-text\">Taxes</span><br>Champion kills grant <span class=\"effect-gold-text\">25 bonus gold</span>.",
   "stats": {
     "criticalStrikeChance": 25,
     "attackDamage": 50

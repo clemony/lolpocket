@@ -1,7 +1,7 @@
 {
   "id": 6029,
   "name": "Ironspike Whip",
-  "description": "30 Attack Damage\n\nActive - Crescent: Deal damage to nearby enemies.",
+  "description": "<div class=\"effect-stats\">30 Attack Damage</div><br><br><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Crescent:</span> Deal damage to nearby enemies.",
   "stats": {
     "attackDamage": 30
   },

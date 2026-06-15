@@ -1,7 +1,7 @@
 {
   "id": 9190,
   "name": "Echoing Batblades",
-  "description": "Fires piercing projectiles that bounce off walls.\n\nEvolve: Projectile Count\n\nDamage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><br><br>Fires piercing projectiles that bounce off walls.<br><br>Evolve: Projectile Count<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

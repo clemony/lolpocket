@@ -44,7 +44,7 @@
     "attackDamage": 60,
     "abilityHaste": 15
   },
-  "description": "60 Attack Damage\n50 Armor\n15 Ability Haste\n\nIgnore Pain\nA percentage of damage taken is dealt to you over 3 seconds instead.\n\nDefy\nWhen a champion that you damaged within 3 seconds dies, cleanse Ignore Pain's remaining damage and restore Health over 2 seconds.",
+  "description": "<div class=\"effect-stats\">60 Attack Damage<br>50 Armor<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Ignore Pain</span><br>A percentage of damage taken is dealt to you over 3 seconds instead.<br><br><span class=\"effect-passive-text\">Defy</span><br>When a champion that you damaged within 3 seconds dies, cleanse <span class=\"effect-passive-text\">Ignore Pain's</span> remaining damage and restore <span class=\"effect-green-text\">Health</span> over 2 seconds.",
   "gold": {
     "base": 275,
     "purchasable": true,
@@ -55,8 +55,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226333,
+    "description": "<div class=\"effect-stats\">60 Attack Damage<br>10 Ability Haste<br>45 Armor</div><br><br><span class=\"effect-passive-text\">Ignore Pain</span><br>Damage taken is dealt to you over time instead.<br><br><span class=\"effect-passive-text\">Defy</span><br>Champion takedowns cleanse <span class=\"effect-passive-text\">Ignore Pain's</span> remaining damage pool and restore Health over time.",
+    "stats": {
+      "armor": 45,
+      "attackDamage": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter"
   ]

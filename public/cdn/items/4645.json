@@ -29,7 +29,7 @@
     "abilityPower": 110,
     "flatMagicPenetration": 15
   },
-  "description": "110 Ability Power\n15 Magic Penetration\n\nCinderbloom\nMagic and true damage Critically Strike enemies below 40% Health, dealing 20% increased damage. ",
+  "description": "<div class=\"effect-stats\">110 Ability Power<br>15 Magic Penetration</div><br><br><span class=\"effect-passive-text\">Cinderbloom</span><br><span class=\"effect-purple-text\">Magic</span> and <span class=\"effect-orange-text\">true damage</span> Critically Strike enemies below 40% Health, dealing 20% increased damage. ",
   "gold": {
     "base": 900,
     "purchasable": true,
@@ -40,8 +40,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 224645,
+    "description": "<div class=\"effect-stats\">90 Ability Power<br>10 Magic Penetration</div><br><br><span class=\"effect-passive-text\">Cinderbloom</span><br><span class=\"effect-purple-text\">Magic</span> and <span class=\"effect-orange-text\">true damage</span> Critically Strikes enemies below 40% Health, dealing 15% increased damage. ",
+    "stats": {
+      "abilityPower": 90
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

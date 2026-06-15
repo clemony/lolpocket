@@ -55,7 +55,7 @@
   "stats": {
     "attackSpeed": 15
   },
-  "description": "15% Attack Speed\n\nSting\nAttacks deal 15 bonus physical damage On-Hit.",
+  "description": "<div class=\"effect-stats\">15% Attack Speed</div><br><br><span class=\"effect-passive-text\">Sting</span><br>Attacks deal <span class=\"effect-orange-text\">15 bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
   "gold": {
     "base": 450,
     "purchasable": true,

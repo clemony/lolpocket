@@ -3,8 +3,6 @@
 @theme {
   --color-all-roles: oklch(37% 0 0);
 
-  --color-mustard: oklch(75% 21% 88);
-
   --ui-lp: oklch(85% 51% 123deg);
 
   --ui-win: oklch(71% 24% 200deg);
@@ -12,7 +10,7 @@
   --color-iron: oklch(49.16% 0.0168 35.72);
   --color-bronze: oklch(57.31% 0.0484 39.76);
   --color-silver: oklch(70% 0% 90);
-  --color-gold: oklch(85.49% 0.0892 84.09);
+  --color-gold: oklch(75% 21% 88);
   --color-platinum: oklch(69.21% 0.085 233.45);
   --color-emerald: oklch(56.81% 0.0628 168.43);
   --color-diamond: oklch(62.17% 0.1762 284.11);
@@ -99,7 +97,6 @@
   --challenger: var(--color-challenger);
 
   --vanguard: var(--color-vanguard);
-  --mustard: var(--color-mustard);
 
   --warden: var(--color-warden);
 

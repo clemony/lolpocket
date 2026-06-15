@@ -39,7 +39,7 @@
     "percentMovespeed": 4,
     "abilityHaste": 25
   },
-  "description": "70 Ability Power\n350 Health\n25 Ability Haste\n4% Move Speed\n\nSpelldance\nDealing magic or true damage to champions grants Move Speed for 4 seconds. ",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>350 Health<br>25 Ability Haste<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Spelldance</span><br>Dealing <span class=\"effect-purple-text\">magic</span> or <span class=\"effect-orange-text\">true damage</span> to champions grants <span class=\"effect-gray-text\">Move Speed</span> for 4 seconds. ",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -50,8 +50,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 224629,
+    "description": "<div class=\"effect-stats\">65 Ability Power<br>350 Health<br>35 Ability Haste<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Spelldance</span><br>Dealing <span class=\"effect-purple-text\">magic</span> or <span class=\"effect-orange-text\">true damage</span> to champions grants <span class=\"effect-gray-text\"> Move Speed</span> for 4 seconds.",
+    "stats": {
+      "health": 350,
+      "abilityPower": 65,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage",
     "Movement"

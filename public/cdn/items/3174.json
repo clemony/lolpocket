@@ -34,7 +34,7 @@
     "armor": 35,
     "flatMovespeed": 45
   },
-  "description": "35 Armor\n45 Move Speed\n\nPlating\nReduces incoming damage from Attacks by 10%.\n\nNoxian Endurance (0s)\nAfter taking physical damage from a Champion, gain a  physical shield for 5 seconds.",
+  "description": "<div class=\"effect-stats\">35 Armor<br>45 Move Speed</div><br><br><span class=\"effect-passive-text\">Plating</span><br>Reduces incoming damage from Attacks by 10%.<br><br><span class=\"effect-passive-text\">Noxian Endurance</span> (0s)<br>After taking physical damage from a Champion, gain a <span class=\"effect-blue-text\"></span> <span class=\"effect-orange-text\">physical</span> <span class=\"effect-blue-text\">shield</span> for 5 seconds.",
   "gold": {
     "base": 0,
     "purchasable": true,

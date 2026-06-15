@@ -41,7 +41,7 @@
     "omnivamp": 5,
     "tenacity": 20
   },
-  "description": "65 Attack Damage\n5% Omnivamp\n20% Tenacity\n\nFamine\nGain Ability Haste based on your Bonus AD.\n\nFeast\nWhen a champion that you damaged recently dies, gain Omnivamp for a moderate duration. ",
+  "description": "<div class=\"effect-stats\">65 Attack Damage<br>5% Omnivamp<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">Famine</span><br>Gain Ability Haste based on your Bonus AD.<br><br><span class=\"effect-passive-text\">Feast</span><br>When a champion that you damaged recently dies, gain Omnivamp for a moderate duration. ",
   "gold": {
     "base": 825,
     "purchasable": true,
@@ -52,8 +52,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222517,
+    "description": "<div class=\"effect-stats\">60 Attack Damage<br>5% Omnivamp<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">Famine</span><br>Gain Ability Haste based on your Bonus AD.<br><br><span class=\"effect-passive-text\">Feast</span><br>When a champion that you damaged recently dies, gain Omnivamp for a moderate duration. ",
+    "stats": {
+      "attackDamage": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
   "tags": [
     "Fighter"
   ]

@@ -33,7 +33,7 @@
     "attackDamage": 45,
     "abilityHaste": 15
   },
-  "description": "45 Attack Damage\n35% Armor Penetration\n15 Ability Haste\n\nBitter Cold\nDamaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
+  "description": "<div class=\"effect-stats\">45 Attack Damage<br>35% Armor Penetration<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Bitter Cold</span><br>Damaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -44,8 +44,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226694,
+    "description": "<div class=\"effect-stats\">50 Attack Damage<br>40% Armor Penetration<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Bitter Cold</span><br>Damaging Abilities Slow enemies <span class=\"effect-green-text\">below 50% Health</span> by 50% for 1 second.",
+    "stats": {
+      "attackDamage": 50
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Assassin"
   ]

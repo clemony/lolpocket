@@ -1,7 +1,7 @@
 {
   "id": 222051,
   "name": "Guardian's Horn",
-  "description": "300 Health\n\nRecovery\nRestores 20 Health every 5 seconds.\n\nUndaunted\nBlocks 12 damage from attacks and spells from champions (25% effectiveness vs. damage over time abilities).",
+  "description": "<div class=\"effect-stats\">300 Health</div><br><br><span class=\"effect-passive-text\">Recovery</span><br>Restores <span class=\"effect-green-text\">20 Health</span> every 5 seconds.<br><br><span class=\"effect-passive-text\">Undaunted</span><br>Blocks 12 damage from attacks and spells from champions (25% effectiveness vs. damage over time abilities).",
   "stats": {
     "health": 300,
     "healthRegen": 4

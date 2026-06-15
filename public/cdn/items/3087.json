@@ -48,7 +48,7 @@
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
-  "description": "45 Attack Damage\n45 Ability Power\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nYour Energized Attacks fire chain lightning, applying On-Hit effects and dealing magic damage to nearby targets.\n\nElectroshock \nBasic Attacks grant extra Energized stacks.",
+  "description": "<div class=\"effect-stats\">45 Attack Damage<br>45 Ability Power<br>30% Attack Speed<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Electrospark</span><br>Your Energized Attacks fire chain lightning, applying <span class=\"effect-red-text\">On-Hit</span> effects and dealing <span class=\"effect-purple-text\">magic damage</span> to nearby targets.<br><br><span class=\"effect-passive-text\">Electroshock</span> <br>Basic Attacks grant extra Energized stacks.",
   "gold": {
     "base": 625,
     "purchasable": true,
@@ -59,8 +59,24 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223087,
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>45 Ability Power<br>30% Attack Speed<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Electrospark</span><br>Your Energized Attacks fire chain lightning, applying <span class=\"effect-red-text\">On-Hit</span> effects and dealing <span class=\"effect-purple-text\">magic damage</span> to up to  targets.<br><br><span class=\"effect-passive-text\">Electroshock</span> <br>Basic Attacks grant extra Energized stacks.",
+    "stats": {
+      "abilityPower": 45,
+      "attackDamage": 45,
+      "attackSpeed": 30,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman",
     "Onhit effects"

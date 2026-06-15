@@ -38,7 +38,7 @@
     "health": 350,
     "magicResistance": 45
   },
-  "description": "350 Health\n45 Armor\n45 Magic Resist\n\nVoidborn Resilience\nAfter 5 seconds of champion combat, increase your bonus Armor and Magic Resist by 30% until end of combat.\n\n",
+  "description": "<div class=\"effect-stats\">350 Health<br>45 Armor<br>45 Magic Resist</div><br><br><span class=\"effect-passive-text\">Voidborn Resilience</span><br>After 5 seconds of champion combat, increase your bonus <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> by 30% until end of combat.<br><br>",
   "gold": {
     "base": 650,
     "purchasable": true,
@@ -49,8 +49,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226665,
+    "description": "<div class=\"effect-stats\">350 Health<br>35 Armor<br>35 Magic Resist</div><br><br><span class=\"effect-passive-text\">Voidborn Resilience</span><br>After 5 seconds of champion combat, increase your bonus <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> by 40% until end of combat.<br><br>",
+    "stats": {
+      "magicResistance": 35,
+      "health": 350,
+      "armor": 35
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Tank"
   ]

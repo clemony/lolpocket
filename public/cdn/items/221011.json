@@ -1,7 +1,7 @@
 {
   "id": 221011,
   "name": "Giant's Belt",
-  "description": "300 Health\n\n",
+  "description": "<div class=\"effect-stats\">300 Health</div><br><br>",
   "stats": {
     "health": 300
   },

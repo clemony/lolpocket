@@ -1,7 +1,7 @@
 {
   "id": 221031,
   "name": "Chain Vest",
-  "description": "40 Armor\n\n",
+  "description": "<div class=\"effect-stats\">40 Armor</div><br><br>",
   "stats": {
     "armor": 40
   },

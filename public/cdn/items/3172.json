@@ -26,7 +26,7 @@
     "abilityHaste": 30,
     "tenacity": 20
   },
-  "description": "40% Attack Speed\n45 Move Speed\n5% Life Steal\n\nNoxian Gait\nAttacks against Champions grant Move Speed On-Hit decaying over 2 seconds.",
+  "description": "<div class=\"effect-stats\">40% Attack Speed<br>45 Move Speed<br>5% Life Steal</div><br><br><span class=\"effect-passive-text\">Noxian Gait</span><br>Attacks against Champions grant <span class=\"effect-gray-text\">Move Speed</span> <span class=\"effect-red-text\">On-Hit</span> decaying over 2 seconds.",
   "gold": {
     "base": 0,
     "purchasable": true,
@@ -36,8 +36,22 @@
   "maps": [
     11,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223172,
+    "description": "<div class=\"effect-stats\">50% Attack Speed<br>10% Move Speed<br>30 Ability Haste<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">Like the Wind</span><br>Gain 5% Move Speed <span class=\"effect-red-text\">On-Hit</span> for 6 seconds, stacking up to 25% Move Speed.",
+    "stats": {
+      "attackSpeed": 50,
+      "percentMovespeed": 10
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman",
     "Fighter"

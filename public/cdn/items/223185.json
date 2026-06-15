@@ -18,7 +18,7 @@
     "lethality": 11,
     "abilityHaste": 10
   },
-  "description": "25 Attack Damage\n11 Lethality\n10 Ability Haste\n\nAgricultural Reaper \nIncreases effects of Power Flower by 20%. Gain 100 Move Speed for 3s after attacking a plant.",
+  "description": "<div class=\"effect-stats\">25 Attack Damage<br>11 Lethality<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Agricultural Reaper</span> <br>Increases effects of Power Flower by 20%. Gain <span class=\"effect-gray-text\">100 Move Speed</span> for 3s after attacking a plant.",
   "gold": {
     "base": 500,
     "purchasable": true,

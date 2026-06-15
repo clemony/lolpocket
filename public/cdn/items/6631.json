@@ -46,7 +46,7 @@
     "attackSpeed": 25,
     "health": 450
   },
-  "description": "40 Attack Damage\n25% Attack Speed\n450 Health\n\nCleave\nAttacks deal physical damage to nearby enemies.\nBreaking Shockwave\nDeal physical damage and Slow nearby enemies by 35%.\nGain 35% decaying Move Speed per champion hit for 3 seconds.",
+  "description": "<div class=\"effect-stats\">40 Attack Damage<br>25% Attack Speed<br>450 Health</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> to nearby enemies.<br><span class=\"effect-active-text\">Breaking Shockwave</span><br>Deal <span class=\"effect-orange-text\">physical damage</span> and Slow nearby enemies by 35%.<br>Gain <span class=\"effect-gray-text\">35% decaying Move Speed</span> per champion hit for 3 seconds.",
   "gold": {
     "base": 750,
     "purchasable": true,
@@ -57,8 +57,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226631,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>15% Attack Speed<br>375 Health</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> to nearby enemies.<br><span class=\"effect-active-text\">Breaking Shockwave</span><br>Deal <span class=\"effect-orange-text\">physical damage</span> and Slow nearby enemies by 40%.<br>Gain <span class=\"effect-gray-text\">40% decaying Move Speed</span> per champion hit for 3 seconds.",
+    "stats": {
+      "health": 375,
+      "attackDamage": 40,
+      "attackSpeed": 15
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Movement"

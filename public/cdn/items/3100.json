@@ -38,7 +38,7 @@
     "percentMovespeed": 6,
     "abilityHaste": 10
   },
-  "description": "100 Ability Power\n6% Move Speed\n10 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus magic damage On-Hit.",
+  "description": "<div class=\"effect-stats\">100 Ability Power<br>6% Move Speed<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-purple-text\">bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
   "gold": {
     "base": 250,
     "purchasable": true,
@@ -49,8 +49,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223100,
+    "description": "<div class=\"effect-stats\">80 Ability Power<br>10% Move Speed<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span> (0s)<br>After using an Ability, your next Attack is enhanced with an additional <span class=\"effect-purple-text\"> magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
+    "stats": {
+      "abilityPower": 80,
+      "percentMovespeed": 10
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage",
     "Onhit effects"

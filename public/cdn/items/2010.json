@@ -9,7 +9,7 @@
     "kleptomancy"
   ],
   "stats": {},
-  "description": "Active - Consume: Eat the biscuit to restore Health over 5 seconds, increased based on missing health. Consuming or selling a biscuit permanently grants 30 maximum Health. ",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Eat the biscuit to restore <span class=\"effect-green-text\">Health</span> over 5 seconds, increased based on missing health. Consuming or selling a biscuit permanently grants <span class=\"effect-green-text\">30 maximum Health</span>. ",
   "gold": {
     "base": 50,
     "purchasable": false,

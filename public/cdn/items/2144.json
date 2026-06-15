@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "\n\nJuices do not stack with themselves, but you can have multiple different ones active.Active - Consume: Automatically activates on Combat Start. Drink to gain 20+ 15% Ability Haste for the next round.\n\nFor people who gotta go FAST. Made with lightning. REAL lightning!",
+  "description": "<div class=\"effect-stats\"></div><br><br><br><br>Juices do not stack with themselves, but you can have multiple different ones active.<span class=\"effect-active-text\">Active - Consume:</span> Automatically activates on Combat Start. Drink to gain <span class=\"effect-gray-text\">20+ 15% Ability Haste</span> for the next round.<br><br>For people who gotta go FAST. Made with lightning. REAL lightning!",
   "gold": {
     "base": 500,
     "purchasable": true,

@@ -65,7 +65,7 @@
   "stats": {
     "attackSpeed": 20
   },
-  "description": "20% Attack Speed\n\nBullseye\nDamaging a champion deals bonus magic damage. \nAttacks reduce this cooldown by 1 second.",
+  "description": "<div class=\"effect-stats\">20% Attack Speed</div><br><br><span class=\"effect-passive-text\">Bullseye</span><br>Damaging a champion deals <span class=\"effect-purple-text\">bonus magic damage</span>. <br>Attacks reduce this cooldown by 1 second.",
   "gold": {
     "base": 100,
     "purchasable": true,

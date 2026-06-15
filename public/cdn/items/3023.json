@@ -1,7 +1,7 @@
 {
   "id": 3023,
   "name": "Lifewell Pendant",
-  "description": "150 Health\n25 Armor\n5 Ability Haste\n\n'Fashionable and functional.'",
+  "description": "<div class=\"effect-stats\">150 Health<br>25 Armor<br>5 Ability Haste</div><br><br><br><br>'Fashionable and functional.'",
   "stats": {
     "health": 150,
     "armor": 25

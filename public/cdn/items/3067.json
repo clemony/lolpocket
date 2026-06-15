@@ -183,7 +183,7 @@
     "health": 200,
     "abilityHaste": 10
   },
-  "description": "200 Health\n10 Ability Haste\n\n",
+  "description": "<div class=\"effect-stats\">200 Health<br>10 Ability Haste</div><br><br>",
   "gold": {
     "base": 150,
     "purchasable": true,

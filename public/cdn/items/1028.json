@@ -163,7 +163,7 @@
   "stats": {
     "health": 150
   },
-  "description": "150 Health\n\n",
+  "description": "<div class=\"effect-stats\">150 Health</div><br><br>",
   "gold": {
     "base": 400,
     "purchasable": true,

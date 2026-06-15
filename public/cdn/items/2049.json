@@ -18,7 +18,7 @@
     "healAndShieldPower": 15,
     "abilityHaste": 20
   },
-  "description": "15% Heal and Shield Power\n20 Ability Power\n20 Ability Haste\n\nRecovery\nRestores 10 Mana every 5 seconds. If you can't gain mana, restores 3 Health instead.",
+  "description": "<div class=\"effect-stats\">15% Heal and Shield Power<br>20 Ability Power<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Recovery</span><br>Restores <span class=\"effect-blue-text\">10 Mana</span> every 5 seconds. If you can't gain mana, restores <span class=\"effect-green-text\">3 Health</span> instead.",
   "gold": {
     "base": 500,
     "purchasable": true,

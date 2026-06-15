@@ -18,7 +18,7 @@
     }
   ],
   "stats": {},
-  "description": "? Attack Damage\n? Attack Speed\n? Critical Strike Chance\n? Critical Strike Damage\n\n?  Ability Power\n? Ability Haste\n\n? Health\n?% Base Health Regen\n? Mana\n?% Base Mana Regen\n? Armor\n? Magic Resist\n\n? || ?% Lethality and Armor Penetration\n? || ?% Magic Penetration\n?% Lifesteal\n?% Omnivamp\n? || ?% Move Speed\n?% Heal and Shield Power\n\n\nACTIVE\nImbricate Re-roll the stats on Talisman of Ascension. Each time you do so, the stats get stronger. Twice Per Round (Thrice with Apex Inventor).",
+  "description": "<div class=\"effect-stats\"></div><br><br>? Attack Damage<br>? Attack Speed<br>? Critical Strike Chance<br>? Critical Strike Damage<br><br>?  Ability Power<br>? Ability Haste<br><br>? Health<br>?% Base Health Regen<br>? Mana<br>?% Base Mana Regen<br>? Armor<br>? Magic Resist<br><br>? || ?% Lethality and Armor Penetration<br>? || ?% Magic Penetration<br>?% Lifesteal<br>?% Omnivamp<br>? || ?% Move Speed<br>?% Heal and Shield Power<br><br><br><span class=\"effect-active-text\">ACTIVE</span><br><span class=\"effect-active-text\">Imbricate</span> Re-roll the stats on Talisman of Ascension. Each time you do so, the stats get stronger. Twice Per Round (Thrice with Apex Inventor).",
   "gold": {
     "base": 2750,
     "purchasable": true,

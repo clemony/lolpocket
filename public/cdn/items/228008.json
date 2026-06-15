@@ -1,7 +1,7 @@
 {
   "id": 228008,
   "name": "Runeglaive",
-  "description": "65 Attack Damage\n85 Ability Power\n30% Attack Speed\n25 Ability Haste\n600 Health\n50 Armor\n10% Move Speed\n20% Critical Strike Chance\n\n",
+  "description": "<div class=\"effect-stats\"><span class=\"effect-orange-text\">65</span> Attack Damage<br><span class=\"effect-orange-text\">85</span> Ability Power<br><span class=\"effect-orange-text\">30%</span> Attack Speed<br><span class=\"effect-orange-text\">25</span> Ability Haste<br><span class=\"effect-orange-text\">600</span> Health<br><span class=\"effect-orange-text\">50</span> Armor<br><span class=\"effect-orange-text\">10%</span> Move Speed<br>20% Critical Strike Chance</div><br><br>",
   "stats": {
     "health": 600,
     "abilityPower": 85,

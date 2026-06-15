@@ -36,7 +36,7 @@
     "magicResistance": 20,
     "abilityHaste": 15
   },
-  "description": "200 Health\n15 Ability Haste\n20 Armor\n20 Magic Resist\n\nFanfare\nSlowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you 20 Move Speed. While you have Fanfare, nearby allies, including yourself, gain  Attack Speed.",
+  "description": "<div class=\"effect-stats\">200 Health<br>15 Ability Haste<br>20 Armor<br>20 Magic Resist</div><br><br><span class=\"effect-passive-text\">Fanfare</span><br>Slowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you <span class=\"effect-gray-text\">20 Move Speed</span>. While you have Fanfare, nearby allies, including yourself, gain <span class=\"effect-gold-text\"> Attack Speed</span>.",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -47,8 +47,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222524,
+    "description": "<div class=\"effect-stats\">200 Health<br>10 Ability Haste<br>25 Armor<br>25 Magic Resist</div><br><br><span class=\"effect-passive-text\">Fanfare</span><br>Slowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you <span class=\"effect-gray-text\">35 Move Speed</span>. While you have Fanfare, nearby allies, including yourself, gain <span class=\"effect-gold-text\"> Attack Speed</span>.",
+    "stats": {
+      "magicResistance": 25,
+      "health": 200,
+      "armor": 25
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
   "tags": [
     "Tank"
   ]

@@ -1,7 +1,7 @@
 {
   "id": 228005,
   "name": "Obsidian Cleaver",
-  "description": "70 Attack Damage\n700 Health\n40 Ability Haste\n\nCarve\nDealing physical damage to champions reduces the target's Armor by 6% for 6 seconds. (stacks 5 times).\n\nFervor\nDealing physical damage grants 20 Move Speed for 2 seconds.",
+  "description": "<div class=\"effect-stats\"><span class=\"effect-orange-text\">70</span> Attack Damage<br><span class=\"effect-orange-text\">700</span> Health<br><span class=\"effect-orange-text\">40</span> Ability Haste</div><br><br><span class=\"effect-passive-text\">Carve</span><br>Dealing <span class=\"effect-orange-text\">physical damage</span> to champions reduces the target's <span class=\"effect-gold-text\">Armor by 6%</span> for 6 seconds. (stacks 5 times).<br><br><span class=\"effect-passive-text\">Fervor</span><br>Dealing <span class=\"effect-orange-text\">physical damage</span> grants <span class=\"effect-gray-text\">20 Move Speed</span> for 2 seconds.",
   "stats": {
     "health": 700,
     "attackDamage": 70

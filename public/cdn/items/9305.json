@@ -1,7 +1,7 @@
 {
   "id": 9305,
   "name": "Tentacle Slam",
-  "description": "Illaoi slams the ground with her idol, dealing damage in an area around the impact and spawning a tentacle that will attack nearby enemies.\n\nEvolve:  Duration\n\nDamage, Ability Haste, Area Size, Duration",
+  "description": "<div class=\"effect-stats\"></div><br><br>Illaoi slams the ground with her idol, dealing damage in an area around the impact and spawning a tentacle that will attack nearby enemies.<br><br>Evolve:  Duration<br><br>Damage, Ability Haste, Area Size, Duration",
   "gold": {
     "base": 0,
     "purchasable": true,

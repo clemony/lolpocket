@@ -1,7 +1,7 @@
 {
   "id": 663059,
   "name": "Cloak of Starry Night",
-  "description": "250 Health\n60 Magic Resist\n\nLimitless as the Stars\nIncrease your Magic Resist by 10%. Reduce all damage you take from non-Basic Attack sources by a percentage, scaling with your Magic Resist up to a cap of 25%.",
+  "description": "<div class=\"effect-stats\">250 Health<br>60 Magic Resist</div><br><br><span class=\"effect-passive-text\">Limitless as the Stars</span><br>Increase your <span class=\"effect-blue-text\">Magic Resist</span> by 10%. Reduce all damage you take from non-Basic Attack sources by a percentage, scaling with your <span class=\"effect-blue-text\">Magic Resist</span> up to a cap of 25%.",
   "stats": {
     "magicResistance": 60,
     "health": 250

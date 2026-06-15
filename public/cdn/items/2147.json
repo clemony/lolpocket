@@ -1,7 +1,7 @@
 {
   "id": 2147,
   "name": "Augment Level",
-  "description": "Active - Consume: Gain 1 augment level.\n\nGood for you.",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Gain 1 augment level.<br><br>Good for you.",
   "gold": {
     "base": 1250,
     "purchasable": true,

@@ -36,7 +36,7 @@
   "stats": {
     "abilityPower": 130
   },
-  "description": "130 Ability Power\n\nMagical Opus\nIncreases your total Ability Power by 30%.",
+  "description": "<div class=\"effect-stats\">130 Ability Power</div><br><br><span class=\"effect-passive-text\">Magical Opus</span><br>Increases your total <span class=\"effect-purple-text\">Ability Power by 30%</span>.",
   "gold": {
     "base": 1100,
     "purchasable": true,
@@ -47,8 +47,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223089,
+    "description": "<div class=\"effect-stats\">65 Ability Power</div><br><br><span class=\"effect-passive-text\">Magical Opus</span><br>Increases your total <span class=\"effect-purple-text\">Ability Power by 30%</span>.",
+    "stats": {
+      "abilityPower": 65
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

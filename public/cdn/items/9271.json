@@ -1,7 +1,7 @@
 {
   "id": 9271,
   "name": "Unceasing Cyclone",
-  "description": "Permanently orbiting projectiles damage and knock back enemies.\n\nDamage, Ability Haste, Projectile Count, Area Size, Duration",
+  "description": "<div class=\"effect-stats\"></div><br><br>Permanently orbiting projectiles damage and knock back enemies.<br><br>Damage, Ability Haste, Projectile Count, Area Size, Duration",
   "gold": {
     "base": 0,
     "purchasable": true,

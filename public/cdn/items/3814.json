@@ -36,7 +36,7 @@
     "health": 250,
     "lethality": 15
   },
-  "description": "50 Attack Damage\n15 Lethality\n250 Health\n\nAnnul\nGrants a Spell Shield that blocks the next enemy Ability.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Lethality<br>250 Health</div><br><br><span class=\"effect-passive-text\">Annul</span><br>Grants a Spell Shield that blocks the next enemy Ability.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -47,8 +47,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223814,
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>14 Lethality<br>375 Health</div><br><br><span class=\"effect-passive-text\">Annul</span> (0s)<br>Gain a Spell Shield that blocks the next enemy Ability.<br><br>Item's cooldown is restarted if you take damage before it is completed.",
+    "stats": {
+      "health": 375,
+      "attackDamage": 45
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Assassin"
   ]

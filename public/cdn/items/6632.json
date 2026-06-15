@@ -1,7 +1,7 @@
 {
   "id": 6632,
   "name": "Divine Sunderer",
-  "description": "40 Attack Damage\n300 Health\n20 Ability Haste\n\n\nSpellblade: After using an Ability, your next Attack is enhanced with an additional  + {{ Item_Melee_Ranged_Split_B }} target max Health physical damage {{ Item_Cooldown }}. If the target is a champion, also heal for 55% of the premitigation damage.\n\n{{ Item_Mythic_Passive }} 3% Armor Penetration and 3% Magic Penetration.\n\nSpellblade deals  min damage to units, but no more than  damage to Monsters. {{ Item_Melee_Ranged_Rules }}",
+  "description": "<div class=\"effect-stats\">40 Attack Damage<br>300 Health<br>20 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Spellblade:</span> After using an Ability, your next Attack is enhanced with an additional <span class=\"effect-orange-text\"> + {{ Item_Melee_Ranged_Split_B }} target max Health physical damage</span> {{ Item_Cooldown }}. If the target is a champion, also heal for <span class=\"effect-green-text\">55% of the premitigation damage</span>.<br><br>{{ Item_Mythic_Passive }} 3% Armor Penetration and 3% Magic Penetration.<br><br><span class=\"effect-passive-text\">Spellblade</span> deals  min damage to units, but no more than  damage to Monsters. {{ Item_Melee_Ranged_Rules }}",
   "stats": {
     "health": 300,
     "attackDamage": 40

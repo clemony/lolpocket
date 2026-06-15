@@ -11,7 +11,7 @@ const expanded = defineModel<boolean>("expanded", { default: false })
 const toggleExpanded = useToggle(expanded)
 const map = shallowRef<number>(11)
 
-const { data, idRef, typeRef, updateObject } = toRefs(props.objectData)
+const { data, idRef, typeRef, updateObject } = props.objectData
 const item = computed(() =>
   typeRef.value === "item" ? (data.value as Item | null | undefined) : null
 )
@@ -95,16 +95,12 @@ const has = computed(() => {
     <template #footer>
       <!--      <ItemExternalLinks v-if="item" :item="item" /> -->
 
-      <div
-        class="grid h-8.5 w-full grid-cols-[1fr_0.5fr_1fr] items-center gap-2 overflow-visible rounded-t-lg rounded-b-4xl has-[.toggle-more:hover]:bg-n4/60! has-[.toggle-more:hover]:inset-ring-n4!">
-        <ItemInfoCardFooter
-          v-if="item"
-          :item
-          :active-map="map"
-          :expanded
-          :has="computed(() => !!has.length)"
-          @toggle-expanded="toggleExpanded()" />
-      </div>
+      <ItemInfoCardFooter
+        v-if="item"
+        :item
+        :expanded
+        :has="computed(() => !!has.length)"
+        @toggle-expanded="toggleExpanded()" />
     </template>
   </InfoCardWrapper>
 </template>

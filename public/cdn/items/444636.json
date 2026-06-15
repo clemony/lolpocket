@@ -22,7 +22,7 @@
     "health": 300,
     "abilityHaste": 25
   },
-  "description": "90 Ability Power\n300 Health\n25 Ability Haste\n\nSoulrend (0s) per champion\nDamaging a champion with Attacks or Abilities deals an additional  magic damage and grants you 40% Move Speed for 1.5 seconds.\n\nDamaging a new champion will extend the duration of the Move Speed bonus.",
+  "description": "<div class=\"effect-stats\">90 Ability Power<br>300 Health<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Soulrend</span> (0s) per champion<br>Damaging a champion with Attacks or Abilities deals an additional <span class=\"effect-purple-text\"> magic damage</span> and grants you <span class=\"effect-gray-text\">40% Move Speed</span> for 1.5 seconds.<br><br>Damaging a new champion will extend the duration of the Move Speed bonus.",
   "gold": {
     "base": 2750,
     "purchasable": true,

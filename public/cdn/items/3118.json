@@ -39,7 +39,7 @@
     "mana": 600,
     "abilityHaste": 15
   },
-  "description": "90 Ability Power\n600 Mana\n15 Ability Haste\n\nScorn\nGain 20 Ultimate Ability Haste.\n\nHatefog\nDamaging a champion with your Ultimate burns the ground beneath them for 3s, dealing magic damage per second and reducing their Magic Resist. \n",
+  "description": "<div class=\"effect-stats\">90 Ability Power<br>600 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Scorn</span><br>Gain 20 Ultimate Ability Haste.<br><br><span class=\"effect-passive-text\">Hatefog</span><br>Damaging a champion with your Ultimate burns the ground beneath them for 3s, dealing <span class=\"effect-purple-text\">magic damage</span> per second and reducing their <span class=\"effect-blue-text\">Magic Resist</span>. <br>",
   "gold": {
     "base": 650,
     "purchasable": true,
@@ -50,8 +50,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223118,
+    "description": "<div class=\"effect-stats\">70 Ability Power<br>600 Mana<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Scorn</span><br>Your Ultimate spells gain Ability Haste.<br><br><span class=\"effect-passive-text\">Hatefog</span><br>Damaging a champion with your Ultimate Burns the ground beneath them, dealing damage and reducing their Magic Resist. ",
+    "stats": {
+      "mana": 600,
+      "abilityPower": 70
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage",
     "Ability haste"

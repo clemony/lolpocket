@@ -44,7 +44,7 @@
     "health": 400,
     "abilityHaste": 20
   },
-  "description": "40 Attack Damage\n400 Health\n20 Ability Haste\n\nCarve\nDealing physical damage to champions reduces the target's Armor by 6% for 6 seconds. (stacks 5 times).\n\nFervor\nDealing physical damage grants 20 Move Speed for 2 seconds.",
+  "description": "<div class=\"effect-stats\">40 Attack Damage<br>400 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Carve</span><br>Dealing <span class=\"effect-orange-text\">physical damage</span> to champions reduces the target's <span class=\"effect-gold-text\">Armor by 6%</span> for 6 seconds. (stacks 5 times).<br><br><span class=\"effect-passive-text\">Fervor</span><br>Dealing <span class=\"effect-orange-text\">physical damage</span> grants <span class=\"effect-gray-text\">20 Move Speed</span> for 2 seconds.",
   "gold": {
     "base": 225,
     "purchasable": true,
@@ -55,8 +55,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223071,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>350 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Carve</span><br>Dealing <span class=\"effect-orange-text\">physical damage</span> to champions reduces the target's <span class=\"effect-gold-text\">Armor by 6%</span> for 6 seconds. (Stacks 5 times).<br><br><span class=\"effect-passive-text\">Fervor</span><br>Dealing <span class=\"effect-orange-text\">physical damage</span> grants <span class=\"effect-gray-text\">20 Move Speed</span> for 2 seconds.",
+    "stats": {
+      "health": 350,
+      "attackDamage": 40
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Onhit effects",

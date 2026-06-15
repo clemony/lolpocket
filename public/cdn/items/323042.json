@@ -1,7 +1,7 @@
 {
   "id": 323042,
   "name": "Muramana",
-  "description": "35 Attack Damage\n1000 Mana\n15 Ability Haste\n\nAwe\nGain 2% max Mana as bonus Attack Damage.\n\nShock\nAttacks against champions deal 1.2% max Mana as bonus physical damage On-Hit. \nDamaging Abilities against champions deal 3% - 4% max Mana as bonus physical damage.",
+  "description": "<div class=\"effect-stats\">35 Attack Damage<br>1000 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-orange-text\">2% max Mana as bonus Attack Damage</span>.<br><br><span class=\"effect-passive-text\">Shock</span><br>Attacks against champions deal <span class=\"effect-orange-text\">1.2% max Mana as bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>. <br>Damaging Abilities against champions deal <span class=\"effect-orange-text\">3% - 4% max Mana as bonus physical damage</span>.",
   "stats": {
     "mana": 1000,
     "attackDamage": 35

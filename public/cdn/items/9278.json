@@ -1,7 +1,7 @@
 {
   "id": 9278,
   "name": "Animapocalypse",
-  "description": "A massive explosion that kills all normal enemies and heavily damages Elites. Enemies killed drop increased EXP and have a chance to drop gold. Long cooldown.\n\nDamage, Ability Haste, Area Size",
+  "description": "<div class=\"effect-stats\"></div><br><br>A massive explosion that kills all normal enemies and heavily damages Elites. Enemies killed drop increased EXP and have a chance to drop gold. Long cooldown.<br><br>Damage, Ability Haste, Area Size",
   "gold": {
     "base": 0,
     "purchasable": true,

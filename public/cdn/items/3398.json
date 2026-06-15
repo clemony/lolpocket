@@ -1,7 +1,7 @@
 {
   "id": 3398,
   "name": "Small Party Favor",
-  "description": "Obtained from a Cat Shaco Box. Click to Consume: Gain gold.\n",
+  "description": "<div class=\"effect-stats\"></div><br><br>Obtained from a Cat Shaco Box. <span class=\"effect-purple-text\">Click to Consume:</span> <span class=\"effect-gold-text\">Gain gold</span>.<br>",
   "gold": {
     "base": 0,
     "purchasable": false,

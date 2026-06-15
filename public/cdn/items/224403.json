@@ -36,7 +36,7 @@
     "abilityHaste": 20,
     "omnivamp": 15
   },
-  "description": "90 Attack Damage\n125 Ability Power\n60% Attack Speed\n25% Critical Strike Chance\n250 Health\n30 Armor\n30 Magic Resist\n250 Mana\n20 Ability Haste\n10% Move Speed\n10% Omnivamp\n100% Base Health Regen\n100% Base Mana Regen\n\nDoing Something\nYou are permanently On Fire!\n\n\"It must do something...\nDeclined, it does EVERYTHING\"",
+  "description": "<div class=\"effect-stats\">90 Attack Damage<br>125 Ability Power<br>60% Attack Speed<br>25% Critical Strike Chance<br>250 Health<br>30 Armor<br>30 Magic Resist<br>250 Mana<br>20 Ability Haste<br>10% Move Speed<br>10% Omnivamp<br>100% Base Health Regen<br>100% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Doing Something</span><br>You are permanently On Fire!<br><br>\"It must do something...<br>Declined, it does EVERYTHING\"",
   "gold": {
     "base": 2500,
     "purchasable": true,

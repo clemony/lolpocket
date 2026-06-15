@@ -1,7 +1,7 @@
 {
   "id": 663058,
   "name": "Shield of Molten Stone",
-  "description": "250 Health\n80 Armor\n\nImmovable as the Earth\nIncrease your armor by 20%, and gain Block Chance based on your Armor.",
+  "description": "<div class=\"effect-stats\">250 Health<br>80 Armor</div><br><br><span class=\"effect-passive-text\">Immovable as the Earth</span><br>Increase your armor by 20%, and gain Block Chance based on your Armor.",
   "stats": {
     "health": 250,
     "armor": 80

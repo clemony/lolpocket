@@ -47,7 +47,7 @@
     "health": 350,
     "percentMovespeed": 4
   },
-  "description": "350 Health\n55 Armor\n4% Move Speed\n\nShipwrecker\nWhile moving, build up to 20 bonus Move Speed. Your next Attack discharges built up Move Speed to deal bonus physical damage.\n\nUnsinkable\nReduce the effectiveness of Slows by 15%.",
+  "description": "<div class=\"effect-stats\">350 Health<br>55 Armor<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Shipwrecker</span><br>While moving, build up to <span class=\"effect-gray-text\">20 bonus Move Speed</span>. Your next Attack discharges built up Move Speed to deal <span class=\"effect-orange-text\">bonus physical damage</span>.<br><br><span class=\"effect-passive-text\">Unsinkable</span><br>Reduce the effectiveness of Slows by 15%.",
   "gold": {
     "base": 900,
     "purchasable": true,
@@ -58,8 +58,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223742,
+    "description": "<div class=\"effect-stats\">300 Health<br>40 Armor<br>7% Move Speed</div><br><br><span class=\"effect-passive-text\">Shipwrecker</span><br>While moving, build up  Move Speed. Your next Attack discharges built up Move Speed to deal damage. If dealt by a Melee champion at top speed, the Attack also Slows the target.<br><br><span class=\"effect-passive-text\">Unsinkable</span><br>The strength of movement slowing effects is reduced.",
+    "stats": {
+      "health": 300,
+      "armor": 40,
+      "percentMovespeed": 7
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Tank"

@@ -1,7 +1,7 @@
 {
   "id": 4004,
   "name": "Spectral Cutlass",
-  "description": "50 Attack Damage\n15 Lethality\n4% Move Speed\n\nActive - Soul Anchor (0s)\nMark your current location. After 4 seconds, return to that location. You may recast at any point during Soul Anchor's duration to return to your marked location early.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Lethality<br>4% Move Speed</div><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Soul Anchor</span> (0s)<br>Mark your current location. After 4 seconds, return to that location. You may recast at any point during <span class=\"effect-active-text\">Soul Anchor's</span> duration to return to your marked location early.",
   "stats": {
     "attackDamage": 50,
     "percentMovespeed": 4

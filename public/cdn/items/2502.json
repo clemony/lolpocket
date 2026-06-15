@@ -35,7 +35,7 @@
     "health": 400,
     "abilityHaste": 15
   },
-  "description": "400 Health\n50 Armor\n15 Ability Haste\n\nAnguish\nEvery 4 seconds while in combat with champions, deal magic damage to nearby enemy champions and heal for 250% of the damage dealt.",
+  "description": "<div class=\"effect-stats\">400 Health<br>50 Armor<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Anguish</span><br>Every 4 seconds while in combat with champions, deal <span class=\"effect-purple-text\">magic damage</span> to nearby enemy champions and <span class=\"effect-green-text\">heal for 250%</span> of the damage dealt.",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -46,8 +46,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222502,
+    "description": "<div class=\"effect-stats\">350 Health<br>50 Armor<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Anguish</span><br>Every 4 seconds while in combat with champions, deal <span class=\"effect-purple-text\">magic damage</span> to nearby enemy champions and <span class=\"effect-green-text\">heal for 250%</span> of the damage dealt.",
+    "stats": {
+      "health": 350,
+      "armor": 50
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
   "tags": [
     "Tank"
   ]

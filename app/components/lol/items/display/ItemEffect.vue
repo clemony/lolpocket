@@ -16,14 +16,17 @@ const {
   <div
     :class="
       cn(
-        'mb-2 w-full gap-x-1 px-1.5 align-middle leading-normal text-pretty',
+        'mb-2 w-full gap-x-1 px-1.5 align-middle leading-6 text-pretty',
         className
       )
     ">
     <span
       v-if="data.unique"
       :class="
-        cn('tracking-tight italic', unique ? unique : 'text-mustard/80!')
+        cn(
+          'font-medium! tracking-tight italic',
+          unique ? unique : 'text-gold/80!'
+        )
       ">
       Unique {{ type }}
       <template v-if="!data.name">:&nbsp;</template>
@@ -32,7 +35,10 @@ const {
     <span
       v-if="data.name"
       :class="
-        cn('tracking-tight italic', unique ? unique : 'text-mustard/80!')
+        cn(
+          'font-medium! tracking-tight italic',
+          unique ? unique : 'text-gold/80!'
+        )
       ">
       -&nbsp;{{ data.name }}:&nbsp;
     </span>

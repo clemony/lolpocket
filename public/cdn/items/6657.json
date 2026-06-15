@@ -39,7 +39,7 @@
     "health": 350,
     "mana": 500
   },
-  "description": "45 Ability Power\n350 Health\n500 Mana\n\nTimeless\nThis item gains 10 Health, 30 Mana and 3 Ability Power every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.\n\nEternity\nTaking damage from champions restores 10% of the damage as Mana. \nCasting an ability heals for 25% of Mana spent.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>350 Health<br>500 Mana</div><br><br><span class=\"effect-passive-text\">Timeless</span><br>This item gains <span class=\"effect-green-text\">10 Health</span>, <span class=\"effect-blue-text\">30 Mana</span> and <span class=\"effect-purple-text\">3 Ability Power</span> every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.<br><br><span class=\"effect-passive-text\">Eternity</span><br>Taking damage from champions restores <span class=\"effect-blue-text\">10%</span> of the damage as <span class=\"effect-blue-text\">Mana</span>. <br>Casting an ability <span class=\"effect-green-text\">heals for 25%</span> of Mana spent.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -50,8 +50,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226657,
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health<br>300 Mana</div><br><br><span class=\"effect-passive-text\">Timeless</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item gains an additional <span class=\"effect-purple-text\">50 Ability Power</span>, <span class=\"effect-green-text\">300 Health</span>, and <span class=\"effect-blue-text\">400 Mana</span>, and you gain a level.<br><br><span class=\"effect-passive-text\">Eternity</span><br>Taking damage from champions restores 7% of premitigation damage as <span class=\"effect-blue-text\">Mana</span>. Casting an ability heals for 25% of <span class=\"effect-blue-text\">Mana</span> spent, up to <span class=\"effect-green-text\">20 Health</span> per cast, per second.",
+    "stats": {
+      "mana": 300,
+      "health": 350,
+      "abilityPower": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 326657,
     "stats": {

@@ -46,7 +46,7 @@
     "lethality": 18,
     "percentMovespeed": 4
   },
-  "description": "55 Attack Damage\n18 Lethality\n4% Move Speed\n\nHaunt \nGain  Move Speed while out of combat.\n\nWraith Step\nGain Move Speed and Ghosting for  seconds.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Haunt</span> <br>Gain <span class=\"effect-gray-text\"> Move Speed</span> while out of combat.<br><br><span class=\"effect-active-text\">Wraith Step</span><br>Gain <span class=\"effect-gray-text\">Move Speed</span> and Ghosting for  seconds.",
   "gold": {
     "base": 675,
     "purchasable": true,
@@ -57,8 +57,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223142,
+    "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Haunt</span> <br>Gain <span class=\"effect-gray-text\"> Move Speed</span> while out of combat.<br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Wraith Step</span><br>Gain Move Speed and Ghosting.",
+    "stats": {
+      "attackDamage": 55,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Assassin",
     "Movement"

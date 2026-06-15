@@ -30,7 +30,7 @@
     "criticalStrikeChance": 25,
     "criticalStrikeDamage": 30
   },
-  "description": "75 Attack Damage\n25% Critical Strike Chance\n30% Critical Strike Damage\n\n",
+  "description": "<div class=\"effect-stats\">75 Attack Damage<br>25% Critical Strike Chance<br>30% Critical Strike Damage</div><br><br>",
   "gold": {
     "base": 725,
     "purchasable": true,
@@ -41,8 +41,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223031,
+    "description": "<div class=\"effect-stats\">75 Attack Damage<br>25% Critical Strike Chance<br>30% Critical Strike Damage</div><br><br>",
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 75
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman"
   ]

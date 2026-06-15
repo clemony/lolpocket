@@ -19,7 +19,7 @@
     "flatMagicPenetration": 18,
     "flatMovespeed": 45
   },
-  "description": "18 Magic Penetration\n8% Magic Penetration\n45 Move Speed\n\n",
+  "description": "<div class=\"effect-stats\">18 Magic Penetration<br>8% Magic Penetration<br>45 Move Speed</div><br><br>",
   "gold": {
     "base": 0,
     "purchasable": true,

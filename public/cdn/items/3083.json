@@ -45,7 +45,7 @@
     "health": 1000,
     "healthRegen": 100
   },
-  "description": "1000 Health\n100% Base Health Regen\n\nWarmog's Heart \nIf you have 2000 bonus Health and have not taken damage within 8 seconds, restore  Health per second.\n\nWarmog's Vitality\nGain bonus Health equal to 12% of your Item Health (0).",
+  "description": "<div class=\"effect-stats\">1000 Health<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Warmog's Heart</span> <br>If you have 2000 bonus Health and have not taken damage within 8 seconds, restore <span class=\"effect-green-text\"></span> Health per second.<br><br><span class=\"effect-passive-text\">Warmog's Vitality</span><br>Gain bonus Health equal to 12% of your Item Health (<span class=\"effect-green-text\">0</span>).",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -56,8 +56,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 443083,
+    "description": "<div class=\"effect-stats\">1100 Health<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Warmog's Heart</span><br>Requires 1350 <span class=\"effect-green-text\">bonus Health</span>.<br><br>Restore <span class=\"effect-green-text\"> Health</span> per second. If you have not taken damage within 4 seconds, restore an additional <span class=\"effect-green-text\"> Health</span> per second.",
+    "stats": {
+      "health": 1100,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2750,
+      "total": 2750,
+      "sell": 1100
+    }
+  },
   "tags": [
     "Tank"
   ]

@@ -1,7 +1,7 @@
 {
   "id": 221057,
   "name": "Negatron Cloak",
-  "description": "30 Magic Resist\n\n",
+  "description": "<div class=\"effect-stats\">30 Magic Resist</div><br><br>",
   "stats": {
     "magicResistance": 30
   },

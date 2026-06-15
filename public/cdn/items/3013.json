@@ -1,7 +1,7 @@
 {
   "id": 3013,
   "name": "Synchronized Souls",
-  "description": "45 Move Speed\n\nVoidborn\nGain Empowered Recall.\n\nSynchrony\nGain 45 Move Speed when out of combat.",
+  "description": "<div class=\"effect-stats\">45 Move Speed</div><br><br><span class=\"effect-passive-text\">Voidborn</span><br>Gain Empowered Recall.<br><br><span class=\"effect-passive-text\">Synchrony</span><br>Gain <span class=\"effect-gray-text\">45 Move Speed</span> when out of combat.",
   "stats": {
     "flatMovespeed": 45
   },

@@ -1,4 +1,4 @@
-// Updated Patch 16.12 - 06/13/2026 10:59:17 AM CDT
+// Updated Patch 16.12 - 06/15/2026 12:03:26 AM CDT
 
 export const itemToNickname: Record<number, string> = {
   "1027": "Blue",

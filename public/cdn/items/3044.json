@@ -59,7 +59,7 @@
     "attackDamage": 15,
     "health": 200
   },
-  "description": "15 Attack Damage\n200 Health\n\nRage\nAttacking grants Move Speed for 2 seconds.",
+  "description": "<div class=\"effect-stats\">15 Attack Damage<br>200 Health</div><br><br><span class=\"effect-passive-text\">Rage</span><br>Attacking grants <span class=\"effect-gray-text\">Move Speed</span> for 2 seconds.",
   "gold": {
     "base": 350,
     "purchasable": true,

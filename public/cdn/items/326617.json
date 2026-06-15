@@ -1,7 +1,7 @@
 {
   "id": 326617,
   "name": "Moonstone Renewer",
-  "description": "35 Ability Power\n400 Health\n20 Ability Haste\n150% Base Mana Regen\n\nStarlit Grace\nHealing or shielding an ally chains the effect to another ally (excluding yourself), healing 30% or shielding 35% of the original amount.",
+  "description": "<div class=\"effect-stats\">35 Ability Power<br>400 Health<br>20 Ability Haste<br>150% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Starlit Grace</span><br>Healing or shielding an ally chains the effect to another ally (excluding yourself), <span class=\"effect-green-text\">healing 30%</span> or <span class=\"effect-blue-text\">shielding 35%</span> of the original amount.",
   "stats": {
     "health": 400,
     "abilityPower": 35

@@ -33,7 +33,7 @@
     "abilityPower": 40,
     "armor": 25
   },
-  "description": "40 Ability Power\n25 Armor\n\nShattered Time\nArmguard is broken, but can still be upgraded.\n\nAfter breaking one Armguard, the shopkeeper will only sell you Shattered Armguard.\n\n",
+  "description": "<div class=\"effect-stats\">40 Ability Power<br>25 Armor</div><br><br><span class=\"effect-passive-text\">Shattered Time</span><br>Armguard is broken, but can still be upgraded.<br><br>After breaking one Armguard, the shopkeeper will only sell you <span class=\"effect-gray-text\">Shattered Armguard.</span><br><br>",
   "gold": {
     "base": 500,
     "purchasable": true,

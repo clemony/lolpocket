@@ -66,7 +66,7 @@
     "abilityPower": 30,
     "percentMovespeed": 4
   },
-  "description": "30 Ability Power\n4% Move Speed\n\n",
+  "description": "<div class=\"effect-stats\">30 Ability Power<br>4% Move Speed</div><br><br>",
   "gold": {
     "base": 500,
     "purchasable": true,

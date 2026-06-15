@@ -14,7 +14,7 @@
     }
   ],
   "stats": {},
-  "description": "Inner Flame\nIncreases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste by 4% per Dragon Soul you possess.\n\nEvery 2 rounds, gain a Dragon Soul.\n\nIf you already have every elemental soul and would gain another, an ancient power awakens within...\n\nWhen purchased, if it is past round 5, immediately gain 1 soul, plus 1 for every 2 rounds beyond round 5.",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-passive-text\">Inner Flame</span><br>Increases your <span class=\"effect-green-text\">Health</span>, <span class=\"effect-gold-text\">Armor</span>, <span class=\"effect-blue-text\">Magic Resist</span>, <span class=\"effect-orange-text\">Attack Damage</span>, <span class=\"effect-purple-text\">Ability Power</span>, <span class=\"effect-gold-text\">Attack Speed</span>, and Ability Haste by 4% per Dragon Soul you possess.<br><br>Every 2 rounds, gain a Dragon Soul.<br><br>If you already have every elemental soul and would gain another, an ancient power awakens within...<br><br>When purchased, if it is past round 5, immediately gain 1 soul, plus 1 for every 2 rounds beyond round 5.",
   "gold": {
     "base": 2750,
     "purchasable": true,

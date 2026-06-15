@@ -39,7 +39,7 @@
   "stats": {
     "attackDamage": 15
   },
-  "description": "15 Attack Damage\n\nGrievous Wounds\nDealing physical damage to champions applies 40% Wounds for 3 seconds.",
+  "description": "<div class=\"effect-stats\">15 Attack Damage</div><br><br><span class=\"effect-passive-text\">Grievous Wounds</span><br>Dealing physical damage to champions applies 40% Wounds for 3 seconds.",
   "gold": {
     "base": 450,
     "purchasable": true,

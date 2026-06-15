@@ -30,7 +30,7 @@
     "lethality": 18,
     "abilityHaste": 20
   },
-  "description": "55 Attack Damage\n18 Lethality\n20 Ability Haste\n\nFlux\nWhen a champion that you damaged within 3 seconds dies, refund some of your Ultimate Ability's total cooldown.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Flux</span><br>When a champion that you damaged within 3 seconds dies, refund some of your Ultimate Ability's total cooldown.",
   "gold": {
     "base": 363,
     "purchasable": true,
@@ -41,8 +41,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226696,
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>18 Lethality<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Apophthegm</span><br><b class=\"effect-bold-text\">Your Ultimate Abilities deal 20% increased damage</b>.",
+    "stats": {
+      "attackDamage": 45
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Assassin"
   ]

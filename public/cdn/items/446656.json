@@ -23,7 +23,7 @@
     "mana": 600,
     "abilityHaste": 25
   },
-  "description": "100 Ability Power\n250 Health\n600 Mana\n25 Ability Haste\n\nACTIVE (0s)\nGlaciate\n Deal damage in a cone, Slowing enemies hit. Enemies at the center of the cone are Rooted instead.",
+  "description": "<div class=\"effect-stats\">100 Ability Power<br>250 Health<br>600 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Glaciate</span><br> Deal damage in a cone, Slowing enemies hit. Enemies at the center of the cone are Rooted instead.",
   "gold": {
     "base": 2750,
     "purchasable": true,

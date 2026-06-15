@@ -50,7 +50,7 @@
     "mana": 500,
     "abilityHaste": 15
   },
-  "description": "35 Attack Damage\n500 Mana\n15 Ability Haste\n\nAwe\nGain  bonus Attack Damage.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grants 3 max Mana (doubled vs. champions).\nTransforms into Muramana at 360 max Mana.",
+  "description": "<div class=\"effect-stats\">35 Attack Damage<br>500 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-orange-text\"> bonus Attack Damage</span>.<br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 4 charges)<br>Landing Attacks and Abilities grants <span class=\"effect-blue-text\">3 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Muramana</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
   "gold": {
     "base": 1100,
     "purchasable": true,
@@ -61,8 +61,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223004,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>600 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain bonus <span class=\"effect-orange-text\">Attack Damage equal to </span>. <br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Muramana</span>.",
+    "stats": {
+      "mana": 600,
+      "attackDamage": 40
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 323004,
     "stats": {

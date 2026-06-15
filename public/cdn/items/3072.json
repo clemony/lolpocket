@@ -38,7 +38,7 @@
     "attackDamage": 80,
     "lifesteal": 15
   },
-  "description": "80 Attack Damage\n15% Life Steal\n\nIchorshield\nConvert excess healing from your Lifesteal to a Shield.",
+  "description": "<div class=\"effect-stats\">80 Attack Damage<br>15% Life Steal</div><br><br><span class=\"effect-passive-text\">Ichorshield</span><br>Convert excess healing from your Lifesteal to a <span class=\"effect-blue-text\">Shield</span>.",
   "gold": {
     "base": 325,
     "purchasable": true,
@@ -49,8 +49,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223072,
+    "description": "<div class=\"effect-stats\">70 Attack Damage<br>18% Life Steal</div><br><br><span class=\"effect-passive-text\">Ichorshield</span><br>Convert excess healing from your <span class=\"effect-red-text\">Life Steal</span> to a <span class=\"effect-blue-text\">Shield</span>.",
+    "stats": {
+      "attackDamage": 70,
+      "lifesteal": 18
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman"
   ]

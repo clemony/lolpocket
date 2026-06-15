@@ -47,7 +47,7 @@
   "stats": {
     "magicResistance": 45
   },
-  "description": "45 Magic Resist\n\n",
+  "description": "<div class=\"effect-stats\">45 Magic Resist</div><br><br>",
   "gold": {
     "base": 450,
     "purchasable": true,

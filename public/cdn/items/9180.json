@@ -1,7 +1,7 @@
 {
   "id": 9180,
   "name": "UwU Blaster",
-  "description": "Rapidly fires projectiles at the nearest enemy, dealing damage to the first target hit.\n\nEvolve: Ability Haste\n\nDamage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><br><br>Rapidly fires projectiles at the nearest enemy, dealing damage to the first target hit.<br><br>Evolve: Ability Haste<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

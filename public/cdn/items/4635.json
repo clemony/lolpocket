@@ -1,7 +1,7 @@
 {
   "id": 4635,
   "name": "Leeching Leer",
-  "description": "20 Ability Power\n250 Health\n5% Omnivamp\n\n",
+  "description": "<div class=\"effect-stats\">20 Ability Power<br>250 Health<br>5% Omnivamp</div><br><br>",
   "stats": {
     "health": 250,
     "abilityPower": 20

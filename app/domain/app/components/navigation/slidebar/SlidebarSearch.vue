@@ -128,13 +128,12 @@ function onClick(item: SidebarSearchEntry) {
           size="lg"
           color="neutral"
           :ui="{
-            root: 'w-full',
             base: 'rounded-4xl! ring-1! inset-ring-0 ring-n5',
           }"
-          :model-modifiers="{ trim: true }"
-          icon="i-search">
+          leading-icon="i-search">
           <template #trailing>
             <LazyInputClear
+              v-if="query"
               color="neutral"
               variant="ghost"
               :ui="{

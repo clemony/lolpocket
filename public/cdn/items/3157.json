@@ -35,7 +35,7 @@
     "abilityPower": 105,
     "armor": 50
   },
-  "description": "105 Ability Power\n50 Armor\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
+  "description": "<div class=\"effect-stats\">105 Ability Power<br>50 Armor</div><br><br><br><br><span class=\"effect-active-text\">Time Stop</span><br>Enter Stasis for 2.5 seconds.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -46,8 +46,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223157,
+    "description": "<div class=\"effect-stats\">80 Ability Power<br>50 Armor</div><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Stasis:</span> You become Invulnerable and Untargetable for 2.5 seconds, but are prevented from taking any other actions during this time <b class=\"effect-bold-text\">(120s)</b>.",
+    "stats": {
+      "abilityPower": 80,
+      "armor": 50
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

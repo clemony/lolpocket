@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "Consume\nGrants 25 Adaptive Force for 60 seconds. ",
+  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Consume</span><br>Grants 25 Adaptive Force for 60 seconds. ",
   "gold": {
     "base": 50,
     "purchasable": false,

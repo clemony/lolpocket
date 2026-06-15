@@ -18,7 +18,7 @@
     "magicResistance": 50,
     "abilityHaste": 25
   },
-  "description": "50 Armor\n50 Magic Resist\n25 Ability Haste\n\nEnduring Vitality\nGain +2.5% Heal and Shield Power per 100 Missing Health, up to 60%.",
+  "description": "<div class=\"effect-stats\">50 Armor<br>50 Magic Resist<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Enduring Vitality</span><br>Gain <span class=\"effect-green-text\">+2.5% Heal and Shield Power</span> per <span class=\"effect-green-text\">100 Missing Health</span>, up to 60%.",
   "gold": {
     "base": 2750,
     "purchasable": true,

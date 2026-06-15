@@ -48,7 +48,7 @@
     "healthRegen": 100,
     "magicResistance": 35
   },
-  "description": "200 Health\n35 Magic Resist\n100% Base Health Regen\n\n",
+  "description": "<div class=\"effect-stats\">200 Health<br>35 Magic Resist<br>100% Base Health Regen</div><br><br>",
   "gold": {
     "base": 150,
     "purchasable": true,

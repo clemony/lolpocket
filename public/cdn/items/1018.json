@@ -65,7 +65,7 @@
   "stats": {
     "criticalStrikeChance": 15
   },
-  "description": "15% Critical Strike Chance\n\n",
+  "description": "<div class=\"effect-stats\">15% Critical Strike Chance</div><br><br>",
   "gold": {
     "base": 600,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 2015,
   "name": "Kircheis Shard",
-  "description": "15 Attack Damage\n\nJolt\nEnergized Attacks deal an additional 50 magic damage.",
+  "description": "<div class=\"effect-stats\">15 Attack Damage</div><br><br><span class=\"effect-passive-text\">Jolt</span><br>Energized Attacks deal an additional <span class=\"effect-purple-text\">50 magic damage</span>.",
   "stats": {
     "attackDamage": 15
   },

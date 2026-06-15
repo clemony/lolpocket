@@ -48,7 +48,7 @@
     "health": 333,
     "abilityHaste": 15
   },
-  "description": "36 Attack Damage\n30% Attack Speed\n333 Health\n15 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage On-Hit.\n \nQuicken\nAttacking grants 20 Move Speed for 2 seconds.",
+  "description": "<div class=\"effect-stats\">36 Attack Damage<br>30% Attack Speed<br>333 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>.<br> <br><span class=\"effect-passive-text\">Quicken</span><br>Attacking grants <span class=\"effect-gray-text\">20 Move Speed</span> for 2 seconds.",
   "gold": {
     "base": 133,
     "purchasable": true,
@@ -59,8 +59,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223078,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>25% Attack Speed<br>375 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack is enhanced with additional physical damage.<br><br><span class=\"effect-passive-text\">Quicken</span><br>Basic attacks grant Move Speed.<br><br>",
+    "stats": {
+      "health": 375,
+      "attackDamage": 40,
+      "attackSpeed": 25
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Marksman",

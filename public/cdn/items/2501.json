@@ -35,7 +35,7 @@
     "attackDamage": 30,
     "health": 550
   },
-  "description": "30 Attack Damage\n550 Health\n\nTyranny\nGain 2.5% of your bonus Health as Attack Damage. \n\nRetribution\nGain up to 12% increased Attack Damage based on your percent missing Health. ",
+  "description": "<div class=\"effect-stats\">30 Attack Damage<br>550 Health</div><br><br><span class=\"effect-passive-text\">Tyranny</span><br>Gain 2.5% of your <span class=\"effect-green-text\">bonus Health</span> as <span class=\"effect-orange-text\">Attack Damage</span>. <br><br><span class=\"effect-passive-text\">Retribution</span><br>Gain up to 12% increased <span class=\"effect-orange-text\">Attack Damage</span> based on your percent missing Health. ",
   "gold": {
     "base": 1000,
     "purchasable": true,
@@ -46,8 +46,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 447111,
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>400 Health</div><br><br><span class=\"effect-passive-text\">Tyranny</span><br>Gain <span class=\"effect-orange-text\"> AD</span> equal to <span class=\"effect-green-text\">3% Bonus HP</span>.<br><br><span class=\"effect-passive-text\">Retribution</span><br>Gain up to <span class=\"effect-orange-text\">17.5% increased AD</span> based on your percent missing Health.",
+    "stats": {
+      "health": 400,
+      "attackDamage": 40
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Tank"

@@ -129,7 +129,7 @@
   "stats": {
     "abilityPower": 20
   },
-  "description": "20 Ability Power\n\n",
+  "description": "<div class=\"effect-stats\">20 Ability Power</div><br><br>",
   "gold": {
     "base": 400,
     "purchasable": true,

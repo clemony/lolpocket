@@ -57,7 +57,7 @@
     "mana": 300,
     "manaRegen": 75
   },
-  "description": "200 Health\n8% Heal and Shield Power\n75% Base Mana Regen\n300 Mana\n\nHarmony\nGain % Heal and Shield Power.\n\nManaflow (8s, max 5 charges)\nLanding Abilities grants 4 max Mana (doubled vs. champions).\nTransforms into Diadem of Songs at 360 max Mana.",
+  "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>75% Base Mana Regen<br>300 Mana</div><br><br><span class=\"effect-passive-text\">Harmony</span><br>Gain % Heal and Shield Power.<br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 5 charges)<br>Landing Abilities grants <span class=\"effect-blue-text\">4 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Diadem of Songs</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -68,8 +68,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222526,
+    "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>75% Base Mana Regen<br>300 Mana</div><br><br><span class=\"effect-passive-text\">Holy</span><br>Gain <span class=\"effect-blue-text\"> Heal and Shield Power.</span><br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Diadem of Songs</span>.",
+    "stats": {
+      "mana": 300,
+      "health": 200
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 322526,
     "stats": {

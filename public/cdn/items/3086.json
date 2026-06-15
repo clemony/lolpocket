@@ -59,7 +59,7 @@
     "criticalStrikeChance": 15,
     "percentMovespeed": 4
   },
-  "description": "15% Attack Speed\n15% Critical Strike Chance\n4% Move Speed\n\n",
+  "description": "<div class=\"effect-stats\">15% Attack Speed<br>15% Critical Strike Chance<br>4% Move Speed</div><br><br>",
   "gold": {
     "base": 350,
     "purchasable": true,

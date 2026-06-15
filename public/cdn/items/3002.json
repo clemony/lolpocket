@@ -1,7 +1,7 @@
 {
   "id": 3002,
   "name": "Trailblazer",
-  "description": "250 Health\n40 Armor\n4% Move Speed\n\nLead the Way\nWhile moving, build up to 20 bonus Move Speed. \nAt max speed:Create a trail that grants allied champions Move Speed equal to 15% of yours. If you are Melee, your next Attack Slows the target by 50% for 1 second.\n\n",
+  "description": "<div class=\"effect-stats\">250 Health<br>40 Armor<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Lead the Way</span><br>While moving, build up to <span class=\"effect-gray-text\">20 bonus Move Speed</span>. <br>At max speed:<span class=\"effect-list\">Create a trail that grants allied champions <span class=\"effect-gray-text\">Move Speed equal to 15%</span> of yours. <span class=\"effect-list\">If you are Melee, your next Attack Slows the target by 50% for 1 second.<br><br>",
   "stats": {
     "health": 250,
     "armor": 40,

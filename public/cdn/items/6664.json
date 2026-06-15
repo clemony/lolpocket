@@ -40,7 +40,7 @@
     "magicResistance": 40,
     "abilityHaste": 10
   },
-  "description": "400 Health\n40 Magic Resist\n10 Ability Haste\n100% Base Health Regen\n\nImmolate\nAfter taking or dealing damage, deal magic damage per second to nearby enemies for 3 seconds. \n\nDesolate\nKilling an enemy deals magic damage around them.",
+  "description": "<div class=\"effect-stats\">400 Health<br>40 Magic Resist<br>10 Ability Haste<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\">magic damage</span> per second to nearby enemies for 3 seconds. <br><br><span class=\"effect-passive-text\">Desolate</span><br>Killing an enemy deals <span class=\"effect-purple-text\">magic damage</span> around them.",
   "gold": {
     "base": 650,
     "purchasable": true,
@@ -51,8 +51,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 226664,
+    "description": "<div class=\"effect-stats\">450 Health<br>40 Magic Resist<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\">magic damage</span> per second to nearby enemies for 3 seconds. <br><br><span class=\"effect-passive-text\">Desolate</span><br>Killing an enemy deals <span class=\"effect-purple-text\">magic damage</span> around them.",
+    "stats": {
+      "magicResistance": 40,
+      "health": 450
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Tank"
   ]

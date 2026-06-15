@@ -34,7 +34,7 @@
     "manaRegen": 125,
     "percentMovespeed": 4
   },
-  "description": "45 Ability Power\n10% Heal and Shield Power\n125% Base Mana Regen\n4% Move Speed\n\nSanctify\nHealing or Shielding an ally enhances you both for 6 seconds, granting 25% Attack Speed and 20 magic damage On-Hit.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>10% Heal and Shield Power<br>125% Base Mana Regen<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Sanctify</span><br>Healing or Shielding an ally enhances you both for 6 seconds, granting <span class=\"effect-gold-text\">25% Attack Speed</span> and <span class=\"effect-purple-text\">20 magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
   "gold": {
     "base": 700,
     "purchasable": true,
@@ -45,8 +45,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223504,
+    "description": "<div class=\"effect-stats\">40 Ability Power<br>12% Heal and Shield Power<br>150% Base Mana Regen<br>6% Move Speed</div><br><br><span class=\"effect-passive-text\">Sanctify</span><br>Healing or Shielding another ally enhances you both for 6 seconds, granting your Attacks <span class=\"effect-gold-text\">40% Attack Speed</span> and <span class=\"effect-purple-text\">25 magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
+    "stats": {
+      "abilityPower": 40,
+      "percentMovespeed": 6
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 323504,
     "stats": {

@@ -17,7 +17,7 @@
     "armor": 100,
     "health": 300
   },
-  "description": "300 Health\n100 Armor\n\nImmovable as the Earth\nIncrease your armor by 20%, and gain Block Chance based on your Armor.",
+  "description": "<div class=\"effect-stats\">300 Health<br>100 Armor</div><br><br><span class=\"effect-passive-text\">Immovable as the Earth</span><br>Increase your armor by 20%, and gain Block Chance based on your Armor.",
   "gold": {
     "base": 2750,
     "purchasable": true,

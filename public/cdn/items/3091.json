@@ -35,7 +35,7 @@
     "magicResistance": 45,
     "tenacity": 20
   },
-  "description": "50% Attack Speed\n45 Magic Resist\n20% Tenacity\n\nFray\nAttacks deal bonus magic damage On-Hit.",
+  "description": "<div class=\"effect-stats\">50% Attack Speed<br>45 Magic Resist<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">Fray</span><br>Attacks deal <span class=\"effect-purple-text\">bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
   "gold": {
     "base": 550,
     "purchasable": true,
@@ -46,8 +46,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223091,
+    "description": "<div class=\"effect-stats\">50% Attack Speed<br>45 Magic Resist<br>20% Tenacity</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Fray:</span> Attacks apply magic damage On-Hit and grant Move Speed.",
+    "stats": {
+      "magicResistance": 45,
+      "attackSpeed": 50
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Marksman",

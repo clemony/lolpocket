@@ -40,7 +40,7 @@
     "armor": 25,
     "flatMovespeed": 45
   },
-  "description": "25 Armor\n45 Move Speed\n\nPlating\nReduces incoming damage from Attacks by 10%.",
+  "description": "<div class=\"effect-stats\">25 Armor<br>45 Move Speed</div><br><br><span class=\"effect-passive-text\">Plating</span><br>Reduces incoming damage from Attacks by 10%.",
   "gold": {
     "base": 600,
     "purchasable": true,
@@ -51,8 +51,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223047,
+    "description": "<div class=\"effect-stats\">25 Armor<br>30 Move Speed</div><br><br>Reduces incoming damage from Attacks by 14%.",
+    "stats": {
+      "flatMovespeed": 30,
+      "armor": 25
+    },
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
   "tags": [
     "Movement"
   ]

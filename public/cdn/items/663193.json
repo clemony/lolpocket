@@ -1,7 +1,7 @@
 {
   "id": 663193,
   "name": "Gargoyle Stoneplate",
-  "description": "55 Armor\n55 Magic Resist\n10 Ability Haste\n8% Move Speed\n\nActive - Unbreakable: Gain a Shield that decays and grow in size.",
+  "description": "<div class=\"effect-stats\">55 Armor<br>55 Magic Resist<br>10 Ability Haste<br>8% Move Speed</div><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Unbreakable:</span> Gain a Shield that decays and grow in size.",
   "stats": {
     "magicResistance": 55,
     "armor": 55,

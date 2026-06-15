@@ -47,7 +47,7 @@
     "healthRegen": 100,
     "abilityHaste": 10
   },
-  "description": "200 Health\n40 Armor\n10 Ability Haste\n100% Base Health Regen\n\nSacrifice\nWhile near your Worthy ally, take 14% of the damage they receive and heal for 12% of the damage they deal to champions.Pledge (0s)\nDesignate an ally as Worthy.",
+  "description": "<div class=\"effect-stats\">200 Health<br>40 Armor<br>10 Ability Haste<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Sacrifice</span><br>While near your Worthy ally, take 14% of the damage they receive and <span class=\"effect-green-text\">heal for 12%</span> of the damage they deal to champions.<span class=\"effect-active-text\">Pledge</span> (0s)<br>Designate an ally as Worthy.",
   "gold": {
     "base": 400,
     "purchasable": true,
@@ -58,8 +58,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223109,
+    "description": "<div class=\"effect-stats\">400 Health<br>50 Armor<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Sacrifice</span><br>While near your Worthy ally, take 12% of the damage they receive and <span class=\"effect-green-text\">heal for 12% of the damage they deal</span> to Champions.<br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Pledge</span><br>Designate an ally who is Worthy.",
+    "stats": {
+      "health": 400,
+      "armor": 50
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 323109,
     "stats": {

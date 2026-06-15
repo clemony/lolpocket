@@ -39,7 +39,7 @@
     "health": 350,
     "abilityHaste": 15
   },
-  "description": "70 Ability Power\n350 Health\n15 Ability Haste\n\nVoid Corruption\nFor each second in combat with enemy champions, deal 2% bonus damage, up to 8%. At maximum strength, gain Omnivamp.\n\nVoid Infusion\nGain 2% of your bonus Health as Ability Power.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>350 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Void Corruption</span><br>For each second in combat with enemy champions, deal 2% bonus damage, up to 8%. At maximum strength, gain <span class=\"effect-red-text\">Omnivamp</span>.<br><br><span class=\"effect-passive-text\">Void Infusion</span><br>Gain 2% of your <span class=\"effect-green-text\">bonus Health</span> as <span class=\"effect-purple-text\">Ability Power</span>.",
   "gold": {
     "base": 950,
     "purchasable": true,
@@ -50,8 +50,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 224633,
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Void Corruption</span><br>For each second in combat with enemy champions, deal 2% bonus damage, up to 8%. At maximum strength, gain <span class=\"effect-red-text\">Omnivamp</span>.<br><br><span class=\"effect-passive-text\">Void Infusion</span><br>Gain 2% of your <span class=\"effect-green-text\">bonus Health</span> as <span class=\"effect-purple-text\">Ability Power</span>.",
+    "stats": {
+      "health": 350,
+      "abilityPower": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage",
     "Lifesteal vamp"

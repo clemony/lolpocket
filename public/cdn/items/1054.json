@@ -26,7 +26,7 @@
     "health": 110,
     "healthRegen": 4
   },
-  "description": "110 Health\n\nEnduring Focus\nRestore 4 Health every 5 seconds. \nAfter taking damage from a champion, restore Health over 8 seconds.\n\nHelping Hand\nAttacks deal 5 bonus physical damage to minions.",
+  "description": "<div class=\"effect-stats\">110 Health</div><br><br><span class=\"effect-passive-text\">Enduring Focus</span><br>Restore <span class=\"effect-green-text\">4 Health</span> every 5 seconds. <br>After taking damage from a champion, restore <span class=\"effect-green-text\">Health</span> over 8 seconds.<br><br><span class=\"effect-passive-text\">Helping Hand</span><br>Attacks deal <span class=\"effect-orange-text\">5 bonus physical damage</span> to minions.",
   "gold": {
     "base": 450,
     "purchasable": true,

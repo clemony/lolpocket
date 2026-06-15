@@ -38,7 +38,7 @@
     "magicResistance": 55,
     "percentMovespeed": 4
   },
-  "description": "400 Health\n55 Magic Resist\n4% Move Speed\n\nSteadfast\nGain 70 Magic Resist and 6% bonus Move Speed after taking magic damage from Champions 8 times.",
+  "description": "<div class=\"effect-stats\">400 Health<br>55 Magic Resist<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Steadfast</span><br>Gain <span class=\"effect-blue-text\">70 Magic Resist</span> and <span class=\"effect-gray-text\">6% bonus Move Speed</span> after taking magic damage from Champions 8 times.",
   "gold": {
     "base": 750,
     "purchasable": true,
@@ -49,8 +49,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 224401,
+    "description": "<div class=\"effect-stats\">400 Health<br>50 Magic Resist<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Absorb</span><br>Taking <span class=\"effect-purple-text\">magic damage</span> from enemy Champions grants a stack of Steadfast (max 10) for 7 seconds. Enemy Immobilizing effects grant an additional 2 stacks.<br><br><span class=\"effect-passive-text\">Dissipate</span><br>While at 10 stacks of Steadfast, gain <span class=\"effect-blue-text\">50 Magic Resist</span> and <span class=\"effect-gray-text\">14% increased Move Speed</span>.<br><br>One spell can add a new stack of Steadfast every 1 second.",
+    "stats": {
+      "magicResistance": 50,
+      "health": 400,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Tank"
   ]

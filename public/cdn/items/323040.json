@@ -1,7 +1,7 @@
 {
   "id": 323040,
   "name": "Seraph's Embrace",
-  "description": "70 Ability Power\n1000 Mana\n25 Ability Haste\n\nAwe\nGain  Ability Power.\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% grants a  Shield for 3 seconds.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>1000 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-purple-text\"> Ability Power</span>.<br><br><span class=\"effect-passive-text\">Lifeline</span> (0s)<br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-blue-text\"> Shield</span> for 3 seconds.",
   "stats": {
     "mana": 1000,
     "abilityPower": 70

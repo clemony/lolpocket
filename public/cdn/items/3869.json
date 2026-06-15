@@ -34,7 +34,7 @@
     "healthRegen": 75,
     "manaRegen": 75
   },
-  "description": "200 Health\n75% Base Health Regen\n75% Base Mana Regen\n9 Gold Per 10 Seconds\n\nBlessing of the Mountain\nReduce incoming champion damage for 2 seconds after taking damage from a champion. When the effect ends, slow nearby enemies by 50% for 1.5 seconds.\nActive (4 charges)\nPlaces an Invisible Stealth Ward that grants vision.",
+  "description": "<div class=\"effect-stats\">200 Health<br>75% Base Health Regen<br>75% Base Mana Regen<br>9 Gold Per 10 Seconds</div><br><br><span class=\"effect-passive-text\">Blessing of the Mountain</span><br>Reduce incoming champion damage for 2 seconds after taking damage from a champion. When the effect ends, slow nearby enemies by 50% for 1.5 seconds.<br><span class=\"effect-active-text\">Active</span> (4 charges)<br>Places an Invisible Stealth Ward that grants vision.",
   "gold": {
     "base": 0,
     "purchasable": true,

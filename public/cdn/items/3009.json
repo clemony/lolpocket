@@ -33,7 +33,7 @@
   "stats": {
     "flatMovespeed": 55
   },
-  "description": "55 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 25%.",
+  "description": "<div class=\"effect-stats\">55 Move Speed</div><br><br><span class=\"effect-passive-text\">Fleetfooted</span><br>Reduce the effectiveness of Slows by 25%.",
   "gold": {
     "base": 700,
     "purchasable": true,
@@ -44,8 +44,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223009,
+    "description": "<div class=\"effect-stats\">70 Move Speed</div><br><br>The strength of movement slowing effects is reduced by 40%.",
+    "stats": {
+      "flatMovespeed": 70
+    },
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
   "tags": [
     "Movement"
   ]

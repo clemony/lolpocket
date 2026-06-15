@@ -24,7 +24,7 @@
     "health": 150,
     "healthRegen": 20
   },
-  "description": "150 Health\n\n\nRecovery: Restores 20 Health every 5 seconds.Undaunted: Blocks 15 damage from attacks and spells from champions (25% effectiveness vs. damage over time abilities).\n",
+  "description": "<div class=\"effect-stats\">150 Health</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Recovery:</span> Restores <span class=\"effect-green-text\">20 Health</span> every 5 seconds.<span class=\"effect-list\"><span class=\"effect-passive-text\">Undaunted:</span> Blocks 15 damage from attacks and spells from champions (25% effectiveness vs. damage over time abilities).<br>",
   "gold": {
     "base": 950,
     "purchasable": true,

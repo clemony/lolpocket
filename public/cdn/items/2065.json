@@ -34,7 +34,7 @@
     "percentMovespeed": 4,
     "abilityHaste": 15
   },
-  "description": "50 Ability Power\n15 Ability Haste\n4% Move Speed\n125% Base Mana Regen\n\nInspiring Speech\nGrant nearby allies 30% Move Speed for 4 seconds.",
+  "description": "<div class=\"effect-stats\">50 Ability Power<br>15 Ability Haste<br>4% Move Speed<br>125% Base Mana Regen</div><br><br><span class=\"effect-active-text\">Inspiring Speech</span><br>Grant nearby allies <span class=\"effect-gray-text\">30% Move Speed</span> for 4 seconds.",
   "gold": {
     "base": 400,
     "purchasable": true,
@@ -45,8 +45,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222065,
+    "description": "<div class=\"effect-stats\">55 Ability Power<br>15 Ability Haste<br>6% Move Speed<br>150% Base Mana Regen</div><br><br><span class=\"effect-active-text\">Inspiring Speech</span><br>Grants nearby allies Move Speed for a few seconds.",
+    "stats": {
+      "abilityPower": 55,
+      "percentMovespeed": 6
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 322065,
     "stats": {

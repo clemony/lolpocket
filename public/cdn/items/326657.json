@@ -1,7 +1,7 @@
 {
   "id": 326657,
   "name": "Rod of Ages",
-  "description": "45 Ability Power\n350 Health\n500 Mana\n\nTimeless\nThis item gains 10 Health, 30 Mana and 3 Ability Power every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.\n\nEternity\nTaking damage from champions restores 10% of the damage as Mana. \nCasting an ability heals for 25% of Mana spent.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>350 Health<br>500 Mana</div><br><br><span class=\"effect-passive-text\">Timeless</span><br>This item gains <span class=\"effect-green-text\">10 Health</span>, <span class=\"effect-blue-text\">30 Mana</span> and <span class=\"effect-purple-text\">3 Ability Power</span> every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.<br><br><span class=\"effect-passive-text\">Eternity</span><br>Taking damage from champions restores <span class=\"effect-blue-text\">10%</span> of the damage as <span class=\"effect-blue-text\">Mana</span>. <br>Casting an ability <span class=\"effect-green-text\">heals for 25%</span> of Mana spent.",
   "stats": {
     "mana": 500,
     "health": 350,

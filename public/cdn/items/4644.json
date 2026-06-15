@@ -1,7 +1,7 @@
 {
   "id": 4644,
   "name": "Crown of the Shattered Queen",
-  "description": "85 Ability Power\n250 Health\n600 Mana\n20 Ability Haste\n\n\nSafeguard: You are Safeguarded, reducing incoming champion damage by 40%. Safeguard persists for 2.5 seconds after taking champion damage. (40(0s)). \n\nMythic Passive: Grants all other Legendary items 1% Move Speed and 8 Ability Power.\n\nItem cooldown is restarted when damage is taken from champions.",
+  "description": "<div class=\"effect-stats\">85 Ability Power<br>250 Health<br>600 Mana<br>20 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Safeguard:</span> You are Safeguarded, reducing incoming champion damage by 40%. Safeguard persists for 2.5 seconds after taking champion damage. (40(0s)). <br><br>Mythic Passive: Grants all other <span class=\"effect-gold-text\">Legendary</span> items 1% Move Speed and 8 Ability Power.<br><br>Item cooldown is restarted when damage is taken from champions.",
   "stats": {
     "mana": 600,
     "health": 250,

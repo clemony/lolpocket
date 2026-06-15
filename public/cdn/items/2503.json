@@ -39,7 +39,7 @@
     "mana": 600,
     "abilityHaste": 20
   },
-  "description": "80 Ability Power\n600 Mana\n20 Ability Haste\n\nBaleful Blaze\nDamaging Abilities deals bonus magic damage for 3 seconds.\n\nBlackfire\nFor each enemy champion, epic and large monster affected by your Baleful Blaze, gain 4% Ability Power. ",
+  "description": "<div class=\"effect-stats\">80 Ability Power<br>600 Mana<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Baleful Blaze</span><br>Damaging Abilities deals <span class=\"effect-purple-text\">bonus magic damage</span> for 3 seconds.<br><br><span class=\"effect-passive-text\">Blackfire</span><br>For each enemy champion, epic and large monster affected by your <span class=\"effect-passive-text\">Baleful Blaze</span>, gain <span class=\"effect-purple-text\">4% Ability Power</span>. ",
   "gold": {
     "base": 700,
     "purchasable": true,
@@ -50,8 +50,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 222503,
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>600 Mana<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Baleful Blaze</span><br>Dealing damage with Abilities causes enemies to burn. This damage increases to Monsters.<br><br><span class=\"effect-passive-text\">Blackfire</span><br>For each enemy Champion, Epic Monster, and Large Monster affected by your <span class=\"effect-passive-text\">Baleful Blaze</span>, gain <span class=\"effect-purple-text\">Ability Power</span>. ",
+    "stats": {
+      "mana": 600,
+      "abilityPower": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

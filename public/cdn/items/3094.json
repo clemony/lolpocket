@@ -42,7 +42,7 @@
     "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
-  "description": "35% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nSharpshooter\nYour Energized Attack deals 40 bonus magic damage and gains 35% bonus Attack Range.",
+  "description": "<div class=\"effect-stats\">35% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Sharpshooter</span><br>Your Energized Attack deals <span class=\"effect-purple-text\">40 bonus magic damage</span> and gains 35% bonus Attack Range.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -53,8 +53,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223094,
+    "description": "<div class=\"effect-stats\">30% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Energized</span><br>Moving and Attacking generates an Energized Attack.<br><br><span class=\"effect-passive-text\">Sharpshooter</span><br>Your Energized Attack applies <span class=\"effect-purple-text\">200 bonus magic damage</span>. In addition, Energized attacks gain up to 35% bonus Attack Range.<br>",
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackSpeed": 30,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman",
     "Movement"

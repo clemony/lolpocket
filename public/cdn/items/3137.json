@@ -36,7 +36,7 @@
     "percentMagicPenetration": 30,
     "abilityHaste": 20
   },
-  "description": "75 Ability Power\n30% Magic Penetration\n20 Ability Haste\n\nLife from Death\nWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.",
+  "description": "<div class=\"effect-stats\">75 Ability Power<br>30% Magic Penetration<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Life from Death</span><br>When a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that <span class=\"effect-green-text\">heals</span>.",
   "gold": {
     "base": 200,
     "purchasable": true,
@@ -47,8 +47,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223137,
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>30% Magic Penetration<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Life from Death</span><br>When a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that <span class=\"effect-green-text\">heals</span>.",
+    "stats": {
+      "abilityPower": 60
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

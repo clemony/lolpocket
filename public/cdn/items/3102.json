@@ -34,7 +34,7 @@
     "abilityPower": 105,
     "magicResistance": 40
   },
-  "description": "105 Ability Power\n40 Magic Resist\n\nAnnul\nGrants a Spell Shield that blocks the next enemy Ability.",
+  "description": "<div class=\"effect-stats\">105 Ability Power<br>40 Magic Resist</div><br><br><span class=\"effect-passive-text\">Annul</span><br>Grants a Spell Shield that blocks the next enemy Ability.",
   "gold": {
     "base": 200,
     "purchasable": true,
@@ -45,8 +45,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223102,
+    "description": "<div class=\"effect-stats\">80 Ability Power<br>40 Magic Resist</div><br><br><span class=\"effect-passive-text\">Annul</span><br>Grants a <span class=\"effect-blue-text\">Spell Shield</span> that blocks the next enemy Ability.<br><br>Item cooldown is restarted if you take damage from champions before it is completed.",
+    "stats": {
+      "magicResistance": 40,
+      "abilityPower": 80
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

@@ -1,7 +1,7 @@
 {
   "id": 1203,
   "name": "Support Quest",
-  "description": "Control wards always go into your role quest slot. Upgrade your Support Item to complete your quest. Earn points by damaging enemy champions or turrets, or killing minions while near an ally. Earn points much faster in bot Lane!\n\nRewards\n• Upgraded support item\n• Discounted control wards",
+  "description": "<div class=\"effect-stats\"></div><br><br>Control wards always go into your role quest slot. Upgrade your Support Item to complete your quest. Earn points by damaging enemy champions or turrets, or killing minions while near an ally. Earn points much faster in bot Lane!<br><br>Rewards<br>• Upgraded support item<br>• Discounted control wards",
   "gold": {
     "base": 0,
     "purchasable": false,

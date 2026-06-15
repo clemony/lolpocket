@@ -45,7 +45,7 @@
     "magicResistance": 25,
     "abilityHaste": 10
   },
-  "description": "300 Health\n25 Armor\n25 Magic Resist\n10 Ability Haste\n\nFrostfire Tempest\nCasting your Ultimate summons a storm around you for 5 seconds. The storm deals 30 magic damage per second to enemy champions and Slows them by 30%.",
+  "description": "<div class=\"effect-stats\">300 Health<br>25 Armor<br>25 Magic Resist<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Frostfire Tempest</span><br>Casting your Ultimate summons a storm around you for 5 seconds. The storm deals <span class=\"effect-purple-text\">30 magic damage</span> per second to enemy champions and Slows them by 30%.",
   "gold": {
     "base": 700,
     "purchasable": true,
@@ -56,8 +56,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223050,
+    "description": "<div class=\"effect-stats\">300 Health<br>25 Armor<br>15 Ability Haste<br>30 Magic Resist</div><br><br><span class=\"effect-passive-text\">Frostfire Tempest</span><br>Casting your Ultimate summons a storm around you for 5 seconds. The storm deals <span class=\"effect-purple-text\"> magic damage</span> per second to enemy champions and Slows them by 30%.",
+    "stats": {
+      "magicResistance": 30,
+      "health": 300,
+      "armor": 25
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 323050,
     "stats": {

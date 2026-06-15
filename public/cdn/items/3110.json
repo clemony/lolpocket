@@ -33,7 +33,7 @@
     "mana": 400,
     "abilityHaste": 20
   },
-  "description": "75 Armor\n400 Mana\n20 Ability Haste\n\nWinter's Caress\nReduce the Attack Speed of nearby champions by 20%.",
+  "description": "<div class=\"effect-stats\">75 Armor<br>400 Mana<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Winter's Caress</span><br>Reduce the <span class=\"effect-gold-text\">Attack Speed</span> of nearby champions by <span class=\"effect-gold-text\">20%</span>.",
   "gold": {
     "base": 600,
     "purchasable": true,
@@ -44,8 +44,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223110,
+    "description": "<div class=\"effect-stats\">90 Armor<br>450 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Winter's Caress</span><br>Reduces the <span class=\"effect-gold-text\">Attack Speed</span> of nearby enemies.",
+    "stats": {
+      "mana": 450,
+      "armor": 90
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "masterwork": {
     "upgradeId": 323110,
     "stats": {

@@ -1,4 +1,4 @@
-// Updated Patch 16.12 - 06/13/2026 10:53:06 AM CDT
+// Updated Patch 16.12 - 06/15/2026 12:03:26 AM CDT
 
 export interface StatRecord {
   "abilityHaste"?: number;
@@ -907,10 +907,6 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "manaRegen": 150,
     "abilityHaste": 15
   },
-  "4010": {
-    "health": 350,
-    "abilityPower": 60
-  },
   "4011": {
     "abilityPower": 45,
     "healAndShieldPower": 12,
@@ -1249,9 +1245,6 @@ export const itemStatRecord: Record<number, StatRecord> = {
   "221011": {
     "health": 300
   },
-  "221026": {
-    "abilityPower": 45
-  },
   "221031": {
     "armor": 40
   },
@@ -1268,65 +1261,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
   "221057": {
     "magicResistance": 30
   },
-  "221058": {
-    "abilityPower": 120
-  },
   "222051": {
     "health": 300,
     "healthRegen": 4
-  },
-  "222065": {
-    "abilityPower": 55,
-    "percentMovespeed": 6
-  },
-  "222502": {
-    "health": 350,
-    "armor": 50
-  },
-  "222503": {
-    "mana": 600,
-    "abilityPower": 60
-  },
-  "222504": {
-    "magicResistance": 80,
-    "health": 350
-  },
-  "222510": {
-    "health": 300,
-    "abilityPower": 60,
-    "attackSpeed": 20
-  },
-  "222512": {
-    "criticalStrikeChance": 25,
-    "attackSpeed": 40,
-    "percentMovespeed": 4
-  },
-  "222517": {
-    "attackDamage": 60
-  },
-  "222522": {
-    "mana": 300,
-    "abilityPower": 90
-  },
-  "222523": {
-    "criticalStrikeChance": 25,
-    "attackDamage": 55
-  },
-  "222524": {
-    "magicResistance": 25,
-    "health": 200,
-    "armor": 25
-  },
-  "222525": {
-    "health": 600
-  },
-  "222526": {
-    "mana": 300,
-    "health": 200
-  },
-  "222530": {
-    "mana": 1000,
-    "health": 200
   },
   "223001": {
     "magicResistance": 30,
@@ -1338,92 +1275,18 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "armor": 45,
     "percentMovespeed": 6
   },
-  "223003": {
-    "mana": 600,
-    "abilityPower": 55
-  },
-  "223004": {
-    "mana": 600,
-    "attackDamage": 40
-  },
   "223005": {
-    "flatMovespeed": 70
-  },
-  "223006": {
-    "flatMovespeed": 55,
-    "attackSpeed": 35
-  },
-  "223008": {
-    "flatMovespeed": 45
-  },
-  "223009": {
     "flatMovespeed": 70
   },
   "223011": {
     "abilityPower": 35
   },
-  "223020": {
-    "flatMovespeed": 55
-  },
-  "223026": {
-    "armor": 45,
-    "attackDamage": 55
-  },
-  "223031": {
-    "criticalStrikeChance": 25,
-    "attackDamage": 75
-  },
-  "223032": {
-    "attackDamage": 45,
-    "attackSpeed": 40
-  },
-  "223033": {
-    "criticalStrikeChance": 25,
-    "attackDamage": 30
-  },
-  "223036": {
-    "criticalStrikeChance": 25,
-    "attackDamage": 30
-  },
   "223039": {
     "criticalStrikeChance": 20,
     "health": 700
   },
-  "223040": {
-    "mana": 1200,
-    "abilityPower": 60
-  },
-  "223042": {
-    "mana": 1000,
-    "attackDamage": 40
-  },
-  "223046": {
-    "criticalStrikeChance": 25,
-    "attackSpeed": 60,
-    "percentMovespeed": 8
-  },
-  "223047": {
-    "flatMovespeed": 30,
-    "armor": 25
-  },
-  "223050": {
-    "magicResistance": 30,
-    "health": 300,
-    "armor": 25
-  },
-  "223053": {
-    "health": 300
-  },
-  "223065": {
-    "magicResistance": 40,
-    "health": 300
-  },
   "223067": {
     "health": 200
-  },
-  "223068": {
-    "health": 350,
-    "armor": 40
   },
   "223069": {
     "armor": 100,
@@ -1432,181 +1295,16 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "magicResistance": 80,
     "abilityHaste": 25
   },
-  "223071": {
-    "health": 350,
-    "attackDamage": 40
-  },
-  "223072": {
-    "attackDamage": 70,
-    "lifesteal": 18
-  },
-  "223073": {
-    "health": 450,
-    "attackDamage": 40,
-    "attackSpeed": 30
-  },
-  "223074": {
-    "attackDamage": 70,
-    "lifesteal": 15
-  },
-  "223075": {
-    "health": 300,
-    "armor": 60
-  },
-  "223078": {
-    "health": 375,
-    "attackDamage": 40,
-    "attackSpeed": 25
-  },
-  "223084": {
-    "health": 700
-  },
-  "223085": {
-    "criticalStrikeChance": 25,
-    "attackSpeed": 45,
-    "percentMovespeed": 4
-  },
-  "223087": {
-    "abilityPower": 45,
-    "attackDamage": 45,
-    "attackSpeed": 30,
-    "percentMovespeed": 4
-  },
-  "223089": {
-    "abilityPower": 65
-  },
-  "223091": {
-    "magicResistance": 45,
-    "attackSpeed": 50
-  },
-  "223094": {
-    "criticalStrikeChance": 25,
-    "attackSpeed": 30,
-    "percentMovespeed": 4
-  },
-  "223095": {
-    "criticalStrikeChance": 25,
-    "attackDamage": 50,
-    "attackSpeed": 20
-  },
-  "223100": {
-    "abilityPower": 80,
-    "percentMovespeed": 10
-  },
-  "223102": {
-    "magicResistance": 40,
-    "abilityPower": 80
-  },
   "223105": {
     "magicResistance": 30,
     "armor": 30
   },
-  "223107": {
-    "abilityPower": 30
-  },
-  "223109": {
-    "health": 400,
-    "armor": 50
-  },
-  "223110": {
-    "mana": 450,
-    "armor": 90
-  },
-  "223111": {
-    "magicResistance": 30,
-    "flatMovespeed": 30
-  },
   "223112": {
     "abilityPower": 55
-  },
-  "223115": {
-    "abilityPower": 70,
-    "attackSpeed": 45
-  },
-  "223116": {
-    "health": 350,
-    "abilityPower": 60
-  },
-  "223118": {
-    "mana": 600,
-    "abilityPower": 70
-  },
-  "223119": {
-    "mana": 600,
-    "health": 400
-  },
-  "223121": {
-    "mana": 1000,
-    "health": 400
-  },
-  "223124": {
-    "abilityPower": 25,
-    "attackDamage": 20,
-    "attackSpeed": 25
-  },
-  "223135": {
-    "abilityPower": 65
-  },
-  "223137": {
-    "abilityPower": 60
-  },
-  "223139": {
-    "magicResistance": 40,
-    "attackDamage": 45,
-    "lifesteal": 10
-  },
-  "223142": {
-    "attackDamage": 55,
-    "percentMovespeed": 4
-  },
-  "223143": {
-    "health": 300,
-    "armor": 75
-  },
-  "223146": {
-    "abilityPower": 90,
-    "attackDamage": 45
-  },
-  "223152": {
-    "health": 400,
-    "abilityPower": 95
-  },
-  "223153": {
-    "attackDamage": 30,
-    "attackSpeed": 20,
-    "lifesteal": 10
-  },
-  "223156": {
-    "magicResistance": 40,
-    "attackDamage": 50
-  },
-  "223157": {
-    "abilityPower": 80,
-    "armor": 50
-  },
-  "223158": {
-    "flatMovespeed": 45
-  },
-  "223161": {
-    "health": 350,
-    "attackDamage": 40
-  },
-  "223165": {
-    "health": 250,
-    "abilityPower": 90
-  },
-  "223172": {
-    "attackSpeed": 50,
-    "percentMovespeed": 10
   },
   "223177": {
     "health": 250,
     "attackDamage": 25
-  },
-  "223181": {
-    "health": 500,
-    "attackDamage": 40,
-    "percentMovespeed": 4
   },
   "223184": {
     "attackDamage": 25,
@@ -1618,54 +1316,13 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "lethality": 11,
     "abilityHaste": 10
   },
-  "223190": {
-    "magicResistance": 35,
-    "health": 400,
-    "armor": 25
-  },
   "223193": {
     "magicResistance": 60,
     "armor": 60
   },
-  "223222": {
-    "health": 400
-  },
-  "223302": {
-    "attackDamage": 30,
-    "attackSpeed": 40
-  },
-  "223504": {
-    "abilityPower": 40,
-    "percentMovespeed": 6
-  },
-  "223508": {
-    "criticalStrikeChance": 25,
-    "attackDamage": 50
-  },
-  "223742": {
-    "health": 300,
-    "armor": 40,
-    "percentMovespeed": 7
-  },
-  "223748": {
-    "health": 400,
-    "attackDamage": 40
-  },
-  "223814": {
-    "health": 375,
-    "attackDamage": 45
-  },
   "224004": {
     "attackDamage": 50,
     "lethality": 15,
-    "percentMovespeed": 4
-  },
-  "224005": {
-    "abilityPower": 60
-  },
-  "224401": {
-    "magicResistance": 50,
-    "health": 400,
     "percentMovespeed": 4
   },
   "224403": {
@@ -1683,18 +1340,6 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityHaste": 20,
     "omnivamp": 15
   },
-  "224628": {
-    "abilityPower": 90
-  },
-  "224629": {
-    "health": 350,
-    "abilityPower": 65,
-    "percentMovespeed": 4
-  },
-  "224633": {
-    "health": 350,
-    "abilityPower": 60
-  },
   "224636": {
     "health": 300,
     "abilityPower": 90
@@ -1708,54 +1353,16 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 250,
     "abilityPower": 85
   },
-  "224645": {
-    "abilityPower": 90
-  },
-  "224646": {
-    "abilityPower": 90,
-    "percentMovespeed": 4
-  },
   "226035": {
     "magicResistance": 40,
     "health": 300,
     "attackDamage": 40
-  },
-  "226333": {
-    "armor": 45,
-    "attackDamage": 60
-  },
-  "226609": {
-    "health": 450,
-    "attackDamage": 45
-  },
-  "226610": {
-    "health": 350,
-    "attackDamage": 40
-  },
-  "226616": {
-    "abilityPower": 65
-  },
-  "226617": {
-    "health": 200,
-    "abilityPower": 35
-  },
-  "226620": {
-    "health": 300,
-    "abilityPower": 40
-  },
-  "226621": {
-    "abilityPower": 45
   },
   "226630": {
     "attackDamage": 55,
     "health": 400,
     "abilityHaste": 20,
     "omnivamp": 10
-  },
-  "226631": {
-    "health": 375,
-    "attackDamage": 40,
-    "attackSpeed": 15
   },
   "226632": {
     "health": 300,
@@ -1765,32 +1372,10 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 250,
     "abilityPower": 50
   },
-  "226655": {
-    "mana": 600,
-    "abilityPower": 85
-  },
   "226656": {
     "mana": 600,
     "health": 250,
     "abilityPower": 70
-  },
-  "226657": {
-    "mana": 300,
-    "health": 350,
-    "abilityPower": 60
-  },
-  "226662": {
-    "health": 300,
-    "armor": 45
-  },
-  "226664": {
-    "magicResistance": 40,
-    "health": 450
-  },
-  "226665": {
-    "magicResistance": 35,
-    "health": 350,
-    "armor": 35
   },
   "226667": {
     "magicResistance": 30,
@@ -1803,49 +1388,12 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackSpeed": 15,
     "percentMovespeed": 7
   },
-  "226672": {
-    "attackDamage": 50,
-    "attackSpeed": 35,
-    "percentMovespeed": 7
-  },
-  "226673": {
-    "criticalStrikeChance": 25,
-    "attackDamage": 55
-  },
   "226675": {
     "criticalStrikeChance": 25,
     "attackSpeed": 35,
     "percentMovespeed": 4
   },
-  "226676": {
-    "criticalStrikeChance": 25,
-    "attackDamage": 45
-  },
   "226691": {
-    "attackDamage": 60
-  },
-  "226692": {
-    "attackDamage": 50
-  },
-  "226693": {
-    "attackDamage": 55
-  },
-  "226694": {
-    "attackDamage": 50
-  },
-  "226695": {
-    "attackDamage": 55
-  },
-  "226696": {
-    "attackDamage": 45
-  },
-  "226697": {
-    "attackDamage": 50
-  },
-  "226698": {
-    "attackDamage": 50
-  },
-  "226699": {
     "attackDamage": 60
   },
   "226701": {
@@ -1887,10 +1435,6 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "attackDamage": 65,
     "attackSpeed": 30,
     "percentMovespeed": 10
-  },
-  "228020": {
-    "magicResistance": 50,
-    "health": 350
   },
   "322065": {
     "abilityPower": 65,
@@ -2044,10 +1588,6 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "health": 500,
     "percentMovespeed": 4
   },
-  "443083": {
-    "health": 1100,
-    "percentMovespeed": 4
-  },
   "443090": {
     "attackSpeed": 50,
     "percentMovespeed": 5
@@ -2154,10 +1694,6 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "abilityPower": 85,
     "health": 400,
     "tenacity": 30
-  },
-  "447111": {
-    "health": 400,
-    "attackDamage": 40
   },
   "447112": {
     "health": 500,

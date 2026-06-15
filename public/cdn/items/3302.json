@@ -39,7 +39,7 @@
     "attackDamage": 30,
     "attackSpeed": 35
   },
-  "description": "30 Attack Damage\n35% Attack Speed\n\nShadow\nAttacks deal 30 bonus magic damage On-Hit.\n\nJuxtaposition\nAlternate between Light and Dark Attacks against champions: Light Attacks grant Armor and Magic Resist for 5s. Dark Attacks grant 10% Armor Penetration and Magic Penetration for 5s. ",
+  "description": "<div class=\"effect-stats\">30 Attack Damage<br>35% Attack Speed</div><br><br><span class=\"effect-passive-text\">Shadow</span><br>Attacks deal <span class=\"effect-purple-text\">30 bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.<br><br><span class=\"effect-passive-text\">Juxtaposition</span><br>Alternate between Light and Dark Attacks against champions: <span class=\"effect-list\">Light Attacks grant <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> for 5s. <span class=\"effect-list\">Dark Attacks grant 10% <span class=\"effect-gold-text\">Armor Penetration</span> and <span class=\"effect-blue-text\">Magic Penetration</span> for 5s. ",
   "gold": {
     "base": 1100,
     "purchasable": true,
@@ -50,8 +50,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223302,
+    "description": "<div class=\"effect-stats\">30 Attack Damage<br>40% Attack Speed</div><br><br><span class=\"effect-passive-text\">Shadow</span><br>Attacks deal <span class=\"effect-purple-text\">30 bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.<br><br><span class=\"effect-passive-text\">Juxtaposition</span><br>Alternate between Light and Dark Attacks against champions: <span class=\"effect-list\">Light Attacks grant <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> for 5s. <span class=\"effect-list\">Dark Attacks grant 8% <span class=\"effect-gold-text\">Armor Penetration</span> and <span class=\"effect-blue-text\">Magic Penetration</span> for 5s. ",
+    "stats": {
+      "attackDamage": 30,
+      "attackSpeed": 40
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Fighter",
     "Marksman",

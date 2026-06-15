@@ -27,7 +27,7 @@
     "flatMagicPenetration": 12,
     "flatMovespeed": 45
   },
-  "description": "12 Magic Penetration\n45 Move Speed\n\n",
+  "description": "<div class=\"effect-stats\">12 Magic Penetration<br>45 Move Speed</div><br><br>",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -38,8 +38,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223020,
+    "description": "<div class=\"effect-stats\">20 Magic Penetration<br>55 Move Speed</div><br><br>",
+    "stats": {
+      "flatMovespeed": 55
+    },
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
   "tags": [
     "Movement"
   ]

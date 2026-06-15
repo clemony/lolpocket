@@ -60,7 +60,7 @@
   "stats": {
     "flatMovespeed": 25
   },
-  "description": "25 Move Speed\n\n",
+  "description": "<div class=\"effect-stats\">25 Move Speed</div><br><br>",
   "gold": {
     "base": 300,
     "purchasable": true,

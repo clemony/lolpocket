@@ -63,7 +63,7 @@
   "stats": {
     "abilityHaste": 5
   },
-  "description": "5 Ability Haste\n\n",
+  "description": "<div class=\"effect-stats\">5 Ability Haste</div><br><br>",
   "gold": {
     "base": 250,
     "purchasable": true,

@@ -36,7 +36,7 @@
     "flatMovespeed": 45,
     "abilityHaste": 10
   },
-  "description": "10 Ability Haste\n45 Move Speed\n\nIonian Insight\nGain 10 Summoner Spell Haste.\n\n",
+  "description": "<div class=\"effect-stats\">10 Ability Haste<br>45 Move Speed</div><br><br><span class=\"effect-passive-text\">Ionian Insight</span><br>Gain 10 Summoner Spell Haste.<br><br>",
   "gold": {
     "base": 350,
     "purchasable": true,
@@ -47,8 +47,21 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223158,
+    "description": "<div class=\"effect-stats\">40 Ability Haste<br>45 Move Speed</div><br><br>Gain 10 Summoner Spell Haste.",
+    "stats": {
+      "flatMovespeed": 45
+    },
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
   "tags": [
     "Movement"
   ]

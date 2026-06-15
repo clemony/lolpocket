@@ -14,7 +14,7 @@
     }
   ],
   "stats": {},
-  "description": "Allies in the Cannon Barrage gain bonus Move Speed.",
+  "description": "<div class=\"effect-stats\"></div><br><br>Allies in the Cannon Barrage gain <span class=\"effect-gray-text\">bonus Move Speed</span>.",
   "gold": {
     "base": 0,
     "purchasable": false,

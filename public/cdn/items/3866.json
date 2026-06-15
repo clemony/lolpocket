@@ -33,7 +33,7 @@
     "healthRegen": 50,
     "manaRegen": 50
   },
-  "description": "100 Health\n50% Base Health Regen\n50% Base Mana Regen\n5 Gold Per 10 Seconds\n\nSupport Quest\nEarn 0 gold from this item to transform it into Bounty of Worlds. \n\nShared Riches (0s, max 0 charges)\nWhile near an ally champion, damage enemy champions or kill minions to gain gold.Active (3 charges)\nPlaces an Invisible Stealth Ward that grants vision.",
+  "description": "<div class=\"effect-stats\">100 Health<br>50% Base Health Regen<br>50% Base Mana Regen<br>5 Gold Per 10 Seconds</div><br><br><span class=\"effect-passive-text\">Support Quest</span><br>Earn 0 gold from this item to transform it into <span class=\"effect-gray-text\">Bounty of Worlds</span>. <br><br><span class=\"effect-passive-text\">Shared Riches</span> (0s, max 0 charges)<br>While near an ally champion, damage enemy champions or kill minions to gain gold.<span class=\"effect-active-text\">Active</span> (3 charges)<br>Places an Invisible Stealth Ward that grants vision.",
   "gold": {
     "base": 400,
     "purchasable": false,

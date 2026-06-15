@@ -58,7 +58,7 @@
   "stats": {
     "flatMovespeed": 25
   },
-  "description": "25 Move Speed\n\nGrants an additional 10 Move Speed. Boots that build from Slightly Magical Footwear retain this bonus Move Speed.",
+  "description": "<div class=\"effect-stats\">25 Move Speed</div><br><br>Grants an additional <span class=\"effect-gray-text\">10 Move Speed</span>. Boots that build from Slightly Magical Footwear retain this bonus Move Speed.",
   "gold": {
     "base": 300,
     "purchasable": false,

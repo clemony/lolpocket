@@ -21,7 +21,7 @@
     "lethality": 20,
     "abilityHaste": 20
   },
-  "description": "50 Attack Damage\n20 Lethality\n20 Ability Haste\n\nNightstalker\nYour Abilities deal up to an additional percent damage based on the target's missing health. When a champion that you have damaged within the last 3 seconds dies, you become Untargetable from non-structures for 1.5 seconds (0s).",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>20 Lethality<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Nightstalker</span><br>Your Abilities deal up to an additional percent damage based on the target's <span class=\"effect-green-text\">missing health</span>. When a champion that you have damaged within the last 3 seconds dies, you become Untargetable from non-structures for 1.5 seconds (0s).",
   "gold": {
     "base": 2750,
     "purchasable": true,

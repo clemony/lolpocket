@@ -45,7 +45,7 @@
     "attackSpeed": 20,
     "criticalStrikeChance": 25
   },
-  "description": "50 Attack Damage\n20% Attack Speed\n25% Critical Strike Chance\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nBolt\nYour Energized Attack applies  bonus magic damage and grants 45% Movement Speed for 1.5 seconds.\n",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>20% Attack Speed<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Energized</span><br>Moving and Attacking generates an Energized Attack.<br><br><span class=\"effect-passive-text\">Bolt</span><br>Your Energized Attack applies <span class=\"effect-purple-text\"> bonus magic damage</span> and grants <span class=\"effect-gray-text\">45% Movement Speed</span> for 1.5 seconds.<br>",
   "gold": {
     "base": 700,
     "purchasable": true,
@@ -56,8 +56,23 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 223095,
+    "description": "<div class=\"effect-stats\">50 Attack Damage<br>20% Attack Speed<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Energized</span><br>Moving and Attacking generates an Energized Attack.<br><br><span class=\"effect-passive-text\">Bolt</span><br>Your Energized Attack applies <span class=\"effect-purple-text\"> bonus magic damage</span> and grants <span class=\"effect-gray-text\">45% Move Speed</span> for 2s.<br><br><b class=\"effect-bold-text\">Energized stacks twice as fast in Arena.</b><br>",
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 50,
+      "attackSpeed": 20
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Marksman",
     "Onhit effects"

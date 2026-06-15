@@ -1,7 +1,7 @@
 {
   "id": 226675,
   "name": "Navori Flickerblades",
-  "description": "35% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nTranscendence\nYour Attacks reduce your non-Ultimate Ability cooldowns by 15% of their remaining cooldown.",
+  "description": "<div class=\"effect-stats\">35% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Transcendence</span><br>Your Attacks reduce your non-Ultimate Ability cooldowns by 15% of their remaining cooldown.",
   "stats": {
     "criticalStrikeChance": 25,
     "attackSpeed": 35,

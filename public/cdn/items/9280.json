@@ -1,7 +1,7 @@
 {
   "id": 9280,
   "name": "OwO Blaster",
-  "description": "Fires projectiles extremely rapidly at the nearest enemy, dealing damage to the first target hit.\n\nDamage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><br><br>Fires projectiles extremely rapidly at the nearest enemy, dealing damage to the first target hit.<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

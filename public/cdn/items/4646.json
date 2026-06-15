@@ -36,7 +36,7 @@
     "flatMagicPenetration": 15,
     "percentMovespeed": 6
   },
-  "description": "90 Ability Power\n15 Magic Penetration\n6% Move Speed\n\nStormraider\nDealing 25% of a champion's maximum Health within 2.5s applies Squall to them.\n\nSquall\nAfter 2 seconds, deal magic damage. If the target dies before Squall triggers, it damages nearby enemies.",
+  "description": "<div class=\"effect-stats\">90 Ability Power<br>15 Magic Penetration<br>6% Move Speed</div><br><br><span class=\"effect-passive-text\">Stormraider</span><br>Dealing 25% of a champion's maximum Health within 2.5s applies <span class=\"effect-passive-text\">Squall</span> to them.<br><br><span class=\"effect-passive-text\">Squall</span><br>After 2 seconds, deal <span class=\"effect-purple-text\">magic damage</span>. If the target dies before <span class=\"effect-passive-text\">Squall</span> triggers, it damages nearby enemies.",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -47,8 +47,22 @@
     11,
     12,
     21,
+    30,
     35
   ],
+  "arena": {
+    "id": 224646,
+    "description": "<div class=\"effect-stats\">90 Ability Power<br>15 Magic Penetration<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Stormraider</span><br>Dealing 25% of a champion's maximum Health within 2.5s applies <span class=\"effect-passive-text\">Squall</span> to them and grants <span class=\"effect-gray-text\">25% Move Speed</span> for 1.5 seconds.<br><br><span class=\"effect-passive-text\">Squall</span><br>After 2 seconds, deal <span class=\"effect-purple-text\">magic damage</span>. If the target dies before <span class=\"effect-passive-text\">Squall</span> triggers, it damages nearby enemies and you gain <span class=\"effect-gray-text\">25% Move Speed</span> for 1.5 seconds.",
+    "stats": {
+      "abilityPower": 90,
+      "percentMovespeed": 4
+    },
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
   "tags": [
     "Mage"
   ]

@@ -96,7 +96,7 @@
     "attackDamage": 20,
     "lethality": 10
   },
-  "description": "20 Attack Damage\n10 Lethality\n\n",
+  "description": "<div class=\"effect-stats\">20 Attack Damage<br>10 Lethality</div><br><br>",
   "gold": {
     "base": 300,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 3005,
   "name": "Ghostcrawlers",
-  "description": "45 Move Speed\n\nWall Walk (0s)\nGain the ability to walk through walls for 6 seconds. While inside walls, gain 125 move speed. Casting a spell or attacking will end this effect.",
+  "description": "<div class=\"effect-stats\">45 Move Speed</div><br><br><span class=\"effect-active-text\">Wall Walk</span> (0s)<br>Gain the ability to walk through walls for 6 seconds. While inside walls, gain <span class=\"effect-gray-text\">125 move speed</span>. Casting a spell or attacking will end this effect.",
   "stats": {
     "flatMovespeed": 45
   },
