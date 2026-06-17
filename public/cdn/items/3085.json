@@ -30,7 +30,7 @@
     "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">40% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Wind's Fury</span><br>Attacks fire bolts at 2 additional enemies near the target.<br>Each bolt deals <span class=\"effect-orange-text\">physical damage</span> and applies <span class=\"effect-red-text\">On-Hit</span> effects.",
+  "description": "<div class=\"effect-stats\">40% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Wind's Fury</span><br>Attacks fire bolts at 2 additional enemies near the target.<br>Each bolt deals <span class=\"effect-text-orange\">physical damage</span> and applies <span class=\"effect-text-red\">On-Hit</span> effects.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -46,7 +46,7 @@
   ],
   "arena": {
     "id": 223085,
-    "description": "<div class=\"effect-stats\">45% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Wind's Fury</span><br>When Attacking, bolts are fired at up to 2 enemies near the target. Bolts apply <span class=\"effect-red-text\">On-Hit</span> effects and can Critically Strike.<br><br>Item is for Ranged champions only.",
+    "description": "<div class=\"effect-stats\">45% Attack Speed<br>25% Critical Strike Chance<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Wind's Fury</span><br>When Attacking, bolts are fired at up to 2 enemies near the target. Bolts apply <span class=\"effect-text-red\">On-Hit</span> effects and can Critically Strike.<hr class='effect-hr'>Item is for Ranged champions only.",
     "stats": {
       "criticalStrikeChance": 25,
       "attackSpeed": 45,

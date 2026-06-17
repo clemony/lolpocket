@@ -45,7 +45,7 @@
     "abilityPower": 75,
     "abilityHaste": 25
   },
-  "description": "<div class=\"effect-stats\">75 Ability Power<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Hypershot</span><br>Dealing Ability damage to champions at 600 range or greater Reveals them for 6 seconds. <br><br><span class=\"effect-passive-text\">Focus</span><br>When <span class=\"effect-passive-text\">Hypershot</span> is triggered, Reveal all other enemy champions within 1400 range of them for 3 seconds.",
+  "description": "<div class=\"effect-stats\">75 Ability Power<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Hypershot</span><br>Dealing Ability damage to champions at 600 range or greater Reveals them for 6 seconds. <hr class='effect-hr'><span class=\"effect-text-passive\">Focus</span><br>When <span class=\"effect-text-passive\">Hypershot</span> is triggered, Reveal all other enemy champions within 1400 range of them for 3 seconds.",
   "gold": {
     "base": 600,
     "purchasable": true,
@@ -61,7 +61,7 @@
   ],
   "arena": {
     "id": 224628,
-    "description": "<div class=\"effect-stats\">90 Ability Power<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Hypershot</span><br>Dealing Ability damage to champions at 600 range or greater Reveals them for 6 seconds. <br><br><span class=\"effect-passive-text\">Focus</span><br>When <span class=\"effect-passive-text\">Hypershot</span> is triggered, Reveal all other enemy champions within 1400 range of them for 3 seconds.",
+    "description": "<div class=\"effect-stats\">90 Ability Power<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Hypershot</span><br>Dealing Ability damage to champions at 600 range or greater Reveals them for 6 seconds. <hr class='effect-hr'><span class=\"effect-text-passive\">Focus</span><br>When <span class=\"effect-text-passive\">Hypershot</span> is triggered, Reveal all other enemy champions within 1400 range of them for 3 seconds.",
     "stats": {
       "abilityPower": 90
     },

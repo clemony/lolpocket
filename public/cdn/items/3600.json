@@ -1,7 +1,7 @@
 {
   "id": 3600,
   "name": "Kalista's Black Spear",
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Bind with an ally for the remainder of the game, becoming Oathsworn Allies. Oathsworn empowers you both while near one another.<br><br>Required to use Kalista's Ultimate Ability.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active - Consume:</span> Bind with an ally for the remainder of the game, becoming Oathsworn Allies. Oathsworn empowers you both while near one another.<hr class='effect-hr'>Required to use Kalista's Ultimate Ability.",
   "requiredChampion": "Sylas",
   "gold": {
     "base": 0,

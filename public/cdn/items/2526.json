@@ -57,7 +57,7 @@
     "mana": 300,
     "manaRegen": 75
   },
-  "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>75% Base Mana Regen<br>300 Mana</div><br><br><span class=\"effect-passive-text\">Harmony</span><br>Gain % Heal and Shield Power.<br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 5 charges)<br>Landing Abilities grants <span class=\"effect-blue-text\">4 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Diadem of Songs</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
+  "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>75% Base Mana Regen<br>300 Mana</div><hr class='effect-hr'><span class=\"effect-text-passive\">Harmony</span><br>Gain % Heal and Shield Power.<hr class='effect-hr'><span class=\"effect-text-passive\">Manaflow</span> (8s, max 5 charges)<br>Landing Abilities grants <span class=\"effect-text-blue\">4 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-text-gold\">Diadem of Songs</span> at <span class=\"effect-text-blue\">360 max Mana</span>.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -73,7 +73,7 @@
   ],
   "arena": {
     "id": 222526,
-    "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>75% Base Mana Regen<br>300 Mana</div><br><br><span class=\"effect-passive-text\">Holy</span><br>Gain <span class=\"effect-blue-text\"> Heal and Shield Power.</span><br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Diadem of Songs</span>.",
+    "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>75% Base Mana Regen<br>300 Mana</div><hr class='effect-hr'><span class=\"effect-text-passive\">Holy</span><br>Gain <span class=\"effect-text-blue\"> Heal and Shield Power.</span><hr class='effect-hr'><span class=\"effect-text-passive\">Mana Charge</span><br><b class=\"effect-text-bold\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-text-gold\">Diadem of Songs</span>.",
     "stats": {
       "mana": 300,
       "health": 200

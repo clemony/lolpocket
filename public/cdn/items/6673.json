@@ -30,7 +30,7 @@
     "attackDamage": 55,
     "criticalStrikeChance": 25
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Lifeline</span><br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-blue-text\">Shield</span> for 3 seconds.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span><br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-text-blue\">Shield</span> for 3 seconds.",
   "gold": {
     "base": 825,
     "purchasable": true,
@@ -46,7 +46,7 @@
   ],
   "arena": {
     "id": 226673,
-    "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Lifeline</span><br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-blue-text\">Shield</span> for 3 seconds.",
+    "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span><br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-text-blue\">Shield</span> for 3 seconds.",
     "stats": {
       "criticalStrikeChance": 25,
       "attackDamage": 55

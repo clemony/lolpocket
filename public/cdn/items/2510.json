@@ -44,7 +44,7 @@
     "health": 300,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">300 Health<br>60 Ability Power<br>20 Ability Haste<br>20% Attack Speed</div><br><br><span class=\"effect-passive-text\">Spellblade</span> (0s)<br>After using an Ability, your next Attack deals <span class=\"effect-purple-text\"> bonus magic damage</span> and <span class=\"effect-green-text\">heals you for </span> <span class=\"effect-red-text\">On-Hit</span> and then applies <span class=\"effect-red-text\">On-Hit</span> effects an additional time.",
+  "description": "<div class=\"effect-stats\">300 Health<br>60 Ability Power<br>20 Ability Haste<br>20% Attack Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span> (0s)<br>After using an Ability, your next Attack deals <span class=\"effect-text-purple\"> bonus magic damage</span> and <span class=\"effect-text-green\">heals you for </span> <span class=\"effect-text-red\">On-Hit</span> and then applies <span class=\"effect-text-red\">On-Hit</span> effects an additional time.",
   "gold": {
     "base": 300,
     "purchasable": true,
@@ -60,7 +60,7 @@
   ],
   "arena": {
     "id": 222510,
-    "description": "<div class=\"effect-stats\">300 Health<br>60 Ability Power<br>20 Ability Haste<br>20% Attack Speed</div><br><br><span class=\"effect-passive-text\">Spellblade</span> (0s)<br>After using an Ability, your next Attack deals <span class=\"effect-purple-text\"> bonus magic damage</span> and <span class=\"effect-green-text\">heals you for </span> <span class=\"effect-red-text\">On-Hit</span> and then applies <span class=\"effect-red-text\">On-Hit</span> effects an additional time.",
+    "description": "<div class=\"effect-stats\">300 Health<br>60 Ability Power<br>20 Ability Haste<br>20% Attack Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span> (0s)<br>After using an Ability, your next Attack deals <span class=\"effect-text-purple\"> bonus magic damage</span> and <span class=\"effect-text-green\">heals you for </span> <span class=\"effect-text-red\">On-Hit</span> and then applies <span class=\"effect-text-red\">On-Hit</span> effects an additional time.",
     "stats": {
       "health": 300,
       "abilityPower": 60,

@@ -1,0 +1,10 @@
+{
+  "id": 8236,
+  "name": "Gathering Storm",
+  "description": "Every 10 min gain AP or AD, adaptive.<hr class='effect-hr'><i class=\"effect-text-emphasis\">10 min</i>: + 8 AP or 5 AD <br><i class=\"effect-text-emphasis\">20 min</i>: + 24 AP or 14 AD<br><i class=\"effect-text-emphasis\">30 min</i>: + 48 AP or 29 AD<br><i class=\"effect-text-emphasis\">40 min</i>: + 80 AP or 48 AD<br><i class=\"effect-text-emphasis\">50 min</i>: + 120 AP or 72 AD<br><i class=\"effect-text-emphasis\">60 min</i>: + 168 AP or 101 AD<br>etc...",
+  "path": "Sorcery",
+  "pathId": 8200,
+  "tier": 3,
+  "tierLabel": "Power",
+  "tierSlot": 2
+}

@@ -1,7 +1,7 @@
 {
   "id": 4641,
   "name": "Stirring Wardstone",
-  "description": "<div class=\"effect-stats\">80 Health<br>25% Base Mana Regen</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Arcane Cache:</span> This item can store up to 2 purchased Control Wards.<br><br>",
+  "description": "<div class=\"effect-stats\">80 Health<br>25% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Arcane Cache:</span> This item can store up to 2 purchased Control Wards.<hr class='effect-hr'>",
   "stats": {
     "health": 80
   },

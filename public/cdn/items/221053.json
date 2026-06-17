@@ -1,7 +1,7 @@
 {
   "id": 221053,
   "name": "Vampiric Scepter",
-  "description": "<div class=\"effect-stats\">15 Attack Damage<br>7% Life Steal</div><br><br>",
+  "description": "<div class=\"effect-stats\">15 Attack Damage<br>7% Life Steal</div><hr class='effect-hr'>",
   "stats": {
     "attackDamage": 15,
     "lifesteal": 7

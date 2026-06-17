@@ -34,7 +34,7 @@
     "manaRegen": 125,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">45 Ability Power<br>10% Heal and Shield Power<br>125% Base Mana Regen<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Sanctify</span><br>Healing or Shielding an ally enhances you both for 6 seconds, granting <span class=\"effect-gold-text\">25% Attack Speed</span> and <span class=\"effect-purple-text\">20 magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>10% Heal and Shield Power<br>125% Base Mana Regen<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Sanctify</span><br>Healing or Shielding an ally enhances you both for 6 seconds, granting <span class=\"effect-text-gold\">25% Attack Speed</span> and <span class=\"effect-text-purple\">20 magic damage</span> <span class=\"effect-text-red\">On-Hit</span>.",
   "gold": {
     "base": 700,
     "purchasable": true,
@@ -50,7 +50,7 @@
   ],
   "arena": {
     "id": 223504,
-    "description": "<div class=\"effect-stats\">40 Ability Power<br>12% Heal and Shield Power<br>150% Base Mana Regen<br>6% Move Speed</div><br><br><span class=\"effect-passive-text\">Sanctify</span><br>Healing or Shielding another ally enhances you both for 6 seconds, granting your Attacks <span class=\"effect-gold-text\">40% Attack Speed</span> and <span class=\"effect-purple-text\">25 magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
+    "description": "<div class=\"effect-stats\">40 Ability Power<br>12% Heal and Shield Power<br>150% Base Mana Regen<br>6% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Sanctify</span><br>Healing or Shielding another ally enhances you both for 6 seconds, granting your Attacks <span class=\"effect-text-gold\">40% Attack Speed</span> and <span class=\"effect-text-purple\">25 magic damage</span> <span class=\"effect-text-red\">On-Hit</span>.",
     "stats": {
       "abilityPower": 40,
       "percentMovespeed": 6

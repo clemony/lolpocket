@@ -1,7 +1,7 @@
 {
   "id": 6693,
   "name": "Prowler's Claw",
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>15 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Ambush Predator:</span> After entering a bush your next damaging Attack or Ability on enemy champions deals <span class=\"effect-orange-text\">10% of their current health</span> over 4 seconds, revealing them and reducing their vision radius for the duration. (5(0s)).",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Ambush Predator:</span> After entering a bush your next damaging Attack or Ability on enemy champions deals <span class=\"effect-text-orange\">10% of their current health</span> over 4 seconds, revealing them and reducing their vision radius for the duration. (5(0s)).",
   "stats": {
     "attackDamage": 55
   },

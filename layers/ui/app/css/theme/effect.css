@@ -1,0 +1,70 @@
+.effect-list {
+}
+
+.effect-text-bold {
+  @apply font-bold;
+}
+
+.effect-hr {
+  @apply my-1.5 border-transparent;
+}
+
+.effect-title-left {
+}
+
+.effect-title-right {
+}
+
+.effect-text-emphasis {
+  @apply italic;
+}
+
+.effect-stats {
+}
+
+.effect-text-passive {
+  @apply text-gold;
+}
+
+.effect-text-active {
+  @apply text-gold;
+}
+
+.effect-text-unique {
+  @apply text-gold;
+}
+
+.effect-text-gold {
+  @apply text-gold;
+}
+
+.effect-text-flavor {
+}
+
+.effect-text-gray {
+  @apply text-silver;
+}
+
+.effect-text-green {
+  @apply text-res;
+}
+
+.effect-text-orange {
+  @apply text-ad;
+}
+
+.effect-text-pink {
+  @apply text-master;
+}
+
+.effect-text-purple {
+  @apply text-sorc;
+}
+
+.effect-text-red {
+  @apply text-dom;
+}
+
+.effect-text-blue {
+  @apply text-insp;
+}

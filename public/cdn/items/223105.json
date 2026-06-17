@@ -1,7 +1,7 @@
 {
   "id": 223105,
   "name": "Aegis of the Legion",
-  "description": "<div class=\"effect-stats\">30 Armor<br>30 Magic Resist<br>10 Ability Haste</div><br><br>",
+  "description": "<div class=\"effect-stats\">30 Armor<br>30 Magic Resist<br>10 Ability Haste</div><hr class='effect-hr'>",
   "stats": {
     "magicResistance": 30,
     "armor": 30

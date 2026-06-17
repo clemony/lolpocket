@@ -37,7 +37,7 @@
     "armor": 75,
     "health": 350
   },
-  "description": "<div class=\"effect-stats\">350 Health<br>75 Armor</div><br><br><span class=\"effect-passive-text\">Resilience</span><br>Receive 30% less damage from Critical Strikes.<br><span class=\"effect-active-text\">Humility</span><br>Slow nearby enemies by 70% for 2 seconds.",
+  "description": "<div class=\"effect-stats\">350 Health<br>75 Armor</div><hr class='effect-hr'><span class=\"effect-text-passive\">Resilience</span><br>Receive 30% less damage from Critical Strikes.<br><span class=\"effect-text-active\">Humility</span><br>Slow nearby enemies by 70% for 2 seconds.",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -53,7 +53,7 @@
   ],
   "arena": {
     "id": 223143,
-    "description": "<div class=\"effect-stats\">300 Health<br>75 Armor</div><br><br><span class=\"effect-passive-text\">Resilience</span><br>Critical Strikes deal 30% less damage to you.<br><br><span class=\"effect-active-text\">Humility</span><br>Slow nearby enemies.<br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Humility</span><br>Briefly Slow nearby enemies by 70% for 2 seconds.",
+    "description": "<div class=\"effect-stats\">300 Health<br>75 Armor</div><hr class='effect-hr'><span class=\"effect-text-passive\">Resilience</span><br>Critical Strikes deal 30% less damage to you.<hr class='effect-hr'><span class=\"effect-text-active\">Humility</span><br>Slow nearby enemies.<hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span> (0s)<br><span class=\"effect-text-active\">Humility</span><br>Briefly Slow nearby enemies by 70% for 2 seconds.",
     "stats": {
       "health": 300,
       "armor": 75

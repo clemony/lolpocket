@@ -1,7 +1,7 @@
 {
   "id": 2033,
   "name": "Corrupting Potion",
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Consumes a charge to restore <span class=\"effect-green-text\">100 Health</span> and <span class=\"effect-blue-text\">75 Mana</span> over 12 seconds. During this time, damaging Abilities and Attacks burn enemy champions for <span class=\"effect-purple-text\">15 (20 if you cannot gain Mana) magic damage</span> over 3 seconds. Holds up to 3 charges and refills upon visiting the shop.<br><br>Corrupting damage is reduced to 50% when triggered by area of effect or periodic damage.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active - Consume:</span> Consumes a charge to restore <span class=\"effect-text-green\">100 Health</span> and <span class=\"effect-text-blue\">75 Mana</span> over 12 seconds. During this time, damaging Abilities and Attacks burn enemy champions for <span class=\"effect-text-purple\">15 (20 if you cannot gain Mana) magic damage</span> over 3 seconds. Holds up to 3 charges and refills upon visiting the shop.<hr class='effect-hr'>Corrupting damage is reduced to 50% when triggered by area of effect or periodic damage.",
   "gold": {
     "base": 350,
     "purchasable": false,

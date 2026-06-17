@@ -1,7 +1,7 @@
 {
   "id": 3039,
   "name": "Atma's Reckoning",
-  "description": "<div class=\"effect-stats\">700 Health<br>20% Critical Strike Chance<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Big Hands</span><br>Gain 0-30% Critical Strike Chance, scaling with your <span class=\"effect-green-text\">bonus Health</span>.",
+  "description": "<div class=\"effect-stats\">700 Health<br>20% Critical Strike Chance<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Big Hands</span><br>Gain 0-30% Critical Strike Chance, scaling with your <span class=\"effect-text-green\">bonus Health</span>.",
   "stats": {
     "health": 700,
     "criticalStrikeChance": 20

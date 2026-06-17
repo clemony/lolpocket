@@ -1,0 +1,10 @@
+{
+  "id": 8306,
+  "name": "Hextech Flashtraption",
+  "description": "While Flash is on cooldown it is replaced by <i class=\"effect-text-emphasis\">Hexflash</i>.<hr class='effect-hr'><i class=\"effect-text-emphasis\">Hexflash</i>: Channel for 2s to blink to a new location.<hr class='effect-hr'>Cooldown: 20s. Goes on a 10s cooldown when you enter champion combat.",
+  "path": "Inspiration",
+  "pathId": 8300,
+  "tier": 1,
+  "tierLabel": "Contraptions",
+  "tierSlot": 0
+}

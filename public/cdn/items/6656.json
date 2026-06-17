@@ -1,7 +1,7 @@
 {
   "id": 6656,
   "name": "Everfrost",
-  "description": "<div class=\"effect-stats\">70 Ability Power<br>250 Health<br>600 Mana<br>20 Ability Haste</div><br><br><br><br>Mythic Passive: Grants all other <span class=\"effect-gold-text\">Legendary</span> items 10 Ability Power. <br><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Glaciate:</span> Deal damage in a cone, Slowing enemies hit. Enemies at the center of the cone are Rooted instead.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>250 Health<br>600 Mana<br>20 Ability Haste</div><hr class='effect-hr'>Mythic Passive: Grants all other <span class=\"effect-text-gold\">Legendary</span> items 10 Ability Power. <hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Glaciate:</span> Deal damage in a cone, Slowing enemies hit. Enemies at the center of the cone are Rooted instead.",
   "stats": {
     "mana": 600,
     "health": 250,

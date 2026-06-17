@@ -46,7 +46,7 @@
     "health": 900,
     "healthRegen": 100
   },
-  "description": "<div class=\"effect-stats\">900 Health<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Colossal Consumption</span> (0s) per target<br>If an enemy champion is nearby for a few seconds, your next Attack against them deals <span class=\"effect-orange-text\">70 plus 6%</span> of your max Health as <span class=\"effect-orange-text\">bonus physical damage</span> and grants <span class=\"effect-green-text\">10%</span> of the damage as <span class=\"effect-green-text\">max Health.</span><br><br><span class=\"effect-passive-text\">Goliath</span><br>For each <span class=\"effect-green-text\">1000 max Health</span>, gain 3% increased size, up to 30%. ",
+  "description": "<div class=\"effect-stats\">900 Health<br>100% Base Health Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Colossal Consumption</span> (0s) per target<br>If an enemy champion is nearby for a few seconds, your next Attack against them deals <span class=\"effect-text-orange\">70 plus 6%</span> of your max Health as <span class=\"effect-text-orange\">bonus physical damage</span> and grants <span class=\"effect-text-green\">10%</span> of the damage as <span class=\"effect-text-green\">max Health.</span><hr class='effect-hr'><span class=\"effect-text-passive\">Goliath</span><br>For each <span class=\"effect-text-green\">1000 max Health</span>, gain 3% increased size, up to 30%. ",
   "gold": {
     "base": 400,
     "purchasable": true,
@@ -62,7 +62,7 @@
   ],
   "arena": {
     "id": 223084,
-    "description": "<div class=\"effect-stats\">700 Health</div><br><br><span class=\"effect-passive-text\">Colossal Consumption</span> (0s) per target<br>Charge up a powerful attack against a champion over time while near them. The charged attack deals bonus physical damage and grants permanent max Health.<br><br><span class=\"effect-passive-text\">Goliath</span><br>Gain increased size based on Total Health. ",
+    "description": "<div class=\"effect-stats\">700 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Colossal Consumption</span> (0s) per target<br>Charge up a powerful attack against a champion over time while near them. The charged attack deals bonus physical damage and grants permanent max Health.<hr class='effect-hr'><span class=\"effect-text-passive\">Goliath</span><br>Gain increased size based on Total Health. ",
     "stats": {
       "health": 700
     },

@@ -20,7 +20,7 @@
     "magicResistance": 80,
     "abilityHaste": 25
   },
-  "description": "<div class=\"effect-stats\">1000 Health<br>100 Armor<br>80 Magic Resist<br>25 Ability Haste<br>200% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\"> magic damage</span> per second to nearby enemies for 5 seconds. ",
+  "description": "<div class=\"effect-stats\">1000 Health<br>100 Armor<br>80 Magic Resist<br>25 Ability Haste<br>200% Base Health Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-text-purple\"> magic damage</span> per second to nearby enemies for 5 seconds. ",
   "gold": {
     "base": 6000,
     "purchasable": true,

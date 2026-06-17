@@ -1,0 +1,10 @@
+{
+  "id": 8347,
+  "name": "Cosmic Insight",
+  "description": "+18 Summoner Spell Haste<br>+10 Item Haste",
+  "path": "Inspiration",
+  "pathId": 8300,
+  "tier": 3,
+  "tierLabel": "Beyond",
+  "tierSlot": 0
+}

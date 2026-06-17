@@ -18,7 +18,7 @@
     "lethality": 15,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">60 Attack Damage<br>21 Lethality</div><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Soul Anchor</span> (0s)<br>Mark your current location. After 5 seconds, return to that location. You may recast at any point during <span class=\"effect-active-text\">Soul Anchor's</span> duration to return to your marked location early.",
+  "description": "<div class=\"effect-stats\">60 Attack Damage<br>21 Lethality</div><hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Soul Anchor</span> (0s)<br>Mark your current location. After 5 seconds, return to that location. You may recast at any point during <span class=\"effect-text-active\">Soul Anchor's</span> duration to return to your marked location early.",
   "gold": {
     "base": 2500,
     "purchasable": true,

@@ -51,7 +51,7 @@
     "mana": 600,
     "abilityHaste": 25
   },
-  "description": "<div class=\"effect-stats\">70 Ability Power<br>600 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain Ability Power equal to <span class=\"effect-blue-text\">1% bonus Mana.</span><br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 5 charges)<br>Landing Abilities grants <span class=\"effect-blue-text\">5 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Seraph's Embrace</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>600 Mana<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Awe</span><br>Gain Ability Power equal to <span class=\"effect-text-blue\">1% bonus Mana.</span><hr class='effect-hr'><span class=\"effect-text-passive\">Manaflow</span> (8s, max 5 charges)<br>Landing Abilities grants <span class=\"effect-text-blue\">5 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-text-gold\">Seraph's Embrace</span> at <span class=\"effect-text-blue\">360 max Mana</span>.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -67,7 +67,7 @@
   ],
   "arena": {
     "id": 223003,
-    "description": "<div class=\"effect-stats\">55 Ability Power<br>600 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span> <br>Gain Ability Power equal to <span class=\"effect-blue-text\">2% bonus Mana.</span><br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Seraph's Embrace</span>.",
+    "description": "<div class=\"effect-stats\">55 Ability Power<br>600 Mana<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Awe</span> <br>Gain Ability Power equal to <span class=\"effect-text-blue\">2% bonus Mana.</span><hr class='effect-hr'><span class=\"effect-text-passive\">Mana Charge</span><br><b class=\"effect-text-bold\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-text-gold\">Seraph's Embrace</span>.",
     "stats": {
       "mana": 600,
       "abilityPower": 55

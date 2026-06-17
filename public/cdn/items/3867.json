@@ -54,7 +54,7 @@
     "healthRegen": 75,
     "manaRegen": 75
   },
-  "description": "<div class=\"effect-stats\">5 Gold Per 10 Seconds<br>75% Base Health Regen<br>75% Base Mana Regen<br>200 Health</div><br><br><span class=\"effect-passive-text\">Upgrade</span> <br>This item can be upgraded into <span class=\"effect-gold-text\">Bloodsong</span>, <span class=\"effect-gold-text\">Celestial Opposition</span>, <span class=\"effect-gold-text\">Dream Maker</span>, <span class=\"effect-gold-text\">Zaz'Zak's Realmspike</span>, or <span class=\"effect-gold-text\">Solstice Sleigh</span> for free.<span class=\"effect-active-text\">Active</span> (4 charges)<br>Places an Invisible Stealth Ward that grants vision.",
+  "description": "<div class=\"effect-stats\">5 Gold Per 10 Seconds<br>75% Base Health Regen<br>75% Base Mana Regen<br>200 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Upgrade</span> <br>This item can be upgraded into <span class=\"effect-text-gold\">Bloodsong</span>, <span class=\"effect-text-gold\">Celestial Opposition</span>, <span class=\"effect-text-gold\">Dream Maker</span>, <span class=\"effect-text-gold\">Zaz'Zak's Realmspike</span>, or <span class=\"effect-text-gold\">Solstice Sleigh</span> for free.<span class=\"effect-text-active\">Active</span> (4 charges)<br>Places an Invisible Stealth Ward that grants vision.",
   "gold": {
     "base": 400,
     "purchasable": false,

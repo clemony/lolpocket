@@ -66,7 +66,7 @@
   }
 
   .tip-icon {
-    @apply mr-2 mb-0.25 ml-0.5 inline-flex size-4.25 align-middle not-dark:not-dim:invert;
+    @apply mr-2 mb-0.25 ml-0.5 inline-flex size-4 align-middle rounded-full;
   }
 
   .inline-icon {

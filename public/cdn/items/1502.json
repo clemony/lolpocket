@@ -20,7 +20,7 @@
     }
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-unique-text\">Reinforced</span><br>Turrets take 80% reduced damage, including True Damage, when no enemy Lane Minions or Rift Herald are nearby.<br><br><span class=\"effect-unique-text\">Melee Weakness</span><br>Turrets take 20% increased damage from melee Champions.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-unique\">Reinforced</span><br>Turrets take 80% reduced damage, including True Damage, when no enemy Lane Minions or Rift Herald are nearby.<hr class='effect-hr'><span class=\"effect-text-unique\">Melee Weakness</span><br>Turrets take 20% increased damage from melee Champions.",
   "gold": {
     "base": 0,
     "purchasable": false,

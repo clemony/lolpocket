@@ -23,7 +23,7 @@
     "health": 400,
     "magicResistance": 35
   },
-  "description": "<div class=\"effect-stats\">400 Health<br>35 Armor<br>35 Magic Resist<br>12% Heal and Shield Power</div><br><br><span class=\"effect-passive-text\">Judgement</span><br>Gain 30 Ultimate Haste.<br><br><span class=\"effect-passive-text\">Guiding Light</span><br>Upon casting your Ultimate you Transcend, increasing your <span class=\"effect-green-text\">Max Health by </span> for 9 seconds. While Transcended, you and allies within 5000 range of you <span class=\"effect-green-text\">heal for  ()</span> over the duration (0s).",
+  "description": "<div class=\"effect-stats\">400 Health<br>35 Armor<br>35 Magic Resist<br>12% Heal and Shield Power</div><hr class='effect-hr'><span class=\"effect-text-passive\">Judgement</span><br>Gain 30 Ultimate Haste.<hr class='effect-hr'><span class=\"effect-text-passive\">Guiding Light</span><br>Upon casting your Ultimate you Transcend, increasing your <span class=\"effect-text-green\">Max Health by </span> for 9 seconds. While Transcended, you and allies within 5000 range of you <span class=\"effect-text-green\">heal for  ()</span> over the duration (0s).",
   "gold": {
     "base": 2750,
     "purchasable": true,

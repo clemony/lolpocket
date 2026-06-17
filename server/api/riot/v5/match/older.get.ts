@@ -1,6 +1,10 @@
 //
 // /server/api/matches/older.get.ts
 import { idsByPuuid, matchById } from "#server/domain"
+import {
+  getSummonerCacheDb,
+  upsertCachedMatchParticipants
+} from "#server/utils/summoner-cache"
 
 export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const puuid = getQuery(event).puuid as string
@@ -38,6 +42,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
 
   const nextCursor = cursor + ids.length
   const done = ids.length < batchSize // if we didn’t fill the window, we're out of matches
+  await upsertCachedMatchParticipants(getSummonerCacheDb(event), results)
 
   return {
     cursor: nextCursor,

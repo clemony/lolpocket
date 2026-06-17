@@ -1,7 +1,7 @@
 {
   "id": 9407,
   "name": "Hopped-Up Hex",
-  "description": "<div class=\"effect-stats\"></div><br><br>Aurora now shoots more hexes and her purge now deals damage in an area around  Hexedtarget. <br><br>Damage, Ability Haste, Crit Chance, Projectiles, Duration, Exp",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Aurora now shoots more hexes and her purge now deals damage in an area around  Hexedtarget. <hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectiles, Duration, Exp",
   "gold": {
     "base": 0,
     "purchasable": true,

@@ -49,7 +49,7 @@
     "health": 200,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">200 Health<br>4% Move Speed</div><br><br>",
+  "description": "<div class=\"effect-stats\">200 Health<br>4% Move Speed</div><hr class='effect-hr'>",
   "gold": {
     "base": 400,
     "purchasable": true,

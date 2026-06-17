@@ -29,7 +29,7 @@
     "mana": 300,
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">90 Ability Power<br>300 Mana<br>10 Ability Haste</div><br><br><span class=\"effect-active-text\">Mana Made Real</span> (0s)<br>For 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.",
+  "description": "<div class=\"effect-stats\">90 Ability Power<br>300 Mana<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Mana Made Real</span> (0s)<br>For 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.",
   "gold": {
     "base": 750,
     "purchasable": true,
@@ -45,7 +45,7 @@
   ],
   "arena": {
     "id": 222522,
-    "description": "<div class=\"effect-stats\">90 Ability Power<br>300 Mana<br>10 Ability Haste</div><br><br><span class=\"effect-active-text\">Mana Made Real</span> (0s)<br>For 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.",
+    "description": "<div class=\"effect-stats\">90 Ability Power<br>300 Mana<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Mana Made Real</span> (0s)<br>For 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.",
     "stats": {
       "mana": 300,
       "abilityPower": 90

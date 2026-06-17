@@ -1,7 +1,7 @@
 {
   "id": 1104,
   "name": "Eye of the Herald",
-  "description": "<div class=\"effect-stats\"></div><br><br><br><br><span class=\"effect-active-text\">Active - Consume:</span> Crush the Eye of the Herald, begining the ritual to summon Rift Herald. You may click the Rift Herald after it has summoned to control how it charges. This control effect can be done once when it is summoned, and once each time a nearby enemy structure dies.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active - Consume:</span> Crush the Eye of the Herald, begining the ritual to summon Rift Herald. You may click the Rift Herald after it has summoned to control how it charges. This control effect can be done once when it is summoned, and once each time a nearby enemy structure dies.",
   "gold": {
     "base": 0,
     "purchasable": false,

@@ -27,7 +27,7 @@
     "abilityPower": 20,
     "health": 100
   },
-  "description": "<div class=\"effect-stats\">20 Ability Power<br>100 Health</div><br><br><span class=\"effect-passive-text\">Glory</span><br>Takedowns grant <span class=\"effect-passive-text\">Glory</span>, up to 25. 10 <span class=\"effect-passive-text\">Glory</span> is lost on death.<br>Gain <span class=\"effect-purple-text\">5 Ability Power</span> per <span class=\"effect-passive-text\">Glory</span> and <span class=\"effect-gray-text\">10% Move Speed</span> at 10 or higher <span class=\"effect-passive-text\">Glory</span>.",
+  "description": "<div class=\"effect-stats\">20 Ability Power<br>100 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Glory</span><br>Takedowns grant <span class=\"effect-text-passive\">Glory</span>, up to 25. 10 <span class=\"effect-text-passive\">Glory</span> is lost on death.<br>Gain <span class=\"effect-text-purple\">5 Ability Power</span> per <span class=\"effect-text-passive\">Glory</span> and <span class=\"effect-text-gray\">10% Move Speed</span> at 10 or higher <span class=\"effect-text-passive\">Glory</span>.",
   "gold": {
     "base": 1150,
     "purchasable": true,

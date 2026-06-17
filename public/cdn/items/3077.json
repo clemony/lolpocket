@@ -57,7 +57,7 @@
   "stats": {
     "attackDamage": 20
   },
-  "description": "<div class=\"effect-stats\">20 Attack Damage</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> to nearby enemies.<br><span class=\"effect-active-text\">Crescent</span><br>Deal <span class=\"effect-orange-text\">physical damage</span> to enemies around you.",
+  "description": "<div class=\"effect-stats\">20 Attack Damage</div><hr class='effect-hr'><span class=\"effect-text-passive\">Cleave</span><br>Attacks deal <span class=\"effect-text-orange\">physical damage</span> to nearby enemies.<br><span class=\"effect-text-active\">Crescent</span><br>Deal <span class=\"effect-text-orange\">physical damage</span> to enemies around you.",
   "gold": {
     "base": 500,
     "purchasable": true,

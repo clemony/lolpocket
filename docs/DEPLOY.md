@@ -36,6 +36,24 @@ A successful Pages build creates:
 This SSR build does not need a root `dist/index.html`.
 If `dist/_worker.js` exists, the Pages runtime can serve the app.
 
+### Summoner Cache D1 Binding
+
+The persistent summoner preview/search cache expects a D1 binding named
+`SUMMONER_CACHE_DB`.
+
+Create the D1 database in Cloudflare, apply the SQL migrations in `migrations/`,
+then expose it to Pages in one of two ways:
+
+- Set a Pages binding in the dashboard: Settings > Bindings > Add > D1 database,
+  with variable name `SUMMONER_CACHE_DB`.
+- Or set `SUMMONER_CACHE_D1_DATABASE_ID` before build so Nitro emits the D1
+  binding into the generated Wrangler config. Optionally set
+  `SUMMONER_CACHE_D1_DATABASE_NAME` and
+  `SUMMONER_CACHE_D1_PREVIEW_DATABASE_ID`.
+
+If the binding is absent, Riot routes still work, but the persistent cache is
+skipped.
+
 ### Common 404 Cause
 
 A domain-level 404 usually means the Pages project is deploying the wrong artifact.

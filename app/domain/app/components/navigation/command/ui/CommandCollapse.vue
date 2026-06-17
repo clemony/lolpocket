@@ -10,8 +10,6 @@ const open = shallowRef<boolean>(false)
 const group = computed(() => {
   return safeObject(props.group)
 })
-
-const slidebar = inject<UseSidebar>("slidebar")
 </script>
 
 <template>

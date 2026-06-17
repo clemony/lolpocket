@@ -1,7 +1,7 @@
 {
   "id": 9279,
   "name": "Bunny Prime Ballista",
-  "description": "<div class=\"effect-stats\"></div><br><br>Fires a cone of projectiles with bonus crit chance in a random direction. Projectiles pierce on crit.<br><br>Evolve: Crit Chance<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Fires a cone of projectiles with bonus crit chance in a random direction. Projectiles pierce on crit.<hr class='effect-hr'>Evolve: Crit Chance<hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

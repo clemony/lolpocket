@@ -40,7 +40,7 @@
     "magicResistance": 40,
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">400 Health<br>40 Magic Resist<br>10 Ability Haste<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\">magic damage</span> per second to nearby enemies for 3 seconds. <br><br><span class=\"effect-passive-text\">Desolate</span><br>Killing an enemy deals <span class=\"effect-purple-text\">magic damage</span> around them.",
+  "description": "<div class=\"effect-stats\">400 Health<br>40 Magic Resist<br>10 Ability Haste<br>100% Base Health Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-text-purple\">magic damage</span> per second to nearby enemies for 3 seconds. <hr class='effect-hr'><span class=\"effect-text-passive\">Desolate</span><br>Killing an enemy deals <span class=\"effect-text-purple\">magic damage</span> around them.",
   "gold": {
     "base": 650,
     "purchasable": true,
@@ -56,7 +56,7 @@
   ],
   "arena": {
     "id": 226664,
-    "description": "<div class=\"effect-stats\">450 Health<br>40 Magic Resist<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\">magic damage</span> per second to nearby enemies for 3 seconds. <br><br><span class=\"effect-passive-text\">Desolate</span><br>Killing an enemy deals <span class=\"effect-purple-text\">magic damage</span> around them.",
+    "description": "<div class=\"effect-stats\">450 Health<br>40 Magic Resist<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-text-purple\">magic damage</span> per second to nearby enemies for 3 seconds. <hr class='effect-hr'><span class=\"effect-text-passive\">Desolate</span><br>Killing an enemy deals <span class=\"effect-text-purple\">magic damage</span> around them.",
     "stats": {
       "magicResistance": 40,
       "health": 450

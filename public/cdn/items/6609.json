@@ -39,7 +39,7 @@
     "health": 450,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">45 Attack Damage<br>450 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Hackshorn</span><br>Dealing physical damage applies 40% Wounds to enemy champions for 3 seconds.",
+  "description": "<div class=\"effect-stats\">45 Attack Damage<br>450 Health<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Hackshorn</span><br>Dealing physical damage applies 40% Wounds to enemy champions for 3 seconds.",
   "gold": {
     "base": 250,
     "purchasable": true,
@@ -55,7 +55,7 @@
   ],
   "arena": {
     "id": 226609,
-    "description": "<div class=\"effect-stats\">45 Attack Damage<br>450 Health<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Hackshorn</span><br>Dealing physical damage applies 40% Grievous Wounds to enemy champions for 3 seconds.<br><br><b class=\"effect-bold-text\">If an enemy heals for more than 60% of their maximum health while continously affected by Grievous Wounds, it is increased to 80% Grievous Wounds.</b><br><br>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>450 Health<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Hackshorn</span><br>Dealing physical damage applies 40% Grievous Wounds to enemy champions for 3 seconds.<hr class='effect-hr'><b class=\"effect-text-bold\">If an enemy heals for more than 60% of their maximum health while continously affected by Grievous Wounds, it is increased to 80% Grievous Wounds.</b><hr class='effect-hr'>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
     "stats": {
       "health": 450,
       "attackDamage": 45

@@ -30,7 +30,7 @@
     "health": 500,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">70 Attack Damage<br>50% Attack Speed<br>6% Move Speed</div><br><br><span class=\"effect-passive-text\">Covering Fire</span><br>Every 10 seconds, Autocast fires a bolt towards a nearby target, dealing <span class=\"effect-orange-text\"> physical damage</span> and applying <span class=\"effect-red-text\">On-Hit</span> effects.<br><br><span class=\"effect-passive-text\">Energized</span><br>Moving and Attacking generates an Energized Attack.<br><br><span class=\"effect-passive-text\">Unload</span><br>Your Energized Attacks trigger your Autocast effects.",
+  "description": "<div class=\"effect-stats\">70 Attack Damage<br>50% Attack Speed<br>6% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Covering Fire</span><br>Every 10 seconds, Autocast fires a bolt towards a nearby target, dealing <span class=\"effect-text-orange\"> physical damage</span> and applying <span class=\"effect-text-red\">On-Hit</span> effects.<hr class='effect-hr'><span class=\"effect-text-passive\">Energized</span><br>Moving and Attacking generates an Energized Attack.<hr class='effect-hr'><span class=\"effect-text-passive\">Unload</span><br>Your Energized Attacks trigger your Autocast effects.",
   "gold": {
     "base": 2750,
     "purchasable": true,

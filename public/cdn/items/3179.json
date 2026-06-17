@@ -47,7 +47,7 @@
     "lethality": 18,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">60 Attack Damage<br>18 Lethality<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Nightstalker</span><br>After being unseen by enemies briefly, your next attack against a champion deals an additional <span class=\"effect-orange-text\">true damage</span>.<br><br><span class=\"effect-passive-text\">Blackout</span><br>When you are near enemy Stealth Wards and traps, reveal them briefly. While revealing wards, your attacks deal bonus damage to them.",
+  "description": "<div class=\"effect-stats\">60 Attack Damage<br>18 Lethality<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Nightstalker</span><br>After being unseen by enemies briefly, your next attack against a champion deals an additional <span class=\"effect-text-orange\">true damage</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Blackout</span><br>When you are near enemy Stealth Wards and traps, reveal them briefly. While revealing wards, your attacks deal bonus damage to them.",
   "gold": {
     "base": 750,
     "purchasable": true,

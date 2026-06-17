@@ -1,7 +1,7 @@
 {
   "id": 3012,
   "name": "Chalice of Blessing",
-  "description": "<div class=\"effect-stats\">200 Health<br>50% Base Mana Regen</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Harmony:</span> Gain 25% Base Health Regen per <span class=\"effect-blue-text\">25% Base Mana Regen</span>.<br><br>'These blessed waters still carry their power to the worthy.'",
+  "description": "<div class=\"effect-stats\">200 Health<br>50% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Harmony:</span> Gain 25% Base Health Regen per <span class=\"effect-text-blue\">25% Base Mana Regen</span>.<hr class='effect-hr'><small class=\"effect-flavor-text\">'These blessed waters still carry their power to the worthy.'</small>",
   "stats": {
     "health": 200
   },

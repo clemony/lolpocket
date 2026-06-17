@@ -17,7 +17,7 @@
     "health": 400,
     "abilityHaste": 30
   },
-  "description": "<div class=\"effect-stats\">85 Adaptive Force<br>400 Health<br>30 Ability Haste</div><br><br><span class=\"effect-passive-text\">Between the Ribs</span><br>You can see weakpoints in nearby enemy champions. Dealing damage through the weakpoint deals an additional <span class=\"effect-orange-text\"> max Health true damage</span> and grants <span class=\"effect-gray-text\"> Move Speed</span> for 1.5 seconds.",
+  "description": "<div class=\"effect-stats\">85 Adaptive Force<br>400 Health<br>30 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Between the Ribs</span><br>You can see weakpoints in nearby enemy champions. Dealing damage through the weakpoint deals an additional <span class=\"effect-text-orange\"> max Health true damage</span> and grants <span class=\"effect-text-gray\"> Move Speed</span> for 1.5 seconds.",
   "gold": {
     "base": 2750,
     "purchasable": true,

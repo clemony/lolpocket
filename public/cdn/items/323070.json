@@ -1,7 +1,7 @@
 {
   "id": 323070,
   "name": "Tear of the Goddess",
-  "description": "<div class=\"effect-stats\">240 Mana</div><br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 4 charges)<br>Landing Abilities grants <span class=\"effect-blue-text\">6.5 max Mana</span> (doubled vs. champions), up to <span class=\"effect-blue-text\">360</span>.<br><br><span class=\"effect-passive-text\">Helping Hand</span><br>Attacks deal an additional <span class=\"effect-orange-text\">5 physical damage</span> to minions.",
+  "description": "<div class=\"effect-stats\">240 Mana</div><hr class='effect-hr'><span class=\"effect-text-passive\">Manaflow</span> (8s, max 4 charges)<br>Landing Abilities grants <span class=\"effect-text-blue\">6.5 max Mana</span> (doubled vs. champions), up to <span class=\"effect-text-blue\">360</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Helping Hand</span><br>Attacks deal an additional <span class=\"effect-text-orange\">5 physical damage</span> to minions.",
   "stats": {
     "mana": 240
   },

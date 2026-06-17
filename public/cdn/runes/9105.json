@@ -1,0 +1,10 @@
+{
+  "id": 9105,
+  "name": "Legend: Haste",
+  "description": "Gain 1.5 basic ability haste for every <i class=\"effect-text-emphasis\">Legend</i> stack (<span class=\"effect-text-green\">max 10 stacks</span>).<hr class='effect-hr'>Earn progress toward <i class=\"effect-text-emphasis\">Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill.",
+  "path": "Precision",
+  "pathId": 8000,
+  "tier": 2,
+  "tierLabel": "Legend",
+  "tierSlot": 1
+}

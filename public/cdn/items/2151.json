@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Consume</span><br>Grants <span class=\"effect-orange-text\">5 true damage</span> on hit against minions for 60 seconds. When this effect expires, gain 60 gold. ",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Consume</span><br>Grants <span class=\"effect-text-orange\">5 true damage</span> on hit against minions for 60 seconds. When this effect expires, gain 60 gold. ",
   "gold": {
     "base": 50,
     "purchasable": false,

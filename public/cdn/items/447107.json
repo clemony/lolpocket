@@ -17,7 +17,7 @@
     "attackSpeed": 50,
     "percentMovespeed": 8
   },
-  "description": "<div class=\"effect-stats\">80 Adaptive Force<br>50% Attack Speed<br>8% Move Speed</div><br><br>Attacks and Non-Ultimate Abilities grant stacks. Gain Ultimate Damage and Ultimate Ability Haste per stack.",
+  "description": "<div class=\"effect-stats\">80 Adaptive Force<br>50% Attack Speed<br>8% Move Speed</div><hr class='effect-hr'>Attacks and Non-Ultimate Abilities grant stacks. Gain Ultimate Damage and Ultimate Ability Haste per stack.",
   "gold": {
     "base": 2750,
     "purchasable": true,

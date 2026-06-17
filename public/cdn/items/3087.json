@@ -48,7 +48,7 @@
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">45 Attack Damage<br>45 Ability Power<br>30% Attack Speed<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Electrospark</span><br>Your Energized Attacks fire chain lightning, applying <span class=\"effect-red-text\">On-Hit</span> effects and dealing <span class=\"effect-purple-text\">magic damage</span> to nearby targets.<br><br><span class=\"effect-passive-text\">Electroshock</span> <br>Basic Attacks grant extra Energized stacks.",
+  "description": "<div class=\"effect-stats\">45 Attack Damage<br>45 Ability Power<br>30% Attack Speed<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Electrospark</span><br>Your Energized Attacks fire chain lightning, applying <span class=\"effect-text-red\">On-Hit</span> effects and dealing <span class=\"effect-text-purple\">magic damage</span> to nearby targets.<hr class='effect-hr'><span class=\"effect-text-passive\">Electroshock</span> <br>Basic Attacks grant extra Energized stacks.",
   "gold": {
     "base": 625,
     "purchasable": true,
@@ -64,7 +64,7 @@
   ],
   "arena": {
     "id": 223087,
-    "description": "<div class=\"effect-stats\">45 Attack Damage<br>45 Ability Power<br>30% Attack Speed<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Electrospark</span><br>Your Energized Attacks fire chain lightning, applying <span class=\"effect-red-text\">On-Hit</span> effects and dealing <span class=\"effect-purple-text\">magic damage</span> to up to  targets.<br><br><span class=\"effect-passive-text\">Electroshock</span> <br>Basic Attacks grant extra Energized stacks.",
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>45 Ability Power<br>30% Attack Speed<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Electrospark</span><br>Your Energized Attacks fire chain lightning, applying <span class=\"effect-text-red\">On-Hit</span> effects and dealing <span class=\"effect-text-purple\">magic damage</span> to up to  targets.<hr class='effect-hr'><span class=\"effect-text-passive\">Electroshock</span> <br>Basic Attacks grant extra Energized stacks.",
     "stats": {
       "abilityPower": 45,
       "attackDamage": 45,

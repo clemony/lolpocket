@@ -1,0 +1,10 @@
+{
+  "id": 8465,
+  "name": "Guardian",
+  "description": "<i class=\"effect-text-emphasis\">Guard</i> allies within 350 units of you, and allies you target with spells for 2.5s. While <i class=\"effect-text-emphasis\">Guarding</i>, if you or the ally take more than a small amount of damage over the duration of the <i class=\"effect-text-emphasis\">Guard</i>, both of you gain a shield for 1.5s.<hr class='effect-hr'>Cooldown: <span class=\"effect-text-blue\">75 - 40</span> seconds<br>Shield: <span class=\"effect-text-blue\">40 - 150</span> + <span class=\"effect-text-purple\">20%</span> of your ability power + <span class=\"effect-text-green\">6%</span> of your bonus health<br>Proc Threshold: <span class=\"effect-text-blue\">50 - 165</span> postmitigation damage",
+  "path": "Resolve",
+  "pathId": 8400,
+  "tier": 0,
+  "tierLabel": "Keystone",
+  "tierSlot": 2
+}

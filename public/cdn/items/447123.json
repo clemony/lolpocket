@@ -24,7 +24,7 @@
     "manaRegen": 150,
     "abilityHaste": 40
   },
-  "description": "<div class=\"effect-stats\">30% Attack Speed<br>15% Heal and Shield Power<br>40 Ability Haste<br>150% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Pull Their Strings</span> (0s)<br>Attacking a champion adds a stack for 15 seconds. At 4 stacks, Berserk them for 2 seconds. You grant Berserk enemies an additional <span class=\"effect-gold-text\"> Attack Speed</span> and <span class=\"effect-gray-text\">40% Move Speed</span>.<br><br><span class=\"effect-green-text\">Healing</span>, <span class=\"effect-blue-text\">Shielding</span>, or buffing yourself or an ally with an Ability reduces the Cooldown by 5 seconds.<br><br>If only one enemy is alive, instead Fear them for the same duration.",
+  "description": "<div class=\"effect-stats\">30% Attack Speed<br>15% Heal and Shield Power<br>40 Ability Haste<br>150% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Pull Their Strings</span> (0s)<br>Attacking a champion adds a stack for 15 seconds. At 4 stacks, Berserk them for 2 seconds. You grant Berserk enemies an additional <span class=\"effect-text-gold\"> Attack Speed</span> and <span class=\"effect-text-gray\">40% Move Speed</span>.<hr class='effect-hr'><span class=\"effect-text-green\">Healing</span>, <span class=\"effect-text-blue\">Shielding</span>, or buffing yourself or an ally with an Ability reduces the Cooldown by 5 seconds.<hr class='effect-hr'>If only one enemy is alive, instead Fear them for the same duration.",
   "gold": {
     "base": 2750,
     "purchasable": true,

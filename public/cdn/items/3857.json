@@ -1,7 +1,7 @@
 {
   "id": 3857,
   "name": "Pauldrons of Whiterock",
-  "description": "<div class=\"effect-stats\">15 Attack Damage<br>250 Health<br>100% Base Health Regen<br>3 Gold Per 10 Seconds</div><br><br><br><br>This item grants reduced gold from minions if anyone on your team with this item kill excessive numbers of them.<br><br><br><br><span class=\"effect-active-text\">ACTIVE</span><br><span class=\"effect-active-text\">Ward</span> <br>Place an Invisible Stealth Ward that grants vision. Stores 0 Stealth Wards, which refill upon visiting the shop. ",
+  "description": "<div class=\"effect-stats\">15 Attack Damage<br>250 Health<br>100% Base Health Regen<br>3 Gold Per 10 Seconds</div><hr class='effect-hr'>This item grants reduced gold from minions if anyone on your team with this item kill excessive numbers of them.<hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span><br><span class=\"effect-text-active\">Ward</span> <br>Place an Invisible Stealth Ward that grants vision. Stores 0 Stealth Wards, which refill upon visiting the shop. ",
   "stats": {
     "health": 250,
     "attackDamage": 15

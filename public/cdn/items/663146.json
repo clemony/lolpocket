@@ -1,7 +1,7 @@
 {
   "id": 663146,
   "name": "Hextech Gunblade",
-  "description": "<div class=\"effect-stats\">90 Ability Power<br>45 Attack Damage<br>15% Omnivamp</div><br><br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Lightning Bolt</span><br>Shocks the target enemy champion, dealing <span class=\"effect-purple-text\"> magic damage</span> and Slowing them by 40% for 2 seconds.",
+  "description": "<div class=\"effect-stats\">90 Ability Power<br>45 Attack Damage<br>15% Omnivamp</div><hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span> (0s)<br><span class=\"effect-text-active\">Lightning Bolt</span><br>Shocks the target enemy champion, dealing <span class=\"effect-text-purple\"> magic damage</span> and Slowing them by 40% for 2 seconds.",
   "stats": {
     "abilityPower": 90,
     "attackDamage": 45

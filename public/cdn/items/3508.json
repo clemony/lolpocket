@@ -39,7 +39,7 @@
     "criticalStrikeChance": 25,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">50 Attack Damage<br>20 Ability Haste<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> and grants <span class=\"effect-blue-text\">Mana</span> <span class=\"effect-red-text\">On-Hit</span>.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>20 Ability Haste<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-text-orange\">bonus physical damage</span> and grants <span class=\"effect-text-blue\">Mana</span> <span class=\"effect-text-red\">On-Hit</span>.",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -55,7 +55,7 @@
   ],
   "arena": {
     "id": 223508,
-    "description": "<div class=\"effect-stats\">50 Attack Damage<br>20 Ability Haste<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> and grants <span class=\"effect-blue-text\">Mana</span> <span class=\"effect-red-text\">On-Hit</span>.",
+    "description": "<div class=\"effect-stats\">50 Attack Damage<br>20 Ability Haste<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-text-orange\">bonus physical damage</span> and grants <span class=\"effect-text-blue\">Mana</span> <span class=\"effect-text-red\">On-Hit</span>.",
     "stats": {
       "criticalStrikeChance": 25,
       "attackDamage": 50

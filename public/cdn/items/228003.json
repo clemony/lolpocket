@@ -1,7 +1,7 @@
 {
   "id": 228003,
   "name": "Deathblade",
-  "description": "<div class=\"effect-stats\"><span class=\"effect-orange-text\">150</span> Attack Damage<br>20% Critical Strike Chance<br>45% Critical Strike Damage<br><span class=\"effect-orange-text\">20</span> Lethality</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Death and Taxes:</span> Dealing damage that would leave an enemy champion below 7% Health executes them. Champion kills grant an additional 250 gold and heal you for 30% of the targets max health.",
+  "description": "<div class=\"effect-stats\"><span class=\"effect-text-orange\">150</span> Attack Damage<br>20% Critical Strike Chance<br>45% Critical Strike Damage<br><span class=\"effect-text-orange\">20</span> Lethality</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Death and Taxes:</span> Dealing damage that would leave an enemy champion below 7% Health executes them. Champion kills grant an additional 250 gold and heal you for 30% of the targets max health.",
   "stats": {
     "criticalStrikeChance": 20,
     "attackDamage": 150

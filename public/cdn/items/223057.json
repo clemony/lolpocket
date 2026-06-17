@@ -1,7 +1,7 @@
 {
   "id": 223057,
   "name": "Sheen",
-  "description": "<div class=\"effect-stats\">10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack is enhanced with additional damage.",
+  "description": "<div class=\"effect-stats\">10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span><br>After using an Ability, your next Attack is enhanced with additional damage.",
   "gold": {
     "base": 2500,
     "purchasable": false,

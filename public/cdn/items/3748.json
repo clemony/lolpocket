@@ -46,7 +46,7 @@
     "attackDamage": 40,
     "health": 600
   },
-  "description": "<div class=\"effect-stats\">40 Attack Damage<br>600 Health</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> on-hit and to enemies behind the target.<br><span class=\"effect-active-text\">Titanic Crescent</span><br>Empower your next <span class=\"effect-passive-text\">Cleave</span> to deal <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span> and deal <span class=\"effect-orange-text\">bonus physical damage</span> to enemies behind the target.",
+  "description": "<div class=\"effect-stats\">40 Attack Damage<br>600 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Cleave</span><br>Attacks deal <span class=\"effect-text-orange\">physical damage</span> on-hit and to enemies behind the target.<br><span class=\"effect-text-active\">Titanic Crescent</span><br>Empower your next <span class=\"effect-text-passive\">Cleave</span> to deal <span class=\"effect-text-orange\">bonus physical damage</span> <span class=\"effect-text-red\">On-Hit</span> and deal <span class=\"effect-text-orange\">bonus physical damage</span> to enemies behind the target.",
   "gold": {
     "base": 50,
     "purchasable": true,
@@ -62,7 +62,7 @@
   ],
   "arena": {
     "id": 223748,
-    "description": "<div class=\"effect-stats\">40 Attack Damage<br>400 Health</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Colossus:</span> Gain bonus <span class=\"effect-orange-text\">Attack Damage based off of bonus Health</span>.<span class=\"effect-list\"><span class=\"effect-passive-text\">Cleave:</span> Attacks apply additional damage <span class=\"effect-red-text\">On-Hit</span>, creating a shockwave that deals damage to enemies behind the target.<span class=\"effect-active-text\">Titanic Crescent</span><br>Empower your next <span class=\"effect-passive-text\">Cleave</span> to deal <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span> and deal <span class=\"effect-orange-text\">bonus physical damage</span> to enemies behind the target.",
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>400 Health</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Colossus:</span> Gain bonus <span class=\"effect-text-orange\">Attack Damage based off of bonus Health</span>.<span class=\"effect-list\"><span class=\"effect-text-passive\">Cleave:</span> Attacks apply additional damage <span class=\"effect-text-red\">On-Hit</span>, creating a shockwave that deals damage to enemies behind the target.<span class=\"effect-text-active\">Titanic Crescent</span><br>Empower your next <span class=\"effect-text-passive\">Cleave</span> to deal <span class=\"effect-text-orange\">bonus physical damage</span> <span class=\"effect-text-red\">On-Hit</span> and deal <span class=\"effect-text-orange\">bonus physical damage</span> to enemies behind the target.",
     "stats": {
       "health": 400,
       "attackDamage": 40

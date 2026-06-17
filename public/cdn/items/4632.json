@@ -44,7 +44,7 @@
     "abilityPower": 40,
     "magicResistance": 25
   },
-  "description": "<div class=\"effect-stats\">40 Ability Power<br>25 Magic Resist</div><br><br><span class=\"effect-passive-text\">Annul</span><br>Grants a Spell Shield that blocks the next enemy Ability.",
+  "description": "<div class=\"effect-stats\">40 Ability Power<br>25 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Annul</span><br>Grants a Spell Shield that blocks the next enemy Ability.",
   "gold": {
     "base": 400,
     "purchasable": true,

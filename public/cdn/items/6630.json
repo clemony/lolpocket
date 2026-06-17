@@ -1,7 +1,7 @@
 {
   "id": 6630,
   "name": "Goredrinker",
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>400 Health<br>20 Ability Haste<br>8% Omnivamp</div><br><br><br><br>Mythic Passive: Grants all other <span class=\"effect-gold-text\">Legendary</span> items 75 Health and 3 Ability Haste.<br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Thirsting Slash:</span> Deal damage to nearby enemies. Restore Health for each champion hit.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>400 Health<br>20 Ability Haste<br>8% Omnivamp</div><hr class='effect-hr'>Mythic Passive: Grants all other <span class=\"effect-text-gold\">Legendary</span> items 75 Health and 3 Ability Haste.<hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Thirsting Slash:</span> Deal damage to nearby enemies. Restore Health for each champion hit.",
   "stats": {
     "health": 400,
     "attackDamage": 55

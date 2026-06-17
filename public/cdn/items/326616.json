@@ -1,7 +1,7 @@
 {
   "id": 326616,
   "name": "Staff of Flowing Water",
-  "description": "<div class=\"effect-stats\">45 Ability Power<br>10% Heal and Shield Power<br>150% Base Mana Regen<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Rapids</span><br>Healing or Shielding an ally grants you both <span class=\"effect-purple-text\">40 Ability Power</span> and 15 Ability Haste for 6 seconds.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>10% Heal and Shield Power<br>150% Base Mana Regen<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Rapids</span><br>Healing or Shielding an ally grants you both <span class=\"effect-text-purple\">40 Ability Power</span> and 15 Ability Haste for 6 seconds.",
   "stats": {
     "abilityPower": 45
   },

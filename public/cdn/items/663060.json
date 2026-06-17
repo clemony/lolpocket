@@ -1,7 +1,7 @@
 {
   "id": 663060,
   "name": "Sword of the Divine",
-  "description": "<div class=\"effect-stats\">90 Adaptive Force<br>50% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Excoriate</span><br>Each Critical strike deals random bonus Critical Strike Damage, scaling up to 50% of your Critical Strike Chance.",
+  "description": "<div class=\"effect-stats\">90 Adaptive Force<br>50% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Excoriate</span><br>Each Critical strike deals random bonus Critical Strike Damage, scaling up to 50% of your Critical Strike Chance.",
   "stats": {
     "criticalStrikeChance": 50
   },

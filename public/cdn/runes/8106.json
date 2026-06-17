@@ -1,0 +1,10 @@
+{
+  "id": 8106,
+  "name": "Ultimate Hunter",
+  "description": "Your ultimate gains 6 Ability Haste, plus an additional 5 Ability Haste per <i class=\"effect-text-emphasis\">Bounty Hunter</i> stack. <i class=\"effect-text-emphasis\">Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion.",
+  "path": "Domination",
+  "pathId": 8100,
+  "tier": 3,
+  "tierLabel": "Hunter",
+  "tierSlot": 2
+}

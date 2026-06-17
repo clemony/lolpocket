@@ -46,7 +46,7 @@
     "criticalStrikeChance": 25,
     "lethality": 10
   },
-  "description": "<div class=\"effect-stats\">50 Attack Damage<br>10 Lethality<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Death</span><br>Your damage executes champions that are below 5% Health.<br><br><span class=\"effect-passive-text\">Taxes</span><br>Champion kills grant <span class=\"effect-gold-text\">25 bonus gold</span>.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>10 Lethality<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Death</span><br>Your damage executes champions that are below 5% Health.<hr class='effect-hr'><span class=\"effect-text-passive\">Taxes</span><br>Champion kills grant <span class=\"effect-text-gold\">25 bonus gold</span>.",
   "gold": {
     "base": 525,
     "purchasable": true,
@@ -62,7 +62,7 @@
   ],
   "arena": {
     "id": 226676,
-    "description": "<div class=\"effect-stats\">45 Attack Damage<br>12 Lethality<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Death</span><br>Your damage executes champions that are <span class=\"effect-green-text\">below 5% Health</span>.<br><br><span class=\"effect-passive-text\">Taxes</span><br>Champion kills grant <span class=\"effect-gold-text\">125 bonus gold</span>.",
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>12 Lethality<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Death</span><br>Your damage executes champions that are <span class=\"effect-text-green\">below 5% Health</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Taxes</span><br>Champion kills grant <span class=\"effect-text-gold\">125 bonus gold</span>.",
     "stats": {
       "criticalStrikeChance": 25,
       "attackDamage": 45

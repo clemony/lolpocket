@@ -45,7 +45,7 @@
     "health": 1000,
     "healthRegen": 100
   },
-  "description": "<div class=\"effect-stats\">1000 Health<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Warmog's Heart</span> <br>If you have 2000 bonus Health and have not taken damage within 8 seconds, restore <span class=\"effect-green-text\"></span> Health per second.<br><br><span class=\"effect-passive-text\">Warmog's Vitality</span><br>Gain bonus Health equal to 12% of your Item Health (<span class=\"effect-green-text\">0</span>).",
+  "description": "<div class=\"effect-stats\">1000 Health<br>100% Base Health Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Warmog's Heart</span> <br>If you have 2000 bonus Health and have not taken damage within 8 seconds, restore <span class=\"effect-text-green\"></span> Health per second.<hr class='effect-hr'><span class=\"effect-text-passive\">Warmog's Vitality</span><br>Gain bonus Health equal to 12% of your Item Health (<span class=\"effect-text-green\">0</span>).",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -61,7 +61,7 @@
   ],
   "arena": {
     "id": 443083,
-    "description": "<div class=\"effect-stats\">1100 Health<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Warmog's Heart</span><br>Requires 1350 <span class=\"effect-green-text\">bonus Health</span>.<br><br>Restore <span class=\"effect-green-text\"> Health</span> per second. If you have not taken damage within 4 seconds, restore an additional <span class=\"effect-green-text\"> Health</span> per second.",
+    "description": "<div class=\"effect-stats\">1100 Health<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Warmog's Heart</span><br>Requires 1350 <span class=\"effect-text-green\">bonus Health</span>.<hr class='effect-hr'>Restore <span class=\"effect-text-green\"> Health</span> per second. If you have not taken damage within 4 seconds, restore an additional <span class=\"effect-text-green\"> Health</span> per second.",
     "stats": {
       "health": 1100,
       "percentMovespeed": 4

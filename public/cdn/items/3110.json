@@ -33,7 +33,7 @@
     "mana": 400,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">75 Armor<br>400 Mana<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Winter's Caress</span><br>Reduce the <span class=\"effect-gold-text\">Attack Speed</span> of nearby champions by <span class=\"effect-gold-text\">20%</span>.",
+  "description": "<div class=\"effect-stats\">75 Armor<br>400 Mana<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Winter's Caress</span><br>Reduce the <span class=\"effect-text-gold\">Attack Speed</span> of nearby champions by <span class=\"effect-text-gold\">20%</span>.",
   "gold": {
     "base": 600,
     "purchasable": true,
@@ -49,7 +49,7 @@
   ],
   "arena": {
     "id": 223110,
-    "description": "<div class=\"effect-stats\">90 Armor<br>450 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Winter's Caress</span><br>Reduces the <span class=\"effect-gold-text\">Attack Speed</span> of nearby enemies.",
+    "description": "<div class=\"effect-stats\">90 Armor<br>450 Mana<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Winter's Caress</span><br>Reduces the <span class=\"effect-text-gold\">Attack Speed</span> of nearby enemies.",
     "stats": {
       "mana": 450,
       "armor": 90

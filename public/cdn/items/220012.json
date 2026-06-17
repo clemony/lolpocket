@@ -1,7 +1,7 @@
 {
   "id": 220012,
   "name": "Shardblade",
-  "description": "<div class=\"effect-stats\"></div><br><br>Increase the effectiveness of stat shards.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Increase the effectiveness of stat shards.",
   "gold": {
     "base": 2500,
     "purchasable": false,

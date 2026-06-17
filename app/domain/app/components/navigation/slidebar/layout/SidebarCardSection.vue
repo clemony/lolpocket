@@ -10,7 +10,7 @@ const props = defineProps<{
   group: RouteGroup<ButtonRouteItem>
 }>()
 
-const slidebar = inject<UseSidebar>("slidebar")
+const slidebar = inject<UseSidebar>("sidebar")
 </script>
 
 <template>

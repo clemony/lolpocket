@@ -37,7 +37,7 @@
     "attackSpeed": 25,
     "flatMovespeed": 45
   },
-  "description": "<div class=\"effect-stats\">25% Attack Speed<br>45 Move Speed</div><br><br>",
+  "description": "<div class=\"effect-stats\">25% Attack Speed<br>45 Move Speed</div><hr class='effect-hr'>",
   "gold": {
     "base": 300,
     "purchasable": true,
@@ -53,7 +53,7 @@
   ],
   "arena": {
     "id": 223006,
-    "description": "<div class=\"effect-stats\">35% Attack Speed<br>55 Move Speed</div><br><br>",
+    "description": "<div class=\"effect-stats\">35% Attack Speed<br>55 Move Speed</div><hr class='effect-hr'>",
     "stats": {
       "flatMovespeed": 55,
       "attackSpeed": 35

@@ -1,7 +1,7 @@
 {
   "id": 2162,
   "name": "Bandle Juice of Vitality",
-  "description": "<div class=\"effect-stats\"></div><br><br>Drink to permanently gain <span class=\"effect-green-text\">200+ 3% Health</span>. And a hat!<br><br>Our specially formulated veggie blend is proven to harden your skin to resist even the strongest attacks!",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Drink to permanently gain <span class=\"effect-text-green\">200+ 3% Health</span>. And a hat!<hr class='effect-hr'><small class=\"effect-flavor-text\">Our specially formulated veggie blend is proven to harden your skin to resist even the strongest attacks!</small>",
   "gold": {
     "base": 1000,
     "purchasable": true,

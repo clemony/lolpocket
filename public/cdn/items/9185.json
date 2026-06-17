@@ -1,7 +1,7 @@
 {
   "id": 9185,
   "name": "Anti-Shark Sea Mine",
-  "description": "<div class=\"effect-stats\"></div><br><br>Fires explosives that bounce between enemies. <br><br>Evolve: Damage<br><br>Damage, Ability Haste, Area Size",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Fires explosives that bounce between enemies. <hr class='effect-hr'>Evolve: Damage<hr class='effect-hr'>Damage, Ability Haste, Area Size",
   "gold": {
     "base": 0,
     "purchasable": true,

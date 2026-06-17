@@ -1,7 +1,7 @@
 {
   "id": 4636,
   "name": "Night Harvester",
-  "description": "<div class=\"effect-stats\">90 Ability Power<br>300 Health<br>25 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Soulrend:</span> Damaging a champion with Attacks or Abilities deals an additional <span class=\"effect-purple-text\"> magic damage</span> and grants you <span class=\"effect-gray-text\">25% Move Speed</span> for 1.5 seconds (30(0s) per champion).<br><br>Mythic Passive: Grants all other <span class=\"effect-gold-text\">Legendary</span> items 5 Ability Haste.<br><br>Damaging a new champion will extend the duration of the Move Speed bonus.",
+  "description": "<div class=\"effect-stats\">90 Ability Power<br>300 Health<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Soulrend:</span> Damaging a champion with Attacks or Abilities deals an additional <span class=\"effect-text-purple\"> magic damage</span> and grants you <span class=\"effect-text-gray\">25% Move Speed</span> for 1.5 seconds (30(0s) per champion).<hr class='effect-hr'>Mythic Passive: Grants all other <span class=\"effect-text-gold\">Legendary</span> items 5 Ability Haste.<hr class='effect-hr'>Damaging a new champion will extend the duration of the Move Speed bonus.",
   "stats": {
     "health": 300,
     "abilityPower": 90

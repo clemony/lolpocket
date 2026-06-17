@@ -1,7 +1,7 @@
 {
   "id": 9302,
   "name": "Sound Wave",
-  "description": "<div class=\"effect-stats\"></div><br><br>Seraphine sends out a wave of sound, damaging and slowing enemies hit.<br><br>Evolve:  Projectile Count<br><br>Damage, Ability Haste, Crit Chance, Projectile Count, Duration ",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Seraphine sends out a wave of sound, damaging and slowing enemies hit.<hr class='effect-hr'>Evolve:  Projectile Count<hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectile Count, Duration ",
   "gold": {
     "base": 0,
     "purchasable": true,

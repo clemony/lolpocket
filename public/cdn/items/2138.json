@@ -11,7 +11,7 @@
     "white"
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Consume</span><br>Grants <span class=\"effect-green-text\">300 Health</span>, 25% Tenacity and increased size for 3 minutes. While active, you leave a path behind that boosts allied champions' <span class=\"effect-gray-text\">Move Speed by 15%</span>.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Consume</span><br>Grants <span class=\"effect-text-green\">300 Health</span>, 25% Tenacity and increased size for 3 minutes. While active, you leave a path behind that boosts allied champions' <span class=\"effect-text-gray\">Move Speed by 15%</span>.",
   "gold": {
     "base": 500,
     "purchasable": true,

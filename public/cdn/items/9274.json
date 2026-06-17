@@ -1,7 +1,7 @@
 {
   "id": 9274,
   "name": "Prumbis's Electrocarver",
-  "description": "<div class=\"effect-stats\"></div><br><br>Creates a storm around targeted enemies that deals damage for a duration.<br><br>Damage, Ability Haste, Area Size, Crit Chance, Duration ",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Creates a storm around targeted enemies that deals damage for a duration.<hr class='effect-hr'>Damage, Ability Haste, Area Size, Crit Chance, Duration ",
   "gold": {
     "base": 0,
     "purchasable": true,

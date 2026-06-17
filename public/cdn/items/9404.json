@@ -1,7 +1,7 @@
 {
   "id": 9404,
   "name": "Wandering Storms",
-  "description": "<div class=\"effect-stats\"></div><br><br>Yasuo hones his energy, shooting fewer and larger tornadoes that curve through the air and leave damaging tempests at their end point.<br><br>Damage, Abilty Haste, Crit Chance, Projectile Count, Area Size, Duration",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Yasuo hones his energy, shooting fewer and larger tornadoes that curve through the air and leave damaging tempests at their end point.<hr class='effect-hr'>Damage, Abilty Haste, Crit Chance, Projectile Count, Area Size, Duration",
   "gold": {
     "base": 0,
     "purchasable": true,

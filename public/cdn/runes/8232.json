@@ -1,0 +1,10 @@
+{
+  "id": 8232,
+  "name": "Waterwalking",
+  "description": "Gain <span class=\"effect-text-gray\">10 Move Speed</span> and 13 - 30 Adaptive Force (based on level) when in the river.<hr class='effect-hr'><i class=\"effect-text-emphasis\">May you be as swift as the rushing river and agile as a startled Rift Scuttler.</i>",
+  "path": "Sorcery",
+  "pathId": 8200,
+  "tier": 3,
+  "tierLabel": "Power",
+  "tierSlot": 1
+}

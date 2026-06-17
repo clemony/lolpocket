@@ -1,7 +1,7 @@
 {
   "id": 3128,
   "name": "Deathfire Grasp",
-  "description": "<div class=\"effect-stats\">120 Ability Power<br>10 Ability Haste</div><br><br><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">The Silence:</span> Deal magic damage equal to <span class=\"effect-purple-text\">15% of the Target's Max Health</span>, and then amplify damage they take by 15% for 4 seconds (90(0s)).",
+  "description": "<div class=\"effect-stats\">120 Ability Power<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">The Silence:</span> Deal magic damage equal to <span class=\"effect-text-purple\">15% of the Target's Max Health</span>, and then amplify damage they take by 15% for 4 seconds (90(0s)).",
   "stats": {
     "abilityPower": 120
   },

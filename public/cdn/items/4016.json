@@ -25,7 +25,7 @@
     "healAndShieldPower": 25,
     "abilityHaste": 25
   },
-  "description": "<div class=\"effect-stats\">50 Ability Power<br>15% Heal and Shield Power<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Promise</span><br>Gain 15% of your Promised <span class=\"effect-purple-text\">ally's Ability Power</span>, and grant your Promised ally 15% of your Ability Haste.<br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Promise</span><br>Make a Promise to an ally.",
+  "description": "<div class=\"effect-stats\">50 Ability Power<br>15% Heal and Shield Power<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Promise</span><br>Gain 15% of your Promised <span class=\"effect-text-purple\">ally's Ability Power</span>, and grant your Promised ally 15% of your Ability Haste.<hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span> (0s)<br><span class=\"effect-text-active\">Promise</span><br>Make a Promise to an ally.",
   "gold": {
     "base": 2500,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 4638,
   "name": "Watchful Wardstone",
-  "description": "<div class=\"effect-stats\">150 Health<br>10 Ability Haste<br>10 Armor<br>15 Magic Resist</div><br><br><span class=\"effect-passive-text\">Arcane Cache</span><br>This item can store up to 3 purchased Control Wards.",
+  "description": "<div class=\"effect-stats\">150 Health<br>10 Ability Haste<br>10 Armor<br>15 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Arcane Cache</span><br>This item can store up to 3 purchased Control Wards.",
   "stats": {
     "magicResistance": 15,
     "health": 150,

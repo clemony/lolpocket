@@ -1,7 +1,7 @@
 {
   "id": 3862,
   "name": "Spectral Sickle",
-  "description": "<div class=\"effect-stats\">6 Attack Damage<br>25 Health<br>25% Base Mana Regen<br>2 Gold Per 10 Seconds</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Tribute:</span> While nearby an ally champion, damaging Abilities and Attacks against champions or buildings grant 20 gold. This can occur up to 3 times every 36 seconds.<span class=\"effect-list\"><span class=\"effect-passive-text\">Quest:</span> Earn 500 gold from this item to transform it into <span class=\"effect-gray-text\">Harrowing Crescent</span>, gaining <span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Warding</span>.<br><br>This item grants reduced gold from minions if anyone on your team with this item kill excessive numbers of them.",
+  "description": "<div class=\"effect-stats\">6 Attack Damage<br>25 Health<br>25% Base Mana Regen<br>2 Gold Per 10 Seconds</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Tribute:</span> While nearby an ally champion, damaging Abilities and Attacks against champions or buildings grant 20 gold. This can occur up to 3 times every 36 seconds.<span class=\"effect-list\"><span class=\"effect-text-passive\">Quest:</span> Earn 500 gold from this item to transform it into <span class=\"effect-text-gray\">Harrowing Crescent</span>, gaining <span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Warding</span>.<hr class='effect-hr'>This item grants reduced gold from minions if anyone on your team with this item kill excessive numbers of them.",
   "stats": {
     "health": 25,
     "attackDamage": 6

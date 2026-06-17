@@ -21,7 +21,7 @@ const filteredFrom = computedOnce<ItemComponent[]>(() => {
 
 <template>
   <div
-    class="relative mx-auto mt-5 flex w-[calc(100%-2px)] flex-col gap-1 rounded-3xl bg-nc/6! px-0.5 pt-3 pb-2 font-medium text-n5 ring ring-n3/80">
+    class="relative mx-auto mt-4 flex w-[calc(100%-2px)] flex-col gap-1 rounded-3xl bg-nc/6! px-0.5 pt-3 pb-2 font-medium text-n5 ring ring-n3/80">
     <div
       class="absolute -top-2.5 left-2.5 z-4 text-2xs font-semibold text-nc/50">
       RECIPE

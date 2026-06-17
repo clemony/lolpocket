@@ -1,15 +1,21 @@
 <script lang="ts" setup>
 import { useScrollProvider } from "#layers/lib/app/composables/navigation/useElementScroll"
-import type { NavigationMenuItem } from "@nuxt/ui"
-import { getRandomBg, getSplash, getSplashFromSkinKey } from "~/domain/utils/img"
+import type { NavigationMenuItem, TabsItem } from "@nuxt/ui"
+import {
+  getRandomBg,
+  getSplash,
+  getSplashFromSkinKey,
+} from "~/domain/utils/img"
 
-const { champion, pocket } = defineProps<{
+const { champion, pocket, routes } = defineProps<{
   pocket?: Pocket
   champion?: Champion
   navItem?: NavigationMenuItem
+  routes?: TabsItem[]
 }>()
 
 const route = useRoute()
+const activeRoute = shallowRef<string>(String(route.name))
 
 const scrollRef = useState<HTMLElement>("scrollRef")
 const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -100 })
@@ -52,15 +58,19 @@ const bg = computed(() =>
       </UContainer>
     </div>
     <!-- Sticky Tabs  -->
-    <div
-      class="pointer-events-none sticky top-0 z-11 -mt-15 flex h-15 w-full items-end justify-start gap-4 overflow-hidden pl-20">
-      <UContainer>
-        <ClientOnly>
-          <LazySummonerChampionNavTabs v-if="isSummonerRoute" />
-          <LazyNavFileTabs v-else />
-        </ClientOnly>
-      </UContainer>
-    </div>
+    <UTabs
+      v-if="routes"
+      v-model="activeRoute"
+      size="xl"
+      :content="false"
+      :ui="{
+        root: 'pointer-events-none sticky top-20 z-11 -mt-13.75 flex h-fit w-full justify-center gap-4 overflow-hidden',
+        list: 'max-w-(--ui-container) px-20',
+        trigger: 'max-w-52',
+      }"
+      :items="routes"
+      variant="lift" />
+
     <UMain class="z-0 bg-p0">
       <!-- page -->
       <UContainer>

@@ -8,6 +8,32 @@ function safeDecode(input: string) {
   }
 }
 
+const RESERVED_ROUTE_PREFIXES = new Set(["_r"])
+
+export function extractIdentifierFromSlug(
+  region: string,
+  slug: string
+): Identifier | null {
+  const normalizedRegion = region.toLowerCase()
+  if (RESERVED_ROUTE_PREFIXES.has(normalizedRegion)) return null
+
+  const sep = slug.lastIndexOf("_")
+  if (sep <= 0 || sep >= slug.length - 1) return null
+
+  const rawName = slug.slice(0, sep)
+  const rawTag = slug.slice(sep + 1)
+
+  const name = safeDecode(rawName).trim()
+  const tag = safeDecode(rawTag).trim()
+  if (!name || !tag) return null
+
+  return {
+    name: name.toLowerCase(),
+    region: normalizedRegion,
+    tag: tag.toLowerCase(),
+  }
+}
+
 export function extractIdentifierFromRoute(
   route: RouteLocationNormalized
 ): Identifier | null {
@@ -17,21 +43,7 @@ export function extractIdentifierFromRoute(
 
   if (region && slug) {
     const rawSlug = Array.isArray(slug) ? slug.join("/") : String(slug)
-    const sep = rawSlug.lastIndexOf("_")
-    if (sep <= 0 || sep >= rawSlug.length - 1) return null
-
-    const rawName = rawSlug.slice(0, sep)
-    const rawTag = rawSlug.slice(sep + 1)
-
-    const name = safeDecode(rawName).trim()
-    const tag = safeDecode(rawTag).trim()
-    if (!name || !tag) return null
-
-    return {
-      name: name.toLowerCase(),
-      region: String(region).toLowerCase(),
-      tag: tag.toLowerCase(),
-    }
+    return extractIdentifierFromSlug(String(region), rawSlug)
   }
 
   return null

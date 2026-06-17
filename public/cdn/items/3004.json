@@ -50,7 +50,7 @@
     "mana": 500,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">35 Attack Damage<br>500 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-orange-text\"> bonus Attack Damage</span>.<br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 4 charges)<br>Landing Attacks and Abilities grants <span class=\"effect-blue-text\">3 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Muramana</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
+  "description": "<div class=\"effect-stats\">35 Attack Damage<br>500 Mana<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Awe</span><br>Gain <span class=\"effect-text-orange\"> bonus Attack Damage</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Manaflow</span> (8s, max 4 charges)<br>Landing Attacks and Abilities grants <span class=\"effect-text-blue\">3 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-text-gold\">Muramana</span> at <span class=\"effect-text-blue\">360 max Mana</span>.",
   "gold": {
     "base": 1100,
     "purchasable": true,
@@ -66,7 +66,7 @@
   ],
   "arena": {
     "id": 223004,
-    "description": "<div class=\"effect-stats\">40 Attack Damage<br>600 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain bonus <span class=\"effect-orange-text\">Attack Damage equal to </span>. <br><br><span class=\"effect-passive-text\">Mana Charge</span><br><b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Muramana</span>.",
+    "description": "<div class=\"effect-stats\">40 Attack Damage<br>600 Mana<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Awe</span><br>Gain bonus <span class=\"effect-text-orange\">Attack Damage equal to </span>. <hr class='effect-hr'><span class=\"effect-text-passive\">Mana Charge</span><br><b class=\"effect-text-bold\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-text-gold\">Muramana</span>.",
     "stats": {
       "mana": 600,
       "attackDamage": 40

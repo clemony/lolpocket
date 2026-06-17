@@ -18,7 +18,7 @@
     "lethality": 15,
     "percentMovespeed": 8
   },
-  "description": "<div class=\"effect-stats\">60 Attack Damage<br>15 Lethality<br>8% Move Speed</div><br><br><span class=\"effect-passive-text\">End the Line</span><br>At the start of each round, declare the lowest health enemy the Regent. Getting a takedown on the Regent grants you a permanent <span class=\"effect-orange-text\">15 Attack Damage</span> and refreshes your Ultimate's Cooldown.",
+  "description": "<div class=\"effect-stats\">60 Attack Damage<br>15 Lethality<br>8% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">End the Line</span><br>At the start of each round, declare the lowest health enemy the Regent. Getting a takedown on the Regent grants you a permanent <span class=\"effect-text-orange\">15 Attack Damage</span> and refreshes your Ultimate's Cooldown.",
   "gold": {
     "base": 2750,
     "purchasable": true,

@@ -18,7 +18,7 @@
   "stats": {
     "health": 600
   },
-  "description": "<div class=\"effect-stats\">600 Health<br>80 Adaptive Force</div><br><br>Ignore the next time you are Immobilized, instead dropping a chemical cannister nearby (s Cooldown). Picking up the cannister reduces the Cooldown by 15 seconds and restores <span class=\"effect-green-text\">4% max Health</span>. Enemies stepping on the cannister destroy it.",
+  "description": "<div class=\"effect-stats\">600 Health<br>80 Adaptive Force</div><hr class='effect-hr'>Ignore the next time you are Immobilized, instead dropping a chemical cannister nearby (s Cooldown). Picking up the cannister reduces the Cooldown by 15 seconds and restores <span class=\"effect-text-green\">4% max Health</span>. Enemies stepping on the cannister destroy it.",
   "gold": {
     "base": 2750,
     "purchasable": true,

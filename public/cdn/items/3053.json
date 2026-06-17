@@ -47,7 +47,7 @@
     "health": 400,
     "tenacity": 20
   },
-  "description": "<div class=\"effect-stats\">400 Health<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">The Claws that Catch</span><br>Gain <span class=\"effect-orange-text\">bonus Attack Damage</span>.<br><br><span class=\"effect-passive-text\">Lifeline</span><br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-blue-text\">decaying Shield</span> for 4.5 seconds.",
+  "description": "<div class=\"effect-stats\">400 Health<br>20% Tenacity</div><hr class='effect-hr'><span class=\"effect-text-passive\">The Claws that Catch</span><br>Gain <span class=\"effect-text-orange\">bonus Attack Damage</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span><br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-text-blue\">decaying Shield</span> for 4.5 seconds.",
   "gold": {
     "base": 775,
     "purchasable": true,
@@ -63,7 +63,7 @@
   ],
   "arena": {
     "id": 223053,
-    "description": "<div class=\"effect-stats\">300 Health<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">The Claws that Catch</span><br>Gain <span class=\"effect-orange-text\"> bonus Attack Damage</span>.<br><br><span class=\"effect-passive-text\">Lifeline</span> (0s)<br>Upon taking damage that would reduce your <span class=\"effect-green-text\">Health below 30%</span>, gain a <span class=\"effect-blue-text\"> Shield</span> decaying over 4.5 seconds.",
+    "description": "<div class=\"effect-stats\">300 Health<br>20% Tenacity</div><hr class='effect-hr'><span class=\"effect-text-passive\">The Claws that Catch</span><br>Gain <span class=\"effect-text-orange\"> bonus Attack Damage</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span> (0s)<br>Upon taking damage that would reduce your <span class=\"effect-text-green\">Health below 30%</span>, gain a <span class=\"effect-text-blue\"> Shield</span> decaying over 4.5 seconds.",
     "stats": {
       "health": 300
     },

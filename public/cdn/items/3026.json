@@ -32,7 +32,7 @@
     "armor": 45,
     "attackDamage": 55
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>45 Armor</div><br><br><span class=\"effect-passive-text\">Rebirth</span><br>Upon taking lethal damage, restores <span class=\"effect-green-text\">50% base Health</span> and <span class=\"effect-blue-text\">100% max Mana</span> after 4 seconds of Stasis.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>45 Armor</div><hr class='effect-hr'><span class=\"effect-text-passive\">Rebirth</span><br>Upon taking lethal damage, restores <span class=\"effect-text-green\">50% base Health</span> and <span class=\"effect-text-blue\">100% max Mana</span> after 4 seconds of Stasis.",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -45,7 +45,7 @@
   ],
   "arena": {
     "id": 223026,
-    "description": "<div class=\"effect-stats\">55 Attack Damage<br>45 Armor</div><br><br><span class=\"effect-passive-text\">Saving Grace:</span><br>Upon taking lethal damage, restores <span class=\"effect-green-text\">50% base Health</span> and <span class=\"effect-blue-text\">100% max Mana</span> after 4 seconds of stasis. This effect has a one round cooldown.<br>",
+    "description": "<div class=\"effect-stats\">55 Attack Damage<br>45 Armor</div><hr class='effect-hr'><span class=\"effect-text-passive\">Saving Grace:</span><br>Upon taking lethal damage, restores <span class=\"effect-text-green\">50% base Health</span> and <span class=\"effect-text-blue\">100% max Mana</span> after 4 seconds of stasis. This effect has a one round cooldown.<br>",
     "stats": {
       "armor": 45,
       "attackDamage": 55

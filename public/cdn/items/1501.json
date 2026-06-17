@@ -1,7 +1,7 @@
 {
   "id": 1501,
   "name": "Fortification",
-  "description": "<div class=\"effect-stats\"></div><br><br>",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>",
   "gold": {
     "base": 0,
     "purchasable": false,

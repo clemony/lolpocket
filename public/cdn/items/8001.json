@@ -1,7 +1,7 @@
 {
   "id": 8001,
   "name": "Anathema's Chains",
-  "description": "<div class=\"effect-stats\">650 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Vendetta</span><br>You gain Vendetta stacks over time Each stack of Vendetta grants you 1% reduced damage from your Nemesis.<br><br><span class=\"effect-passive-text\">Vengeance</span><br>At maximum stacks, your Nemesis has reduced Tenacity while near you.<br><br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Vow</span><br>Choose a Nemesis.",
+  "description": "<div class=\"effect-stats\">650 Health<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Vendetta</span><br>You gain Vendetta stacks over time Each stack of Vendetta grants you 1% reduced damage from your Nemesis.<hr class='effect-hr'><span class=\"effect-text-passive\">Vengeance</span><br>At maximum stacks, your Nemesis has reduced Tenacity while near you.<hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span> (0s)<br><span class=\"effect-text-active\">Vow</span><br>Choose a Nemesis.",
   "stats": {
     "health": 650
   },

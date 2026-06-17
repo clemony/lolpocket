@@ -1,7 +1,7 @@
 {
   "id": 9175,
   "name": "Lioness's Lament",
-  "description": "<div class=\"effect-stats\"></div><br><br>Fires a crescent shaped projectiles to the left and right of your character.<br><br>Evolve: Ability Haste<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Fires a crescent shaped projectiles to the left and right of your character.<hr class='effect-hr'>Evolve: Ability Haste<hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

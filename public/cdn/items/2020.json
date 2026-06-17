@@ -47,7 +47,7 @@
     "lethality": 5,
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">25 Attack Damage<br>10 Ability Haste<br>5 Lethality</div><br><br>",
+  "description": "<div class=\"effect-stats\">25 Attack Damage<br>10 Ability Haste<br>5 Lethality</div><hr class='effect-hr'>",
   "gold": {
     "base": 212,
     "purchasable": true,

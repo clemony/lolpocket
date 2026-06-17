@@ -23,7 +23,7 @@
     "attackSpeed": 50,
     "percentMovespeed": 5
   },
-  "description": "<div class=\"effect-stats\">40 Adaptive Force<br>50% Attack Speed<br>5% Move Speed</div><br><br><span class=\"effect-passive-text\">Sow</span><br>Increase your Attack Speed from all sources by 15%.<br><br><span class=\"effect-passive-text\">Reap</span><br><span class=\"effect-red-text\">On-Hit</span>, deal <span class=\"effect-orange-text\">max Health true damage</span>, and reduce their Max Health by the damage dealt for the rest of the round. Consecutive hits against the same enemy increase this amount by 0.1%.",
+  "description": "<div class=\"effect-stats\">40 Adaptive Force<br>50% Attack Speed<br>5% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Sow</span><br>Increase your Attack Speed from all sources by 15%.<hr class='effect-hr'><span class=\"effect-text-passive\">Reap</span><br><span class=\"effect-text-red\">On-Hit</span>, deal <span class=\"effect-text-orange\">max Health true damage</span>, and reduce their Max Health by the damage dealt for the rest of the round. Consecutive hits against the same enemy increase this amount by 0.1%.",
   "gold": {
     "base": 2750,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 323222,
   "name": "Mikael's Blessing",
-  "description": "<div class=\"effect-stats\">400 Health<br>100% Base Mana Regen<br>15% Heal and Shield Power<br>15 Ability Haste</div><br><br><span class=\"effect-active-text\">Purify</span><br>Remove all crowd control debuffs (excluding Airborne and Suppression) from an ally champion and restore <span class=\"effect-green-text\">100 - 250 Health</span>.",
+  "description": "<div class=\"effect-stats\">400 Health<br>100% Base Mana Regen<br>15% Heal and Shield Power<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Purify</span><br>Remove all crowd control debuffs (excluding Airborne and Suppression) from an ally champion and restore <span class=\"effect-text-green\">100 - 250 Health</span>.",
   "stats": {
     "health": 400
   },

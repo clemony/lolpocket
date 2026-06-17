@@ -1,7 +1,7 @@
 {
   "id": 3854,
   "name": "Steel Shoulderguards",
-  "description": "<div class=\"effect-stats\">4 Attack Damage<br>50 Health<br>50% Base Health Regen<br>2 Gold Per 10 Seconds</div><br><br><br>{{ Item_Support_Spoils_Of_War_01 }}<span class=\"effect-list\"><span class=\"effect-passive-text\">Quest:</span> Earn 500 gold from this item to transform it into <span class=\"effect-gray-text\">Runesteel Spaulders</span>, gaining {{ Item_Active_Named_NoBullet }} <span class=\"effect-active-text\">Warding</span>.<br><br>{{ Item_Support_Minion_Warning }}",
+  "description": "<div class=\"effect-stats\">4 Attack Damage<br>50 Health<br>50% Base Health Regen<br>2 Gold Per 10 Seconds</div><hr class='effect-hr'>{{ Item_Support_Spoils_Of_War_01 }}<span class=\"effect-list\"><span class=\"effect-text-passive\">Quest:</span> Earn 500 gold from this item to transform it into <span class=\"effect-text-gray\">Runesteel Spaulders</span>, gaining {{ Item_Active_Named_NoBullet }} <span class=\"effect-text-active\">Warding</span>.<hr class='effect-hr'>{{ Item_Support_Minion_Warning }}",
   "stats": {
     "health": 50,
     "attackDamage": 4

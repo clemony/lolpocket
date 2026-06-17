@@ -1,7 +1,7 @@
 {
   "id": 6700,
   "name": "Shield of the Rakkor",
-  "description": "<div class=\"effect-stats\">50 Attack Damage<br>30 Armor<br>5% Move Speed</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Aegis:</span> Every 8(0s),  block the first Attack that would hit you. While the shield is broken, your first attack against a champion refunds 50% of its current Cooldown and grants <span class=\"effect-gray-text\"> 20% Movement Speed</span> for a short duration.<br><br><br><br>",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>30 Armor<br>5% Move Speed</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Aegis:</span> Every 8(0s),  block the first Attack that would hit you. While the shield is broken, your first attack against a champion refunds 50% of its current Cooldown and grants <span class=\"effect-text-gray\"> 20% Movement Speed</span> for a short duration.<hr class='effect-hr'>",
   "stats": {
     "armor": 30,
     "attackDamage": 50,

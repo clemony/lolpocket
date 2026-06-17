@@ -19,7 +19,7 @@ export interface Item {
   requiredAlly?: string
   description?: string
   specialRecipe?: string | number
-  stats?: Record<string, number>
+  stats: Record<string, number>
   tags?: string[]
   arena?: ArenaItem
   masterwork?: boolean | MasterworkStats

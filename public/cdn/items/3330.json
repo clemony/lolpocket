@@ -20,7 +20,7 @@
     }
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br>Cannot be sold<br><br><span class=\"effect-active-text\">Active - Trinket:</span> Places an effigy that lasts for  seconds and appears exactly as Fiddlesticks does to enemies. Stores one charge every  seconds, up to maximum 2 charges.<br><br>Enemy champions approaching an effigy will activate it, causing the effigy to fake a random action, after which the effigy will fall apart.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Cannot be sold<hr class='effect-hr'><span class=\"effect-text-active\">Active - Trinket:</span> Places an effigy that lasts for  seconds and appears exactly as Fiddlesticks does to enemies. Stores one charge every  seconds, up to maximum 2 charges.<hr class='effect-hr'>Enemy champions approaching an effigy will activate it, causing the effigy to fake a random action, after which the effigy will fall apart.",
   "gold": {
     "base": 0,
     "purchasable": true,

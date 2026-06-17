@@ -1,7 +1,7 @@
 {
   "id": 2403,
   "name": "Minion Dematerializer",
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Kill target lane minion. (0s)",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active - Consume:</span> Kill target lane minion. (0s)",
   "gold": {
     "base": 0,
     "purchasable": false,

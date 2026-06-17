@@ -1,0 +1,10 @@
+{
+  "id": 8410,
+  "name": "Approach Velocity",
+  "description": "Gain <span class=\"effect-text-gray\">7.5% Move Speed</span> towards nearby enemy champions that are movement impaired. This bonus is increased to <span class=\"effect-text-gray\">15% Move Speed</span> for any enemy champion that you impair. <hr class='effect-hr'>Activation Range for CC from allies: 1000",
+  "path": "Inspiration",
+  "pathId": 8300,
+  "tier": 3,
+  "tierLabel": "Beyond",
+  "tierSlot": 1
+}

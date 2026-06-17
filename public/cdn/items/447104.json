@@ -18,7 +18,7 @@
     "health": 200,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">70 Ability Power<br>20 Ability Haste<br>200 Health</div><br><br><span class=\"effect-passive-text\">Fill the Soul</span><br>Any Ability cast within 800 range grants you a charge.<br><br>At 30 charges, gain <span class=\"effect-blue-text\"> Shield</span>, <span class=\"effect-purple-text\"> Ability Power</span>, and <span class=\"effect-gray-text\"> Move Speed</span> for the rest of the round.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>20 Ability Haste<br>200 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Fill the Soul</span><br>Any Ability cast within 800 range grants you a charge.<hr class='effect-hr'>At 30 charges, gain <span class=\"effect-text-blue\"> Shield</span>, <span class=\"effect-text-purple\"> Ability Power</span>, and <span class=\"effect-text-gray\"> Move Speed</span> for the rest of the round.",
   "gold": {
     "base": 2750,
     "purchasable": true,

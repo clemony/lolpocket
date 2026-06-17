@@ -1,7 +1,7 @@
 {
   "id": 223067,
   "name": "Kindlegem",
-  "description": "<div class=\"effect-stats\">200 Health<br>10 Ability Haste</div><br><br>",
+  "description": "<div class=\"effect-stats\">200 Health<br>10 Ability Haste</div><hr class='effect-hr'>",
   "stats": {
     "health": 200
   },

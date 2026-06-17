@@ -12,7 +12,7 @@
     }
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br>Molds into another item each Shopping Phase.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Molds into another item each Shopping Phase.",
   "gold": {
     "base": 2500,
     "purchasable": true,

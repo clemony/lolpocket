@@ -1,7 +1,7 @@
 {
   "id": 3399,
   "name": "Party Favor",
-  "description": "<div class=\"effect-stats\"></div><br><br>'Party Favor'Obtained from a Party Drake. <span class=\"effect-purple-text\">Click to Consume:</span> Gain <span class=\"effect-gold-text\">a pile of</span> gold, and 1 skill point!<br><br>Skill Points will not take you over your maximum number of skill points, nor will they make you better at playing League of Legends. Additional terms and conditions may apply.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><h2 class=\"effect-title-left\">'Party Favor'</h2><h2 class=\"effect-title-right\">Obtained from a Party Drake</h2>. <span class=\"effect-text-purple\">Click to Consume:</span> Gain <span class=\"effect-text-gold\">a pile of</span> gold, and 1 skill point!<hr class='effect-hr'>Skill Points will not take you over your maximum number of skill points, nor will they make you better at playing League of Legends. Additional terms and conditions may apply.",
   "gold": {
     "base": 0,
     "purchasable": false,

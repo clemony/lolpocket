@@ -35,7 +35,7 @@
     "attackDamage": 35,
     "criticalStrikeChance": 25
   },
-  "description": "<div class=\"effect-stats\">35 Attack Damage<br>35% Armor Penetration<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Giant Slayer</span><br>Deal up to 15% bonus damage against champions based on their bonus Health. Maximum damage bonus reached at 1500 bonus Health.",
+  "description": "<div class=\"effect-stats\">35 Attack Damage<br>35% Armor Penetration<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Giant Slayer</span><br>Deal up to 15% bonus damage against champions based on their bonus Health. Maximum damage bonus reached at 1500 bonus Health.",
   "gold": {
     "base": 550,
     "purchasable": true,
@@ -51,7 +51,7 @@
   ],
   "arena": {
     "id": 223036,
-    "description": "<div class=\"effect-stats\">30 Attack Damage<br>40% Armor Penetration<br>25% Critical Strike Chance</div><br><br>",
+    "description": "<div class=\"effect-stats\">30 Attack Damage<br>40% Armor Penetration<br>25% Critical Strike Chance</div><hr class='effect-hr'>",
     "stats": {
       "criticalStrikeChance": 25,
       "attackDamage": 30

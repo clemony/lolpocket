@@ -1,7 +1,7 @@
 {
   "id": 226653,
   "name": "Liandry's Anguish",
-  "description": "<div class=\"effect-stats\">50 Ability Power<br>250 Health</div><br><br><span class=\"effect-passive-text\">Torment</span><br>Damaging Abilities Burn enemies for <span class=\"effect-purple-text\">2% max Health magic damage</span> per second for 3 seconds.<br><br><span class=\"effect-passive-text\">Suffering</span><br>For each second in combat with enemy champions, deal 2% bonus damage, up to 6%.",
+  "description": "<div class=\"effect-stats\">50 Ability Power<br>250 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Torment</span><br>Damaging Abilities Burn enemies for <span class=\"effect-text-purple\">2% max Health magic damage</span> per second for 3 seconds.<hr class='effect-hr'><span class=\"effect-text-passive\">Suffering</span><br>For each second in combat with enemy champions, deal 2% bonus damage, up to 6%.",
   "stats": {
     "health": 250,
     "abilityPower": 50

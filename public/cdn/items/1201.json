@@ -1,7 +1,7 @@
 {
   "id": 1201,
   "name": "Mid Lane Quest",
-  "description": "<div class=\"effect-stats\"></div><br><br>Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in mid lane!<br><br>Rewards<br>• Upgrade boots to tier 3<br>• Increased Bonus AD and AP",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in mid lane!<hr class='effect-hr'>Rewards<br>• Upgrade boots to tier 3<br>• Increased Bonus AD and AP",
   "gold": {
     "base": 0,
     "purchasable": false,

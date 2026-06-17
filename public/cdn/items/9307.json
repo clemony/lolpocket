@@ -1,7 +1,7 @@
 {
   "id": 9307,
   "name": "Guiding Hex",
-  "description": "<div class=\"effect-stats\"></div><br><br>Aurora shoots a hex through the air, guiding it as it flies. Enemies hit take damage and are  Hexed. Every 3rd cast, she purges Hexed targets, dealing bonus damage.<br><br>Evolve:  Exp Gain<br><br>Damage, Ability Haste, Crit Chance, Projectiles, Exp",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Aurora shoots a hex through the air, guiding it as it flies. Enemies hit take damage and are  Hexed. Every 3rd cast, she purges Hexed targets, dealing bonus damage.<hr class='effect-hr'>Evolve:  Exp Gain<hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectiles, Exp",
   "gold": {
     "base": 0,
     "purchasable": true,

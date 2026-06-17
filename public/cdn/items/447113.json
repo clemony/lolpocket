@@ -19,7 +19,7 @@
     "mana": 600,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">90 Ability Power<br>12 Magic Penetration<br>600 Mana<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">The Bomb</span><br>Ability damage marks the target, storing 20% of the damage dealt (increased to 25% against Immobilized enemies). <br><br>3 seconds after you last damage the target with an ability, detonate the stored damage on them. If at any point the damage is enough to kill the target, detonate immediately.",
+  "description": "<div class=\"effect-stats\">90 Ability Power<br>12 Magic Penetration<br>600 Mana<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">The Bomb</span><br>Ability damage marks the target, storing 20% of the damage dealt (increased to 25% against Immobilized enemies). <hr class='effect-hr'>3 seconds after you last damage the target with an ability, detonate the stored damage on them. If at any point the damage is enough to kill the target, detonate immediately.",
   "gold": {
     "base": 2750,
     "purchasable": true,

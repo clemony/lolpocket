@@ -36,7 +36,7 @@
     "magicResistance": 20,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">200 Health<br>15 Ability Haste<br>20 Armor<br>20 Magic Resist</div><br><br><span class=\"effect-passive-text\">Fanfare</span><br>Slowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you <span class=\"effect-gray-text\">20 Move Speed</span>. While you have Fanfare, nearby allies, including yourself, gain <span class=\"effect-gold-text\"> Attack Speed</span>.",
+  "description": "<div class=\"effect-stats\">200 Health<br>15 Ability Haste<br>20 Armor<br>20 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Fanfare</span><br>Slowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you <span class=\"effect-text-gray\">20 Move Speed</span>. While you have Fanfare, nearby allies, including yourself, gain <span class=\"effect-text-gold\"> Attack Speed</span>.",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -52,7 +52,7 @@
   ],
   "arena": {
     "id": 222524,
-    "description": "<div class=\"effect-stats\">200 Health<br>10 Ability Haste<br>25 Armor<br>25 Magic Resist</div><br><br><span class=\"effect-passive-text\">Fanfare</span><br>Slowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you <span class=\"effect-gray-text\">35 Move Speed</span>. While you have Fanfare, nearby allies, including yourself, gain <span class=\"effect-gold-text\"> Attack Speed</span>.",
+    "description": "<div class=\"effect-stats\">200 Health<br>10 Ability Haste<br>25 Armor<br>25 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Fanfare</span><br>Slowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you <span class=\"effect-text-gray\">35 Move Speed</span>. While you have Fanfare, nearby allies, including yourself, gain <span class=\"effect-text-gold\"> Attack Speed</span>.",
     "stats": {
       "magicResistance": 25,
       "health": 200,

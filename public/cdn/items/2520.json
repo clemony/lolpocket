@@ -40,7 +40,7 @@
     "lethality": 22,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Shaped Charge</span> (0s)<br>Dealing Ability damage to a Champion or Epic Monster deals an additional <span class=\"effect-orange-text\"> true damage</span>.<br><br><span class=\"effect-passive-text\">Sabotage</span><br>Taking down a champion within 3 seconds of damaging them grants Sabotage for 90 seconds. While you have Sabotage, your next Attack against an Epic Monster or Turret deals an additional <span class=\"effect-orange-text\"> true damage</span> over 3 seconds. ",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Shaped Charge</span> (0s)<br>Dealing Ability damage to a Champion or Epic Monster deals an additional <span class=\"effect-text-orange\"> true damage</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Sabotage</span><br>Taking down a champion within 3 seconds of damaging them grants Sabotage for 90 seconds. While you have Sabotage, your next Attack against an Epic Monster or Turret deals an additional <span class=\"effect-text-orange\"> true damage</span> over 3 seconds. ",
   "gold": {
     "base": 863,
     "purchasable": true,

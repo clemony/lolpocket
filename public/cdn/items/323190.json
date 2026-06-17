@@ -1,7 +1,7 @@
 {
   "id": 323190,
   "name": "Locket of the Iron Solari",
-  "description": "<div class=\"effect-stats\">250 Health<br>30 Armor<br>30 Magic Resist<br>10 Ability Haste</div><br><br><span class=\"effect-active-text\">Devotion</span><br>Grant nearby allies a <span class=\"effect-blue-text\">290 - 360 Shield</span> that decays over 2.5 seconds.",
+  "description": "<div class=\"effect-stats\">250 Health<br>30 Armor<br>30 Magic Resist<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Devotion</span><br>Grant nearby allies a <span class=\"effect-text-blue\">290 - 360 Shield</span> that decays over 2.5 seconds.",
   "stats": {
     "magicResistance": 30,
     "health": 250,

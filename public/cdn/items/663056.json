@@ -1,7 +1,7 @@
 {
   "id": 663056,
   "name": "Demon King's Crown",
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-passive-text\">Supremacy</span><br>Increases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste by 20%, increased by 0% perTakedown and -3% per Death after acquiring this item.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-passive\">Supremacy</span><br>Increases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste by 20%, increased by 0% perTakedown and -3% per Death after acquiring this item.",
   "gold": {
     "base": 2500,
     "purchasable": true,

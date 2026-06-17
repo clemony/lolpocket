@@ -1,7 +1,7 @@
 {
   "id": 226035,
   "name": "Silvermere Dawn",
-  "description": "<div class=\"effect-stats\">40 Attack Damage<br>300 Health<br>40 Magic Resist</div><br><br><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Quicksilver:</span> Remove all crowd control debuffs and gain Tenacity and Slow Resistance.",
+  "description": "<div class=\"effect-stats\">40 Attack Damage<br>300 Health<br>40 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Quicksilver:</span> Remove all crowd control debuffs and gain Tenacity and Slow Resistance.",
   "stats": {
     "magicResistance": 40,
     "health": 300,

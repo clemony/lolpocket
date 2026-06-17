@@ -6,7 +6,6 @@ export interface Rune {
   pathId: number
   tier: number
   tierLabel: string
-  tierSlot: number
 }
 
 export type PathName =

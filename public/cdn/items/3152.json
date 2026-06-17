@@ -38,7 +38,7 @@
     "health": 300,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">70 Ability Power<br>300 Health<br>20 Ability Haste</div><br><br><span class=\"effect-active-text\">Supersonic</span><br>Dash in target direction, unleashing missiles that deal <span class=\"effect-purple-text\">magic damage</span>.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>300 Health<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Supersonic</span><br>Dash in target direction, unleashing missiles that deal <span class=\"effect-text-purple\">magic damage</span>.",
   "gold": {
     "base": 300,
     "purchasable": true,
@@ -54,7 +54,7 @@
   ],
   "arena": {
     "id": 223152,
-    "description": "<div class=\"effect-stats\">95 Ability Power<br>400 Health<br>20 Ability Haste</div><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Supersonic:</span> Dash in target direction, unleashing an arc of magic missiles that deal damage.",
+    "description": "<div class=\"effect-stats\">95 Ability Power<br>400 Health<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Supersonic:</span> Dash in target direction, unleashing an arc of magic missiles that deal damage.",
     "stats": {
       "health": 400,
       "abilityPower": 95

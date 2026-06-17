@@ -23,7 +23,7 @@
     "health": 500,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">70 Adaptive Force<br>500 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Hack the Meat</span><br>Dealing damage shreds 3 <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability.<br><br><span class=\"effect-passive-text\">Cannibalize</span><br>On Champion Takedown, steal 10% of their stats and size for the rest of the round.",
+  "description": "<div class=\"effect-stats\">70 Adaptive Force<br>500 Health<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Hack the Meat</span><br>Dealing damage shreds 3 <span class=\"effect-text-gold\">Armor</span> and <span class=\"effect-text-blue\">Magic Resist</span> for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability.<hr class='effect-hr'><span class=\"effect-text-passive\">Cannibalize</span><br>On Champion Takedown, steal 10% of their stats and size for the rest of the round.",
   "gold": {
     "base": 2750,
     "purchasable": true,

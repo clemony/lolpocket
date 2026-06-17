@@ -6,7 +6,7 @@ const props = defineProps<{
   group: RouteGroup<RouteItem>
 }>()
 
-const slidebar = inject<UseSidebar>("slidebar")
+const slidebar = inject<UseSidebar>("sidebar")
 </script>
 
 <template>
@@ -19,12 +19,12 @@ const slidebar = inject<UseSidebar>("slidebar")
         v-for="item in group.items"
         :key="item.label"
         color="neutral"
-        size="xl"
+        size="lg"
         :label="item.label"
         :icon="item?.iconFill || item?.icon"
         :ui="{
           base: cn(
-            'relative flex size-full w-full justify-start gap-2.5! overflow-hidden rounded-xl border-0 bg-n2/96! px-4! py-3! text-nc shadow-sm inset-ring inset-ring-n5 fx-0 **:text-nc! hover:bg-n3!'
+            'relative flex w-full justify-start gap-2.5! overflow-hidden rounded-xl border-0 bg-n2/96! px-4! py-3! text-nc shadow-sm inset-ring inset-ring-n5 fx-0 **:text-nc! hover:bg-n3!'
           ),
           label:
             'flex text-lg leading-none font-bold antialiased drop-shadow-none',

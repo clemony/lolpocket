@@ -22,7 +22,7 @@
     "health": 350,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>350 Health<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack is enhanced with additional damage. If the target is a champion, also <span class=\"effect-green-text\">heal</span>.<br><br>",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>350 Health<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span><br>After using an Ability, your next Attack is enhanced with additional damage. If the target is a champion, also <span class=\"effect-text-green\">heal</span>.<hr class='effect-hr'>",
   "gold": {
     "base": 2750,
     "purchasable": true,

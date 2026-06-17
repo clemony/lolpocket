@@ -1,7 +1,7 @@
 {
   "id": 9300,
   "name": "Meow Meow",
-  "description": "<div class=\"effect-stats\"></div><br><br>Jinx shoots out a barrage of bullets in a target direction.<br><br>Evolve:  Ability Haste<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Jinx shoots out a barrage of bullets in a target direction.<hr class='effect-hr'>Evolve:  Ability Haste<hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

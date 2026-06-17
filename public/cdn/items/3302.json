@@ -39,7 +39,7 @@
     "attackDamage": 30,
     "attackSpeed": 35
   },
-  "description": "<div class=\"effect-stats\">30 Attack Damage<br>35% Attack Speed</div><br><br><span class=\"effect-passive-text\">Shadow</span><br>Attacks deal <span class=\"effect-purple-text\">30 bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.<br><br><span class=\"effect-passive-text\">Juxtaposition</span><br>Alternate between Light and Dark Attacks against champions: <span class=\"effect-list\">Light Attacks grant <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> for 5s. <span class=\"effect-list\">Dark Attacks grant 10% <span class=\"effect-gold-text\">Armor Penetration</span> and <span class=\"effect-blue-text\">Magic Penetration</span> for 5s. ",
+  "description": "<div class=\"effect-stats\">30 Attack Damage<br>35% Attack Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Shadow</span><br>Attacks deal <span class=\"effect-text-purple\">30 bonus magic damage</span> <span class=\"effect-text-red\">On-Hit</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Juxtaposition</span><br>Alternate between Light and Dark Attacks against champions: <span class=\"effect-list\">Light Attacks grant <span class=\"effect-text-gold\">Armor</span> and <span class=\"effect-text-blue\">Magic Resist</span> for 5s. <span class=\"effect-list\">Dark Attacks grant 10% <span class=\"effect-text-gold\">Armor Penetration</span> and <span class=\"effect-text-blue\">Magic Penetration</span> for 5s. ",
   "gold": {
     "base": 1100,
     "purchasable": true,
@@ -55,7 +55,7 @@
   ],
   "arena": {
     "id": 223302,
-    "description": "<div class=\"effect-stats\">30 Attack Damage<br>40% Attack Speed</div><br><br><span class=\"effect-passive-text\">Shadow</span><br>Attacks deal <span class=\"effect-purple-text\">30 bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.<br><br><span class=\"effect-passive-text\">Juxtaposition</span><br>Alternate between Light and Dark Attacks against champions: <span class=\"effect-list\">Light Attacks grant <span class=\"effect-gold-text\">Armor</span> and <span class=\"effect-blue-text\">Magic Resist</span> for 5s. <span class=\"effect-list\">Dark Attacks grant 8% <span class=\"effect-gold-text\">Armor Penetration</span> and <span class=\"effect-blue-text\">Magic Penetration</span> for 5s. ",
+    "description": "<div class=\"effect-stats\">30 Attack Damage<br>40% Attack Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Shadow</span><br>Attacks deal <span class=\"effect-text-purple\">30 bonus magic damage</span> <span class=\"effect-text-red\">On-Hit</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Juxtaposition</span><br>Alternate between Light and Dark Attacks against champions: <span class=\"effect-list\">Light Attacks grant <span class=\"effect-text-gold\">Armor</span> and <span class=\"effect-text-blue\">Magic Resist</span> for 5s. <span class=\"effect-list\">Dark Attacks grant 8% <span class=\"effect-text-gold\">Armor Penetration</span> and <span class=\"effect-text-blue\">Magic Penetration</span> for 5s. ",
     "stats": {
       "attackDamage": 30,
       "attackSpeed": 40

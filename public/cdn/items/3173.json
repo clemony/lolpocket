@@ -29,7 +29,7 @@
     "flatMovespeed": 45,
     "tenacity": 30
   },
-  "description": "<div class=\"effect-stats\">30 Magic Resist<br>45 Move Speed<br>30% Tenacity</div><br><br><span class=\"effect-passive-text\">Noxian Persistence</span> (0s)<br>After taking magic damage from a Champion, gain a <span class=\"effect-blue-text\"></span> <span class=\"effect-purple-text\">magic</span> <span class=\"effect-blue-text\">shield</span> for 5 seconds.",
+  "description": "<div class=\"effect-stats\">30 Magic Resist<br>45 Move Speed<br>30% Tenacity</div><hr class='effect-hr'><span class=\"effect-text-passive\">Noxian Persistence</span> (0s)<br>After taking magic damage from a Champion, gain a <span class=\"effect-text-blue\"></span> <span class=\"effect-text-purple\">magic</span> <span class=\"effect-text-blue\">shield</span> for 5 seconds.",
   "gold": {
     "base": 0,
     "purchasable": true,

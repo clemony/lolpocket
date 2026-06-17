@@ -1,7 +1,7 @@
 {
   "id": 9293,
   "name": "Deep Freeze",
-  "description": "<div class=\"effect-stats\"></div><br><br>Blocks damage freezing enemies and granting a shield. Damage scales with Armor and shield scales with Max health. When the shield expires it freezes all nearby enemies again.<br><br>Damage, Ability Haste, Area Size, Duration, Max Health, Armor",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Blocks damage freezing enemies and granting a shield. Damage scales with Armor and shield scales with Max health. When the shield expires it freezes all nearby enemies again.<hr class='effect-hr'>Damage, Ability Haste, Area Size, Duration, Max Health, Armor",
   "gold": {
     "base": 0,
     "purchasable": true,

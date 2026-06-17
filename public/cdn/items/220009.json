@@ -1,7 +1,7 @@
 {
   "id": 220009,
   "name": "Gold Stat Anvil Voucher",
-  "description": "<div class=\"effect-stats\"></div><br><br>Redeem during a Shopping Phase to gain a Stat Anvil!",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Redeem during a Shopping Phase to gain a Stat Anvil!",
   "gold": {
     "base": 750,
     "purchasable": false,

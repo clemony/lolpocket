@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { ObjectDataReturn } from "~/domain/app/composables/useObjectData"
+import { asSpell } from "~/types/typeAssert"
 
 defineOptions({
   inheritAttrs: false,
@@ -13,19 +14,19 @@ const emit = defineEmits<{
   (e: "close"): void
 }>()
 
-const { data, idRef, color, subtitle } = props.objectData
+const { data, idRef, color, subtitle, typeRef } = props.objectData
 </script>
 
 <template>
   <UCard
     variant="ghost"
     :ui="{
-      root: 'relative min-h-64 w-full shrink-0 p-0!',
+      root: 'relative w-full shrink-0 p-0!',
       header:
         'relative flex w-full shrink-0 flex-col items-center justify-center gap-4 overflow-hidden pt-5! pb-4! text-nc',
       body: 'mb-10 flex h-max! max-h-full grow flex-col gap-2 px-2.5! pb-3! text-nc',
       footer:
-        'absolute inset-x-0 bottom-0 h-11 max-h-11 w-full self-end p-1! text-sm font-medium text-nc after:absolute after:inset-x-2.5 after:top-0 after:h-px after:bg-nc/10',
+        'absolute inset-x-0 bottom-0 h-10 max-h-10 w-full self-end p-1! text-sm font-medium text-nc after:absolute after:inset-x-2.5 after:top-0 after:h-px after:bg-nc/10',
     }">
     <template #header>
       <!-- IMG -->
@@ -34,7 +35,7 @@ const { data, idRef, color, subtitle } = props.objectData
         v-if="idRef"
         size="3xl"
         :ui="{ root: 'pointer-events-none bg-n3/70 ring! ring-n3/80' }"
-        :src="`/img/item/${idRef}.webp`"
+        :src="`/img/${typeRef}/${idRef}.webp`"
         :alt="`${data?.name} Image`" />
       <!-- NAME / LINK -->
 
@@ -49,7 +50,7 @@ const { data, idRef, color, subtitle } = props.objectData
           :style="{
             color,
           }">
-          {{ subtitle }}
+          {{ typeRef === "spell" ? `lv. ${asSpell(data)?.level}` : subtitle }}
         </span>
       </div>
     </template>

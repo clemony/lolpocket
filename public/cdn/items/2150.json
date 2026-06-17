@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Consume</span><br>Grants 1 Skill Point.<br><br>This item does not increase your level or allow allocating skill points past the normal maximum in a skill",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Consume</span><br>Grants 1 Skill Point.<hr class='effect-hr'>This item does not increase your level or allow allocating skill points past the normal maximum in a skill",
   "gold": {
     "base": 0,
     "purchasable": false,

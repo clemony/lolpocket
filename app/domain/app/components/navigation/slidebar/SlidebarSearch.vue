@@ -126,6 +126,7 @@ function onClick(item: SidebarSearchEntry) {
           v-model:model-value="query"
           variant="soft"
           size="lg"
+          :autofocus="true"
           color="neutral"
           :ui="{
             base: 'rounded-4xl! ring-1! inset-ring-0 ring-n5',

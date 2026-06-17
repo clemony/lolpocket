@@ -24,7 +24,7 @@
     "mana": 1000,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">550 Health<br>1000 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-green-text\"> Health</span>.<br><br><span class=\"effect-passive-text\">Everlasting</span> (0s)<br>Immobilizing or Slowing (Melee only) an enemy champion grants a <span class=\"effect-blue-text\">Shield</span> for 3 seconds. <br>The Shield is increased by 80% if more than one enemy is nearby.",
+  "description": "<div class=\"effect-stats\">550 Health<br>1000 Mana<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Awe</span><br>Gain <span class=\"effect-text-green\"> Health</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Everlasting</span> (0s)<br>Immobilizing or Slowing (Melee only) an enemy champion grants a <span class=\"effect-text-blue\">Shield</span> for 3 seconds. <br>The Shield is increased by 80% if more than one enemy is nearby.",
   "gold": {
     "base": 2400,
     "purchasable": false,
@@ -40,7 +40,7 @@
   ],
   "arena": {
     "id": 223121,
-    "description": "<div class=\"effect-stats\">400 Health<br>1000 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Awe:</span> Gain bonus Health based on Mana.<span class=\"effect-list\"><span class=\"effect-passive-text\">Everlasting:</span> Immobilizing or Slowing an enemy champion grants a Shield. The Shield is increased if more than one enemy is nearby.",
+    "description": "<div class=\"effect-stats\">400 Health<br>1000 Mana<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Awe:</span> Gain bonus Health based on Mana.<span class=\"effect-list\"><span class=\"effect-text-passive\">Everlasting:</span> Immobilizing or Slowing an enemy champion grants a Shield. The Shield is increased if more than one enemy is nearby.",
     "stats": {
       "mana": 1000,
       "health": 400

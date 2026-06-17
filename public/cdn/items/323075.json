@@ -1,7 +1,7 @@
 {
   "id": 323075,
   "name": "Thornmail",
-  "description": "<div class=\"effect-stats\">200 Health<br>85 Armor</div><br><br><span class=\"effect-passive-text\">Thorns</span><br>When struck by an Attack, deal <span class=\"effect-purple-text\">magic damage</span> to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
+  "description": "<div class=\"effect-stats\">200 Health<br>85 Armor</div><hr class='effect-hr'><span class=\"effect-text-passive\">Thorns</span><br>When struck by an Attack, deal <span class=\"effect-text-purple\">magic damage</span> to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
   "stats": {
     "health": 200,
     "armor": 85

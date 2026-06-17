@@ -25,7 +25,7 @@
     "mana": 1000,
     "abilityHaste": 25
   },
-  "description": "<div class=\"effect-stats\">70 Ability Power<br>1000 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-purple-text\"> Ability Power</span>.<br><br><span class=\"effect-passive-text\">Lifeline</span> (0s)<br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-blue-text\"> Shield</span> for 3 seconds.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>1000 Mana<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Awe</span><br>Gain <span class=\"effect-text-purple\"> Ability Power</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span> (0s)<br>Taking damage that would reduce your Health below 30% grants a <span class=\"effect-text-blue\"> Shield</span> for 3 seconds.",
   "gold": {
     "base": 2900,
     "purchasable": false,
@@ -41,7 +41,7 @@
   ],
   "arena": {
     "id": 223040,
-    "description": "<div class=\"effect-stats\">60 Ability Power<br>1200 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain Ability Power equal to <span class=\"effect-blue-text\">4% bonus Mana.</span> (0).<br><br><span class=\"effect-passive-text\">Lifeline</span><br>Upon taking damage that would reduce your Health below 30%, gain a <span class=\"effect-blue-text\">350 + 0% current Mana Shield</span> for 3s (0s).",
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>1200 Mana<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Awe</span><br>Gain Ability Power equal to <span class=\"effect-text-blue\">4% bonus Mana.</span> (0).<hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span><br>Upon taking damage that would reduce your Health below 30%, gain a <span class=\"effect-text-blue\">350 + 0% current Mana Shield</span> for 3s (0s).",
     "stats": {
       "mana": 1200,
       "abilityPower": 60

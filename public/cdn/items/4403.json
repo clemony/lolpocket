@@ -1,7 +1,7 @@
 {
   "id": 4403,
   "name": "The Golden Spatula",
-  "description": "<div class=\"effect-stats\">70 Attack Damage<br>120 Ability Power<br>50% Attack Speed<br>30% Critical Strike Chance<br>250 Health<br>30 Armor<br>30 Magic Resist<br>250 Mana<br>20 Ability Haste<br>10% Move Speed<br>10% Life Steal<br>100% Base Health Regen<br>100% Base Mana Regen</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Doing Something:</span> You are permanently On Fire!<br><br>\"It must do something...<br>Declined, it does EVERYTHING\"",
+  "description": "<div class=\"effect-stats\">70 Attack Damage<br>120 Ability Power<br>50% Attack Speed<br>30% Critical Strike Chance<br>250 Health<br>30 Armor<br>30 Magic Resist<br>250 Mana<br>20 Ability Haste<br>10% Move Speed<br>10% Life Steal<br>100% Base Health Regen<br>100% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Doing Something:</span> You are permanently On Fire!<hr class='effect-hr'><small class=\"effect-flavor-text\">\"It must do something...<br>Declined, it does EVERYTHING\"</small>",
   "stats": {
     "magicResistance": 30,
     "mana": 250,

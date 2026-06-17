@@ -1,7 +1,7 @@
 {
   "id": 326657,
   "name": "Rod of Ages",
-  "description": "<div class=\"effect-stats\">45 Ability Power<br>350 Health<br>500 Mana</div><br><br><span class=\"effect-passive-text\">Timeless</span><br>This item gains <span class=\"effect-green-text\">10 Health</span>, <span class=\"effect-blue-text\">30 Mana</span> and <span class=\"effect-purple-text\">3 Ability Power</span> every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.<br><br><span class=\"effect-passive-text\">Eternity</span><br>Taking damage from champions restores <span class=\"effect-blue-text\">10%</span> of the damage as <span class=\"effect-blue-text\">Mana</span>. <br>Casting an ability <span class=\"effect-green-text\">heals for 25%</span> of Mana spent.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>350 Health<br>500 Mana</div><hr class='effect-hr'><span class=\"effect-text-passive\">Timeless</span><br>This item gains <span class=\"effect-text-green\">10 Health</span>, <span class=\"effect-text-blue\">30 Mana</span> and <span class=\"effect-text-purple\">3 Ability Power</span> every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.<hr class='effect-hr'><span class=\"effect-text-passive\">Eternity</span><br>Taking damage from champions restores <span class=\"effect-text-blue\">10%</span> of the damage as <span class=\"effect-text-blue\">Mana</span>. <br>Casting an ability <span class=\"effect-text-green\">heals for 25%</span> of Mana spent.",
   "stats": {
     "mana": 500,
     "health": 350,

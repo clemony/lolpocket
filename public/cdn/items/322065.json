@@ -1,7 +1,7 @@
 {
   "id": 322065,
   "name": "Shurelya's Battlesong",
-  "description": "<div class=\"effect-stats\">65 Ability Power<br>15 Ability Haste<br>6% Move Speed<br>150% Base Mana Regen</div><br><br><span class=\"effect-active-text\">Inspiring Speech</span><br>Grant nearby allies <span class=\"effect-gray-text\">30% Move Speed</span> for 4 seconds.",
+  "description": "<div class=\"effect-stats\">65 Ability Power<br>15 Ability Haste<br>6% Move Speed<br>150% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-active\">Inspiring Speech</span><br>Grant nearby allies <span class=\"effect-text-gray\">30% Move Speed</span> for 4 seconds.",
   "stats": {
     "abilityPower": 65,
     "percentMovespeed": 6

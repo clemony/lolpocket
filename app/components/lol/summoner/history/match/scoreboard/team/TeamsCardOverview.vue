@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import type {
+  RouteLocationAsPathGeneric,
+  RouteLocationAsRelativeGeneric,
+} from "vue-router"
 import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 const { match } = defineProps<{
   match: MatchData
@@ -14,19 +18,19 @@ const route = useRoute()
       v-for="player in match.participants"
       :key="player.puuid"
       link
-      class="h-4.75 w-full"
+      class="h-fit w-full"
       :summoner="player">
       <UButton
         :label="player.name"
         :avatar="{
-          src: `/img/champion/${player?.championId}.webp`
+          src: `/img/champion/${player?.championId}.webp`,
         }"
         :ui="{
           label: 'grow-0 truncate text-pc normal-case',
-          base: 'btn-2xs w-full',
-          leadingAvatar: 'size-4'
+          base: 'h-6 max-h-6! w-full',
+          leadingAvatar: 'size-4',
         }"
-        :to="buildSummonerRootPath(player)"
+        :to="navigateTo(`/_r/${player.puuid}`) as string"
         variant="link"
         @click.stop />
     </SummonerTooltip>

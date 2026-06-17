@@ -1,7 +1,7 @@
 {
   "id": 326620,
   "name": "Echoes of Helia",
-  "description": "<div class=\"effect-stats\">35 Ability Power<br>250 Health<br>20 Ability Haste<br>150% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Soul Siphon</span><br>Gain 30% of pre-mitigation damage dealt to champions as Soul Charges. Healing or Shielding an ally consumes all <span class=\"effect-passive-text\">Soul Charges</span> to restore <span class=\"effect-green-text\">Health</span>.",
+  "description": "<div class=\"effect-stats\">35 Ability Power<br>250 Health<br>20 Ability Haste<br>150% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Soul Siphon</span><br>Gain 30% of pre-mitigation damage dealt to champions as Soul Charges. Healing or Shielding an ally consumes all <span class=\"effect-text-passive\">Soul Charges</span> to restore <span class=\"effect-text-green\">Health</span>.",
   "stats": {
     "health": 250,
     "abilityPower": 35

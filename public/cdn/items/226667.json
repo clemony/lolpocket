@@ -1,7 +1,7 @@
 {
   "id": 226667,
   "name": "Radiant Virtue",
-  "description": "<div class=\"effect-stats\">350 Health<br>30 Armor<br>30 Magic Resist<br>10 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Guiding Light:</span> Upon casting your Ultimate you Transcend, increasing your Max Health by 12.5% for 9s. While Transcended you and allies within 1200 range of you heal for 10% of your max Health over the duration (90(0s)).<br><br>Mythic Passive: Grants all other <span class=\"effect-gold-text\">Legendary</span> items 75 Health.",
+  "description": "<div class=\"effect-stats\">350 Health<br>30 Armor<br>30 Magic Resist<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Guiding Light:</span> Upon casting your Ultimate you Transcend, increasing your Max Health by 12.5% for 9s. While Transcended you and allies within 1200 range of you heal for 10% of your max Health over the duration (90(0s)).<hr class='effect-hr'>Mythic Passive: Grants all other <span class=\"effect-text-gold\">Legendary</span> items 75 Health.",
   "stats": {
     "magicResistance": 30,
     "health": 350,

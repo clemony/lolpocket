@@ -30,7 +30,7 @@
   "stats": {
     "healthRegen": 100
   },
-  "description": "<div class=\"effect-stats\">100% Base Health Regen</div><br><br>",
+  "description": "<div class=\"effect-stats\">100% Base Health Regen</div><hr class='effect-hr'>",
   "gold": {
     "base": 300,
     "purchasable": true,

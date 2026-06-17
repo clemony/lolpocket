@@ -1,7 +1,7 @@
 {
   "id": 126697,
   "name": "Hubris",
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Eminence</span><br>Gain temporary AD based on champion kills on kill.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Eminence</span><br>Gain temporary AD based on champion kills on kill.",
   "stats": {
     "attackDamage": 55
   },

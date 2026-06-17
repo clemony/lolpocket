@@ -21,7 +21,7 @@
     "lethality": 22,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">60 Attack Damage<br>20 Lethality<br>20 Ability Haste</div><br><br><span class=\"effect-active-text\">Sandswipe</span><br>Dash through target enemy, dealing a part of the target's <span class=\"effect-green-text\">maximum Health</span> as <span class=\"effect-orange-text\">bonus Physical Damage</span>. For the next 3 seconds, you deal increased damage to the target.",
+  "description": "<div class=\"effect-stats\">60 Attack Damage<br>20 Lethality<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Sandswipe</span><br>Dash through target enemy, dealing a part of the target's <span class=\"effect-text-green\">maximum Health</span> as <span class=\"effect-text-orange\">bonus Physical Damage</span>. For the next 3 seconds, you deal increased damage to the target.",
   "gold": {
     "base": 1000,
     "purchasable": true,
@@ -33,7 +33,7 @@
   ],
   "arena": {
     "id": 226693,
-    "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>15 Ability Haste</div><br><br><span class=\"effect-active-text\">Sandswipe</span><br>Dash through target enemy, dealing a part of the target's <span class=\"effect-green-text\">maximum Health</span> as <span class=\"effect-orange-text\">bonus Physical Damage</span>. For the next 3 seconds, you deal increased damage to the target.",
+    "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-active\">Sandswipe</span><br>Dash through target enemy, dealing a part of the target's <span class=\"effect-text-green\">maximum Health</span> as <span class=\"effect-text-orange\">bonus Physical Damage</span>. For the next 3 seconds, you deal increased damage to the target.",
     "stats": {
       "attackDamage": 55
     },

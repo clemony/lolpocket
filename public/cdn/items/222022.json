@@ -1,7 +1,7 @@
 {
   "id": 222022,
   "name": "Glowing Mote",
-  "description": "<div class=\"effect-stats\">5 Ability Haste</div><br><br>",
+  "description": "<div class=\"effect-stats\">5 Ability Haste</div><hr class='effect-hr'>",
   "gold": {
     "base": 250,
     "purchasable": false,

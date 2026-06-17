@@ -33,7 +33,7 @@
     "flatMovespeed": 45,
     "tenacity": 30
   },
-  "description": "<div class=\"effect-stats\">20 Magic Resist<br>45 Move Speed<br>30% Tenacity</div><br><br>",
+  "description": "<div class=\"effect-stats\">20 Magic Resist<br>45 Move Speed<br>30% Tenacity</div><hr class='effect-hr'>",
   "gold": {
     "base": 550,
     "purchasable": true,
@@ -49,7 +49,7 @@
   ],
   "arena": {
     "id": 223111,
-    "description": "<div class=\"effect-stats\">30 Magic Resist<br>30 Move Speed<br>30% Tenacity</div><br><br>",
+    "description": "<div class=\"effect-stats\">30 Magic Resist<br>30 Move Speed<br>30% Tenacity</div><hr class='effect-hr'>",
     "stats": {
       "magicResistance": 30,
       "flatMovespeed": 30

@@ -1,0 +1,10 @@
+{
+  "id": 9923,
+  "name": "Hail of Blades",
+  "description": "Gain 120% (60% for ranged champions) Attack Speed and <span class=\"effect-text-orange\">bonus true damage</span> when you attack an enemy champion for up to 3 attacks.<hr class='effect-hr'>No more than 3s can elapse between attacks or this effect will end.<hr class='effect-hr'>Cooldown: 10s.<br>On-Hit Damage: 4 - 20 (+0.08 bonus AD, +0.06 AP) damage.<hr class='effect-hr'>Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the Attack Speed limit.",
+  "path": "Domination",
+  "pathId": 8100,
+  "tier": 0,
+  "tierLabel": "Keystone",
+  "tierSlot": 2
+}

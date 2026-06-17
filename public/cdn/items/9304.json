@@ -1,7 +1,7 @@
 {
   "id": 9304,
   "name": "Steel Tempest",
-  "description": "<div class=\"effect-stats\"></div><br><br>Yasuo gains 25 Flow per second, and more when he moves and dashes.<br><br>At 100 Flow, he lets out a whirlwind. damaging all enemies in a line.<br><br> Evolve:  Crit Chance<br><br>Damage, Ability Haste, Crit Chance, Projectile Count ",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Yasuo gains 25 Flow per second, and more when he moves and dashes.<hr class='effect-hr'>At 100 Flow, he lets out a whirlwind. damaging all enemies in a line.<hr class='effect-hr'>Evolve:  Crit Chance<hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectile Count ",
   "gold": {
     "base": 0,
     "purchasable": true,

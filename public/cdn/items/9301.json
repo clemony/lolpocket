@@ -1,7 +1,7 @@
 {
   "id": 9301,
   "name": "Shield Slam",
-  "description": "<div class=\"effect-stats\"></div><br><br>Leona slams her shield, dealing damage in a cone that scales with her armor.<br><br>Evolve: Armor<br><br>Damage, Ability Haste, Area Size, Crit Chance, Armor",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Leona slams her shield, dealing damage in a cone that scales with her armor.<hr class='effect-hr'>Evolve: Armor<hr class='effect-hr'>Damage, Ability Haste, Area Size, Crit Chance, Armor",
   "gold": {
     "base": 0,
     "purchasable": true,

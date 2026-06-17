@@ -34,7 +34,7 @@
     "manaRegen": 125,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">25 Ability Power<br>200 Health<br>20 Ability Haste<br>125% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Starlit Grace</span><br>Healing or shielding an ally chains the effect to another ally (excluding yourself), <span class=\"effect-green-text\">healing 30%</span> or <span class=\"effect-blue-text\">shielding 35%</span> of the original amount.",
+  "description": "<div class=\"effect-stats\">25 Ability Power<br>200 Health<br>20 Ability Haste<br>125% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Starlit Grace</span><br>Healing or shielding an ally chains the effect to another ally (excluding yourself), <span class=\"effect-text-green\">healing 30%</span> or <span class=\"effect-text-blue\">shielding 35%</span> of the original amount.",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -50,7 +50,7 @@
   ],
   "arena": {
     "id": 226617,
-    "description": "<div class=\"effect-stats\">35 Ability Power<br>200 Health<br>30 Ability Haste<br>125% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Starlit Grace</span><br><span class=\"effect-green-text\">Healing</span> or <span class=\"effect-blue-text\">shielding</span> yourself or an ally chains to the other champion, <span class=\"effect-green-text\">healing 20%</span> or <span class=\"effect-blue-text\">shielding 25%</span> of the original amount.",
+    "description": "<div class=\"effect-stats\">35 Ability Power<br>200 Health<br>30 Ability Haste<br>125% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Starlit Grace</span><br><span class=\"effect-text-green\">Healing</span> or <span class=\"effect-text-blue\">shielding</span> yourself or an ally chains to the other champion, <span class=\"effect-text-green\">healing 20%</span> or <span class=\"effect-text-blue\">shielding 25%</span> of the original amount.",
     "stats": {
       "health": 200,
       "abilityPower": 35

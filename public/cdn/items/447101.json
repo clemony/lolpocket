@@ -18,7 +18,7 @@
     "percentMovespeed": 8,
     "abilityHaste": 40
   },
-  "description": "<div class=\"effect-stats\">70% Attack Speed<br>40 Ability Haste<br>8% Move Speed</div><br><br><span class=\"effect-passive-text\">Money In The Bank</span><br>Your Attacks and Abilities have a 12% chance to bank between <span class=\"effect-gold-text\">30 and 245 Gold</span> when they hit an enemy. On Round Win, cash out. On Round Lose, lose 25% of your bank.",
+  "description": "<div class=\"effect-stats\">70% Attack Speed<br>40 Ability Haste<br>8% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Money In The Bank</span><br>Your Attacks and Abilities have a 12% chance to bank between <span class=\"effect-text-gold\">30 and 245 Gold</span> when they hit an enemy. On Round Win, cash out. On Round Lose, lose 25% of your bank.",
   "gold": {
     "base": 2750,
     "purchasable": true,

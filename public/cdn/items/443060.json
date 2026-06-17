@@ -19,7 +19,7 @@
   "stats": {
     "criticalStrikeChance": 50
   },
-  "description": "<div class=\"effect-stats\">110 Adaptive Force<br>50% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Excoriate</span><br>Each Critical strike deals random bonus Critical Strike Damage, scaling up to 50% of your Critical Strike Chance.",
+  "description": "<div class=\"effect-stats\">110 Adaptive Force<br>50% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Excoriate</span><br>Each Critical strike deals random bonus Critical Strike Damage, scaling up to 50% of your Critical Strike Chance.",
   "gold": {
     "base": 2750,
     "purchasable": true,

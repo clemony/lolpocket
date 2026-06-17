@@ -21,7 +21,7 @@
     "attackSpeed": 40,
     "criticalStrikeChance": 25
   },
-  "description": "<div class=\"effect-stats\">45 Attack Damage<br>40% Attack Speed<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Scour</span><br>On Critical Strike:<span class=\"effect-list\"> Apply a bleed, dealing 25% of the damage done +  physical damage on hit over 2 seconds. This effect stacks any number of times.<span class=\"effect-list\"> Apply a 7% Slow for 2 seconds. This effect stacks up to 35%.",
+  "description": "<div class=\"effect-stats\">45 Attack Damage<br>40% Attack Speed<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Scour</span><br>On Critical Strike:<span class=\"effect-list\"> Apply a bleed, dealing 25% of the damage done +  physical damage on hit over 2 seconds. This effect stacks any number of times.<span class=\"effect-list\"> Apply a 7% Slow for 2 seconds. This effect stacks up to 35%.",
   "gold": {
     "base": 2750,
     "purchasable": true,

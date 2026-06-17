@@ -1,7 +1,7 @@
 {
   "id": 2163,
   "name": "Bandle Juice of Haste",
-  "description": "<div class=\"effect-stats\"></div><br><br>Drink to permanently gain <span class=\"effect-gray-text\">10+ 5% Ability Haste</span>. And a hat!<br><br>For people who gotta go FAST. Made with lightning. REAL lightning!",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Drink to permanently gain <span class=\"effect-text-gray\">10+ 5% Ability Haste</span>. And a hat!<hr class='effect-hr'><small class=\"effect-flavor-text\">For people who gotta go FAST. Made with lightning. REAL lightning!</small>",
   "gold": {
     "base": 1000,
     "purchasable": true,

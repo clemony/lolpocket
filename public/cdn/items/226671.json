@@ -1,7 +1,7 @@
 {
   "id": 226671,
   "name": "Galeforce",
-  "description": "<div class=\"effect-stats\">50 Attack Damage<br>15% Attack Speed<br>20% Critical Strike Chance<br>7% Move Speed</div><br><br><br><br>Mythic Passive: Grants all other <span class=\"effect-gold-text\">Legendary</span> items 5 Attack Damage.<br><br>Maximum missile damage dealt when enemy Health is below 25%.<br>Cloudburst's dash cannot pass through terrain.<br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Cloudburst:</span> Dash in target direction, firing three missiles at the lowest Health enemy near your destination. Deals physical damage, increased against low Health targets.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>15% Attack Speed<br>20% Critical Strike Chance<br>7% Move Speed</div><hr class='effect-hr'>Mythic Passive: Grants all other <span class=\"effect-text-gold\">Legendary</span> items 5 Attack Damage.<hr class='effect-hr'>Maximum missile damage dealt when enemy Health is below 25%.<br>Cloudburst's dash cannot pass through terrain.<hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Cloudburst:</span> Dash in target direction, firing three missiles at the lowest Health enemy near your destination. Deals physical damage, increased against low Health targets.",
   "stats": {
     "criticalStrikeChance": 20,
     "attackDamage": 50,

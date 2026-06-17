@@ -1,7 +1,7 @@
 {
   "id": 9181,
   "name": "Vortex Glove",
-  "description": "<div class=\"effect-stats\"></div><br><br>Fires a rotating stream of projectiles.<br><br>Evolve: Health Regeneration<br><br>Damage, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Fires a rotating stream of projectiles.<hr class='effect-hr'>Evolve: Health Regeneration<hr class='effect-hr'>Damage, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

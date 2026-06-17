@@ -22,7 +22,7 @@
     "criticalStrikeChance": 25,
     "percentMovespeed": 6
   },
-  "description": "<div class=\"effect-stats\">65 Attack Damage<br>30% Attack Speed<br>25% Critical Strike Chance<br>6% Move Speed</div><br><br><span class=\"effect-active-text\">Cloudburst II</span> <br>Dash in target direction over terrain, firing three missiles at the lowest Health enemy near your destination. Deals physical damage, increased against low Health targets.",
+  "description": "<div class=\"effect-stats\">65 Attack Damage<br>30% Attack Speed<br>25% Critical Strike Chance<br>6% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-active\">Cloudburst II</span> <br>Dash in target direction over terrain, firing three missiles at the lowest Health enemy near your destination. Deals physical damage, increased against low Health targets.",
   "gold": {
     "base": 2750,
     "purchasable": true,

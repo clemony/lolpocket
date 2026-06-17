@@ -1,0 +1,10 @@
+{
+  "id": 8992,
+  "name": "Deathfire Touch",
+  "description": "Damaging a champion with an ability burns them for 3 - 12 based on level (+<span class=\"effect-text-purple\">7.0% AP</span>) (+<span class=\"effect-text-orange\">2.5% bonus AD</span>)  magic damage per second. After burning for 3 seconds, the damage of the burn increases by 75% while they remain on fire.<hr class='effect-hr'>Duration:<br>Single Target: 4s<br>Area of Effect: 2s<br>Damage over Time: 1s<br>",
+  "path": "Sorcery",
+  "pathId": 8200,
+  "tier": 0,
+  "tierLabel": "Keystone",
+  "tierSlot": 3
+}

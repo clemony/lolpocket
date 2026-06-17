@@ -1,0 +1,10 @@
+{
+  "id": 8316,
+  "name": "Jack Of All Trades",
+  "description": "For each different stat gained from items, gain one Jack stack. Each stack grants you <span class=\"effect-text-gray\">1 Ability Haste</span>.<hr class='effect-hr'>Gain 10 or 25 bonus Adaptive Force at 5 and 10 stacks, respectively.",
+  "path": "Inspiration",
+  "pathId": 8300,
+  "tier": 3,
+  "tierLabel": "Beyond",
+  "tierSlot": 2
+}

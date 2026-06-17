@@ -21,7 +21,7 @@
     "attackDamage": 35,
     "lethality": 12
   },
-  "description": "<div class=\"effect-stats\">35 Attack Damage<br>12 Lethality</div><br><br><span class=\"effect-passive-text\">Char</span> (0s) per target<br>Your next Ability hit Burns enemies for <span class=\"effect-orange-text\"> to  current Health physical damage</span> over 4 seconds, based on how much more <span class=\"effect-green-text\">max Health</span> they have than you.<br><br>Bonus damage maximum is reached at 3000 health difference",
+  "description": "<div class=\"effect-stats\">35 Attack Damage<br>12 Lethality</div><hr class='effect-hr'><span class=\"effect-text-passive\">Char</span> (0s) per target<br>Your next Ability hit Burns enemies for <span class=\"effect-text-orange\"> to  current Health physical damage</span> over 4 seconds, based on how much more <span class=\"effect-text-green\">max Health</span> they have than you.<hr class='effect-hr'>Bonus damage maximum is reached at 3000 health difference",
   "gold": {
     "base": 2500,
     "purchasable": true,

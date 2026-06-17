@@ -1,8 +1,5 @@
 <script lang="ts" setup>
 import { commandResultGroups } from "~/utils/routes/useRouteGroups"
-import ChampionCommand from "./reference-cards/ChampionCommand.vue"
-import RuneCommand from "./reference-cards/RuneCommand.vue"
-import SpellCommand from "./reference-cards/SpellCommand.vue"
 
 const props = defineProps<{
   query?: string

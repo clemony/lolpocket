@@ -29,7 +29,7 @@
     "armor": 50,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\"><span class=\"effect-orange-text\">300</span> Ability Power<br><span class=\"effect-orange-text\">50</span> Armor<br><span class=\"effect-orange-text\">20</span> Ability Haste</div><br><br><span class=\"effect-passive-text\">Magical Opus:</span><br>Increases your total <span class=\"effect-purple-text\">Ability Power by 50% (0)</span>.<br><br><span class=\"effect-active-text\">Time Stop</span><br>Enter Stasis for 2.5 seconds.",
+  "description": "<div class=\"effect-stats\"><span class=\"effect-text-orange\">300</span> Ability Power<br><span class=\"effect-text-orange\">50</span> Armor<br><span class=\"effect-text-orange\">20</span> Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Magical Opus:</span><br>Increases your total <span class=\"effect-text-purple\">Ability Power by 50% (0)</span>.<hr class='effect-hr'><span class=\"effect-text-active\">Time Stop</span><br>Enter Stasis for 2.5 seconds.",
   "gold": {
     "base": 6000,
     "purchasable": true,

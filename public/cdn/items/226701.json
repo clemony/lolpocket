@@ -1,7 +1,7 @@
 {
   "id": 226701,
   "name": "Opportunity",
-  "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Lethality</div><br><br><span class=\"effect-passive-text\">Preparation</span><br>After being out of combat with Champions for 8 seconds gain <span class=\"effect-red-text\">Lethality</span>. This Lethality lasts for 3 seconds after dealing damage to champions.<br><br><span class=\"effect-passive-text\">Extraction</span><br>When a champion that you damaged within 3 seconds dies, gain <span class=\"effect-gray-text\">200 decaying Move Speed</span> for 1.5 seconds.<br>",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Lethality</div><hr class='effect-hr'><span class=\"effect-text-passive\">Preparation</span><br>After being out of combat with Champions for 8 seconds gain <span class=\"effect-text-red\">Lethality</span>. This Lethality lasts for 3 seconds after dealing damage to champions.<hr class='effect-hr'><span class=\"effect-text-passive\">Extraction</span><br>When a champion that you damaged within 3 seconds dies, gain <span class=\"effect-text-gray\">200 decaying Move Speed</span> for 1.5 seconds.<br>",
   "stats": {
     "attackDamage": 50
   },

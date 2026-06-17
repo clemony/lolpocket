@@ -1,7 +1,7 @@
 {
   "id": 9188,
   "name": "Ani-Mines",
-  "description": "<div class=\"effect-stats\"></div><br><br>Drops timed explosive projectiles in a ring that explode for large area damage.<br><br>Evolve: Area Size<br><br>Damage, Ability Haste, Area Size, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Drops timed explosive projectiles in a ring that explode for large area damage.<hr class='effect-hr'>Evolve: Area Size<hr class='effect-hr'>Damage, Ability Haste, Area Size, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

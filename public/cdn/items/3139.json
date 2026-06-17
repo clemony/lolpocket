@@ -40,7 +40,7 @@
     "lifesteal": 10,
     "magicResistance": 35
   },
-  "description": "<div class=\"effect-stats\">50 Attack Damage<br>35 Magic Resist<br>10% Life Steal</div><br><br><br><br><span class=\"effect-active-text\">ACTIVE</span><br><span class=\"effect-active-text\">Quicksilver</span><br>Removes all crowd control debuffs (excluding Airborne) and grants Move Speed.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>35 Magic Resist<br>10% Life Steal</div><hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span><br><span class=\"effect-text-active\">Quicksilver</span><br>Removes all crowd control debuffs (excluding Airborne) and grants Move Speed.",
   "gold": {
     "base": 125,
     "purchasable": true,
@@ -56,7 +56,7 @@
   ],
   "arena": {
     "id": 223139,
-    "description": "<div class=\"effect-stats\">45 Attack Damage<br>40 Magic Resist<br>10% Life Steal</div><br><br><br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Quicksilver:</span> Remove all crowd control debuffs and gain Move Speed.",
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>40 Magic Resist<br>10% Life Steal</div><hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Quicksilver:</span> Remove all crowd control debuffs and gain Move Speed.",
     "stats": {
       "magicResistance": 40,
       "attackDamage": 45,

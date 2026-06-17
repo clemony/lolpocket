@@ -38,7 +38,7 @@
     "criticalStrikeChance": 25,
     "percentMovespeed": 10
   },
-  "description": "<div class=\"effect-stats\">65% Attack Speed<br>25% Critical Strike Chance<br>10% Move Speed</div><br><br><span class=\"effect-passive-text\">Spectral Waltz</span><br>Become Ghosted.",
+  "description": "<div class=\"effect-stats\">65% Attack Speed<br>25% Critical Strike Chance<br>10% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spectral Waltz</span><br>Become Ghosted.",
   "gold": {
     "base": 950,
     "purchasable": true,
@@ -54,7 +54,7 @@
   ],
   "arena": {
     "id": 223046,
-    "description": "<div class=\"effect-stats\">60% Attack Speed<br>8% Move Speed<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Spectral Waltz</span><br>Become Ghosted.",
+    "description": "<div class=\"effect-stats\">60% Attack Speed<br>8% Move Speed<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spectral Waltz</span><br>Become Ghosted.",
     "stats": {
       "criticalStrikeChance": 25,
       "attackSpeed": 60,

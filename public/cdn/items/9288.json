@@ -1,7 +1,7 @@
 {
   "id": 9288,
   "name": "Jinx's Tri-Namite",
-  "description": "<div class=\"effect-stats\"></div><br><br>Drops timed explosive projectiles in a ring that explode and release additional explosions for massive area damage.<br><br>Damage, Ability Haste, Area Size, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Drops timed explosive projectiles in a ring that explode and release additional explosions for massive area damage.<hr class='effect-hr'>Damage, Ability Haste, Area Size, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

@@ -30,7 +30,7 @@
     "healthRegen": 100,
     "magicResistance": 80
   },
-  "description": "<div class=\"effect-stats\">400 Health<br>80 Magic Resist<br>100% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Magebane</span><br>After not taking magic damage for 15 seconds, gain a <span class=\"effect-blue-text\">magic shield</span>. ",
+  "description": "<div class=\"effect-stats\">400 Health<br>80 Magic Resist<br>100% Base Health Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Magebane</span><br>After not taking magic damage for 15 seconds, gain a <span class=\"effect-text-blue\">magic shield</span>. ",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -46,7 +46,7 @@
   ],
   "arena": {
     "id": 222504,
-    "description": "<div class=\"effect-stats\">350 Health<br>80 Magic Resist</div><br><br><span class=\"effect-passive-text\">Magebane</span><br>After not taking magic damage for 10 seconds, gain a <span class=\"effect-blue-text\">magic shield</span>. ",
+    "description": "<div class=\"effect-stats\">350 Health<br>80 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Magebane</span><br>After not taking magic damage for 10 seconds, gain a <span class=\"effect-text-blue\">magic shield</span>. ",
     "stats": {
       "magicResistance": 80,
       "health": 350

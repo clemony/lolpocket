@@ -1,7 +1,7 @@
 {
   "id": 4013,
   "name": "Lightning Braid",
-  "description": "<div class=\"effect-stats\">70 Ability Power<br>30 Armor<br>30 Magic Resist<br>30% Tenacity</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Chain Lightning:</span> You deal 20% reduced ability damage. On a 1 second cadence, enemies you've damaged with abilities chain 66.6% of the ability damage you've dealt them to another nearby enemy, prioritizing champions.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>30 Armor<br>30 Magic Resist<br>30% Tenacity</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Chain Lightning:</span> You deal 20% reduced ability damage. On a 1 second cadence, enemies you've damaged with abilities chain 66.6% of the ability damage you've dealt them to another nearby enemy, prioritizing champions.",
   "stats": {
     "magicResistance": 30,
     "abilityPower": 70,

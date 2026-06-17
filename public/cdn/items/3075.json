@@ -37,7 +37,7 @@
     "armor": 75,
     "health": 150
   },
-  "description": "<div class=\"effect-stats\">150 Health<br>75 Armor</div><br><br><span class=\"effect-passive-text\">Thorns</span><br>When struck by an Attack, deal <span class=\"effect-purple-text\">magic damage</span> to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
+  "description": "<div class=\"effect-stats\">150 Health<br>75 Armor</div><hr class='effect-hr'><span class=\"effect-text-passive\">Thorns</span><br>When struck by an Attack, deal <span class=\"effect-text-purple\">magic damage</span> to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -53,7 +53,7 @@
   ],
   "arena": {
     "id": 223075,
-    "description": "<div class=\"effect-stats\">300 Health<br>60 Armor</div><br><br><span class=\"effect-passive-text\">Thorns:</span><br>When struck by an Attack, deal damage to the attacker and apply 40% Grievous Wounds if they are a champion.<br><br>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+    "description": "<div class=\"effect-stats\">300 Health<br>60 Armor</div><hr class='effect-hr'><span class=\"effect-text-passive\">Thorns:</span><br>When struck by an Attack, deal damage to the attacker and apply 40% Grievous Wounds if they are a champion.<hr class='effect-hr'>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
     "stats": {
       "health": 300,
       "armor": 60

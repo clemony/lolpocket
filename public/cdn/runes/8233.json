@@ -1,0 +1,10 @@
+{
+  "id": 8233,
+  "name": "Absolute Focus",
+  "description": "While above 70% health, gain an adaptive bonus of up to 18 Attack Damage or 30 Ability Power (based on level). <hr class='effect-hr'>Grants 1.8 Attack Damage or 3 Ability Power at level 1. ",
+  "path": "Sorcery",
+  "pathId": 8200,
+  "tier": 2,
+  "tierLabel": "Excellence",
+  "tierSlot": 2
+}

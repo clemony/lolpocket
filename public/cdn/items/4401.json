@@ -38,7 +38,7 @@
     "magicResistance": 55,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">400 Health<br>55 Magic Resist<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Steadfast</span><br>Gain <span class=\"effect-blue-text\">70 Magic Resist</span> and <span class=\"effect-gray-text\">6% bonus Move Speed</span> after taking magic damage from Champions 8 times.",
+  "description": "<div class=\"effect-stats\">400 Health<br>55 Magic Resist<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Steadfast</span><br>Gain <span class=\"effect-text-blue\">70 Magic Resist</span> and <span class=\"effect-text-gray\">6% bonus Move Speed</span> after taking magic damage from Champions 8 times.",
   "gold": {
     "base": 750,
     "purchasable": true,
@@ -54,7 +54,7 @@
   ],
   "arena": {
     "id": 224401,
-    "description": "<div class=\"effect-stats\">400 Health<br>50 Magic Resist<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Absorb</span><br>Taking <span class=\"effect-purple-text\">magic damage</span> from enemy Champions grants a stack of Steadfast (max 10) for 7 seconds. Enemy Immobilizing effects grant an additional 2 stacks.<br><br><span class=\"effect-passive-text\">Dissipate</span><br>While at 10 stacks of Steadfast, gain <span class=\"effect-blue-text\">50 Magic Resist</span> and <span class=\"effect-gray-text\">14% increased Move Speed</span>.<br><br>One spell can add a new stack of Steadfast every 1 second.",
+    "description": "<div class=\"effect-stats\">400 Health<br>50 Magic Resist<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Absorb</span><br>Taking <span class=\"effect-text-purple\">magic damage</span> from enemy Champions grants a stack of Steadfast (max 10) for 7 seconds. Enemy Immobilizing effects grant an additional 2 stacks.<hr class='effect-hr'><span class=\"effect-text-passive\">Dissipate</span><br>While at 10 stacks of Steadfast, gain <span class=\"effect-text-blue\">50 Magic Resist</span> and <span class=\"effect-text-gray\">14% increased Move Speed</span>.<hr class='effect-hr'>One spell can add a new stack of Steadfast every 1 second.",
     "stats": {
       "magicResistance": 50,
       "health": 400,

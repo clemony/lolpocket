@@ -1,7 +1,7 @@
 {
   "id": 3193,
   "name": "Gargoyle Stoneplate",
-  "description": "<div class=\"effect-stats\">60 Armor<br>60 Magic Resist<br>15 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Fortify:</span> Taking damage from a champion grants a stack of <span class=\"effect-gold-text\"> Armor</span> and <span class=\"effect-blue-text\"> Magic Resist</span> for 6 seconds.<br><br>Max 5 stacks; 1 per champion.<br><br><span class=\"effect-active-text\">Active -</span> <span class=\"effect-active-text\">Unbreakable:</span> Gain a Shield that decays and grow in size.",
+  "description": "<div class=\"effect-stats\">60 Armor<br>60 Magic Resist<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Fortify:</span> Taking damage from a champion grants a stack of <span class=\"effect-text-gold\"> Armor</span> and <span class=\"effect-text-blue\"> Magic Resist</span> for 6 seconds.<hr class='effect-hr'>Max 5 stacks; 1 per champion.<hr class='effect-hr'><span class=\"effect-text-active\">Active -</span> <span class=\"effect-text-active\">Unbreakable:</span> Gain a Shield that decays and grow in size.",
   "stats": {
     "magicResistance": 60,
     "armor": 60

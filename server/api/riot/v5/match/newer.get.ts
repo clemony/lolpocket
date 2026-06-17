@@ -1,6 +1,10 @@
 //
 import pLimit from "p-limit"
 import { idsByPuuid, matchById } from "~~/server/domain"
+import {
+  getSummonerCacheDb,
+  upsertCachedMatchParticipants
+} from "#server/utils/summoner-cache"
 
 export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const puuid = getQuery(event).puuid as string
@@ -38,6 +42,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
 
   matches.sort((a, b) => b.gameEndTimestamp - a.gameEndTimestamp)
   console.log("🥸 - matches:", matches)
+  await upsertCachedMatchParticipants(getSummonerCacheDb(event), matches)
 
   return {
     done: true,

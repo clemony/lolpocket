@@ -20,7 +20,7 @@
     }
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active</span> (<span class=\"effect-blue-text\">210 - 90</span>s, max 2 charges)<br>Places an Invisible Stealth Ward that grants vision for <span class=\"effect-blue-text\">90-120</span> seconds.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active</span> (<span class=\"effect-text-blue\">210 - 90</span>s, max 2 charges)<br>Places an Invisible Stealth Ward that grants vision for <span class=\"effect-text-blue\">90-120</span> seconds.",
   "gold": {
     "base": 0,
     "purchasable": true,

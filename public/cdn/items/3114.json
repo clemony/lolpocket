@@ -93,7 +93,7 @@
     "healAndShieldPower": 8,
     "manaRegen": 50
   },
-  "description": "<div class=\"effect-stats\">50% Base Mana Regen<br>8% Heal and Shield Power</div><br><br>",
+  "description": "<div class=\"effect-stats\">50% Base Mana Regen<br>8% Heal and Shield Power</div><hr class='effect-hr'>",
   "gold": {
     "base": 400,
     "purchasable": true,

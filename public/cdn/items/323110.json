@@ -1,7 +1,7 @@
 {
   "id": 323110,
   "name": "Frozen Heart",
-  "description": "<div class=\"effect-stats\">75 Armor<br>500 Mana<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Winter's Caress</span><br>Reduce the <span class=\"effect-gold-text\">Attack Speed</span> of nearby champions by <span class=\"effect-gold-text\">20%</span>.",
+  "description": "<div class=\"effect-stats\">75 Armor<br>500 Mana<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Winter's Caress</span><br>Reduce the <span class=\"effect-text-gold\">Attack Speed</span> of nearby champions by <span class=\"effect-text-gold\">20%</span>.",
   "stats": {
     "mana": 500,
     "armor": 75

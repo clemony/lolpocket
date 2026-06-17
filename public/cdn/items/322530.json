@@ -1,7 +1,7 @@
 {
   "id": 322530,
   "name": "Diadem of Songs",
-  "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>1000 Mana<br>100% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Harmony</span><br>Gain % Heal and Shield Power.<br><br><span class=\"effect-passive-text\">Consonance</span><br>While you or any ally you've healed or shielded in the last 3 seconds is in combat with champions, each second, heal the lowest health nearby ally champion.",
+  "description": "<div class=\"effect-stats\">200 Health<br>8% Heal and Shield Power<br>1000 Mana<br>100% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Harmony</span><br>Gain % Heal and Shield Power.<hr class='effect-hr'><span class=\"effect-text-passive\">Consonance</span><br>While you or any ally you've healed or shielded in the last 3 seconds is in combat with champions, each second, heal the lowest health nearby ally champion.",
   "stats": {
     "mana": 1000,
     "health": 200

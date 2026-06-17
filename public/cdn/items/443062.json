@@ -18,7 +18,7 @@
     "healAndShieldPower": 15,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">80 Ability Power<br>20 Ability Haste<br>15% Heal and Shield Power</div><br><br><span class=\"effect-passive-text\">Patronage</span><br>Store 15% of the total damage you've dealt to enemies. Whenever this exceeds 333, consume it to <span class=\"effect-green-text\">heal</span> yourself and your nearest ally for that amount.",
+  "description": "<div class=\"effect-stats\">80 Ability Power<br>20 Ability Haste<br>15% Heal and Shield Power</div><hr class='effect-hr'><span class=\"effect-text-passive\">Patronage</span><br>Store 15% of the total damage you've dealt to enemies. Whenever this exceeds 333, consume it to <span class=\"effect-text-green\">heal</span> yourself and your nearest ally for that amount.",
   "gold": {
     "base": 2750,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 2161,
   "name": "Bandle Juice of Power",
-  "description": "<div class=\"effect-stats\"></div><br><br>Drink to permanently gain <span class=\"effect-purple-text\">20+ 3% bonus Ability Power</span> or <span class=\"effect-orange-text\">12+ 3% bonus Attack Damage</span>. And a hat!<br><br>Made with 100% real cherries. Warning: May cause imbiber to deal tons of damage.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Drink to permanently gain <span class=\"effect-text-purple\">20+ 3% bonus Ability Power</span> or <span class=\"effect-text-orange\">12+ 3% bonus Attack Damage</span>. And a hat!<hr class='effect-hr'><small class=\"effect-flavor-text\">Made with 100% real cherries. Warning: May cause imbiber to deal tons of damage.</small>",
   "gold": {
     "base": 1000,
     "purchasable": true,

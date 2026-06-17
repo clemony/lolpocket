@@ -1,7 +1,7 @@
 {
   "id": 221043,
   "name": "Recurve Bow",
-  "description": "<div class=\"effect-stats\">15% Attack Speed</div><br><br><span class=\"effect-passive-text\">Sting</span><br>Attacks deal <span class=\"effect-orange-text\">15 bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
+  "description": "<div class=\"effect-stats\">15% Attack Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Sting</span><br>Attacks deal <span class=\"effect-text-orange\">15 bonus physical damage</span> <span class=\"effect-text-red\">On-Hit</span>.",
   "stats": {
     "attackSpeed": 15
   },

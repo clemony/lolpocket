@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br>Helps you get on a head.<span class=\"effect-active-text\">Active - Consume:</span> This juice does nothing.<br>",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Helps you get on a head.<span class=\"effect-text-active\">Active - Consume:</span> This juice does nothing.<br>",
   "gold": {
     "base": 300,
     "purchasable": false,
@@ -20,7 +20,7 @@
   ],
   "arena": {
     "id": 222141,
-    "description": "<div class=\"effect-stats\"></div><br><br>Helps you get on a head.<span class=\"effect-active-text\">Active - Consume:</span> This juice does nothing.<br>",
+    "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Helps you get on a head.<span class=\"effect-text-active\">Active - Consume:</span> This juice does nothing.<br>",
     "gold": {
       "base": 500,
       "total": 500,

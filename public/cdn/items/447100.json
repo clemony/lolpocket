@@ -17,7 +17,7 @@
     "attackSpeed": 60,
     "percentMovespeed": 6
   },
-  "description": "<div class=\"effect-stats\">65 Adaptive Force<br>60% Attack Speed<br>6% Move Speed</div><br><br><span class=\"effect-passive-text\">Blur</span><br><span class=\"effect-red-text\">On-Hit</span> reduce the remaining cooldowns of your Dash and Blink Abilities by 20% (reduced to 5% for Ultimates).",
+  "description": "<div class=\"effect-stats\">65 Adaptive Force<br>60% Attack Speed<br>6% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Blur</span><br><span class=\"effect-text-red\">On-Hit</span> reduce the remaining cooldowns of your Dash and Blink Abilities by 20% (reduced to 5% for Ultimates).",
   "gold": {
     "base": 2750,
     "purchasable": true,

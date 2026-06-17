@@ -1,0 +1,10 @@
+{
+  "id": 8140,
+  "name": "Grisly Mementos",
+  "description": "Collect 1 memento on champion takedowns, up to 18 total.<hr class='effect-hr'>Gain 6 Trinket Haste for each collected. In game modes where vision Trinkets do not exist, instead gain 3 Summoner Spell Haste.",
+  "path": "Domination",
+  "pathId": 8100,
+  "tier": 2,
+  "tierLabel": "Tracking",
+  "tierSlot": 1
+}

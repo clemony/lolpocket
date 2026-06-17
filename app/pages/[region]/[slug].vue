@@ -1,6 +1,11 @@
 <script lang="ts" setup>
+import type { TabsItem } from "@nuxt/ui"
+import type { RouteRecordNormalized } from "vue-router"
 import { resolveSummoner } from "~/domain/summoner/composables/resolveSummoner"
-import { extractIdentifierFromRoute } from "~/domain/summoner/utils/extractIdentifierFromRoute"
+import {
+  extractIdentifierFromRoute,
+  extractIdentifierFromSlug,
+} from "~/domain/summoner/utils/extractIdentifierFromRoute"
 
 definePageMeta({
   search: false,
@@ -9,10 +14,10 @@ definePageMeta({
   command: defineAsyncComponent(
     () =>
       import("~/domain/app/components/navigation/command/route/SummonerCommand.vue")
-  )
+  ),
 })
 
-const route = useRoute()
+const route = useRoute("summoner-profile")
 const championKey = computed(() => route.params?.championKey)
 
 const session = sSession()
@@ -26,18 +31,7 @@ function extractIdentifierFromPath(path: string): Identifier | null {
   const slug = matched[2]
   if (!region || !slug) return null
 
-  const sep = slug.lastIndexOf("_")
-  if (sep <= 0 || sep >= slug.length - 1) return null
-
-  const name = slug.slice(0, sep)
-  const tag = slug.slice(sep + 1)
-  if (!name || !tag) return null
-
-  return {
-    region: region.toLowerCase(),
-    name: name.toLowerCase(),
-    tag: tag.toLowerCase()
-  }
+  return extractIdentifierFromSlug(region, slug)
 }
 
 async function resolveFromRoute() {
@@ -76,11 +70,28 @@ watch(
 onBeforeMount(async () => {
   await resolveFromRoute()
 })
+
+const router = useRouter()
+
+const routes = computed<TabsItem[]>(
+  () =>
+    router
+      .getRoutes()
+      .filter((r) => r.name === "summoner-profile")[0]
+      ?.children.filter((r) => r.path.split("/").length <= 1)
+      .sort((a, b) => Number(a.meta?.order) - Number(b.meta?.order))
+      .map((r) => ({
+        label: String(r.meta?.title) || String(r.name),
+        value: String(r.name),
+        ...r,
+      }))
+      .filter(Boolean) as TabsItem[]
+)
 </script>
 
 <template>
   <div class="w-full">
-    <NuxtLayout name="tab">
+    <NuxtLayout :routes name="tab">
       <!--       <template #center-leading>
         <UpdateSummoner
           variant="ghost"

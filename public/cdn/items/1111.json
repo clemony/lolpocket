@@ -40,7 +40,7 @@
     "abilityHaste": 10,
     "tenacity": 30
   },
-  "description": "<div class=\"effect-stats\">25% Attack Speed<br>100 Move Speed<br>10 Ability Haste<br>12 Magic Penetration<br>25 Armor<br>20 Magic Resist<br>30% Tenacity</div><br><br><span class=\"effect-passive-text\">Jarvan One</span><br>Gives you stats and passives from all boots.<br><br><b>Requires Augment: <span class=\"effect-pink-text\">Quest: Sneakerhead</span></b>",
+  "description": "<div class=\"effect-stats\">25% Attack Speed<br>100 Move Speed<br>10 Ability Haste<br>12 Magic Penetration<br>25 Armor<br>20 Magic Resist<br>30% Tenacity</div><hr class='effect-hr'><span class=\"effect-text-passive\">Jarvan One</span><br>Gives you stats and passives from all boots.<hr class='effect-hr'><b class=\"effect-text-bold\">Requires Augment: <span class=\"effect-text-pink\">Quest: Sneakerhead</span></b>",
   "gold": {
     "base": 300,
     "purchasable": false,

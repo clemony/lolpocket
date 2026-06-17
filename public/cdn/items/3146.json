@@ -35,7 +35,7 @@
     "attackDamage": 40,
     "omnivamp": 10
   },
-  "description": "<div class=\"effect-stats\">80 Ability Power<br>40 Attack Damage<br>10% Omnivamp</div><br><br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Lightning Bolt</span><br>Shocks the target enemy champion, dealing  magic damage and slowing them by 25% for 1.5 seconds.",
+  "description": "<div class=\"effect-stats\">80 Ability Power<br>40 Attack Damage<br>10% Omnivamp</div><hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span> (0s)<br><span class=\"effect-text-active\">Lightning Bolt</span><br>Shocks the target enemy champion, dealing  magic damage and slowing them by 25% for 1.5 seconds.",
   "gold": {
     "base": 600,
     "purchasable": true,
@@ -51,7 +51,7 @@
   ],
   "arena": {
     "id": 223146,
-    "description": "<div class=\"effect-stats\">90 Ability Power<br>45 Attack Damage<br>15% Omnivamp</div><br><br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Lightning Bolt</span><br>Shocks the target enemy champion, dealing <span class=\"effect-purple-text\"> magic damage</span> and Slowing them by 25% for 1.5 seconds.",
+    "description": "<div class=\"effect-stats\">90 Ability Power<br>45 Attack Damage<br>15% Omnivamp</div><hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span> (0s)<br><span class=\"effect-text-active\">Lightning Bolt</span><br>Shocks the target enemy champion, dealing <span class=\"effect-text-purple\"> magic damage</span> and Slowing them by 25% for 1.5 seconds.",
     "stats": {
       "abilityPower": 90,
       "attackDamage": 45

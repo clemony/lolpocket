@@ -1,0 +1,10 @@
+{
+  "id": 8135,
+  "name": "Treasure Hunter",
+  "description": "Gain an additional <span class=\"effect-text-gold\">50 gold</span> the next time you collect a <i class=\"effect-text-emphasis\">Bounty Hunter</i> stack. Increase the gold gained by <span class=\"effect-text-gold\">20 gold</span> for each <i class=\"effect-text-emphasis\">Bounty Hunter</i> stack, up to <span class=\"effect-text-gold\">130 gold</span>.<hr class='effect-hr'><i class=\"effect-text-emphasis\">Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion.",
+  "path": "Domination",
+  "pathId": 8100,
+  "tier": 3,
+  "tierLabel": "Hunter",
+  "tierSlot": 0
+}

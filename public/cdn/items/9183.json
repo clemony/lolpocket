@@ -1,7 +1,7 @@
 {
   "id": 9183,
   "name": "Blade-o-rang",
-  "description": "<div class=\"effect-stats\"></div><br><br>Fires returning projectiles at the closest enemy.<br><br>Evolve: Movement Speed<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Fires returning projectiles at the closest enemy.<hr class='effect-hr'>Evolve: Movement Speed<hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

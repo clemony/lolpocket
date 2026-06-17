@@ -1,7 +1,7 @@
 {
   "id": 9184,
   "name": "Bunny Mega-Blast",
-  "description": "<div class=\"effect-stats\"></div><br><br>Fires orbital strikes with bonus crit chance at random enemies, dealing high damage in a small area.<br><br>Evolve: Crit Chance<br><br>Damage, Ability Haste, Area Size, Crit Chance",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Fires orbital strikes with bonus crit chance at random enemies, dealing high damage in a small area.<hr class='effect-hr'>Evolve: Crit Chance<hr class='effect-hr'>Damage, Ability Haste, Area Size, Crit Chance",
   "gold": {
     "base": 0,
     "purchasable": true,

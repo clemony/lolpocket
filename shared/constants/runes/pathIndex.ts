@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
+// Updated Patch 16.12 - 06/15/2026 09:52:44 AM CDT
 import type { Path } from '#shared/types'
 
 export const pathIndex: Record<number, Path> = {
@@ -28,13 +28,13 @@ export const pathIndex: Record<number, Path> = {
     name: "Inspiration",
     tooltip: "Creative tools and rule bending ",
     icon: "i-rune-8300",
-    color: "res"
+    color: "insp"
   },
   8400: {
     id: 8400,
     name: "Resolve",
     tooltip: "Durability and crowd control",
     icon: "i-rune-8400",
-    color: "insp"
+    color: "res"
   }
 }

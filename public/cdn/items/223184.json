@@ -1,7 +1,7 @@
 {
   "id": 223184,
   "name": "Guardian's Hammer",
-  "description": "<div class=\"effect-stats\">25 Attack Damage<br>35% Attack Speed<br>5% Life Steal</div><br><br>",
+  "description": "<div class=\"effect-stats\">25 Attack Damage<br>35% Attack Speed<br>5% Life Steal</div><hr class='effect-hr'>",
   "stats": {
     "attackDamage": 25,
     "attackSpeed": 35,

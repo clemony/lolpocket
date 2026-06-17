@@ -11,7 +11,7 @@
     "pink"
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Consume</span><br>Places a Control Ward that grants vision and reveals enemy Stealth Wards, traps and Camouflaged enemies.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Consume</span><br>Places a Control Ward that grants vision and reveals enemy Stealth Wards, traps and Camouflaged enemies.",
   "gold": {
     "base": 75,
     "purchasable": true,

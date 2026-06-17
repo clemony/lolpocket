@@ -45,7 +45,7 @@
     "abilityPower": 40,
     "armor": 25
   },
-  "description": "<div class=\"effect-stats\">40 Ability Power<br>25 Armor</div><br><br><span class=\"effect-active-text\">Time Stop</span> (Single use)<br>Enter Stasis for 2.5 seconds.",
+  "description": "<div class=\"effect-stats\">40 Ability Power<br>25 Armor</div><hr class='effect-hr'><span class=\"effect-text-active\">Time Stop</span> (Single use)<br>Enter Stasis for 2.5 seconds.",
   "gold": {
     "base": 500,
     "purchasable": true,

@@ -19,7 +19,7 @@
     }
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active</span> (<span class=\"effect-blue-text\">198 - 99</span>s)<br>Reveals a distant area for 2 seconds and leaves a Ward that expires upon spotting an enemy champion.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active</span> (<span class=\"effect-text-blue\">198 - 99</span>s)<br>Reveals a distant area for 2 seconds and leaves a Ward that expires upon spotting an enemy champion.",
   "gold": {
     "base": 0,
     "purchasable": true,

@@ -123,7 +123,7 @@
     "attackDamage": 20,
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">20 Attack Damage<br>10 Ability Haste</div><br><br>",
+  "description": "<div class=\"effect-stats\">20 Attack Damage<br>10 Ability Haste</div><hr class='effect-hr'>",
   "gold": {
     "base": 100,
     "purchasable": true,

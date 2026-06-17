@@ -21,7 +21,7 @@
     "abilityHaste": 30,
     "omnivamp": 15
   },
-  "description": "<div class=\"effect-stats\">70 Attack Damage<br>30 Ability Haste<br>15% Omnivamp</div><br><br><span class=\"effect-passive-text\">Scarlet Allegiance</span><br>Threshold <span class=\"effect-red-text\">30% Lifesteal/Omnivamp</span>: Gain <span class=\"effect-green-text\">500 Max Health</span>. Drain 10% of all damage nearby enemies take.",
+  "description": "<div class=\"effect-stats\">70 Attack Damage<br>30 Ability Haste<br>15% Omnivamp</div><hr class='effect-hr'><span class=\"effect-text-passive\">Scarlet Allegiance</span><br>Threshold <span class=\"effect-text-red\">30% Lifesteal/Omnivamp</span>: Gain <span class=\"effect-text-green\">500 Max Health</span>. Drain 10% of all damage nearby enemies take.",
   "gold": {
     "base": 2750,
     "purchasable": true,

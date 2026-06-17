@@ -49,7 +49,7 @@
     "abilityPower": 30,
     "health": 200
   },
-  "description": "<div class=\"effect-stats\">30 Ability Power<br>200 Health</div><br><br><span class=\"effect-passive-text\">Madness</span><br>For each second in combat with enemy champions, deal 2% bonus damage, up to 6%. ",
+  "description": "<div class=\"effect-stats\">30 Ability Power<br>200 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Madness</span><br>For each second in combat with enemy champions, deal 2% bonus damage, up to 6%. ",
   "gold": {
     "base": 500,
     "purchasable": true,

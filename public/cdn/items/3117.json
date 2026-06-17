@@ -1,7 +1,7 @@
 {
   "id": 3117,
   "name": "Mobility Boots",
-  "description": "<div class=\"effect-stats\"></div><br><br>25 Move Speed <br>When out of combat for at least 5 seconds, increase this item's effect to 45.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>25 Move Speed <br>When out of combat for at least 5 seconds, increase this item's effect to 45.",
   "stats": {
     "flatMovespeed": 45
   },

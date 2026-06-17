@@ -1,7 +1,7 @@
 {
   "id": 3011,
   "name": "Chemtech Putrifier",
-  "description": "<div class=\"effect-stats\">35 Ability Power<br>10% Heal and Shield Power<br>75% Base Mana Regen<br>15 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Puffcap Toxin:</span> Dealing damage applies 40% Grievous Wounds to champions for 3 seconds.<br><br>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+  "description": "<div class=\"effect-stats\">35 Ability Power<br>10% Heal and Shield Power<br>75% Base Mana Regen<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Puffcap Toxin:</span> Dealing damage applies 40% Grievous Wounds to champions for 3 seconds.<hr class='effect-hr'>Grievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
   "stats": {
     "abilityPower": 35
   },

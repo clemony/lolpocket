@@ -1,7 +1,7 @@
 {
   "id": 9283,
   "name": "Quad-o-rang",
-  "description": "<div class=\"effect-stats\"></div><br><br>Fires returning projectiles that explode into smaller projectiles at the closest enemy.<br><br>Damage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Fires returning projectiles that explode into smaller projectiles at the closest enemy.<hr class='effect-hr'>Damage, Ability Haste, Crit Chance, Projectile Count",
   "gold": {
     "base": 0,
     "purchasable": true,

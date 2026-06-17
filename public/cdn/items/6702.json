@@ -1,7 +1,7 @@
 {
   "id": 6702,
   "name": "Scouting Ahead",
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">UNIQUE Active:</span> Scout target area, granting vision for 5 seconds. Reveal enemy champions and grant True Sight of traps in the area for 3 seconds (60 second cooldown).",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">UNIQUE Active:</span> Scout target area, granting vision for 5 seconds. Reveal enemy champions and grant True Sight of traps in the area for 3 seconds (60 second cooldown).",
   "gold": {
     "base": 0,
     "purchasable": false,

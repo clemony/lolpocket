@@ -18,7 +18,7 @@
     "manaRegen": 125,
     "abilityHaste": 30
   },
-  "description": "<div class=\"effect-stats\">70 Ability Power<br>18% Heal and Shield Power<br>30 Ability Haste<br>125% Base Mana Regen</div><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Vigilance</span><br>Teleport to your ally and grant <span class=\"effect-blue-text\"> shield</span> for 5s when landing. Can be used when Ally is downed.",
+  "description": "<div class=\"effect-stats\">70 Ability Power<br>18% Heal and Shield Power<br>30 Ability Haste<br>125% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span> (0s)<br><span class=\"effect-text-active\">Vigilance</span><br>Teleport to your ally and grant <span class=\"effect-text-blue\"> shield</span> for 5s when landing. Can be used when Ally is downed.",
   "gold": {
     "base": 2750,
     "purchasable": true,

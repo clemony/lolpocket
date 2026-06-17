@@ -1,7 +1,7 @@
 {
   "id": 667109,
   "name": "Cruelty",
-  "description": "<div class=\"effect-stats\">60 Ability Power<br>25 Armor<br>25 Magic Resist</div><br><br><span class=\"effect-passive-text\">Watch Them Fall</span><br>On Immobilize or Grounding an enemy champion, summon a comet above them. The comet lands after 1 second, dealing additional <span class=\"effect-purple-text\"> magic damage</span> in the area. This effect has a 6s cooldown per target per spell cast.",
+  "description": "<div class=\"effect-stats\">60 Ability Power<br>25 Armor<br>25 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Watch Them Fall</span><br>On Immobilize or Grounding an enemy champion, summon a comet above them. The comet lands after 1 second, dealing additional <span class=\"effect-text-purple\"> magic damage</span> in the area. This effect has a 6s cooldown per target per spell cast.",
   "stats": {
     "magicResistance": 25,
     "abilityPower": 60,

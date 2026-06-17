@@ -58,7 +58,7 @@
   "stats": {
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>.<br>",
+  "description": "<div class=\"effect-stats\">10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-text-orange\">bonus physical damage</span> <span class=\"effect-text-red\">On-Hit</span>.<br>",
   "gold": {
     "base": 650,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 223112,
   "name": "Guardian's Orb",
-  "description": "<div class=\"effect-stats\">55 Ability Power<br>25 Ability Haste</div><br><br><span class=\"effect-passive-text\">Recovery</span><br>Restores <span class=\"effect-blue-text\">10 Mana</span> every 5 seconds. If you can't gain mana, restores <span class=\"effect-green-text\">15 Health</span> instead.",
+  "description": "<div class=\"effect-stats\">55 Ability Power<br>25 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Recovery</span><br>Restores <span class=\"effect-text-blue\">10 Mana</span> every 5 seconds. If you can't gain mana, restores <span class=\"effect-text-green\">15 Health</span> instead.",
   "stats": {
     "abilityPower": 55
   },

@@ -22,7 +22,7 @@
   "stats": {
     "attackSpeed": 30
   },
-  "description": "<div class=\"effect-stats\">75 Adaptive Force<br>40% Attack Speed</div><br><br><span class=\"effect-passive-text\">Reach Weapon</span><br>Increase your attack range by 75.<br><br><span class=\"effect-passive-text\">Sweet Spot</span><br>Deal up to 30% increased damage with Attacks and 50% with Abilities based on how far your target is from you. Damage caps at 700 units. ",
+  "description": "<div class=\"effect-stats\">75 Adaptive Force<br>40% Attack Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Reach Weapon</span><br>Increase your attack range by 75.<hr class='effect-hr'><span class=\"effect-text-passive\">Sweet Spot</span><br>Deal up to 30% increased damage with Attacks and 50% with Abilities based on how far your target is from you. Damage caps at 700 units. ",
   "gold": {
     "base": 2750,
     "purchasable": true,

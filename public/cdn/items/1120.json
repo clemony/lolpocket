@@ -18,7 +18,7 @@
     "health": 140,
     "magicResistance": 10
   },
-  "description": "<div class=\"effect-stats\">140 Health<br>10 Armor<br>10 Magic Resist</div><br><br><span class=\"effect-passive-text\">Helping Hand</span><br>Attacks deal <span class=\"effect-orange-text\">5 bonus physical damage</span> to minions.",
+  "description": "<div class=\"effect-stats\">140 Health<br>10 Armor<br>10 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Helping Hand</span><br>Attacks deal <span class=\"effect-text-orange\">5 bonus physical damage</span> to minions.",
   "gold": {
     "base": 450,
     "purchasable": true,

@@ -32,7 +32,7 @@
   "stats": {
     "flatMovespeed": 65
   },
-  "description": "<div class=\"effect-stats\">65 Move Speed</div><br><br><span class=\"effect-passive-text\">Fleetfooted</span><br>Reduce the effectiveness of Slows by 40%.<br><br><span class=\"effect-passive-text\">Noxian Fervor</span><br>Gain 5% of your <span class=\"effect-gray-text\">Move Speed</span> as Adaptive Force.",
+  "description": "<div class=\"effect-stats\">65 Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Fleetfooted</span><br>Reduce the effectiveness of Slows by 40%.<hr class='effect-hr'><span class=\"effect-text-passive\">Noxian Fervor</span><br>Gain 5% of your <span class=\"effect-text-gray\">Move Speed</span> as Adaptive Force.",
   "gold": {
     "base": 0,
     "purchasable": true,

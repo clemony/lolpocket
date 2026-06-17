@@ -1,7 +1,7 @@
 {
   "id": 1209,
   "name": "Jungle Quest Reward",
-  "description": "<div class=\"effect-stats\"></div><br><br>Rewards<br>• Upgraded Smite and evolve jungle pet to Mosstomper<br>• Increased gold and XP from large monsters<br>• Bonus movement speed in the jungle",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Rewards<br>• Upgraded Smite and evolve jungle pet to Mosstomper<br>• Increased gold and XP from large monsters<br>• Bonus movement speed in the jungle",
   "gold": {
     "base": 0,
     "purchasable": false,

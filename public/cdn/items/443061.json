@@ -18,7 +18,7 @@
     "health": 900,
     "abilityHaste": 30
   },
-  "description": "<div class=\"effect-stats\">900 Health<br>30 Ability Haste<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Atrophy</span><br>When you Immobilizing a target roll your Critical Chance to increase their duration by 0.25 +33% seconds.",
+  "description": "<div class=\"effect-stats\">900 Health<br>30 Ability Haste<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Atrophy</span><br>When you Immobilizing a target roll your Critical Chance to increase their duration by 0.25 +33% seconds.",
   "gold": {
     "base": 2750,
     "purchasable": true,

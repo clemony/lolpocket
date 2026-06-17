@@ -37,15 +37,25 @@ const stats = computed(() => {
 <template>
   <MotionSeparator
     :item
-    class="pl-1"
-    @update:masterwork="masterwork = $event" />
-  <ul v-if="item.stats" class="">
+    :model-value="computed<boolean>(() => masterwork)"
+    label-on="MASTERWORK"
+    label-suffix="STATS"
+    class="pl-1">
+    <template #trailing>
+      <div v-if="item.masterwork" class="anchor relative h-5 w-6 shrink-0">
+        <MasterworkToggle
+          :masterwork="masterwork"
+          @update:masterwork="masterwork = $event" />
+      </div>
+    </template>
+  </MotionSeparator>
+  <ul v-if="item.stats" class="pt-1">
     <li
       v-for="[k, v] in stats"
       :key="k"
       :class="
         cn(
-          'flex h-max items-center truncate px-1.5 text-sm leading-6 text-nowrap',
+          'flex h-max items-center truncate px-2 text-sm leading-6 text-nowrap',
           className
         )
       "

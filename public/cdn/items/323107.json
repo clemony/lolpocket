@@ -1,7 +1,7 @@
 {
   "id": 323107,
   "name": "Redemption",
-  "description": "<div class=\"effect-stats\">30 Ability Power<br>15 Ability Haste<br>100% Base Mana Regen<br>10% Heal and Shield Power</div><br><br><span class=\"effect-active-text\">Intervention</span><br>Restore <span class=\"effect-green-text\">150 - 350 Health</span> to allied units and deal <span class=\"effect-orange-text\">10% max Health true damage</span> to enemy champions after 2.5 seconds.",
+  "description": "<div class=\"effect-stats\">30 Ability Power<br>15 Ability Haste<br>100% Base Mana Regen<br>10% Heal and Shield Power</div><hr class='effect-hr'><span class=\"effect-text-active\">Intervention</span><br>Restore <span class=\"effect-text-green\">150 - 350 Health</span> to allied units and deal <span class=\"effect-text-orange\">10% max Health true damage</span> to enemy champions after 2.5 seconds.",
   "stats": {
     "health": 400,
     "abilityPower": 30

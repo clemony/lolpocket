@@ -35,7 +35,7 @@
     "healthRegen": 75,
     "manaRegen": 75
   },
-  "description": "<div class=\"effect-stats\">200 Health<br>75% Base Health Regen<br>75% Base Mana Regen<br>9 Gold Per 10 Seconds</div><br><br><span class=\"effect-passive-text\">Going Sledding</span><br>Slowing or Immobilizing an enemy champion near allies restores <span class=\"effect-green-text\">Health</span> and grants <span class=\"effect-gray-text\">20% decaying Move Speed</span> for 2.5 seconds to you and a nearby ally. <span class=\"effect-active-text\">Active</span> (4 charges)<br>Places an Invisible Stealth Ward that grants vision.",
+  "description": "<div class=\"effect-stats\">200 Health<br>75% Base Health Regen<br>75% Base Mana Regen<br>9 Gold Per 10 Seconds</div><hr class='effect-hr'><span class=\"effect-text-passive\">Going Sledding</span><br>Slowing or Immobilizing an enemy champion near allies restores <span class=\"effect-text-green\">Health</span> and grants <span class=\"effect-text-gray\">20% decaying Move Speed</span> for 2.5 seconds to you and a nearby ally. <span class=\"effect-text-active\">Active</span> (4 charges)<br>Places an Invisible Stealth Ward that grants vision.",
   "gold": {
     "base": 0,
     "purchasable": true,

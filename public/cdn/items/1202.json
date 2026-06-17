@@ -1,7 +1,7 @@
 {
   "id": 1202,
   "name": "Bot Lane Quest",
-  "description": "<div class=\"effect-stats\"></div><br><br>Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in bot lane!<br><br>Rewards<br>• Gold imediately and Increased gold from Minion kills and champion takedowns<br>• A bonus item slot for your boots",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in bot lane!<hr class='effect-hr'>Rewards<br>• Gold imediately and Increased gold from Minion kills and champion takedowns<br>• A bonus item slot for your boots",
   "gold": {
     "base": 0,
     "purchasable": false,

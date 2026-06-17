@@ -1,0 +1,10 @@
+{
+  "id": 8230,
+  "name": "Stormraider's Surge",
+  "description": "Dealing 25% of a champion's maximum health within 3s grants <span class=\"effect-text-gray\">48% Move Speed</span> and 50% Slow Resistance for 4s. Move Speed is 75% effective for ranged champions.<br>Cooldown: 20s - 10s",
+  "path": "Sorcery",
+  "pathId": 8200,
+  "tier": 0,
+  "tierLabel": "Keystone",
+  "tierSlot": 2
+}

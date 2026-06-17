@@ -36,7 +36,7 @@
     "health": 250,
     "lethality": 15
   },
-  "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Lethality<br>250 Health</div><br><br><span class=\"effect-passive-text\">Annul</span><br>Grants a Spell Shield that blocks the next enemy Ability.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Lethality<br>250 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Annul</span><br>Grants a Spell Shield that blocks the next enemy Ability.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -52,7 +52,7 @@
   ],
   "arena": {
     "id": 223814,
-    "description": "<div class=\"effect-stats\">45 Attack Damage<br>14 Lethality<br>375 Health</div><br><br><span class=\"effect-passive-text\">Annul</span> (0s)<br>Gain a Spell Shield that blocks the next enemy Ability.<br><br>Item's cooldown is restarted if you take damage before it is completed.",
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>14 Lethality<br>375 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Annul</span> (0s)<br>Gain a Spell Shield that blocks the next enemy Ability.<hr class='effect-hr'>Item's cooldown is restarted if you take damage before it is completed.",
     "stats": {
       "health": 375,
       "attackDamage": 45

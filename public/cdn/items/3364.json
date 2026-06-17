@@ -21,7 +21,7 @@
     }
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active</span> (<span class=\"effect-blue-text\">160 - 100</span>s, max 2 charges)<br>Reveals enemy Stealth Wards and traps around you for 8 seconds.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active</span> (<span class=\"effect-text-blue\">160 - 100</span>s, max 2 charges)<br>Reveals enemy Stealth Wards and traps around you for 8 seconds.",
   "gold": {
     "base": 0,
     "purchasable": true,

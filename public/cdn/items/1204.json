@@ -1,7 +1,7 @@
 {
   "id": 1204,
   "name": "Jungle Quest",
-  "description": "<div class=\"effect-stats\"></div><br><br>Upgrade your Jungle Pet to complete your quest. Earn points by killing jungle monsters.<br><br>Rewards<br>• Upgraded jungle pet and Smite<br>• Increased gold and XP from large monsters<br>• Bonus movement speed in the jungle",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Upgrade your Jungle Pet to complete your quest. Earn points by killing jungle monsters.<hr class='effect-hr'>Rewards<br>• Upgraded jungle pet and Smite<br>• Increased gold and XP from large monsters<br>• Bonus movement speed in the jungle",
   "gold": {
     "base": 0,
     "purchasable": false,

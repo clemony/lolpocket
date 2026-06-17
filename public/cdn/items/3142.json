@@ -46,7 +46,7 @@
     "lethality": 18,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Haunt</span> <br>Gain <span class=\"effect-gray-text\"> Move Speed</span> while out of combat.<br><br><span class=\"effect-active-text\">Wraith Step</span><br>Gain <span class=\"effect-gray-text\">Move Speed</span> and Ghosting for  seconds.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Haunt</span> <br>Gain <span class=\"effect-text-gray\"> Move Speed</span> while out of combat.<hr class='effect-hr'><span class=\"effect-text-active\">Wraith Step</span><br>Gain <span class=\"effect-text-gray\">Move Speed</span> and Ghosting for  seconds.",
   "gold": {
     "base": 675,
     "purchasable": true,
@@ -62,7 +62,7 @@
   ],
   "arena": {
     "id": 223142,
-    "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Haunt</span> <br>Gain <span class=\"effect-gray-text\"> Move Speed</span> while out of combat.<br><br><br><span class=\"effect-active-text\">ACTIVE</span> (0s)<br><span class=\"effect-active-text\">Wraith Step</span><br>Gain Move Speed and Ghosting.",
+    "description": "<div class=\"effect-stats\">55 Attack Damage<br>22 Lethality<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Haunt</span> <br>Gain <span class=\"effect-text-gray\"> Move Speed</span> while out of combat.<hr class='effect-hr'><span class=\"effect-text-active\">ACTIVE</span> (0s)<br><span class=\"effect-text-active\">Wraith Step</span><br>Gain Move Speed and Ghosting.",
     "stats": {
       "attackDamage": 55,
       "percentMovespeed": 4

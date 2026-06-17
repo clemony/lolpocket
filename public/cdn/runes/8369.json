@@ -1,0 +1,10 @@
+{
+  "id": 8369,
+  "name": "First Strike",
+  "description": "Attacks or abilities against an enemy champion within 0.25s of entering champion combat grant 10 gold and <b class=\"effect-text-bold\">First Strike</b> for 3 seconds, causing you to deal <span class=\"effect-text-orange\">7%</span> extra <span class=\"effect-text-orange\"> damage</span> against champions, and granting <span class=\"effect-text-gold\">50% (35% for ranged champions)</span> of bonus damage dealt as <span class=\"effect-text-gold\">gold</span>.<hr class='effect-hr'>Cooldown: <span class=\"effect-text-blue\">25 - 15</span>s",
+  "path": "Inspiration",
+  "pathId": 8300,
+  "tier": 0,
+  "tierLabel": "Keystone",
+  "tierSlot": 2
+}

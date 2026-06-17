@@ -1,0 +1,10 @@
+{
+  "id": 8229,
+  "name": "Arcane Comet",
+  "description": "Damaging a champion with an ability hurls a comet at their location, dealing increased damage based on distance.<hr class='effect-hr'>Adaptive Damage: 15 - 100 based on level (<span class=\"effect-text-purple\">+0.05 AP</span> and <span class=\"effect-text-orange\">+0.1 bonus AD</span>)<br>Cooldown: 20 - 8s<hr class='effect-hr'>Damage amplification scales up to 100% at 750 range.<br>",
+  "path": "Sorcery",
+  "pathId": 8200,
+  "tier": 0,
+  "tierLabel": "Keystone",
+  "tierSlot": 1
+}

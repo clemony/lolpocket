@@ -1,7 +1,7 @@
 {
   "id": 3010,
   "name": "Symbiotic Soles",
-  "description": "<div class=\"effect-stats\">40 Move Speed</div><br><br><span class=\"effect-passive-text\">Synchrony</span><br>Gain <span class=\"effect-gray-text\">10 Move Speed</span> when out of combat.<br><br><span class=\"effect-passive-text\">Symbiosis</span><br>After traveling 150000 units of distance, transform into <span class=\"effect-gold-text\">Synchronized Souls</span>.",
+  "description": "<div class=\"effect-stats\">40 Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Synchrony</span><br>Gain <span class=\"effect-text-gray\">10 Move Speed</span> when out of combat.<hr class='effect-hr'><span class=\"effect-text-passive\">Symbiosis</span><br>After traveling 150000 units of distance, transform into <span class=\"effect-text-gold\">Synchronized Souls</span>.",
   "stats": {
     "flatMovespeed": 40
   },

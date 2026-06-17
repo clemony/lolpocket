@@ -30,7 +30,7 @@
     "attackSpeed": 40,
     "magicResistance": 35
   },
-  "description": "<div class=\"effect-stats\">35 Armor<br>35 Magic Resist<br>40% Attack Speed</div><br><br><span class=\"effect-passive-text\">Reverberate</span><br>At combat start gain <span class=\"effect-green-text\">50 max Health</span> per <span class=\"effect-gold-text\">10% bonus Attack Speed</span>.<br><br><span class=\"effect-passive-text\">Resonate</span><br>Attacks deal <span class=\"effect-purple-text\"> magic damage <span class=\"effect-red-text\">On-Hit</span></span>.<br><br><span class=\"effect-passive-text\">Rumble</span><br>Immobilizing or Grounding an enemy champion applies <span class=\"effect-red-text\">On-Hit</span> effects 3 times.",
+  "description": "<div class=\"effect-stats\">35 Armor<br>35 Magic Resist<br>40% Attack Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Reverberate</span><br>At combat start gain <span class=\"effect-text-green\">50 max Health</span> per <span class=\"effect-text-gold\">10% bonus Attack Speed</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Resonate</span><br>Attacks deal <span class=\"effect-text-purple\"> magic damage <span class=\"effect-text-red\">On-Hit</span></span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Rumble</span><br>Immobilizing or Grounding an enemy champion applies <span class=\"effect-text-red\">On-Hit</span> effects 3 times.",
   "gold": {
     "base": 2750,
     "purchasable": true,

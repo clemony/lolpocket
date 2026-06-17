@@ -42,7 +42,7 @@
     "attackDamage": 25,
     "magicResistance": 25
   },
-  "description": "<div class=\"effect-stats\">25 Attack Damage<br>25 Magic Resist</div><br><br><span class=\"effect-passive-text\">Lifeline</span><br>Taking magic damage that would reduce your Health below 30% grants a <span class=\"effect-blue-text\">magic damage Shield</span> for 2.5 seconds.",
+  "description": "<div class=\"effect-stats\">25 Attack Damage<br>25 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span><br>Taking magic damage that would reduce your Health below 30% grants a <span class=\"effect-text-blue\">magic damage Shield</span> for 2.5 seconds.",
   "gold": {
     "base": 200,
     "purchasable": true,

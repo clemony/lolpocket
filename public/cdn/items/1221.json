@@ -1,7 +1,7 @@
 {
   "id": 1221,
   "name": "Top Lane Quest Reward",
-  "description": "<div class=\"effect-stats\"></div><br><br>Rewards<br>• Enhance your Teleport with a large max-health shield on use<br>• Flat bonus experience, more experience from all sources, and an increased level cap",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Rewards<br>• Enhance your Teleport with a large max-health shield on use<br>• Flat bonus experience, more experience from all sources, and an increased level cap",
   "gold": {
     "base": 0,
     "purchasable": false,

@@ -1,0 +1,10 @@
+{
+  "id": 8005,
+  "name": "Press the Attack",
+  "description": "Hitting an enemy champion with 3 consecutive basic attacks deals 40 - 160 bonus adaptive damage (based on level) and amplifies your damage dealt by 8% until you leave combat with champions.",
+  "path": "Precision",
+  "pathId": 8000,
+  "tier": 0,
+  "tierLabel": "Keystone",
+  "tierSlot": 0
+}

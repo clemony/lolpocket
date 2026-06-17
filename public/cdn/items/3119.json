@@ -50,7 +50,7 @@
     "mana": 500,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">550 Health<br>500 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Awe</span><br>Gain <span class=\"effect-green-text\"> Health</span>.<br><br><span class=\"effect-passive-text\">Manaflow</span> (8s, max 4 charges)<br>Landing Attacks and Abilities grant <span class=\"effect-blue-text\">3 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-gold-text\">Fimbulwinter</span> at <span class=\"effect-blue-text\">360 max Mana</span>.",
+  "description": "<div class=\"effect-stats\">550 Health<br>500 Mana<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Awe</span><br>Gain <span class=\"effect-text-green\"> Health</span>.<hr class='effect-hr'><span class=\"effect-text-passive\">Manaflow</span> (8s, max 4 charges)<br>Landing Attacks and Abilities grant <span class=\"effect-text-blue\">3 max Mana</span> (doubled vs. champions).<br>Transforms into <span class=\"effect-text-gold\">Fimbulwinter</span> at <span class=\"effect-text-blue\">360 max Mana</span>.",
   "gold": {
     "base": 300,
     "purchasable": true,
@@ -66,7 +66,7 @@
   ],
   "arena": {
     "id": 223119,
-    "description": "<div class=\"effect-stats\">400 Health<br>600 Mana<br>15 Ability Haste</div><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Awe:</span> Gain bonus <span class=\"effect-green-text\">Health equal to Total Mana</span>.<span class=\"effect-list\"><span class=\"effect-passive-text\">Mana Charge:</span> <b class=\"effect-bold-text\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-gold-text\">Fimbulwinter</span>.",
+    "description": "<div class=\"effect-stats\">400 Health<br>600 Mana<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Awe:</span> Gain bonus <span class=\"effect-text-green\">Health equal to Total Mana</span>.<span class=\"effect-list\"><span class=\"effect-text-passive\">Mana Charge:</span> <b class=\"effect-text-bold\">After 2 combat rounds</b>, this item transforms into <span class=\"effect-text-gold\">Fimbulwinter</span>.",
     "stats": {
       "mana": 600,
       "health": 400

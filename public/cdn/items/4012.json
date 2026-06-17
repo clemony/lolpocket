@@ -1,7 +1,7 @@
 {
   "id": 4012,
   "name": "Sin Eater",
-  "description": "<div class=\"effect-stats\">300 Health<br>45 Armor<br>45 Magic Resist<br>30% Tenacity</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">The Feast:</span> Whenever a nearby ally champion becomes affected by an immobilizing crowd control effect, instead you are stunned for that duration. (20(0s)).",
+  "description": "<div class=\"effect-stats\">300 Health<br>45 Armor<br>45 Magic Resist<br>30% Tenacity</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">The Feast:</span> Whenever a nearby ally champion becomes affected by an immobilizing crowd control effect, instead you are stunned for that duration. (20(0s)).",
   "stats": {
     "magicResistance": 45,
     "health": 300,

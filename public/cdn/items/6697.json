@@ -33,7 +33,7 @@
     "lethality": 18,
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Eminence</span><br>When a champion that you damaged within 3 seconds dies, gain <span class=\"effect-orange-text\">12 Attack Damage plus 3 per champion killed</span> for 90 seconds.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Eminence</span><br>When a champion that you damaged within 3 seconds dies, gain <span class=\"effect-text-orange\">12 Attack Damage plus 3 per champion killed</span> for 90 seconds.",
   "gold": {
     "base": 750,
     "purchasable": true,
@@ -47,7 +47,7 @@
   ],
   "arena": {
     "id": 226697,
-    "description": "<div class=\"effect-stats\">50 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Eminence</span><br>When a champion that you have damaged with the last 3 seconds dies, gain <span class=\"effect-orange-text\">15 Attack Damage</span> <b class=\"effect-bold-text\">for the rest of the round</b>, or until slain. Eminence's <span class=\"effect-orange-text\">Attack Damage is permanently increased by 2</span> each time this triggers.",
+    "description": "<div class=\"effect-stats\">50 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Eminence</span><br>When a champion that you have damaged with the last 3 seconds dies, gain <span class=\"effect-text-orange\">15 Attack Damage</span> <b class=\"effect-text-bold\">for the rest of the round</b>, or until slain. Eminence's <span class=\"effect-text-orange\">Attack Damage is permanently increased by 2</span> each time this triggers.",
     "stats": {
       "attackDamage": 50
     },

@@ -40,7 +40,7 @@
     "health": 350,
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">350 Health<br>50 Armor<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\">magic damage</span> per second to nearby enemies for 3 seconds. ",
+  "description": "<div class=\"effect-stats\">350 Health<br>50 Armor<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-text-purple\">magic damage</span> per second to nearby enemies for 3 seconds. ",
   "gold": {
     "base": 600,
     "purchasable": true,
@@ -56,7 +56,7 @@
   ],
   "arena": {
     "id": 223068,
-    "description": "<div class=\"effect-stats\">350 Health<br>40 Armor<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-purple-text\"> magic damage</span> per second to nearby enemies for 3 seconds. ",
+    "description": "<div class=\"effect-stats\">350 Health<br>40 Armor<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Immolate</span><br>After taking or dealing damage, deal <span class=\"effect-text-purple\"> magic damage</span> per second to nearby enemies for 3 seconds. ",
     "stats": {
       "health": 350,
       "armor": 40

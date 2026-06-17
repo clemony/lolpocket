@@ -87,7 +87,11 @@ const disabled = computed(
 </script>
 
 <template>
-  <TooltipRoot v-slot="{ open }" v-bind="forwarded" :disabled>
+  <TooltipRoot
+    v-slot="{ open }"
+    :disable-closing-trigger
+    v-bind="forwarded"
+    :disabled>
     <TooltipTrigger
       v-if="!!slots.default || !!props.reference"
       v-bind="$attrs"
@@ -103,7 +107,7 @@ const disabled = computed(
         data-slot="content"
         :class="
           cn(
-            'group/tt pointer-events-auto isolate z-[677] inline-flex min-h-7.5 cursor-default items-center gap-1 overflow-hidden rounded-lg bg-p0/30 p-0 align-baseline text-sm font-medium text-p0 shadow-none ring ring-p5/70 backdrop-blur-[18px] backdrop-saturate-150 select-none',
+            'group/tt pointer-events-auto isolate z-[677] inline-flex min-h-7.5 cursor-default items-center gap-1 rounded-lg bg-p0/30 p-0 align-baseline text-sm font-medium text-p0 shadow-none ring ring-p5/70 backdrop-blur-[18px] backdrop-saturate-150 select-none',
             props.ui?.content
           )
         ">
@@ -121,12 +125,24 @@ const disabled = computed(
 
         <TooltipArrow
           v-if="!!props.arrow"
+          rounded
           v-bind="arrowProps"
-          data-slot="arrow"
           :class="
-            cn('fill-p0/30 stroke-p5/70 stroke-[0.75]', props.ui?.arrow)
-          " />
+            cn(
+              'stroke-p5/60 **:fill-p0/40 **:stroke-1 group-data-[side=bottom]/tt:mask-t-from-80% group-data-[side=bottom]/tt:mask-t-to-81%',
+              props.ui?.arrow
+            )
+          "
+          data-slot="arrow">
+          <!--           <div class="size-5 bg-p0/70" /> -->
+        </TooltipArrow>
       </TooltipContent>
     </TooltipPortal>
   </TooltipRoot>
 </template>
+
+<style scoped>
+.caret-mask {
+  clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+}
+</style>

@@ -1,7 +1,7 @@
 {
   "id": 1200,
   "name": "Top Lane Quest",
-  "description": "<div class=\"effect-stats\"></div><br><br>Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in top lane!<br><br>Rewards<br>• Teleport as a 3rd Summoner Spell<br>• Flat bonus experience, more experience from all sources, and increased level cap",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in top lane!<hr class='effect-hr'>Rewards<br>• Teleport as a 3rd Summoner Spell<br>• Flat bonus experience, more experience from all sources, and increased level cap",
   "gold": {
     "base": 0,
     "purchasable": false,

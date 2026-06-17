@@ -46,7 +46,7 @@
     "armor": 30,
     "attackDamage": 15
   },
-  "description": "<div class=\"effect-stats\">15 Attack Damage<br>30 Armor</div><br><br>",
+  "description": "<div class=\"effect-stats\">15 Attack Damage<br>30 Armor</div><hr class='effect-hr'>",
   "gold": {
     "base": 150,
     "purchasable": true,

@@ -1,7 +1,7 @@
 {
   "id": 4402,
   "name": "Innervating Locket",
-  "description": "<div class=\"effect-stats\">30 Attack Damage<br>400 Health<br>300 Mana<br>10 Ability Haste</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Eternity:</span> Restore Mana equal to 15% of premitigation damage taken from champions, and Health equal to 25% of Mana spent, up to 20 Health per cast, per second.<span class=\"effect-list\"><span class=\"effect-passive-text\">Innervate:</span> After using an ability, restore <span class=\"effect-green-text\">3% missing Health</span> and <span class=\"effect-blue-text\">3% missing Mana</span> over 3 seconds.<br><br>\"Cast down the Noxians\" <br>– Bobdyr, Temple Guardsman",
+  "description": "<div class=\"effect-stats\">30 Attack Damage<br>400 Health<br>300 Mana<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Eternity:</span> Restore Mana equal to 15% of premitigation damage taken from champions, and Health equal to 25% of Mana spent, up to 20 Health per cast, per second.<span class=\"effect-list\"><span class=\"effect-text-passive\">Innervate:</span> After using an ability, restore <span class=\"effect-text-green\">3% missing Health</span> and <span class=\"effect-text-blue\">3% missing Mana</span> over 3 seconds.<hr class='effect-hr'><small class=\"effect-flavor-text\">\"Cast down the Noxians\" <br>– Bobdyr, Temple Guardsman</small>",
   "stats": {
     "mana": 300,
     "health": 400,

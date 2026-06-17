@@ -42,7 +42,7 @@
     "health": 300,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">300 Health<br>50 Armor<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span> and creates a frost field for 2s that Slows.",
+  "description": "<div class=\"effect-stats\">300 Health<br>50 Armor<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-text-orange\">bonus physical damage</span> <span class=\"effect-text-red\">On-Hit</span> and creates a frost field for 2s that Slows.",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -58,7 +58,7 @@
   ],
   "arena": {
     "id": 226662,
-    "description": "<div class=\"effect-stats\">300 Health<br>45 Armor<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span> and creates a frost field for 2s that Slows.",
+    "description": "<div class=\"effect-stats\">300 Health<br>45 Armor<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Spellblade</span><br>After using an Ability, your next Attack deals <span class=\"effect-text-orange\">bonus physical damage</span> <span class=\"effect-text-red\">On-Hit</span> and creates a frost field for 2s that Slows.",
     "stats": {
       "health": 300,
       "armor": 45

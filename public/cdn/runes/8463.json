@@ -1,0 +1,10 @@
+{
+  "id": 8463,
+  "name": "Font of Life",
+  "description": "Impairing the movement of an enemy champion restores Health to you and the lowest health nearby allied champion.<hr class='effect-hr'>70% effect for Ranged Users.<hr class='effect-hr'>Cooldown: 20s",
+  "path": "Resolve",
+  "pathId": 8400,
+  "tier": 1,
+  "tierLabel": "Strength",
+  "tierSlot": 1
+}

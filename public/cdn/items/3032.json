@@ -44,7 +44,7 @@
     "attackDamage": 50,
     "attackSpeed": 40
   },
-  "description": "<div class=\"effect-stats\">50 Attack Damage<br>40% Attack Speed<br>0% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Practice Makes Lethal</span><br>On-Attack, gain Critical Strike Chance permanently up to 25%.<br><br><span class=\"effect-passive-text\">Flurry</span><br>On-Attacking an enemy champion, gain 30% Attack Speed for 6 seconds (30 second cooldown). <br>Attacks reduce this cooldown by 1 second, increased to 2 seconds for Critical Strikes.",
+  "description": "<div class=\"effect-stats\">50 Attack Damage<br>40% Attack Speed<br>0% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Practice Makes Lethal</span><br>On-Attack, gain Critical Strike Chance permanently up to 25%.<hr class='effect-hr'><span class=\"effect-text-passive\">Flurry</span><br>On-Attacking an enemy champion, gain 30% Attack Speed for 6 seconds (30 second cooldown). <br>Attacks reduce this cooldown by 1 second, increased to 2 seconds for Critical Strikes.",
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -60,7 +60,7 @@
   ],
   "arena": {
     "id": 223032,
-    "description": "<div class=\"effect-stats\">45 Attack Damage<br>40% Attack Speed<br>0% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Practice Makes Lethal</span><br>On-Attack, gain Critical Strike Chance permanently up to 25%.<br><br><span class=\"effect-passive-text\">Flurry</span><br>On-Attacking an enemy champion, gain 30% Attack Speed for 6 seconds (30 second cooldown). <br>Attacks reduce this cooldown by 1 second, increased to 2 seconds for Critical Strikes.",
+    "description": "<div class=\"effect-stats\">45 Attack Damage<br>40% Attack Speed<br>0% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Practice Makes Lethal</span><br>On-Attack, gain Critical Strike Chance permanently up to 25%.<hr class='effect-hr'><span class=\"effect-text-passive\">Flurry</span><br>On-Attacking an enemy champion, gain 30% Attack Speed for 6 seconds (30 second cooldown). <br>Attacks reduce this cooldown by 1 second, increased to 2 seconds for Critical Strikes.",
     "stats": {
       "attackDamage": 45,
       "attackSpeed": 40

@@ -1,7 +1,7 @@
 {
   "id": 663064,
   "name": "Veigar's Talisman of Ascension",
-  "description": "<div class=\"effect-stats\"></div><br><br>Gain 100% Extra Experience<br><br>Offers no stats, and cannot be sold...<br><br>...But will be worth it if you reach Level 30.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Gain 100% Extra Experience<hr class='effect-hr'>Offers no stats, and cannot be sold...<hr class='effect-hr'>...But will be worth it if you reach Level 30.",
   "gold": {
     "base": 900,
     "purchasable": true,

@@ -33,7 +33,7 @@
     "attackSpeed": 45,
     "percentMovespeed": 15
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>45% Attack Speed<br>15% Move Speed</div><br><br><span class=\"effect-passive-text\">Polarity</span><br>On Attack, if the target is different from the target you most recently triggered an Energized Attack on, ready Energize. <br><br><span class=\"effect-passive-text\">Dynamo</span><br>Energized Attacks deal an additional magic damage based on the <span class=\"effect-purple-text\">Target's Current Health</span>.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>45% Attack Speed<br>15% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Polarity</span><br>On Attack, if the target is different from the target you most recently triggered an Energized Attack on, ready Energize. <hr class='effect-hr'><span class=\"effect-text-passive\">Dynamo</span><br>Energized Attacks deal an additional magic damage based on the <span class=\"effect-text-purple\">Target's Current Health</span>.",
   "gold": {
     "base": 2750,
     "purchasable": true,

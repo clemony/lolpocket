@@ -38,7 +38,7 @@
     "healAndShieldPower": 16,
     "manaRegen": 100
   },
-  "description": "<div class=\"effect-stats\">45 Ability Power<br>16% Heal and Shield Power<br>100% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">First Light</span><br>Gain <span class=\"effect-green-text\">2% Heal and Shield Power</span> and <span class=\"effect-purple-text\">10 Ability Power</span> per 100% Base Mana Regen.",
+  "description": "<div class=\"effect-stats\">45 Ability Power<br>16% Heal and Shield Power<br>100% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">First Light</span><br>Gain <span class=\"effect-text-green\">2% Heal and Shield Power</span> and <span class=\"effect-text-purple\">10 Ability Power</span> per 100% Base Mana Regen.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -54,7 +54,7 @@
   ],
   "arena": {
     "id": 226621,
-    "description": "<div class=\"effect-stats\">45 Ability Power<br>12% Heal and Shield Power<br>200% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">First Light</span><br>Gain <span class=\"effect-green-text\">3% Heal and Shield Power</span> and <span class=\"effect-purple-text\">10 Ability Power</span> per <span class=\"effect-blue-text\">100% Base Mana Regen</span>.",
+    "description": "<div class=\"effect-stats\">45 Ability Power<br>12% Heal and Shield Power<br>200% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">First Light</span><br>Gain <span class=\"effect-text-green\">3% Heal and Shield Power</span> and <span class=\"effect-text-purple\">10 Ability Power</span> per <span class=\"effect-text-blue\">100% Base Mana Regen</span>.",
     "stats": {
       "abilityPower": 45
     },

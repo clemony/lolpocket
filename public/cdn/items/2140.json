@@ -10,7 +10,7 @@
     "red"
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Consume</span><br>Grants <span class=\"effect-orange-text\">30 Attack Damage</span> and <span class=\"effect-red-text\">12% Physical Vamp</span> against champions for 3 minutes.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Consume</span><br>Grants <span class=\"effect-text-orange\">30 Attack Damage</span> and <span class=\"effect-text-red\">12% Physical Vamp</span> against champions for 3 minutes.",
   "gold": {
     "base": 500,
     "purchasable": true,

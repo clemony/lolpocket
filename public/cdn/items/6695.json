@@ -32,7 +32,7 @@
     "attackDamage": 55,
     "lethality": 15
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>15 Lethality</div><br><br><span class=\"effect-passive-text\">Shield Reaver</span><br>Damaging an enemy champion reduces Shields they gain by % for 3 seconds. <br>If they were not already affected by <span class=\"effect-passive-text\">Shield Reaver</span>, reduce Shields on them by %.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>15 Lethality</div><hr class='effect-hr'><span class=\"effect-text-passive\">Shield Reaver</span><br>Damaging an enemy champion reduces Shields they gain by % for 3 seconds. <br>If they were not already affected by <span class=\"effect-text-passive\">Shield Reaver</span>, reduce Shields on them by %.",
   "gold": {
     "base": 625,
     "purchasable": true,
@@ -48,7 +48,7 @@
   ],
   "arena": {
     "id": 226695,
-    "description": "<div class=\"effect-stats\">55 Attack Damage<br>19 Lethality</div><br><br><span class=\"effect-passive-text\">Shield Reaver</span><br>Dealing damage to an enemy champion reduces any shields they gain. When you damage an enemy who is unaffected by Shield Reaver, reduce all shields on them.<br><br>Item performance differs for melee and ranged users.",
+    "description": "<div class=\"effect-stats\">55 Attack Damage<br>19 Lethality</div><hr class='effect-hr'><span class=\"effect-text-passive\">Shield Reaver</span><br>Dealing damage to an enemy champion reduces any shields they gain. When you damage an enemy who is unaffected by Shield Reaver, reduce all shields on them.<hr class='effect-hr'>Item performance differs for melee and ranged users.",
     "stats": {
       "attackDamage": 55
     },

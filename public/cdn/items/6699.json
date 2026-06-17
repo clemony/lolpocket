@@ -50,7 +50,7 @@
     "lethality": 10,
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>10 Lethality<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Galvanize</span><br>Damaging an Enemy Champions with an ability triggers Energized if it is ready.<br><br><span class=\"effect-passive-text\">Firmament</span><br>Your Energized Attack deals <span class=\"effect-orange-text\">% target's Current Health as bonus physical damage</span> and grants you <span class=\"effect-red-text\">bonus Lethality</span> for 4 seconds.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>10 Lethality<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Galvanize</span><br>Damaging an Enemy Champions with an ability triggers Energized if it is ready.<hr class='effect-hr'><span class=\"effect-text-passive\">Firmament</span><br>Your Energized Attack deals <span class=\"effect-text-orange\">% target's Current Health as bonus physical damage</span> and grants you <span class=\"effect-text-red\">bonus Lethality</span> for 4 seconds.",
   "gold": {
     "base": 963,
     "purchasable": true,
@@ -66,7 +66,7 @@
   ],
   "arena": {
     "id": 226699,
-    "description": "<div class=\"effect-stats\">60 Attack Damage<br>20 Lethality<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Galvanize</span><br>Damaging an Enemy Champions with an ability triggers Energized if it is ready.<br><br><span class=\"effect-passive-text\">Firmament</span><br>Your Energized Attack deals <span class=\"effect-orange-text\">%</span> target's Current Health as <span class=\"effect-orange-text\">bonus physical damage</span> and grants you <span class=\"effect-red-text\"> Lethality</span> for 4 seconds.",
+    "description": "<div class=\"effect-stats\">60 Attack Damage<br>20 Lethality<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Galvanize</span><br>Damaging an Enemy Champions with an ability triggers Energized if it is ready.<hr class='effect-hr'><span class=\"effect-text-passive\">Firmament</span><br>Your Energized Attack deals <span class=\"effect-text-orange\">%</span> target's Current Health as <span class=\"effect-text-orange\">bonus physical damage</span> and grants you <span class=\"effect-text-red\"> Lethality</span> for 4 seconds.",
     "stats": {
       "attackDamage": 60
     },

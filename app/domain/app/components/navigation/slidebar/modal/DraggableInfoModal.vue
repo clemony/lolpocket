@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import {
-  LazyChampionCommand,
+  LazyChampionInfoCard,
   LazyItemInfoCard,
-  LazyRuneCommand,
-  LazySpellCommand,
+  LazyRuneInfoCard,
+  LazySpellInfoCard,
 } from "#components"
 import { AnimatePresence } from "motion-v"
 import { useDraggableInfoModal } from "~/domain/app/composables/useDraggableInfoModal"
@@ -16,11 +16,10 @@ const props = defineProps<{
   placementIndex?: number
   zIndex?: number
 }>()
-
 const emit = defineEmits(["grab", "update:open"])
+
 const open = defineModel<boolean>("open", { default: false })
 const modalKey = computed(() => `${props.item.group}:${props.item.id}`)
-const expanded = shallowRef<boolean>(false)
 
 const { dragConstraints, modalRef, modalStyle, updateDragConstraints } =
   useDraggableInfoModal({
@@ -36,10 +35,10 @@ const data = useObjectData({
 
 const cardComponent = computed<Component | undefined>(() => {
   const groups: Record<string, Component> = {
-    champion: LazyChampionCommand,
-    spell: LazySpellCommand,
+    champion: LazyChampionInfoCard,
+    spell: LazySpellInfoCard,
     item: LazyItemInfoCard,
-    rune: LazyRuneCommand,
+    rune: LazyRuneInfoCard,
   }
   return groups[props.item.group]
 })
@@ -88,8 +87,8 @@ function handlePointerDown() {
       :style="modalCardStyle"
       :class="
         cn(
-          'pointer-events-auto! absolute top-1/2 left-1/2 h-max min-h-64 w-full touch-none rounded-5xl border border-n3 bg-n1/90 backdrop-blur-md backdrop-brightness-70 transition-[max-width] duration-400 ease-out',
-          expanded ? 'max-w-100' : 'max-w-84'
+          'pointer-events-auto! absolute top-1/2 left-1/2 h-max w-full touch-none rounded-5xl border border-n3 bg-n1/94 backdrop-blur-md transition-[max-width] duration-400 ease-out',
+          data.size.value === 'lg' ? 'w-100 max-w-100' : 'max-w-84'
         )
       "
       @pointerdown.capture="handlePointerDown">
@@ -108,7 +107,6 @@ function handlePointerDown() {
         :is="cardComponent"
         v-if="data.status.value === 'success' && data"
         :object-data="data"
-        @update:expanded="expanded = $event"
         @update:open="emit('update:open', $event)" />
 
       <div v-else-if="data.status.value === 'pending'"></div>

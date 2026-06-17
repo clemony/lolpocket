@@ -1,0 +1,10 @@
+{
+  "id": 8275,
+  "name": "Nimbus Cloak",
+  "description": "After casting a Summoner Spell, gain a <span class=\"effect-text-gray\">Move Speed</span> increase that lasts for 2s and allows you to pass through units.<hr class='effect-hr'>Increase: <span class=\"effect-text-gray\">15% - 45% Move Speed</span> based on the Summoner Spell's cooldown. (Higher cooldown Summoner Spells grant more <span class=\"effect-text-gray\">Move Speed</span>). ",
+  "path": "Sorcery",
+  "pathId": 8200,
+  "tier": 1,
+  "tierLabel": "Artifact",
+  "tierSlot": 2
+}

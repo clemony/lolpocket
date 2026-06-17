@@ -1,0 +1,10 @@
+{
+  "id": 8141,
+  "name": "Deep Ward",
+  "description": "Your wards in the enemy jungle are Deep. Deep wards gain +1 extra Health and +[30 - 45]s increased duration (+[45 - 150]s for Trinket stealth wards).<hr class='effect-hr'>Level 9: Wards in the river are also Deep.",
+  "path": "Domination",
+  "pathId": 8100,
+  "tier": 2,
+  "tierLabel": "Tracking",
+  "tierSlot": 2
+}

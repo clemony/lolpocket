@@ -1,7 +1,7 @@
 {
   "id": 9173,
   "name": "Radiant Field",
-  "description": "<div class=\"effect-stats\"></div><br><br>Damages nearby enemies, scaling with your Max Health.<br><br>Evolve: Max Health<br><br>Damage, Area Size, Max Health",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Damages nearby enemies, scaling with your Max Health.<hr class='effect-hr'>Evolve: Max Health<hr class='effect-hr'>Damage, Area Size, Max Health",
   "gold": {
     "base": 0,
     "purchasable": true,

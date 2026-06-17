@@ -1,7 +1,7 @@
 {
   "id": 9174,
   "name": "Statikk Sword",
-  "description": "<div class=\"effect-stats\"></div><br><br>Fires lightning that bounces between enemies with the highest health.<br><br>Evolve: Max Health<br><br>Damage, Ability Haste, Area Size, Crit Chance, Duration ",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Fires lightning that bounces between enemies with the highest health.<hr class='effect-hr'>Evolve: Max Health<hr class='effect-hr'>Damage, Ability Haste, Area Size, Crit Chance, Duration ",
   "gold": {
     "base": 0,
     "purchasable": true,

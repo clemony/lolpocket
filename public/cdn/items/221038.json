@@ -1,7 +1,7 @@
 {
   "id": 221038,
   "name": "B. F. Sword",
-  "description": "<div class=\"effect-stats\">40 Attack Damage</div><br><br>",
+  "description": "<div class=\"effect-stats\">40 Attack Damage</div><hr class='effect-hr'>",
   "stats": {
     "attackDamage": 40
   },

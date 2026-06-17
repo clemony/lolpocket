@@ -14,6 +14,8 @@ Keep it short, current, and biased toward what the next session needs to know.
 - Cloudflare Pages build configuration now targets the correct Pages preset in `nuxt.config.ts`.
 - `DEPLOY.md` documents the supported Pages and Worker deploy paths.
 - The server-side Riot request queue was refactored to remove global-scope timers for Cloudflare Pages compatibility.
+- Summoner preview/search cache now has D1 schema and read-through server helpers keyed by PUUID, with `SUMMONER_CACHE_DB` as the Pages binding name.
+- Summoner route resolution now treats `/_r` as an internal resolver prefix so PUUID resolver paths are not parsed as public `/:region/:name_tag` routes.
 - Local Zodiak font wiring was cleaned up to use self-hosted files from `layers/ui/public/fonts/Zodiak`.
 - `useObjectData` now centralizes command reference-card CDN path resolution for item, rune, champion, and ability data, including champion numeric-id to key lookup.
 - Slidebar info popovers now use a fixed 8-slot pool and reuse closed or oldest open slots instead of growing by index.

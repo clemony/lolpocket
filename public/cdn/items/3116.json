@@ -37,7 +37,7 @@
     "abilityPower": 65,
     "health": 400
   },
-  "description": "<div class=\"effect-stats\">65 Ability Power<br>400 Health</div><br><br><span class=\"effect-passive-text\">Rimefrost</span><br>Damaging Abilities Slow enemies by 30% for 1 second.",
+  "description": "<div class=\"effect-stats\">65 Ability Power<br>400 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Rimefrost</span><br>Damaging Abilities Slow enemies by 30% for 1 second.",
   "gold": {
     "base": 450,
     "purchasable": true,
@@ -53,7 +53,7 @@
   ],
   "arena": {
     "id": 223116,
-    "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health</div><br><br><span class=\"effect-passive-text\">Rimefrost</span><br>Damaging Abilities Slow enemies by 30% for 1 second.",
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>350 Health</div><hr class='effect-hr'><span class=\"effect-text-passive\">Rimefrost</span><br>Damaging Abilities Slow enemies by 30% for 1 second.",
     "stats": {
       "health": 350,
       "abilityPower": 60

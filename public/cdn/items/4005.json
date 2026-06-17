@@ -40,7 +40,7 @@
     "manaRegen": 150,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">65 Ability Power<br>15 Ability Haste<br>150% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Control</span><br>Gain 15 Ability Haste for your abilities with Immobilizing effects.<br><br><span class=\"effect-passive-text\">Command</span><br>On Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.<br>",
+  "description": "<div class=\"effect-stats\">65 Ability Power<br>15 Ability Haste<br>150% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Control</span><br>Gain 15 Ability Haste for your abilities with Immobilizing effects.<hr class='effect-hr'><span class=\"effect-text-passive\">Command</span><br>On Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.<br>",
   "gold": {
     "base": 650,
     "purchasable": true,
@@ -56,7 +56,7 @@
   ],
   "arena": {
     "id": 224005,
-    "description": "<div class=\"effect-stats\">60 Ability Power<br>15 Ability Haste<br>150% Base Mana Regen</div><br><br><span class=\"effect-passive-text\">Control</span><br>Gain 15 Ability Haste for your abilities with Immobilizing effects.<br><br><span class=\"effect-passive-text\">Command</span><br>On Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.<br>",
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>15 Ability Haste<br>150% Base Mana Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Control</span><br>Gain 15 Ability Haste for your abilities with Immobilizing effects.<hr class='effect-hr'><span class=\"effect-text-passive\">Command</span><br>On Immobilizing an enemy champion, mark them as 6% Vulnerable for 4 seconds.<br>",
     "stats": {
       "abilityPower": 60
     },

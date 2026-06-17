@@ -3,8 +3,29 @@ import process from "node:process"
 import { colors as uiThemeColors } from "./layers/ui/app/theme/colors"
 
 const isCFPages = process.env.CF_PAGES === "1"
+
 const nitroPreset = isCFPages ? "cloudflare_pages" : "cloudflare_module"
+
 const isProduction = process.env.NODE_ENV === "production"
+
+const summonerCacheD1DatabaseId = process.env.SUMMONER_CACHE_D1_DATABASE_ID
+
+const summonerCacheD1PreviewDatabaseId =
+  process.env.SUMMONER_CACHE_D1_PREVIEW_DATABASE_ID
+const summonerCacheD1Databases = summonerCacheD1DatabaseId
+  ? [
+      {
+        binding: "SUMMONER_CACHE_DB",
+        database_name:
+          process.env.SUMMONER_CACHE_D1_DATABASE_NAME ??
+          "lolpocket-summoner-cache",
+        database_id: summonerCacheD1DatabaseId,
+        ...(summonerCacheD1PreviewDatabaseId
+          ? { preview_database_id: summonerCacheD1PreviewDatabaseId }
+          : {}),
+      },
+    ]
+  : []
 
 const components = [
   "about",
@@ -18,16 +39,16 @@ const components = [
   "nexus",
   "pocket",
   "summoner",
-  "user"
+  "user",
 ].map((c) => ({
   path: `~/domain/${c}/components`,
-  pathPrefix: false
+  pathPrefix: false,
 }))
 
 export default defineNuxtConfig({
   imports: {
     global: true,
-    dirs: ["#shared/schema", "~/stores"]
+    dirs: ["#shared/schema", "~/stores"],
   },
 
   /*   dir: {
@@ -59,13 +80,13 @@ export default defineNuxtConfig({
                 lazyLoad: false,
                 webVitals: true,
                 thirdPartyScripts: true,
-                htmlValidate: true
-              }
-            }
+                htmlValidate: true,
+              },
+            },
           ] as [string, Record<string, any>],
-          "@nuxt/test-utils/module"
+          "@nuxt/test-utils/module",
         ]
-      : [])
+      : []),
   ],
 
   // app
@@ -74,18 +95,18 @@ export default defineNuxtConfig({
     typeCheck: process.env.NODE_ENV === "development",
     tsConfig: {
       compilerOptions: {
-        types: ["youtube"]
-      }
-    }
+        types: ["youtube"],
+      },
+    },
   },
 
   // UI
   components: [
     {
       path: "~/components",
-      pathPrefix: false
+      pathPrefix: false,
     },
-    ...components
+    ...components,
   ],
   css: ["./layers/ui/app/css/tailwind.css"],
   image: {
@@ -98,7 +119,7 @@ export default defineNuxtConfig({
       "lh3.googleusercontent.com",
       "external-preview.redd.it",
       "leagueoflegends.com",
-      "wiki.leagueoflegends.com"
+      "wiki.leagueoflegends.com",
     ],
     presets: {
       card: {
@@ -106,10 +127,10 @@ export default defineNuxtConfig({
           format: "webp",
           width: 400,
           height: 300,
-          quality: 50
-        }
-      }
-    }
+          quality: 50,
+        },
+      },
+    },
   },
   icon: {
     provider: "iconify",
@@ -120,23 +141,23 @@ export default defineNuxtConfig({
       {
         dir: "./app/assets/icons/lp",
         prefix: "lp",
-        normalizeIconName: false
+        normalizeIconName: false,
       },
       {
         dir: "./app/assets/icons/stat",
         prefix: "stat",
-        normalizeIconName: false
+        normalizeIconName: false,
       },
       {
         dir: "./assets/icons/rune",
         prefix: "rune",
-        normalizeIconName: false
+        normalizeIconName: false,
       },
       {
         dir: "./layers/ui/app/assets/icons/ui",
         prefix: "ui",
-        normalizeIconName: false
-      }
+        normalizeIconName: false,
+      },
       /*       {
         dir: "./layers/ui/app/assets/icons/i18n",
         prefix: "i18n",
@@ -144,37 +165,37 @@ export default defineNuxtConfig({
       } */
     ],
     clientBundle: {
-      includeCustomCollections: true
-    }
+      includeCustomCollections: true,
+    },
   },
   ui: {
     colorMode: false,
     experimental: {
-      componentDetection: true
+      componentDetection: true,
     },
     theme: {
-      colors: [...uiThemeColors]
-    }
+      colors: [...uiThemeColors],
+    },
   },
 
   fonts: {
     provider: "fontsource",
     defaults: {
       subsets: ["latin-ext", "latin"],
-      styles: ["normal", "italic"]
+      styles: ["normal", "italic"],
     },
     families: [
       {
         name: "Inter",
-        weights: [300, 400, 500, 600, 700, 800, 900]
+        weights: [300, 400, 500, 600, 700, 800, 900],
       },
       {
-        name: "Source Code Pro"
+        name: "Source Code Pro",
       },
       {
-        name: "Playfair Display"
-      }
-    ]
+        name: "Playfair Display",
+      },
+    ],
   },
 
   ssr: true,
@@ -185,31 +206,38 @@ export default defineNuxtConfig({
     preset: nitroPreset,
     cloudflare: {
       deployConfig: true,
-      nodeCompat: true
+      nodeCompat: true,
+      ...(summonerCacheD1Databases.length
+        ? {
+            wrangler: {
+              d1_databases: summonerCacheD1Databases,
+            },
+          }
+        : {}),
     },
     externals: {
-      external: ["sharp"]
+      external: ["sharp"],
     },
     routeRules: {
       "/api/**": {
         cors: true,
-        headers: { "Access-Control-Allow-Origin": "*" }
-      }
+        headers: { "Access-Control-Allow-Origin": "*" },
+      },
     },
     typescript: {
-      strict: true
-    }
+      strict: true,
+    },
   },
   // Disable sourcemaps for both client and server builds to reduce CI memory pressure.
   sourcemap: {
     client: false,
-    server: false
+    server: false,
   },
   pinia: { storesDirs: ["~~/app/stores"] },
   router: {
     options: {
-      scrollBehaviorType: "smooth"
-    }
+      scrollBehaviorType: "smooth",
+    },
   },
   routeRules: {
     "/settings/**": { ssr: false },
@@ -231,7 +259,7 @@ export default defineNuxtConfig({
     "/pocket": { ssr: false },
     "/pocket/**": { ssr: false },
     "/tools": { ssr: false },
-    "/tools/**": { ssr: false }
+    "/tools/**": { ssr: false },
   },
   runtimeConfig: {
     RIOT_API_KEY: process.env.NUXT_RIOT_API,
@@ -250,8 +278,8 @@ export default defineNuxtConfig({
         zh_tw: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_ZH_TW_DOMAIN,
         es: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_ES_DOMAIN,
         de: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_DE_DOMAIN,
-        fr: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_FR_DOMAIN
-      }
+        fr: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_FR_DOMAIN,
+      },
     },
     public: {
       authRedirect: "",
@@ -259,37 +287,37 @@ export default defineNuxtConfig({
       newUserRedirect: "",
       supabaseKey: "",
       supabaseUrl: "",
-      postalBaseUrl: process.env.NUXT_PUBLIC_POSTAL_BASE_URL ?? ""
-    }
+      postalBaseUrl: process.env.NUXT_PUBLIC_POSTAL_BASE_URL ?? "",
+    },
   },
 
   site: {
     url: process.env.NUXT_SITE_URL,
     name: "lolpocket",
     description: "Is that lp in your pocket?",
-    defaultLocale: "en"
+    defaultLocale: "en",
   },
   seo: {
     fallbackTitle: true,
     meta: {
       applicationName: "lolpocket",
       author: "lolpocket",
-      ogType: "website"
-    }
+      ogType: "website",
+    },
   },
   robots: {
     credits: false,
     metaTag: true,
     disallow: isProduction
       ? ["/api/", "/auth/", "/account/", "/settings/"]
-      : ["/"]
+      : ["/"],
   },
   /*   sitemap: {
     enabled: isProduction,
     zeroRuntime: true,
   },  */
   ogImage: {
-    zeroRuntime: true
+    zeroRuntime: true,
   },
   supabase: {
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
@@ -300,23 +328,23 @@ export default defineNuxtConfig({
     cookieOptions: {
       maxAge: 60 * 60 * 8,
       sameSite: "lax",
-      secure: isProduction
+      secure: isProduction,
     },
     clientOptions: {
       auth: {
-        detectSessionInUrl: false
-      }
+        detectSessionInUrl: false,
+      },
     },
     redirectOptions: {
       callback: "/auth/redirect",
       login: "/auth/login",
       saveRedirectToCookie: true,
-      exclude: ["*"]
-    }
+      exclude: ["*"],
+    },
   },
   vite: {
     resolve: {
-      dedupe: ["reka-ui"]
+      dedupe: ["reka-ui"],
     },
     optimizeDeps: {
       include: [
@@ -331,40 +359,40 @@ export default defineNuxtConfig({
         "tailwind-variants",
         "@internationalized/date",
         "fuse.js",
-        "fast-deep-equal/es6"
-      ]
+        "fast-deep-equal/es6",
+      ],
     },
     plugins: [tailwindcss()],
     clearScreen: false,
     build: {
-      sourcemap: false
-    }
+      sourcemap: false,
+    },
   },
 
   motionV: {
-    directives: true
+    directives: true,
   },
 
   compatibilityDate: "2025-07-18",
   devServer: {
     host: "localhost",
     https: false,
-    port: 8080
+    port: 8080,
   },
   devtools: {
     enabled: true,
     componentInspector: true,
     vueDevTools: false,
     viteInspect: true,
-    viteDevTools: false
+    viteDevTools: false,
   },
   experimental: {
     // extractAsyncDataHandlers: true,
     nitroAutoImports: true,
-    typescriptPlugin: !isCFPages
+    typescriptPlugin: !isCFPages,
     //viteEnvironmentApi: true,
   },
   future: {
-    compatibilityVersion: 5
-  }
+    compatibilityVersion: 5,
+  },
 })

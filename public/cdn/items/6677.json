@@ -1,7 +1,7 @@
 {
   "id": 6677,
   "name": "Rageknife",
-  "description": "<div class=\"effect-stats\">25% Attack Speed</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Wrath:</span> Attacks apply <span class=\"effect-purple-text\">20 magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.<span class=\"effect-list\"><span class=\"effect-passive-text\">Seething Strike:</span> Basic attacks grant <span class=\"effect-gold-text\">5% Attack Speed</span>, stacking up to 3 times for a maximum of <span class=\"effect-gold-text\"> Attack Speed</span>.",
+  "description": "<div class=\"effect-stats\">25% Attack Speed</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Wrath:</span> Attacks apply <span class=\"effect-text-purple\">20 magic damage</span> <span class=\"effect-text-red\">On-Hit</span>.<span class=\"effect-list\"><span class=\"effect-text-passive\">Seething Strike:</span> Basic attacks grant <span class=\"effect-text-gold\">5% Attack Speed</span>, stacking up to 3 times for a maximum of <span class=\"effect-text-gold\"> Attack Speed</span>.",
   "stats": {
     "attackSpeed": 25
   },

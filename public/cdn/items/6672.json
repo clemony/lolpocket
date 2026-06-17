@@ -38,7 +38,7 @@
     "attackSpeed": 40,
     "percentMovespeed": 4
   },
-  "description": "<div class=\"effect-stats\">45 Attack Damage<br>40% Attack Speed<br>4% Move Speed</div><br><br><span class=\"effect-passive-text\">Bring It Down</span><br>Every third Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>, increased based on their missing Health.",
+  "description": "<div class=\"effect-stats\">45 Attack Damage<br>40% Attack Speed<br>4% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Bring It Down</span><br>Every third Attack deals <span class=\"effect-text-orange\">bonus physical damage</span> <span class=\"effect-text-red\">On-Hit</span>, increased based on their missing Health.",
   "gold": {
     "base": 325,
     "purchasable": true,
@@ -54,7 +54,7 @@
   ],
   "arena": {
     "id": 226672,
-    "description": "<div class=\"effect-stats\">50 Attack Damage<br>35% Attack Speed<br>7% Move Speed</div><br><br><span class=\"effect-passive-text\">Bring It Down</span><br>Every third Attack deals <span class=\"effect-orange-text\">bonus physical damage</span> <span class=\"effect-red-text\">On-Hit</span>, increased based on their missing Health.",
+    "description": "<div class=\"effect-stats\">50 Attack Damage<br>35% Attack Speed<br>7% Move Speed</div><hr class='effect-hr'><span class=\"effect-text-passive\">Bring It Down</span><br>Every third Attack deals <span class=\"effect-text-orange\">bonus physical damage</span> <span class=\"effect-text-red\">On-Hit</span>, increased based on their missing Health.",
     "stats": {
       "attackDamage": 50,
       "attackSpeed": 35,

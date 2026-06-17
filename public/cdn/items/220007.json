@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Automatically open a semi-random selection for a Prismatic item.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active - Consume:</span> Automatically open a semi-random selection for a Prismatic item.",
   "gold": {
     "base": 4000,
     "purchasable": true,

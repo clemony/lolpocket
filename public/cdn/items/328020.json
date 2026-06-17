@@ -1,7 +1,7 @@
 {
   "id": 328020,
   "name": "Abyssal Mask",
-  "description": "<div class=\"effect-stats\">350 Health<br>50 Magic Resist<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Unmake</span><br>Nearby enemy champions take 12% more <span class=\"effect-purple-text\">magic damage</span>.",
+  "description": "<div class=\"effect-stats\">350 Health<br>50 Magic Resist<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Unmake</span><br>Nearby enemy champions take 12% more <span class=\"effect-text-purple\">magic damage</span>.",
   "stats": {
     "magicResistance": 50,
     "health": 350

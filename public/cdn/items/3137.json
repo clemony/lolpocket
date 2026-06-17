@@ -36,7 +36,7 @@
     "percentMagicPenetration": 30,
     "abilityHaste": 20
   },
-  "description": "<div class=\"effect-stats\">75 Ability Power<br>30% Magic Penetration<br>20 Ability Haste</div><br><br><span class=\"effect-passive-text\">Life from Death</span><br>When a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that <span class=\"effect-green-text\">heals</span>.",
+  "description": "<div class=\"effect-stats\">75 Ability Power<br>30% Magic Penetration<br>20 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Life from Death</span><br>When a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that <span class=\"effect-text-green\">heals</span>.",
   "gold": {
     "base": 200,
     "purchasable": true,
@@ -52,7 +52,7 @@
   ],
   "arena": {
     "id": 223137,
-    "description": "<div class=\"effect-stats\">60 Ability Power<br>30% Magic Penetration<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Life from Death</span><br>When a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that <span class=\"effect-green-text\">heals</span>.",
+    "description": "<div class=\"effect-stats\">60 Ability Power<br>30% Magic Penetration<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Life from Death</span><br>When a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that <span class=\"effect-text-green\">heals</span>.",
     "stats": {
       "abilityPower": 60
     },

@@ -1,7 +1,7 @@
 {
   "id": 9303,
   "name": "Pillory Swipe",
-  "description": "<div class=\"effect-stats\"></div><br><br>Briar sweeps in front of her, dealing damage that scales with her Max Health.<br><br>Evolve:  Max Health<br><br>Damage, Ability Haste, Area Size, Crit Chance, Max Health ",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'>Briar sweeps in front of her, dealing damage that scales with her Max Health.<hr class='effect-hr'>Evolve:  Max Health<hr class='effect-hr'>Damage, Ability Haste, Area Size, Crit Chance, Max Health ",
   "gold": {
     "base": 0,
     "purchasable": true,

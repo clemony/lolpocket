@@ -40,7 +40,7 @@
     "lethality": 18,
     "abilityHaste": 10
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> to nearby enemies.<br><span class=\"effect-active-text\">Heretical Cleave</span><br>Deal <span class=\"effect-orange-text\">physical damage</span> around you.",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>18 Lethality<br>10 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Cleave</span><br>Attacks deal <span class=\"effect-text-orange\">physical damage</span> to nearby enemies.<br><span class=\"effect-text-active\">Heretical Cleave</span><br>Deal <span class=\"effect-text-orange\">physical damage</span> around you.",
   "gold": {
     "base": 313,
     "purchasable": true,
@@ -56,7 +56,7 @@
   ],
   "arena": {
     "id": 226698,
-    "description": "<div class=\"effect-stats\">50 Attack Damage<br>18 Lethality<br>15 Ability Haste</div><br><br><span class=\"effect-passive-text\">Cleave</span><br>Attacks deal <span class=\"effect-orange-text\">physical damage</span> to nearby enemies.<br><span class=\"effect-active-text\">Heretical Cleave</span> (0s)<br>Deal <span class=\"effect-orange-text\"> physical damage</span> around you.",
+    "description": "<div class=\"effect-stats\">50 Attack Damage<br>18 Lethality<br>15 Ability Haste</div><hr class='effect-hr'><span class=\"effect-text-passive\">Cleave</span><br>Attacks deal <span class=\"effect-text-orange\">physical damage</span> to nearby enemies.<br><span class=\"effect-text-active\">Heretical Cleave</span> (0s)<br>Deal <span class=\"effect-text-orange\"> physical damage</span> around you.",
     "stats": {
       "attackDamage": 50
     },

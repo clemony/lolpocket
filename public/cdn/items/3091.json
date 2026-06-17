@@ -35,7 +35,7 @@
     "magicResistance": 45,
     "tenacity": 20
   },
-  "description": "<div class=\"effect-stats\">50% Attack Speed<br>45 Magic Resist<br>20% Tenacity</div><br><br><span class=\"effect-passive-text\">Fray</span><br>Attacks deal <span class=\"effect-purple-text\">bonus magic damage</span> <span class=\"effect-red-text\">On-Hit</span>.",
+  "description": "<div class=\"effect-stats\">50% Attack Speed<br>45 Magic Resist<br>20% Tenacity</div><hr class='effect-hr'><span class=\"effect-text-passive\">Fray</span><br>Attacks deal <span class=\"effect-text-purple\">bonus magic damage</span> <span class=\"effect-text-red\">On-Hit</span>.",
   "gold": {
     "base": 550,
     "purchasable": true,
@@ -51,7 +51,7 @@
   ],
   "arena": {
     "id": 223091,
-    "description": "<div class=\"effect-stats\">50% Attack Speed<br>45 Magic Resist<br>20% Tenacity</div><br><br><br><span class=\"effect-list\"><span class=\"effect-passive-text\">Fray:</span> Attacks apply magic damage On-Hit and grant Move Speed.",
+    "description": "<div class=\"effect-stats\">50% Attack Speed<br>45 Magic Resist<br>20% Tenacity</div><hr class='effect-hr'><span class=\"effect-list\"><span class=\"effect-text-passive\">Fray:</span> Attacks apply magic damage On-Hit and grant Move Speed.",
     "stats": {
       "magicResistance": 45,
       "attackSpeed": 50

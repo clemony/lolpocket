@@ -31,7 +31,7 @@
     "magicResistance": 40,
     "abilityHaste": 15
   },
-  "description": "<div class=\"effect-stats\">60 Attack Damage<br>15 Ability Haste<br>40 Magic Resist</div><br><br><span class=\"effect-passive-text\">Lifeline</span><br>Taking magic damage that would reduce your Health below 30% grants a <span class=\"effect-blue-text\">magic damage Shield</span> for 3 seconds and <span class=\"effect-red-text\">10% Omnivamp</span> until end of combat.",
+  "description": "<div class=\"effect-stats\">60 Attack Damage<br>15 Ability Haste<br>40 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span><br>Taking magic damage that would reduce your Health below 30% grants a <span class=\"effect-text-blue\">magic damage Shield</span> for 3 seconds and <span class=\"effect-text-red\">10% Omnivamp</span> until end of combat.",
   "gold": {
     "base": 750,
     "purchasable": true,
@@ -47,7 +47,7 @@
   ],
   "arena": {
     "id": 223156,
-    "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Ability Haste<br>40 Magic Resist</div><br><br><span class=\"effect-passive-text\">Lifeline</span><br>Upon taking magic damage that would reduce Health below 30%, gain a magic damage Shield. When <span class=\"effect-passive-text\">Lifeline</span> triggers, gain Omnivamp until the end of combat.  ",
+    "description": "<div class=\"effect-stats\">50 Attack Damage<br>15 Ability Haste<br>40 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Lifeline</span><br>Upon taking magic damage that would reduce Health below 30%, gain a magic damage Shield. When <span class=\"effect-text-passive\">Lifeline</span> triggers, gain Omnivamp until the end of combat.  ",
     "stats": {
       "magicResistance": 40,
       "attackDamage": 50

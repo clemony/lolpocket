@@ -40,7 +40,7 @@
     "attackDamage": 55,
     "criticalStrikeChance": 25
   },
-  "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Magnification</span><br>Deal up to 10% increased damage with Attacks, based on how far away the enemy is (max damage at 500 range).<br><br><span class=\"effect-passive-text\">Arcane Aim</span><br>When a champion that you damaged within 3 seconds dies, gain 100 additional attack range for 8 seconds. ",
+  "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Magnification</span><br>Deal up to 10% increased damage with Attacks, based on how far away the enemy is (max damage at 500 range).<hr class='effect-hr'><span class=\"effect-text-passive\">Arcane Aim</span><br>When a champion that you damaged within 3 seconds dies, gain 100 additional attack range for 8 seconds. ",
   "gold": {
     "base": 275,
     "purchasable": true,
@@ -56,7 +56,7 @@
   ],
   "arena": {
     "id": 222523,
-    "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><br><br><span class=\"effect-passive-text\">Magnification</span><br>Deal up to 10% increased damage with Attacks, based on how far away the enemy is (max damage at 500 range).<br><br><span class=\"effect-passive-text\">Arcane Aim</span><br>When a champion that you damaged within 3 seconds dies, gain 150 additional attack range for 15 seconds. ",
+    "description": "<div class=\"effect-stats\">55 Attack Damage<br>25% Critical Strike Chance</div><hr class='effect-hr'><span class=\"effect-text-passive\">Magnification</span><br>Deal up to 10% increased damage with Attacks, based on how far away the enemy is (max damage at 500 range).<hr class='effect-hr'><span class=\"effect-text-passive\">Arcane Aim</span><br>When a champion that you damaged within 3 seconds dies, gain 150 additional attack range for 15 seconds. ",
     "stats": {
       "criticalStrikeChance": 25,
       "attackDamage": 55

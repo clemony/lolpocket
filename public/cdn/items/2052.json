@@ -6,7 +6,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-active-text\">Active - Consume:</span> Serves a scrumptious scoop to a nearby Poro, causing it to grow in size.<br><br>This savory blend of Avarosan hen and local Freljordian herbs—picked daily and flash-frozen—contains the essential nutrients necessary to keep your Poro cool and calm.<br><br>All proceeds will be donated towards preserving the habitat of the endangered Spotted Poro.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-active\">Active - Consume:</span> Serves a scrumptious scoop to a nearby Poro, causing it to grow in size.<hr class='effect-hr'><small class=\"effect-flavor-text\">This savory blend of Avarosan hen and local Freljordian herbs—picked daily and flash-frozen—contains the essential nutrients necessary to keep your Poro cool and calm.<hr class='effect-hr'>All proceeds will be donated towards preserving the habitat of the endangered Spotted Poro.</small>",
   "gold": {
     "base": 0,
     "purchasable": false,

@@ -41,7 +41,7 @@
     "armorPenetration": 18,
     "attackDamage": 20
   },
-  "description": "<div class=\"effect-stats\">20 Attack Damage<br>18% Armor Penetration</div><br><br>",
+  "description": "<div class=\"effect-stats\">20 Attack Damage<br>18% Armor Penetration</div><hr class='effect-hr'>",
   "gold": {
     "base": 750,
     "purchasable": true,

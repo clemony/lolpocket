@@ -17,7 +17,7 @@
     "health": 300,
     "magicResistance": 100
   },
-  "description": "<div class=\"effect-stats\">300 Health<br>100 Magic Resist</div><br><br><span class=\"effect-passive-text\">Limitless as the Stars</span><br>Increase your <span class=\"effect-blue-text\">Magic Resist</span> by 20%. Reduce all damage you take from non-Basic Attack sources by a percentage, scaling with your <span class=\"effect-blue-text\">Magic Resist</span> up to a cap of 50%.",
+  "description": "<div class=\"effect-stats\">300 Health<br>100 Magic Resist</div><hr class='effect-hr'><span class=\"effect-text-passive\">Limitless as the Stars</span><br>Increase your <span class=\"effect-text-blue\">Magic Resist</span> by 20%. Reduce all damage you take from non-Basic Attack sources by a percentage, scaling with your <span class=\"effect-text-blue\">Magic Resist</span> up to a cap of 50%.",
   "gold": {
     "base": 2750,
     "purchasable": true,

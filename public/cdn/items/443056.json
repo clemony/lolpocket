@@ -14,7 +14,7 @@
     }
   ],
   "stats": {},
-  "description": "<div class=\"effect-stats\"></div><br><br><span class=\"effect-passive-text\">Supremacy</span><br>Increases your <span class=\"effect-green-text\">Health</span>, <span class=\"effect-gold-text\">Armor</span>, <span class=\"effect-blue-text\">Magic Resist</span>, <span class=\"effect-orange-text\">Attack Damage</span>, <span class=\"effect-purple-text\">Ability Power</span>, <span class=\"effect-gold-text\">Attack Speed</span>, increased by 0% per round win and -3% each round lost after acquiring this item.",
+  "description": "<div class=\"effect-stats\"></div><hr class='effect-hr'><span class=\"effect-text-passive\">Supremacy</span><br>Increases your <span class=\"effect-text-green\">Health</span>, <span class=\"effect-text-gold\">Armor</span>, <span class=\"effect-text-blue\">Magic Resist</span>, <span class=\"effect-text-orange\">Attack Damage</span>, <span class=\"effect-text-purple\">Ability Power</span>, <span class=\"effect-text-gold\">Attack Speed</span>, increased by 0% per round win and -3% each round lost after acquiring this item.",
   "gold": {
     "base": 2750,
     "purchasable": true,

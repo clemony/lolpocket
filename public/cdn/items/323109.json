@@ -1,7 +1,7 @@
 {
   "id": 323109,
   "name": "Knight's Vow",
-  "description": "<div class=\"effect-stats\">300 Health<br>50 Armor<br>10 Ability Haste<br>150% Base Health Regen</div><br><br><span class=\"effect-passive-text\">Sacrifice</span><br>While near your Worthy ally, take 14% of the damage they receive and <span class=\"effect-green-text\">heal for 12%</span> of the damage they deal to champions.<span class=\"effect-active-text\">Pledge</span> (0s)<br>Designate an ally as Worthy.",
+  "description": "<div class=\"effect-stats\">300 Health<br>50 Armor<br>10 Ability Haste<br>150% Base Health Regen</div><hr class='effect-hr'><span class=\"effect-text-passive\">Sacrifice</span><br>While near your Worthy ally, take 14% of the damage they receive and <span class=\"effect-text-green\">heal for 12%</span> of the damage they deal to champions.<span class=\"effect-text-active\">Pledge</span> (0s)<br>Designate an ally as Worthy.",
   "stats": {
     "health": 300,
     "armor": 50
