@@ -13,7 +13,7 @@ definePageMeta({
   name: "summoner-profile",
   command: defineAsyncComponent(
     () =>
-      import("~/domain/app/components/navigation/command/route/SummonerCommand.vue")
+      import("~/domain/app/components/navigation/sidebar/ui/SummonerCommand.vue")
   ),
 })
 
@@ -73,35 +73,29 @@ onBeforeMount(async () => {
 
 const router = useRouter()
 
-const routes = computed<TabsItem[]>(
-  () =>
-    router
-      .getRoutes()
-      .filter((r) => r.name === "summoner-profile")[0]
-      ?.children.filter((r) => r.path.split("/").length <= 1)
-      .sort((a, b) => Number(a.meta?.order) - Number(b.meta?.order))
-      .map((r) => ({
-        label: String(r.meta?.title) || String(r.name),
-        value: String(r.name),
-        ...r,
-      }))
-      .filter(Boolean) as TabsItem[]
-)
+const routes = computed<TabsItem[]>(() => [
+  ...(router
+    .getRoutes()
+    .filter((r) => r.name === "summoner-profile")[0]
+    ?.children.filter((r) => r.path.split("/").length <= 1)
+    .sort((a, b) => Number(a.meta?.order) - Number(b.meta?.order))
+    .map((r) => ({
+      label: String(r.meta?.title) || String(r.name),
+      value: String(r.name),
+      ...r,
+    }))
+    .filter(Boolean) as TabsItem[]),
+  {
+    label: "Pockets",
+    value: "username-tag-pockets",
+    ...router.getRoutes().filter((r) => r.name === "username-tag-pockets")[0],
+  },
+])
 </script>
 
 <template>
   <div class="w-full">
     <NuxtLayout :routes name="tab">
-      <!--       <template #center-leading>
-        <UpdateSummoner
-          variant="ghost"
-          size="sm"
-          :ui="{
-            base: 'rounded-full',
-            leadingIcon: 'size-4.5 text-n4 group-hover/btn:text-pc',
-          }"
-          square />
-      </template> -->
       <NuxtPage :champion-key />
     </NuxtLayout>
   </div>

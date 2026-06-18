@@ -4,7 +4,6 @@ import type {
   RouteGroup,
   RouteItem,
 } from "~/types/route.types.js"
-import { referenceItems } from "../../domain/app/components/navigation/command/build/lolCommands.js"
 
 export function routeItem(record: RouteItem): RouteItem {
   return {
@@ -17,19 +16,6 @@ export function routeItem(record: RouteItem): RouteItem {
     },
   }
 }
-
-export const commandResultGroups = computed(() => [
-  {
-    id: "results",
-    label: "Search Results",
-    items: [
-      //...pageItems,
-      ...referenceItems.value.flatMap(
-        (i) => i.children as unknown as CommandRouteItem
-      ),
-    ].filter(Boolean) as CommandRouteItem[],
-  } as CommandGroup<CommandRouteItem>,
-])
 
 const EXTERNAL_URL_RE = /^https?:\/\//
 const LEADING_DASH_RE = /^- /

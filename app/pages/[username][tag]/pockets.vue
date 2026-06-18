@@ -2,11 +2,10 @@
 definePageMeta({
   title: "Pockets",
   description: "Configure all of your public pockets in one spot.",
-  icon: "lucide:folder",
-  listClass: "**:stroke-[1.8]",
+  icon: "i-folders",
+  class: "scale-90",
   order: 3,
   search: false,
-  prefix: "summoner"
 })
 
 const { summoner } = storeToRefs(sSession())
@@ -19,20 +18,9 @@ watch(
 </script>
 
 <template>
-  <div class="grid w-full justify-center">
-    <div class="">
-      <LazyBackpackBoxCard
-        v-for="pocket in pocketStore().pockets.filter(
-          (p: Pocket) =>
-            !(
-              pocketStore().pinned.includes(p.key) /*  ||
-              pocketStore().trash.includes(p.key) ||
-              pocketStore().archive.includes(p.key) */
-            )
-        )"
-        :key="pocket.key"
-        :pocket
-        @click="navigateTo(`/pocket/${pocket.key}`)" />
-    </div>
+  <div class="w-full">
+    <NuxtLayout name="sticky-aside-layout">
+      <template #left> </template>
+    </NuxtLayout>
   </div>
 </template>

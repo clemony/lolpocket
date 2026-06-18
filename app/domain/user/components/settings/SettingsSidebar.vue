@@ -23,7 +23,7 @@ const settingsTabs = computed<TabsItem[]>(() => {
 </script>
 
 <template>
-  <SlidebarWrapper title="Settings">
+  <SidebarWrapper title="Settings">
     <template #subtitle>
       <UBadge :label="tab" class="-translate-x-2" />
     </template>
@@ -91,5 +91,5 @@ const settingsTabs = computed<TabsItem[]>(() => {
         v-if="sidebarTabContent[tab]?.component"
         orientation="vertical" />
     </UTheme>
-  </SlidebarWrapper>
+  </SidebarWrapper>
 </template>

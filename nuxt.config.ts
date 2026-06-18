@@ -26,6 +26,27 @@ const summonerCacheD1Databases = summonerCacheD1DatabaseId
       },
     ]
   : []
+const matchAnalyticsD1DatabaseId = process.env.MATCH_ANALYTICS_D1_DATABASE_ID
+const matchAnalyticsD1PreviewDatabaseId =
+  process.env.MATCH_ANALYTICS_D1_PREVIEW_DATABASE_ID
+const matchAnalyticsD1Databases = matchAnalyticsD1DatabaseId
+  ? [
+      {
+        binding: "MATCH_ANALYTICS_DB",
+        database_name:
+          process.env.MATCH_ANALYTICS_D1_DATABASE_NAME ??
+          "lolpocket-match-analytics",
+        database_id: matchAnalyticsD1DatabaseId,
+        ...(matchAnalyticsD1PreviewDatabaseId
+          ? { preview_database_id: matchAnalyticsD1PreviewDatabaseId }
+          : {}),
+      },
+    ]
+  : []
+const d1Databases = [
+  ...summonerCacheD1Databases,
+  ...matchAnalyticsD1Databases
+]
 
 const components = [
   "about",
@@ -207,10 +228,10 @@ export default defineNuxtConfig({
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
-      ...(summonerCacheD1Databases.length
+      ...(d1Databases.length
         ? {
             wrangler: {
-              d1_databases: summonerCacheD1Databases,
+              d1_databases: d1Databases,
             },
           }
         : {}),

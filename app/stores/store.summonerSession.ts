@@ -20,7 +20,7 @@ export const sSession = defineStore("summonerSession", () => {
     to: buildSummonerRootPath(summoner.value),
     avatar: {
       src: getSummonerIcon(summoner.value?.icon),
-      icon: ""
+      icon: "",
     },
     slot: "summoner" as const,
     children: [
@@ -29,40 +29,31 @@ export const sSession = defineStore("summonerSession", () => {
         label: "Match History",
         to: buildSummonerRootPath(summoner.value),
         ui: {
-          leadingIcon: " scale-90"
-        }
+          leadingIcon: " s",
+        },
       },
       {
-        icon: "i-lp-champ-circle",
+        icon: "",
         label: "Champions",
         slot: "champions" as const,
         to: `${buildSummonerRootPath(summoner.value)}/champions`,
         ui: {
-          leadingIcon: "**:stroke-[1.6] "
-        }
+          leadingIcon: " ",
+        },
       },
       {
         icon: "i-folder",
         label: "Pockets",
         to: `${buildSummonerRootPath(summoner.value)}/pockets`,
         ui: {
-          leadingIcon: " scale-90"
-        }
+          leadingIcon: " ",
+        },
       },
-      {
-        icon: "i-bx-play-circle",
-        label: "Live",
-        slot: "live" as const,
-        to: `${buildSummonerRootPath(summoner.value)}/live`,
-        ui: {
-          leadingIcon: " scale-105"
-        }
-      }
     ],
     ui: {
       linkLeadingAvatar:
-        "shadow-xs opacity-90 size-5.5 border border-neutral/60"
-    }
+        "shadow-xs opacity-90 size-5.5 border border-neutral/60",
+    },
   }))
 
   return {
@@ -70,6 +61,6 @@ export const sSession = defineStore("summonerSession", () => {
     reset,
     setSummoner,
     summoner,
-    currentSummonerNav
+    currentSummonerNav,
   }
 })

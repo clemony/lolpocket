@@ -8,12 +8,11 @@ const UUser = resolveComponent("UUser")
 definePageMeta({
   title: "Champions",
   description: "Discover in depth champion data for each played.",
-  icon: "i-lp-champ",
-  iconStyle: "scale-90 -mb-0.25",
+  icon: "i-lp-champ-circle", //"i-lp-champ",
+  class: "**:stroke-[1.6]", //"scale-90 -mb-0.25",
   keepalive: true,
-  order: 1,
   search: false,
-  prefix: "summoner"
+  order: 1,
 })
 const { summoner } = storeToRefs(sSession())
 
@@ -26,8 +25,8 @@ const championData = computed(() =>
         puuid: summoner.value?.puuid ?? "",
         championId: c.championId,
         pointsSinceLevel: 0,
-        pointsUntilLevel: 0
-      }
+        pointsUntilLevel: 0,
+      },
     }
   })
 )
@@ -41,25 +40,25 @@ const columns: TableColumn<ChampionStats>[] = [
         name: row.original.championName,
         description: row.original.role?.mostPlayed,
         avatar: {
-          src: `/img/champion/${row.getValue("championId")}.webp`
+          src: `/img/champion/${row.getValue("championId")}.webp`,
         },
         ui: {
           description: "capitalize",
-          avatar: "drop-shadow-sm shadow-xs"
-        }
+          avatar: "drop-shadow-sm shadow-xs",
+        },
       })
-    }
+    },
   },
   {
     header: "Played",
-    accessorKey: "games"
+    accessorKey: "games",
   },
   {
     header: "Win",
     accessorKey: "win",
     cell: ({ row }) => {
       return `${row.original.win}W`
-    }
+    },
   },
 
   {
@@ -67,34 +66,34 @@ const columns: TableColumn<ChampionStats>[] = [
     accessorKey: "loss",
     cell: ({ row }) => {
       return `${row.original.loss}L`
-    }
+    },
   },
   {
     accessorKey: "kills.average",
-    header: "Kills"
+    header: "Kills",
   },
   {
     accessorKey: "deaths.average",
-    header: "Deaths"
+    header: "Deaths",
   },
   {
     accessorKey: "assists.average",
-    header: "Assists"
+    header: "Assists",
   },
   {
     accessorKey: "kda",
-    header: "KDA"
+    header: "KDA",
   },
   {
     accessorKey: "kp.average",
-    header: "KP"
+    header: "KP",
   },
   {
     header: "Winrate",
     cell: ({ row }) => {
       return roundDecimalToPercent(row.original.win / row.original.games, 1)
-    }
-  }
+    },
+  },
 ]
 
 const query = shallowRef<string>("")
@@ -118,7 +117,7 @@ watch(
         container: 'space-y-2',
         title: 'mb-0 w-full',
         wrapper: 'mb-0 w-full',
-        description: 'my-0 min-h-0'
+        description: 'my-0 min-h-0',
       }">
       <template #title>
         <UButton
@@ -129,7 +128,7 @@ watch(
           :ui="{
             base: 'h-16!',
             label:
-              'text-5xl font-bold! drop-shadow-2xs group-hover/btn:no-underline!'
+              'text-5xl font-bold! drop-shadow-2xs group-hover/btn:no-underline!',
           }"
           @click="toggleOpen()">
           <template #trailing>
@@ -143,7 +142,7 @@ watch(
                 trailingIcon: cn(
                   'transition-rotate size-5 duration-200 **:stroke-[2.4]',
                   { '-rotate-180': open }
-                )
+                ),
               }"
               trailing-icon="i-up"
               @click.stop />
@@ -154,7 +153,7 @@ watch(
         <UCollapsible
           v-model:open="open"
           :ui="{
-            content: 'flex h-min w-full items-center justify-between'
+            content: 'flex h-min w-full items-center justify-between',
           }">
           <template #content>
             <LazyUInput
@@ -183,7 +182,7 @@ watch(
         :default-size="66"
         :class="
           cn('', {
-            'pr-6': direction === 'horizontal'
+            'pr-6': direction === 'horizontal',
           })
         ">
         <UTable :data="championData" :columns sticky> </UTable>
@@ -194,7 +193,7 @@ watch(
         :class="
           cn('py-10', {
             'order-first': direction === 'vertical',
-            'pl-6': direction === 'horizontal'
+            'pl-6': direction === 'horizontal',
           })
         ">
         <div

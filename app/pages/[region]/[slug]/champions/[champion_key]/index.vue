@@ -15,15 +15,12 @@ definePageMeta({
 </script>
 
 <template>
-  <UPage :class="cn('z-auto pb-44')">
-    <template #left>
-      <UPageAside
-        class="grid h-fit auto-rows-max items-start gap-3 overflow-y-auto px-1 **:select-none">
+  <div class="w-full">
+    <NuxtLayout name="sticky-aside-layout">
+      <template #left>
         <SummonerChampionAside />
-      </UPageAside>
-    </template>
+      </template>
 
-    <UPageBody class="z-auto">
       <!-- stats -->
       <PlayerChampionSummary id="summary" />
       <!-- spells -->
@@ -40,6 +37,6 @@ definePageMeta({
       <ChampionAllyStats id="allies" />
       <!-- match -->
       <ChampionMatchStats id="stats" />
-    </UPageBody>
-  </UPage>
+    </NuxtLayout>
+  </div>
 </template>

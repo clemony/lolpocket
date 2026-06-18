@@ -2,9 +2,15 @@
 // /server/api/matches/older.get.ts
 import { idsByPuuid, matchById } from "#server/domain"
 import {
-  getSummonerCacheDb,
-  upsertCachedMatchParticipants
-} from "#server/utils/summoner-cache"
+  getSummonerCacheDbForEvent,
+  upsertCachedMatchParticipants,
+} from "~~/server/domain/d1/summoner-cache"
+import {
+  getMatchAnalyticsDb,
+  persistMatchAnalytics,
+  toMatchAnalyticsRows
+} from "~~/server/domain/riot/match/analytics"
+import { transformMatchData } from "~~/server/domain/riot/match/transformMatchData"
 
 export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const puuid = getQuery(event).puuid as string
@@ -17,6 +23,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
 
   const batchSize = 20
   const results: MatchData[] = []
+  const analytics = []
 
   // fetch next window of ids
   const ids = await idsByPuuid({
@@ -36,13 +43,26 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
   // stream-match loading to avoid blowing ram
   for (const id of ids) {
     // fetch each match individually to prevent promise.all spikes
-    const m = await matchById(id, region)
-    results.push(transformMatchData(m))
+    const rawMatch = await matchById(id, region)
+    const clientMatch = transformMatchData(rawMatch)
+    results.push(clientMatch)
+    analytics.push(toMatchAnalyticsRows(rawMatch, clientMatch))
   }
 
   const nextCursor = cursor + ids.length
   const done = ids.length < batchSize // if we didn’t fill the window, we're out of matches
-  await upsertCachedMatchParticipants(getSummonerCacheDb(event), results)
+  await upsertCachedMatchParticipants(
+    await getSummonerCacheDbForEvent(event),
+    results
+  )
+  try {
+    const analyticsDb = getMatchAnalyticsDb(event)
+    for (const projection of analytics) {
+      await persistMatchAnalytics(analyticsDb, projection)
+    }
+  } catch (err) {
+    console.warn("Failed match analytics persistence", err)
+  }
 
   return {
     cursor: nextCursor,

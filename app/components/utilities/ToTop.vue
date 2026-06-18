@@ -18,7 +18,12 @@ const { scrollTop } = useScrollInject()
       color="base"
       rounded
       variant="solid"
-      :ui="{ base: cn('bg-p0/60 backdrop-blur-md', className) }"
+      :ui="{
+        base: cn(
+          'aspect-square rounded-full bg-p0/60 backdrop-blur-md',
+          className
+        ),
+      }"
       @click="scrollTop()" />
   </Tooltip>
 </template>

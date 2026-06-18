@@ -2,15 +2,18 @@
 definePageMeta({
   title: "Live",
   description: "Real time match data.",
-  icon: "i-activity", // "i-majesticons-video-line", // "i-ic-outline-stream",
+  icon: "i-bx-play-circle",
   order: 4,
   search: false,
-  prefix: "summoner"
+  class: " scale-105",
 })
 </script>
 
 <template>
-  <div class="h-hit z-2 w-full bg-p0">
-    <PagePlaceholder />
+  <div class="w-full">
+    <NuxtLayout name="sticky-aside-layout">
+      <template #left> </template>
+      <PagePlaceholder />
+    </NuxtLayout>
   </div>
 </template>

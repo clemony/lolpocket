@@ -1,19 +1,19 @@
 <script lang="ts" setup>
 import { LazyAuthModal } from "#components"
 import type { DropdownMenuItem, PopoverProps } from "@nuxt/ui"
-import { mergeBtnUi } from "~/domain/app/components/navigation/command/build/helpers"
+
 import { testingMenu } from "~/domain/user/utils/user/testingMenu"
 
 const user = useSupabaseUser()
 const isAdmin = computed(() => user.value?.app_metadata?.user_role === "admin")
 
-/* const { command } = useApp() */
+/* const sidebar = useSidebar() */
 const overlay = useOverlay()
 const login = overlay.create(LazyAuthModal, {
   destroyOnClose: true,
   props: { type: "logIn" },
 })
-/* const menu = computed(() => testingMenu(command.close, login.open)) */
+/* const menu = computed(() => testingMenu(sidebar.close, login.open)) */
 </script>
 
 <template>

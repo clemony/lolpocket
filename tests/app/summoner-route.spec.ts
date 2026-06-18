@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { extractIdentifierFromRoute } from "../../app/domain/summoner/utils/extractIdentifierFromRoute"
+import { buildSummonerRootPath } from "../../app/domain/summoner/utils/route"
 
 describe("summoner route identifiers", () => {
   it("extracts a public regional summoner slug", () => {
@@ -26,5 +27,16 @@ describe("summoner route identifiers", () => {
         }
       } as never)
     ).toBeNull()
+  })
+
+  it("builds canonical regional slugs when match participant identity has a region", () => {
+    expect(
+      buildSummonerRootPath({
+        name: "PocketCait",
+        puuid: "puuid-1",
+        region: "NA1",
+        tag: "LP"
+      })
+    ).toBe("/na1/pocketcait_lp")
   })
 })

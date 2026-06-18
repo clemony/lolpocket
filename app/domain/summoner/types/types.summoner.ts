@@ -1,4 +1,4 @@
-import type { useChampions } from "~/domain/summoner/champions/useChampions"
+import type { useChampions } from "~/domain/summoner/composables/champions/useChampions"
 
 export interface BayesianChampion {
   assists: number

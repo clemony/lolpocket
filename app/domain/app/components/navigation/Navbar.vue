@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useSidebar } from "~/domain/app/composables/useSidebar"
+
 const { color = "base" } = defineProps<{
   color?: "base" | "transparent" | "primary"
 }>()
 
-const { sidebar } = useApp()
+const sidebar = useSidebar()
 
 const { settings, hotkeys } = user()
 </script>
@@ -13,12 +15,12 @@ const { settings, hotkeys } = user()
     title="LP"
     :toggle="false"
     :ui="{
-      root: cn('z-50 translate-3d transform-gpu px-4', {
+      root: 'z-50 translate-3d transform-gpu px-4',
+      container: cn('px-3!', {
         ' backdrop-contrast-100 backdrop-saturate-100': color !== 'base',
         'bg-transparent!': color === 'transparent',
         'bg-p1!': color === 'primary',
       }),
-      container: 'px-3!',
       title: 'hidden',
       right: 'gap-5 pr-4',
     }">

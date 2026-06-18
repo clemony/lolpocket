@@ -1,15 +1,15 @@
 import {
   fetchRegion,
   fetchResolvedAccount,
-  fetchSummonerByPuuid
+  fetchSummonerByPuuid,
 } from "#shared/utils"
 import {
   findCachedSummoner,
-  getSummonerCacheDb,
+  getSummonerCacheDbForEvent,
   isSummonerCacheFresh,
   toCachedSummoner,
-  upsertCachedSummoner
-} from "#server/utils/summoner-cache"
+  upsertCachedSummoner,
+} from "~~/server/domain/d1/summoner-cache"
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   const rawRegion = query.region ? String(query.region) : undefined
   const tag = query.tag ? String(query.tag) : undefined
   const force = query.force === "true" || query.force === "1"
-  const cacheDb = getSummonerCacheDb(event)
+  const cacheDb = await getSummonerCacheDbForEvent(event)
 
   if (cacheDb && !force) {
     try {
@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
         name,
         puuid: rawPuuid,
         region: rawRegion,
-        tag
+        tag,
       })
 
       if (cached && isSummonerCacheFresh(cached)) {
@@ -41,17 +41,17 @@ export default defineEventHandler(async (event) => {
   const {
     puuid,
     gameName: resolvedName,
-    tagLine: resolvedTag
+    tagLine: resolvedTag,
   } = await fetchResolvedAccount({
     name,
     puuid: rawPuuid,
-    tag
+    tag,
   })
 
   if (!puuid) {
     throw createError({
       statusCode: 400,
-      statusMessage: "Missing summoner identifier"
+      statusMessage: "Missing summoner identifier",
     })
   }
 
@@ -73,7 +73,7 @@ export default defineEventHandler(async (event) => {
       name: resolvedName,
       puuid: summonerV4.puuid,
       region: region || "unknown",
-      tag: resolvedTag
+      tag: resolvedTag,
     }
 
     if (cacheDb) {
@@ -87,7 +87,7 @@ export default defineEventHandler(async (event) => {
           region,
           summonerLevel: summonerV4.summonerLevel,
           tagLine: resolvedTag,
-          updatedAt: now
+          updatedAt: now,
         })
       } catch (err) {
         console.warn("Failed summoner cache upsert", err)
@@ -95,12 +95,11 @@ export default defineEventHandler(async (event) => {
     }
 
     return summoner
-  }
-  catch (err) {
+  } catch (err) {
     console.error("❌ Failed to resolve summoner:", err)
     throw createError({
       statusCode: 502,
-      statusMessage: "Failed to fetch summoner from Riot"
+      statusMessage: "Failed to fetch summoner from Riot",
     })
   }
 })

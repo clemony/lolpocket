@@ -1,10 +1,10 @@
 import { externalResources } from "~/domain/about/external/externalResources"
-import { referenceItems } from "~/domain/app/components/navigation/command/build/lolCommands"
+
 import type {
   CommandRouteItem,
   RouteGroup,
   RouteItem,
-  RouteReturn
+  RouteReturn,
 } from "~/types/route.types"
 import { routeItem } from "~/utils/routes/useRouteGroups"
 
@@ -29,7 +29,7 @@ export const routeStore = defineStore(
           label: "Base",
           description:
             "A one stop shop for the latest League news and data highlights",
-          items: routes.nexus
+          items: routes.nexus,
         },
         tools: {
           id: "tools",
@@ -37,21 +37,21 @@ export const routeStore = defineStore(
           label: "Tools",
           description:
             "Lolpocket utilities great to have handy. Share a pocket card or theorycraft.",
-          items: routes.tools
+          items: routes.tools,
         },
         backpack: {
           id: "backpack",
           value: "Backpack-command",
           label: "Backpack",
           description: "Hold your pockets.",
-          items: routes.backpack
+          items: routes.backpack,
         },
         library: {
           id: "library",
           value: "Library-command",
           label: "Library",
           description: "Browse and filter complete data.",
-          items: routes.library?.map((r) => routeItem(r))
+          items: routes.library?.map((r) => routeItem(r)),
         },
         docs: {
           value: "docs-command",
@@ -60,19 +60,19 @@ export const routeStore = defineStore(
           label: "Docs",
           description: "Get help.",
           trailingIcon: "i-up",
-          items: routes.docs
+          items: routes.docs,
         },
         settings: {
           value: "settings-command",
           id: "settings",
           icon: "i-gear",
           ui: {
-            leadingIcon: "**:stroke-[2.2]"
+            leadingIcon: "**:stroke-[2.2]",
           },
           label: "Settings",
           description: "Other external tools worthy of your backpack.",
           trailingIcon: "i-up",
-          items: routes.settings
+          items: routes.settings,
         },
         external: {
           value: "External-command",
@@ -90,31 +90,14 @@ export const routeStore = defineStore(
             itemTrailingIcon: "i-external",
             avatar: {
               src: r?.avatar?.src,
-              size: "xs"
+              size: "xs",
             },
             ui: {
-              itemLabelBase: "normal-case!"
-            }
-          }))
-        }
+              itemLabelBase: "normal-case!",
+            },
+          })),
+        },
       }
-    }
-
-    function buildReference(): RouteGroup<CommandRouteItem> {
-      return {
-        id: "reference",
-        value: "reference-command",
-        label: "Reference",
-        description: "Quick, detailed, information cards right in your navbar.",
-        items: referenceItems?.value
-      }
-    }
-
-    const reference = ref<RouteGroup<CommandRouteItem>>()
-
-    const useReferenceItems = () => {
-      if (!routes.value) setRoutes()
-      if (!reference.value) reference.value = buildReference()
     }
 
     const useRouteGroups = () => {
@@ -141,10 +124,10 @@ export const routeStore = defineStore(
       routes,
       setRoutes,
       refreshRouteGroups,
-      useRouteGroups
+      useRouteGroups,
     }
   },
   {
-    persist: piniaPluginPersistedstate.sessionStorage()
+    persist: piniaPluginPersistedstate.sessionStorage(),
   }
 )

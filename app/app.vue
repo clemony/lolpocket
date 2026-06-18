@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useSidebarProvider } from "~/domain/app/composables/useSidebar"
+
 /* import * as locales from "@nuxt/ui/locale"
 
 const { locale } = useI18n()
@@ -18,32 +20,32 @@ useHead(() => ({
     lang: "en",
     dir: "auto",
     "data-accent": account.value?.color ?? "diminuendo",
-    "data-theme": settings.value?.theme ?? preferredColorScheme.value ?? "light"
+    "data-theme":
+      settings.value?.theme ?? preferredColorScheme.value ?? "light",
   },
   bodyAttrs: {
-    class: "group/body"
-  }
+    class: "group/body",
+  },
 }))
 
 const route = useRoute()
 useSeoMeta({
-  title: () => String(route.meta.title || route.name)
+  title: () => String(route.meta.title || route.name),
 })
 
-const settingsOpen = shallowRef<boolean>(false)
-const app = useAppProvider()
+useSidebarProvider()
 </script>
 
 <template>
   <UApp
     :tooltip="{
-      delayDuration: 300
+      delayDuration: 300,
     }"
     :toaster="{
       position: 'top-center',
       progress: false,
       duration: 9000,
-      expand: true
+      expand: true,
     }">
     <div class="flex h-dvh overflow-hidden">
       <div class="relative flex-1 overflow-y-auto">

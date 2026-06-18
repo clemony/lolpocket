@@ -54,6 +54,13 @@ then expose it to Pages in one of two ways:
 If the binding is absent, Riot routes still work, but the persistent cache is
 skipped.
 
+For local `pnpm dev` testing, set `SUMMONER_CACHE_D1_REMOTE_DEV=1` alongside
+`SUMMONER_CACHE_D1_DATABASE_ID` and `SUMMONER_CACHE_D1_DATABASE_NAME`. The
+server routes will use Wrangler's dev platform proxy to bind
+`SUMMONER_CACHE_DB` to the remote D1 database and persist summoner API fetches
+and match participant previews into `summoner_cache`. If Wrangler is logged in
+to more than one Cloudflare account, also set `CLOUDFLARE_ACCOUNT_ID`.
+
 ### Common 404 Cause
 
 A domain-level 404 usually means the Pages project is deploying the wrong artifact.

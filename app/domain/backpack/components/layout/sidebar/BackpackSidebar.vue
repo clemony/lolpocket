@@ -21,7 +21,7 @@ const { defaults } = useFolders()
         'relative max-h-[90.4vh] w-full overflow-hidden p-0',
 
         sidebarCollapsed ? 'items-center max-h-min' : ' h-min  pt-0.5'
-      )
+      ),
     }"
     :sidebar-collapsed-size="3"
     :max-size="40"
@@ -31,13 +31,13 @@ const { defaults } = useFolders()
       <BackpackSearchInput />
     </template>
     <template #default>
-      <SidebarTheme>
+      <BackpackSidebarTheme>
         <UCard
           ref="sidebarRef"
           :ui="{
             root: cn(
               '@container/sidebar relative w-full overflow-hidden rounded-4xl py-3'
-            )
+            ),
           }">
           <template v-if="!sidebarCollapsed">
             <div
@@ -60,7 +60,7 @@ const { defaults } = useFolders()
             </template>
           </div>
         </UCard>
-      </SidebarTheme>
+      </BackpackSidebarTheme>
     </template>
     <template #footer>
       <Icon name="i-material-symbols-sticker-add-outline" class="" />

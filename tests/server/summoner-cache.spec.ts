@@ -2,12 +2,13 @@ import type { MatchData } from "../../shared/types"
 import { describe, expect, it, vi } from "vitest"
 import {
   findCachedSummoner,
+  getSummonerCacheDbForEvent,
   isSummonerCacheFresh,
   normalizeSummonerCachePart,
   toCachedSummoner,
   upsertCachedMatchParticipants,
   upsertCachedSummoner
-} from "../../server/utils/summoner-cache"
+} from "../../server/domain/d1/summoner-cache"
 
 class MockD1 {
   rows = new Map<string, any>()
@@ -83,6 +84,31 @@ class MockStatement {
 }
 
 describe("summoner cache", () => {
+  it("resolves the Cloudflare runtime D1 binding from an event", async () => {
+    const db = new MockD1()
+
+    await expect(
+      getSummonerCacheDbForEvent({
+        context: {
+          cloudflare: {
+            env: {
+              SUMMONER_CACHE_DB: db
+            }
+          }
+        }
+      } as never)
+    ).resolves.toBe(db)
+  })
+
+  it("does not initialize a remote dev D1 binding without explicit opt-in", async () => {
+    vi.stubEnv("NODE_ENV", "development")
+    vi.stubEnv("SUMMONER_CACHE_D1_REMOTE_DEV", "")
+
+    await expect(getSummonerCacheDbForEvent({} as never)).resolves.toBeNull()
+
+    vi.unstubAllEnvs()
+  })
+
   it("normalizes search keys consistently", () => {
     expect(normalizeSummonerCachePart("  Cait ADC  ")).toBe("cait adc")
     expect(normalizeSummonerCachePart(" NA1 ")).toBe("na1")

@@ -66,7 +66,7 @@ export const twSize: TwRecord = {
   md: "size-md",
   lg: "size-lg",
   xl: "size-xl",
-  "2xl": "size-2xl"
+  "2xl": "size-2xl",
 }
 
 export const twStatusSize: TwRecord = {
@@ -74,7 +74,7 @@ export const twStatusSize: TwRecord = {
   sm: "size-1.5",
   md: "status-md",
   lg: "status-lg",
-  xl: "status-xl"
+  xl: "status-xl",
 }
 
 export const twIndex: Record<number, HTMLAttributes["class"]> = {
@@ -87,5 +87,24 @@ export const twIndex: Record<number, HTMLAttributes["class"]> = {
   6: "z-6",
   7: "z-7",
   8: "z-8",
-  9: "z-9"
+  9: "z-9",
+}
+
+export const twStroke: Record<number, HTMLAttributes["class"]> = {
+  0: "**:stroke-[0%]!",
+  1: "**:stroke-[1%]!",
+  2: "**:stroke-[2%]!",
+  3: "**:stroke-[3%]!",
+  4: "**:stroke-[4%]!",
+  5: "**:stroke-[5%]!",
+  6: "**:stroke-[6%]!",
+  7: "**:stroke-[7%]!",
+  8: "**:stroke-[8%]!",
+  9: "**:stroke-[9%]!",
+  10: "**:stroke-[10%]!",
+  11: "**:stroke-[11%]!",
+  12: "**:stroke-[12%]!",
+  13: "**:stroke-[13%]!",
+  14: "**:stroke-[14%]!",
+  15: "**:stroke-[15%]!",
 }

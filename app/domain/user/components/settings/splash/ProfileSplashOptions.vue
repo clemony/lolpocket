@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { LazySplashSelectPanel } from "#components"
-import { useChampions } from "~/domain/summoner/champions/useChampions"
+import { useChampions } from "~/domain/summoner/composables/champions/useChampions"
 import { getSplashFromSkinKey, skinNameFromKey } from "~/domain/utils/img"
 
 const { orientation } = defineProps<{
@@ -29,12 +29,12 @@ const card = {
   name: "font-medium italic border-p4 truncate max-w-[calc(100%-36px)]",
   indicator: {
     icon: "size-4.5 **:stroke-[2.3] text-pc",
-    base: "border-p4  inset-shadow-xs"
+    base: "border-p4  inset-shadow-xs",
   },
   avatar: cn(
     "group-not-active/btn:filter-grayscale rounded-lg",
     orientation === "horizontal" ? "size-36" : "size-28"
-  )
+  ),
 }
 
 const chosenLabel = computed(() => skinNameFromKey(currentSkin.value) ?? "")
@@ -51,7 +51,7 @@ const { top } = useChampions({ puuid: accountPuuid.value, matches: matchData })
 const overlay = useOverlay()
 
 const splashSelect = overlay.create(LazySplashSelectPanel, {
-  destroyOnClose: true
+  destroyOnClose: true,
 })
 
 function handleSkin(e: string | null) {
@@ -78,10 +78,10 @@ async function openSplashSelect() {
           ?.splash?.replace('uncentered', 'tile')
           .replace('centered', 'tile'),
         class: card.avatar,
-        alt: `${user().summoner?.name ?? user().account?.username ?? null}'s Most Played`
+        alt: `${user().summoner?.name ?? user().account?.username ?? null}'s Most Played`,
       }"
       :ui="{
-        base: card.base
+        base: card.base,
       }"
       @click="handleSkin(null)">
       <div :class="card.wrapper">
@@ -112,12 +112,12 @@ async function openSplashSelect() {
       :avatar="{
         src: currentSplash,
         class: card.avatar,
-        alt: chosenLabel
+        alt: chosenLabel,
       }"
       :class="
         cn(card.base, {
           'basis-1/2 ring-1! inset-shadow-sm! ring-pc/50! ring-offset-1! ring-offset-p4 drop-shadow-sm *:pointer-events-none':
-            currentSkin
+            currentSkin,
         })
       "
       @click="openSplashSelect()">
@@ -141,7 +141,7 @@ async function openSplashSelect() {
             icon="i-tick"
             :ui="{
               base: card.indicator.base,
-              leadingIcon: card.indicator.icon
+              leadingIcon: card.indicator.icon,
             }" />
         </div>
       </div>

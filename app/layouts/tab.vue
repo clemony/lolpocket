@@ -65,7 +65,7 @@ const bg = computed(() =>
       :content="false"
       :ui="{
         root: 'pointer-events-none sticky top-20 z-11 -mt-13.75 flex h-fit w-full justify-center gap-4 overflow-hidden',
-        list: 'max-w-(--ui-container) px-20',
+        list: 'pointer-events-auto max-w-(--ui-container) px-20',
         trigger: 'max-w-52',
       }"
       :items="routes"
@@ -76,9 +76,8 @@ const bg = computed(() =>
       <UContainer>
         <slot />
       </UContainer>
-      <div class="absolute right-24 bottom-24 z-4 grid gap-4">
-        <!--    <LazyFloatingSummonerUtilities v-if="isSummonerRoute" /> -->
-        <!--         <ToTop /> -->
+      <div class="fixed right-24 bottom-24 z-4 grid gap-4">
+        <ToTop />
       </div>
     </UMain>
     <SiteFooter />
