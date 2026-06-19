@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ProgressProps } from "@nuxt/ui"
 import { romanNumeral } from "~~/layers/lib/shared/utils/format"
+import { rankAbbr } from "~~/shared/constants/misc/ranks"
 
 const {
   label,
@@ -41,34 +42,32 @@ function asProgressColor(color: string): ProgressProps["color"] {
 </script>
 
 <template>
-  <div class="relative grid size-max place-items-center rounded-full">
+  <div
+    :style="{
+      '--color-rank': `var(--color-${entry?.tier?.toLowerCase()})`,
+      '--color-rank-light': `color-mix(in oklab, var(--color-p0) 80%, var(--color-${entry?.tier?.toLowerCase()}) 20%)`,
+    }"
+    class="relative grid size-max place-items-center rounded-full">
     <!-- WINRATE -->
-    <!--     <UBadge
-      size="sm"
-      :label="wr ? `${wr}%` : ''"
-      :style="{
-        color: `var(--color-${entry?.tier?.toLowerCase()})`,
-        backgroundColor: `color-mix(in oklab, var(--color-p0) 80%, var(--color-${entry?.tier?.toLowerCase()}) 20%)`,
-      }"
-      :ui="{
-        base: 'absolute top-10.5 ring-0',
-        label:
-          'text-md leading-none font-semibold tracking-wide text-shadow-black/4 text-shadow-xs',
-      }" />
- -->
+    <div class="absolute top-8.5 flex flex-col items-center gap-0.5">
+      <p class="text-sm leading-none font-semibold">
+        {{ wr ? `${wr}%` : "" }}
+      </p>
+      <div class="text-3xs leading-none font-medium text-pc/60">
+        {{ entry ? entry?.win + entry?.loss : 0 }} played
+      </div>
+    </div>
+
     <!-- LP -->
-    <!--     <UBadge
-      size="xs"
-      :label="`${entry?.lp ?? 0} LP`"
-      :style="{
-        backgroundColor: `var(--color-${entry?.tier?.toLowerCase()})`,
-        color: `color-mix(in oklab, var(--color-p0) 80%, var(--color-${entry?.tier?.toLowerCase()}) 20%)`,
-      }"
-      :ui="{
-        base: 'absolute bottom-7',
-        label:
-          'text-2xs! font-bold tracking-tight text-shadow-black/4 text-shadow-xs',
-      }" /> -->
+    <div class="absolute bottom-5.5 flex flex-col items-center gap-0.5">
+      <div class="text-xs leading-none font-medium">
+        {{ entry?.tier ? rankAbbr[entry?.tier] : "" }}
+        {{ romanNumeral[Number(entry?.division)] }}
+      </div>
+      <div class="text-3xs leading-none font-medium text-pc/60">
+        {{ entry?.lp ?? 0 }}&thinsp;LP
+      </div>
+    </div>
 
     <!-- CREST -->
     <div class="absolute mt-0.5 grid place-items-center overflow-hidden">
@@ -83,16 +82,6 @@ function asProgressColor(color: string): ProgressProps["color"] {
         class="size-28 object-contain contrast-85 drop-shadow-md drop-shadow-black/30"
         :alt="entry?.tier?.toLowerCase()"
         :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`" />
-      <!--       <UBadge
-        v-if="entry"
-        variant="solid"
-        color="base"
-        size="xs"
-        :label="romanNumeral[Number(entry?.division)]"
-        :ui="{
-          base: 'absolute right-2 bottom-3 grid aspect-square place-items-center gap-0 rounded-full bg-p0/30 p-0 ring-p0/60 backdrop-blur-sm',
-          label: 'p-0! font-semibold tracking-wide opacity-60',
-        }" /> -->
     </div>
 
     <!--     CHART -->
@@ -107,14 +96,15 @@ function asProgressColor(color: string): ProgressProps["color"] {
       :tooltip="{
         arrow: true,
         ui: {
-          content: 'h-max! py-2! rounded-xl',
+          arrow: ' group-data-[side=left]/tt:scale-x-100!',
+          content: 'h-max! py-1! rounded-xl',
         },
         content: {
           side: 'right',
         },
       }"
       :style="{
-        color: `color-mix(in oklab, var(--color-p0) 80%, var(--color-${entry?.tier?.toLowerCase()}) 20%)`,
+        color: `var(--color-rank-light)`,
       }"
       :ui="{
         ring: 'scale-111 text-pc drop-shadow-sm **:stroke-[6.9%]!',
@@ -123,8 +113,8 @@ function asProgressColor(color: string): ProgressProps["color"] {
       }">
       <!-- TOOLTIP -->
       <template #content>
-        <div>
-          <div class="inline-flex items-center gap-1.5 pr-6">
+        <div class="flex flex-col items-center gap-1 px-3">
+          <div class="inline-flex items-center gap-1.5">
             <img
               :src="`/img/crests/mini/${entry?.tier?.toLowerCase()}.webp`"
               :alt="`${entry?.tier?.toLowerCase()} ranked crest`"
@@ -135,11 +125,14 @@ function asProgressColor(color: string): ProgressProps["color"] {
               }}
             </h6>
           </div>
-          <div class="pl-6">
+          <div class="flex flex-col items-center">
             <p
               class="flex flex-nowrap items-center gap-1 text-xs text-nowrap decoration-dotted underline-offset-2 hover:underline">
-              <span>{{ entry ? entry.win : 0 }}&thinsp;W&thinsp;-&thinsp;</span>
-              <span>{{ entry ? entry.loss : 0 }}&thinsp;L</span>
+              <span
+                >{{ entry ? entry.win : 0 }}&thinsp;W&thinsp;&nbsp;&thinsp;{{
+                  entry ? entry.loss : 0
+                }}&thinsp;L</span
+              >
             </p>
 
             <p>{{ entry ? entry?.win + entry?.loss : 0 }} played</p>
@@ -147,13 +140,5 @@ function asProgressColor(color: string): ProgressProps["color"] {
         </div>
       </template>
     </RadialWinrate>
-
-    <div class="absolute bottom-8">
-      <UProgress
-        :color="asProgressColor(entry?.tier?.toLowerCase())"
-        :max="100"
-        :model-value="entry?.lp ?? 0"
-        :ui="{ root: 'h-3 w-22', base: 'h-full' }" />
-    </div>
   </div>
 </template>

@@ -3,7 +3,7 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const progressTheme = defineUiTheme({
   slots: {
-    root: "gap-2",
+    root: "group/progress gap-2",
     base: "relative overflow-hidden rounded-full bg-p2",
     indicator:
       "size-full rounded-full transition-transform duration-200 ease-out",
@@ -66,6 +66,10 @@ export const progressTheme = defineUiTheme({
       platinum: {
         indicator: "bg-platinum",
         steps: "text-platinum",
+      },
+      emerald: {
+        indicator: "bg-emerald",
+        steps: "text-emerald",
       },
       diamond: {
         indicator: "bg-diamond",

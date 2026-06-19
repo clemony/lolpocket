@@ -37,7 +37,7 @@ const { settings, hotkeys } = user()
         label="Search"
         variant="outline"
         :ui="{
-          base: 'w-54! cursor-text rounded-xl align-baseline shadow-none inset-shadow-sm hover:bg-transparent hover:inset-ring-pc/60 hover:fx-0!',
+          base: 'w-54! cursor-text rounded-xl bg-p0/30 align-baseline shadow-none inset-shadow-sm inset-ring-p3/60 drop-shadow-none hover:bg-transparent hover:inset-ring-pc/60 hover:fx-0!',
           leadingIcon:
             'size-4.5 align-icon opacity-50 group-hover/btn:opacity-50!',
           label: 'pr-4 align-baseline opacity-50',
@@ -48,7 +48,7 @@ const { settings, hotkeys } = user()
             <UKbd
               v-for="k in hotkeys?.search"
               :key="k"
-              variant="subtle"
+              variant="ghost"
               size="md"
               square
               :ui="{

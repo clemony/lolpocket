@@ -3,9 +3,9 @@ import type { EmitsToProps, TooltipProps } from "@nuxt/ui"
 import type {
   PrimitiveProps,
   TooltipContentEmits,
-  TooltipContentProps
+  TooltipContentProps,
 } from "reka-ui"
-import { Primitive, TooltipArrow } from "reka-ui"
+import { Primitive } from "reka-ui"
 
 const props = withDefaults(
   defineProps<
@@ -33,17 +33,17 @@ const props = withDefaults(
       }
   >(),
   {
-    sideOffset: 6,
+    sideOffset: 10,
     as: "div",
     flip: true,
-    pin: true,
+    pin: false,
     arrow: false,
     disableClosingTrigger: false,
     followPointer: true,
     inertia: false,
     delayDuration: 90,
     closeDelay: 0,
-    interactive: false
+    interactive: false,
   }
 )
 
@@ -54,7 +54,7 @@ const pinned = shallowRef<boolean>(false)
 const anchor = shallowRef({ x: 0, y: 0 })
 const placement = shallowRef<{ side: Side; alignOffset: number }>({
   side: "bottom",
-  alignOffset: 0
+  alignOffset: 0,
 })
 const flipOffset = shallowRef({ x: 0, y: 0 })
 const triggerRef = ref<unknown>(null)
@@ -77,7 +77,7 @@ const flipOffsets: Record<Side, { x: number; y: number }> = {
   top: { x: 0, y: 3 },
   right: { x: -3, y: 0 },
   bottom: { x: 0, y: -3 },
-  left: { x: 3, y: 0 }
+  left: { x: 3, y: 0 },
 }
 
 function resolveElement(target: unknown): Element | null {
@@ -394,20 +394,26 @@ onMounted(() => {
   document.addEventListener("keydown", onDocumentKeydown, true)
 })
 
-const reference = computed(
-  () =>
-    resolveElement(triggerRef.value) ?? {
-      getBoundingClientRect: () =>
-        ({
-          width: 0,
-          bottom: anchor.value.y,
-          height: 0,
-          left: anchor.value.x,
-          right: anchor.value.x,
-          top: anchor.value.y,
-          ...anchor.value
-        }) as DOMRect
-    }
+function getPointerRect() {
+  return {
+    width: 0,
+    bottom: anchor.value.y,
+    height: 0,
+    left: anchor.value.x,
+    right: anchor.value.x,
+    top: anchor.value.y,
+    x: anchor.value.x,
+    y: anchor.value.y,
+  } as DOMRect
+}
+
+const pointerReference = computed(() => ({
+  getBoundingClientRect: getPointerRect,
+}))
+const reference = computed(() =>
+  props?.followPointer
+    ? pointerReference.value
+    : (resolveElement(triggerRef.value) ?? pointerReference.value)
 )
 type ContentProps = Omit<TooltipContentProps, "as" | "asChild"> &
   Partial<EmitsToProps<TooltipContentEmits>>
@@ -415,12 +421,12 @@ type ContentProps = Omit<TooltipContentProps, "as" | "asChild"> &
 const contentProps = computed<ContentProps>(() => ({
   side: props?.followPointer ? placement.value.side : props?.side,
   sideOffset: props?.sideOffset,
-  align: props?.followPointer ? "start" : (props?.align ?? "center"),
+  align: props?.align ?? "center",
   alignOffset: props?.followPointer
-    ? placement.value.alignOffset
+    ? (props?.alignOffset ?? 0)
     : props?.alignOffset,
   updatePositionStrategy: props?.followPointer ? "always" : "optimized",
-  arrowPadding: 3
+  arrowPadding: 7,
 }))
 
 const resolvedSide = computed(
@@ -430,15 +436,14 @@ const resolvedSide = computed(
 const disableClosingTrigger = computed(
   () => props?.disableClosingTrigger || props?.interactive
 )
-const arrowProps = computed(() =>
-  typeof props?.arrow === "object" ? props.arrow : { rounded: true }
-)
 const tooltipUi = computed(() => ({
   content: cn("z-200", props?.ui?.content),
-  arrow: props?.ui?.arrow
+  arrow: props?.ui?.arrow,
 }))
+const motionContentBase =
+  "lp-tooltip-motion relative inline-flex items-center gap-1.5 align-baseline transition-transform duration-100 ease-out will-change-transform motion-reduce:transition-none"
 const motionStyle = computed(() => ({
-  transform: `translate3d(${flipOffset.value.x}px, ${flipOffset.value.y}px, 0)`
+  transform: `translate3d(${flipOffset.value.x}px, ${flipOffset.value.y}px, 0)`,
 }))
 
 watch(resolvedSide, (side, previousSide) => {
@@ -455,7 +460,7 @@ defineExpose({ pinned, isOpen: open })
   <UTooltip
     :disable-closing-trigger="true"
     :disabled
-    :arrow="false"
+    :arrow="props?.arrow"
     :open="isTooltipOpen"
     :delay-duration="0"
     :disable-hoverable-content="!interactive"
@@ -475,16 +480,11 @@ defineExpose({ pinned, isOpen: open })
       <slot :pinned />
     </Primitive>
 
-    <template #content="{ ui: tooltipContentUi }">
+    <template #content>
       <div
         ref="contentRef"
         :style="motionStyle"
-        :class="
-          cn(
-            'lp-tooltip-motion relative inline-flex items-center gap-1.5 align-baseline transition-transform duration-150 ease-out will-change-transform motion-reduce:transition-none',
-            props?.ui?.content
-          )
-        ">
+        :class="cn(motionContentBase, props?.ui?.content)">
         <slot name="content">
           <div class="inline-flex items-center gap-2 align-baseline">
             <div
@@ -502,7 +502,7 @@ defineExpose({ pinned, isOpen: open })
                 :src="avatar"
                 :alt="`${label}-icon`"
                 :ui="{
-                  root: cn('absolute -ml-1 overflow-hidden bg-transparent')
+                  root: cn('absolute -ml-1 overflow-hidden bg-transparent'),
                 }" />
             </div>
             <Icon
@@ -523,10 +523,6 @@ defineExpose({ pinned, isOpen: open })
               " />
           </div>
         </slot>
-        <TooltipArrow
-          v-if="arrow"
-          v-bind="arrowProps"
-          :class="tooltipContentUi.arrow({ class: props?.ui?.arrow })" />
       </div>
     </template>
   </UTooltip>

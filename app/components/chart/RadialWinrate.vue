@@ -127,12 +127,18 @@ const wr = computed(() => {
     </svg>
 
     <!-- PROGRESS BAR -->
-    <UTooltip as-child v-bind="tooltip" :disabled="!tooltip">
+    <Tooltip
+      :flip="false"
+      :pin="true"
+      interactive
+      arrow
+      as-child
+      v-bind="tooltip"
+      :disabled="!tooltip">
       <div
         v-motion="{
           whileHover: {
-            '--thickness': `calc(${thickness} * 1.2px)`,
-            scale: '102%',
+            scale: '101%',
             filter: 'brightness(114%)',
           },
           transition: {
@@ -147,6 +153,7 @@ const wr = computed(() => {
           '--size': sizing,
           scale: '100%',
           '--thickness': `calc(${thickness} * 1px)`,
+          filter: 'brightness(100%)',
           color: color
             ? `var(--color-${color})`
             : wr
@@ -159,7 +166,7 @@ const wr = computed(() => {
       <template #content>
         <slot name="content" />
       </template>
-    </UTooltip>
+    </Tooltip>
 
     <!-- CENTER LABEL -->
     <span

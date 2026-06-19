@@ -4,7 +4,7 @@ import type { ModalEmits, ModalProps, ModalSlots } from "@nuxt/ui"
 type ModalSize = "md" | "full" | "xl"
 
 defineOptions({
-  inheritAttrs: false
+  inheritAttrs: false,
 })
 
 const props = withDefaults(
@@ -14,7 +14,7 @@ const props = withDefaults(
     }
   >(),
   {
-    size: "md"
+    size: "md",
   }
 )
 
@@ -38,7 +38,7 @@ const sizeContentClass = computed(() => {
         "!translate-x-0",
         "!translate-y-0",
         "!rounded-3xl",
-        "ring-p3"
+        "ring-p3",
       ]
     default:
       return undefined
@@ -46,37 +46,35 @@ const sizeContentClass = computed(() => {
 })
 
 const forwardedUi = computed(() => ({
-  title: ["text-pc", props.ui?.title],
-  body: ["bg-p1", props.ui?.body],
-  content: ["divide-p3", props.ui?.content],
-  description: ["text-n4", props.ui?.description],
-  header: ["min-h-16", props.ui?.header],
-  overlay: ["bg-n2/76", props.ui?.overlay],
+  title: cn("text-pc", props.ui?.title),
+  body: cn("bg-p1", props.ui?.body),
+  content: cn("divide-p3", props.ui?.content),
+  description: cn("text-n4", props.ui?.description),
+  header: cn("min-h-16", props.ui?.header),
+  overlay: cn("bg-n2/76", props.ui?.overlay),
   wrapper: props.ui?.wrapper,
   footer: props.ui?.footer,
-  close: props.ui?.close
+  close: props.ui?.close,
 }))
 
 const forwardedContent = computed(() => ({
   ...props.content,
-  class: [sizeContentClass.value]
+  class: [sizeContentClass.value],
 }))
 
 const forwardedProps = computed(() => ({
   ...props,
   content: forwardedContent.value,
   ui: forwardedUi.value,
-  fullscreen: props.size === "full"
+  fullscreen: props.size === "full",
 }))
 
-/* eslint-disable vue/custom-event-name-casing */
 const forwardedEvents = {
   "update:open": (value: boolean) => emit("update:open", value),
   "after:leave": () => emit("after:leave"),
   "after:enter": () => emit("after:enter"),
-  "close:prevent": () => emit("close:prevent")
+  "close:prevent": () => emit("close:prevent"),
 }
-/* eslint-enable vue/custom-event-name-casing */
 </script>
 
 <template>
