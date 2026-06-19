@@ -8,7 +8,7 @@ import {
 import {
   getMatchAnalyticsDb,
   persistMatchAnalytics,
-  toMatchAnalyticsRows
+  toMatchAnalyticsTallyProjection
 } from "~~/server/domain/riot/match/analytics"
 import { transformMatchData } from "~~/server/domain/riot/match/transformMatchData"
 
@@ -42,7 +42,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
 
           const clientMatch = transformMatchData(rawMatch)
           return {
-            analytics: toMatchAnalyticsRows(rawMatch, clientMatch),
+            analytics: toMatchAnalyticsTallyProjection(rawMatch, clientMatch),
             clientMatch
           }
         })
@@ -50,7 +50,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
     )
   )
     .filter((m): m is {
-      analytics: ReturnType<typeof toMatchAnalyticsRows>
+      analytics: ReturnType<typeof toMatchAnalyticsTallyProjection>
       clientMatch: MatchData
     } => Boolean(m))
     .filter((m) => m.clientMatch.gameEndTimestamp > since)
@@ -64,9 +64,10 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
   )
   try {
     const analyticsDb = getMatchAnalyticsDb(event)
-    for (const projection of projectedMatches.map(item => item.analytics)) {
-      await persistMatchAnalytics(analyticsDb, projection)
-    }
+    await persistMatchAnalytics(
+      analyticsDb,
+      projectedMatches.map(item => item.analytics)
+    )
   } catch (err) {
     console.warn("Failed match analytics persistence", err)
   }

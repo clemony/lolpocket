@@ -1,5 +1,3 @@
-
-
 @theme {
   --color-all-roles: oklch(37% 0 0);
 
@@ -11,12 +9,14 @@
   --color-bronze: oklch(57.31% 0.0484 39.76);
   --color-silver: oklch(70% 0% 90);
   --color-gold: oklch(75% 21% 88);
-  --color-platinum: oklch(69.21% 0.085 233.45);
+  --color-platinum: oklch(68.129% 0.07101 221.652);
   --color-emerald: oklch(56.81% 0.0628 168.43);
-  --color-diamond: oklch(62.17% 0.1762 284.11);
-  --color-master: oklch(75.18% 0.1157 325.26);
-  --color-grandmaster: oklch(68.06% 0.1352 26.61);
-  --color-challenger: oklch(83.25% 0.0787 213.4);
+  --color-diamond: oklch(57.756% 0.15806 265.566);
+  --color-master: oklch(55% 55% 315deg);
+  --color-grandmaster: oklch(54.129% 0.14254 23.088);
+  --color-challenger: oklch(69.21% 0.085 233.45);
+
+  --color-orange-red: oklch(68.06% 0.1352 26.61);
   --ui-link: oklch(65% 31% 34deg);
   --ui-orange-dust: oklch(67% 25% 52deg);
 

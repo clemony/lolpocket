@@ -1,24 +1,20 @@
-import type {
-  MatchData,
-  PlayerLpScore,
-  PlayerTimeline
-} from "../../../../shared/types"
+import type { MatchData } from "../../../../shared/types"
 import type { H3Event } from "h3"
 import type {
   D1DatabaseLike,
   D1PreparedStatementLike
 } from "../../d1/summoner-cache"
-import {
-  extractMvpFeatureSnapshot,
-  normalizeRiotRole
-} from "./mvpScoring"
+import { normalizeRiotRole } from "./mvpScoring"
 
-const PARTICIPANT_BOUND_COLUMNS = 14
 const MAX_D1_BOUND_PARAMETERS = 100
+
 export const MATCH_ANALYTICS_D1_BINDING = "MATCH_ANALYTICS_DB"
 
-export interface MatchAnalyticsMatchRow {
-  createdAt: number
+interface D1BatchDatabaseLike extends D1DatabaseLike {
+  batch?: (statements: D1PreparedStatementLike[]) => Promise<unknown[]>
+}
+
+export interface MatchAnalyticsLedgerRow {
   gameDurationSec: number
   gameEndAt: number
   mapId: number
@@ -26,71 +22,77 @@ export interface MatchAnalyticsMatchRow {
   patchKey: string
   queueId: number
   regionId: string
-  teamSummaryJson: MatchAnalyticsTeamSummary[]
 }
 
-export interface MatchAnalyticsTeamSummary {
-  baron: number
-  dragon: number
-  elder: number
-  horde: number
-  inhibitor: number
-  kills: number
-  riftHerald: number
-  teamId: number
-  tower: number
-  win: boolean
-}
-
-export interface MatchAnalyticsParticipantRow {
+export interface MatchAnalyticsChampionDimension {
   championId: number
-  featureJson: ReturnType<typeof extractMvpFeatureSnapshot>
-  gameEndAt: number
-  matchId: string
-  mvpAward: "ACE" | "MVP" | null
-  mvpRank: number
-  mvpScore: number
+  mapId: number
   patchKey: string
-  puuid: string
   queueId: number
+  regionId: string
   role: string
-  teamId: number
-  timelineFeatureJson: Record<string, never> | null
-  win: boolean
 }
 
-export interface MatchAnalyticsProjection {
-  match: MatchAnalyticsMatchRow
-  participants: MatchAnalyticsParticipantRow[]
+export interface MatchAnalyticsOutcomeTally {
+  games: number
+  losses: number
+  remakes: number
+  wins: number
 }
 
-export interface MatchAnalyticsParticipantChunk {
-  boundColumns: number
-  rows: MatchAnalyticsParticipantRow[]
+export interface MatchAnalyticsChampionTally
+  extends MatchAnalyticsChampionDimension,
+    MatchAnalyticsOutcomeTally {
+  assists: number
+  deaths: number
+  gameDurationSec: number
+  goldEarned: number
+  kda: number
+  kills: number
+  totalCs: number
+  totalDamage: number
+  totalDamageTaken: number
+  visionScore: number
 }
 
-export interface MatchTimelineFeatureRow {
-  matchId: string
-  puuid: string
-  timelineFeatureJson: MatchTimelineFeatureSnapshot
+export interface MatchAnalyticsChampionAllyTally
+  extends MatchAnalyticsChampionDimension,
+    MatchAnalyticsOutcomeTally {
+  allyChampionId: number
 }
 
-export interface MatchTimelineFeatureSnapshot {
-  assistsBefore15: number
-  deathsBefore15: number
-  featureVersion: 1
-  itemEvents: {
-    add: number
-    specialUpgrade: number
-    upgrade: number
-  }
-  killsBefore15: number
-  skillOrder: number[]
-  skillPriority: string[]
+export interface MatchAnalyticsChampionEnemyTally
+  extends MatchAnalyticsChampionDimension,
+    MatchAnalyticsOutcomeTally {
+  enemyChampionId: number
 }
 
-interface D1BatchDatabaseLike extends D1DatabaseLike {
-  batch?: (statements: D1PreparedStatementLike[]) => Promise<unknown>
+export interface MatchAnalyticsChampionItemTally
+  extends MatchAnalyticsChampionDimension,
+    MatchAnalyticsOutcomeTally {
+  itemId: number
+}
+
+export interface MatchAnalyticsTallyProjection {
+  allies: MatchAnalyticsChampionAllyTally[]
+  champions: MatchAnalyticsChampionTally[]
+  enemies: MatchAnalyticsChampionEnemyTally[]
+  items: MatchAnalyticsChampionItemTally[]
+  match: MatchAnalyticsLedgerRow
+}
+
+export interface MatchAnalyticsPersistResult {
+  claimedMatches: number
+  persistedMatches: number
+  statements: number
+}
+
+interface UpsertConfig<TRow> {
+  columns: string[]
+  conflictColumns: string[]
+  table: string
+  updateColumns: string[]
+  values: (row: TRow) => unknown[]
 }
 
 export function getMatchAnalyticsDb(event: H3Event): D1BatchDatabaseLike | null {
@@ -101,286 +103,661 @@ export function getMatchAnalyticsDb(event: H3Event): D1BatchDatabaseLike | null 
   return (env?.[MATCH_ANALYTICS_D1_BINDING] ?? null) as D1BatchDatabaseLike | null
 }
 
+function finiteNumber(value: unknown) {
+  const number = Number(value)
+  return Number.isFinite(number) ? number : 0
+}
+
 function patchKeyFromMatch(match: MatchData) {
   return String(match.gamePatch)
 }
 
-function awardFromScore(score: PlayerLpScore) {
-  if (score.mvp) return "MVP"
-  if (score.ace) return "ACE"
-  return null
+function normalizeAnalyticsRole(participant: any) {
+  const role = normalizeRiotRole(participant).toLowerCase()
+  return role === "utility" ? "support" : role
 }
 
-function toTeamSummary(match: MatchData): MatchAnalyticsTeamSummary[] {
-  return match.teams.map(team => ({
-    baron: team.baron,
-    dragon: team.dragon,
-    elder: team.elder,
-    horde: team.horde,
-    inhibitor: team.inhibitor,
-    kills: team.kills ?? 0,
-    riftHerald: team.riftHerald,
-    teamId: team.teamId,
-    tower: team.tower,
-    win: team.win
-  }))
+function isRemake(raw: any) {
+  return finiteNumber(raw?.info?.gameDuration) < 300
 }
 
-export function toMatchAnalyticsRows(
-  raw: any,
-  clientMatch: MatchData
-): MatchAnalyticsProjection {
-  const createdAt = Date.now()
-  const patchKey = patchKeyFromMatch(clientMatch)
-  const gameDurationSec = Math.round(clientMatch.gameDuration * 60)
-  const matchId = clientMatch.matchId
-  const scoreByPuuid = new Map(
-    clientMatch.participants.map(participant => [
-      participant.puuid,
-      participant.lpScore
-    ])
-  )
+function outcomeForParticipant(participant: any, remake: boolean) {
+  const won = Boolean(participant?.win)
 
   return {
-    match: {
-      createdAt,
-      gameDurationSec,
-      gameEndAt: clientMatch.gameEndTimestamp,
-      mapId: clientMatch.mapId,
-      matchId,
-      patchKey,
-      queueId: clientMatch.queueId,
-      regionId: clientMatch.regionId,
-      teamSummaryJson: toTeamSummary(clientMatch)
-    },
-    participants: raw.info.participants.map((participant: any, index: number) => {
-      const lpScore = scoreByPuuid.get(participant.puuid) ?? {
-        ace: false,
-        mvp: false,
-        rank: 0,
-        score: 0
-      }
-
-      return {
-        championId: Number(participant.championId) || 0,
-        featureJson: extractMvpFeatureSnapshot(
-          participant,
-          raw.info.gameDuration,
-          index
-        ),
-        gameEndAt: clientMatch.gameEndTimestamp,
-        matchId,
-        mvpAward: awardFromScore(lpScore),
-        mvpRank: lpScore.rank,
-        mvpScore: lpScore.score,
-        patchKey,
-        puuid: String(participant.puuid || ""),
-        queueId: clientMatch.queueId,
-        role: normalizeRiotRole(participant).toLowerCase(),
-        teamId: Number(participant.teamId) || 0,
-        timelineFeatureJson: null,
-        win: Boolean(participant.win)
-      }
-    })
+    games: 1,
+    losses: remake || won ? 0 : 1,
+    remakes: remake ? 1 : 0,
+    wins: !remake && won ? 1 : 0
   }
 }
 
-export function getMatchAnalyticsParticipantChunks(
-  rows: MatchAnalyticsParticipantRow[],
-  maxBoundParameters = MAX_D1_BOUND_PARAMETERS
-): MatchAnalyticsParticipantChunk[] {
-  const rowsPerChunk = Math.max(
-    1,
-    Math.floor(maxBoundParameters / PARTICIPANT_BOUND_COLUMNS)
-  )
-  const chunks: MatchAnalyticsParticipantChunk[] = []
+function championDimension(
+  match: MatchAnalyticsLedgerRow,
+  participant: any
+): MatchAnalyticsChampionDimension {
+  return {
+    championId: finiteNumber(participant?.championId),
+    mapId: match.mapId,
+    patchKey: match.patchKey,
+    queueId: match.queueId,
+    regionId: match.regionId,
+    role: normalizeAnalyticsRole(participant)
+  }
+}
 
-  for (let index = 0; index < rows.length; index += rowsPerChunk) {
-    chunks.push({
-      boundColumns: PARTICIPANT_BOUND_COLUMNS,
-      rows: rows.slice(index, index + rowsPerChunk)
-    })
+function totalCs(participant: any) {
+  return (
+    finiteNumber(participant?.totalMinionsKilled) +
+    finiteNumber(participant?.totalAllyJungleMinionsKilled) +
+    finiteNumber(participant?.totalEnemyJungleMinionsKilled)
+  )
+}
+
+function kda(participant: any) {
+  return (
+    finiteNumber(participant?.challenges?.kda) ||
+    (finiteNumber(participant?.kills) + finiteNumber(participant?.assists)) /
+      Math.max(finiteNumber(participant?.deaths), 1)
+  )
+}
+
+function finalItemIds(participant: any) {
+  const itemIds = [
+    participant?.item0,
+    participant?.item1,
+    participant?.item2,
+    participant?.item3,
+    participant?.item4,
+    participant?.item5,
+    participant?.roleBoundItem
+  ]
+    .map(finiteNumber)
+    .filter(itemId => itemId > 0)
+
+  return [...new Set(itemIds)]
+}
+
+function keyFor(row: object, keys: string[]) {
+  const record = row as Record<string, unknown>
+  return keys.map(key => String(record[key])).join("|")
+}
+
+function sumOutcome<T extends MatchAnalyticsOutcomeTally>(
+  target: T,
+  source: T
+) {
+  target.games += source.games
+  target.wins += source.wins
+  target.losses += source.losses
+  target.remakes += source.remakes
+}
+
+function pushFolded<T extends object>(
+  rows: T[],
+  keys: string[],
+  merge: (target: T, source: T) => void
+) {
+  const map = new Map<string, T>()
+
+  for (const row of rows) {
+    const key = keyFor(row, keys)
+    const existing = map.get(key)
+
+    if (existing) {
+      merge(existing, row)
+    } else {
+      map.set(key, { ...row })
+    }
+  }
+
+  return [...map.values()]
+}
+
+function chunkRows<TRow>(
+  rows: TRow[],
+  boundColumns: number,
+  maxBoundParameters = MAX_D1_BOUND_PARAMETERS
+) {
+  const rowCount = Math.max(1, Math.floor(maxBoundParameters / boundColumns))
+  const chunks: TRow[][] = []
+
+  for (let index = 0; index < rows.length; index += rowCount) {
+    chunks.push(rows.slice(index, index + rowCount))
   }
 
   return chunks
 }
 
-function summarizeItemEvents(timeline: PlayerTimeline) {
-  const summary = {
-    add: 0,
-    specialUpgrade: 0,
-    upgrade: 0
-  }
+function runChangeCount(result: unknown) {
+  const meta = (result as any)?.meta
+  const value =
+    meta?.changes ??
+    meta?.rows_written ??
+    meta?.rowsWritten ??
+    meta?.changed_db
 
-  for (const group of timeline.items) {
-    for (const event of group.events) {
-      if (event.action === "ADD") summary.add++
-      else if (event.action === "UPGRADE") summary.upgrade++
-      else summary.specialUpgrade++
-    }
-  }
-
-  return summary
+  if (typeof value === "number") return value
+  if (typeof value === "boolean") return value ? 1 : 0
+  return 1
 }
 
-export function toTimelineFeatureRows(
-  matchId: string,
-  timelines: Record<string, PlayerTimeline>
-): MatchTimelineFeatureRow[] {
-  return Object.values(timelines).map(timeline => ({
-    matchId,
-    puuid: timeline.puuid,
-    timelineFeatureJson: {
-      assistsBefore15: timeline.stats.assistsBefore15,
-      deathsBefore15: timeline.stats.deathsBefore15,
-      featureVersion: 1,
-      itemEvents: summarizeItemEvents(timeline),
-      killsBefore15: timeline.stats.killsBefore15,
-      skillOrder: timeline.skills.order,
-      skillPriority: timeline.skills.priority
+async function runStatements(
+  db: D1BatchDatabaseLike,
+  statements: D1PreparedStatementLike[]
+) {
+  if (!statements.length) return []
+  if (db.batch) return await db.batch(statements)
+
+  const results: unknown[] = []
+  for (const statement of statements) {
+    results.push(await statement.run())
+  }
+
+  return results
+}
+
+function createUpsertStatements<TRow>(
+  db: D1BatchDatabaseLike,
+  rows: TRow[],
+  config: UpsertConfig<TRow>
+) {
+  const statements: D1PreparedStatementLike[] = []
+  const chunks = chunkRows(rows, config.columns.length)
+  const placeholders = `(${config.columns.map(() => "?").join(", ")})`
+  const updates = config.updateColumns
+    .map(column => `${column} = ${config.table}.${column} + excluded.${column}`)
+    .join(", ")
+  const conflict = config.conflictColumns.join(", ")
+
+  for (const chunk of chunks) {
+    const sql = `
+      INSERT INTO ${config.table} (${config.columns.join(", ")})
+      VALUES ${chunk.map(() => placeholders).join(", ")}
+      ON CONFLICT(${conflict}) DO UPDATE SET
+        ${updates}
+    `
+    const values = chunk.flatMap(row => config.values(row))
+    statements.push(db.prepare(sql).bind(...values))
+  }
+
+  return statements
+}
+
+function createClaimStatements(
+  db: D1BatchDatabaseLike,
+  projections: MatchAnalyticsTallyProjection[],
+  claimedAt: number
+) {
+  const sql = `
+    INSERT INTO riot_ingested_matches (
+      match_id,
+      region_id,
+      queue_id,
+      map_id,
+      patch_key,
+      game_end_at,
+      game_duration_sec,
+      status,
+      claimed_at,
+      ingested_at
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, 'pending', ?, NULL)
+    ON CONFLICT(match_id) DO UPDATE SET
+      region_id = excluded.region_id,
+      queue_id = excluded.queue_id,
+      map_id = excluded.map_id,
+      patch_key = excluded.patch_key,
+      game_end_at = excluded.game_end_at,
+      game_duration_sec = excluded.game_duration_sec,
+      status = 'pending',
+      claimed_at = excluded.claimed_at,
+      ingested_at = NULL
+    WHERE riot_ingested_matches.status != 'done'
+  `
+
+  return projections.map(projection =>
+    db
+      .prepare(sql)
+      .bind(
+        projection.match.matchId,
+        projection.match.regionId,
+        projection.match.queueId,
+        projection.match.mapId,
+        projection.match.patchKey,
+        projection.match.gameEndAt,
+        projection.match.gameDurationSec,
+        claimedAt
+      )
+  )
+}
+
+function createMarkDoneStatements(
+  db: D1BatchDatabaseLike,
+  matches: MatchAnalyticsLedgerRow[],
+  ingestedAt: number
+) {
+  return chunkRows(matches, 2, MAX_D1_BOUND_PARAMETERS - 1).map(chunk => {
+    const placeholders = chunk.map(() => "?").join(", ")
+    const sql = `
+      UPDATE riot_ingested_matches
+      SET status = 'done', ingested_at = ?
+      WHERE match_id IN (${placeholders})
+    `
+    return db.prepare(sql).bind(ingestedAt, ...chunk.map(match => match.matchId))
+  })
+}
+
+function foldedTallies(projections: MatchAnalyticsTallyProjection[]) {
+  const champions = pushFolded(
+    projections.flatMap(projection => projection.champions),
+    ["regionId", "queueId", "mapId", "patchKey", "role", "championId"],
+    (target, source) => {
+      sumOutcome(target, source)
+      target.kills += source.kills
+      target.deaths += source.deaths
+      target.assists += source.assists
+      target.kda += source.kda
+      target.goldEarned += source.goldEarned
+      target.totalCs += source.totalCs
+      target.totalDamage += source.totalDamage
+      target.totalDamageTaken += source.totalDamageTaken
+      target.visionScore += source.visionScore
+      target.gameDurationSec += source.gameDurationSec
     }
-  }))
+  )
+  const allies = pushFolded(
+    projections.flatMap(projection => projection.allies),
+    [
+      "regionId",
+      "queueId",
+      "mapId",
+      "patchKey",
+      "role",
+      "championId",
+      "allyChampionId"
+    ],
+    sumOutcome
+  )
+  const enemies = pushFolded(
+    projections.flatMap(projection => projection.enemies),
+    [
+      "regionId",
+      "queueId",
+      "mapId",
+      "patchKey",
+      "role",
+      "championId",
+      "enemyChampionId"
+    ],
+    sumOutcome
+  )
+  const items = pushFolded(
+    projections.flatMap(projection => projection.items),
+    [
+      "regionId",
+      "queueId",
+      "mapId",
+      "patchKey",
+      "role",
+      "championId",
+      "itemId"
+    ],
+    sumOutcome
+  )
+
+  return { allies, champions, enemies, items }
+}
+
+function createChampionStatements(
+  db: D1BatchDatabaseLike,
+  rows: MatchAnalyticsChampionTally[]
+) {
+  return createUpsertStatements(db, rows, {
+    columns: [
+      "region_id",
+      "queue_id",
+      "map_id",
+      "patch_key",
+      "role",
+      "champion_id",
+      "games",
+      "wins",
+      "losses",
+      "remakes",
+      "kills",
+      "deaths",
+      "assists",
+      "kda",
+      "gold_earned",
+      "total_cs",
+      "total_damage",
+      "total_damage_taken",
+      "vision_score",
+      "game_duration_sec"
+    ],
+    conflictColumns: [
+      "region_id",
+      "queue_id",
+      "map_id",
+      "patch_key",
+      "role",
+      "champion_id"
+    ],
+    table: "riot_champion_tallies",
+    updateColumns: [
+      "games",
+      "wins",
+      "losses",
+      "remakes",
+      "kills",
+      "deaths",
+      "assists",
+      "kda",
+      "gold_earned",
+      "total_cs",
+      "total_damage",
+      "total_damage_taken",
+      "vision_score",
+      "game_duration_sec"
+    ],
+    values: row => [
+      row.regionId,
+      row.queueId,
+      row.mapId,
+      row.patchKey,
+      row.role,
+      row.championId,
+      row.games,
+      row.wins,
+      row.losses,
+      row.remakes,
+      row.kills,
+      row.deaths,
+      row.assists,
+      row.kda,
+      row.goldEarned,
+      row.totalCs,
+      row.totalDamage,
+      row.totalDamageTaken,
+      row.visionScore,
+      row.gameDurationSec
+    ]
+  })
+}
+
+function createAllyStatements(
+  db: D1BatchDatabaseLike,
+  rows: MatchAnalyticsChampionAllyTally[]
+) {
+  return createUpsertStatements(db, rows, {
+    columns: [
+      "region_id",
+      "queue_id",
+      "map_id",
+      "patch_key",
+      "role",
+      "champion_id",
+      "ally_champion_id",
+      "games",
+      "wins",
+      "losses",
+      "remakes"
+    ],
+    conflictColumns: [
+      "region_id",
+      "queue_id",
+      "map_id",
+      "patch_key",
+      "role",
+      "champion_id",
+      "ally_champion_id"
+    ],
+    table: "riot_champion_ally_tallies",
+    updateColumns: ["games", "wins", "losses", "remakes"],
+    values: row => [
+      row.regionId,
+      row.queueId,
+      row.mapId,
+      row.patchKey,
+      row.role,
+      row.championId,
+      row.allyChampionId,
+      row.games,
+      row.wins,
+      row.losses,
+      row.remakes
+    ]
+  })
+}
+
+function createEnemyStatements(
+  db: D1BatchDatabaseLike,
+  rows: MatchAnalyticsChampionEnemyTally[]
+) {
+  return createUpsertStatements(db, rows, {
+    columns: [
+      "region_id",
+      "queue_id",
+      "map_id",
+      "patch_key",
+      "role",
+      "champion_id",
+      "enemy_champion_id",
+      "games",
+      "wins",
+      "losses",
+      "remakes"
+    ],
+    conflictColumns: [
+      "region_id",
+      "queue_id",
+      "map_id",
+      "patch_key",
+      "role",
+      "champion_id",
+      "enemy_champion_id"
+    ],
+    table: "riot_champion_enemy_tallies",
+    updateColumns: ["games", "wins", "losses", "remakes"],
+    values: row => [
+      row.regionId,
+      row.queueId,
+      row.mapId,
+      row.patchKey,
+      row.role,
+      row.championId,
+      row.enemyChampionId,
+      row.games,
+      row.wins,
+      row.losses,
+      row.remakes
+    ]
+  })
+}
+
+function createItemStatements(
+  db: D1BatchDatabaseLike,
+  rows: MatchAnalyticsChampionItemTally[]
+) {
+  return createUpsertStatements(db, rows, {
+    columns: [
+      "region_id",
+      "queue_id",
+      "map_id",
+      "patch_key",
+      "role",
+      "champion_id",
+      "item_id",
+      "games",
+      "wins",
+      "losses",
+      "remakes"
+    ],
+    conflictColumns: [
+      "region_id",
+      "queue_id",
+      "map_id",
+      "patch_key",
+      "role",
+      "champion_id",
+      "item_id"
+    ],
+    table: "riot_champion_item_tallies",
+    updateColumns: ["games", "wins", "losses", "remakes"],
+    values: row => [
+      row.regionId,
+      row.queueId,
+      row.mapId,
+      row.patchKey,
+      row.role,
+      row.championId,
+      row.itemId,
+      row.games,
+      row.wins,
+      row.losses,
+      row.remakes
+    ]
+  })
+}
+
+function createAggregateStatements(
+  db: D1BatchDatabaseLike,
+  projections: MatchAnalyticsTallyProjection[],
+  ingestedAt: number
+) {
+  const tallies = foldedTallies(projections)
+
+  return [
+    ...createChampionStatements(db, tallies.champions),
+    ...createAllyStatements(db, tallies.allies),
+    ...createEnemyStatements(db, tallies.enemies),
+    ...createItemStatements(db, tallies.items),
+    ...createMarkDoneStatements(
+      db,
+      projections.map(projection => projection.match),
+      ingestedAt
+    )
+  ]
+}
+
+export function toMatchAnalyticsTallyProjection(
+  raw: any,
+  clientMatch: MatchData
+): MatchAnalyticsTallyProjection {
+  const gameDurationSec =
+    finiteNumber(raw?.info?.gameDuration) ||
+    Math.round(finiteNumber(clientMatch.gameDuration) * 60)
+  const match: MatchAnalyticsLedgerRow = {
+    gameDurationSec,
+    gameEndAt: clientMatch.gameEndTimestamp,
+    mapId: clientMatch.mapId,
+    matchId: clientMatch.matchId,
+    patchKey: patchKeyFromMatch(clientMatch),
+    queueId: clientMatch.queueId,
+    regionId: clientMatch.regionId
+  }
+  const participants = raw?.info?.participants ?? []
+  const remake = isRemake(raw)
+  const champions: MatchAnalyticsChampionTally[] = []
+  const allies: MatchAnalyticsChampionAllyTally[] = []
+  const enemies: MatchAnalyticsChampionEnemyTally[] = []
+  const items: MatchAnalyticsChampionItemTally[] = []
+
+  for (const participant of participants) {
+    const dimension = championDimension(match, participant)
+    const outcome = outcomeForParticipant(participant, remake)
+
+    champions.push({
+      ...dimension,
+      ...outcome,
+      assists: finiteNumber(participant?.assists),
+      deaths: finiteNumber(participant?.deaths),
+      gameDurationSec,
+      goldEarned: finiteNumber(participant?.goldEarned),
+      kda: kda(participant),
+      kills: finiteNumber(participant?.kills),
+      totalCs: totalCs(participant),
+      totalDamage: finiteNumber(participant?.totalDamageDealtToChampions),
+      totalDamageTaken: finiteNumber(participant?.totalDamageTaken),
+      visionScore: finiteNumber(participant?.visionScore)
+    })
+
+    for (const ally of participants) {
+      if (ally === participant || ally?.teamId !== participant?.teamId) continue
+      allies.push({
+        ...dimension,
+        ...outcome,
+        allyChampionId: finiteNumber(ally?.championId)
+      })
+    }
+
+    for (const enemy of participants) {
+      if (enemy?.teamId === participant?.teamId) continue
+      enemies.push({
+        ...dimension,
+        ...outcome,
+        enemyChampionId: finiteNumber(enemy?.championId)
+      })
+    }
+
+    for (const itemId of finalItemIds(participant)) {
+      items.push({
+        ...dimension,
+        ...outcome,
+        itemId
+      })
+    }
+  }
+
+  return {
+    allies,
+    champions,
+    enemies,
+    items,
+    match
+  }
 }
 
 export async function persistMatchAnalytics(
   db: D1BatchDatabaseLike | null,
-  projection: MatchAnalyticsProjection
-) {
-  if (!db) return false
-
-  await db
-    .prepare(
-      `
-      INSERT INTO riot_matches (
-        match_id,
-        region_id,
-        queue_id,
-        map_id,
-        patch_key,
-        game_end_at,
-        game_duration_sec,
-        team_summary_json,
-        created_at
-      )
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-      ON CONFLICT(match_id) DO UPDATE SET
-        region_id = excluded.region_id,
-        queue_id = excluded.queue_id,
-        map_id = excluded.map_id,
-        patch_key = excluded.patch_key,
-        game_end_at = excluded.game_end_at,
-        game_duration_sec = excluded.game_duration_sec,
-        team_summary_json = excluded.team_summary_json
-    `
-    )
-    .bind(
-      projection.match.matchId,
-      projection.match.regionId,
-      projection.match.queueId,
-      projection.match.mapId,
-      projection.match.patchKey,
-      projection.match.gameEndAt,
-      projection.match.gameDurationSec,
-      JSON.stringify(projection.match.teamSummaryJson),
-      projection.match.createdAt
-    )
-    .run()
-
-  const participantSql = (rowCount: number) => `
-    INSERT INTO riot_match_participants (
-      match_id,
-      puuid,
-      game_end_at,
-      queue_id,
-      patch_key,
-      team_id,
-      role,
-      champion_id,
-      win,
-      feature_json,
-      timeline_feature_json,
-      mvp_score,
-      mvp_rank,
-      mvp_award
-    )
-    VALUES ${Array.from({ length: rowCount })
-      .fill("(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
-      .join(", ")}
-    ON CONFLICT(match_id, puuid) DO UPDATE SET
-      game_end_at = excluded.game_end_at,
-      queue_id = excluded.queue_id,
-      patch_key = excluded.patch_key,
-      team_id = excluded.team_id,
-      role = excluded.role,
-      champion_id = excluded.champion_id,
-      win = excluded.win,
-      feature_json = excluded.feature_json,
-      mvp_score = excluded.mvp_score,
-      mvp_rank = excluded.mvp_rank,
-      mvp_award = excluded.mvp_award
-  `
-
-  for (const chunk of getMatchAnalyticsParticipantChunks(
-    projection.participants
-  )) {
-    const values = chunk.rows.flatMap(row =>
-      [
-        row.matchId,
-        row.puuid,
-        row.gameEndAt,
-        row.queueId,
-        row.patchKey,
-        row.teamId,
-        row.role,
-        row.championId,
-        row.win ? 1 : 0,
-        JSON.stringify(row.featureJson),
-        row.timelineFeatureJson ?
-          JSON.stringify(row.timelineFeatureJson)
-        : null,
-        row.mvpScore,
-        row.mvpRank,
-        row.mvpAward
-      ]
-    )
-    const statement = db.prepare(participantSql(chunk.rows.length)).bind(...values)
-
-    if (db.batch) {
-      await db.batch([statement])
-    } else {
-      await statement.run()
+  projections: MatchAnalyticsTallyProjection[]
+): Promise<MatchAnalyticsPersistResult> {
+  if (!db || !projections.length) {
+    return {
+      claimedMatches: 0,
+      persistedMatches: 0,
+      statements: 0
     }
   }
 
-  return true
-}
+  const now = Date.now()
+  const claimStatements = createClaimStatements(db, projections, now)
+  const claimResults = await runStatements(db, claimStatements)
+  const claimedProjections = projections.filter((_, index) => {
+    const result = claimResults[index]
+    return runChangeCount(result) > 0
+  })
 
-export async function persistTimelineFeatures(
-  db: D1BatchDatabaseLike | null,
-  rows: MatchTimelineFeatureRow[]
-) {
-  if (!db || !rows.length) return false
-
-  const statement = `
-    UPDATE riot_match_participants
-    SET timeline_feature_json = ?
-    WHERE match_id = ? AND puuid = ?
-  `
-  const statements = rows.map(row =>
-    db
-      .prepare(statement)
-      .bind(
-        JSON.stringify(row.timelineFeatureJson),
-        row.matchId,
-        row.puuid
-      )
-  )
-
-  if (db.batch) {
-    await db.batch(statements)
-  } else {
-    await Promise.all(statements.map(item => item.run()))
+  if (!claimedProjections.length) {
+    return {
+      claimedMatches: 0,
+      persistedMatches: 0,
+      statements: claimStatements.length
+    }
   }
 
-  return true
+  const aggregateStatements = createAggregateStatements(
+    db,
+    claimedProjections,
+    now
+  )
+
+  await runStatements(db, aggregateStatements)
+
+  return {
+    claimedMatches: claimedProjections.length,
+    persistedMatches: claimedProjections.length,
+    statements: claimStatements.length + aggregateStatements.length
+  }
 }

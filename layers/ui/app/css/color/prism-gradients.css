@@ -146,6 +146,7 @@
       mask-composite: intersect;
     }
 
+    .gradient-bronze,
     &[data-level="0"],
     &[data-level="1"],
     &[data-level="2"],
@@ -240,6 +241,7 @@
         radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
     }
 
+    .gradient-master,
     &[data-level="8"] {
       background-size: 300% 300%;
       background-color: hsla(315, 63%, 80%, 1);
@@ -277,6 +279,7 @@
         radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
     }
 
+    .gradient-grandmaster,
     &[data-level="9"] {
       background-size: 300% 300%;
       background-color: hsla(0, 100%, 50%, 1);

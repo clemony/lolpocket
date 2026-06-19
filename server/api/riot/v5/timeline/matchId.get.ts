@@ -1,10 +1,5 @@
 import { riotFetch } from '#server/api/riot'
 import { serverToRegion } from '#server/domain'
-import {
-  getMatchAnalyticsDb,
-  persistTimelineFeatures,
-  toTimelineFeatureRows
-} from "~~/server/domain/riot/match/analytics"
 import { transformTimeline } from "~~/server/domain/riot/timeline/transformTimeline"
 
 export default defineEventHandler(async (event) => {
@@ -22,15 +17,6 @@ export default defineEventHandler(async (event) => {
 
   const match = await riotFetch<any>(key, url)
   const timeline = transformTimeline(match)
-
-  try {
-    await persistTimelineFeatures(
-      getMatchAnalyticsDb(event),
-      toTimelineFeatureRows(String(matchId), timeline)
-    )
-  } catch (err) {
-    console.warn("Failed match timeline analytics persistence", err)
-  }
 
   // returns Record<puuid, PlayerTimeline>
   return timeline

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { TooltipProps } from "@nuxt/ui"
-import { getChampWinrateArc } from "./champWinrateArc"
+import { getWinrateArc } from "./radialWinrateArc"
 
 const {
   hideZero,
@@ -8,6 +8,7 @@ const {
   champion,
   entry,
   ui,
+  label,
   style,
   thickness = 3,
   color,
@@ -16,7 +17,7 @@ const {
 } = defineProps<{
   champion?: ChampionStats
   ally?: AllyStatDetail
-  style?: Record<string, Record<string, CSSStyleValue>>
+  style?: Record<string, CSSStyleValue>
   entry?: RankedEntry
   thickness?: number
   hideZero?: boolean
@@ -25,17 +26,35 @@ const {
   ui?: Record<string, HTMLAttributes["class"]>
   tooltip?: TooltipProps
   winrate?: boolean
-  arc?: Arc
+  label?: LabelOptions
 }>()
-interface Arc {
-  label: string
-  style: Record<string, CSSStyleValue>
-  class: HTMLAttributes["class"]
-  viewBox: number
+
+interface LabelOptions {
+  text?: string
+  anchor?: "start" | "end" | "middle"
+  shape?: "default" | "arc"
+  baseline?: string
+  textStyle?: Record<string, string | number | undefined>
+  style?: Record<string, string | number | undefined>
+  ui?: {
+    root?: HTMLAttributes["class"]
+    label?: HTMLAttributes["class"]
+  }
+  offset?: number
+  radius?: number
+  size?: number | string
 }
-const arcDefaults computed (() => ({
-id: `champ-winrate-arc-${useId()}`
+
+const arcId = `champ-winrate-arc-${useId()}`
+
+const labelProps = computed(() => ({
+  id: arcId,
 }))
+
+const arcPath = computed(() =>
+  getWinrateArc(size, labelProps.value.id, label?.radius)
+)
+const sizing = computed(() => arcPath.value.sizing)
 
 const obj = computed(() => {
   return (
@@ -60,52 +79,65 @@ const wr = computed(() => {
   }
   return 0
 })
-
-
-const arc = computed(() => getChampWinrateArc(size, arc.id))
-const sizing = computed(() => arc.value.sizing)
 </script>
 
 <template>
   <div :class="cn('relative aspect-square rounded-full', ui?.root)">
-    <svg
-      v-if="arc.label"
-      class="pointer-events-none absolute scale-107 overflow-visible text-p3"
-      :class="arc.class"
+    <!-- BACKGROUND RING -->
+    <Icon
+      name="lucide:circle"
       :style="{
         width: sizing,
         height: sizing,
-        ...style?.icon,
+        ...style,
       }"
-      :viewBox="arc.viewBox"
+      :class="cn('absolute scale-107 text-p3', ui?.ring)" />
+
+    <!-- ARC LABEL -->
+    <svg
+      v-if="label?.shape === 'arc'"
+      class="pointer-events-none absolute scale-107 overflow-visible"
+      :class="label?.ui?.root"
+      :style="{
+        width: sizing,
+        height: sizing,
+        ...label?.style,
+      }"
+      :viewBox="arcPath.viewBox"
       aria-hidden="true">
       <defs>
-        <path :id="arc.id" :d="arc.path" />
+        <path :id="arcPath.id" :d="arcPath.path" />
       </defs>
 
       <text
-        text-anchor="middle"
-        dominant-baseline="text-before-edge"
-        font-size="1em"
+        :text-anchor="label?.anchor ?? 'middle'"
+        :style="label?.textStyle"
+        :dominant-baseline="label?.baseline ?? 'text-before-edge'"
         fill="currentColor"
-        :class="cn('font-medium tracking-wide', ui?.arcLabel)">
-        <textPath :href="`#${arc.id}`" :startOffset="`${}%`">
-          {{ arcLabel }}
+        :class="cn('font-medium tracking-wide', label?.ui?.label)">
+        <textPath
+          :href="`#${arcPath.id}`"
+          :startOffset="
+            label?.offset !== undefined ? `${label?.offset}%` : '50%'
+          "
+          :font-size="label?.size">
+          {{ label?.text }}
         </textPath>
       </text>
     </svg>
 
-    <!--   <svg  width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#b3b3b3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg> -->
+    <!-- PROGRESS BAR -->
     <UTooltip as-child v-bind="tooltip" :disabled="!tooltip">
       <div
         v-motion="{
           whileHover: {
             '--thickness': `calc(${thickness} * 1.2px)`,
             scale: '102%',
-            filter: 'brightness(124%)',
+            filter: 'brightness(114%)',
           },
           transition: {
-            ease: 'easeInOut',
+            type: 'spring',
+            bounce: 0.2,
             duration: 0.6,
           },
         }"
@@ -128,8 +160,10 @@ const sizing = computed(() => arc.value.sizing)
         <slot name="content" />
       </template>
     </UTooltip>
+
+    <!-- CENTER LABEL -->
     <span
-      v-if="winrate"
+      v-if="label?.shape === 'default'"
       :class="
         cn(
           'absolute place-self-center text-3xs font-medium text-pc ds-2xs',
@@ -139,7 +173,7 @@ const sizing = computed(() => arc.value.sizing)
           ui?.label
         )
       ">
-      {{ wr || 0 }}
+      {{ label?.text || wr || 0 }}
     </span>
   </div>
 </template>

@@ -1,7 +1,8 @@
 //
 import { roundDecimal, roundDecimalToPercent } from "../../../../layers/lib/shared/utils/math"
 import { normalizePatchNumber } from "../../../../layers/lib/shared/utils/format"
-import { calculateMvpScores } from "./mvpScoring"
+// MVP scoring is intentionally inactive while the scoring model is redesigned.
+// import { calculateMvpScores } from "./mvpScoring"
 
 export function toClientMatchData(raw: any): MatchData {
   const teamTotal = (sKey: string, teamId: number) => {
@@ -167,12 +168,12 @@ getTakedownsInAllLanesEarlyJungleAsLaner
   */
 
   // calc mvp scores
-  const mvpScores = calculateMvpScores(raw)
-
+  // const mvpScores = calculateMvpScores(raw)
+  //
   // inject mvp into player
-  for (const participant of participants) {
-    participant.lpScore = mvpScores[participant.puuid] ?? participant.lpScore
-  }
+  // for (const participant of participants) {
+  //   participant.lpScore = mvpScores[participant.puuid] ?? participant.lpScore
+  // }
 
   // continue mapping
   const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {

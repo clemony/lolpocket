@@ -19,6 +19,30 @@ definePageMeta({
 })
 
 const open = shallowRef<boolean>(true)
+
+const modes = [
+  {
+    label: "Solo/Duo",
+    entry: summoner.value?.ranked?.solo,
+  },
+  {
+    label: "Flex",
+    entry: summoner.value?.ranked?.flex,
+  },
+]
+
+const tiers = [
+  "Iron",
+  "Bronze",
+  "Silver",
+  "Gold",
+  "Platinum",
+  "Emerald",
+  "Diamond",
+  "Master",
+  "Grandmaster",
+  "Challenger",
+]
 </script>
 
 <template>
@@ -36,8 +60,13 @@ const open = shallowRef<boolean>(true)
         <LazyMatchAlliesFilter />
       </template>
       <div class="flex w-full items-center">
-        <LazyRankCard title="Solo/Duo" :entry="summoner?.ranked?.solo" />
-        <LazyRankCard title="Flex" :entry="summoner?.ranked?.flex" />
+        <!--         <LazyRankCard
+          v-for="mode in modes"
+          :key="mode.label"
+          :label="mode.label"
+          :entry="mode.entry" /> -->
+
+        <LazyRankCard v-for="tier in tiers" :key="tier" :tier="tier" />
       </div>
       <LazyMatchList />
     </NuxtLayout>

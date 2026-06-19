@@ -61,6 +61,25 @@ server routes will use Wrangler's dev platform proxy to bind
 and match participant previews into `summoner_cache`. If Wrangler is logged in
 to more than one Cloudflare account, also set `CLOUDFLARE_ACCOUNT_ID`.
 
+### Match Analytics D1 Binding
+
+Riot match analytics uses a separate aggregate-only D1 binding named
+`MATCH_ANALYTICS_DB`.
+
+Create the D1 database in Cloudflare, apply
+`migrations/0002_riot_match_analytics.sql`, then expose it to Pages in one of
+two ways:
+
+- Set a Pages binding in the dashboard: Settings > Bindings > Add > D1 database,
+  with variable name `MATCH_ANALYTICS_DB`.
+- Or set `MATCH_ANALYTICS_D1_DATABASE_ID` before build so Nitro emits the D1
+  binding into the generated Wrangler config. Optionally set
+  `MATCH_ANALYTICS_D1_DATABASE_NAME` and
+  `MATCH_ANALYTICS_D1_PREVIEW_DATABASE_ID`.
+
+If the binding is absent, Riot match routes still return client data, but D1
+analytics tally persistence is skipped.
+
 ### Common 404 Cause
 
 A domain-level 404 usually means the Pages project is deploying the wrong artifact.

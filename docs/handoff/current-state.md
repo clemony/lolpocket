@@ -15,7 +15,7 @@ Keep it short, current, and biased toward what the next session needs to know.
 - `DEPLOY.md` documents the supported Pages and Worker deploy paths.
 - The server-side Riot request queue was refactored to remove global-scope timers for Cloudflare Pages compatibility.
 - Summoner preview/search cache now has D1 schema and read-through server helpers keyed by PUUID, with `SUMMONER_CACHE_DB` as the Pages binding name and `SUMMONER_CACHE_D1_REMOTE_DEV=1` as the opt-in local dev remote-D1 path.
-- Riot match history now projects raw match DTOs into rich client `MatchData` plus compact D1 analytics rows, with `MATCH_ANALYTICS_DB` as the optional Pages binding and `migrations/0002_riot_match_analytics.sql` defining match, participant, and cursor tables.
+- Riot match history now projects raw match DTOs into rich client `MatchData` plus global D1 aggregate tallies, with `MATCH_ANALYTICS_DB` as the optional Pages binding and `migrations/0002_riot_match_analytics.sql` defining a match ledger plus champion, ally, enemy, and item tally tables.
 - Summoner route resolution treats `/_r` as an internal resolver prefix, supports short `/_r/:puuid` compatibility redirects, and builds match scoreboard links as canonical `/:region/:name_tag` slugs.
 - Local Zodiak font wiring was cleaned up to use self-hosted files from `layers/ui/public/fonts/Zodiak`.
 - `useObjectData` now centralizes command reference-card CDN path resolution for item, rune, champion, and ability data, including champion numeric-id to key lookup.

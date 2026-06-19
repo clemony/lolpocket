@@ -46,6 +46,43 @@ export const progressTheme = defineUiTheme({
         indicator: "bg-n0",
         steps: "text-nc",
       },
+
+      iron: {
+        indicator: "bg-iron",
+        steps: "text-iron",
+      },
+      bronze: {
+        indicator: "bg-bronze",
+        steps: "text-bronze",
+      },
+      silver: {
+        indicator: "bg-silver",
+        steps: "text-silver",
+      },
+      gold: {
+        indicator: "bg-gold",
+        steps: "text-gold",
+      },
+      platinum: {
+        indicator: "bg-platinum",
+        steps: "text-platinum",
+      },
+      diamond: {
+        indicator: "bg-diamond",
+        steps: "text-diamond",
+      },
+      master: {
+        indicator: "bg-master",
+        steps: "text-master",
+      },
+      grandmaster: {
+        indicator: "bg-grandmaster",
+        steps: "text-grandmaster",
+      },
+      challenger: {
+        indicator: "bg-challenger",
+        steps: "text-challenger",
+      },
     },
     size: {
       "2xs": {

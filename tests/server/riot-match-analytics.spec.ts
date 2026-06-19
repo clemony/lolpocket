@@ -1,20 +1,17 @@
-import type { PlayerLpScore } from "../../shared/types"
+import { readFileSync } from "node:fs"
+import { resolve } from "node:path"
 import { describe, expect, it } from "vitest"
+import { normalizeRiotRole } from "../../server/domain/riot/match/mvpScoring"
 import {
-  calculateMvpScores,
-  extractMvpFeatureSnapshot,
-  normalizeRiotRole
-} from "../../server/domain/riot/match/mvpScoring"
-import {
-  getMatchAnalyticsParticipantChunks,
   persistMatchAnalytics,
-  toMatchAnalyticsRows
+  toMatchAnalyticsTallyProjection
 } from "../../server/domain/riot/match/analytics"
 import { transformMatchData } from "../../server/domain/riot/match/transformMatchData"
 
 const roles = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"] as const
 
 class MockD1 {
+  ingestedMatches = new Set<string>()
   statements: { sql: string; values: unknown[] }[] = []
   batches: { sql: string; values: unknown[] }[][] = []
 
@@ -29,7 +26,7 @@ class MockD1 {
         values: statement.values
       }))
     )
-    return statements.map(() => ({ success: true }))
+    return await Promise.all(statements.map(statement => statement.run()))
   }
 }
 
@@ -48,7 +45,21 @@ class MockStatement {
 
   async run() {
     this.db.statements.push({ sql: this.sql, values: this.values })
-    return { success: true }
+
+    if (
+      this.sql.includes("riot_ingested_matches") &&
+      this.sql.includes("ON CONFLICT")
+    ) {
+      const matchId = String(this.values[0])
+      if (this.db.ingestedMatches.has(matchId)) {
+        return { meta: { changes: 0 }, success: true }
+      }
+
+      this.db.ingestedMatches.add(matchId)
+      return { meta: { changes: 1 }, success: true }
+    }
+
+    return { meta: { changes: 1 }, success: true }
   }
 }
 
@@ -209,60 +220,119 @@ describe("riot match analytics pipeline", () => {
     )
   })
 
-  it("scores all participants with ranks, one MVP, and one ACE", () => {
-    const scores = calculateMvpScores(makeRawMatch())
-    const values = Object.values(scores) as PlayerLpScore[]
-
-    expect(values).toHaveLength(10)
-    expect(values.map(score => score.rank).sort((a, b) => a - b)).toEqual([
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-    ])
-    expect(values.filter(score => score.mvp)).toHaveLength(1)
-    expect(values.filter(score => score.ace)).toHaveLength(1)
-    expect(scores["puuid-1"].mvp).toBe(true)
-    expect(scores["puuid-7"].ace).toBe(true)
-  })
-
-  it("does not award MVP or ACE for remakes", () => {
-    const scores = calculateMvpScores(makeRawMatch({ info: { gameDuration: 180 } }))
-    const values = Object.values(scores) as PlayerLpScore[]
-
-    expect(values).toHaveLength(10)
-    expect(values.every(score => !score.mvp && !score.ace)).toBe(true)
-  })
-
-  it("projects compact analytics rows without raw Riot DTO blobs", () => {
+  it("projects global aggregate contributions without raw player identifiers", () => {
     const raw = makeRawMatch()
     const clientMatch = transformMatchData(raw)
-    const projection = toMatchAnalyticsRows(raw, clientMatch)
+    const projection = toMatchAnalyticsTallyProjection(raw, clientMatch)
 
     expect(projection.match).toMatchObject({
       matchId: "NA1_12345",
       queueId: 420,
       regionId: "na1"
     })
-    expect(projection.participants).toHaveLength(10)
-    expect(projection.participants[0].featureJson).toEqual(
-      extractMvpFeatureSnapshot(raw.info.participants[0], 1_800, 0)
-    )
+    expect(projection.champions).toHaveLength(10)
+    expect(projection.allies).toHaveLength(40)
+    expect(projection.enemies).toHaveLength(50)
     expect(JSON.stringify(projection)).not.toContain("riotIdGameName")
     expect(JSON.stringify(projection)).not.toContain("perks")
+    expect(JSON.stringify(projection)).not.toContain("puuid-")
   })
 
-  it("chunks participant persistence under the D1 bound-parameter limit", async () => {
+  it("counts final inventory and role-bound items without counting trinkets", () => {
+    const raw = makeRawMatch({
+      info: {
+        participants: Array.from({ length: 10 }, (_, index) =>
+          makeParticipant(
+            index,
+            index === 3 ?
+              {
+                item0: 1001,
+                item1: 1001,
+                item2: 0,
+                item6: 3340,
+                roleBoundItem: 1207,
+                teamPosition: "BOTTOM"
+              }
+            : {}
+          )
+        )
+      }
+    })
+    const projection = toMatchAnalyticsTallyProjection(raw, transformMatchData(raw))
+    const bottomItems = projection.items.filter(row => row.championId === 103)
+
+    expect(bottomItems.map(row => row.itemId).sort((a, b) => a - b)).toEqual([
+      1001, 1207
+    ])
+    expect(projection.items.some(row => row.itemId === 3340)).toBe(false)
+  })
+
+  it("tracks remakes separately from wins and losses", () => {
+    const raw = makeRawMatch({ info: { gameDuration: 180 } })
+    const projection = toMatchAnalyticsTallyProjection(raw, transformMatchData(raw))
+
+    expect(projection.champions).toHaveLength(10)
+    expect(projection.champions.every(row => row.games === 1)).toBe(true)
+    expect(projection.champions.every(row => row.remakes === 1)).toBe(true)
+    expect(projection.champions.every(row => row.wins === 0)).toBe(true)
+    expect(projection.champions.every(row => row.losses === 0)).toBe(true)
+  })
+
+  it("dedupes ingested matches before writing aggregate tallies", async () => {
     const raw = makeRawMatch()
-    const projection = toMatchAnalyticsRows(raw, transformMatchData(raw))
-    const chunks = getMatchAnalyticsParticipantChunks(projection.participants)
-
-    expect(chunks.length).toBeGreaterThan(1)
-    expect(
-      chunks.every(chunk => chunk.rows.length * chunk.boundColumns <= 100)
-    ).toBe(true)
-
+    const projection = toMatchAnalyticsTallyProjection(raw, transformMatchData(raw))
     const db = new MockD1()
-    await persistMatchAnalytics(db, projection)
 
-    expect(db.statements).toHaveLength(1)
-    expect(db.batches.flat()).toHaveLength(chunks.length)
+    const first = await persistMatchAnalytics(db, [projection])
+    const aggregateStatementsAfterFirst = db.statements.filter(statement =>
+      statement.sql.includes("riot_champion_")
+    ).length
+    const second = await persistMatchAnalytics(db, [projection])
+    const aggregateStatementsAfterSecond = db.statements.filter(statement =>
+      statement.sql.includes("riot_champion_")
+    ).length
+
+    expect(first.persistedMatches).toBe(1)
+    expect(second.persistedMatches).toBe(0)
+    expect(aggregateStatementsAfterSecond).toBe(aggregateStatementsAfterFirst)
+  })
+
+  it("keeps every batched D1 statement under the bound-parameter limit", async () => {
+    const projections = Array.from({ length: 4 }, (_, index) => {
+      const raw = makeRawMatch({
+        metadata: { matchId: `NA1_${index}` }
+      })
+      return toMatchAnalyticsTallyProjection(raw, transformMatchData(raw))
+    })
+    const db = new MockD1()
+
+    await persistMatchAnalytics(db, projections)
+
+    expect(db.batches.flat().length).toBeGreaterThan(0)
+    expect(db.batches.flat().every(statement => statement.values.length <= 100))
+      .toBe(true)
+  })
+
+  it("keeps MVP scoring inactive in the match transform path", () => {
+    const match = transformMatchData(makeRawMatch())
+
+    expect(
+      match.participants.every(participant =>
+        participant.lpScore.score === 0 &&
+        participant.lpScore.rank === 0 &&
+        !participant.lpScore.mvp &&
+        !participant.lpScore.ace
+      )
+    ).toBe(true)
+  })
+
+  it("keeps timeline routes out of D1 analytics persistence", () => {
+    const source = readFileSync(
+      resolve("server/api/riot/v5/timeline/matchId.get.ts"),
+      "utf8"
+    )
+
+    expect(source).not.toContain("persistTimelineFeatures")
+    expect(source).not.toContain("getMatchAnalyticsDb")
   })
 })
