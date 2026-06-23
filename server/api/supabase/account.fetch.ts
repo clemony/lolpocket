@@ -1,10 +1,11 @@
+import type { Account, Pocket, Settings } from "#shared/schema"
 import {
   accountSchema,
   getEmptyAccount,
   getEmptySettings,
   inboxSchema,
   pocketSchema,
-  settingsSchema
+  settingsSchema,
 } from "#shared/schema"
 import * as v from "valibot"
 import { createSupabaseClient } from "../client.supabase"
@@ -14,10 +15,10 @@ export default defineEventHandler(
     const { client, user } = await createSupabaseClient(event)
     if (!user) {
       return {
-        account: null,
-        inbox: null,
+        account: undefined,
+        inbox: undefined,
         pockets: [],
-        settings: null
+        settings: undefined,
       }
     }
 
@@ -30,14 +31,14 @@ export default defineEventHandler(
         throw createError({
           data: error,
           statusCode: 500,
-          statusMessage: "RPC failed"
+          statusMessage: "RPC failed",
         })
       }
 
       if (!data) {
         throw createError({
           statusCode: 404,
-          statusMessage: "Profile not found"
+          statusMessage: "Profile not found",
         })
       }
 
@@ -64,13 +65,13 @@ export default defineEventHandler(
         settings: userSettings,
         account: userAccount,
         inbox: inboxParse.success ? inboxParse.output : undefined,
-        pockets: userPockets
+        pockets: userPockets,
       }
     } catch (err) {
       console.error("Unexpected error in hydrateUser:", err)
       throw createError({
         statusCode: 500,
-        statusMessage: "Unexpected server error"
+        statusMessage: "Unexpected server error",
       })
     }
   }

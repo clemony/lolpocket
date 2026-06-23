@@ -50,6 +50,7 @@ export async function supabaseAdminRequest<T>(
     body: options.body,
     headers: {
       apikey: secretKey,
+      authorization: `Bearer ${secretKey}`,
       "content-type": "application/json",
       ...options.headers,
     },

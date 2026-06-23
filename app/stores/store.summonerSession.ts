@@ -1,9 +1,7 @@
-import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
-import { getSummonerIcon } from "~/domain/utils/img"
-
 export const sSession = defineStore("summonerSession", () => {
   const summoner = shallowRef<Summoner | null>(null)
   const ready = ref(false)
+  const lastResolvedKey = ref<string>("")
 
   function reset() {
     summoner.value = null
@@ -15,52 +13,24 @@ export const sSession = defineStore("summonerSession", () => {
     ready.value = true
   }
 
-  const currentSummonerNav = computed(() => ({
-    label: summoner.value?.name,
-    to: buildSummonerRootPath(summoner.value),
-    avatar: {
-      src: getSummonerIcon(summoner.value?.icon),
-      icon: "",
-    },
-    slot: "summoner" as const,
-    children: [
-      {
-        icon: "i-history",
-        label: "Match History",
-        to: buildSummonerRootPath(summoner.value),
-        ui: {
-          leadingIcon: " s",
-        },
-      },
-      {
-        icon: "",
-        label: "Champions",
-        slot: "champions" as const,
-        to: `${buildSummonerRootPath(summoner.value)}/champions`,
-        ui: {
-          leadingIcon: " ",
-        },
-      },
-      {
-        icon: "i-folder",
-        label: "Pockets",
-        to: `${buildSummonerRootPath(summoner.value)}/pockets`,
-        ui: {
-          leadingIcon: " ",
-        },
-      },
-    ],
-    ui: {
-      linkLeadingAvatar:
-        "shadow-xs opacity-90 size-5.5 border border-neutral/60",
-    },
-  }))
+  const account = computed<Account | null>(() => {
+    const puuid = summoner.value?.puuid
+    if (!puuid) return null
+    return publicUsers().getByPuuid(puuid)
+  })
+
+  const splash = computed(() => {
+    if (account.value?.skin)
+      return getSplashFromSkinKey(account.value.skin, "uncentered")
+  })
 
   return {
     ready,
+    lastResolvedKey,
     reset,
     setSummoner,
     summoner,
-    currentSummonerNav,
+    account,
+    splash,
   }
 })

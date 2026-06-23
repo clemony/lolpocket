@@ -15,9 +15,9 @@ function scorePage(p: RunePageStats) {
 export function pickBestShard(
   stats: Record<number, StatDetail>,
   minGames = 5
-): number | null {
+): number | undefined {
   const res = pickBestGeneric(stats, minGames)
-  return res ? Number(Object.keys(res)[0]) : null
+  return res ? Number(Object.keys(res)[0]) : undefined
 }
 
 export function useChampionRuneStats(source: MaybeRef<MatchPlayerData[]>) {
@@ -31,7 +31,7 @@ export function useChampionRuneStats(source: MaybeRef<MatchPlayerData[]>) {
     const shards: ShardStats = {
       0: {},
       1: {},
-      2: {}
+      2: {},
     }
 
     const totalMatches = matches.length
@@ -78,7 +78,7 @@ export function useChampionRuneStats(source: MaybeRef<MatchPlayerData[]>) {
           secondaryPath,
           primaryRunes: [...r.primary.runes],
           secondaryRunes: [...r.secondary.runes],
-          shards: [...r.shards]
+          shards: [...r.shards],
         }
       }
 
@@ -93,7 +93,7 @@ export function useChampionRuneStats(source: MaybeRef<MatchPlayerData[]>) {
       secondary,
       shards[0],
       shards[1],
-      shards[2]
+      shards[2],
     ]) {
       for (const key in bucket) {
         const s = bucket[key]
@@ -105,7 +105,7 @@ export function useChampionRuneStats(source: MaybeRef<MatchPlayerData[]>) {
 
     const allPages = Object.values(pages)
 
-    let bestPage: RunePageStats | null = null
+    let bestPage: RunePageStats | undefined
     let bestScore = -Infinity
     let usedFallback = false
 
@@ -137,7 +137,7 @@ export function useChampionRuneStats(source: MaybeRef<MatchPlayerData[]>) {
     const bestShards = [
       pickBestShard(shards[0]),
       pickBestShard(shards[1]),
-      pickBestShard(shards[2])
+      pickBestShard(shards[2]),
     ]
 
     return {
@@ -145,12 +145,12 @@ export function useChampionRuneStats(source: MaybeRef<MatchPlayerData[]>) {
       all: allPages,
       best: bestPage && {
         ...bestPage,
-        shards: bestShards
+        shards: bestShards,
       },
       primary,
       secondary,
       shards,
-      usedFallback
+      usedFallback,
     }
   })
 }

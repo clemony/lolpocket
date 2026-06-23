@@ -1,8 +1,9 @@
 import { readFileSync } from "node:fs"
 import { resolve } from "node:path"
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { normalizeRiotRole } from "../../server/domain/riot/match/mvpScoring"
 import {
+  getMatchAnalyticsDbForEvent,
   persistMatchAnalytics,
   toMatchAnalyticsTallyProjection
 } from "../../server/domain/riot/match/analytics"
@@ -214,6 +215,31 @@ function makeRawMatch(overrides: Record<string, any> = {}) {
 }
 
 describe("riot match analytics pipeline", () => {
+  it("resolves the Cloudflare runtime D1 binding from an event", async () => {
+    const db = new MockD1()
+
+    await expect(
+      getMatchAnalyticsDbForEvent({
+        context: {
+          cloudflare: {
+            env: {
+              MATCH_ANALYTICS_DB: db
+            }
+          }
+        }
+      } as never)
+    ).resolves.toBe(db)
+  })
+
+  it("does not initialize a remote dev D1 binding without explicit opt-in", async () => {
+    vi.stubEnv("NODE_ENV", "development")
+    vi.stubEnv("MATCH_ANALYTICS_D1_REMOTE_DEV", "")
+
+    await expect(getMatchAnalyticsDbForEvent({} as never)).resolves.toBeNull()
+
+    vi.unstubAllEnvs()
+  })
+
   it("normalizes roles from teamPosition", () => {
     expect(normalizeRiotRole({ role: "SOLO", teamPosition: "UTILITY" })).toBe(
       "UTILITY"

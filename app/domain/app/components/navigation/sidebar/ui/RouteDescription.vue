@@ -16,11 +16,13 @@ const delegated = reactiveOmit(props, "class", "folder")
     v-bind="delegated"
     size="xl"
     :ui="{
+      ...props.ui,
       root: cn(
         'ml-1.25 py-2 pr-6',
-        folder?.description || props.description ? 'mb-1' : ''
+        folder?.description || props.description ? 'mb-1' : '',
+        props.ui?.root
       ),
-      name: 'mb-1'
+      name: cn('mb-1', props.ui?.name),
     }"
     :name="folder?.label || props.name"
     :description="folder?.description || props.description" />

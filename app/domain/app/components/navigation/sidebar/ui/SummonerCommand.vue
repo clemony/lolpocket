@@ -2,7 +2,7 @@
 import type { ButtonProps } from "@nuxt/ui"
 
 const emit = defineEmits(["update:open"])
-const { summoner: sum, currentSummonerNav } = storeToRefs(sSession())
+/* const { summoner: sum, currentSummonerNav } = storeToRefs(sSession())
 
 const summoner = computed(() => safeObject(sum.value))
 const nav = computed(() => ({
@@ -15,7 +15,7 @@ const nav = computed(() => ({
       trailingIcon: "size-3.25! **:stroke-[2.6] inline align-top"
     }
   }))
-}))
+})) */
 
 const tab = shallowRef<string>(useRoute().path)
 </script>
@@ -28,7 +28,7 @@ const tab = shallowRef<string>(useRoute().path)
 
     <!-- name of each tab group should be unique -->
 
-    <UTabs
+    <!--  <UTabs
       v-model:model-value="tab"
       :items="nav.items"
       :ui="{
@@ -73,6 +73,6 @@ const tab = shallowRef<string>(useRoute().path)
           view their current match status.
         </div>
       </div>
-    </UCard>
+    </UCard>-->
   </div>
 </template>

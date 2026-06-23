@@ -1,13 +1,26 @@
+import {
+  deserializePublicUsersState,
+  serializePublicUsersState
+} from "./publicUsers.cache"
+
 export const publicUsers = defineStore(
   "public-users",
   () => {
-    // maps instead of objects
     const cache = ref(new Map<string, Account>())
-    const byPuuid = ref(new Map<string, string>()) // puuid → uuid
+    const byPuuid = ref(new Map<string, string>())
+    const misses = ref(new Set<string>())
+    const inflightByPuuid = new Map<string, Promise<Account | null>>()
+    const inflightByUuid = new Map<string, Promise<Account | null>>()
 
-    const setAccount = (acc: Account) => {
+    const setAccount = (acc: Account | null) => {
+      if (!acc?.uuid) return
       cache.value.set(acc.uuid, acc)
-      if (acc.puuid) byPuuid.value.set(acc.puuid, acc.uuid)
+      misses.value.delete(acc.uuid)
+
+      if (acc.puuid) {
+        byPuuid.value.set(acc.puuid, acc.uuid)
+        misses.value.delete(acc.puuid)
+      }
     }
 
     const getByUuid = (uuid: string) => cache.value.get(uuid) ?? null
@@ -17,32 +30,61 @@ export const publicUsers = defineStore(
       return uuid ? getByUuid(uuid) : null
     }
 
-    const ensureByUuid = async (uuid: string) => {
+    const markMiss = (id?: string | null) => {
+      if (id) misses.value.add(id)
+    }
+
+    const ensureByUuid = async (uuid?: string | null) => {
+      if (!uuid || misses.value.has(uuid)) return null
+
       const existing = getByUuid(uuid)
       if (existing) return existing
 
-      /* const acc = await $fetch<Account>("/api/supabase/account_fetch", {
-           params: { uuid },
-         })
-         setAccount(acc)
-         return acc */
+      const inflight = inflightByUuid.get(uuid)
+      if (inflight) return await inflight
+
+      const promise = $fetch<Account | null>("/api/supabase/account/public", {
+        params: { uuid }
+      })
+        .then((acc) => {
+          if (acc) setAccount(acc)
+          else markMiss(uuid)
+          return acc
+        })
+        .finally(() => inflightByUuid.delete(uuid))
+
+      inflightByUuid.set(uuid, promise)
+      return await promise
     }
 
-    const ensureByPuuid = async (puuid: string) => {
+    const ensureByPuuid = async (puuid?: string | null) => {
+      if (!puuid || misses.value.has(puuid)) return null
+
       const existing = getByPuuid(puuid)
       if (existing) return existing
 
-      /* const acc = await $fetch<Account>("/api/account/by_puuid", {
-           params: { puuid },
-         })
-         setAccount(acc)
-         return acc */
+      const inflight = inflightByPuuid.get(puuid)
+      if (inflight) return await inflight
+
+      const promise = $fetch<Account | null>("/api/supabase/account/public", {
+        params: { puuid }
+      })
+        .then((acc) => {
+          if (acc) setAccount(acc)
+          else markMiss(puuid)
+          return acc
+        })
+        .finally(() => inflightByPuuid.delete(puuid))
+
+      inflightByPuuid.set(puuid, promise)
+      return await promise
     }
 
     const clearAll = () => {
       cache.value.clear()
       byPuuid.value.clear()
-      sessionStorage.removeItem("users-store")
+      misses.value.clear()
+      sessionStorage.removeItem("public-users")
     }
 
     return {
@@ -53,29 +95,18 @@ export const publicUsers = defineStore(
       getByUuid,
       cache,
       clearAll,
-      setAccount
+      misses,
+      setAccount,
     }
   },
   {
     persist: {
       key: "public-users",
       storage: piniaPluginPersistedstate.sessionStorage(),
-      // optional custom serializer for Maps
       serializer: {
-        deserialize: (str) => {
-          const parsed = JSON.parse(str)
-          return {
-            byPuuid: new Map(parsed.byPuuid),
-            users: new Map(parsed.users)
-          }
-        },
-        serialize: (state) => {
-          return JSON.stringify({
-            byPuuid: Array.from(state.byPuuid.entries()),
-            users: Array.from(state.users.entries())
-          })
-        }
-      }
-    }
+        deserialize: deserializePublicUsersState,
+        serialize: serializePublicUsersState,
+      },
+    },
   }
 )

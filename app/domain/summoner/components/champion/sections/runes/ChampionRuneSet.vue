@@ -4,7 +4,7 @@ const { class: className } = defineProps<{
 }>()
 const { runes } = storeToRefs(sChampion())
 const page = computed(() => {
-  if (!runes.value?.best) return null
+  if (!runes.value?.best) return
   return runes.value?.best
 })
 const bestTip = computed(() => {

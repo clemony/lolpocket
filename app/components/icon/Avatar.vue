@@ -17,8 +17,9 @@ const props = withDefaults(defineProps<AvatarProps & AvatarWrapperProps>(), {
     pin: true,
     interactive: true,
     effects: true,
-    map: 0
-  })
+    map: 0,
+    disabled: false,
+  }),
 })
 //i-eos-icons-hourglass
 const emit = defineEmits(["loaded"])
@@ -107,13 +108,13 @@ const ui = computed<NonNullable<AvatarProps["ui"]>>(
             "repeat-1 scale-115 animate-heartbeat-sm ring-offset-2! not-hover:duration-500!":
               ["xs", "sm", "2xs"].includes(String(ap.value.size)) &&
               isPinned.value &&
-              ap.value.effects !== false
+              ap.value.effects !== false,
           }
         ),
         icon: cn("size-5 opacity-60", {
           "pointer-events-none absolute size-4 animate-spin place-self-center! text-nc":
-            ap.value.spinner
-        })
+            ap.value.spinner,
+        }),
       },
       ap.value?.ui
     ) as NonNullable<AvatarProps["ui"]>
@@ -127,13 +128,14 @@ const ui = computed<NonNullable<AvatarProps["ui"]>>(
     :pin="tt.pin"
     :pinned="isPinned"
     :label="tt.label"
+    :disabled="tt.disabled"
     :align="tooltipAlign"
     :align-offset="tooltipAlignOffset"
     :avatar="hasSrc ? resolvedSrc || '' : undefined"
     :ui="{
       content: cn('group/avatar h-fit! max-h-110! w-full max-w-100', {
-        ' px-2 rounded-[0.7rem]': isPinned
-      })
+        ' px-2 rounded-[0.7rem]': isPinned,
+      }),
     }"
     :side="tooltipSide"
     @pinned="tt.pin ? (isPinned = true) : undefined"
@@ -141,6 +143,7 @@ const ui = computed<NonNullable<AvatarProps["ui"]>>(
     <div class="relative">
       <UAvatar
         role="button"
+        :style="props.style"
         v-bind="delegated"
         :quality="100"
         :src="hasSrc ? resolvedSrc || '' : undefined"

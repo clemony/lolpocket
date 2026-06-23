@@ -17,7 +17,7 @@ export const regionKeys = [
   "th2",
   "tr1",
   "tw2",
-  "vn2"
+  "vn2",
 ] as const
 
 export type Region = (typeof regionKeys)[number]
@@ -92,8 +92,8 @@ export interface Identity {
 }
 
 export interface UserProfileResponse {
-  settings: Settings | null
-  account: Account | null
-  inbox?: Inbox | null
-  pockets: Pocket[] | null
+  settings?: Settings
+  account?: Account
+  inbox?: Inbox
+  pockets?: Pocket[]
 }

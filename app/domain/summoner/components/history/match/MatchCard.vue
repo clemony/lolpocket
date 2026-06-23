@@ -17,44 +17,45 @@ const isOpen = ref(false)
   <UCard
     color="primary"
     :ui="{
-      body: 'flex w-full grow p-0! ring-pc/8'
+      body: 'flex grow rounded-5xl! p-0! ring-pc/8',
+      root: 'shadow-black/4',
     }"
     as-child>
     <UCollapsible
       v-if="player"
       v-model:open="isOpen"
       :ui="{
-        root: 'relative size-full min-w-134 cursor-pointer rounded-xl',
-        content: 'bg-p0'
+        root: 'relative min-w-134 grow cursor-pointer',
+        content: 'bg-p0',
       }">
       <UButton
         color="transparent"
         :ui="{
           base: cn(
             'relative border-p3/70 bg-linear-to-r to-transparent to-23% bg-cover bg-clip-padding **:select-none',
-            'pointer-events-auto relative z-2 h-36! min-h-36! w-full cursor-pointer overflow-hidden pr-4 pl-5 shadow-none ring-0! fx-0 open:rounded-b-none hover:ring-0 data-[state=open]:border-b-0!',
-            'before:pointer-events-none before:absolute before:left-0 before:z-3 before:h-full before:w-1/2 before:rounded-xl before:border-x before:border-t-0 before:border-b-2 before:mask-r-from-0 before:opacity-40 before:shadow-sm before:shadow-black',
+            'growcursor-pointer pointer-events-auto relative z-2 h-40! min-h-36! overflow-hidden pr-4 pl-5 shadow-none ring-0! fx-0 open:rounded-b-none hover:ring-0 data-[state=open]:border-b-0!',
+            'before:pointer-events-none before:absolute before:left-0 before:z-3 before:h-full before:w-1/2 before:rounded-5xl before:border-x before:border-t-0 before:border-b-2 before:mask-r-from-0 before:opacity-40 before:shadow-sm before:shadow-black',
             player?.win === 'remake'
               ? 'from-p3 before:border-p3'
               : player?.win === true
                 ? 'from-insp/80 after:to-insp/80 before:border-insp-offset'
                 : 'from-dom/80  after:to-dom/80 before:border-dom'
-          )
+          ),
         }">
         <div
-          class="flex w-full items-center justify-between gap-6 text-sm text-pc">
+          class="flex grow items-center justify-between gap-6 text-sm text-pc">
           <MatchInfo :match :player />
           <PlayerMatchCardInfo :match :player />
 
           <TeamsCardOverview :match />
-          <div class="grid h-full w-8 place-items-center">
+          <div class="grid w-8 grow place-items-center">
             <CaretFlip />
           </div>
         </div>
       </UButton>
 
       <template #content>
-        <LazyMatchContent :match :player hydrate-on-visible />
+        <LazyMatchContent v-if="isOpen" :match :player hydrate-on-visible />
       </template>
     </UCollapsible>
   </UCard>

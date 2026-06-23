@@ -1,59 +1,39 @@
 <script setup lang="ts">
-import type { SelectProps, TabsProps } from "@nuxt/ui"
-interface QueueFiltersProps {
-  type?: "tabs" | "select"
-  class?: HTMLAttributes["class"]
-  tabs?: Pick<TabsProps, "size" | "ui">
-  select?: Pick<SelectProps, "size" | "ui" | "placeholder">
-}
-
-const props = withDefaults(defineProps<QueueFiltersProps>(), {
-  size: "md",
-  type: "tabs"
+import type { TabsProps } from "@nuxt/ui"
+import { queues } from "~/domain/summoner/constants/queues"
+import { asTabsItems } from "~/types/typeAssert"
+const props = withDefaults(defineProps<TabsProps>(), {
+  size: "xl",
+  type: "tabs",
 })
 const store = matchFilter()
 const { filter } = storeToRefs(store)
 
 const queueModel = computed({
   get: () => filter?.value.queue,
-  set: (val) => store.setFilter("queue", val)
+  set: (val) => store.setFilter("queue", val),
 })
-const queues = [
-  {
-    label: props.type === "tabs" ? "All" : "All Queues",
-    value: 0
-  },
-  {
-    label: "Solo",
-    value: 420
-  },
-  {
-    label: "Flex",
-    value: 440
-  },
-  {
-    label: "Normal",
-    value: 400
-  }
-]
 </script>
 
 <template>
-  <USelect
-    v-if="props.type === 'select'"
-    v-bind="select"
-    v-model:model-value="queueModel"
-    :content="{ position: 'item-aligned' }"
-    :items="queues" />
   <UTabs
-    v-else-if="props.type === 'tabs'"
-    v-bind="tabs"
+    v-bind="props"
     v-model:model-value="queueModel"
     :ui="{
-      ...props.tabs?.ui,
-      root: cn('w-full min-w-54', props.tabs?.ui?.root, props.class),
-      trigger: cn('text-pc! opacity-100', props.tabs?.ui?.trigger)
+      ...props?.ui,
+      root: cn(
+        'relative w-full before:absolute before:inset-0 before:z-0 before:size-full before:rounded-5xl before:bg-p1/60',
+        props?.ui?.root,
+        props.class
+      ),
+      list: 'z-1 rounded-5xl border border-(--account-dark)/6 bg-(--account-color)/20 px-2 py-1.75! ring-0 inset-shadow-(--account-dark)/20',
+      indicator: cn(
+        'h-10.5 bg-(--account-color) inset-ring-(--account-dark)/20'
+      ),
+      label:
+        'group-active/trigger:font-semibold group-active/trigger:text-white! group-active/trigger:text-shadow-[0px_1px_1px_--alpha(var(--account-dark)_/_50%)]',
+      trigger: cn('h-10.5! text-pc opacity-100', props?.ui?.trigger),
     }"
     :default-value="0"
-    :items="queues" />
+    :items="asTabsItems(queues)" />
 </template>

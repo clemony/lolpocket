@@ -1,12 +1,15 @@
 import { matchPositionKey } from "~/domain/summoner/stats/helpers/normalizePosition"
+import { mapPositions } from "~~/shared/constants/misc/positions"
 
 //
 export interface PositionStats {
-  name: string
+  label: string
   games: number
   position: string
   winrate: number
   wins: number
+  disabled: boolean
+  icon: string
 }
 
 export function useMatchPositions(
@@ -37,13 +40,16 @@ export function useMatchPositions(
       const { games = 0, wins = 0 } = positionStatsMap.get(position) ?? {}
 
       return {
-        name: position,
+        label: position,
         games,
         position,
         winrate: games === 0 ? 0 : (wins / games) * 100,
-        wins
+        wins,
+        icon: `i-lp-${position.toLowerCase().replace("middle", "mid").replace("bottom", "bot")}`,
+        disabled: position === "all" ? false : !games,
       }
     })
   })
+
   return positions.value
 }

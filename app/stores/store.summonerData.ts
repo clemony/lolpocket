@@ -14,12 +14,6 @@ export const sData = defineStore("summonerData", () => {
   const id = computed(() => summoner.value?.puuid)
   const region = computed(() => summoner.value?.region)
 
-  const account = computed<Account | null>(() => {
-    const puuid = summoner.value?.puuid
-    if (!puuid) return null
-    return publicUsers().getByPuuid(puuid)
-  })
-
   const { getAllTimelinesForPuuid } = useTimeline()
 
   const timelines = shallowRef<PlayerTimeline[] | null>([])
@@ -38,33 +32,30 @@ export const sData = defineStore("summonerData", () => {
 
   const champions = useChampionStats(matches, filteredMatches, id)
 
-  const allies = computed<AllyStatDetail[] | null>(() => {
-    if (!id.value) return null
+  const allies = computed<AllyStatDetail[] | undefined>(() => {
+    if (!id.value) return undefined
     return aggregateAllies(filteredMatches, id.value).value
   })
 
-  const splash = computed(() => {
-    if (account.value?.skin)
-      return getSplashFromSkinKey(account.value.skin, "uncentered")
+  const mostPlayed = computed(() => {
+    const first = champions.value?.[0]?.championId ?? 0
+    console.log("🥸 - first:", first)
 
-    const first = champKeyById(champions.value?.[0]?.championId ?? 0)
-    if (!first) return null
-    else if (first)
-      return getSplash(first, "uncentered", getRandom(skinIndex[first] ?? []))
-
-    return null
+    return {
+      name: first ? champNameById(first) : undefined,
+      id,
+      splash: first ? getSplash(first, "uncentered") : undefined,
+    }
   })
 
   return {
-    account,
     matches,
     allies,
     champions,
     mastery,
-    splash,
     timelines,
-
+    mostPlayed,
     getMastery,
-    getTimelines
+    getTimelines,
   }
 })

@@ -75,7 +75,7 @@ onMounted(() => {
           <UTabs
             v-model:model-value="currentTab"
             :content="false"
-            :items="sidebarTabItems"
+            :items="Object.values(sidebarTabItems)"
             variant="lift"
             size="xl"
             color="primary"

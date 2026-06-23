@@ -1,7 +1,7 @@
 import { bumpAverage } from "~/domain/summoner/stats/helpers/bumpValues"
 import {
   getPositionStat,
-  normalizePosition
+  normalizePosition,
 } from "~/domain/summoner/stats/helpers/normalizePosition"
 import { sortEntriesByPickrate } from "~/domain/summoner/stats/helpers/sortEntries"
 import { AGGREGATED_STAT_SCHEMA } from "~/domain/summoner/stats/stats/aggregatedStatSchema"
@@ -13,7 +13,7 @@ import { initFromSchema } from "~/domain/summoner/stats/stats/initFromSchema"
 export interface ChampionStatsMatchEntry {
   match: MatchData
   player: Player
-  timeline?: PlayerTimeline | null
+  timeline?: PlayerTimeline
 }
 
 export interface ChampionStatsAggregationOptions {
@@ -34,7 +34,7 @@ export function createChampionStats(championId: number): ChampionStats {
     visionScorePerMin: 0,
     win: 0,
     winrate: 0,
-    ...initFromSchema(AGGREGATED_STAT_SCHEMA)
+    ...initFromSchema(AGGREGATED_STAT_SCHEMA),
   }
 }
 
@@ -74,8 +74,8 @@ export function addChampionStatsMatch(
 export function finalizeChampionStats(
   acc: ChampionStats,
   options: ChampionStatsAggregationOptions = {}
-): ChampionStats | null {
-  if (!acc.games) return null
+): ChampionStats | undefined {
+  if (!acc.games) return
 
   for (const key of Object.keys(AGGREGATED_STAT_SCHEMA) as Array<
     keyof typeof AGGREGATED_STAT_SCHEMA

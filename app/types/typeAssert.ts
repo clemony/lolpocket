@@ -1,3 +1,5 @@
+import type { ChipProps, SelectProps, TabsProps } from "@nuxt/ui"
+
 export function asItem(value: any): Item {
   return value as Item
 }
@@ -17,3 +19,14 @@ export function asSpell(value: any): Spell {
 export function asAbility(value: any): Ability {
   return value as Ability
 }
+
+export function asTabsItems(items: any): TabsProps["items"] {
+  return items
+}
+
+export function asSelectItems(items: any[]): SelectProps["items"] {
+  return items
+}
+
+const asPingSize = (size: string): ChipProps["size"] =>
+  size as ChipProps["size"]

@@ -1,12 +1,20 @@
 <script lang="ts" setup>
+import type { ButtonProps } from "@nuxt/ui"
 import type { ButtonRouteItem } from "~/types/route.types"
 
-const props = defineProps<
-  | ButtonRouteItem
-  | {
-      item?: ButtonRouteItem
-    }
->()
+const props = withDefaults(
+  defineProps<
+    | (ButtonRouteItem & ButtonProps)
+    | (ButtonProps & {
+        item?: ButtonRouteItem
+      })
+  >(),
+  {
+    color: "neutral",
+    variant: "ghost",
+    size: "md",
+  }
+)
 
 const item = computed<ButtonRouteItem>(
   () => (props.item ? props.item : props) as ButtonRouteItem
@@ -15,24 +23,26 @@ const item = computed<ButtonRouteItem>(
 
 <template>
   <UButton
-    color="neutral"
-    variant="ghost"
-    size="md"
+    :color="props.color"
+    :variant="props.variant"
+    :size="props.size"
     :label="item.label"
     :ui="{
       base: cn(
-        'group group/slide-btn card-button relative flex h-11! max-h-11! min-h-11! w-full gap-2.5! overflow-hidden rounded-xl px-3! hover:opacity-80!',
+        'group group/slide-btn card-button relative flex h-11! max-h-11! min-h-11! w-full gap-2.5! overflow-hidden rounded-xl px-3!',
+        { 'hover:opacity-80!': props.color === 'neutral' },
         item?.ui?.base
       ),
-      leadingIcon: item?.class
+      leadingIcon: item?.class,
     }">
     <div class="pointer-events-none flex grow items-center gap-3">
       <div v-if="!item.avatar?.src" class="anchor size-4.5">
         <Icon
           :name="String(item.icon)"
           :class="
-            cn('absolute size-4.5! group-hover/btn:text-nc', item.class, {
-              'group-hover/btn:opacity-0': item.iconFill
+            cn('absolute size-4.5!', item.class, {
+              'group-hover/btn:text-nc': props.color === 'neutral',
+              'group-hover/btn:opacity-0': item.iconFill,
             })
           " />
         <Icon
@@ -53,7 +63,8 @@ const item = computed<ButtonRouteItem>(
       <h4
         :class="
           cn(
-            'flex grow text-md leading-none font-semibold antialiased drop-shadow-none group-hover/btn:text-nc',
+            'flex grow text-md leading-none font-semibold antialiased drop-shadow-none',
+            { 'group-hover/btn:text-nc': props.color === 'neutral' },
             item?.ui?.label
           )
         ">

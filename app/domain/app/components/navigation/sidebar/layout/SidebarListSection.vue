@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+import type { ButtonProps } from "@nuxt/ui"
 import type { UseSidebar } from "~/domain/app/types/layout.types"
 import type { ButtonRouteItem, RouteGroup } from "~/types/route.types"
 
 const props = defineProps<{
   group: RouteGroup<ButtonRouteItem>
+  button?: ButtonProps
 }>()
 
 const sidebar = inject<UseSidebar>("sidebar")
@@ -14,8 +16,9 @@ const sidebar = inject<UseSidebar>("sidebar")
     <RouteDescription :folder="group" />
     <div v-if="group" class="grid w-full gap-x-0.5 gap-y-1 pr-1">
       <template v-for="item in group.items" :key="item.label">
-        <sidebarButton
+        <SidebarButton
           v-if="item.children"
+          v-bind="props.button"
           :ui="{ base: 'group/parent', label: 'grow' }"
           :item="item"
           :to="undefined"
@@ -42,14 +45,15 @@ const sidebar = inject<UseSidebar>("sidebar")
                 " />
             </UTooltip>
           </template>
-        </sidebarButton>
+        </SidebarButton>
         <UTooltip
           v-else
           :content="{ side: 'left' }"
           :text="item.description"
           as-child
           class="group">
-          <sidebarButton
+          <SidebarButton
+            v-bind="props.button"
             :item="item"
             @click="sidebar?.close({ to: item?.to, onClick: item?.onClick })" />
         </UTooltip>

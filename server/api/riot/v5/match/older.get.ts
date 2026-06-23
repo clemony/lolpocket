@@ -6,7 +6,7 @@ import {
   upsertCachedMatchParticipants,
 } from "~~/server/domain/d1/summoner-cache"
 import {
-  getMatchAnalyticsDb,
+  getMatchAnalyticsDbForEvent,
   persistMatchAnalytics,
   toMatchAnalyticsTallyProjection
 } from "~~/server/domain/riot/match/analytics"
@@ -56,7 +56,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
     results
   )
   try {
-    const analyticsDb = getMatchAnalyticsDb(event)
+    const analyticsDb = await getMatchAnalyticsDbForEvent(event)
     await persistMatchAnalytics(analyticsDb, analytics)
   } catch (err) {
     console.warn("Failed match analytics persistence", err)

@@ -16,7 +16,7 @@ export interface MatchData {
   teams: MatchTeam[]
 }
 export interface MatchFilter {
-  ally?: string | null
+  ally?: string
   amount?: number
   champion?: number | null
   date?: MaybeRef<DateRange>
@@ -85,12 +85,12 @@ export interface Participant {
 export const matchTeams = {
   100: {
     color: "var(--color-insp)",
-    name: "blue"
+    name: "blue",
   },
   200: {
     color: "var(--color-domination)",
-    name: "red"
-  }
+    name: "red",
+  },
 }
 
 export const teamStatRegistry: Record<string, MatchStatValue> = {
@@ -116,21 +116,21 @@ export const teamStatRegistry: Record<string, MatchStatValue> = {
     name: "",
   }, */
   bans: {
-    name: "Bans"
+    name: "Bans",
   },
   gold: {
-    name: "gold earned"
+    name: "gold earned",
   },
   kda: {
-    name: "kda"
+    name: "kda",
   },
   teamId: {
     name: "Map Designation",
-    group: "basic"
+    group: "basic",
   },
   win: {
-    name: "Match outcome"
-  }
+    name: "Match outcome",
+  },
 }
 
 export interface MatchReturn {

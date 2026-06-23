@@ -48,3 +48,14 @@ export function extractIdentifierFromRoute(
 
   return null
 }
+
+export function extractIdentifierFromPath(path: string): Identifier | null {
+  const matched = path.match(/^\/([^/]+)\/([^/]+)(?:\/|$)/)
+  if (!matched) return null
+
+  const region = matched[1]
+  const slug = matched[2]
+  if (!region || !slug) return null
+
+  return extractIdentifierFromSlug(region, slug)
+}

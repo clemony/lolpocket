@@ -79,6 +79,7 @@ export interface PairedChampionStat extends StatDetail {
   championName: string
   delta: number
   synergy: number
+  percentChange?: number
 }
 
 export type PairedChampionStatGroup = Record<number, PairedChampionStat>
@@ -101,7 +102,7 @@ export interface AllyStatDetail extends Identifier, StatDetail {
 export interface ChampionRuneStats {
   keystone: Record<number, StatDetail>
   all: RunePageStats[]
-  best: RunePageStats | null
+  best?: RunePageStats
   primary: Record<number, StatDetail>
   secondary: Record<number, StatDetail>
   shards: ShardStats
@@ -114,7 +115,7 @@ export interface RunePageStats extends StatDetail {
   primaryRunes: number[]
   secondaryPath: string
   secondaryRunes: number[]
-  shards: Array<number | null>
+  shards: Array<number | undefined>
 }
 
 export type RunePageKey = string

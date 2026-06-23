@@ -18,27 +18,30 @@ const btnProps = computed<ButtonProps>(() => ({
     base: cn(
       "rounded-lg border border-transparent hover:border-p5 hover:shadow-xs [&_svg]:hover:opacity-60",
       props.button?.ui?.base
-    )
+    ),
   },
-  color: "transparent"
+  color: "transparent",
 }))
 const kbd = computed<KbdProps>(
   () =>
     ({
       ...props.kbd,
-      variant: props?.kbd?.variant || "subtle",
+      variant: props?.kbd?.variant || "ghost",
       size: props?.kbd?.size || "lg",
       square: true,
       ui: {
-        base: cn("text-md! text-n5 group-hover/i:text-n1!", props.kbd?.ui?.base)
-      }
+        base: cn(
+          "text-md! text-n5 group-hover/i:text-n1!",
+          props.kbd?.ui?.base
+        ),
+      },
     }) as KbdProps
 )
 </script>
 
 <template>
   <div
-    v-if="!props.modelValue"
+    v-if="props.modelValue === undefined"
     v-auto-animate
     class="flex items-center -space-x-px">
     <UKbd v-for="k in kbds" v-bind="kbd" :key="k" :value="k" />

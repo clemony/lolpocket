@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SidebarWrapper } from "#components"
 import type { ButtonProps, TabsItem } from "@nuxt/ui"
 import { inboxButtonProps, useInbox } from "~/domain/user/composables/useInbox"
 import type {
@@ -6,6 +7,16 @@ import type {
   CommandMessage,
 } from "~/domain/user/types/inbox.types"
 import { createTestMessage } from "~/domain/user/utils/messages/test-message"
+
+const props = withDefaults(
+  defineProps<{
+    as?: string | Component
+    header?: boolean
+  }>(),
+  {
+    header: true,
+  }
+)
 
 const boxes = useInbox()
 
@@ -36,7 +47,7 @@ const buttonProps: ButtonProps & { tabindex?: string } = {
 </script>
 
 <template>
-  <SidebarWrapper title="Inbox">
+  <component :is="props.as || SidebarWrapper" title="Inbox">
     <template #subtitle>
       <UButton
         label="send"
@@ -106,5 +117,5 @@ const buttonProps: ButtonProps & { tabindex?: string } = {
         </div>
       </div>
     </template>
-  </SidebarWrapper>
+  </component>
 </template>

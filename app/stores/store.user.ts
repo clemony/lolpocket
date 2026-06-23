@@ -23,10 +23,10 @@ export const user = defineStore(
         f.location === "backpack" || !f.location
           ? {
               ...f,
-              location: "folders"
+              location: "folders",
             }
           : {
-              ...f
+              ...f,
             }
       )
     }
@@ -53,21 +53,21 @@ export const user = defineStore(
       sidebar_sort_mode: "desc",
       backpack_group_by: "folder",
       confirm_folder_delete: true,
-      confirm_pocket_delete: true
+      confirm_pocket_delete: true,
     })
 
     function updateSortMethod(method: "date" | "alpha") {
       localSettings.value.sidebar_sort_method = method
     }
 
-    const hotkeys = {
+    const hotkeys = ref({
       search: ["meta", "k"],
       subSearch: ["meta", "shift", "k"],
       logIn: ["shift", "meta", "s"],
       logOut: ["shift", "meta", "q"],
       open: ["meta", "o"],
-      close: ["meta", "x"]
-    }
+      close: ["meta", "x"],
+    })
 
     function clearAccount() {
       account.value = getEmptyAccount() as unknown as Account
@@ -97,7 +97,7 @@ export const user = defineStore(
         ...createEmptyInbox(),
         ...(nextInbox ?? {}),
         messages: [...(nextInbox?.messages ?? [])],
-        notifications: [...(nextInbox?.notifications ?? [])]
+        notifications: [...(nextInbox?.notifications ?? [])],
       }
     }
 
@@ -108,7 +108,7 @@ export const user = defineStore(
     function addInboxNotification(notification: InboxNotification) {
       inbox.value.notifications = [
         notification,
-        ...inbox.value.notifications
+        ...inbox.value.notifications,
       ].slice(0, 20)
     }
 
@@ -127,7 +127,7 @@ export const user = defineStore(
           notification.id === id
             ? {
                 ...notification,
-                read_at: read ? nowInstantString() : null
+                read_at: read ? nowInstantString() : null,
               }
             : notification
       )
@@ -147,7 +147,7 @@ export const user = defineStore(
     }
 
     const keybinds = ref<Record<string, string[]>>({
-      subSearch: ["meta", "shift", "K"]
+      subSearch: ["meta", "shift", "K"],
     })
 
     /*     FOLDERS */
@@ -168,7 +168,7 @@ export const user = defineStore(
     const folderIcon = (location: string) => {
       const folders = computed<Folder[]>(() => [
         ...Object.values(backpackFolders),
-        ...(settings.value?.folders ?? [])
+        ...(settings.value?.folders ?? []),
       ])
 
       const key = folders.value.find((f) => f.id === location)?.iconKey
@@ -212,7 +212,7 @@ export const user = defineStore(
         id: crypto.randomUUID(),
         iconKey: "folder",
         location: options?.location || "folders",
-        order: settings.value?.folders.length || 0
+        order: settings.value?.folders.length || 0,
       }
 
       if (options?.label) folder.label = String(options.label)
@@ -262,7 +262,7 @@ export const user = defineStore(
         (a.order ?? 0) - (b.order ?? 0) ||
         String(a.label ?? "").localeCompare(String(b.label ?? ""), undefined, {
           numeric: true,
-          sensitivity: "base"
+          sensitivity: "base",
         })
       const folders =
         settings.value?.folders
@@ -316,13 +316,13 @@ export const user = defineStore(
       identities,
       hotkeys,
       map,
-      setDefaultFolderName
+      setDefaultFolderName,
     }
   },
   {
     persist: {
       key: "accountStore",
-      storage: piniaPluginPersistedstate.localStorage()
-    }
+      storage: piniaPluginPersistedstate.localStorage(),
+    },
   }
 )

@@ -166,12 +166,8 @@ watch(
               </template>
             </LazyUInput>
             <div class="flex items-center gap-4">
-              <LazyQueueFilters
-                type="select"
-                :ui="{ base: 'w-44 inset-ring-p1' }" />
-              <LazyMatchPositionFilter
-                type="select"
-                :ui="{ base: 'w-44 inset-ring-p1' }" />
+              <LazyQueueFilters />
+              <LazyMatchPositionFilter />
             </div>
           </template>
         </UCollapsible>

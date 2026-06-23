@@ -6,7 +6,7 @@ import {
   LazyItemTooltip,
   LazyRuneTooltip,
   LazySpellTooltip,
-  MatchStatus
+  MatchStatus,
 } from "#components"
 import type { AvatarPropsExt, DomainType, TooltipPropsExt } from "#shared/types"
 
@@ -19,6 +19,7 @@ interface ResolvedType {
   component?: Record<string, Component>
   avatar?: AvatarPropsExt
   pin?: boolean
+  disabled?: boolean
   props?: Partial<Record<keyof IconProps, IconProps[keyof IconProps]>>
 }
 
@@ -26,7 +27,8 @@ const {
   tooltip = {
     pin: true,
     interactive: true,
-    effects: true
+    effects: true,
+    disabled: false,
   },
   avatar,
   summoner,
@@ -34,7 +36,8 @@ const {
   map,
   id,
   k,
-  winrates
+  winrates,
+  style,
 } = defineProps<IconProps>()
 
 const tt = computed<TooltipPropsExt>(() => safeObject(tooltip))
@@ -44,63 +47,63 @@ const invisibleBg = {
   root: "bg-transparent shadow-none ring-0 inset-shadow-none noise-0",
 
   image:
-    "bg-transparent drop-shadow-sm shadow-none ring-0 inset-shadow-none noise-0"
+    "bg-transparent drop-shadow-sm shadow-none ring-0 inset-shadow-none noise-0",
 }
 
 const types: Record<DomainType, ResolvedType> = {
   rune: {
     label: runeNameById(Number(id)) ?? "",
     component: LazyRuneTooltip,
-    src: `/img/rune/${id}.webp`
+    src: `/img/rune/${id}.webp`,
   },
   item: {
     label: itemNameById(Number(id)) ?? "",
     component: LazyItemTooltip,
     src: `/img/item/${id}.webp`,
-    props: { map }
+    props: { map },
   },
   champion: {
     label: champNameById(Number(id)) ?? "",
     src: `/img/champion/${id}.webp`,
     component: LazyChampionWinrateTooltip,
-    props: { winrates, k }
+    props: { winrates, k },
   },
   spell: {
     label: spellNameById(Number(id)) ?? "",
     component: LazySpellTooltip,
-    src: `/img/spell/${id}.webp`
+    src: `/img/spell/${id}.webp`,
   },
   ability: {
     label: abilityNameById(String(id)) ?? "",
     component: LazyAbilityTooltip,
-    src: `/img/ability/${id}.webp`
+    src: `/img/ability/${id}.webp`,
   },
   path: {
     label: pathNameById(Number(id)) ?? "",
     component: undefined,
     src: `/img/path/${id}.webp`,
-    avatar: { ui: invisibleBg, round: true }
+    avatar: { ui: invisibleBg, round: true },
   },
   keystone: {
     label: runeNameById(Number(id)) ?? "",
     component: LazyRuneTooltip,
     src: `/img/rune/${id}.webp`,
-    avatar: { ui: invisibleBg, round: true }
+    avatar: { ui: invisibleBg, round: true },
   },
   status: {
     label: summoner?.name ?? "",
     component: undefined,
     pin: false,
     src: getSummonerIcon(summoner?.icon) ?? "",
-    props: { summoner }
+    props: { summoner },
   },
   summoner: {
     label: summoner?.name ?? "",
     pin: false,
     component: undefined,
     src: getSummonerIcon(summoner?.icon) ?? "",
-    props: { summoner }
-  }
+    props: { summoner },
+  },
 }
 
 const item = computed<ResolvedType>(() => safeObject(types[type as DomainType]))
@@ -112,12 +115,14 @@ const item = computed<ResolvedType>(() => safeObject(types[type as DomainType]))
 const mergedTooltip = computed<TooltipPropsExt>(() => ({
   ...tt.value,
   label: tt.value.label ?? item.value.label,
-  pin: item.value.pin ?? tt.value.pin
+  pin: item.value.pin ?? tt.value.pin,
+  disabled: item.value.disabled ?? tt.value.disabled,
 }))
 </script>
 
 <template>
   <Avatar
+    :style
     v-bind="{
       tooltip: mergedTooltip,
       ...ap,
@@ -129,8 +134,8 @@ const mergedTooltip = computed<TooltipPropsExt>(() => ({
           item?.avatar?.ui?.root,
           ap.ui?.root
         ),
-        image: cn(item?.avatar?.ui?.image, ap.ui?.image)
-      }
+        image: cn(item?.avatar?.ui?.image, ap.ui?.image),
+      },
     }"
     @click.stop>
     <template v-if="ap.effects !== false">

@@ -7,7 +7,7 @@ const { color = "base" } = defineProps<{
 
 const sidebar = useSidebar()
 
-const { settings, hotkeys } = user()
+const { settings, hotkeys } = storeToRefs(user())
 </script>
 
 <template>

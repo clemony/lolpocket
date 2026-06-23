@@ -1,7 +1,8 @@
 import { createEmptyChampionStat } from "~/domain/summoner/stats/helpers/createEmptyStat"
 import {
+  percentScore,
   synergyScore,
-  winDelta
+  winDelta,
 } from "~/domain/summoner/stats/helpers/normalizeScore"
 
 //
@@ -54,7 +55,7 @@ function bumpAlly(
       tag: ally.tag,
       win: 0,
       loss: 0,
-      champions: {}
+      champions: {},
     }
   }
 
@@ -121,17 +122,17 @@ export function aggregateAllies(data: Ref<MatchData[]>, puuid: string) {
       )
     }
 
-    // collect ALL raw synergy values
+    // collect ALLLLLLLLL raw synergy values
     const allSynergyTotals = [
       ...Object.values(allies).map((a) => a.delta),
       ...Object.values(allies).flatMap((a) =>
         (Object.values(a.champions) as PairedChampionStat[]).map((c) => c.delta)
-      )
+      ),
     ]
 
     const globalMaxAbs = Math.max(...allSynergyTotals.map(Math.abs)) || 1
 
-    // now normalize
+    //normalize
     for (const ally of Object.values(allies)) {
       ally.synergy = synergyScore(ally.delta, globalMaxAbs)
       ally.winrate = roundDecimalToPercent(ally.win ?? 0, ally.games)
@@ -151,8 +152,8 @@ export function aggregateAllies(data: Ref<MatchData[]>, puuid: string) {
     /*     console.log(
       "🥸 - aggregateAllies - filter:",
       Object.values(filter).map((p) => p.champions)
-    )
- */
+    ) */
+
     return sortRecordBy(filter, "games", "desc") as AllyStatDetail[]
   })
 }

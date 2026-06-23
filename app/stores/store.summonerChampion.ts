@@ -23,7 +23,7 @@ export const sChampion = defineStore("summonerChampion", () => {
   const champion = computed(() => ({
     id: champIdByKey(String(route.params.champion_key)),
     key: String(route.params.champion_key),
-    name: champNameByKey(String(route.params.champion_key))
+    name: champNameByKey(String(route.params.champion_key)),
   }))
 
   const matchData = computed<MatchPlayerData[]>(() => {
@@ -41,50 +41,52 @@ export const sChampion = defineStore("summonerChampion", () => {
         const timeline = timelines.value?.find(
           (tl: PlayerTimeline) => tl.matchId === m.matchId
         )
-        if (!player || !timeline) return null
+        if (!player || !timeline) return undefined
         return { match: m, player, timeline }
       })
       .filter(Boolean) as MatchPlayerData[]
   })
 
-  const allies = computed<AllyStatDetail[] | null>(() => {
-    if (!id.value) return null
+  const allies = computed<AllyStatDetail[] | undefined>(() => {
+    if (!id.value) return undefined
     return aggregateAllies(filteredMatches, id.value).value
   })
 
-  const duos = computed<ChampionPairStats | null>(() => {
-    if (!id.value) return null
+  const duos = computed<ChampionPairStats | undefined>(() => {
+    if (!id.value) return undefined
     return aggregateDuos(matchData).value
   })
 
-  const items = computed<ItemSlotOrder | null>(() => {
-    if (!id.value) return null
+  const items = computed<ItemSlotOrder | undefined>(() => {
+    if (!id.value) return undefined
     return useChampionItemTimelineStats(matchData).value
   })
 
-  const runes = computed<ChampionRuneStats | null>(() => {
-    if (!id.value) return null
+  const runes = computed<ChampionRuneStats | undefined>(() => {
+    if (!id.value) return
     return useChampionRuneStats(unref(matchData)).value
   })
 
-  const skills = computed<AggregatedSkills | null>(() => {
-    if (!id.value) return null
+  const skills = computed<AggregatedSkills | undefined>(() => {
+    if (!id.value) return undefined
     return aggregateSkills(matchData.value)
   })
 
-  const spells = computed<SpellStats | null>(() => {
-    if (!matchData.value?.length) return null
+  const spells = computed<SpellStats | undefined>(() => {
+    if (!matchData.value?.length) return undefined
     return useChampionSpellStats(matchData).value
   })
 
-  const stats = computed<ChampionStats | null>(() => {
-    if (!id.value) return null
+  const stats = computed<ChampionStats | undefined>(() => {
+    if (!id.value) return undefined
     return useAggregateSingleChampion(matchData).value
   })
 
-  const mastery = computed<ChampionMastery | null>(() => {
-    if (!champion.value.id) return null
-    return m.value?.find((c) => c?.championId === champion.value?.id) ?? null
+  const mastery = computed<ChampionMastery | undefined>(() => {
+    if (!champion.value.id) return undefined
+    return (
+      m.value?.find((c) => c?.championId === champion.value?.id) ?? undefined
+    )
   })
 
   return {
@@ -96,6 +98,6 @@ export const sChampion = defineStore("summonerChampion", () => {
     runes,
     skills,
     spells,
-    stats
+    stats,
   }
 })

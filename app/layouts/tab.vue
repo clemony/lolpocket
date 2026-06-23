@@ -30,13 +30,13 @@ const pocketSplash = computed(() => {
 })
 
 const bg = computed(() =>
-  isSummonerRoute.value
+  /*   isSummonerRoute.value
     ? sData().splash
-    : pocket
-      ? pocketSplash.value
-      : champion
-        ? getSplash(champion.key, "uncentered")
-        : getRandomBg()
+    : */ pocket
+    ? pocketSplash.value
+    : champion
+      ? getSplash(champion.key, "uncentered")
+      : getRandomBg()
 )
 </script>
 

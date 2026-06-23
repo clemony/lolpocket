@@ -40,7 +40,7 @@ export function bayesianWinrate(
   wins: number,
   games: number,
   baselineWinrate: number,
-  priorGames = 10
+  priorGames: number = PRIOR_GAMES
 ): number {
   if (games === 0) return baselineWinrate
 

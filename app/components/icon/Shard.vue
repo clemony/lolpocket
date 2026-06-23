@@ -9,7 +9,7 @@ const {
   dataText,
   iconClass,
 } = defineProps<{
-  id: number | null
+  id?: number
   dataSize?: TooltipSize
   dataPlacement?: string
   dataText?: string
@@ -24,7 +24,7 @@ const shard = computed(() =>
 
 <template>
   <UTooltip :class="cn('anchor rounded-full', className)">
-    <ShardIcon v-if="id !== null" :id="id" :class="iconClass" />
+    <ShardIcon v-if="id !== undefined" :id="id" :class="iconClass" />
     <slot />
   </UTooltip>
 </template>

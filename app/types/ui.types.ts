@@ -7,4 +7,5 @@ export interface IconProps {
   tooltip?: TooltipPropsExt
   avatar?: AvatarPropsExt
   winrates?: ChampionWinrate[]
+  style?: CSSStyleValue
 }

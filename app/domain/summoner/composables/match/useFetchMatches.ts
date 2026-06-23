@@ -26,20 +26,9 @@ export async function useFetchMatches(summoner: Summoner) {
       (m) => m.queueId === 420 || m.queueId === 440
     )
     if (hasRanked) {
-      ;(async () => {
-        try {
-          const res = await $fetch<{ ranked: Summoner["ranked"] }>(
-            "/api/riot/v4/league/entries/puuid",
-            {
-              params: { puuid: summoner.puuid, region: summoner.region }
-            }
-          )
-
-          summonerStore().mergeRanked(summoner.puuid, res.ranked)
-        } catch (err) {
-          console.error("🔥 Failed ranked refresh", err)
-        }
-      })()
+      void summonerStore().refreshRanked(summoner.puuid, summoner.region, {
+        force: true
+      })
     }
   }
 

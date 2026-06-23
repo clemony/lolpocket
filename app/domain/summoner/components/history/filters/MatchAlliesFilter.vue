@@ -1,20 +1,25 @@
 <script lang="ts" setup>
+import { UButton } from "#components"
 import { getSummonerIcon } from "~/domain/utils/img"
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
+const query = shallowRef<string>("")
+const open = shallowRef<boolean>(true)
 const store = matchFilter()
 const { filter } = storeToRefs(store)
 const { loading } = storeToRefs(sMatches())
 
+type PairedAlly = AllyStatDetail & { bestPair: PairedChampionStat[] }
 const model = computed({
   get: () => filter?.value.ally,
   set: (val) => store.setFilter("ally", val),
 })
 const { allies } = storeToRefs(sData())
-const alliesList = computed(() =>
+
+const alliesList = computed<PairedAlly[]>(() =>
   (allies.value ?? [])
     .sort((a, b) => b.games - a.games)
     .map((a) => {
@@ -33,141 +38,131 @@ const alliesList = computed(() =>
 </script>
 
 <template>
-  <UCollapsible
-    v-if="!loading"
-    :default-open="true"
+  <UListbox
+    v-model:model-value="model"
+    v-model:search-term="query"
+    :state="open"
+    :highlight="false"
+    :autofocus="false"
+    :filter="{
+      size: 'xl',
+      icon: 'i-search',
+      placeholder: 'Allies',
+      ui: {
+        base: 'text-sm grow',
+      },
+      trailingIcon: h(UButton, {
+        trailingIcon: 'i-up',
+        variant: 'ghost',
+        ariaLabel: `Toggle Allies Filter - State: ${open}`,
+        onClick() {
+          open = !open
+        },
+        square: true,
+        ui: {
+          base: 'anchor px-3 size-10! rounded-xl hover:shadow-none!',
+          trailingIcon: 'trailing-rotate absolute size-4.5',
+        },
+      }),
+    }"
+    :filter-fields="[
+      'name',
+      'tag',
+      String(
+        ({ item }: { item: PairedAlly }) =>
+          item.bestPair?.[0]?.championName ?? ''
+      ),
+    ]"
+    :highlight-on-hover="false"
+    value-key="puuid"
     :ui="{
-      root: 'relative w-full',
-      content: 'relative w-full overflow-hidden open:border-b',
-    }">
-    <UButton
-      trailing-icon="i-up"
-      label="Allies"
-      block
-      variant="ghost"
-      size="md"
-      :ui="{
-        base: 'justify-between border-0 open:rounded-b-none open:border-b open:border-b-p3/80 open:bg-transparent! open:fx-0!',
-        label: 'grow-0 font-semibold! text-pc/50 group-hover/btn:text-pc',
-        trailingIcon:
-          'transition-rotate size-4.5 text-pc/70 duration-200 **:stroke-[2.2] group-open/collapse:-rotate-180 group-hover/btn:**:text-pc',
-      }" />
+      root: 'min-h-max w-full rounded-5xl! border-p2 bg-p0 shadow-sm ring-0! inset-ring-0 shadow-black/4 drop-shadow-none has-focus-visible:outline-0!',
+      content: 'h-max max-h-100',
+      group: 'flex flex-col gap-y-1',
+      item: 'grid! w-full max-w-full shrink-0 cursor-pointer grid-flow-col grid-cols-[30px_1fr_0.3fr]! justify-start gap-3 overflow-hidden rounded-3xl! p-3 checked:bg-p2 checked:ring checked:ring-pc/60 hover:bg-p1',
+    }"
+    :items="alliesList"
+    :multiple="false">
+    <template #item="{ item }">
+      <LazyUTooltip
+        arrow
+        :disable-hoverable-content="true"
+        :content="{ side: 'top' }"
+        :ui="{ content: 'h-max! w-84' }">
+        <div class="relative">
+          <UAvatar
+            size="xl"
+            :src="getSummonerIcon(item.icon)"
+            icon="i-lol-champ"
+            :ui="{
+              root: 'z-0',
+              image: cn(
+                'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
+                model && item.puuid !== model ? 'grayscale opacity-90' : ''
+              ),
+            }" />
 
-    <template #content>
-      <Listbox v-model:model-value="model" :multiple="false">
-        <ListboxContent
-          :class="
-            cn(
-              'z-auto h-max max-h-100 w-full space-y-1 overflow-y-auto rounded-xl px-1.5 py-3'
-            )
-          ">
-          <template v-if="!sMatches().loading && sMatches.length">
-            <ListboxItem
-              v-for="item in alliesList"
-              :key="item.name"
-              as-child
-              :value="item.puuid ?? ''">
-              <UButton
-                variant="ghost"
-                :active="item.puuid === model"
-                :ui="{
-                  base: cn(
-                    'grid! w-full max-w-full shrink-0 grid-flow-col grid-cols-[30px_1fr_0.3fr]! justify-start gap-3 overflow-hidden rounded-xl px-3'
-                  ),
-                }"
-                size="xl">
-                <div class="relative">
-                  <UAvatar
-                    size="xl"
-                    :src="getSummonerIcon(item.icon)"
-                    icon="i-lol-champ"
-                    :ui="{
-                      root: 'z-0',
-                      image: cn(
-                        'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
-                        model && item.puuid !== model
-                          ? 'grayscale opacity-90'
-                          : ''
-                      ),
-                    }" />
+          <UAvatar
+            size="xs"
+            :src="`/img/champion/${item.bestPair?.[0]?.championId}.webp`"
+            icon="i-lol-champ"
+            :ui="{
+              root: 'absolute -right-2 -bottom-0.75 z-1 border-2! border-p0',
+              image: cn(
+                'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
+                model && item.puuid !== model ? 'grayscale opacity-90' : ''
+              ),
+            }" />
+        </div>
+        <div class="grid h-full items-center justify-start text-start">
+          <div class="inline-flex gap-1 align-baseline">
+            <span class="truncate text-md! font-semibold text-pc">
+              {{ item.name }}
+            </span>
+            <span class="inline-flex gap-0 text-xs! text-n5">
+              <Icon name="i-hash" class="mt-0.75 size-3.25 text-n5" />
+              {{ item.tag }}
+            </span>
+          </div>
+        </div>
 
-                  <UAvatar
-                    size="xs"
-                    :src="`/img/champion/${item.bestPair?.[0]?.championId}.webp`"
-                    icon="i-lol-champ"
-                    :ui="{
-                      root: 'absolute -right-2 -bottom-0.75 z-1 border-2! border-p0',
-                      image: cn(
-                        'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
-                        model && item.puuid !== model
-                          ? 'grayscale opacity-90'
-                          : ''
-                      ),
-                    }" />
-                </div>
-                <div class="grid items-center justify-start text-start">
-                  <div class="inline-flex gap-1 align-baseline">
-                    <span class="truncate font-semibold text-pc">
-                      {{ item.name }}
-                    </span>
-                    <span class="inline-flex gap-0 text-xs! text-n5">
-                      <Icon name="i-hash" class="mt-0.75 size-3.25 text-n5" />
-                      {{ item.tag }}
-                    </span>
-                  </div>
-                  <LazyUTooltip
-                    :disable-hoverable-content="true"
-                    side="bottom"
-                    :ui="{ content: 'h-max! w-84' }"
-                    class="inline-flex gap-1 align-baseline">
-                    <span
-                      class="text-xs! font-semibold text-n5 hover:underline">
-                      {{ item.bestPair?.[0]?.championName }}
-                    </span>
+        <template v-if="item.games">
+          <div
+            class="grid justify-end justify-self-end text-end text-xs! tabular-nums">
+            <span class="font-bold tabular-nums">
+              {{ roundDecimalToPercent(Number(item.win), item.games) }}%
+            </span>
+            <span class="text-xs! text-n5"> {{ item.games }} games </span>
+          </div>
+        </template>
+        <template #content>
+          <LazyAllyPairTooltip :item />
+        </template>
+      </LazyUTooltip>
+    </template>
+    <template #loading>
+      <div
+        v-for="i in 5"
+        :key="i"
+        class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost">
+        <LazyUSkeleton class="size-8.5 rounded-full" />
 
-                    <template #content>
-                      <LazyAllyPairTooltip :item />
-                    </template>
-                  </LazyUTooltip>
-                </div>
+        <LazyUSkeleton class="h-9 w-full" />
+      </div>
+    </template>
 
-                <template v-if="item.games">
-                  <div
-                    class="grid justify-end justify-self-end text-end text-xs!">
-                    <span class="font-bold">
-                      {{ roundDecimalToPercent(Number(item.win), item.games) }}%
-                    </span>
-                    <span class="text-xs! text-n5">
-                      {{ item.games }} games
-                    </span>
-                  </div>
-                </template>
-              </UButton>
-            </ListboxItem>
-          </template>
+    <template #empty>
+      <div class="h-20 w-full">
+        <UBadge label="No allies found" />
+      </div>
+    </template>
 
-          <template v-else-if="sMatches().loading">
-            <div
-              v-for="i in 5"
-              :key="i"
-              class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost">
-              <LazyUSkeleton class="size-8.5 rounded-full" />
-
-              <LazyUSkeleton class="h-9 w-full" />
-            </div>
-          </template>
-
-          <LazyLilKrug v-else />
-
-          <!--              <Icon
+    <!--              <Icon
                   v-if="
                     ally === allies.sort((a, b) => b.synergy - a.synergy)[0]
                   "
                   class="ml-1 inline size-3.5 align-bottom ds-2xs **:text-pc/80!"
-                  name="ion:star" /> -->
-        </ListboxContent>
-      </Listbox>
-    </template>
-  </UCollapsible>
-  <USkeleton v-else class="h-100 w-full rounded-2xl" />
+                  name="ion:star" />
+        </ListboxContent> -->
+  </UListbox>
 </template>

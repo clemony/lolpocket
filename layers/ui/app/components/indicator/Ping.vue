@@ -1,28 +1,44 @@
 <script lang="ts" setup>
 import type { ChipProps } from "@nuxt/ui"
+import type { MotionValue } from "motion-v"
+import { motion } from "motion-v"
 
 const props = withDefaults(
   defineProps<
     ChipProps & {
       size?: string
+      style?: Record<string, MotionValue<string>>
+      ui?: ChipProps["ui"] & {
+        anchor?: HTMLAttributes["class"]
+      }
     }
   >(),
   {
     color: "diminuendo",
     size: "md",
-    inset: true
+    inset: true,
   }
 )
 
-const delegated = reactiveOmit(props, "class", "color")
+const delegated = reactiveOmit(props, "class", "color", "style")
 </script>
 
 <template>
   <UChip
     v-bind="delegated"
-    :ui="{ ...props.ui, base: cn('ring-2', props.ui?.base) }">
+    :ui="{ ...props.ui, base: cn('ring-0', props.ui?.base) }">
     <template #content>
-      <div class="anchor relative size-full rounded-full bg-[#fff]">
+      <motion.div
+        :style="props.style"
+        :class="
+          cn(
+            'anchor relative size-full rounded-full bg-[#fff]',
+            {
+              'ring-2 ring-p0': props.inset,
+            },
+            props.ui?.anchor
+          )
+        ">
         <div
           :class="
             cn(
@@ -37,7 +53,7 @@ const delegated = reactiveOmit(props, "class", "color")
               twBg[props.color]
             )
           " />
-      </div>
+      </motion.div>
     </template>
     <slot />
   </UChip>

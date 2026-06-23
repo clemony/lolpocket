@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { SidebarWrapper } from "#components"
 import type { ListboxItem, UserProps } from "@nuxt/ui"
 import { getSummonerIcon } from "~/domain/utils/img"
 
@@ -10,6 +11,16 @@ interface SocialGroup {
   }
   items: ListboxItem[]
 }
+
+const props = withDefaults(
+  defineProps<{
+    as?: string | Component
+    header?: boolean
+  }>(),
+  {
+    header: true,
+  }
+)
 
 const query = shallowRef<string>()
 const selectedPuuid = shallowRef<string>()
@@ -53,7 +64,7 @@ const groups = computed<Record<string, SocialGroup>>(() => {
 </script>
 
 <template>
-  <SidebarWrapper title="Social">
+  <component :is="props.as || SidebarWrapper" title="Social">
     <template #subtitle>
       <div class="flex items-center justify-end gap-2">
         <div class="inline-flex items-center align-baseline">
@@ -142,5 +153,5 @@ const groups = computed<Record<string, SocialGroup>>(() => {
         </template>
       </UCollapsible>
     </div>
-  </SidebarWrapper>
+  </component>
 </template>

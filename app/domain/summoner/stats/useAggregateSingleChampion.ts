@@ -1,18 +1,18 @@
 import {
   addChampionStatsMatch,
   createChampionStats,
-  finalizeChampionStats
+  finalizeChampionStats,
 } from "~/domain/summoner/stats/aggregateChampionStats"
 
 //
 export function useAggregateSingleChampion(
   matchData: ComputedRef<MatchPlayerData[]>
 ) {
-  return computed<ChampionStats | null>(() => {
-    if (!matchData.value?.length) return null
+  return computed<ChampionStats | undefined>(() => {
+    if (!matchData.value?.length) return
 
     const first = matchData.value[0]?.player
-    if (!first) return null
+    if (!first) return
 
     const acc = createChampionStats(first.championId)
 
@@ -22,7 +22,7 @@ export function useAggregateSingleChampion(
 
       addChampionStatsMatch(acc, m, {
         includeDetailStats: true,
-        includeTimelineStats: true
+        includeTimelineStats: true,
       })
     }
 

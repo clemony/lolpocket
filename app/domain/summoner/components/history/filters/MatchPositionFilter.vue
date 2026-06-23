@@ -1,18 +1,9 @@
 <script lang="ts" setup>
-import { mapPositions } from "#shared/constants/misc/positions"
-import type { SelectProps, TabsProps } from "@nuxt/ui"
+import type { SelectProps, TabsItem, TabsProps } from "@nuxt/ui"
 import { useMatchPositions } from "~/domain/summoner/composables/match/useMatchPositions"
 
-interface QueueFiltersProps {
-  type?: "tabs" | "select"
-  class?: HTMLAttributes["class"]
-  tabs?: Pick<TabsProps, "size" | "ui">
-  select?: Pick<SelectProps, "size" | "ui" | "placeholder">
-}
-
-const props = withDefaults(defineProps<QueueFiltersProps>(), {
-  size: "md",
-  type: "tabs"
+const props = withDefaults(defineProps<TabsProps>(), {
+  size: "xl",
 })
 
 const { summoner } = storeToRefs(sSession())
@@ -27,33 +18,40 @@ const positions = computed(() => {
     sMatches().matches
   )
 
-  return mapPositions.map((p) => {
-    const find = matchPositions?.find((r) => r.name === p.label)
-    return {
-      ...p,
-      value: p.label,
-      icon: `i-lp-${p.label.toLowerCase()}`,
-      disabled: p.label === "all" ? false : !find?.games
-    }
-  })
+  return [
+    {
+      label: "all",
+      icon: "i-lp-all",
+      disabled: false,
+    },
+    ...matchPositions,
+  ]
 })
 
 const positionModel = computed({
   get: () => filter?.value.position ?? "all",
-  set: (val) => store.setFilter("position", val ?? "all")
+  set: (val) => store.setFilter("position", val ?? "all"),
 })
 </script>
 
 <template>
   <UTabs
-    v-if="props.type === 'tabs'"
     v-model:model-value="positionModel"
-    size="md"
+    value-key="label"
+    :size="props.size"
     :ui="{
-      root: 'w-full',
+      ...props?.ui,
+      root: cn(
+        'w-full before:absolute before:inset-0 before:z-0 before:size-full before:rounded-5xl before:bg-p1/60',
+        props?.ui?.root,
+        props.class
+      ),
+      list: 'rounded-5xl border border-(--account-dark)/6 bg-(--account-color)/20 px-2 py-1.75! ring-0 inset-shadow-(--account-dark)/20',
+      indicator: cn(
+        'h-10.5 bg-(--account-color) inset-ring-(--account-dark)/20'
+      ),
       label: 'hidden',
-      trigger: 'relative gap-0 p-0',
-      leadingIcon: 'size-5'
+      trigger: cn('h-10.5! text-pc! opacity-100', props?.ui?.trigger),
     }"
     :items="positions"
     default-value="all">
@@ -64,17 +62,11 @@ const positionModel = computed({
         :ui="{ content: 'capitalize' }"
         :content="{ side: item.disabled ? 'top' : 'bottom' }">
         <div class="absolute inset-0 grid size-full place-items-center">
-          <Icon :name="item.icon" class="size-5!" />
+          <Icon
+            :name="item.icon"
+            class="size-5! scale-110 group-active/trigger:text-white" />
         </div>
       </UTooltip>
     </template>
   </UTabs>
-
-  <USelect
-    v-else-if="props.type === 'select'"
-    v-bind="select"
-    v-model:model-value="positionModel"
-    :icon="`i-lp-${positionModel?.toLowerCase()}`"
-    :content="{ position: 'item-aligned' }"
-    :items="positions" />
 </template>

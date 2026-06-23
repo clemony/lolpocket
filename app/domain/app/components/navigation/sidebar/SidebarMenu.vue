@@ -1,8 +1,19 @@
 <script lang="ts" setup>
+import { SidebarWrapper } from "#components"
 import { backpackItem } from "~/domain/app/utils/menuItems"
 defineOptions({
   inheritAttrs: false,
 })
+
+const props = withDefaults(
+  defineProps<{
+    as?: string | Component
+    header?: boolean
+  }>(),
+  {
+    header: true,
+  }
+)
 
 const { useRouteGroups } = routeStore()
 const groupMap = safeObject(computed(() => useRouteGroups().value))
@@ -27,11 +38,16 @@ const summoner = computed(() =>
 </script>
 
 <template>
-  <SidebarWrapper overlay="bottom">
-    <template #header>
+  <component :is="props.as || SidebarWrapper" overlay="bottom">
+    <template v-if="props.header" #header>
       <CommandSidebarHeader color="primary" />
     </template>
-    <div class="z-1 flex w-full flex-col gap-y-4 pt-40 pb-8">
+    <div
+      :class="
+        cn('z-1 flex w-full flex-col gap-y-4 pt-3 pb-8', {
+          'pt-40': props.header,
+        })
+      ">
       <SidebarListSection v-if="backpack" :group="backpack" />
       <SidebarButtonGrid v-if="summoner" :group="summoner" />
 
@@ -59,5 +75,5 @@ const summoner = computed(() =>
         <SidebarCollapse v-for="(group, i) in helpGroup" :key="i" :group />
       </div>
     </div>
-  </SidebarWrapper>
+  </component>
 </template>

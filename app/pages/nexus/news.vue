@@ -1,26 +1,26 @@
 <script lang="ts" setup>
 import {
   providePostModal,
-  usePostModal
+  usePostModal,
 } from "~/domain/nexus/composables/usePostModal"
 import {
   buildPatchPost,
   buildPbePost,
-  buildRedditPost
+  buildRedditPost,
 } from "~/domain/nexus/utils/post_cards"
 
 definePageMeta({
   title: "News",
   layout: "nexus-layout",
   path: "/nexus/news",
-  class: "scale-107 **:stroke-[2.2] translate-x-px", //"scale-96 **:stroke-[1.2]",
+  class: "scale-108 **:stroke-[7.5%]! translate-x-px", //"scale-96 **:stroke-[1.2]",
   icon: "i-iconamoon-news", //"i-hugeicons-news", //"i-streamline-news-paper",
   description: "The latest.",
-  order: 1
+  order: 1,
 })
 
 const {
-  public: { postalBaseUrl }
+  public: { postalBaseUrl },
 } = useRuntimeConfig()
 
 const route = useRoute()
@@ -37,11 +37,11 @@ const page = computed<number>({
     router.replace({
       query: {
         ...route.query,
-        page: String(value)
+        page: String(value),
       },
-      hash: "#news-feed"
+      hash: "#news-feed",
     })
-  }
+  },
 })
 
 const offset = computed(() => (page.value - 1) * itemsPerPage)
@@ -52,14 +52,14 @@ const { data: postList, refresh } = await useFetch<PostListResponse>(
     baseURL: postalBaseUrl || undefined,
     default: () => ({
       items: [],
-      total: 0
+      total: 0,
     }),
     key: () => `nexus-news-${page.value}`,
     query: computed(() => ({
       limit: itemsPerPage,
-      offset: offset.value
+      offset: offset.value,
     })),
-    server: false
+    server: false,
   }
 )
 const newsPosts = computed<Post[]>(() => postList.value?.items ?? [])
@@ -81,9 +81,9 @@ function pageTo(targetPage: number) {
   return {
     query: {
       ...route.query,
-      page: String(targetPage)
+      page: String(targetPage),
     },
-    hash: "#news-feed"
+    hash: "#news-feed",
   }
 }
 </script>
@@ -95,7 +95,7 @@ function pageTo(targetPage: number) {
       class="w-full"
       :ui="{
         root: 'mb-12 w-full border-b-0 px-8 pb-0',
-        container: 'border-b border-b-p3/80 pb-6'
+        container: 'border-b border-b-p3/80 pb-6',
       }"
       description="The latest League updates all in one place." />
     <UPageBody id="updates" class="relative w-full overflow-y-auto px-8">

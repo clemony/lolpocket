@@ -80,6 +80,13 @@ two ways:
 If the binding is absent, Riot match routes still return client data, but D1
 analytics tally persistence is skipped.
 
+For local `pnpm dev` testing, set `MATCH_ANALYTICS_D1_REMOTE_DEV=1` alongside
+`MATCH_ANALYTICS_D1_DATABASE_ID` and `MATCH_ANALYTICS_D1_DATABASE_NAME`. The
+server match routes will use Wrangler's dev platform proxy to bind
+`MATCH_ANALYTICS_DB` to the remote D1 database and persist aggregate match
+analytics during local development. If Wrangler is logged in to more than one
+Cloudflare account, also set `CLOUDFLARE_ACCOUNT_ID`.
+
 ### Common 404 Cause
 
 A domain-level 404 usually means the Pages project is deploying the wrong artifact.

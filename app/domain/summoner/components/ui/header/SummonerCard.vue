@@ -5,11 +5,11 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const { mastery, splash } = storeToRefs(sData())
+const { mastery, mostPlayed } = storeToRefs(sData())
 const { summoner } = storeToRefs(sSession())
 const img = useImage()
 const bg = computed(
-  () => splash?.value?.replace("uncentered", "tile") ?? getRandomBg()
+  () => mostPlayed.value?.splash?.replace("uncentered", "tile") ?? getRandomBg()
 )
 const top = computed(() => {
   if (!mastery.value) return
@@ -27,7 +27,7 @@ console.log("🥸 - top:", top)
         background: `url(${img(bg)})`,
         backgroundSize: '100%',
         backgroundPositionY: '15%',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
       }"
       class="relative z-0 mb-10 h-22 w-full overflow-hidden rounded-t-lg"
       :alt="`${summoner?.name}'s Splash`">

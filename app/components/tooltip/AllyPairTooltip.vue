@@ -42,7 +42,7 @@ const chart = computed(() => ({
     Number(item.bestPair?.[0]?.games),
     item.games
   )}%`,
-  synergy: item.bestPair?.[0]?.synergy
+  synergy: item.bestPair?.[0]?.synergy,
 }))
 </script>
 
@@ -63,7 +63,7 @@ const chart = computed(() => ({
                 : 'justify-center'
           )
         ">
-        <div class="text-xl font-bold">
+        <div class="text-xl font-bold tabular-nums">
           {{ v }}
         </div>
         <div class="text-2xs capitalize">

@@ -4,11 +4,17 @@ export const summonerStore = defineStore(
     const hydrated = ref<boolean>(false)
     const MAX_CACHE = 100
     const TTL = 86_400_000 // 24 hours
+    const RANKED_TTL = 900_000 // 15 minutes
 
     // only top-level mutations matter, contents never individually watched
     const cache = ref<Record<string, Summoner>>({})
     const meta = ref<Record<string, number>>({})
+    const rankedMeta = ref<Record<string, number>>({})
     const index = ref<Record<string, string>>({})
+    const rankedInflight = new Map<
+      Summoner["puuid"],
+      Promise<Summoner["ranked"]>
+    >()
 
     const makeKey = (r?: string | null, n?: string | null, t?: string | null) =>
       `${String(r ?? "").toLowerCase()}:${String(n ?? "").toLowerCase()}:${String(t ?? "").toLowerCase()}`
@@ -48,9 +54,20 @@ export const summonerStore = defineStore(
     const isStale = (puuid: string) =>
       !meta.value[puuid] || Date.now() - meta.value[puuid] > TTL
 
+    const isRankedStale = (puuid: Summoner["puuid"]) =>
+      !rankedMeta.value[puuid]
+      || Date.now() - rankedMeta.value[puuid] > RANKED_TTL
+
     const bump = (puuid: string) => {
       meta.value[puuid] = Date.now()
     }
+
+    const bumpRanked = (puuid: Summoner["puuid"]) => {
+      rankedMeta.value[puuid] = Date.now()
+    }
+
+    const currentRanked = (puuid: Summoner["puuid"]) =>
+      cache.value[puuid]?.ranked ?? {}
 
     const evictIfNeeded = () => {
       const keys = Object.keys(cache.value)
@@ -63,6 +80,7 @@ export const summonerStore = defineStore(
 
       delete cache.value[oldest]
       delete meta.value[oldest]
+      delete rankedMeta.value[oldest]
 
       for (const slug in index.value) {
         if (index.value[slug] === oldest) delete index.value[slug]
@@ -71,10 +89,54 @@ export const summonerStore = defineStore(
 
     const setSummoner = (s: Summoner) => {
       if (!s?.puuid || !s?.region || !s?.name || !s?.tag) return
-      cache.value[s.puuid] = s
+      const ranked = s.ranked ?? cache.value[s.puuid]?.ranked ?? {}
+      cache.value[s.puuid] = { ...s, ranked }
       index.value[makeKey(s.region, s.name, s.tag)] = s.puuid
       bump(s.puuid)
       evictIfNeeded()
+    }
+
+    const mergeRanked = (
+      puuid: Summoner["puuid"],
+      ranked: Summoner["ranked"]
+    ) => {
+      const nextRanked = ranked ?? {}
+      const s = cache.value[puuid]
+      if (s) cache.value[puuid] = { ...s, ranked: nextRanked }
+      bumpRanked(puuid)
+      return nextRanked
+    }
+
+    const refreshRanked = async (
+      puuid: Summoner["puuid"],
+      region: Summoner["region"],
+      options: { force?: boolean } = {}
+    ): Promise<Summoner["ranked"]> => {
+      const inflight = rankedInflight.get(puuid)
+      if (inflight) return await inflight
+
+      if (!options.force && !isRankedStale(puuid)) {
+        return currentRanked(puuid)
+      }
+
+      const promise = (async () => {
+        try {
+          const res = await $fetch<{ ranked: Summoner["ranked"] }>(
+            "/api/riot/v4/league/entries/puuid",
+            { params: { puuid, region } }
+          )
+
+          return mergeRanked(puuid, res.ranked)
+        } catch (err) {
+          console.warn("Failed ranked refresh, continuing with cached ranked", err)
+          return currentRanked(puuid)
+        } finally {
+          rankedInflight.delete(puuid)
+        }
+      })()
+
+      rankedInflight.set(puuid, promise)
+      return await promise
     }
 
     const ensureSummoner = async (args: {
@@ -98,30 +160,19 @@ export const summonerStore = defineStore(
       const hasFullIdentity = Boolean(
         existing?.puuid && existing?.region && existing?.name && existing?.tag
       )
-      if (existing && hasFullIdentity && !force && !isStale(existing.puuid))
-        return existing
+      if (existing && hasFullIdentity && !force && !isStale(existing.puuid)) {
+        await refreshRanked(existing.puuid, existing.region)
+        return cache.value[existing.puuid] ?? existing
+      }
 
       const base = await $fetch<Summoner>("/api/riot/summoner", {
         params: args
       })
 
-      let ranked: { ranked: Summoner["ranked"] } = { ranked: {} }
-      try {
-        ranked = await $fetch<{ ranked: Summoner["ranked"] }>(
-          "/api/riot/v4/league/entries/puuid",
-          { params: { puuid: base.puuid, region: base.region } }
-        )
-      } catch (err) {
-        console.warn("Failed ranked lookup, continuing with base summoner", err)
-      }
+      setSummoner(base)
+      await refreshRanked(base.puuid, base.region, { force })
 
-      const full = {
-        ...base,
-        ranked: ranked.ranked
-      }
-      setSummoner(full)
-
-      return full
+      return cache.value[base.puuid] ?? base
     }
 
     const resolveOrFetch = async (puuid: string) => {
@@ -133,19 +184,10 @@ export const summonerStore = defineStore(
       return await ensureSummoner({ puuid })
     }
 
-    const mergeRanked = (
-      puuid: Summoner["puuid"],
-      ranked: Summoner["ranked"]
-    ) => {
-      const s = cache.value[puuid]
-      if (!s) return
-      cache.value[puuid] = { ...s, ranked }
-      bump(puuid)
-    }
-
     const clearAll = () => {
       cache.value = {}
       meta.value = {}
+      rankedMeta.value = {}
       index.value = {}
       localStorage.removeItem("summonerStore")
     }
@@ -166,10 +208,11 @@ export const summonerStore = defineStore(
       hydrated,
       index,
       makeKey,
-      mergeRanked,
       meta,
       patchSummoner,
+      rankedMeta,
       rebuildIndex,
+      refreshRanked,
       // getByRoute,
       resolveBySlug,
       resolveOrFetch,

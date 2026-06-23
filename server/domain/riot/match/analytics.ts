@@ -4,14 +4,21 @@ import type {
   D1DatabaseLike,
   D1PreparedStatementLike
 } from "../../d1/summoner-cache"
+import process from "node:process"
 import { normalizeRiotRole } from "./mvpScoring"
 
 const MAX_D1_BOUND_PARAMETERS = 100
 
 export const MATCH_ANALYTICS_D1_BINDING = "MATCH_ANALYTICS_DB"
+const MATCH_ANALYTICS_REMOTE_DEV_FLAG = "MATCH_ANALYTICS_D1_REMOTE_DEV"
 
 interface D1BatchDatabaseLike extends D1DatabaseLike {
   batch?: (statements: D1PreparedStatementLike[]) => Promise<unknown[]>
+}
+
+interface PlatformProxyLike {
+  env: Record<string, unknown>
+  dispose: () => Promise<void>
 }
 
 export interface MatchAnalyticsLedgerRow {
@@ -101,6 +108,116 @@ export function getMatchAnalyticsDb(event: H3Event): D1BatchDatabaseLike | null 
   const env = runtimeEnv ?? contextEnv
 
   return (env?.[MATCH_ANALYTICS_D1_BINDING] ?? null) as D1BatchDatabaseLike | null
+}
+
+let devPlatformProxyPromise: Promise<PlatformProxyLike | null> | null = null
+let warnedMissingDevD1Config = false
+let warnedDevD1ProxyFailure = false
+
+export async function getMatchAnalyticsDbForEvent(event: H3Event) {
+  return getMatchAnalyticsDb(event) ?? (await getRemoteDevMatchAnalyticsDb())
+}
+
+async function getRemoteDevMatchAnalyticsDb(): Promise<D1BatchDatabaseLike | null> {
+  if (
+    process.env.NODE_ENV !== "development" ||
+    process.env[MATCH_ANALYTICS_REMOTE_DEV_FLAG] !== "1"
+  ) {
+    return null
+  }
+
+  const proxy = await getDevPlatformProxy()
+  return (proxy?.env?.[MATCH_ANALYTICS_D1_BINDING] ??
+    null) as D1BatchDatabaseLike | null
+}
+
+async function getDevPlatformProxy(): Promise<PlatformProxyLike | null> {
+  if (!devPlatformProxyPromise) {
+    devPlatformProxyPromise = createDevPlatformProxy()
+  }
+
+  return await devPlatformProxyPromise
+}
+
+async function createDevPlatformProxy(): Promise<PlatformProxyLike | null> {
+  const databaseId = process.env.MATCH_ANALYTICS_D1_DATABASE_ID?.trim()
+  const databaseName =
+    process.env.MATCH_ANALYTICS_D1_DATABASE_NAME?.trim() ||
+    "lolpocket-match-analytics"
+  const accountId = process.env.CLOUDFLARE_ACCOUNT_ID?.trim()
+
+  if (!databaseId) {
+    if (!warnedMissingDevD1Config) {
+      warnedMissingDevD1Config = true
+      console.warn(
+        "MATCH_ANALYTICS_D1_REMOTE_DEV=1 is set, but MATCH_ANALYTICS_D1_DATABASE_ID is missing; match analytics D1 writes are disabled in dev."
+      )
+    }
+    return null
+  }
+
+  try {
+    const wranglerModule = "wrangler"
+    const [
+      { mkdtemp, writeFile },
+      { tmpdir },
+      { join },
+      { getPlatformProxy },
+    ] = await Promise.all([
+      import("node:fs/promises"),
+      import("node:os"),
+      import("node:path"),
+      import(/* @vite-ignore */ wranglerModule),
+    ])
+
+    const configDir = await mkdtemp(join(tmpdir(), "lolpocket-wrangler-"))
+    const configPath = join(configDir, "wrangler.jsonc")
+    const previewDatabaseId =
+      process.env.MATCH_ANALYTICS_D1_PREVIEW_DATABASE_ID?.trim()
+    const databaseConfig = {
+      binding: MATCH_ANALYTICS_D1_BINDING,
+      database_name: databaseName,
+      database_id: databaseId,
+      ...(previewDatabaseId
+        ? { preview_database_id: previewDatabaseId }
+        : {}),
+      remote: true,
+    }
+
+    await writeFile(
+      configPath,
+      JSON.stringify(
+        {
+          name: "lolpocket-dev",
+          ...(accountId ? { account_id: accountId } : {}),
+          compatibility_date: new Date().toISOString().slice(0, 10),
+          d1_databases: [databaseConfig],
+        },
+        null,
+        2
+      )
+    )
+
+    const proxy = (await getPlatformProxy({
+      configPath,
+      remoteBindings: true,
+    })) as PlatformProxyLike
+
+    process.once("exit", () => {
+      void proxy.dispose()
+    })
+
+    return proxy
+  } catch (err) {
+    if (!warnedDevD1ProxyFailure) {
+      warnedDevD1ProxyFailure = true
+      console.warn(
+        "Failed to initialize remote D1 dev binding; match analytics persistence is disabled in dev.",
+        err
+      )
+    }
+    return null
+  }
 }
 
 function finiteNumber(value: unknown) {

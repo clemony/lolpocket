@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-const { summoner } = storeToRefs(sSession())
+import { motion } from "motion-v"
+
+const { summoner, account } = storeToRefs(sSession())
 
 useHead({
   titleTemplate: () => {
@@ -8,7 +10,6 @@ useHead({
     else return "lolpocket"
   },
 })
-
 definePageMeta({
   title: "Match History",
   description: "Browse through your matches with deep search tools.",
@@ -18,57 +19,50 @@ definePageMeta({
   order: 0,
 })
 
+const body = useTemplateRef<HTMLElement>("body")
+const header = useTemplateRef<HTMLElement>("header")
+const { scrollYProgress } = useScroll({
+  target: body,
+  offset: ["start end", "end end"],
+})
+
+useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  console.log("x changed to", latest)
+})
+const bodyProgress = useSpring(scrollYProgress, {
+  stiffness: 100,
+  damping: 30,
+  restDelta: 0.001,
+})
+
 const open = shallowRef<boolean>(true)
 
-const modes = [
+const entries = computed(() => [
   {
     label: "Solo/Duo",
-    entry: summoner.value?.ranked?.solo,
+    ...summoner.value?.ranked?.solo,
   },
-  {
-    label: "Flex",
-    entry: summoner.value?.ranked?.flex,
-  },
-]
-
-const tiers = [
-  "Iron",
-  "Bronze",
-  "Silver",
-  "Gold",
-  "Platinum",
-  "Emerald",
-  "Diamond",
-  "Master",
-  "Grandmaster",
-  "Challenger",
-]
+  { ...summoner.value?.ranked?.flex, label: "Flex" },
+])
 </script>
 
 <template>
-  <div class="w-full">
-    <NuxtLayout name="sticky-aside-layout">
-      <template #left>
-        <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->
+  <motion.div ref="body" class="z-auto grid grow grid-cols-[1fr_2.2fr] gap-12">
+    <div class="flex w-full flex-col items-center gap-8 pt-12">
+      <LazyRankCard v-for="entry in entries" :key="entry.label" :entry />
+      <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->
 
-        <QueueFilters class="mt-1 -mb-1" />
+      <MatchChampionFilters />
 
-        <MatchChampionFilters />
-
-        <LazyMatchPositionFilter class="mt-1 -mb-1" />
-
-        <LazyMatchAlliesFilter />
-      </template>
-      <div class="flex w-full items-center">
-        <!--         <LazyRankCard
-          v-for="mode in modes"
-          :key="mode.label"
-          :label="mode.label"
-          :entry="mode.entry" /> -->
-
-        <LazyRankCard v-for="tier in tiers" :key="tier" :tier="tier" />
+      <LazyMatchAlliesFilter />
+    </div>
+    <div class="z-auto flex w-full grow flex-col gap-10 pt-8">
+      <div
+        class="sticky -inset-x-6 -top-50 z-2 flex size-full h-max w-full grow items-center gap-6 rounded-5xl bg-p1/50 mask-x-from-98% mask-x-to-100% px-6 py-4 backdrop-blur-md">
+        <QueueFilters class="" />
+        <LazyMatchPositionFilter class="" />
       </div>
       <LazyMatchList />
-    </NuxtLayout>
-  </div>
+    </div>
+  </motion.div>
 </template>

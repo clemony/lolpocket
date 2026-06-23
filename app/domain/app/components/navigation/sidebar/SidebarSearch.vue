@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { SidebarWrapper } from "#components"
 import type {
   AvatarProps,
   BadgeProps,
@@ -10,6 +11,16 @@ import type { SidebarSearchEntry } from "~/domain/app/utils/searchEntries"
 import { searchEntries } from "~/domain/app/utils/searchEntries"
 import { unavailableItems } from "~~/shared/constants/items/collection/unavailableItems"
 import { unpurchasableItems } from "~~/shared/constants/items/collection/unpurchasableItems"
+
+const props = withDefaults(
+  defineProps<{
+    as?: string | Component
+    header?: boolean
+  }>(),
+  {
+    header: true,
+  }
+)
 
 const emit = defineEmits(["openPopover"])
 
@@ -117,10 +128,10 @@ function onClick(item: SidebarSearchEntry) {
 </script>
 
 <template>
-  <SidebarWrapper title="Search" overlay="vertical">
+  <component :is="props.as || SidebarWrapper" title="Search" overlay="vertical">
     <template #subtitle> </template>
 
-    <template #description>
+    <template v-if="props.header" #description>
       <div class="flex h-13 w-full shrink-0 items-center justify-start">
         <UInput
           v-model:model-value="query"
@@ -283,5 +294,5 @@ function onClick(item: SidebarSearchEntry) {
         </ul>
       </div>
     </template>
-  </SidebarWrapper>
+  </component>
 </template>

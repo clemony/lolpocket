@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { getWinrateArc } from "../../app/domain/summoner/components/champion/chart/champWinrateArc"
+import { getWinrateArc } from "../../app/components/chart/radialWinrateArc"
 
 describe("champ winrate arc label", () => {
   it("builds a full circle path using the same square sizing as the chart", () => {
@@ -7,7 +7,7 @@ describe("champ winrate arc label", () => {
       id: "winrate-arc-48",
       path: "M22.5 12 A10.5 10.5 0 1 1 1.5 12 A10.5 10.5 0 1 1 22.5 12",
       sizing: "calc(var(--spacing) * 48)",
-      viewBox: "0 0 24 24"
+      viewBox: "0 0 24 24",
     })
   })
 

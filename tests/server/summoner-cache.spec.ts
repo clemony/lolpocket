@@ -67,18 +67,36 @@ class MockStatement {
     ] = this.values
 
     const existing = this.db.rows.get(String(puuid))
+    const isDirectLookup = lastRiotSyncAt != null
+    const isNewerPreview =
+      existing?.last_seen_at == null ||
+      (lastSeenAt != null && Number(lastSeenAt) > Number(existing.last_seen_at))
+    const shouldUpdateIdentity = !existing || isDirectLookup || isNewerPreview
+    const latest = (incoming: unknown, stored: unknown) => {
+      if (incoming == null) return stored ?? null
+      if (stored == null) return incoming
+
+      return Number(incoming) > Number(stored) ? incoming : stored
+    }
+
     this.db.rows.set(String(puuid), {
-      game_name: gameName,
-      last_riot_sync_at: lastRiotSyncAt ?? existing?.last_riot_sync_at ?? null,
-      last_seen_at: lastSeenAt,
-      profile_icon_id: profileIconId ?? existing?.profile_icon_id ?? null,
+      game_name: shouldUpdateIdentity ? gameName : existing.game_name,
+      last_riot_sync_at: latest(lastRiotSyncAt, existing?.last_riot_sync_at),
+      last_seen_at: latest(lastSeenAt, existing?.last_seen_at),
+      profile_icon_id: shouldUpdateIdentity
+        ? (profileIconId ?? existing?.profile_icon_id ?? null)
+        : existing.profile_icon_id,
       puuid,
-      region: region ?? existing?.region ?? null,
-      search_name: searchName,
-      search_tag: searchTag,
-      summoner_level: summonerLevel ?? existing?.summoner_level ?? null,
-      tag_line: tagLine,
-      updated_at: updatedAt
+      region: shouldUpdateIdentity
+        ? (region ?? existing?.region ?? null)
+        : existing.region,
+      search_name: shouldUpdateIdentity ? searchName : existing.search_name,
+      search_tag: shouldUpdateIdentity ? searchTag : existing.search_tag,
+      summoner_level: shouldUpdateIdentity
+        ? (summonerLevel ?? existing?.summoner_level ?? null)
+        : existing.summoner_level,
+      tag_line: shouldUpdateIdentity ? tagLine : existing.tag_line,
+      updated_at: latest(updatedAt, existing?.updated_at)
     })
   }
 }
@@ -120,15 +138,21 @@ describe("summoner cache", () => {
 
     await upsertCachedSummoner(db, {
       gameName: "Old Name",
+      lastRiotSyncAt: 1_000,
+      lastSeenAt: 1_000,
       puuid: "puuid-1",
       region: "na1",
-      tagLine: "NA1"
+      tagLine: "NA1",
+      updatedAt: 1_000
     })
     await upsertCachedSummoner(db, {
       gameName: "New Name",
+      lastRiotSyncAt: 1_100,
+      lastSeenAt: 1_100,
       puuid: "puuid-1",
       region: "na1",
-      tagLine: "NA1"
+      tagLine: "NA1",
+      updatedAt: 1_100
     })
 
     expect(db.rows.size).toBe(1)
@@ -196,11 +220,13 @@ describe("summoner cache", () => {
     await upsertCachedSummoner(db, {
       gameName: "Known Name",
       lastRiotSyncAt: 1_000,
+      lastSeenAt: 1_000,
       profileIconId: 1,
       puuid: "puuid-4",
       region: "na1",
       summonerLevel: 321,
-      tagLine: "NA1"
+      tagLine: "NA1",
+      updatedAt: 1_000
     })
 
     await upsertCachedMatchParticipants(db, [
@@ -226,4 +252,31 @@ describe("summoner cache", () => {
       summoner_level: 321
     })
   })
+
+  it("does not update participant preview rows with older lastSeenAt values", async () => {
+    const db = new MockD1()
+    await upsertCachedSummoner(db, {
+      gameName: "Fresh",
+      lastSeenAt: 2_000,
+      puuid: "puuid-preview",
+      region: "na1",
+      tagLine: "NA1",
+      updatedAt: 2_000
+    })
+
+    await upsertCachedSummoner(db, {
+      gameName: "Stale",
+      lastSeenAt: 1_000,
+      puuid: "puuid-preview",
+      region: "na1",
+      tagLine: "NA1",
+      updatedAt: 1_000
+    })
+
+    expect(db.rows.get("puuid-preview")).toMatchObject({
+      game_name: "Fresh",
+      last_seen_at: 2_000
+    })
+  })
+
 })

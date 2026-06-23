@@ -12,7 +12,7 @@ definePageMeta({
 
   prefix: "Tools",
   icon: "i-ui-postcard",
-  class: "**:stroke-[1.7%]!"
+  class: "**:stroke-[1.7%]! scale-97",
 })
 
 // todo nuxt bg here
@@ -94,7 +94,7 @@ console.log("💠 - card.splash:", card.splash)
         ref="pocketCardRef"
         class="shadow-smooth relative aspect-square size-300 rounded-xl border border-p3/70 object-contain inset-shadow-sm"
         :style="{
-          backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`
+          backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
         }">
         <div
           class="mask-right-100 size-full overflow-hidden rounded-2xl transition-all duration-500"
@@ -104,7 +104,7 @@ console.log("💠 - card.splash:", card.splash)
             alt="pocket-card-bg"
             :style="{
               backgroundImage: `url(${img(splash, { quality: 100 })})`,
-              backgroundPositionX: `${card.align}%`
+              backgroundPositionX: `${card.align}%`,
             }" />
         </div>
 

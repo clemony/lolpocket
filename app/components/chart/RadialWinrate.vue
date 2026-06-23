@@ -125,7 +125,6 @@ const wr = computed(() => {
         </textPath>
       </text>
     </svg>
-
     <!-- PROGRESS BAR -->
     <Tooltip
       :flip="false"
