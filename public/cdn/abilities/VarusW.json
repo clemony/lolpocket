@@ -15,7 +15,7 @@
           "attribute": "Bonus Magic Damage",
           "modifiers": [
             {
-              "values": "8 / 17 / 26 / 35 / 44"
+              "values": "4 / 13 / 22 / 31 / 40"
             },
             {
               "unit": "% bonus AD",

@@ -16,7 +16,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Diana gains 15% - 37.35% (based on level) bonus attack speed. After casting an ability, this bonus is tripled to 45% - 112.06% (based on level) for 5 seconds.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Moonsilver Blade:</span> Diana's basic attacks on-hit generate a stack of Moonsilver Blade for 5 seconds, refreshing on subsequent attacks and stacking up to 2 times. At 2 stacks, Diana empowers her next basic attack to consume the stacks on-hit to additionally cleave nearby enemies, dealing them 20 - 270 (based on level) (+ 50% AP) magic damage. Moonsilver Blade deals 230% damage against monsters.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Moonsilver Blade:</span> Diana's basic attacks on-hit generate a stack of Moonsilver Blade for 5 seconds, refreshing on subsequent attacks and stacking up to 2 times. At 2 stacks, Diana empowers her next basic attack to consume the stacks on-hit to additionally cleave nearby enemies, dealing them 20 - 270 (based on level) (+ 50% AP) magic damage. Moonsilver Blade deals 270% damage against monsters.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Diana/ability-icon/p",
@@ -92,7 +92,7 @@
                 },
                 {
                   "unit": "% bonus health",
-                  "values": "9"
+                  "values": "11"
                 }
               ]
             },
@@ -137,7 +137,7 @@
                 },
                 {
                   "unit": "% bonus health",
-                  "values": "18"
+                  "values": "22"
                 }
               ]
             }
@@ -281,7 +281,7 @@
     "difficulty": 1
   },
   "lore": "Bearing her crescent moonblade, Diana fights as a warrior of the Lunari—a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, she is a living embodiment of the silver moon's power. Imbued with the essence of an Aspect from beyond Targon's towering summit, Diana is no longer wholly human, and struggles to understand her power and purpose in this world.",
-  "patchLastChanged": "26.03",
+  "patchLastChanged": "26.11",
   "positions": [
     "Jungle",
     "Middle"

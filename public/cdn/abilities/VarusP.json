@@ -5,10 +5,10 @@
   "blurb": "Innate: When  Varus kills an enemy, he gains  bonus attack speed,  bonus attack damage, and  ability power for a few seconds. The amount is based on his other sources of  bonus attack speed, and is increased on an enemy  champion  takedown.",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> When Varus kills an enemy, he gains 10% / 15% / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% of his total bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds, refreshing on subsequent unit kills.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> When Varus kills an enemy, he gains 10% / 15% / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 11% of his total bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds, refreshing on subsequent unit kills.</p>"
     },
     {
-      "description": "Varus also gains Living Vengeance's bonuses upon scoring a champion takedown, which empowers it for the same duration to grant him 50% bonus attack speed as well as bonus attack damage and ability power equal to 25% of his total bonus attack speed, and an increased attack speed cap of 3.33. Living Vengeance's empowerment may only be refreshed by subsequent champion takedowns."
+      "description": "Varus also gains Living Vengeance's bonuses upon scoring a champion takedown, which empowers it for the same duration to grant him 30% bonus attack speed as well as bonus attack damage and ability power equal to 33% of his total bonus attack speed, and an increased attack speed cap of 3.33. Living Vengeance's empowerment may only be refreshed by subsequent champion takedowns."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/p",

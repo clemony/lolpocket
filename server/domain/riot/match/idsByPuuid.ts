@@ -20,7 +20,7 @@ export function idsByPuuid({
   console.log('🥸 - idsByPuuid - url:', url)
   const params = { count, queue, start }
 
-  const key = `ids:${puuid}:${start}`
+  const key = `ids:${region}:${puuid}:${queue ?? "all"}:${start}:${count}`
   return riotFetch<string[]>(key, url)
   /*   return riotFetch<string[]>(key, url, params) */
 }

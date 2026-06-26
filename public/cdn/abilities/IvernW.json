@@ -2,7 +2,7 @@
   "key": "W",
   "name": "Brushmaker",
   "affects": "Self, Allies",
-  "blurb": "Passive: While  Ivern is in  brush, his basic attacks deal bonus magic damage.",
+  "blurb": "Passive: While  Ivern is in  brush, his basic attacks deal additional magic damage.",
   "castTime": "0.25",
   "cooldown": "0.5",
   "cost": "30",
@@ -12,7 +12,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Ivern is in brush, his basic attacks are empowered to fire a bolt at the target, dealing additional magic damage. This bonus persists for 3 seconds after leaving brush.</p>",
       "leveling": [
         {
-          "attribute": "Bonus Magic Damage",
+          "attribute": "Additional Magic Damage",
           "modifiers": [
             {
               "values": "20 / 27.5 / 35 / 42.5 / 50"
@@ -32,7 +32,7 @@
       "description": "While allied champions are in any brush when Ivern is within 1000 units, their basic attacks are empowered to fire a bolt at the target, dealing additional magic damage. This bonus persists for 1.5 seconds after leaving brush.",
       "leveling": [
         {
-          "attribute": "Ally Bonus Magic Damage",
+          "attribute": "Ally Additional Magic Damage",
           "modifiers": [
             {
               "values": "10 / 15 / 20 / 25 / 30"
@@ -50,7 +50,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/w",
-  "notes": "The bonus damage does not apply to structures.\nThe empowerment given to allies respects  enchantment redirection.\nA  brush is immediately  exposed if grown within an enemy  turret's  sight radius of  1350.\nEpic monsters can not be concealed within a  brush.\nYou can still deny enemy vision of an entire area by creating walls of  brush, thereby denying vision of the Epic monster.\n Brushmaker locks on allies when hovered.\nThe indicator for  Brushmaker's cast range has a radius of 1150, where the maximum cast range takes the  brush's edge, rather than center, into consideration.",
+  "notes": "The additional damage does not apply to structures.\nThe empowerment given to allies respects  enchantment redirection.\nA  brush is immediately  exposed if grown within an enemy  turret's  sight radius of  1350.\nEpic monsters can not be concealed within  brush.\nHowever, it is still possible to deny enemy vision of their area by creating walls of  brush at their line of sight.\n Brushmaker locks on allies when hovered.\nThe indicator for  Brushmaker's cast range has a radius of 1150, where the maximum cast range takes the  brush's edge, rather than center, into consideration.",
   "projectile": "TRUE",
   "rechargeRate": "20 / 20 / 20 / 20 / 20",
   "resource": "Mana",

@@ -21,7 +21,7 @@
   "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
   "notes": "The H-28Q Apex Turret has a  sight radius of 900.\nThe H-28Q Apex Turret's stats update every second to reflect rank ups, level ups, and changes in Heimerdinger's ability power.",
   "projectile": "TRUE",
-  "spellEffects": "spellaoe",
+  "spellEffects": "special",
   "spellshieldable": "False",
   "targeting": "Location",
   "targetRange": "450"

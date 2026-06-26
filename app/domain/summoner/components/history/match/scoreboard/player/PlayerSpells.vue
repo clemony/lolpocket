@@ -1,7 +1,16 @@
 <script lang="ts" setup>
-const { class: className, player } = defineProps<{
+import type { AvatarProps } from "@nuxt/ui"
+
+const {
+  class: className,
+  player,
+  ui,
+  size = "sm",
+} = defineProps<{
   player: Player
   class?: HTMLAttributes["class"]
+  size?: AvatarProps["size"]
+  ui?: AvatarProps["ui"]
 }>()
 </script>
 
@@ -9,19 +18,22 @@ const { class: className, player } = defineProps<{
   <UAvatarGroup
     class=""
     :ui="{
-      root: cn('shrink-0 flex-col -space-y-0.25', className)
+      root: cn('relative shrink-0 flex-col -space-y-0.25', className),
     }">
     <HoverIcon
       v-for="spell in player?.spells.toReversed()"
       :id="spell"
       :key="spell"
-      size="sm"
+      :size
       round
       :avatar="{
         ui: {
-          image:
-            'ring ring-transparent ring-offset-3 ring-offset-p1 drop-shadow-none'
-        }
+          ...ui,
+          image: cn(
+            'ring ring-transparent ring-offset-3 ring-offset-p1 drop-shadow-none',
+            ui?.image
+          ),
+        },
       }"
       type="spell" />
   </UAvatarGroup>

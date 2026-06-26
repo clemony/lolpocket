@@ -1,7 +1,7 @@
 {
   "key": "Q",
   "name": "Darkin Daggers",
-  "width": "50",
+  "width": "100",
   "affects": "Self, Enemies",
   "blurb": "Active:  Naafiri hurls a dagger that deals physical damage to enemies hit and inflicts a bleed that deals bonus physical damage over a short time. Darkin Daggers can be recast at no additional cost.",
   "castTime": "0.25",

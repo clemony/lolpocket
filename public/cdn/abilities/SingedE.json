@@ -45,7 +45,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/e",
-  "notes": "Fling can throw enemies over walls (circumstances permitting).\n Slow-immune enemies will not be  rooted when flung into  Mega Adhesive.\nFling is special cased to not  fling  Warwick while Singed is  suppressed by  Infinite Duress after the cast time.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+  "notes": "During Fling cast time (the windup not during the actual fling) the enemy's flash is already locked, making it a non reactable spell.\nFling can throw enemies over walls (circumstances permitting).\n Slow-immune enemies will not be  rooted when flung into  Mega Adhesive.\nFling is special cased to not  fling  Warwick while Singed is  suppressed by  Infinite Duress after the cast time.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
   "resource": "Mana",
   "spellEffects": "Spell",
   "spellshieldable": "True",

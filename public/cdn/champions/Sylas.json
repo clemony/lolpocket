@@ -49,11 +49,11 @@
               "attribute": "Magic Damage",
               "modifiers": [
                 {
-                  "values": "40 / 60 / 80 / 100 / 120"
+                  "values": "40 / 65 / 90 / 115 / 140"
                 },
                 {
                   "unit": "% AP",
-                  "values": "40"
+                  "values": "45"
                 }
               ]
             },
@@ -87,11 +87,11 @@
               "attribute": "Total Magic Damage",
               "modifiers": [
                 {
-                  "values": "100 / 175 / 250 / 325 / 400"
+                  "values": "100 / 180 / 260 / 340 / 420"
                 },
                 {
                   "unit": "% AP",
-                  "values": "120"
+                  "values": "125"
                 }
               ]
             },
@@ -111,11 +111,11 @@
               "attribute": "Total Minion Damage",
               "modifiers": [
                 {
-                  "values": "64 / 106 / 148 / 190 / 232"
+                  "values": "64 / 111 / 158 / 205 / 252"
                 },
                 {
                   "unit": "% AP",
-                  "values": "72"
+                  "values": "77"
                 }
               ]
             }
@@ -169,7 +169,7 @@
                 },
                 {
                   "unit": "% AP",
-                  "values": "20"
+                  "values": "30"
                 },
                 {
                   "unit": "% of his bonus health",
@@ -185,7 +185,7 @@
                 },
                 {
                   "unit": "% AP",
-                  "values": "40"
+                  "values": "60"
                 },
                 {
                   "unit": "% of his bonus health",
@@ -197,7 +197,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/w",
-      "notes": "The damage will be dealt if the dash completed uninterrupted, and regardless of how far the target's location is at the end of the dash.\nSylas will heal even if the target champion dies before the dash is completed.\nThe only exception is if the target becomes  untargetable, in which case Kingslayer will have no effect.\nFacebreaker's cast generates an additional stack of  Hail of Blades despite the ability not  resetting his basic attack timer.(bug)",
+      "notes": "The damage will be dealt if the dash completed uninterrupted, and regardless of how far the target's location is at the end of the dash.\nSylas will heal even if the target champion dies before the dash is completed.\nThe only exception is if the target becomes  untargetable, in which case Kingslayer will have no effect.\nKingslayer's cast generates an additional stack of  Hail of Blades despite the ability not  resetting his basic attack timer.(bug)",
       "resource": "Mana",
       "spellEffects": "Single target",
       "spellshieldable": "true",
@@ -308,7 +308,7 @@
     "difficulty": 3
   },
   "lore": "Raised in one of Demacia's lesser quarters, Sylas of Dregbourne has come to symbolize the darker side of the Great City. As a boy, his ability to root out hidden sorcery caught the attention of the notorious mageseekers, who eventually imprisoned him for turning those same powers against them. Having now broken free, Sylas lives as a hardened revolutionary, using the magic of those around him to destroy the kingdom he once served… and his band of outcast mage followers seems to grow by the day.",
-  "patchLastChanged": "26.10",
+  "patchLastChanged": "26.12",
   "positions": [
     "Middle",
     "Top"

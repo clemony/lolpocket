@@ -9,7 +9,7 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kassadin's basic attacks deal 20 (+ 10% AP) bonus magic damage on-hit.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kassadin's basic attacks deal 25 (+ 10% AP) bonus magic damage on-hit.</p>"
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin empowers his next basic attack on-hit within 5 seconds to have an uncancellable windup, gain 50 bonus range, deal increased bonus magic damage, and restore mana, with the restoration amount quintupled against champions.</p>",

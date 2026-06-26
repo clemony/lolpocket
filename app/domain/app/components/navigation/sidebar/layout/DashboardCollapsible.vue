@@ -2,63 +2,89 @@
 import type { ButtonProps, CollapsibleProps } from "@nuxt/ui"
 import type { ButtonRouteItem, RouteGroup } from "~/types/route.types"
 
-const {
-  group,
-  description = true,
-  defaultOpen = true,
-} = defineProps<
-  CollapsibleProps & {
-    group: RouteGroup<ButtonRouteItem>
-    description?: boolean
+const props = withDefaults(
+  defineProps<
+    CollapsibleProps & {
+      group:
+        | RouteGroup<ButtonRouteItem>
+        | RouteGroup<RouteGroup<ButtonRouteItem>>
+      description?: boolean
+    }
+  >(),
+  {
+    defaultOpen: true,
   }
->()
+)
 </script>
 
 <template>
   <UCollapsible
     :default-open
     :ui="{
-      root: 'w-full',
-      content:
+      root: cn('w-full', props.ui?.root),
+      content: cn(
         'relative flex max-h-max max-w-full grow flex-col overflow-hidden pt-px',
+        props.ui?.content
+      ),
     }">
     <slot>
       <UButton
         size="xl"
         variant="ghost"
         trailing-icon="i-down"
+        :label="group.label"
         color="base"
         :ui="{
           leadingIcon: cn('size-4.5', group?.class),
-          base: 'hover:after:scale-x-full relative h-max! w-full justify-between overflow-visible p-0 pr-2! text-left after:absolute after:bottom-0 after:h-px after:opacity-0 hover:inset-ring-0 hover:after:bg-p4 hover:after:opacity-100 hover:after:transition-transform hover:after:duration-300 hover:after:ease-in-out',
+          base: cn(
+            'hover:after:scale-x-full relative h-max! w-full justify-between overflow-visible py-1.5 pr-2! pl-0.5 text-left after:absolute after:bottom-0 after:h-px after:opacity-0 hover:inset-ring-0 hover:after:bg-p4 hover:after:opacity-100 hover:after:transition-transform hover:after:duration-300 hover:after:ease-in-out'
+          ),
+          label: 'text-md font-semibold group-hover/btn:underline',
           trailingIcon:
             'trailing-rotate size-4 opacity-50 group-hover/btn:opacity-100',
-        }">
-        <RouteDescription
-          :ui="{
-            root: 'pl-1.5',
-            name: 'hidden text-lg transition-discrete duration-200 group-hover/btn:underline @min-[150px]:block @min-[150px]:opacity-100',
-            description: 'hidden @min-3xs:block',
-          }"
-          :folder="group" />
-      </UButton>
+        }" />
     </slot>
 
     <template #content>
-      <UButton
-        v-for="(item, is) in group.items"
-        :key="is"
-        :avatar="item?.avatar"
-        size="lg"
-        variant="ghost"
-        :icon="item?.icon"
-        :ui="{
-          label: 'text-md!',
-          base: 'grow gap-2.5 rounded-3xl hover:border-0! hover:shadow-none hover:inset-ring-0 hover:drop-shadow-none hover:fx-0!',
-          leadingIcon: cn('size-4.5', item?.class),
-        }"
-        :label="item?.label"
-        :to="item?.to"></UButton>
+      <template v-for="(item, is) in group.items" :key="is">
+        <DashboardCollapsible
+          v-if="asRouteButtonGroup(item).items"
+          :default-open="false"
+          :ui="{
+            root: 'pr-7 pl-3.5',
+          }"
+          :group="asRouteButtonGroup(item)">
+          <UButton
+            block
+            :avatar="asRouteButton(item)?.avatar"
+            size="lg"
+            trailing-icon="i-up"
+            variant="link"
+            :icon="item?.icon"
+            :ui="{
+              label: 'text-md! group-hover/btn:underline',
+              base: 'grow gap-2.5 rounded-3xl hover:border-0! hover:shadow-none hover:inset-ring-0 hover:drop-shadow-none hover:fx-0!',
+              leadingIcon: cn('size-4.5', item?.class),
+              trailingIcon:
+                'trailing-rotate size-4 opacity-50 group-hover/btn:opacity-100',
+            }"
+            :label="item?.label"
+            :to="asRouteButton(item)?.to" />
+        </DashboardCollapsible>
+        <UButton
+          v-else
+          :avatar="asRouteButton(item)?.avatar"
+          size="lg"
+          variant="ghost"
+          :icon="item?.icon"
+          :ui="{
+            label: 'text-md!',
+            base: 'grow gap-2.5 rounded-3xl hover:border-0! hover:shadow-none hover:inset-ring-0 hover:drop-shadow-none hover:fx-0!',
+            leadingIcon: cn('size-4.5', item?.class),
+          }"
+          :label="item?.label"
+          :to="asRouteButton(item)?.to" />
+      </template>
     </template>
   </UCollapsible>
 </template>

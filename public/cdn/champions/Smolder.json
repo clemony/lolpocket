@@ -12,7 +12,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Super Scorcher Breath:</span> Deals bonus magic damage equal to 40% - 60% (+ 0% - 9%) (based on critical strike chance) of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Achooo!:</span> Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Flap, Flap, Flap:</span> Attacks each deal bonus magic damage equal to 12% of Dragon Practice stacks.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Super Scorcher Breath:</span> Deals bonus magic damage equal to 25% - 55% (+ 0% - 9%) (based on critical strike chance) of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Achooo!:</span> Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Flap, Flap, Flap:</span> Attacks each deal bonus magic damage equal to 8% - 12.8% (+ 0% - 1.44%) (based on critical strike chance) of Dragon Practice stacks.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/p",
@@ -202,7 +202,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/e",
-      "notes": "Smolder's  attack range is reduced to 0 for the duration of Flap, Flap, Flap.\nBased on game engine ticks Smolder may not be able to declare  basic attacks for up to 0.264 seconds after the end of the effect.(unexpected)\nThe number of additional bolts based on  Dragon Practice stacks is rounded down.\nSmolder reveals himself while attacking enemies, even inside terrain.\n Spell shield will block only one bolt.\nSelf  immobilizations such as  Zhonya's Hourglass also count for ending Flap, Flap, Flap.\n Recall is disabled while Smolder is inside terrain.\nFlap, Flap, Flap can interact with player-generated terrain.\nIf Smolder is inside terrain when the effect ends, he will be placed correspondingly to the nearest valid space.\nThe following table refers for interactions while Smolder is flying:\n\n\nAttacking\n\nCauses Smolder to move towards the attack target.\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Zhonya's Hourglass\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\nAll summoner spells are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Immobilizing effects",
+      "notes": "The number of additional bolts based on  Dragon Practice stacks is rounded down.\nSmolder reveals himself while attacking enemies, even inside terrain.\n Spell shield will block only one bolt.\nSelf  immobilizations such as  Zhonya's Hourglass also count for ending Flap, Flap, Flap.\n Recall is disabled while Smolder is inside terrain.\nFlap, Flap, Flap can interact with player-generated terrain.\nIf Smolder is inside terrain when the effect ends, he will be placed correspondingly to the nearest valid space.\nThe following table refers for interactions while Smolder is flying:\n\n\nAttacking\n\nCauses Smolder to move towards the attack target.\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Zhonya's Hourglass\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\nAll summoner spells are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Immobilizing effects",
       "resource": "Mana",
       "speed": "1800",
       "spellEffects": "spell",
@@ -300,7 +300,7 @@
   },
   "fullName": "Ignacarious Gigantareno Rex Le Spes Offerentis",
   "lore": "Hidden amongst the craggy cliffs of the Noxian frontier, under the watchful eyes of his mother, a young dragon is learning what it means to be heir to the Camavoran imperial dragon lineage. Playful and eager to grow up, Smolder looks for any excuse to practice his burgeoning abilities. Though he's still a fledgling, his skills are nothing to sneeze at, easily setting fire to anything that burns.",
-  "patchLastChanged": "26.10",
+  "patchLastChanged": "26.11",
   "positions": [
     "Bottom",
     "Middle",

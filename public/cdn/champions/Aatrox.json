@@ -38,7 +38,7 @@
           "description": "Aatrox can activate The Darkin Blade three times before the ability goes on cooldown, with a 1-second static cooldown between casts. If Aatrox does not recast the ability within 4 seconds of the previous cast, it goes on cooldown."
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aatrox performs a strike with his greatsword for each of the three casts, dealing physical damage to enemies hit within an area. Enemies hit within a Sweetspot of the area take 70% bonus damage and are also knocked up for 0.25 seconds. Each subsequent cast gains 25% more damage.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aatrox performs a strike with his greatsword for each of the three casts, dealing physical damage to enemies hit within an area. Enemies hit within a Sweetspot of the area take 75% bonus damage and are also knocked up for 0.25 seconds. Each subsequent cast gains 25% more damage.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">First Cast:</span> Aatrox's first strike affects a 625 × 180-unit rectangular area in the target direction, with him centered on the back line and the Sweetspot at the farthest edge.</p>",
@@ -60,12 +60,12 @@
               "attribute": "First Sweetspot Damage",
               "modifiers": [
                 {
-                  "values": "17 / 42.5 / 68 / 93.5 / 119"
+                  "values": "17.5 / 43.75 / 70 / 96.25 / 122.5"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n102 / 114.75 / 127.5 / 140.25 / 153% AD",
+                  "tooltip": "Scaling per rank:\n105 / 118.13 / 131.25 / 144.38 / 157.5% AD",
                   "unit": "% AD",
-                  "values": "102 - 153"
+                  "values": "105 - 157.5"
                 }
               ]
             }
@@ -91,12 +91,12 @@
               "attribute": "Second Sweetspot Damage",
               "modifiers": [
                 {
-                  "values": "21.25 / 53.13 / 85 / 116.88 / 148.75"
+                  "values": "21.88 / 54.69 / 87.5 / 120.31 / 153.13"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n127.5 / 143.44 / 159.38 / 175.31 / 191.25% AD",
+                  "tooltip": "Scaling per rank:\n131.25 / 147.66 / 164.06 / 180.47 / 196.88% AD",
                   "unit": "% AD",
-                  "values": "127.5 - 191.25"
+                  "values": "131.25 - 196.88"
                 }
               ]
             }
@@ -122,12 +122,12 @@
               "attribute": "Third Sweetspot Damage",
               "modifiers": [
                 {
-                  "values": "25.5 / 63.75 / 102 / 140.25 / 178.5"
+                  "values": "26.25 / 65.63 / 105 / 144.38 / 183.75"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n153 / 172.13 / 191.25 / 210.38 / 229.5% AD",
+                  "tooltip": "Scaling per rank:\n157.5 / 177.19 / 196.88 / 216.56 / 236.25% AD",
                   "unit": "% AD",
-                  "values": "153 - 229.5"
+                  "values": "157.5 - 236.25"
                 }
               ]
             }
@@ -153,12 +153,12 @@
               "attribute": "Maximum Non-Minion Sweetspot Damage",
               "modifiers": [
                 {
-                  "values": "63.75 / 159.38 / 255 / 350.63 / 446.25"
+                  "values": "65.63 / 164.06 / 262.5 / 360.94 / 459.38"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n382.5 / 430.31 / 478.13 / 525.94 / 573.75% AD",
+                  "tooltip": "Scaling per rank:\n393.75 / 442.97 / 492.19 / 541.41 / 590.63% AD",
                   "unit": "% AD",
-                  "values": "382.5 - 573.75"
+                  "values": "393.75 - 590.63"
                 }
               ]
             }
@@ -345,7 +345,7 @@
     "difficulty": 3
   },
   "lore": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
-  "patchLastChanged": "26.02",
+  "patchLastChanged": "26.12",
   "positions": [
     "Jungle",
     "Top"

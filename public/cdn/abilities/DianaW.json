@@ -24,7 +24,7 @@
             },
             {
               "unit": "% bonus health",
-              "values": "9"
+              "values": "11"
             }
           ]
         },
@@ -69,7 +69,7 @@
             },
             {
               "unit": "% bonus health",
-              "values": "18"
+              "values": "22"
             }
           ]
         }

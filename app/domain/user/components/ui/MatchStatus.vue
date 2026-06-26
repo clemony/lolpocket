@@ -11,6 +11,7 @@ const props = withDefaults(
       puuid?: string
       summoner?: Summoner
       component?: "user" | "button" | "avatar" | "default"
+      tag?: boolean
     }
   >(),
   { variant: "highlight", trailingIcon: "i-up-down", color: "primary" }
@@ -36,22 +37,27 @@ function refreshMatchStatus() {}
           :size="props.avatar?.size ?? 'md'"
           :src="getSummonerIcon(summoner?.icon) ?? null"
           icon="i-plug" />
-        <Ping
-          inset
-          :color="pingColor"
-          class="right-0.5 bottom-1" />
+        <Ping inset :color="pingColor" class="right-0.5 bottom-1" />
       </div>
     </template>
     <div
       class="flex grow flex-col justify-start self-center text-start text-pc">
-      <h6 :class="cn('text-lg leading-5.5 font-bold', props?.ui?.label)">
-        {{ summoner?.name ?? "Not Connected" }}
-      </h6>
+      <div class="inline-flex items-center gap-1 align-baseline">
+        <h6 :class="cn('text-lg leading-5.5 font-bold', props?.ui?.label)">
+          {{ summoner?.name ?? "Not Connected" }}
+        </h6>
+        <span
+          v-if="props?.tag"
+          class="inline-flex items-center gap-px align-baseline text-xs! text-n5">
+          <Icon name="i-hash" class="size-3 align-icon text-n5" />
+          {{ summoner?.tag }}
+        </span>
+      </div>
       <p class="text-xs font-medium">
         {{ matchStatus ? "In Game" : "afk" }}
       </p>
     </div>
-    <template #trailing>
+    <template v-if="props?.trailingIcon" #trailing>
       <Icon
         :name="props?.trailingIcon"
         class="size-4.5 -translate-x-2.5 opacity-50 group-open/btn:opacity-100 group-hover/btn:opacity-100" />
@@ -70,7 +76,7 @@ function refreshMatchStatus() {}
       :to="`${buildSummonerRootPath({ puuid: summoner.puuid })}/live`"
       :ui="{
         base: 'justify-center gap-3',
-        label: cn('text-xs font-medium', matchStatus ? 'text-pc' : 'text-n4')
+        label: cn('text-xs font-medium', matchStatus ? 'text-pc' : 'text-n4'),
       }"
       :label="matchStatus ? 'In Game' : 'afk'">
       <template #leading>

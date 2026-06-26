@@ -27,7 +27,7 @@
             },
             {
               "unit": "% of target's maximum health",
-              "values": "3.5"
+              "values": "4"
             }
           ]
         },
@@ -43,7 +43,7 @@
             },
             {
               "unit": "% of target's maximum health",
-              "values": "7"
+              "values": "8"
             }
           ]
         }

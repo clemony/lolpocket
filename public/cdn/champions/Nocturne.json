@@ -47,7 +47,7 @@
               "attribute": "Physical damage",
               "modifiers": [
                 {
-                  "values": "65 / 110 / 155 / 200 / 245"
+                  "values": "65 / 105 / 145 / 185 / 225"
                 },
                 {
                   "unit": "% bonus AD",
@@ -257,7 +257,7 @@
     "difficulty": 1
   },
   "lore": "A demonic amalgamation drawn from the nightmares that haunt every sentient mind, the thing known as Nocturne has become a primordial force of pure evil. It is liquidly chaotic in aspect, a faceless shadow with cold eyes and armed with wicked-looking blades. After freeing itself from the spirit realm, Nocturne descended upon the waking world, to feed upon the kind of terror that can only thrive in true darkness.",
-  "patchLastChanged": "26.05",
+  "patchLastChanged": "26.12",
   "positions": [
     "Jungle"
   ],

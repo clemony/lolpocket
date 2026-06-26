@@ -20,7 +20,7 @@
           "attribute": "Damage per Snip",
           "modifiers": [
             {
-              "values": "10 / 13.5 / 17 / 20.5 / 24"
+              "values": "10 / 14 / 18 / 22 / 26"
             },
             {
               "unit": "% AP",
@@ -32,7 +32,7 @@
           "attribute": "Center Damage per Snip",
           "modifiers": [
             {
-              "values": "10 / 13.5 / 17 / 20.5 / 24"
+              "values": "10 / 14 / 18 / 22 / 26"
             },
             {
               "unit": "% AP",
@@ -81,7 +81,7 @@
           "attribute": "Minimum Damage",
           "modifiers": [
             {
-              "values": "70 / 98.5 / 127 / 155.5 / 184"
+              "values": "70 / 99 / 128 / 157 / 186"
             },
             {
               "unit": "% AP",
@@ -93,7 +93,7 @@
           "attribute": "Minimum Center Damage",
           "modifiers": [
             {
-              "values": "70 / 98.5 / 127 / 155.5 / 184"
+              "values": "70 / 99 / 128 / 157 / 186"
             },
             {
               "unit": "% AP",
@@ -109,7 +109,7 @@
           "attribute": "Maximum Damage",
           "modifiers": [
             {
-              "values": "110 / 152.5 / 195 / 237.5 / 280"
+              "values": "110 / 155 / 200 / 245 / 290"
             },
             {
               "unit": "% AP",
@@ -121,7 +121,7 @@
           "attribute": "Maximum Center Damage",
           "modifiers": [
             {
-              "values": "110 / 152.5 / 195 / 237.5 / 280"
+              "values": "110 / 155 / 200 / 245 / 290"
             },
             {
               "unit": "% AP",

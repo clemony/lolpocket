@@ -2,7 +2,7 @@
   "key": "R",
   "name": "UPGRADE!!!",
   "affects": "Self",
-  "blurb": "Active:  Heimerdinger can empower his next ability to apply an additional effect. These empowered abilities have the same  cooldowns as their basic forms, deal modified damage, and do not cost mana.",
+  "blurb": "Active:  Heimerdinger can empower his next ability to apply an additional effect. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not cost mana.",
   "castTime": "none",
   "cooldown": "100 / 85 / 70",
   "cost": "100",

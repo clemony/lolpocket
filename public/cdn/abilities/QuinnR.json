@@ -10,7 +10,7 @@
   "effectRadius": "700",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn detaches from Valor, ending Behind Enemy Lines' effects and raining arrows down around her, dealing physical damage to nearby enemies and marking them as Vulnerable.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn detaches from Valor, ending Behind Enemy Lines' effects and raining arrows down around her, dealing physical damage to nearby enemies and marking them with Harrier.</p>",
       "leveling": [
         {
           "attribute": "Physical Damage",

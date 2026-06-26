@@ -84,7 +84,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kassadin's basic attacks deal 20 (+ 10% AP) bonus magic damage on-hit.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kassadin's basic attacks deal 25 (+ 10% AP) bonus magic damage on-hit.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin empowers his next basic attack on-hit within 5 seconds to have an uncancellable windup, gain 50 bonus range, deal increased bonus magic damage, and restore mana, with the restoration amount quintupled against champions.</p>",
@@ -289,7 +289,7 @@
     "difficulty": 2
   },
   "lore": "Cutting a burning swath through the darkest places of the world, Kassadin knows his days are numbered. A widely traveled Shuriman guide and adventurer, he had chosen to raise a family among the peaceful southern tribes—until the day his village was consumed by the Void. He vowed vengeance, combining a number of arcane artifacts and forbidden technologies for the struggle ahead. Finally, Kassadin set out for the wastelands of Icathia, ready to face any monstrous Void-construct in his search for their self-proclaimed prophet, Malzahar.",
-  "patchLastChanged": "26.04",
+  "patchLastChanged": "26.11",
   "positions": [
     "Middle"
   ],

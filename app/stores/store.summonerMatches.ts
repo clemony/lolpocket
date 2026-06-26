@@ -1,4 +1,9 @@
 //
+import {
+  mergeUniqueMatchesById,
+  shouldFetchInitialMatchPage,
+} from "~/domain/summoner/utils/matchPagination"
+
 export const sMatches = defineStore("summonerMatches", () => {
   const { summoner } = storeToRefs(sSession())
   const id = computed(() => summoner.value?.puuid)
@@ -9,6 +14,7 @@ export const sMatches = defineStore("summonerMatches", () => {
 
   const matches = ref<MatchData[]>([])
   const timelines = shallowRef<PlayerTimeline[]>([])
+  const loadingFromDB = ref(false)
   const loading = ref(false)
   const loadingOlder = ref(false)
   const endOfHistory = ref(false)
@@ -27,15 +33,33 @@ export const sMatches = defineStore("summonerMatches", () => {
 
   async function loadFromDB() {
     const puuid = id.value
-    if (!puuid) return
+    const regionId = region.value
+    if (!puuid || loadingFromDB.value) return
 
-    const local = await getMatchesForSummoner(puuid)
-    console.log("🥸 - loadFromDB - local:", local)
-    matches.value = local
-    newestTs.value = local[0]?.gameEndTimestamp ?? null
+    loadingFromDB.value = true
+    try {
+      const local = await getMatchesForSummoner(puuid)
+      if (id.value !== puuid) return
 
-    const storedCursor = await getCursor(puuid)
-    cursor.value = storedCursor.lastIndex
+      matches.value = local
+      newestTs.value = local[0]?.gameEndTimestamp ?? null
+
+      const storedCursor = await getCursor(puuid)
+      cursor.value = storedCursor.lastIndex
+      endOfHistory.value = Boolean(storedCursor.done)
+
+      if (
+        regionId &&
+        shouldFetchInitialMatchPage({
+          endOfHistory: endOfHistory.value,
+          localCount: local.length,
+        })
+      ) {
+        await loadOlder()
+      }
+    } finally {
+      loadingFromDB.value = false
+    }
   }
 
   watch(
@@ -60,7 +84,11 @@ export const sMatches = defineStore("summonerMatches", () => {
       const res = await fetchNewerMatches(puuid, newestTs.value ?? 0, regionId)
       if (res.matches.length) {
         await putMatchData(res.matches)
-        matches.value.unshift(...res.matches)
+        matches.value = mergeUniqueMatchesById(
+          matches.value,
+          res.matches,
+          "prepend"
+        )
         newestTs.value = res.newestTimestamp ?? null
         loadMessage.value = `Loaded ${res.matches.length} new matches!`
       } else {
@@ -86,18 +114,23 @@ export const sMatches = defineStore("summonerMatches", () => {
 
       if (!res.matches.length) {
         endOfHistory.value = true
+        await setCursor(puuid, cursor.value, true)
         return
       }
 
       await putMatchData(res.matches)
-      matches.value.push(...res.matches)
+      matches.value = mergeUniqueMatchesById(
+        matches.value,
+        res.matches,
+        "append"
+      )
 
       if (res.cursor != null) {
         cursor.value = res.cursor
-        await setCursor(puuid, cursor.value)
       }
 
       if (res.done) endOfHistory.value = true
+      await setCursor(puuid, cursor.value, endOfHistory.value)
     } finally {
       loadingOlder.value = false
     }
@@ -107,6 +140,7 @@ export const sMatches = defineStore("summonerMatches", () => {
     endOfHistory,
     loadFromDB,
     loading,
+    loadingFromDB,
     loadingOlder,
     loadMessage,
     loadNewer,

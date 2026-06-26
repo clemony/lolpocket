@@ -17,7 +17,7 @@
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/p",
   "notes": "Ekko's basic attacks have different animations based on how many stacks his target has. His attack pattern is as follows:\nDownwards → Upwards → Sideways\nIf the target has already been affected by Resonance, Ekko's basic attack animations will kick or attack the target sideways.\nResonance stacks will not be applied nor consumed if the basic attack is  dodged or  blocked or if the attack  misses.",
-  "onTargetCdStatic": "5",
+  "onTargetCdStatic": "4",
   "spellEffects": "Single target",
   "spellshieldable": "True",
   "targeting": "Passive"

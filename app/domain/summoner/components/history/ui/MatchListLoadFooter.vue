@@ -1,12 +1,16 @@
 <script lang="ts" setup>
-const { loading, loadingOlder, loadMessage, matches } = storeToRefs(sMatches())
+const { endOfHistory, loadingOlder } = storeToRefs(sMatches())
 </script>
 
 <template>
   <div class="grid h-32 place-items-center">
-    <UButton class="group/c" variant="ghost" @click="sMatches().loadOlder()">
+    <UButton
+      class="group/c"
+      variant="ghost"
+      :disabled="endOfHistory || loadingOlder"
+      @click="sMatches().loadOlder()">
       <div class="grid size-5 place-items-center *:absolute">
-        <Icon v-if="loading" class="translate-y-px" name="lp-ui:rain" />
+        <Icon v-if="loadingOlder" class="translate-y-px" name="lp-ui:rain" />
         <template v-else>
           <Icon
             class="translate-y-0.75 opacity-0 transition-all duration-200 group-hover/c:opacity-100"
@@ -16,7 +20,7 @@ const { loading, loadingOlder, loadMessage, matches } = storeToRefs(sMatches())
             name="bi:cloud-arrow-down" />
         </template>
       </div>
-      Load More
+      {{ endOfHistory ? "No More Matches" : "Load More" }}
     </UButton>
   </div>
 </template>

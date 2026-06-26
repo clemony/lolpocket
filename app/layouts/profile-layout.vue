@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { DashboardPanelProps, TabsItem } from "@nuxt/ui"
-import { provideProfileScrollBody } from "~/domain/summoner/composables/useProfileScrollBody"
 
 const props = defineProps<
   DashboardPanelProps & {
@@ -10,15 +9,13 @@ const props = defineProps<
 const open = shallowRef<boolean>(false)
 const route = useRoute()
 const { settings, hotkeys, account, summoner } = storeToRefs(user())
-const body = useTemplateRef<HTMLElement>("body")
-
-provideProfileScrollBody(body)
 </script>
 
 <template>
   <UDashboardGroup
     unit="rem"
-    class="flex max-h-screen min-h-screen flex-1 grow justify-center bg-p1">
+    class="flex max-h-screen min-h-screen flex-1 grow justify-center bg-p1 pr-12">
+    <DashboardSidebar />
     <!-- page -->
     <UDashboardPanel
       resizable
@@ -29,15 +26,12 @@ provideProfileScrollBody(body)
         ),
       }">
       <template #body>
-        <div
-          ref="body"
-          class="absolute inset-0 z-auto size-full overflow-y-auto px-12!">
+        <div class="absolute inset-0 z-auto size-full overflow-y-auto">
           <slot name="header" />
 
           <slot />
         </div>
       </template>
     </UDashboardPanel>
-    <DashboardSidebar />
   </UDashboardGroup>
 </template>

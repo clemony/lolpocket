@@ -2,7 +2,7 @@
   "key": "P",
   "name": "Death in Lavender",
   "affects": "Self, Enemies",
-  "blurb": "Innate:  Bel'Veth's attack speed cap is greatly increased, but her  attack speed does not grow by  leveling up. The damage dealt by her  basic attacks (including  on-hit effects) is reduced.",
+  "blurb": "Innate:  Bel'Veth's attack speed cap is greatly increased, but her  attack speed does not grow by  leveling up. The damage dealt by her  basic attacks (including  on-hit effects and other effects triggered by the attack in the same frame) is reduced.",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Bel'Veth attacks 36% faster than the median champion and is allowed to exceed the attack speed cap, but all sources of damage (including on-hit damage) dealt by her basic attacks are reduced to 75%. Her attack speed does not increase through growth (per level).</p>"

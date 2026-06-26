@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { UButton } from "#components"
+import { MatchFilterFilters } from "#components"
 import { getSummonerIcon } from "~/domain/utils/img"
 
 const { class: className } = defineProps<{
@@ -19,7 +19,7 @@ const model = computed({
 })
 const { allies } = storeToRefs(sData())
 
-const alliesList = computed<PairedAlly[]>(() =>
+const list = computed<PairedAlly[]>(() =>
   (allies.value ?? [])
     .sort((a, b) => b.games - a.games)
     .map((a) => {
@@ -51,17 +51,10 @@ const alliesList = computed<PairedAlly[]>(() =>
       ui: {
         base: 'text-sm grow',
       },
-      trailingIcon: h(UButton, {
-        trailingIcon: 'i-up',
-        variant: 'ghost',
-        ariaLabel: `Toggle Allies Filter - State: ${open}`,
+      trailingIcon: h(MatchFilterFilters, {
+        label: 'Filter Allies',
         onClick() {
           open = !open
-        },
-        square: true,
-        ui: {
-          base: 'anchor px-3 size-10! rounded-xl hover:shadow-none!',
-          trailingIcon: 'trailing-rotate absolute size-4.5',
         },
       }),
     }"
@@ -79,10 +72,11 @@ const alliesList = computed<PairedAlly[]>(() =>
       root: 'min-h-max w-full rounded-5xl! border-p2 bg-p0 shadow-sm ring-0! inset-ring-0 shadow-black/4 drop-shadow-none has-focus-visible:outline-0!',
       content: 'h-max max-h-100',
       group: 'flex flex-col gap-y-1',
-      item: 'grid! w-full max-w-full shrink-0 cursor-pointer grid-flow-col grid-cols-[30px_1fr_0.3fr]! justify-start gap-3 overflow-hidden rounded-3xl! p-3 checked:bg-p2 checked:ring checked:ring-pc/60 hover:bg-p1',
+      item: 'grid! w-full max-w-full shrink-0 cursor-pointer grid-flow-col grid-cols-[30px_1fr_0.3fr]! justify-start gap-3 overflow-hidden rounded-3xl! p-3 duration-0! checked:bg-(--account-color)/60 checked:ring checked:ring-pc/60 hover:bg-(--account-color)/30! data-highlighted:not-data-disabled:before:bg-(--account-color)/20!',
     }"
-    :items="alliesList"
-    :multiple="false">
+    :items="list"
+    :multiple="false"
+    @highlight.stop.prevent>
     <template #item="{ item }">
       <LazyUTooltip
         arrow

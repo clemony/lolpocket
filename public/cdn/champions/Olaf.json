@@ -11,7 +11,7 @@
       "blurb": "Innate:  Olaf gains  bonus attack speed and  life steal based on his missing health.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 107.84% (based on level) bonus attack speed and 8% - 27.67% (based on level) life steal at 70% missing health.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Olaf gains 0% - 100% (based on missing health) of 50% - 107.84% (based on level) bonus attack speed and 8% - 27.67% (based on level) life steal.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/p",

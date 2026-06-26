@@ -110,8 +110,9 @@ const isAdmin = computed(() => {
                   v-for="k in asDropdownItem(item)?.kbds"
                   :key="String(k)"
                   square
-                  size="lg"
+                  size="md"
                   color="base"
+                  variant="outline"
                   :value="String(k)" />
               </div>
             </template>

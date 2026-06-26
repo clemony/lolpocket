@@ -15,26 +15,26 @@ export const tabsTheme = defineUiTheme({
     label: "truncate",
     trailingBadge: "shrink-0",
     trailingBadgeSize: "sm",
-    content: "w-full focus:outline-none"
+    content: "w-full focus:outline-none",
   },
   variants: {
     color: {
       neutral: "",
       transparent: "",
-      default: ""
+      default: "",
     },
     variant: {
       solid: {
-        indicator: "shadow-sm shadow-black/6"
+        indicator: "shadow-sm shadow-black/6",
       },
       link: {
         list: "border-b-0 border-b-transparent",
         indicator:
           "grid -translate-y-1 after:absolute after:h-0.5 after:w-[75%] after:justify-self-center after:border-b",
-        trigger: "focus:outline-none on:text-pc"
+        trigger: "focus:outline-none on:text-pc",
       },
       ghost: {
-        list: "shadow-none inset-shadow-none"
+        list: "shadow-none inset-shadow-none",
       },
       lift: {
         list: "tabs-lift-list tabs-lift z-4! tabs flex h-auto items-center rounded-none border-0! p-0",
@@ -48,55 +48,56 @@ export const tabsTheme = defineUiTheme({
         label:
           "pointer-events-none w-full leading-none opacity-50 group-hover/trigger:opacity-100 group-active/trigger:opacity-100",
         content:
-          "tabs-content tabs-lift-content z-0 overflow-hidden rounded-4xl"
+          "tabs-content tabs-lift-content z-0 overflow-hidden rounded-4xl",
       },
-      outline: {}
+      outline: {},
     },
     orientation: {
       horizontal: {
         list: "h-full",
         indicator:
           "left-0 h-[calc(100%-var(--spacing))] w-(--reka-tabs-indicator-size) translate-x-(--reka-tabs-indicator-position) self-center",
-        trigger: "h-full grow justify-center"
+        trigger: "h-full grow justify-center",
       },
       vertical: {
         list: "w-max flex-col items-center",
         trigger: "items-center justify-self-center",
         indicator:
-          "top-0 left-[calc(50%-var(--reka-tabs-indicator-size)/2)] size-(--reka-tabs-indicator-size) translate-y-(--reka-tabs-indicator-position) justify-self-center"
-      }
+          "top-0 left-[calc(50%-var(--reka-tabs-indicator-size)/2)] size-(--reka-tabs-indicator-size) translate-y-(--reka-tabs-indicator-position) justify-self-center",
+      },
     },
     size: {
       xs: {
         trigger: "gap-0 p-0",
         leadingIcon: "size-4",
-        leadingAvatarSize: "3xs"
+        leadingAvatarSize: "3xs",
       },
       sm: {
         indicator: "rounded-[0.47rem]",
         trigger: "gap-0 p-0",
         leadingIcon: "size-4",
-        leadingAvatarSize: "3xs"
+        leadingAvatarSize: "3xs",
       },
       md: {
         indicator: "rounded-xl",
         trigger: "gap-0 p-0",
         leadingIcon: "size-4",
-        leadingAvatarSize: "2xs"
+        leadingAvatarSize: "2xs",
       },
       lg: {
         indicator: "rounded-xl",
         trigger: "gap-0 p-0",
         leadingIcon: "size-5",
-        leadingAvatarSize: "2xs"
+        leadingAvatarSize: "2xs",
       },
       xl: {
+        list: "rounded-5xl",
         indicator: "rounded-4xl",
         trigger: "gap-0 p-0",
         leadingIcon: "size-5",
-        leadingAvatarSize: "xs"
-      }
-    }
+        leadingAvatarSize: "xs",
+      },
+    },
   },
   compoundVariants: [
     {
@@ -108,8 +109,8 @@ export const tabsTheme = defineUiTheme({
         label: "text-pc",
         leadingIcon: "text-pc",
         content: "border-x border-b border-p3",
-        trigger: "border-transparent"
-      }
+        trigger: "border-transparent",
+      },
     },
     {
       color: "neutral",
@@ -122,8 +123,8 @@ export const tabsTheme = defineUiTheme({
           "group-data-[state=active]/trigger:text-nc! group-data-[state=active]/trigger:**:text-nc! group-not-[.background-tab]/trigger:after:bg-n0",
         trigger: "border-0!",
         leadingIcon:
-          "group-data-[state=active]/trigger:text-nc! group-data-[state=active]/trigger:**:text-nc!"
-      }
+          "group-data-[state=active]/trigger:text-nc! group-data-[state=active]/trigger:**:text-nc!",
+      },
     },
     {
       color: "primary",
@@ -133,8 +134,8 @@ export const tabsTheme = defineUiTheme({
         root: "[--tab-bg:var(--color-p1)]! [--tab-inset-color:var(--color-border)]!",
         list: "border-0!",
         trigger: "[--tab-bg:var(--color-p1)]!",
-        content: "border border-t-0! border-border"
-      }
+        content: "border border-t-0! border-border",
+      },
     },
     {
       color: "base",
@@ -144,8 +145,8 @@ export const tabsTheme = defineUiTheme({
         indicator: "fx-depth bg-p0 shadow-xs inset-ring inset-ring-p3 depth-3",
         list: "noise bg-p1 inset-shadow-xs inset-ring inset-shadow-black/4 inset-ring-p3/80",
         trigger:
-          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc"
-      }
+          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc",
+      },
     },
 
     {
@@ -155,8 +156,8 @@ export const tabsTheme = defineUiTheme({
         indicator: "after:border-pc/60 after:bg-pc",
         list: "",
         trigger:
-          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc"
-      }
+          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc",
+      },
     },
     {
       color: "transparent",
@@ -165,8 +166,8 @@ export const tabsTheme = defineUiTheme({
         indicator: "bg-transparent shadow-none inset-ring-0",
         list: "bg-transparent shadow-none inset-ring-0",
         trigger:
-          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc"
-      }
+          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc",
+      },
     },
     {
       color: "neutral",
@@ -176,8 +177,8 @@ export const tabsTheme = defineUiTheme({
           "noise bg-neutral/90 shadow-xs inset-shadow-xs inset-ring inset-shadow-p1/10 inset-ring-n4",
         list: "noise bg-p2/70 inset-ring inset-ring-p3/60",
         trigger:
-          "text-pc hover:text-pc! focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-p1 active:hover:**:text-nc data-[state=active]:text-nc data-[state=active]:**:text-nc"
-      }
+          "text-pc hover:text-pc! focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-p1 active:hover:**:text-nc data-[state=active]:text-nc data-[state=active]:**:text-nc",
+      },
     },
 
     {
@@ -188,72 +189,32 @@ export const tabsTheme = defineUiTheme({
           "noise bg-neutral/90 shadow-xs inset-shadow-xs inset-ring inset-shadow-p1/10 inset-ring-n4",
         list: "",
         trigger:
-          "text-pc hover:text-pc! focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-p1 active:hover:**:text-nc data-[state=active]:text-nc data-[state=active]:**:text-nc"
-      }
+          "text-pc hover:text-pc! focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-p1 active:hover:**:text-nc data-[state=active]:text-nc data-[state=active]:**:text-nc",
+      },
     },
 
     /* orientation */
     {
       orientation: "horizontal",
       class: {
-        root: "grow"
-      }
+        root: "grow",
+      },
     },
     /* size */
-    ...[
-      ["xs", "size-6", "h-6", "h-7", "w-7", "gap-1 px-2 text-xs"],
-      ["sm", "size-7", "h-7", "h-8", "w-8", "gap-1.5 px-2.5 text-xs"],
-      [
-        "md",
-        "size-9",
-        "h-9",
-        "h-10.5",
-        "w-10.5 max-w-10.5",
-        "gap-1.5 px-3 text-xs"
-      ],
-      ["lg", "size-10", "h-10", "h-12", "w-12", "gap-2 px-3 text-sm"],
-      ["xl", "size-12", "h-12", "h-14", "w-14", "gap-2 px-3 "]
-    ].flatMap(([k, sizeClass, indicateH, hClass, wClass, recClass]) => [
-      {
-        size: k,
-        variant: ["pill", "link", "soft", "subtle", "ghost"],
-        class: { root: `tabs-${k}` }
-      },
-      {
-        variant: ["pill", "link", "soft", "subtle", "ghost"],
-        size: k,
-        orientation: "horizontal",
-        class: {
-          indicator: indicateH,
-          root: hClass
-        }
-      },
-      /* {
-        size: k,
-        orientation: "vertical",
-        class: {
-          root: wClass
-        }
-      },*/ {
-        size: k,
-        class: {
-          trigger: recClass
-        }
-      }
-    ]),
+
     {
       variant: "lift",
       size: "xs",
       class: {
-        list: "tabs-xs text-xs"
-      }
+        list: "tabs-xs text-xs",
+      },
     },
     {
       variant: "lift",
       size: "sm",
       class: {
-        list: "tabs-sm text-sm"
-      }
+        list: "tabs-sm text-sm",
+      },
     },
     {
       variant: "lift",
@@ -261,8 +222,8 @@ export const tabsTheme = defineUiTheme({
       class: {
         list: "h-10 tabs-md",
         trigger: "h-10 text-sm",
-        content: "rounded-4xl"
-      }
+        content: "rounded-4xl",
+      },
     },
     {
       variant: "lift",
@@ -270,8 +231,8 @@ export const tabsTheme = defineUiTheme({
       class: {
         list: "h-12 tabs-md",
         trigger: "h-12 max-w-32 rounded-t-2xl text-sm",
-        content: "rounded-4xl"
-      }
+        content: "rounded-4xl",
+      },
     },
     {
       variant: "lift",
@@ -279,22 +240,31 @@ export const tabsTheme = defineUiTheme({
       class: {
         list: "h-14 tabs-xl",
         trigger: "h-14 text-sm",
-        content: "rounded-4xl"
-      }
+        content: "rounded-4xl",
+      },
     },
     {
       variant: "lift",
       color: "base",
       class: {
-        content: "border-p2 bg-p0"
-      }
-    }
+        content: "border-p2 bg-p0",
+      },
+    },
+    {
+      size: "xl",
+      orientation: "horizontal",
+      class: {
+        list: "h-14 px-2 py-1.75!",
+        indicator: "h-10.5",
+        trigger: "h-full",
+      },
+    },
   ],
   defaultVariants: {
     color: "base",
     variant: "pill",
-    size: "md"
-  }
+    size: "md",
+  },
 })
 
 export default tabsTheme

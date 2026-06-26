@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 06/12/2026 12:04:00 PM CDT
+// Updated Patch 16.12 - 06/25/2026 10:33:03 PM CDT
 import type { Skin } from "#shared/types"
 
 type CompactSkin = readonly [
@@ -99,6 +99,7 @@ const compactSkinIndex = {
     ["1", "Cyber Pop"],
     ["10", "Crystal Rose"],
     ["20", "Three Honors"],
+    ["21", "High Noon", "akshan_splash_<type>_21.skins_akshan_skin21", "akshanloadscreen_21.skins_akshan_skin21"],
   ],
   Alistar: [
     ["0", "Original"],
@@ -220,6 +221,7 @@ const compactSkinIndex = {
     ["0", "Original", undefined, "auroraloadscreen_0"],
     ["1", "Battle Bunny"],
     ["11", "Arcana"],
+    ["20", "Broken Covenant", "aurora_splash_<type>_20.skins_aurora_skin20", "auroraloadscreen_20.skins_aurora_skin20"],
   ],
   Azir: [
     ["0", "Original"],
@@ -281,6 +283,7 @@ const compactSkinIndex = {
     ["22", "Prestige Debonair"],
     ["33", "Street Demons"],
     ["42", "Empyrean"],
+    ["53", "Sinful Shores", "brand_splash_<type>_53.skins_brand_skin53", "brandloadscreen_53.skins_brand_skin53"],
   ],
   Braum: [
     ["0", "Original"],
@@ -694,6 +697,7 @@ const compactSkinIndex = {
     ["0", "Original", undefined, "hweiloadscreen_0"],
     ["1", "Winterblessed"],
     ["11", "Spirit Blossom"],
+    ["21", "Sinful Shores", "hwei_splash_<type>_21.skins_hwei_skin21", "hweiloadscreen_21.skins_hwei_skin21"],
   ],
   Illaoi: [
     ["0", "Original"],
@@ -817,6 +821,7 @@ const compactSkinIndex = {
     ["37", "Dark Cosmic Erasure"],
     ["47", "Mythmaker"],
     ["55", "Arcana"],
+    ["64", "Broken Covenant", "jhin_splash_<type>_64.skins_jhin_skin64", "jhinloadscreen_64.skins_jhin_skin64"],
   ],
   Jinx: [
     ["0", "Original"],
@@ -1038,6 +1043,7 @@ const compactSkinIndex = {
     ["35", "Debonair"],
     ["45", "Bewitching"],
     ["55", "Risen Legend"],
+    ["59", "Prestige Sinful Shores", "leblanc_splash_<type>_59.skins_leblanc_skin59", "leblancloadscreen_59.skins_leblanc_skin59"],
   ],
   LeeSin: [
     ["0", "Original", undefined, "leesinloadscreen_0"],
@@ -1750,6 +1756,7 @@ const compactSkinIndex = {
     ["40", "Shockblade"],
     ["49", "Ashen Guardian"],
     ["51", "Three Honors"],
+    ["54", "Broken Covenant", "shen_splash_<type>_54.skins_shen_skin54", "shenloadscreen_54.skins_shen_skin54"],
   ],
   Shyvana: [
     ["0", "Original", "shyvana_splash_<type>_0.shyvana_rework", "shyvanaloadscreen_0.shyvana_rework"],

@@ -1,4 +1,4 @@
-// Updated Patch 16.10 - 06/12/2026 12:03:44 PM CDT
+// Updated Patch 16.12 - 06/25/2026 10:32:45 PM CDT
     import type { Spell } from "#shared/types"
 
     export const spellIndex: Record<number, Spell> = {

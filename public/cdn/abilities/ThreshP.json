@@ -19,6 +19,6 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/p",
-  "notes": "Souls grant a small area of  sight.\nSouls are visible to allies and only become visible to enemies if their team has  sight of Thresh.\nThe probability for souls dropping from small minions and monster on  Summoner's Rift starts at 33% but adjusts dynamically to match the expected quota of souls dropped (lowers if above, rises if below, remains if even). Souls collected are not considered when adjusting the probability.\n Nunu & Willump drop a soul each.",
+  "notes": "Souls grant a small area of  sight.\nSouls are visible to allies and only become visible to enemies if their team has  sight of Thresh.\nThe probability for souls dropping from small minions and monsters on  Summoner's Rift starts at 33% but adjusts dynamically to match the expected quota of souls dropped (lowers if above, rises if below, remains if even). Souls collected are not considered when adjusting the probability.\n Nunu & Willump drop a soul each.",
   "targeting": "Passive"
 }

@@ -45,7 +45,7 @@
               "attribute": "Damage per Snip",
               "modifiers": [
                 {
-                  "values": "10 / 13.5 / 17 / 20.5 / 24"
+                  "values": "10 / 14 / 18 / 22 / 26"
                 },
                 {
                   "unit": "% AP",
@@ -57,7 +57,7 @@
               "attribute": "Center Damage per Snip",
               "modifiers": [
                 {
-                  "values": "10 / 13.5 / 17 / 20.5 / 24"
+                  "values": "10 / 14 / 18 / 22 / 26"
                 },
                 {
                   "unit": "% AP",
@@ -106,7 +106,7 @@
               "attribute": "Minimum Damage",
               "modifiers": [
                 {
-                  "values": "70 / 98.5 / 127 / 155.5 / 184"
+                  "values": "70 / 99 / 128 / 157 / 186"
                 },
                 {
                   "unit": "% AP",
@@ -118,7 +118,7 @@
               "attribute": "Minimum Center Damage",
               "modifiers": [
                 {
-                  "values": "70 / 98.5 / 127 / 155.5 / 184"
+                  "values": "70 / 99 / 128 / 157 / 186"
                 },
                 {
                   "unit": "% AP",
@@ -134,7 +134,7 @@
               "attribute": "Maximum Damage",
               "modifiers": [
                 {
-                  "values": "110 / 152.5 / 195 / 237.5 / 280"
+                  "values": "110 / 155 / 200 / 245 / 290"
                 },
                 {
                   "unit": "% AP",
@@ -146,7 +146,7 @@
               "attribute": "Maximum Center Damage",
               "modifiers": [
                 {
-                  "values": "110 / 152.5 / 195 / 237.5 / 280"
+                  "values": "110 / 155 / 200 / 245 / 290"
                 },
                 {
                   "unit": "% AP",
@@ -229,7 +229,7 @@
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "20 / 35 / 50 / 65 / 80"
+                  "values": "30 / 42.5 / 55 / 67.5 / 80"
                 }
               ]
             }
@@ -406,7 +406,7 @@
     "difficulty": 2
   },
   "lore": "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker's love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen's scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world.",
-  "patchLastChanged": "26.09",
+  "patchLastChanged": "26.12",
   "positions": [
     "Jungle",
     "Top"

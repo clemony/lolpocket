@@ -15,6 +15,7 @@ import type { IconProps } from "~/types/ui.types"
 
 interface ResolvedType {
   label?: string
+  static?: boolean
   src?: string
   component?: Record<string, Component>
   avatar?: AvatarPropsExt

@@ -15,9 +15,9 @@ const routeOrder = (route: ProfileRouteRecord) => Number(route.meta?.order ?? 0)
 const routeLabel = (route: ProfileRouteRecord) =>
   String(route.meta?.title ?? route.name ?? route.path)
 
-export function buildSummonerProfileRoutes(
-  routes: unknown[]
-): TabsItem[] {
+export function buildSummonerProfileRoutes(): TabsItem[] {
+  const router = useRouter()
+  const routes = router.getRoutes()
   const routeRecords = routes.map(asProfileRoute)
   const profileRoute = routeRecords.find(
     (route) => route.name === "summoner-profile"
@@ -29,12 +29,12 @@ export function buildSummonerProfileRoutes(
     .sort((a, b) => routeOrder(a) - routeOrder(b))
     .map((route) => ({
       label: routeLabel(route),
-      value: String(route.name ?? route.path),
-      ...route
+      value: String(route.name),
+      ...route,
     }))
 
   const pocketRoute = routeRecords.find(
-    (route) => route.name === "username-tag-pockets"
+    (route) => route.name === "user_id-pockets"
   )
   if (!pocketRoute) return profileTabs
 
@@ -42,8 +42,8 @@ export function buildSummonerProfileRoutes(
     ...profileTabs,
     {
       label: "Pockets",
-      value: "username-tag-pockets",
-      ...pocketRoute
-    }
+      value: String(pocketRoute.name),
+      ...pocketRoute,
+    },
   ]
 }

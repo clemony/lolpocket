@@ -36,11 +36,11 @@
               "attribute": "Physical Damage",
               "modifiers": [
                 {
-                  "values": "65 / 95 / 125 / 155 / 185"
+                  "values": "60 / 90 / 120 / 150 / 180"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "95"
+                  "values": "90"
                 }
               ]
             }
@@ -77,11 +77,11 @@
               "attribute": "Minimum Physical Damage",
               "modifiers": [
                 {
-                  "values": "65 / 95 / 125 / 155 / 185"
+                  "values": "60 / 90 / 120 / 150 / 180"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "95"
+                  "values": "90"
                 }
               ]
             },
@@ -89,11 +89,11 @@
               "attribute": "Maximum Physical Damage",
               "modifiers": [
                 {
-                  "values": "130 / 190 / 250 / 310 / 370"
+                  "values": "120 / 180 / 240 / 300 / 360"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "190"
+                  "values": "180"
                 }
               ]
             }
@@ -326,7 +326,7 @@
     "difficulty": 3
   },
   "lore": "A master of Ionia's ancient martial arts, Lee Sin is a principled fighter who channels the essence of the dragon spirit to face any challenge. Though he lost his sight many years ago, the warrior-monk has devoted his life to protecting his homeland against any who would dare upset its sacred balance. Enemies who underestimate his meditative demeanor will endure his fabled burning fists and blazing roundhouse kicks.",
-  "patchLastChanged": "26.10",
+  "patchLastChanged": "26.12",
   "positions": [
     "Jungle"
   ],

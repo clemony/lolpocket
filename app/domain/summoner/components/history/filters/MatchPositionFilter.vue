@@ -41,17 +41,11 @@ const positionModel = computed({
     :size="props.size"
     :ui="{
       ...props?.ui,
-      root: cn(
-        'w-full before:absolute before:inset-0 before:z-0 before:size-full before:rounded-5xl before:bg-p1/60',
-        props?.ui?.root,
-        props.class
-      ),
-      list: 'rounded-5xl border border-(--account-dark)/6 bg-(--account-color)/20 px-2 py-1.75! ring-0 inset-shadow-(--account-dark)/20',
-      indicator: cn(
-        'h-10.5 bg-(--account-color) inset-ring-(--account-dark)/20'
-      ),
+      root: cn('h-max w-full', props?.ui?.root, props.class),
+      list: 'border border-(--account-dark)/6 bg-(--account-color)/30 ring-0 inset-shadow-(--account-dark)/20',
+      indicator: cn('bg-(--account-color) inset-ring-(--account-dark)/20'),
       label: 'hidden',
-      trigger: cn('h-10.5! text-pc! opacity-100', props?.ui?.trigger),
+      trigger: cn('text-pc! opacity-100', props?.ui?.trigger),
     }"
     :items="positions"
     default-value="all">

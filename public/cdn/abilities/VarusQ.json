@@ -25,7 +25,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "100"
+              "values": "80"
             }
           ]
         },
@@ -37,7 +37,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "150"
+              "values": "120"
             }
           ]
         },
@@ -49,7 +49,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "33"
+              "values": "26.4"
             }
           ]
         },
@@ -61,7 +61,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "49.5"
+              "values": "39.6"
             }
           ]
         }

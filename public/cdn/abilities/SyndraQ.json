@@ -16,11 +16,11 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "80 / 115 / 150 / 185 / 220"
+              "values": "90 / 125 / 160 / 195 / 230"
             },
             {
               "unit": "% AP",
-              "values": "65"
+              "values": "70"
             }
           ]
         }

@@ -227,6 +227,7 @@
       "notes": "Yorick will snap his facing direction towards the target location at the start of the cast time.\nThe speed boost toward marked targetes does not require  sight of them.\nThe Mist Walkers do not  leap if they are  immobilized or  grounded, or if the marked target is  untargetable.\nThe damage done by the Mist Walkers' leap shares a cast instance with Mourning Mist.",
       "projectile": "TRUE",
       "resource": "Mana",
+      "speed": "1800",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
       "targeting": "Location",

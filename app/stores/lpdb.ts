@@ -2,6 +2,7 @@ import type { Table } from 'dexie'
 import Dexie from 'dexie'
 
 export interface MatchCursor {
+  done?: boolean
   puuid: string
   lastIndex: number
 }

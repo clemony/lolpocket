@@ -3,7 +3,7 @@
   "name": "Unleashed Power",
   "affects": "Enemies",
   "blurb": "Passive:  Dark Sphere gains  ability haste.",
-  "castTime": "none",
+  "castTime": "0.25",
   "cooldown": "120 / 100 / 80",
   "cost": "100",
   "damageType": "Magic damage",
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Syndra enters a 0.264 seconds cast time, creating 3 Dark Spheres and grabbing up to 4 nearby Dark Spheres that were last spawned. Afterwards, the collected Dark Spheres are barraged at the target enemy champion, each dealing magic damage upon hit.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Syndra conjures 3 Dark Spheres and additionally grabs up to 4 nearby live ones. Afterwards, she barrages the target enemy champion with all collected Dark Spheres, each dealing magic damage upon hit.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage per Sphere",
@@ -64,14 +64,14 @@
       ]
     },
     {
-      "description": "The Dark Spheres will then remain on the ground for 6 seconds."
+      "description": "The Dark Spheres will then remain on the ground next to the target's current location for 6 seconds."
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Transcendent Bonus:</span> Collecting 100 Splinters of Wrath enhances Unleashed Power to execute the target if it would damage them to below 15% of their maximum health.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Syndra/ability-icon/r",
-  "notes": "Unleashed Power makes Syndra enter a brief cast time, but the initial cast is completed instantly. If she dies during this cast time, Unleashed Power will still complete the remaining effect.\nCasting Unleashed Power on a target that becomes  untargetable while the spheres are in flight will not destroy them but cause them to deal no damage instead.\nSpheres already in flight will still travel if Syndra's target dies, but any remaining spheres will not. However, their duration will still get reset.\nA Dark Sphere summoned very shortly before Unleashed Power will be used as one of the spheres that get thrown.\nDepending on how many spheres are on the map and how far away the enemy is upon casting Unleashed Power it is possible that Syndra would conjure the sphere behind her as if she was going to throw it, but she won't.\nUnleashed Power will not add a Sphere that Syndra is holding with  Force of Will.\nSpheres that are being pushed by  Scatter the Weak (normally ones that were made late during the push) will not get picked up for Unleashed Power.\n Spell shield will only block the damage of a single sphere.",
+  "notes": "Unleashed Power's effect takes place at the start of the cast time.\nAdditionally, Unleashed Power cannot be interrupted by any means, including death or  resurrection. Unleashed Power will complete its effect so long as Syndra has initiated its cast.\nCasting Unleashed Power on a target that becomes  untargetable while the spheres are in flight will not destroy them but will invalidate their effects.\nSpheres already in flight will still travel if Syndra's target dies, but any remaining spheres will not. However, their duration will still get reset.\nA sphere summoned very shortly before Unleashed Power will be used as one of the spheres that get thrown.\nDepending on how many spheres are on the map and how far away the enemy is upon casting Unleashed Power it is possible that Syndra would conjure the sphere behind her as if she was going to throw it, but she won't.\nUnleashed Power will not add a Sphere that Syndra is holding with  Force of Will.\nSpheres that are being pushed by  Scatter the Weak (normally ones that were made late during the push) will not get picked up for Unleashed Power.\n Spell shield will only block the damage of a single sphere.",
   "projectile": "TRUE",
   "resource": "Mana",
   "spellEffects": "spell",

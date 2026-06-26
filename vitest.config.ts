@@ -4,7 +4,7 @@ export default defineVitestConfig({
   test: {
     environment: 'nuxt',
     globals: true,
-    include: ['test/nuxt/**/*.spec.ts'],
+    include: ['test/nuxt/**/*.spec.ts', 'tests/app/**/*.spec.ts'],
     setupFiles: ['test/setup.ts'],
     env: {
       NUXT_PUBLIC_SUPABASE_URL: 'http://127.0.0.1:54321',

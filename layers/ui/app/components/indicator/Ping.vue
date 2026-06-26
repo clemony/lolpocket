@@ -2,12 +2,16 @@
 import type { ChipProps } from "@nuxt/ui"
 import type { MotionValue } from "motion-v"
 import { motion } from "motion-v"
+import { chipTheme } from "~~/layers/ui/app/theme/chip"
 
 const props = withDefaults(
   defineProps<
     ChipProps & {
       size?: string
-      style?: Record<string, MotionValue<string>>
+      motion?: {
+        scale: MotionValue<string>
+        transform: MotionValue<string>
+      }
       ui?: ChipProps["ui"] & {
         anchor?: HTMLAttributes["class"]
       }
@@ -20,7 +24,12 @@ const props = withDefaults(
   }
 )
 
-const delegated = reactiveOmit(props, "class", "color", "style")
+const delegated = reactiveOmit(props, "class", "color", "motion")
+
+const size = computed(() => {
+  if (props.size !== undefined) return chipTheme.variants.size[props.size]
+  return "md" as ChipProps["size"]
+})
 </script>
 
 <template>
@@ -29,13 +38,14 @@ const delegated = reactiveOmit(props, "class", "color", "style")
     :ui="{ ...props.ui, base: cn('ring-0', props.ui?.base) }">
     <template #content>
       <motion.div
-        :style="props.style"
+        :style="props.motion"
         :class="
           cn(
             'anchor relative size-full rounded-full bg-[#fff]',
             {
               'ring-2 ring-p0': props.inset,
             },
+            size,
             props.ui?.anchor
           )
         ">

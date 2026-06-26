@@ -18,7 +18,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "10"
+              "values": "5"
             },
             {
               "unit": "% AP",
@@ -34,7 +34,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "5"
+              "values": "2.5"
             },
             {
               "unit": "% AP",
@@ -50,7 +50,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "20"
+              "values": "10"
             },
             {
               "unit": "% AP",
@@ -71,7 +71,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "16"
+              "values": "8"
             },
             {
               "unit": "% AP",
@@ -87,7 +87,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "8"
+              "values": "4"
             },
             {
               "unit": "% AP",
@@ -103,7 +103,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "32"
+              "values": "16"
             },
             {
               "unit": "% AP",

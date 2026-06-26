@@ -2,21 +2,21 @@
   "key": "P",
   "name": "Harrier",
   "affects": "Self",
-  "blurb": "Innate:  Quinn's damaging abilities mark enemies with Vulnerable and  reveal them for a few seconds. Periodically,  Valor marks a nearby enemy with Vulnerable.",
+  "blurb": "Innate:  Quinn's damaging abilities mark enemies with Harrier and  reveal them for a few seconds. Periodically,  Valor marks a nearby enemy with Harrier.",
   "damageType": "Physical damage",
   "effectRadius": "525",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Vulnerable for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Vulnerable targets exist for 1 second.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Harrier for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Harrier targets exist for 1 second.</p>"
     },
     {
-      "description": "Quinn's basic attacks on-hit against Vulnerable targets are empowered to consume the mark to deal 15 - 132.35 (based on level) (+ 40% bonus AD) bonus physical damage."
+      "description": "Quinn's basic attacks on-hit against Harrier targets are empowered to consume the mark to deal 15 - 132.35 (based on level) (+ 40% bonus AD) bonus physical damage."
     },
     {
-      "description": "Harrier deals 50 bonus physical damage against monsters."
+      "description": "Harrier deals 75 bonus physical damage against monsters."
     },
     {
-      "description": "While Behind Enemy Lines is active, Harrier is disabled and all Vulnerable marks are removed."
+      "description": "While Behind Enemy Lines is active, Harrier is disabled and all Harrier marks are removed."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/p",

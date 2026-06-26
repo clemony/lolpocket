@@ -3,7 +3,7 @@ import type {
   ButtonProps,
   CheckboxGroupItem,
   InputProps,
-  TooltipProps
+  TooltipProps,
 } from "@nuxt/ui"
 import type { AcceptableValue } from "reka-ui"
 import type { ShallowRef } from "vue"
@@ -66,11 +66,12 @@ export interface ButtonPropsExt extends ButtonProps {
 
 export interface TooltipPropsExt extends TooltipProps {
   map?: number
+  type?: "static" | "follow"
   side?: Side
   disabled?: boolean
   pin?: boolean
   interactive?: boolean
-  avatar?: AvatarPropsExt
+  avatar?: AvatarPropsExt | false
   ui?: TooltipUi
   icon?: string
   sideOffset?: number

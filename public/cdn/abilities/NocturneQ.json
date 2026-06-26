@@ -17,7 +17,7 @@
           "attribute": "Physical damage",
           "modifiers": [
             {
-              "values": "65 / 110 / 155 / 200 / 245"
+              "values": "65 / 105 / 145 / 185 / 225"
             },
             {
               "unit": "% bonus AD",

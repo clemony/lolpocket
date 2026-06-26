@@ -54,7 +54,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/q",
-  "notes": "This ability always employs Quick cast.\nEach cast counts as a single ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nMoving after using Broken Wings allows Riven to do other actions faster.\nThe Third Cast prevents Riven from using basic attacks and abilities for longer than the other 2 casts.\nThe Third Cast may have an extended dash range when crossing terrain.",
+  "notes": "This ability always employs Quick cast.\nEach cast counts as a single ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nMoving after using Broken Wings allows Riven to do other actions faster.\nThe Third Cast prevents Riven from using basic attacks and abilities for longer than the other 2 casts.\nThe Third Cast may have an extended dash range when crossing terrain.\nThe Third Cast's  knockup debuff is not removed early if the forced movement is interrupted.\nAny forced movement affecting the target being knocked up is  interrupted when the  knockup debuff is removed.(unexpected)",
   "spellEffects": "spellaoe",
   "spellshieldable": "true",
   "targeting": "Auto • Unit"

@@ -148,7 +148,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "10"
+                  "values": "5"
                 },
                 {
                   "unit": "% AP",
@@ -164,7 +164,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "5"
+                  "values": "2.5"
                 },
                 {
                   "unit": "% AP",
@@ -180,7 +180,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "20"
+                  "values": "10"
                 },
                 {
                   "unit": "% AP",
@@ -201,7 +201,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "16"
+                  "values": "8"
                 },
                 {
                   "unit": "% AP",
@@ -217,7 +217,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "8"
+                  "values": "4"
                 },
                 {
                   "unit": "% AP",
@@ -233,7 +233,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "32"
+                  "values": "16"
                 },
                 {
                   "unit": "% AP",
@@ -361,7 +361,7 @@
     "difficulty": 1
   },
   "lore": "Undeterred by even the most dangerous and threatening of obstacles, Teemo scouts the world with boundless enthusiasm and a cheerful spirit. A yordle with an unwavering sense of morality, he takes pride in following the Bandle Scout's Code, sometimes with such eagerness that he is unaware of the broader consequences of his actions. Though some say the existence of the Scouts is questionable, one thing is for certain: Teemo's conviction is nothing to be trifled with.",
-  "patchLastChanged": "26.10",
+  "patchLastChanged": "26.11",
   "positions": [
     "Jungle",
     "Support",

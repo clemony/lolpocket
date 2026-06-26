@@ -32,7 +32,7 @@ const isOpen = ref(false)
         color="transparent"
         :ui="{
           base: cn(
-            'relative border-p3/70 bg-linear-to-r to-transparent to-23% bg-cover bg-clip-padding **:select-none',
+            'relative border-p3/70 bg-linear-to-b to-transparent to-63% bg-cover bg-clip-padding **:select-none',
             'growcursor-pointer pointer-events-auto relative z-2 h-40! min-h-36! overflow-hidden pr-4 pl-5 shadow-none ring-0! fx-0 open:rounded-b-none hover:ring-0 data-[state=open]:border-b-0!',
             'before:pointer-events-none before:absolute before:left-0 before:z-3 before:h-full before:w-1/2 before:rounded-5xl before:border-x before:border-t-0 before:border-b-2 before:mask-r-from-0 before:opacity-40 before:shadow-sm before:shadow-black',
             player?.win === 'remake'
@@ -44,10 +44,13 @@ const isOpen = ref(false)
         }">
         <div
           class="flex grow items-center justify-between gap-6 text-sm text-pc">
-          <MatchInfo :match :player />
-          <PlayerMatchCardInfo :match :player />
+          <PlayerLoadout :match :player />
+          <div class="flex grow flex-col gap-2">
+            <MatchInfo :match :player />
+            <PlayerMatchCardInfo :match :player />
+          </div>
 
-          <TeamsCardOverview :match />
+          <!-- <TeamsCardOverview :match />-->
           <div class="grid w-8 grow place-items-center">
             <CaretFlip />
           </div>

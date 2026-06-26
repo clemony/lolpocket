@@ -1,5 +1,6 @@
 import {
   LazyDashboardMenu,
+  LazyDashboardSearch,
   LazySettingsSidebar,
   LazySidebarInbox,
   LazySidebarMenu,
@@ -41,7 +42,7 @@ export const sidebarTabItems: TabRecord = {
     label: "Search",
     value: "search",
     icon: "i-search",
-    component: LazySidebarSearch,
+    component: LazyDashboardSearch,
   },
   inbox: {
     label: "Inbox",
@@ -51,6 +52,7 @@ export const sidebarTabItems: TabRecord = {
   },
   menu: {
     label: "Menu",
+    overlay: true,
     value: "menu",
     icon: "i-menu",
     component: LazyDashboardMenu,

@@ -23,7 +23,7 @@
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/p",
       "notes": "Ekko's basic attacks have different animations based on how many stacks his target has. His attack pattern is as follows:\nDownwards → Upwards → Sideways\nIf the target has already been affected by Resonance, Ekko's basic attack animations will kick or attack the target sideways.\nResonance stacks will not be applied nor consumed if the basic attack is  dodged or  blocked or if the attack  misses.",
-      "onTargetCdStatic": "5",
+      "onTargetCdStatic": "4",
       "spellEffects": "Single target",
       "spellshieldable": "True",
       "targeting": "Passive"
@@ -192,7 +192,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/e",
-      "notes": "The  dash distance can be extended to up-to 550 units when targeting across terrain. It will only extend for the distance needed to cross the wall.\nWhile  grounded or  rooted, Ekko loses the  bonus attack range from Phase Dive.\nPhase Drive's attack can  miss and be  blocked and  dodged, consuming the basic attack without dealing any damage.\nPhase Dive's attack  breaks stealth at the start of its cast time.\nThis is relevant for external sources of  stealth such as  Senna's  Curse of the Black Mist.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.",
+      "notes": "The  dash distance can be extended to up-to 550 units when targeting across terrain. It will only extend for the distance needed to cross the wall.\nWhile  grounded or  rooted, Ekko loses the  bonus attack range from Phase Dive.\nPhase Dive's attack can  miss and be  blocked and  dodged, consuming the basic attack without dealing any damage.\nPhase Dive's attack  breaks stealth at the start of its cast time.\nThis is relevant for external sources of  stealth such as  Senna's  Curse of the Black Mist.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.",
       "resource": "Mana",
       "spellEffects": "Spell",
       "spellshieldable": "true",
@@ -278,7 +278,7 @@
     "difficulty": 2
   },
   "lore": "A prodigy from the rough streets of Zaun, Ekko is able to manipulate time to twist any situation to his advantage. He uses his own invention, the Z-Drive, to explore the branching possibilities of reality, crafting the perfect moment to seemingly achieve the impossible the first time, every time. Though Ekko revels in this freedom, when there's a threat to those he cares about, he and the Firelights will do anything to defend them.",
-  "patchLastChanged": "26.09",
+  "patchLastChanged": "26.11",
   "positions": [
     "Jungle",
     "Middle"

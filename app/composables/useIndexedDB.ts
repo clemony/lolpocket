@@ -4,11 +4,17 @@ export function useIndexedDB() {
   // ---------- cursor ----------
 
   const getCursor = async (puuid: string) => {
-    return (await lpdb.matchCursor.get(puuid)) ?? { puuid, lastIndex: 0 }
+    return (
+      (await lpdb.matchCursor.get(puuid)) ?? { done: false, puuid, lastIndex: 0 }
+    )
   }
 
-  const setCursor = async (puuid: string, lastIndex: number) => {
-    await lpdb.matchCursor.put({ puuid, lastIndex })
+  const setCursor = async (
+    puuid: string,
+    lastIndex: number,
+    done = false
+  ) => {
+    await lpdb.matchCursor.put({ done, puuid, lastIndex })
   }
 
   // ---------- timeline ----------

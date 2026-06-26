@@ -28,7 +28,7 @@
       ]
     },
     {
-      "description": "Each explosion also leaves a lava fissure in its wake. A fissure lasts for 2.5 seconds, dealing magic damage every 0.25 seconds to enemies within the area and slowing them by 30%. Enemies may be damaged by multiple fissures at once.",
+      "description": "Each explosion also leaves a lava fissure in its wake. A fissure lasts for 2.5 seconds, dealing magic damage every 0.25 seconds to enemies within the area and slowing them by 35%. Enemies may be damaged by multiple fissures at once.",
       "leveling": [
         {
           "attribute": "Magic Damage per Tick",

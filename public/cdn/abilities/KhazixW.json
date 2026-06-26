@@ -8,14 +8,14 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolved Bonus:</span> Void Spike now fires three clusters in a cone, slows by 40% and reveals enemy champions hit for 2 seconds. Multiple explosions do not deal extra damage to the same target nor provide Kha'Zix with additional healing.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolved Bonus:</span> Void Spike now fires three clusters in a cone, slows by 40% and reveals enemy champions hit for 2 seconds. Multiple explosions do not deal additional damage against the same target nor provide Kha'Zix with extra healing.</p>"
     },
     {
       "description": "Isolated targets hit by Evolved Spike Racks are slowed by 60% instead."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/w",
-  "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nEvolved Spike Racks' effect radius is centered around the location of the missile as it collides.\n Spell shield will not block the  reveal.",
+  "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nAn enemy cannot be hit by more than one cluster at a time; the missiles will not collide with enemies that have already been hit.\nEvolved Spike Racks' effect radius is centered around the location of the missile as it collides.\n Spell shield will not block the  reveal.",
   "projectile": "TRUE",
   "spellEffects": "aoe",
   "spellshieldable": "special",

@@ -15,11 +15,11 @@
           "attribute": "Minimum Physical Damage",
           "modifiers": [
             {
-              "values": "65 / 95 / 125 / 155 / 185"
+              "values": "60 / 90 / 120 / 150 / 180"
             },
             {
               "unit": "% bonus AD",
-              "values": "95"
+              "values": "90"
             }
           ]
         },
@@ -27,11 +27,11 @@
           "attribute": "Maximum Physical Damage",
           "modifiers": [
             {
-              "values": "130 / 190 / 250 / 310 / 370"
+              "values": "120 / 180 / 240 / 300 / 360"
             },
             {
               "unit": "% bonus AD",
-              "values": "190"
+              "values": "180"
             }
           ]
         }

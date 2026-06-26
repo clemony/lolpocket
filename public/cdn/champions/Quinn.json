@@ -8,21 +8,21 @@
       "key": "P",
       "name": "Harrier",
       "affects": "Self",
-      "blurb": "Innate:  Quinn's damaging abilities mark enemies with Vulnerable and  reveal them for a few seconds. Periodically,  Valor marks a nearby enemy with Vulnerable.",
+      "blurb": "Innate:  Quinn's damaging abilities mark enemies with Harrier and  reveal them for a few seconds. Periodically,  Valor marks a nearby enemy with Harrier.",
       "damageType": "Physical damage",
       "effectRadius": "525",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Vulnerable for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Vulnerable targets exist for 1 second.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Harrier for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Harrier targets exist for 1 second.</p>"
         },
         {
-          "description": "Quinn's basic attacks on-hit against Vulnerable targets are empowered to consume the mark to deal 15 - 132.35 (based on level) (+ 40% bonus AD) bonus physical damage."
+          "description": "Quinn's basic attacks on-hit against Harrier targets are empowered to consume the mark to deal 15 - 132.35 (based on level) (+ 40% bonus AD) bonus physical damage."
         },
         {
-          "description": "Harrier deals 50 bonus physical damage against monsters."
+          "description": "Harrier deals 75 bonus physical damage against monsters."
         },
         {
-          "description": "While Behind Enemy Lines is active, Harrier is disabled and all Vulnerable marks are removed."
+          "description": "While Behind Enemy Lines is active, Harrier is disabled and all Harrier marks are removed."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/p",
@@ -44,7 +44,7 @@
       "effectRadius": "210",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies, increased to 150% against monsters.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them with Harrier and dealing physical damage to all nearby enemies, increased to 200% against monsters.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -89,7 +89,7 @@
       "effectRadius": "2100",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Whenever Quinn uses a basic attack on-attack against a Vulnerable target or consumes their mark, she gains bonus attack speed and bonus movement speed for 2 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Whenever Quinn uses a basic attack on-attack against a target marked by Harrier or consumes their mark, she gains bonus attack speed and bonus movement speed for 2 seconds.</p>",
           "leveling": [
             {
               "attribute": "Bonus Attack Speed",
@@ -124,14 +124,14 @@
       "key": "E",
       "name": "Vault",
       "affects": "Enemies",
-      "blurb": "Active:  Quinn  dashes to the target enemy, dealing physical damage,  knocking them back, marking them as  Vulnerable, and briefly  slowing them. She then  leaps backward.",
+      "blurb": "Active:  Quinn  dashes to the target enemy, dealing physical damage,  knocking them back, marking them with  Harrier, and briefly  slowing them. She then  leaps backward.",
       "castTime": "none",
       "cooldown": "12 / 11 / 10 / 9 / 8",
       "cost": "50",
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn dashes to the target enemy, marking them as Vulnerable, dealing physical damage, knocking them back a very short distance over 0.5 seconds, and slowing them by 50% decaying over 1.5 seconds. She then leaps back 525 units away from them.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn dashes to the target enemy, marking them with Harrier, dealing physical damage, knocking them back a very short distance over 0.5 seconds, and slowing them by 50% decaying over 1.5 seconds. She then leaps back 525 units away from them.</p>",
           "leveling": [
             {
               "attribute": "Physical damage",
@@ -152,7 +152,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/e",
-      "notes": "Quinn will track the target if they change locations.\nShe will dash to the target's previous location without applying Vault's effects if the target is too far away or moves beyond 1200 units.\nVault  resets Quinn's remaining attack cooldown a short delay after the first dash ends (even if interrupted).\nThis delay is a fuzzy 0.25 to 0.5 seconds and this matches up with the moment the target of Vault is marked as  Vulnerable.\nQuinn will automatically attempt to attack the target once she completes Vault.\nThe target will turn to face the opposite direction after being  knocked back.\nUnlike its constant cast range Vault's bounce's can vary to allow Quinn to close or to make a gap between herself and the target (depending on casting position) or even to jump through a wall (if there is enough landing room on the other side).\nVault's  knock back also interrupts the windup of basic attacks with  uncancellable windups.(unexpected)",
+      "notes": "Quinn will track the target if they change locations.\nShe will dash to the target's previous location without applying Vault's effects if the target is too far away or moves beyond 1200 units.\nVault  resets Quinn's remaining attack cooldown a short delay after the first dash ends (even if interrupted).\nThis delay is a fuzzy 0.25 to 0.5 seconds and this matches up with the moment the target of Vault is marked with  Harrier.\nQuinn will automatically attempt to attack the target once she completes Vault.\nThe target will turn to face the opposite direction after being  knocked back.\nUnlike its constant cast range Vault's bounce's can vary to allow Quinn to close or to make a gap between herself and the target (depending on casting position) or even to jump through a wall (if there is enough landing room on the other side).\nVault's  knock back also interrupts the windup of basic attacks with  uncancellable windups.(unexpected)",
       "resource": "Mana",
       "speed": "2500 • 850",
       "spellEffects": "Spell",
@@ -209,7 +209,7 @@
       "effectRadius": "700",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn detaches from Valor, ending Behind Enemy Lines' effects and raining arrows down around her, dealing physical damage to nearby enemies and marking them as Vulnerable.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn detaches from Valor, ending Behind Enemy Lines' effects and raining arrows down around her, dealing physical damage to nearby enemies and marking them with Harrier.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -249,7 +249,7 @@
   },
   "fullName": "Quinn and Valor",
   "lore": "Quinn is an elite ranger-knight of Demacia, who undertakes dangerous missions deep in enemy territory. She and her legendary eagle, Valor, share an unbreakable bond, and their foes are often slain before they realize they are fighting not one, but two of the kingdom's greatest heroes. Nimble and acrobatic when required, Quinn takes aim with her crossbow while Valor marks their elusive targets from above, making them a deadly pair on the battlefield.",
-  "patchLastChanged": "26.10",
+  "patchLastChanged": "26.11",
   "positions": [
     "Top"
   ],

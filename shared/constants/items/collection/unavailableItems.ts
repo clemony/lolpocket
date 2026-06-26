@@ -1,4 +1,4 @@
-// Updated Patch 16.12 - 06/15/2026 12:09:49 AM CDT
+// Updated Patch 16.12 - 06/25/2026 10:32:45 PM CDT
 // These items are currently found in Data Dragon but not in the versioned item source.
 
 export const unavailableItems: Record<string, number[]> = {

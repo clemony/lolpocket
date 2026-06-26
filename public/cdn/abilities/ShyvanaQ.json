@@ -37,10 +37,10 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Second Cast:</span> Shyvana slams her tail, dealing the same damage to the target and surrounding enemies.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Second Cast:</span> Shyvana slams her tail, dealing the same damage to the target and surrounding enemies, respectively.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus — Third Cast:</span> Shyvana takes a bite out of the target, dealing modified true damage. This damage is not affected by critical strike modifiers.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus — Third Cast:</span> Shyvana takes a bite out of the target, dealing modified true damage. This damage cannot critically strike.</p>",
       "leveling": [
         {
           "attribute": "True Damage",

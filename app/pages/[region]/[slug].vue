@@ -2,6 +2,7 @@
 import type { TabsItem } from "@nuxt/ui"
 import type { SpringOptions } from "motion-v"
 import { motion } from "motion-v"
+import { provideProfileScrollBody } from "~/domain/summoner/composables/useProfileScrollBody"
 import { buildSummonerProfileRoutes } from "~/domain/summoner/utils/profileRoutes"
 
 definePageMeta({
@@ -13,13 +14,13 @@ definePageMeta({
 
 const query = shallowRef<string | undefined>(undefined)
 const route = useRoute("summoner-profile")
+const activeRoute = shallowRef<string>(String(route.name))
+onMounted(() => {
+  activeRoute.value = String(route.name)
+})
 const championKey = computed(() => route.params?.championKey)
 
-const router = useRouter()
-
-const routes = computed<TabsItem[]>(() =>
-  buildSummonerProfileRoutes(router.getRoutes())
-)
+const routes = computed<TabsItem[]>(() => buildSummonerProfileRoutes())
 const session = sSession()
 const { summoner, account } = storeToRefs(session)
 
@@ -31,6 +32,7 @@ const color = computed(() => ({
 const bg = computed(() => sSession().splash || sData().mostPlayed.splash)
 
 const body = useTemplateRef<HTMLElement>("body")
+provideProfileScrollBody(body)
 
 const { scrollY } = useScroll({
   container: body,
@@ -38,14 +40,19 @@ const { scrollY } = useScroll({
 })
 const scrollProgress = useSpring(scrollY, {
   skipInitialAnimation: true,
+  stiffness: 180,
+  damping: 30,
+  mass: 0.5,
 } as SpringOptions)
 
-const baseStyle = useTransform(scrollY, [0, 162], {
+const baseStyle = useTransform(scrollProgress, [0, 162], {
   padding: ["0 32px", "0 16px"],
 })
 
-const headerStyle = useTransform(scrollY, [0, 162], {
+const headerStyle = useTransform(scrollY, [0, 152], {
   height: [216, 62],
+
+  outline: ["1px solid  var(--color-p2)", "1px solid var(--color-p0)"],
   backgroundColor: ["var(--color-p0)", "--alpha(var(--color-p0) / 0.94)"],
 })
 const imageHeight = useTransform(scrollY, [0, 162], [156, 0])
@@ -69,9 +76,14 @@ const outlineStyle = useTransform(scrollY, [0, 138, 139], {
     "8px solid color-mix(in oklab, var(--color-p0) 0%, transparent 100%)",
   ],
 })
+
+const pingSize = ["8px", "5px"]
 const pingStyle = useTransform(scrollY, [0, 162], {
-  scale: ["100%", "60%"],
-  transform: ["translate(-6px, -12px)", "translate(-3px)"],
+  // scale: ["100%", "40% !important"],
+  height: pingSize,
+  width: pingSize,
+  outline: ["3px solid  var(--color-p0)", "2px solid var(--color-p0)"],
+  transform: ["translate(-8px, -8px) ", "translate(-4px, -4px)"],
 })
 
 const headerWrapperStyle = useTransform(scrollY, [0, 162], {
@@ -79,7 +91,7 @@ const headerWrapperStyle = useTransform(scrollY, [0, 162], {
 })
 
 const h1Style = useTransform(scrollY, [0, 162], {
-  fontSize: ["3.5rem", "2.6rem"],
+  fontSize: ["3.5rem", "2rem"],
 })
 
 const badgeStyle = useTransform(scrollY, [0, 162], {
@@ -95,7 +107,8 @@ const badgeStyle = useTransform(scrollY, [0, 162], {
           class="pointer-events-none sticky inset-x-0 top-0 z-4 bg-gradient-to-b from-p1 to-transparent pt-12">
           <motion.div
             :style="headerStyle"
-            class="flex h-72 shrink-0 grow flex-col gap-0 overflow-hidden rounded-6xl bg-p0 bg-blend-screen ring inset-ring ring-p3/50 inset-ring-p0/60 backdrop-blur-lg backdrop-contrast-104">
+            class="flex h-72 shrink-0 grow flex-col gap-0 overflow-hidden rounded-6xl bg-p0 bg-blend-screen backdrop-blur-lg backdrop-contrast-104">
+            <!-- BACKGROUND SPLASH IMAGE -->
             <motion.div
               :style="{ height: imageHeight }"
               class="relative grid h-50 w-full items-center overflow-hidden after:absolute after:inset-0 after:z-3 after:size-full after:rounded-t-6xl after:inset-shadow-[0px_0px_10px_rgba(0,0,0,0.1)] after:inset-ring after:inset-ring-pc/4">
@@ -108,7 +121,7 @@ const badgeStyle = useTransform(scrollY, [0, 162], {
 
             <motion.div
               :style="baseStyle"
-              class="relative z-5 grid h-[62px] w-full grid-cols-3 items-center">
+              class="relative z-5 grid h-[62px] w-full grid-cols-2 items-center">
               <div class="flex h-full items-center gap-5">
                 <motion.div
                   :style="avatarRootStyle"
@@ -116,12 +129,8 @@ const badgeStyle = useTransform(scrollY, [0, 162], {
                   <motion.div
                     :style="{ ...avatarStyle, ...outlineStyle }"
                     class="absolute size-full rounded-full">
-                    <Ping
-                      v-if="summoner"
-                      size="xl"
-                      :style="pingStyle"
-                      position="bottom-right"
-                      :ui="{ root: 'size-full', base: 'ring-0' }">
+                    <div v-if="summoner" class="relative">
+                      <!-- AVATAR -->
                       <HoverIcon
                         :tooltip="{ disabled: true }"
                         type="summoner"
@@ -133,10 +142,21 @@ const badgeStyle = useTransform(scrollY, [0, 162], {
                           },
                         }"
                         :summoner="summoner ?? undefined" />
-                    </Ping>
+
+                      <!-- MATCH STATUS INDICATOR -->
+                      <motion.div
+                        :style="pingStyle"
+                        class="absolute right-0 bottom-0 grid place-items-center rounded-full bg-[#fff]">
+                        <div
+                          class="absolute z-1 status size-full animate-ping rounded-full bg-(--account-color) saturate-110" />
+                        <div
+                          class="absolute z-2 status size-full rounded-full bg-(--account-color) saturate-110" />
+                      </motion.div>
+                    </div>
                   </motion.div>
                 </motion.div>
                 <div class="grid items-end">
+                  <!-- SUMMONER NAME -->
                   <motion.div
                     :style="headerWrapperStyle"
                     class="inline-flex items-center gap-3 align-middle">
@@ -160,14 +180,29 @@ const badgeStyle = useTransform(scrollY, [0, 162], {
                   </motion.div>
                 </div>
               </div>
+
+              <div class="flex w-full items-center justify-center">
+                <!-- ROUTE TABS -->
+                <UTabs
+                  v-model:model-value="activeRoute"
+                  :items="routes"
+                  :ui="{
+                    list: 'rounded-5xl border border-(--account-dark)/6 bg-(--account-color)/30 ring-0 inset-shadow-(--account-dark)/20',
+                    indicator:
+                      'h-10.5 bg-(--account-color) inset-ring-(--account-dark)/20',
+                    label:
+                      'group-active/trigger:font-semibold group-active/trigger:text-white',
+                  }"
+                  size="xl" />
+              </div>
             </motion.div>
           </motion.div>
         </div>
       </template>
 
-      <motion.div
+      <div
         ref="body"
-        class="absolute inset-0 z-auto size-full overflow-y-auto px-12 pt-82">
+        class="absolute inset-0 z-auto size-full scrollbar-none overflow-y-auto pt-82 pb-12">
         <NuxtPage
           v-if="summoner"
           :champion-key
@@ -175,10 +210,10 @@ const badgeStyle = useTransform(scrollY, [0, 162], {
           :summoner="summoner"
           :style="color" />
 
-        <div class="mt-12 overflow-hidden rounded-6xl drop-shadow-sm">
-          <SiteFooter />
+        <div class="overflow-hidden rounded-6xl drop-shadow-sm">
+          <SiteFooterEnd />
         </div>
-      </motion.div>
+      </div>
     </NuxtLayout>
   </div>
 </template>

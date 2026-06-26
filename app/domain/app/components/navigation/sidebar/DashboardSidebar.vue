@@ -1,24 +1,44 @@
 <script lang="ts" setup>
+import { motion } from "motion-v"
+
 import { sidebarTabItems } from "~/domain/app/constants/sidebar-tabs"
 
 const { settings, hotkeys, account, summoner } = storeToRefs(user())
 
 const collapsed = shallowRef<boolean>(false)
-const query = shallowRef<string | undefined>(undefined)
 
 const tabModel = shallowRef<string | undefined>("menu")
+const sidebar = useTemplateRef<HTMLElement>("sidebar")
 
+const query = shallowRef<string | undefined>(undefined)
 const el = useTemplateRef<HTMLElement>("el")
 const { style } = useScrollShadow(el, {
   size: 30,
 })
+
+provide("sidebarState", { collapsed })
+
+const oldIndex = shallowRef<number>(0)
+const newIndex = shallowRef<number>(0)
+
+function handleTab(e: number) {
+  oldIndex.value = newIndex.value
+  newIndex.value = e
+}
+
+function handleUpdateSidebar(e: string) {
+  handleTab(Object.keys(sidebarTabItems).indexOf(e))
+  tabModel.value = e
+}
+const tab = computed(() => (oldIndex.value > newIndex.value ? "0%" : "-100%"))
 </script>
 
 <template>
   <UDashboardSidebar
+    ref="sidebar"
     v-model:collapsed="collapsed"
     variant="floating"
-    side="right"
+    side="left"
     collapsible
     resizable
     :max-size="34"
@@ -26,67 +46,55 @@ const { style } = useScrollShadow(el, {
     :collapsed-size="8"
     rail
     :ui="{
-      root: '@container gap-8 divide-none overflow-visible bg-p1 p-0 py-12 pr-12 shadow-none ring-0',
-      body: 'overflow-hidden p-0!',
-      header: 'flex h-fit items-center gap-5 py-0 pr-1 pl-0',
+      handle: 'w-12',
+      root: '@container gap-8 divide-none overflow-hidden bg-p1 p-0 py-12 pl-11 shadow-none ring-0',
+      body: 'relative overflow-hidden rounded-6xl bg-p0 p-0! ring ring-p2',
+      header: 'flex h-fit items-center py-0 pr-1 pl-0',
+      footer: 'p-0!',
       //rail: 'mask-y-from-80% mask-y-to-100%',
     }">
     <template #header>
-      <UInput
-        v-model:model-value="query"
-        icon="i-search"
-        label="Search"
-        size="xl"
-        placeholder="Search"
-        variant="outline"
-        :ui="{
-          root: 'grow',
-          base: 'w-full rounded-5xl bg-p0 px-0 align-baseline text-md ring-0! inset-ring-p2 transition-colors duration-300 placeholder:opacity-0 @min-[190px]:placeholder:opacity-100',
-          leadingIcon:
-            'left-0 ml-0 size-5 translate-x-0 align-icon opacity-60 group-hover/btn:opacity-50!',
-        }">
-        <template #trailing>
-          <KbdClear :kbds="hotkeys?.search" size="md" :model-value="query" />
-        </template>
-      </UInput>
-      <HoverIcon
-        type="summoner"
-        :avatar="{
-          ui: {
-            root: '  size-13   justify-self-center  rounded-full ',
-          },
-        }"
-        :summoner="summoner ?? undefined" />
+      <DashboardSidebarHeader
+        @update:sidebar="handleUpdateSidebar($event)"
+        @update:query="query = $event" />
     </template>
-    <UTabs
-      v-model:model-value="tabModel"
-      :items="
-        Object.entries(sidebarTabItems)
-          .filter(([k, _]) => k !== 'separator')
-          .map(([_, v]) => v)
-          .toReversed()
-      "
-      variant="lift"
-      size="xl"
-      :ui="{
-        root: 'flex size-full grow flex-col items-start gap-0 -space-y-1.25! self-start',
-        label: 'hidden',
-        leadingIcon: 'size-4.5',
-        indicator: '-scale-y-100',
-        content: cn(
-          'size-full max-h-[calc(100%-40px)] overflow-y-auto rounded-6xl rounded-tl-6xl! p-0 ring-p2',
-          {
-            'rounded-bl-none': tabModel === 'menu',
-            'rounded-br-none': tabModel === 'settings',
-          }
-        ),
-        list: 'z-2 order-last',
-      }">
-      <template #content>
-        <div ref="el" :style class="flex size-full grow overflow-y-auto px-4!">
-          <component :is="sidebarTabItems[String(tabModel)]?.component" />
-        </div>
-      </template>
-    </UTabs>
+    <div
+      ref="el"
+      :style="sidebarTabItems[String(tabModel)]?.overlay ? style : undefined"
+      class="flex size-full scrollbar-none overflow-y-auto px-4! py-0 **:scrollbar-none">
+      <SidebarTheme>
+        <AnimatePresence mode="popLayout">
+          <motion.div
+            :key="tabModel"
+            class="inset-0 size-full shrink-0 bg-p0"
+            layout-id="sidebar"
+            :initial="{
+              opacity: 0,
+              transitionDelay: 0.15,
+              y: '-0.8rem',
+            }"
+            :animate="{
+              opacity: [0, 1, 1, 1],
+              y: 0,
+            }"
+            :exit="{
+              opacity: [1, 1, 1, 0],
+              y: '0.8rem',
+            }"
+            :transition="{
+              type: 'spring',
+              stiffness: 100,
+              damping: 20,
+              mass: 1.4,
+              duration: 0.15,
+            }">
+            <component :is="sidebarTabItems[String(tabModel)]?.component" />
+          </motion.div>
+        </AnimatePresence>
+      </SidebarTheme>
+    </div>
+    <template #footer>
+      <DashboardSidebarFooter />
+    </template>
   </UDashboardSidebar>
 </template>

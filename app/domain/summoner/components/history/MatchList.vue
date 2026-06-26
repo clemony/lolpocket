@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { VirtualItem } from "@tanstack/vue-virtual"
-import type { ComponentPublicInstance } from "vue"
 import { useVirtualizer } from "@tanstack/vue-virtual"
+import type { ComponentPublicInstance } from "vue"
 import { useProfileScrollBody } from "~/domain/summoner/composables/useProfileScrollBody"
 import {
   getElementScrollMargin,
@@ -33,7 +33,7 @@ type MatchListRow =
     }
 
 const rows = computed<MatchListRow[]>(() => [
-  ...filteredMatches.value.map(match => ({
+  ...filteredMatches.value.map((match) => ({
     key: match.matchId,
     kind: "match" as const,
     match,
@@ -48,7 +48,7 @@ const virtualizer = useVirtualizer(
       rows.value[index]?.kind === "load-more" ? 128 : 156,
     overscan: 3,
     gap: 12,
-    paddingStart: 4,
+    paddingStart: 12,
     paddingEnd: 8,
     isScrollingResetDelay: 120,
     getItemKey: (index: number) => rows.value[index]?.key ?? index,
@@ -61,14 +61,15 @@ const virtualItems = computed(() => virtualizer.value.getVirtualItems())
 const totalSize = computed(() => virtualizer.value.getTotalSize())
 const virtualRows = computed(() =>
   virtualItems.value
-    .map(virtualItem => ({
+    .map((virtualItem) => ({
       row: rows.value[virtualItem.index],
       virtualItem,
     }))
-    .filter((item): item is { row: MatchListRow, virtualItem: VirtualItem } =>
+    .filter((item): item is { row: MatchListRow; virtualItem: VirtualItem } =>
       Boolean(item.row)
     )
 )
+console.log("🥸 - virtualRows:", virtualRows)
 
 function measureScrollMargin() {
   const scrollElement = scrollBody?.value

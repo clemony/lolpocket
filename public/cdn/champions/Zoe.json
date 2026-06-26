@@ -80,7 +80,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/q",
-      "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  More Sparkles!,  Spellblade and triggering  Force Pulse's passive.\nThe recast radius matches the initial cast radius of the ability, but Zoe can move any amount of distance away from the projectile before reactivating.\nPaddle Star!'s effect radius is centered around the location of the missile as it collides.",
+      "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  More Sparkles!,  Spellblade and triggering  Force Pulse's passive.\nThe recast radius matches the initial cast radius of the ability, but Zoe can move any amount of distance away from the projectile before reactivating.\nPaddle Star!'s effect radius is centered around the location of the missile as it collides.\nPaddle Star!'s total damage will be increased for a maximum of 146,6% instead of the expected 150%.(bug)",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "1200 • 2500",

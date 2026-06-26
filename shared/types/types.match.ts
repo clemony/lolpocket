@@ -18,12 +18,12 @@ export interface MatchData {
 export interface MatchFilter {
   ally?: string
   amount?: number
-  champion?: number | null
+  champion?: number
   date?: MaybeRef<DateRange>
   ignorePosition?: boolean
-  patch?: number | null
+  patch?: number
   queue?: number
-  position?: string | null
+  position?: string
 }
 
 export interface MatchTeam {

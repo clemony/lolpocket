@@ -61,6 +61,10 @@ server routes will use Wrangler's dev platform proxy to bind
 and match participant previews into `summoner_cache`. If Wrangler is logged in
 to more than one Cloudflare account, also set `CLOUDFLARE_ACCOUNT_ID`.
 
+`migrations/0003_summoner_match_scan_state.sql` also applies to this database.
+It stores the per-PUUID cooldown state for the optional match analytics cron
+gatherer. It does not store raw match or ranked data.
+
 ### Match Analytics D1 Binding
 
 Riot match analytics uses a separate aggregate-only D1 binding named
@@ -86,6 +90,25 @@ server match routes will use Wrangler's dev platform proxy to bind
 `MATCH_ANALYTICS_DB` to the remote D1 database and persist aggregate match
 analytics during local development. If Wrangler is logged in to more than one
 Cloudflare account, also set `CLOUDFLARE_ACCOUNT_ID`.
+
+### Match Analytics Cron Gatherer
+
+The optional NA match analytics gatherer runs as a Nitro scheduled task in the
+non-Pages Worker build. It reuses `SUMMONER_CACHE_DB` for organic seed PUUIDs
+and scan cooldown state, then writes only aggregate tallies to
+`MATCH_ANALYTICS_DB`.
+
+Enable the cron Worker build with:
+
+```bash
+MATCH_ANALYTICS_CRON=1 pnpm exec nuxi build --preset=cloudflare_module
+```
+
+With `MATCH_ANALYTICS_CRON=1`, Nitro emits the scheduled task
+`riot:match-analytics:gather-na` and the generated Worker Wrangler config
+includes `triggers.crons = ["*/5 * * * *"]`. Deploy that artifact with the
+Worker deploy flow after both D1 bindings are configured. Do not use this
+cron-enabled Worker build as the Cloudflare Pages build.
 
 ### Common 404 Cause
 
