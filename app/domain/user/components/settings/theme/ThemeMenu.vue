@@ -5,7 +5,7 @@ import { accountUpdate } from "~/domain/user/composables/accountUpdate"
 import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
 import {
   getThemeAccentOption,
-  themeAccentOptions
+  themeAccentOptions,
 } from "~/domain/user/utils/theme/themeAccent"
 import {
   colorModes
@@ -41,21 +41,69 @@ const accentItems = themeAccentOptions.map((accent) => ({
   },
 }))
 
-const themeItems = colorModes.map((theme) => ({
-  value: theme === "system" ? systemTheme.value : theme,
-  icon: `i-${theme}`,
-  label: theme,
-  ui: {
-    base: cn(
-      "h-14 rounded-xl p-1",
-      theme === account.value.color ? "pointer-events-none" : ""
-    ),
-    leadingIcon: colorModeIconClass[theme],
-    label: "capitalize"
-  }
-}))
+const themeItems = computed(() =>
+  colorModes.map((theme) => ({
+    value: theme,
+    previewTheme: theme === "system" ? systemTheme.value : theme,
+    icon: `i-${theme}`,
+    label: theme,
+  }))
+)
 
-const open = shallowRef<boolean>(false)
+const themeButtonVariants = {
+  idle: {
+    flexBasis: "1.5rem",
+    flexGrow: 1,
+    flexShrink: 1,
+  },
+  active: {
+    flexBasis: "10.5rem",
+    flexGrow: 1,
+    flexShrink: 1,
+  },
+}
+
+const themeLabelVariants = {
+  hidden: {
+    marginLeft: 0,
+    maxWidth: 0,
+    opacity: 0,
+    display: "absolute",
+  },
+  visible: {
+    marginLeft: "0.5rem",
+    maxWidth: "5rem",
+    display: "block",
+    opacity: 1,
+  },
+}
+const wrapperVariants = {
+  active: {},
+  idle: {},
+}
+const themeMotionTransition = {
+  bounce: 0.18,
+  duration: 0.42,
+  type: "spring",
+}
+
+function isThemeActive(theme: string) {
+  return (settings.value.theme ?? "system") === theme
+}
+
+function getThemeButtonState(theme: string) {
+  return !hoveredTheme.value && isThemeActive(theme) ? "active" : "idle"
+}
+
+function isThemeLabelVisible(theme: string) {
+  return hoveredTheme.value
+    ? hoveredTheme.value === theme
+    : isThemeActive(theme)
+}
+
+function clearHoveredTheme(theme: string) {
+  if (hoveredTheme.value === theme) hoveredTheme.value = null
+}
 
 function setTheme(theme?: string) {
   settingsUpdate(
