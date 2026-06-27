@@ -1,8 +1,11 @@
 <script lang="ts" setup>
+import { PopoverArrow } from "reka-ui"
 import { getSummonerIcon } from "~/domain/utils/img"
+import { asChipColor } from "~/types/typeAssert"
 
 const emit = defineEmits(["update:sidebar"])
-const { settings, hotkeys, account, summoner } = storeToRefs(user())
+const { settings, hotkeys, account, matchStatus, summoner } =
+  storeToRefs(user())
 const query = defineModel<string | undefined>("query", { default: "" })
 const sidebar = shallowRef<HTMLElement>()
 const accountOpen = shallowRef<boolean>(false)
@@ -12,36 +15,53 @@ const accountOpen = shallowRef<boolean>(false)
   <div ref="sidebar" class="flex grow gap-4 px-px">
     <UPopover
       v-model:open="accountOpen"
-      arrow
       :ui="{
-        arrow: '-translate-x-3',
         content:
-          'w-[calc((var(--reka-popper-anchor-width)+var(--reka-popper-available-width))-1rem)] min-w-54 -translate-x-2.5 rounded-4xl p-1.5',
+          'w-[calc(var(--reka-popper-anchor-width)+0.7rem)] min-w-54 -translate-x-1.5 rounded-4xl p-0',
       }"
       :content="{
-        collisionBoundary: sidebar,
-        align: 'end',
+        align: 'start',
+        side: 'top',
         sideOffset: 12,
       }">
       <button
-        class="group flex grow cursor-pointer flex-nowrap items-center justify-start gap-3">
-        <UAvatar
-          size="3xl"
-          :src="summoner?.icon ? getSummonerIcon(summoner?.icon) : undefined"
+        class="group relative flex grow cursor-pointer flex-nowrap items-center justify-start gap-3">
+        <Ping
+          position="bottom-right"
+          size="sm"
           :ui="{
-            root: 'w-fit self-center',
-            image: cn(
-              'transition-transform duration-300 ease-spring group-hover:scale-108',
+            base: cn(
+              '-translate-1 transition-transform duration-300 ease-spring group-hover:-translate-0.5',
               {
-                'scale-130 hover:scale-130': accountOpen,
+                'group-hover:-translate-0.5 -translate-0.5': accountOpen,
               }
             ),
-          }" />
+          }"
+          :color="asChipColor(summoner?.color ?? 'diminuendo')">
+          <UAvatar
+            size="4xl"
+            :src="summoner?.icon ? getSummonerIcon(summoner?.icon) : undefined"
+            :ui="{
+              root: 'w-fit self-center',
+              image: cn(
+                'transition-transform duration-300 ease-spring group-hover:scale-108',
+                {
+                  'scale-110 group-hover:scale-110 hover:scale-110':
+                    accountOpen,
+                }
+              ),
+            }" />
+        </Ping>
         <div
-          class="flex h-14 w-full grow items-center gap-2 rounded-5xl bg-p0 px-3.5 ring ring-p2 group-hover:ring-pc/60">
+          :class="
+            cn(
+              'flex h-14 w-full grow items-center gap-2 rounded-5xl bg-p0 pr-3.5 pl-5 ring ring-p2 group-hover:ring-pc/60',
+              { 'ring-pc/60': accountOpen }
+            )
+          ">
           <div class="flex grow flex-col">
-            <div class="flex grow items-center gap-2">
-              <h6 class="text-md font-semibold text-pc/94">
+            <div class="inline-flex grow items-center gap-2 align-baseline">
+              <h6 class="text-md! font-semibold text-pc/94">
                 {{ summoner?.name ?? "Not Connected" }}
               </h6>
               <span
@@ -51,6 +71,9 @@ const accountOpen = shallowRef<boolean>(false)
                 {{ summoner?.tag }}
               </span>
             </div>
+            <!--<div class="text-start text-xs! leading-none text-n5">
+              {{ matchStatus ? "In Game" : "afk" }}
+            </div>-->
           </div>
           <Icon
             name="i-up-down"
@@ -59,15 +82,19 @@ const accountOpen = shallowRef<boolean>(false)
       </button>
 
       <template #content>
-        <MatchStatus
-          size="xl"
-          :avatar="{
-            size: '2xl',
-          }"
-          tag
-          :trailing-icon="null"
-          component="user"
-          :summoner />
+        <div
+          class="absolute -bottom-4.75 left-3.5 z-9999 grid size-8.5 -scale-y-100 place-items-center mask-b-from-57% mask-b-to-58% drop-shadow-md">
+          <Icon
+            name="caret-up"
+            class="absolute size-8.5 scale-140 text-p4/30" />
+          <Icon name="caret-up" class="absolute size-8.5 text-p0" />
+        </div>
+
+        <ThemeMenu
+          :ui="{
+            root: 'w-full max-w-full overflow-hidden',
+            themeItem: '',
+          }" />
       </template>
     </UPopover>
   </div>

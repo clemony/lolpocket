@@ -4,65 +4,65 @@ export const defaultThemeAccent = "diminuendo"
 
 export const themeAccentOptions = [
   {
-    value: "shadow",
+    value: "n3",
     label: "Shadow",
     description: "Balance is a fool's master.",
-    champion: "Zed"
+    champion: "Zed",
   },
   {
     value: "diminuendo",
     label: "Diminuendo",
     description: "Curtains up. I'm ready.",
-    champion: "Sona"
+    champion: "Sona",
   },
   {
     value: "flow",
     label: "Flow",
     description: "Wash them away.",
-    champion: "Nami"
+    champion: "Nami",
   },
   {
     value: "contaminate",
     label: "Contaminate",
     description: "Aged like a fine egg.",
-    champion: "Twitch"
+    champion: "Twitch",
   },
   {
     value: "whimsy",
     label: "Whimsy",
     description: "Yup, that tasted purple.",
-    champion: "Lulu"
+    champion: "Lulu",
   },
   {
     value: "encore",
     label: "Encore",
     description: "Sit down and listen up!",
-    champion: "Seraphine"
+    champion: "Seraphine",
   },
   {
     value: "onslaught",
     label: "Onslaught",
     description: "Blood is the wine of victory.",
-    champion: "Sion"
+    champion: "Sion",
   },
   {
     value: "cask",
     label: "Cask",
     description: "Need some grog...",
-    champion: "Gragas"
+    champion: "Gragas",
   },
   {
     value: "spark",
     label: "Spark",
     description: "Let's light it up!",
-    champion: "Lux"
+    champion: "Lux",
   },
   {
     value: "legends",
     label: "Legends",
     description: "Legends never die.",
-    champion: ""
-  }
+    champion: "",
+  },
 ] as const
 
 export type ThemeAccent = (typeof themeAccentOptions)[number]["value"]

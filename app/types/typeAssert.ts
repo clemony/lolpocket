@@ -1,5 +1,8 @@
 import type { ChipProps, SelectProps, TabsProps } from "@nuxt/ui"
 
+export const asChipColor = (color: string): ChipProps["color"] =>
+  color as ChipProps["color"]
+
 export function asItem(value: any): Item {
   return value as Item
 }

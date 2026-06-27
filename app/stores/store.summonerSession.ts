@@ -24,10 +24,13 @@ export const sSession = defineStore("summonerSession", () => {
       return getSplashFromSkinKey(account.value.skin, "uncentered")
   })
 
+  const matchStatus = ref<boolean>(true)
+
   return {
     ready,
     lastResolvedKey,
     reset,
+    matchStatus,
     setSummoner,
     summoner,
     account,

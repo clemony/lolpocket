@@ -53,6 +53,8 @@ const menu = computed(() => userMenuItems(close))
 const session = useSupabaseSession()
 const supabaseUser = useSupabaseUser()
 
+const themeOpen = shallowRef<boolean>(false)
+
 const isAdmin = computed(() => {
   const token = !!session.value?.access_token
   return token && supabaseUser.value?.app_metadata?.user_role === "admin"
@@ -87,7 +89,26 @@ const isAdmin = computed(() => {
         <DevOnly><LazyAdminTestMenu v-bind="subProps" /></DevOnly>
 
         <div v-for="(group, i) in menu" :key="i" class="p-1">
-          <LazyThemeMenu v-if="i === 1" v-bind="subProps" />
+          <UPopover
+            v-model:open="themeOpen"
+            v-bind="subProps.popover"
+            :ui="{ content: cn(subProps.popover?.ui?.content, 'pt-2 pb-3') }">
+            <UButton
+              v-bind="subProps.button"
+              :active="open"
+              label="Theme"
+              :ui="{
+                ...subProps.button?.ui,
+                base: cn('order-2', subProps.button?.ui?.base),
+              }"
+              trailing-icon="i-right"
+              icon="i-swatch">
+              <!--  -->
+            </UButton>
+            <template #content>
+              <LazyThemeMenu v-if="i === 1" />
+            </template>
+          </UPopover>
           <UButton
             v-for="item in group"
             :key="item.label"

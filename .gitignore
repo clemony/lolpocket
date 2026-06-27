@@ -64,3 +64,6 @@ d1
 *.js
 *.js.map
 AGENTS.md
+tests/app/match-pagination.spec.ts
+tests/server/riot-match-analytics-gather.spec.ts
+tests/server/riot-match-ids.spec.ts
