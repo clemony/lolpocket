@@ -76,20 +76,7 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
         </div>
       </div>
 
-      <!--
-      export CLOUDFLARE_ACCOUNT_ID=87f3539658f7695e68271ba52328f6c2
-
-pnpm exec wrangler d1 execute summoner_cache \
-  --remote \
-  --file=migrations/0003_summoner_match_scan_state.sql
-
-pnpm exec wrangler d1 execute summoner_cache \
-  --remote \
-  --file=migrations/0004_summoner_match_gather_control.sql
-
-  pnpm exec wrangler d1 execute summoner_cache \
-  --remote \
-  --command="SELECT id, last_status, locked_until, riot_backoff_until FROM summoner_match_gather_control;"
+      <!--"
 
   CHART -->
       <RadialWinrate

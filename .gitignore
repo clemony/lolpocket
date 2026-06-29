@@ -10,6 +10,7 @@ dist
 .scripts
 .agents/skills
 .agents
+tests
 gitignore
 .nuxtrc
 *.cpuprofile
