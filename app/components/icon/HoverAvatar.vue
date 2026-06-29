@@ -1,28 +1,34 @@
 <script lang="ts" setup>
+import { Tooltip, UTooltip } from "#components"
 import type { AvatarProps, TooltipProps } from "@nuxt/ui"
 import { Primitive } from "reka-ui"
 
-const props = defineProps<
-  AvatarProps & {
-    tooltip?: TooltipProps
+const props = defineProps<{
+  avatar?: AvatarProps
+  tooltip?: TooltipProps & {
+    followCursor?: boolean
   }
->()
+  style?: CSSStyleRule
+}>()
 
-const delegated = reactiveOmit(props, "class", "tooltip", "as")
+const delegated = reactiveOmit(props, "style", "tooltip")
 </script>
 
 <template>
-  <Primitive :as="props.as" :class="cn('relative', props?.class)">
-    <UTooltip v-bind="props.tooltip">
-      <UAvatar
-        v-bind="delegated"
-        :style
-        :ui="{
-          ...props.ui,
-          root: cn('hover-3d', props.ui?.root),
-        }" />
-    </UTooltip>
-    <div v-for="i in 8" :key="i" />
-    <slot />
-  </Primitive>
+  <Tooltip as="div" v-bind="props.tooltip">
+    <UAvatar
+      v-bind="delegated"
+      :style
+      :ui="{
+        ...props.avatar?.ui,
+        root: cn(
+          'relative duration-300 ease-spring hover:scale-110',
+          props.avatar?.ui?.root
+        ),
+      }" />
+
+    <template #content>
+      <slot />
+    </template>
+  </Tooltip>
 </template>

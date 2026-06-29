@@ -6,6 +6,7 @@ const query = defineModel<string | undefined>("query", { default: "" })
 
 <template>
   <div ref="sidebar" class="flex grow items-center gap-4 pl-px">
+    <LpLogo :ui="{ base: 'min-w-10!' }" />
     <UInput
       v-model:model-value="query"
       icon="i-search"

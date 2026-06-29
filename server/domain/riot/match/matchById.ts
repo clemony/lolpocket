@@ -1,11 +1,12 @@
+import type { RiotFetchOptions } from "#server/api/riot/fetch"
 import { riotFetch } from '#server/api/riot/fetch'
 import { serverToRegion } from '#server/domain'
 
-export async function matchById(id: string, region: string) {
+export async function matchById(id: string, region: string, fetchOptions?: RiotFetchOptions) {
   const url = `${serverToRegion(region)}/lol/match/v5/matches/${id}`
   const key = `match:${region}:${id}`
 
-  const match = await riotFetch<any>(key, url)
+  const match = await riotFetch<any>(key, url, undefined, fetchOptions)
 
   if (!match || !match.info?.gameEndTimestamp) {
     console.warn('⚠️ invalid match payload for', id, match)

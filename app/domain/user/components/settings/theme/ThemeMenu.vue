@@ -201,7 +201,7 @@ function setAccent(accent?: string) {
       </div>
     </div>
     <Separator class="mt-4 mb-2" />
-    <h6 :class="cn('flex h-8 items-center px-3 opacity-50', props.ui?.label)">
+    <h6 :class="cn('flex h-8 items-center px-5 opacity-50', props.ui?.label)">
       Accent
     </h6>
     <UScrollArea
@@ -211,7 +211,7 @@ function setAccent(accent?: string) {
         root: 'w-full max-w-full scrollbar-none mask-x-from-98% mask-x-to-100% pb-1',
         item: 'last:mr-13',
         viewport: cn(
-          'flex w-full flex-nowrap items-center gap-1.5 px-3 py-0.5',
+          'flex w-full flex-nowrap items-center gap-2 px-5 py-0.5',
           props.ui?.accent
         ),
       }">
@@ -231,7 +231,7 @@ function setAccent(accent?: string) {
               :icon="item.value === themeAccent ? 'i-tick' : ''"
               :ui="{
                 base: cn(
-                  'absolute aspect-square size-8 justify-center rounded-full bg-(--color-accent)! inset-shadow-xs inset-ring-pc/8 transition-transform duration-300 ease-spring hover:scale-110 hover:bg-(--color-accent)! hover:inset-ring-(--color-accent) hover:brightness-110',
+                  'absolute aspect-square size-9! justify-center rounded-full bg-(--color-accent)! inset-shadow-xs inset-ring-pc/8 transition-transform duration-300 ease-spring hover:scale-110 hover:bg-(--color-accent)! hover:inset-ring-(--color-accent) hover:brightness-110',
                   {
                     'inset-ring-pc/60 outline outline-pc/60 -outline-offset-2':
                       item.value === themeAccent,

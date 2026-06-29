@@ -13,7 +13,7 @@ const { row } = defineProps<{
         .slice(0, 3)
         .reverse()"
       :key="item"
-      :avatar="`/img/champion/${champIdByKey(item)}.webp`"
+      :avatar="{ src: `/img/champion/${champIdByKey(item)}.webp` }"
       as-child
       :label="champNameByKey(item)">
       <div
@@ -21,7 +21,7 @@ const { row } = defineProps<{
           cn(
             'z-1 size-max rounded-full ring-3 ring-p0 group-hover/row:ring-p2',
             {
-              'order-first': item === row.original?._champion
+              'order-first': item === row.original?._champion,
             }
           )
         ">
@@ -29,7 +29,7 @@ const { row } = defineProps<{
           size="lg"
           :src="`/img/champion/${champIdByKey(item)}.webp`"
           :ui="{
-            root: 'shadow-sm! drop-shadow-sm!'
+            root: 'shadow-sm! drop-shadow-sm!',
           }" />
       </div>
     </Tooltip>

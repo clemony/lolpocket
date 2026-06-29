@@ -14,7 +14,7 @@ const { row } = defineProps<{
       v-for="item in row.getValue('items')"
       :key="item"
       :disabled="!item"
-      :avatar="`/img/item/${item}.webp`"
+      :avatar="{ src: `/img/item/${item}.webp` }"
       as-child
       :label="itemNameById(item)">
       <div
@@ -22,7 +22,7 @@ const { row } = defineProps<{
         <UAvatar
           size="lg"
           :ui="{
-            root: 'shadow-sm! drop-shadow-sm!'
+            root: 'shadow-sm! drop-shadow-sm!',
           }"
           :src="item ? `/img/item/${item}.webp` : undefined" />
       </div>

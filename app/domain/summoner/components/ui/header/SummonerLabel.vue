@@ -15,7 +15,8 @@ const accountRoute = computed(() => {
 
       <div class="flex w-full flex-col justify-end gap-px">
         <div class="flex items-end gap-3 *:leading-none">
-          <h1 class="font-serif text-2xl! font-bold text-pc/94 drop-shadow-sm">
+          <h1
+            class="font-display text-2xl! font-bold text-pc/94 drop-shadow-sm">
             {{ summoner?.name }}
           </h1>
           <SummonerId :summoner="summoner ?? undefined" type="tag" />

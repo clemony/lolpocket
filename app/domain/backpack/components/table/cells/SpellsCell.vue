@@ -16,7 +16,7 @@ const { row } = defineProps<{
       class="z-1 size-max rounded-full ring-3 ring-p0 group-hover/row:ring-p2">
       <Tooltip
         v-if="spell"
-        :avatar="`/img/spell/${spell}.webp`"
+        :avatar="{ src: `/img/spell/${spell}.webp` }"
         as-child
         :label="spellNameById(Number(spell))">
         <UAvatar

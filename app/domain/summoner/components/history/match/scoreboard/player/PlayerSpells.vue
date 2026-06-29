@@ -15,26 +15,24 @@ const {
 </script>
 
 <template>
-  <UAvatarGroup
-    class=""
-    :ui="{
-      root: cn('relative shrink-0 flex-col -space-y-0.25', className),
-    }">
-    <HoverIcon
+  <div
+    :class="
+      cn(
+        'pointer-events-none relative z-auto flex shrink-0 items-center *:pointer-events-auto',
+        className
+      )
+    ">
+    <HoverAvatar
       v-for="spell in player?.spells.toReversed()"
-      :id="spell"
       :key="spell"
+      :src="`/img/spell/${spell}.webp`"
       :size
-      round
       :avatar="{
         ui: {
-          ...ui,
-          image: cn(
-            'ring ring-transparent ring-offset-3 ring-offset-p1 drop-shadow-none',
-            ui?.image
-          ),
+          root: cn('z-2', ui?.root),
+          image: cn('', ui?.image),
         },
       }"
       type="spell" />
-  </UAvatarGroup>
+  </div>
 </template>

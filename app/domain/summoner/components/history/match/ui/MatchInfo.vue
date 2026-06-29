@@ -9,17 +9,14 @@ const { match, player } = defineProps<{
 </script>
 
 <template>
-  <!-- <div class="flex h-full w-34 shrink-0 items-center gap-2 py-4">
+  <div class="flex h-full w-max shrink-0 items-center gap-2 py-4">
     <div
-      class="flex size-full flex-col justify-start self-center **:antialiased **:select-none">
+      class="flex size-full flex-col justify-start self-end **:antialiased **:select-none">
       <MatchOutcome
-        :class="
-          cn(
-            'text-xl! text-white/86'
-          )
-        "
+        :class="cn('text-end text-xl! text-white/86')"
         :stats="player" />
-      <div class="flex w-full flex-col font-semibold opacity-76 *:text-left">
+      <div
+        class="flex w-full flex-col items-end font-semibold opacity-76 *:text-end">
         <p
           class="flex items-center gap-1.5 text-left text-lg font-bold text-nowrap">
           {{ queueIndex[match?.queueId] || mapNameById(match?.mapId) || "" }}
@@ -39,8 +36,8 @@ const { match, player } = defineProps<{
         </p>
       </div>
     </div>
-  </div> -->
-  <div
+  </div>
+  <!--  <div
     class="inline-flex size-full justify-start self-center **:antialiased **:select-none">
     <MatchOutcome :class="cn('text-xl! text-white/86')" :stats="player" />
     <div class="inline-flex w-full font-semibold opacity-76 *:text-left">
@@ -62,5 +59,5 @@ const { match, player } = defineProps<{
         {{ match.gameDuration.toFixed(2).toString().replace(".", ":") }}
       </p>
     </div>
-  </div>
+  </div>-->
 </template>

@@ -5,7 +5,7 @@ const {
   side = "right",
   class: className,
   link,
-  summoner
+  summoner,
 } = defineProps<{
   summoner: Summoner | Player
   class?: HTMLAttributes["class"]
@@ -17,10 +17,9 @@ const {
 <template>
   <Tooltip
     :key="summoner?.puuid"
-    :ui="{ trailingIcon: 'inline align-bottom leading-none' }"
     :disabled="!summoner"
     :label="`${summoner?.name} #${summoner?.tag}`"
-    :avatar="getSummonerIcon(summoner?.icon)"
+    :avatar="{ src: getSummonerIcon(summoner?.icon) }"
     :side
     :side-offset="['right', 'left'].includes(side) ? 28 : 14">
     <slot />

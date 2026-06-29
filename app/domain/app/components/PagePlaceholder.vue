@@ -61,7 +61,7 @@ onMounted(() => {
         </span>
         <br />
 
-        <span class="font-serif text-2xs/14 font-bold">
+        <span class="font-display text-2xs/14 font-bold">
           In place of content, I offer you a cat fact.
         </span>
       </header>
@@ -84,15 +84,11 @@ onMounted(() => {
       <footer
         class="flex items-center gap-1 text-end text-sm italic *:flex *:items-end *:gap-2">
         <icon class="size-5" name="la:flag-usa" />
-        <p class="text-xs text-pc/70">
-          Brought to you by
-        </p>
+        <p class="text-xs text-pc/70">Brought to you by</p>
         <p class="font-semibold italic antialiased opacity-70">
           Paws for Progress, 2028.
         </p>
-        <p class="text-xss text-pc/70">
-          Refresh in peace.
-        </p>
+        <p class="text-xss text-pc/70">Refresh in peace.</p>
       </footer>
     </article>
   </main>

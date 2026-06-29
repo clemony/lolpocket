@@ -5,7 +5,7 @@ import type {
   InputProps,
   TooltipProps,
 } from "@nuxt/ui"
-import type { AcceptableValue } from "reka-ui"
+import type { AcceptableValue, AsTag } from "reka-ui"
 import type { ShallowRef } from "vue"
 
 export type Side = "top" | "right" | "bottom" | "left"
@@ -45,10 +45,6 @@ export type ClassKey =
 
 export type ChartMode = "scatter" | "heatmap" | "bubble" | "donut"
 
-export type TooltipUi = TooltipProps["ui"] & {
-  trailingIcon?: string
-  label?: string
-}
 export type DomainType =
   | "rune"
   | "item"
@@ -59,11 +55,16 @@ export type DomainType =
   | "keystone"
   | "status"
   | "summoner"
+  | "player"
 
 export interface ButtonPropsExt extends ButtonProps {
   tabindex?: number
 }
-
+export type TooltipUi = TooltipProps["ui"] & {
+  trailingIcon?: string
+  leadingIcon?: HTMLAttributes["class"]
+  label?: string
+}
 export interface TooltipPropsExt extends TooltipProps {
   map?: number
   type?: "static" | "follow"
@@ -74,9 +75,10 @@ export interface TooltipPropsExt extends TooltipProps {
   avatar?: AvatarPropsExt | false
   ui?: TooltipUi
   icon?: string
+  as?: AsTag | string
   sideOffset?: number
   trailingIcon?: string
-  followPointer?: boolean
+  followCursor?: boolean
   inertia?: boolean | number
   label?: string
   title?: string

@@ -15,7 +15,7 @@ const { row } = defineProps<{
       class="z-2 size-max rounded-full ring-3 ring-p0 group-hover/row:ring-p2">
       <Tooltip
         v-if="rowRunes(row)?.keystone"
-        :avatar="`/img/rune/${rowRunes(row)?.keystone}.webp`"
+        :avatar="{ src: `/img/rune/${rowRunes(row)?.keystone}.webp` }"
         as-child
         :text="runeNameById(Number(rowRunes(row)?.keystone))">
         <UAvatar
@@ -28,7 +28,7 @@ const { row } = defineProps<{
       class="z-1 size-max rounded-full ring-3 ring-p0 group-hover/row:ring-p2">
       <Tooltip
         v-if="rowRunes(row)?.secondary.path"
-        :avatar="`/img/path/${rowRunes(row)?.secondary.path}.webp`"
+        :avatar="{ src: `/img/path/${rowRunes(row)?.secondary.path}.webp` }"
         as-child
         :text="pathNameById(Number(rowRunes(row)?.secondary.path))">
         <UAvatar

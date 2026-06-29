@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { SidebarWrapper } from "#components"
 import { backpackItem } from "~/domain/app/utils/menuItems"
+import { asRouteButtonItemArray } from "~/types/typeAssert"
 defineOptions({
   inheritAttrs: false,
 })

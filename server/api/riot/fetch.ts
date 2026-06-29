@@ -1,5 +1,23 @@
 import { $fetch } from "ofetch"
 
+export interface RiotFetchOptions {
+  retryOnRateLimit?: boolean
+}
+
+export class RiotRateLimitError extends Error {
+  retryAfterMs: number
+
+  constructor(retryAfterMs: number) {
+    super(`Riot rate limited; retry after ${Math.ceil(retryAfterMs / 1000)}s`)
+    this.name = "RiotRateLimitError"
+    this.retryAfterMs = retryAfterMs
+  }
+}
+
+export function isRiotRateLimitError(err: unknown): err is RiotRateLimitError {
+  return err instanceof RiotRateLimitError
+}
+
 function getRiotApiKey() {
   const config = useRuntimeConfig()
   const riotApiKey = config.RIOT_API_KEY
@@ -36,7 +54,8 @@ async function rawRiotFetch<T>(url: string, params?: any): Promise<T> {
 export async function riotFetch<T>(
   key: string,
   url: string,
-  params?: any
+  params?: any,
+  options: RiotFetchOptions = {}
 ): Promise<T> {
   const cached = cacheGet<T>(key)
   if (cached) return cached
@@ -54,14 +73,19 @@ export async function riotFetch<T>(
 
       if (status === 429) {
         const retryAfter = Number(err.response.headers.get("retry-after") || 1)
+        const retryAfterMs = retryAfter * 1000
+        if (options.retryOnRateLimit === false) {
+          throw new RiotRateLimitError(retryAfterMs)
+        }
+
         console.warn(`⏳ Riot says wait ${retryAfter}s`)
-        await new Promise((r) => setTimeout(r, retryAfter * 1000))
-        return riotFetch<T>(key, url, params) // recursive retry
+        await new Promise((r) => setTimeout(r, retryAfterMs))
+        return riotFetch<T>(key, url, params, options) // recursive retry
       }
 
       if ([500, 502, 503].includes(status)) {
         await new Promise((r) => setTimeout(r, 500 + Math.random() * 1000))
-        return riotFetch<T>(key, url, params)
+        return riotFetch<T>(key, url, params, options)
       }
 
       // don’t cache failures

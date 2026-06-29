@@ -25,7 +25,7 @@ const emit = defineEmits(["close"])
             'inline-flex h-4 w-full! grow items-center justify-between align-baseline',
           description: 'font-medium',
           container: '',
-          root: 'mx-auto max-w-4xl border-0 px-12 pt-10'
+          root: 'mx-auto max-w-4xl border-0 px-12 pt-10',
         }">
         <template #headline>
           <ULink
@@ -38,7 +38,7 @@ const emit = defineEmits(["close"])
               size="xs"
               :ui="{
                 root: 'mr-2 bg-neutral',
-                image: 'size-5! overflow-visible object-center'
+                image: 'size-5! overflow-visible object-center',
               }" />
             <span class="inline-flex gap-1 align-baseline font-bold">
               {{ post.source }}
@@ -56,7 +56,7 @@ const emit = defineEmits(["close"])
         <template #title>
           <ULink
             :to="post.permalink"
-            class="group/link cursor-pointer font-serif text-[3rem]! font-bold tracking-tight underline decoration-pc/0 drop-shadow-sm transition-colors duration-200 hover:decoration-pc/80">
+            class="group/link font-display cursor-pointer text-[3rem]! font-bold tracking-tight underline decoration-pc/0 drop-shadow-sm transition-colors duration-200 hover:decoration-pc/80">
             {{ post.title }}
             <Icon
               name="i-external"
@@ -131,7 +131,7 @@ const emit = defineEmits(["close"])
           label: 'group-hover/btn:underline',
           leadingIcon: 'size-4',
           base: 'rounded-none pr-8 pl-12 ring-2 inset-ring-0 ring-neutral hover:bg-neutral/98!',
-          trailingIcon: 'size-4 opacity-100'
+          trailingIcon: 'size-4 opacity-100',
         }"
         :label="`View ${post.num_comments} comments on Reddit`" />
     </div>

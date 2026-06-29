@@ -68,7 +68,7 @@ const buttonProps: ButtonProps = {
       <h1
         :class="
           cn(
-            '-translate-y-1 font-serif text-4xl leading-none font-black! normal-case! drop-shadow-2xs!',
+            'font-display -translate-y-1 text-4xl leading-none font-black! normal-case! drop-shadow-2xs!',
             twDropShadow[color]
           )
         ">

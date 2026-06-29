@@ -16,10 +16,10 @@ export const cardSchema = v.nullable(
       "grayscale"
     ),
     font: v.strictTuple([
-      v.fallback(v.string(), "var(--font-serif)"),
-      v.fallback(v.string(), "var(--font-sans)")
+      v.fallback(v.string(), "var(--font-display)"),
+      v.fallback(v.string(), "var(--font-sans)"),
     ]),
-    splash: v.nullable(v.string())
+    splash: v.nullable(v.string()),
   })
 )
 

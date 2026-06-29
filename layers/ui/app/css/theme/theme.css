@@ -60,6 +60,8 @@
   --container-6xl: 1152px;
   --container-7xl: 1280px;
 
+  --shadow-full-sm: ;
+
   --shadow-2xs: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   --drop-shadow-2xs: 1px 0px 0px rgba(0, 0, 0, 0.1);
   --inset-shadow-2xs: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -92,22 +94,22 @@
   --animate-click-sm: click-sm 100ms ease-in-out;
 
   --animate-shift-toward-top-enter: shift-toward-top-enter 120ms
-    ease-var(--ease-in-quint);
+    var(--ease-in-quint);
   --animate-shift-toward-top-exit: shift-toward-top-exit 140ms
-    ease-var(--ease-in-quint);
+    var(--ease-in-quint);
 
   --animate-shift-toward-bottom-enter: shift-toward-bottom-enter 120ms
-    ease-var(--ease-in-quint);
+    var(--ease-in-quint);
   --animate-shift-toward-bottom-exit: shift-toward-bottom-exit 140ms
-    ease-var(--ease-in-quint);
+    var(--ease-in-quint);
 
   --animate-shift-toward-left-enter: shift-toward-left-enter 120ms
-    ease-var(--ease-in-quint);
+    var(--ease-in-quint);
   --animate-shift-toward-left-exit: shift-toward-left-exit 140ms
-    ease-var(--ease-in-quint);
+    var(--ease-in-quint);
 
   --animate-shift-toward-right-enter: shift-toward-right-enter 120ms
     var(--ease-in-quint);
   --animate-shift-toward-right-exit: shift-toward-right-exit 140ms
-    ease-var(--ease-in-quint);
+    var(--ease-in-quint);
 }

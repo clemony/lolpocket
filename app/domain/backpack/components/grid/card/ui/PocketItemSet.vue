@@ -4,7 +4,7 @@ import { useItemDisplaySet } from "~/domain/utils/display/itemDisplaySet"
 const {
   class: className,
   pocket,
-  position
+  position,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   pocket: Pocket
@@ -21,7 +21,7 @@ const itemSet = computed(() => useItemDisplaySet(pocket, position).value)
       as-child
       :disabled="!itemSet?.quest"
       :label="itemSet?.quest ? itemNameById(itemSet.quest) : undefined"
-      :avatar="itemSet?.src ?? ''">
+      :avatar="{ src: itemSet?.src ?? '' }">
       <FoilLayer
         class="z-2 order-first overflow-hidden rounded-full ring-3 ring-p0"
         :disabled="!itemSet?.src">
@@ -36,7 +36,7 @@ const itemSet = computed(() => useItemDisplaySet(pocket, position).value)
               itemSet?.quest ? '' : ''
             ),
             image:
-              'pointer-events-none shadow-sm drop-shadow-sm transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-104!'
+              'pointer-events-none shadow-sm drop-shadow-sm transition-all duration-500 ease-spring-soft group-hover/hover-card:scale-104!',
           }" />
       </FoilLayer>
     </Tooltip>
@@ -53,19 +53,19 @@ const itemSet = computed(() => useItemDisplaySet(pocket, position).value)
           size="lg"
           :ui="{
             root: 'shrink-0 gap-1 overflow-visible p-0.5',
-            base: 'pointer-events-auto! relative z-2 overflow-visible border border-p2 bg-p2 ring-3 transition-colors duration-600 group-hover/card:bg-p3'
+            base: 'pointer-events-auto! relative z-2 overflow-visible border border-p2 bg-p2 ring-3 transition-colors duration-600 group-hover/card:bg-p3',
           }">
           <Tooltip
             v-for="item in itemSet.set"
             :key="item"
             :disabled="!item"
             :label="item ? itemNameById(item) : undefined"
-            :avatar="item ? `/img/item/${item}.webp` : ''"
+            :avatar="{ src: item ? `/img/item/${item}.webp` : '' }"
             as-child>
             <UAvatar
               :ui="{
                 root: 'transition-all duration-600! ease-spring-soft hover:z-5 hover:scale-110',
-                image: 'brightness-105 contrast-90'
+                image: 'brightness-105 contrast-90',
               }"
               :src="item ? `/img/item/${item}.webp` : undefined"
               icon="i-ui-none" />

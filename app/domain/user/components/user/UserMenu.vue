@@ -50,7 +50,7 @@ const tag = ref(false)
             background: `url(${splash})`,
             backgroundSize: '114%',
             backgroundPositionY: '10%',
-            backgroundRepeat: 'no-repeat'
+            backgroundRepeat: 'no-repeat',
           }"
           :alt="`${author?.name}'s Splash`">
           <UBadge
@@ -67,7 +67,7 @@ const tag = ref(false)
         <div class="flex items-center gap-3 px-2 pb-2">
           <div
             class="inline flex-wrap justify-between space-x-2 pl-22 align-middle">
-            <h2 class="inline font-serif text-xl! leading-3 drop-shadow-2xs">
+            <h2 class="font-display inline text-xl! leading-3 drop-shadow-2xs">
               {{
                 props.author?.name || author?.username || "Mysterious Summoner"
               }}

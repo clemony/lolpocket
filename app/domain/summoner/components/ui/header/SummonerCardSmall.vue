@@ -7,7 +7,7 @@ const {
   fullWidth,
   variant = "none",
 
-  class: className
+  class: className,
 } = defineProps<
   PrimitiveProps & {
     class?: HTMLAttributes["class"]
@@ -36,7 +36,7 @@ const summoner = computed(() => s)
     <div class="flex size-full flex-col justify-center gap-0.5">
       <div class="flex items-center justify-between">
         <h1
-          class="font-serif text-2xl leading-none font-bold text-pc/94 drop-shadow-sm">
+          class="font-display text-2xl leading-none font-bold text-pc/94 drop-shadow-sm">
           {{ summoner?.name }}
         </h1>
         <slot />

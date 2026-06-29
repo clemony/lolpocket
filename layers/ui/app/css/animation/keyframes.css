@@ -72,21 +72,21 @@
 @keyframes shift-toward-left-enter {
   from {
     opacity: 0;
-    transform: translateX(-8px);
+    transform: translateX(-10%);
   }
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
-@keyframes shift-toward-right-exit {
+@keyframes shift-toward-left-exit {
   from {
     opacity: 1;
     transform: translateX(0);
   }
   to {
     opacity: 0;
-    transform: translateX(-8px);
+    transform: translateX(-10%);
   }
 }
 

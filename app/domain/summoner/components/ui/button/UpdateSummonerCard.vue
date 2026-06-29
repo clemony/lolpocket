@@ -13,7 +13,7 @@ const s = safeObject(summoner)
     :ui="{
       body: 'grid grow! place-items-center pt-5! pb-3!',
       root: 'noise grid size-full cursor-pointer place-items-center gap-0 space-y-0! overflow-hidden bg-p0/40 p-0! shadow-none drop-shadow-none',
-      footer: 'grid max-h-10! min-h-10 w-full items-center! gap-2 px-3! pt-0!'
+      footer: 'grid max-h-10! min-h-10 w-full items-center! gap-2 px-3! pt-0!',
     }">
     <UpdateSummoner
       v-slot="{ cooldown, disabled, timeRemaining, isLoading, text }"
@@ -25,9 +25,9 @@ const s = safeObject(summoner)
             base: cn(
               'btn-custom group/label relative grid size-21 place-items-center overflow-visible! rounded-full ring-offset-p3 transition-all duration-200 ease-spring-soft hover:ring-1! hover:ring-pc/40! hover:ring-offset-3',
               {
-                'pointer-events-none': disabled
+                'pointer-events-none': disabled,
               }
-            )
+            ),
           }"
           class="">
           <div
@@ -35,7 +35,7 @@ const s = safeObject(summoner)
             :style="{
               '--value': cooldown?.percent ? 100 - (cooldown?.percent || 0) : 0,
               '--size': '4.5rem',
-              '--thickness': '0.3rem'
+              '--thickness': '0.3rem',
             }"
             :aria-valuenow="
               cooldown?.percent ? 100 - (cooldown?.percent || 0) : 0
@@ -54,7 +54,7 @@ const s = safeObject(summoner)
                 cooldown?.seconds
                   ? 'animate-out scale-out fade-out opacity-0'
                   : 'animate-in scale-in fade-in'
-              )
+              ),
             }"
             :src="getSummonerIcon(s?.icon)" />
 
@@ -77,7 +77,7 @@ const s = safeObject(summoner)
                 leadingIcon: cn(
                   'transition-[rotate_600ms_ease-out] duration-200 group-hover/label:rotate-360',
                   { 'animate-rotate repeat-infinite': isLoading }
-                )
+                ),
               }" />
           </div>
         </UButton>
@@ -86,7 +86,7 @@ const s = safeObject(summoner)
 
     <div class="mt-3 flex flex-col items-center">
       <div class="inline items-center align-baseline">
-        <span class="font-serif text-3xl leading-none font-bold normal-case!">
+        <span class="font-display text-3xl leading-none font-bold normal-case!">
           {{ s?.name }}
         </span>
         <span

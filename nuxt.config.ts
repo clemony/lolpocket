@@ -47,10 +47,7 @@ const matchAnalyticsD1Databases = matchAnalyticsD1DatabaseId
       },
     ]
   : []
-const d1Databases = [
-  ...summonerCacheD1Databases,
-  ...matchAnalyticsD1Databases
-]
+const d1Databases = [...summonerCacheD1Databases, ...matchAnalyticsD1Databases]
 const cloudflareWranglerConfig = {
   ...(d1Databases.length
     ? {
@@ -229,7 +226,7 @@ export default defineNuxtConfig({
         weights: [300, 400, 500, 600, 700, 800, 900],
       },
       {
-        name: "Source Code Pro",
+        name: "Gelasio",
       },
       {
         name: "Playfair Display",

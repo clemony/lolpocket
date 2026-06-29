@@ -5,12 +5,12 @@ const h1Variants = {
   animate: {
     maxWidth: 0,
     letterSpacing: "-0.5em",
-    opacity: 0
+    opacity: 0,
   },
   initial: {
     maxWidth: "100%",
-    opacity: 1
-  }
+    opacity: 1,
+  },
 }
 
 const h1Visibility = {
@@ -20,8 +20,8 @@ const h1Visibility = {
     transition: {
       delay: 1.5,
       duration: 0.4,
-      ease: "linear"
-    }
+      ease: "linear",
+    },
   },
   initial: {
     opacity: 1,
@@ -29,9 +29,9 @@ const h1Visibility = {
     transition: {
       delay: 1.5,
       duration: 0.4,
-      ease: "linear"
-    }
-  }
+      ease: "linear",
+    },
+  },
 }
 </script>
 
@@ -49,7 +49,7 @@ const h1Visibility = {
           :transition="{
             duration: 0.4,
             delay: 2,
-            ease: 'linear'
+            ease: 'linear',
           }">
           ol
         </motion.h1>
@@ -62,7 +62,7 @@ const h1Visibility = {
           :transition="{
             duration: 0.4,
             delay: 2,
-            ease: 'linear'
+            ease: 'linear',
           }"
           animate="animate">
           ocket
@@ -78,12 +78,12 @@ const h1Visibility = {
       <div class="flex items-center gap-2 drop-shadow-sm">
         <h1 class="text-5xl!">lolpocket</h1>
 
-        <span class="font-serif text-xl italic">noun</span>
+        <span class="font-display text-xl italic">noun</span>
       </div>
 
       <p class="o mb-3 px-1">[ lohl - pok - it ]</p>
 
-      <div class="mt-6 flex flex-col gap-4 font-serif text-xl drop-shadow-sm">
+      <div class="font-display mt-6 flex flex-col gap-4 text-xl drop-shadow-sm">
         <p class="">
           A pocket to store your League picks, builds, and theorycrafts.
         </p>

@@ -3,7 +3,7 @@ const {
   id,
   side,
   class: className,
-  loadingType
+  loadingType,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   id?: number | null
@@ -19,13 +19,13 @@ const runeName = computed(() => (id ? runeNameById(id) : undefined))
     trailing-icon="i"
     :side
     :label="runeName ?? ''"
-    :avatar="id ? `/img/rune/${id}.webp` : undefined"
+    :avatar="{ src: id ? `/img/rune/${id}.webp` : undefined }"
     :class="
       cn(
         'relative grid aspect-square size-17 h-full place-items-center overflow-hidden rounded-full border border-p2 bg-p2/30 p-0 transition-all duration-300',
         {
           'inset-shadow-sides border border-black/60 shadow-sm shadow-black/20 inset-shadow-black/60 drop-shadow-sm':
-            loaded
+            loaded,
         },
         className
       )
@@ -41,7 +41,7 @@ const runeName = computed(() => (id ? runeNameById(id) : undefined))
       :alt="runeName ?? 'rune icon'"
       :class="
         cn('size-full rounded-full transition-all duration-300', {
-          'scale-108': loaded
+          'scale-108': loaded,
         })
       "
       @load="loaded = true" />

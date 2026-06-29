@@ -35,10 +35,13 @@ const list = computed<PairedAlly[]>(() =>
       }
     })
 )
+
+const listbox = useTemplateRef<HTMLElement & { div: HTMLDivElement }>("listbox")
 </script>
 
 <template>
   <UListbox
+    ref="listbox"
     v-model:model-value="model"
     v-model:search-term="query"
     :state="open"
@@ -69,66 +72,71 @@ const list = computed<PairedAlly[]>(() =>
     :highlight-on-hover="false"
     value-key="puuid"
     :ui="{
-      root: 'min-h-max w-full rounded-5xl! border-p2 bg-p0 shadow-sm ring-0! inset-ring-0 shadow-black/4 drop-shadow-none has-focus-visible:outline-0!',
-      content: 'h-max max-h-100',
+      root: 'flex max-h-100 min-h-max grow rounded-5xl! border-p2 bg-p0/98 shadow-sm ring-0! inset-ring-0 shadow-black/4 drop-shadow-none has-focus-visible:outline-0!',
+      content: 'h-max max-h-100 grow',
       group: 'flex flex-col gap-y-1',
-      item: 'grid! w-full max-w-full shrink-0 cursor-pointer grid-flow-col grid-cols-[30px_1fr_0.3fr]! justify-start gap-3 overflow-hidden rounded-3xl! p-3 duration-0! checked:bg-(--account-color)/60 checked:ring checked:ring-pc/60 hover:bg-(--account-color)/30! data-highlighted:not-data-disabled:before:bg-(--account-color)/20!',
+      item: 'flex w-full shrink-0 grow cursor-pointer overflow-hidden rounded-4xl! p-0! duration-0! checked:bg-(--account-color)/60 checked:ring checked:ring-pc/60 hover:bg-(--account-color)/30! data-highlighted:not-data-disabled:before:bg-(--account-color)/20!',
     }"
     :items="list"
     :multiple="false"
     @highlight.stop.prevent>
     <template #item="{ item }">
       <LazyUTooltip
-        arrow
         :disable-hoverable-content="true"
         :content="{ side: 'top' }"
-        :ui="{ content: 'h-max! w-84' }">
-        <div class="relative">
-          <UAvatar
-            size="xl"
-            :src="getSummonerIcon(item.icon)"
-            icon="i-lol-champ"
-            :ui="{
-              root: 'z-0',
-              image: cn(
-                'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
-                model && item.puuid !== model ? 'grayscale opacity-90' : ''
-              ),
-            }" />
+        :ui="{
+          content:
+            'bg-overlay z-1 h-max! w-(--reka-popper-anchor-width) rounded-4xl text-pc shadow-none! ring-p2 drop-shadow-md before:absolute before:inset-0 before:z-0 before:size-full before:-scale-y-100 before:rounded-4xl before:shadow-sm before:shadow-black/5',
+        }">
+        <div
+          class="flex w-full max-w-full grow flex-nowrap justify-start gap-3 p-3">
+          <div class="relative size-min shrink-0">
+            <UAvatar
+              size="xl"
+              :src="getSummonerIcon(item.icon)"
+              icon="i-lol-champ"
+              :ui="{
+                root: 'z-0',
+                image: cn(
+                  'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
+                  model && item.puuid !== model ? 'grayscale opacity-90' : ''
+                ),
+              }" />
 
-          <UAvatar
-            size="xs"
-            :src="`/img/champion/${item.bestPair?.[0]?.championId}.webp`"
-            icon="i-lol-champ"
-            :ui="{
-              root: 'absolute -right-2 -bottom-0.75 z-1 border-2! border-p0',
-              image: cn(
-                'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
-                model && item.puuid !== model ? 'grayscale opacity-90' : ''
-              ),
-            }" />
-        </div>
-        <div class="grid h-full items-center justify-start text-start">
-          <div class="inline-flex gap-1 align-baseline">
+            <UAvatar
+              size="xs"
+              :src="`/img/champion/${item.bestPair?.[0]?.championId}.webp`"
+              icon="i-lol-champ"
+              :ui="{
+                root: 'absolute -right-2 -bottom-0.75 z-1 border-2! border-p0',
+                image: cn(
+                  'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
+                  model && item.puuid !== model ? 'grayscale opacity-90' : ''
+                ),
+              }" />
+          </div>
+
+          <div
+            class="inline-flex w-full max-w-full grow gap-1 self-center align-baseline">
             <span class="truncate text-md! font-semibold text-pc">
               {{ item.name }}
             </span>
-            <span class="inline-flex gap-0 text-xs! text-n5">
+            <span class="inline-flex gap-0 truncate text-xs! text-n5">
               <Icon name="i-hash" class="mt-0.75 size-3.25 text-n5" />
               {{ item.tag }}
             </span>
           </div>
-        </div>
 
-        <template v-if="item.games">
-          <div
-            class="grid justify-end justify-self-end text-end text-xs! tabular-nums">
-            <span class="font-bold tabular-nums">
-              {{ roundDecimalToPercent(Number(item.win), item.games) }}%
-            </span>
-            <span class="text-xs! text-n5"> {{ item.games }} games </span>
-          </div>
-        </template>
+          <template v-if="item.games">
+            <div
+              class="flex w-28 shrink-0 flex-col items-end self-end text-end text-xs! tabular-nums">
+              <span class="font-bold tabular-nums">
+                {{ roundDecimalToPercent(Number(item.win), item.games) }}%
+              </span>
+              <span class="text-xs! text-n5"> {{ item.games }} games </span>
+            </div>
+          </template>
+        </div>
         <template #content>
           <LazyAllyPairTooltip :item />
         </template>
@@ -138,7 +146,7 @@ const list = computed<PairedAlly[]>(() =>
       <div
         v-for="i in 5"
         :key="i"
-        class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost">
+        class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center btn-ghost py-1.5 opacity-60">
         <LazyUSkeleton class="size-8.5 rounded-full" />
 
         <LazyUSkeleton class="h-9 w-full" />

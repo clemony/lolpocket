@@ -1,3 +1,4 @@
+import type { RiotFetchOptions } from "#server/api/riot/fetch"
 import { riotFetch } from '#server/api/riot'
 import { serverToRegion } from '#server/domain'
 
@@ -6,12 +7,14 @@ import { serverToRegion } from '#server/domain'
 export function idsByPuuid({
   puuid,
   count,
+  fetchOptions,
   queue,
   region,
   start,
 }: {
   puuid: string
   count: number
+  fetchOptions?: RiotFetchOptions
   queue?: string | number
   region: string
   start: number
@@ -21,6 +24,6 @@ export function idsByPuuid({
   const params = { count, queue, start }
 
   const key = `ids:${region}:${puuid}:${queue ?? "all"}:${start}:${count}`
-  return riotFetch<string[]>(key, url)
+  return riotFetch<string[]>(key, url, undefined, fetchOptions)
   /*   return riotFetch<string[]>(key, url, params) */
 }

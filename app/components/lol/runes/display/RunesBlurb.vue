@@ -12,34 +12,34 @@ const pathDescriptions: Record<PathKey, RuneBlurb> = [
   {
     name: "Precision",
     description: "Improved attacks and sustained damage",
-    tag: "Become a Legend"
+    tag: "Become a Legend",
   },
   {
     name: "Domination",
     description: "Burst damage and target access",
-    tag: "Hunt and Eliminate Prey"
+    tag: "Hunt and Eliminate Prey",
   },
   {
     name: "Sorcery",
     description: "Empowered abilities and resource manipulation",
-    tag: "Unleash Destruction"
+    tag: "Unleash Destruction",
   },
   {
     name: "Resolve",
     description: "Durability and crowd control",
-    tag: "Live Forever"
+    tag: "Live Forever",
   },
   {
     name: "Inspiration",
     description: "Creative tools and rule bending",
-    tag: "Outwit Mere Mortals"
+    tag: "Outwit Mere Mortals",
   },
 
   {
     name: "",
     description: "Precision, Domination, Sorcery, Resolve, Inspiration",
-    tag: "Select a Path"
-  }
+    tag: "Select a Path",
+  },
 ]
 
 const a = computed(() => {
@@ -60,7 +60,7 @@ const a = computed(() => {
       </span>
     </div>
 
-    <p class="mt-2.5 font-serif text-lg">
+    <p class="font-display mt-2.5 text-lg">
       {{
         a?.description ||
         "Precision, Domination, Sorcery, Resolve, Inspiration"

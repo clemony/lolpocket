@@ -21,7 +21,7 @@ const props = withDefaults(defineProps<AvatarProps & AvatarWrapperProps>(), {
     disabled: false,
   }),
 })
-//i-eos-icons-hourglass
+
 const emit = defineEmits(["loaded"])
 const tt = computed(() => safeObject(props.tooltip))
 const ap = computed(() => props)
@@ -131,7 +131,7 @@ const ui = computed<NonNullable<AvatarProps["ui"]>>(
     :disabled="tt.disabled"
     :align="tooltipAlign"
     :align-offset="tooltipAlignOffset"
-    :avatar="hasSrc ? resolvedSrc || '' : undefined"
+    :avatar="{ src: hasSrc ? resolvedSrc || '' : undefined }"
     :ui="{
       content: cn('group/avatar h-fit! max-h-110! w-full max-w-100', {
         ' px-2 rounded-[0.7rem]': isPinned,

@@ -6,6 +6,7 @@ const { match, player } = defineProps<{
 </script>
 
 <template>
+  j
   <!--  <div class="mr-1 flex h-max w-69 shrink-0 flex-col gap-2">
     <div class="flex max-h-15 w-full items-start">
       <!~~ champ image ~~>
@@ -52,36 +53,4 @@ const { match, player } = defineProps<{
         @click.stop />
     </div>
   </div>-->
-  <div class="mr-1 flex h-max w-69 shrink-0 gap-2">
-    <!-- items -->
-    <!-- grow -->
-    <Grow />
-    <!--   kda -->
-    <PlayerKDA :match :player />
-
-    <div
-      v-if="player"
-      class="player-items flex size-full shrink-0 items-center gap-1">
-      <HoverIcon
-        v-for="(item, i) in player.items.slots"
-        :id="item"
-        :key="`${item}${i}`"
-        type="item"
-        :map="match.mapId"
-        size="lg"
-        :disabled="!item || item === 0"
-        @click.stop />
-
-      <HoverIcon
-        v-if="match.mapId === 11"
-        :id="player.items.role"
-        type="item"
-        :map="match.mapId"
-        size="lg"
-        :ui="{
-          root: 'ml-2 rounded-full',
-        }"
-        @click.stop />
-    </div>
-  </div>
 </template>

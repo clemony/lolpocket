@@ -29,31 +29,34 @@ const isOpen = ref(false)
         content: 'bg-p0',
       }">
       <UButton
+        :style="{
+          '--status': `var(--color-${player?.win === 'remake' ? 'p3' : player?.win === true ? 'insp' : 'dom'})`,
+        }"
+        block
         color="transparent"
         :ui="{
           base: cn(
-            'relative border-p3/70 bg-linear-to-b to-transparent to-63% bg-cover bg-clip-padding **:select-none',
-            'growcursor-pointer pointer-events-auto relative z-2 h-40! min-h-36! overflow-hidden pr-4 pl-5 shadow-none ring-0! fx-0 open:rounded-b-none hover:ring-0 data-[state=open]:border-b-0!',
-            'before:pointer-events-none before:absolute before:left-0 before:z-3 before:h-full before:w-1/2 before:rounded-5xl before:border-x before:border-t-0 before:border-b-2 before:mask-r-from-0 before:opacity-40 before:shadow-sm before:shadow-black',
-            player?.win === 'remake'
-              ? 'from-p3 before:border-p3'
-              : player?.win === true
-                ? 'from-insp/80 after:to-insp/80 before:border-insp-offset'
-                : 'from-dom/80  after:to-dom/80 before:border-dom'
+            'relative bg-linear-to-l from-(--status)/80 to-transparent to-63% bg-cover bg-clip-padding **:select-none',
+            //
+            'pointer-events-auto relative z-2 h-40! min-h-36! grow pr-4 pl-5 shadow-none ring-0! fx-0 open:rounded-b-none hover:ring-0 data-[state=open]:border-b-0!',
+            //
+            //'after:to-(--status)/80',
+            //
+            'before:y-0 before:pointer-events-none before:absolute before:right-0 before:z-3 before:h-full before:w-3/4 before:rounded-5xl before:border-x before:border-t-0 before:border-b-2 before:border-pc/30 before:mask-l-from-0 before:opacity-40 before:mix-blend-darken before:shadow-sm before:shadow-black'
           ),
         }">
         <div
-          class="flex grow items-center justify-between gap-6 text-sm text-pc">
+          class="flex grow items-center justify-between gap-4 text-sm text-pc">
           <PlayerLoadout :match :player />
-          <div class="flex grow flex-col gap-2">
-            <MatchInfo :match :player />
-            <PlayerMatchCardInfo :match :player />
-          </div>
 
-          <!-- <TeamsCardOverview :match />-->
-          <div class="grid w-8 grow place-items-center">
-            <CaretFlip />
-          </div>
+          <Grow />
+          <TeamsCardOverview :match />
+          <MatchInfo :match :player />
+        </div>
+        <div class="absolute bottom-1 rounded-full px-2.5">
+          <Icon
+            name="i-up"
+            class="transition-rotate size-5 text-(--status)! group-open/collapse:-rotate-180" />
         </div>
       </UButton>
 

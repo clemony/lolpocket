@@ -164,6 +164,11 @@
 }
 
 @theme inline {
+  --color-overlay: color-mix(
+    in oklab,
+    var(--color-p1) 40%,
+    var(--color-p0) 50%
+  );
   --color-epic: var(--ui-epic);
   --color-base: var(--ui-base);
   --color-border: var(--ui-border);

@@ -47,13 +47,9 @@ const entries = computed(() => [
 </script>
 
 <template>
-  <motion.div ref="body" class="z-auto grid grow grid-cols-[1fr_2.2fr] gap-12">
+  <motion.div ref="body" class="z-auto flex grow gap-12">
     <div
-      class="[container-type:scroll-state] sticky -top-160 flex h-max w-full flex-col items-center gap-8 pt-12">
-      <div
-        class="flex flex-col gap-8 transition-opacity duration-300 stuck-top:opacity-0">
-        <LazyRankCard v-for="entry in entries" :key="entry.label" :entry />
-      </div>
+      class="@container/filter [container-type:scroll-state] sticky -top-52 flex h-max max-w-120 grow basis-1/4 flex-col items-center gap-8 pt-12">
       <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->
 
       <QueueFilters class="" />
@@ -62,8 +58,13 @@ const entries = computed(() => [
 
       <LazyMatchAlliesFilter />
     </div>
-    <div class="z-auto flex w-full grow flex-col gap-10 pt-8">
+    <div class="z-auto flex grow flex-col gap-10 pt-8">
       <LazyMatchList />
+    </div>
+
+    <div
+      class="z-auto flex max-w-44 min-w-34 basis-1/5 flex-col gap-8 pt-12 *:-translate-x-1">
+      <LazyRankCard v-for="entry in entries" :key="entry.label" :entry />
     </div>
   </motion.div>
 </template>

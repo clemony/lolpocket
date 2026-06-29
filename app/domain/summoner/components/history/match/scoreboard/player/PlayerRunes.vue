@@ -1,14 +1,18 @@
 <script lang="ts" setup>
 import { runeIndex } from "#shared/constants/runes/runeIndex"
+import type { AvatarProps } from "@nuxt/ui"
 
-const { class: className, player } = defineProps<{
-  player: Player
-  class?: HTMLAttributes["class"]
-}>()
-const s = computed(() => player?.runes?.secondary.path)
+const props = defineProps<
+  AvatarProps & {
+    player: Player
+    class?: HTMLAttributes["class"]
+    ui?: AvatarProps["ui"]
+  }
+>()
+const s = computed(() => props.player?.runes?.secondary.path)
 
 const keystone = computed(() =>
-  runeIndex.find((r) => r.id === player.runes?.keystone)
+  runeIndex.find((r) => r.id === props.player.runes?.keystone)
 )
 </script>
 
@@ -16,24 +20,34 @@ const keystone = computed(() =>
   <div
     :class="
       cn(
-        'mx-2 flex size-full w-max shrink-0 flex-col items-center gap-0.75',
-        className
+        'pointer-events-none z-auto flex size-full shrink-0 flex-col items-center gap-1.5 *:pointer-events-auto',
+        props.class
       )
     ">
-    <HoverIcon
-      :id="keystone?.id ?? undefined"
-      size="sm"
-      type="keystone"
+    <HoverAvatar
+      size="md"
+      :src="`/img/rune/${keystone?.id}.webp`"
       :avatar="{
-        ui: { image: 'size-9' }
+        ui: {
+          root: cn('z-2 bg-p3! shadow-sm ring! ring-p4/70', props.ui?.root),
+          image: cn('', props.ui?.image),
+          ...props.ui,
+        },
       }" />
 
-    <HoverIcon
-      v-if="player?.runes?.secondary.path"
-      :id="s"
+    <HoverAvatar
+      v-if="props.player?.runes?.secondary.path"
+      :src="`/img/path/${s}.webp`"
       size="xs"
       :avatar="{
-        ui: { root: 'translate-x-px ' }
+        ui: {
+          ...props.ui,
+          root: cn(
+            'z-2 bg-n2! p-0.75 ring ring-n5 drop-shadow-xs',
+            props.ui?.root
+          ),
+          image: cn('object-contain', props.ui?.image),
+        },
       }"
       type="path" />
   </div>

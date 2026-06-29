@@ -6,6 +6,7 @@ import type {
   UserProps,
 } from "@nuxt/ui"
 import { userMenuItems } from "~/domain/user/utils/user/userMenuItems"
+import { asDropdownItem } from "~/types/typeAssert"
 
 type AvatarSize = ButtonProps["size"] | UserProps["size"]
 

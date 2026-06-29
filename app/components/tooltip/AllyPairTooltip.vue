@@ -47,9 +47,27 @@ const chart = computed(() => ({
 </script>
 
 <template>
-  <div class="grid auto-rows-auto gap-3 px-1 pt-2 pb-3">
+  <div class="grid auto-rows-auto gap-3 px-1 pt-2.5 pb-2">
+    <div class="-mb-0.5 flex items-center gap-3 px-1">
+      <UAvatar
+        :src="`/img/champion/${item.bestPair?.[0]?.championId}.webp`"
+        size="3xl"
+        icon="i-lol-champ" />
+      <div class="flex flex-col gap-0.75">
+        <div class="inline-flex items-center font-serif text-2xl leading-none">
+          {{ item.name }}
+        </div>
+        <span class="font-mono text-xs leading-none tracking-wide text-n5/80">
+          &&thinsp;{{ sSession().summoner?.name }} &#x30FB; synergy
+        </span>
+      </div>
+    </div>
+    <p
+      class="pt-1.5 text-xs font-normal! text-pretty whitespace-normal text-n5"
+      v-html="bestPairDescription(item)" />
+
     <div
-      class="-mb-1 grid grid-cols-4 place-items-center items-center gap-x-4 gap-y-1 border-b border-b-n3 py-1 pr-1">
+      class="grid grid-cols-4 place-items-center items-center gap-x-4 gap-y-1 border-t border-p2 pt-2 pr-1">
       <div
         v-for="([k, v], i) in Object.entries(chart)"
         :key="k"
@@ -63,34 +81,12 @@ const chart = computed(() => ({
                 : 'justify-center'
           )
         ">
-        <div class="text-xl font-bold tabular-nums">
+        <div class="text-center text-lg tabular-nums">
           {{ v }}
         </div>
-        <div class="text-2xs capitalize">
+        <div class="font-mono text-2xs tracking-wide text-n5 uppercase">
           {{ k }}
         </div>
-      </div>
-    </div>
-    <p
-      class="border-b border-b-n3 pt-1 pb-2 text-2xs font-normal! text-pretty whitespace-normal text-p5">
-      <Icon
-        name="i-info"
-        class="-mt-0.25 mr-1 inline size-4 align-middle text-p5" />
-      <span v-html="bestPairDescription(item)" />
-    </p>
-    <div class="-mb-0.5 flex items-center justify-between px-1">
-      <LazyUAvatarGroup :ui="{ base: 'ring-n1', root: 'gap-x-2' }">
-        <UAvatar
-          v-for="(c, i) in item.bestPair"
-          :key="i"
-          :src="`/img/champion/${c.championId}.webp`"
-          size="2xs"
-          icon="i-lol-champ" />
-      </LazyUAvatarGroup>
-      <div class="inline-flex items-center gap-1 font-bold">
-        {{ item.name }}
-        <Icon name="i-x" class="mt-0.5 inline size-3.75 text-nc" />
-        {{ sSession().summoner?.name }}
       </div>
     </div>
   </div>

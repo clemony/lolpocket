@@ -20,7 +20,7 @@ const { settings, hotkeys, account, summoner } = storeToRefs(user())
     <UDashboardPanel
       resizable
       :ui="{
-        root: 'inset-0 flex flex-1 grow p-0',
+        root: 'inset-0 flex flex-1 grow flex-row-reverse p-0',
         body: cn(
           'relative flex h-screen w-full shrink-0 flex-col gap-0! overflow-hidden py-0!'
         ),

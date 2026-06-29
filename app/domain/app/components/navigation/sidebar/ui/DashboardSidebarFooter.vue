@@ -12,20 +12,24 @@ const accountOpen = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <div ref="sidebar" class="flex grow gap-4 px-px">
+  <div
+    ref="sidebar"
+    v-motion="{ layout: 'size' }"
+    class="flex h-13 w-full shrink-0 justify-center gap-4 px-px">
     <UPopover
       v-model:open="accountOpen"
       :ui="{
         content:
-          'w-[calc(var(--reka-popper-anchor-width)+0.7rem)] min-w-54 -translate-x-1.5 rounded-4xl p-0',
+          'w-[calc(var(--reka-popper-anchor-width)+0.7rem)] min-w-64 -translate-x-1.5 rounded-5xl p-0',
       }"
       :content="{
         align: 'start',
         side: 'top',
-        sideOffset: 12,
+        sideOffset: 14,
       }">
       <button
-        class="group relative flex grow cursor-pointer flex-nowrap items-center justify-start gap-3">
+        v-motion="{ layout: 'size' }"
+        class="group relative grid w-full max-w-min cursor-pointer grid-flow-col grid-cols-[45px_1px] items-center gap-3 @min-[150px]:max-w-full @min-[150px]:grid-cols-[45px_1fr]">
         <Ping
           position="bottom-right"
           size="sm"
@@ -55,18 +59,19 @@ const accountOpen = shallowRef<boolean>(false)
         <div
           :class="
             cn(
-              'flex h-14 w-full grow items-center gap-2 rounded-5xl bg-p0 pr-3.5 pl-5 ring ring-p2 group-hover:ring-pc/60',
+              'relative hidden h-14 w-full items-center justify-start gap-2 overflow-hidden rounded-5xl bg-p0 pr-9 pl-5 text-start ring ring-p2 transition-discrete duration-200 group-hover:ring-pc/60 @max-[139px]:-translate-x-3.5 @max-[139px]:opacity-0 @min-[140px]:flex @min-[140px]:-translate-x-0 @min-[140px]:opacity-100',
               { 'ring-pc/60': accountOpen }
             )
           ">
-          <div class="flex grow flex-col">
-            <div class="inline-flex grow items-center gap-2 align-baseline">
-              <h6 class="text-md! font-semibold text-pc/94">
+          <div class="min-w-0 overflow-hidden">
+            <div
+              class="inline-flex w-full max-w-full min-w-0 items-center gap-2 truncate align-baseline">
+              <span class="text-md! font-semibold text-pc/94">
                 {{ summoner?.name ?? "Not Connected" }}
-              </h6>
+              </span>
               <span
                 v-if="summoner?.tag"
-                class="inline-flex items-center gap-px align-baseline text-xs! text-n5">
+                class="inline-flex items-center gap-px truncate align-baseline text-xs! text-n5">
                 <Icon name="i-hash" class="size-3 align-icon text-n5" />
                 {{ summoner?.tag }}
               </span>
@@ -77,19 +82,21 @@ const accountOpen = shallowRef<boolean>(false)
           </div>
           <Icon
             name="i-up-down"
-            class="size-4.5 opacity-50 group-hover:opacity-100" />
+            class="absolute right-3.5 size-4.5 opacity-50 group-hover:opacity-100" />
         </div>
       </button>
 
       <template #content>
         <div
-          class="absolute -bottom-4.75 left-3.5 z-9999 grid size-8.5 -scale-y-100 place-items-center mask-b-from-57% mask-b-to-58% drop-shadow-md">
+          class="absolute -bottom-4.75 left-4.5 z-9999 grid size-8.5 -scale-y-100 place-items-center mask-b-from-57% mask-b-to-58%">
           <Icon
-            name="caret-up"
-            class="absolute size-8.5 scale-140 text-p4/30" />
-          <Icon name="caret-up" class="absolute size-8.5 text-p0" />
+            name="i-fluent-caret-up-12-filled"
+            class="absolute size-9.5 scale-140 text-p3/80" />
+          <Icon
+            name="i-fluent-caret-up-12-filled"
+            class="absolute size-9.5 text-p0" />
         </div>
-
+        <!--i-fluent-caret-up-12-filled-->
         <ThemeMenu
           :ui="{
             root: 'w-full max-w-full overflow-hidden',

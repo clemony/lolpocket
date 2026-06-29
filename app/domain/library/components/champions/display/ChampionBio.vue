@@ -8,7 +8,7 @@ console.log("💠 - champion.positions[0]:", champion.positions[0])
 <template>
   <div class="flex flex-col gap-6 px-6 pt-7 pb-3">
     <div class="flex items-end justify-between gap-4">
-      <h1 class="font-serif drop-shadow-2xs">
+      <h1 class="font-display drop-shadow-2xs">
         {{ champion.fullName || champion.name }}
       </h1>
 

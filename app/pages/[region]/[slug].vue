@@ -160,7 +160,7 @@ const badgeStyle = useTransform(scrollY, [0, 162], {
                   <motion.div
                     :style="headerWrapperStyle"
                     class="inline-flex items-center gap-3 align-middle">
-                    <motion.h1 :style="h1Style" class="font-serif">
+                    <motion.h1 :style="h1Style" class="font-display">
                       {{ summoner?.name }}
                     </motion.h1>
                     <motion.span

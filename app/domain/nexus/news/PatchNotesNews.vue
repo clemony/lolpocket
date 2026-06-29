@@ -24,7 +24,7 @@ const img = useImage()
     :style="backgroundStyles"
   >
     <div class="z-2 w-full text-white text-shadow-md">
-      <h3 class="font-serif text-5xl font-black">
+      <h3 class="font-display text-5xl font-black">
         {{ ogData.title }}
       </h3>
 

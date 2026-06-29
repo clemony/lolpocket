@@ -1,12 +1,7 @@
 <script lang="ts" setup>
-import { SidebarWrapper } from "#components"
-import type { ArrayOrNested } from "@nuxt/ui"
 import { backpackItem } from "~/domain/app/utils/menuItems"
-import type {
-  ButtonRouteItem,
-  RouteGroup,
-  RouteItem,
-} from "~/types/route.types"
+import type { ButtonRouteItem, RouteGroup } from "~/types/route.types"
+import { asRouteButtonItemArray } from "~/types/typeAssert"
 defineOptions({
   inheritAttrs: false,
 })
@@ -59,7 +54,9 @@ const groups = computed<
 </script>
 
 <template>
-  <div class="z-1 flex h-max grow flex-col gap-y-5 pt-5 pb-8 pl-2">
+  <div
+    v-motion="{ layout: 'size' }"
+    class="z-1 flex h-max grow flex-col gap-y-5 pt-5 pb-8 pl-2">
     <h2 class="mb-2 font-bold">Navigation</h2>
     <DashboardCollapsible v-for="(group, i) in groups" :key="i" :group />
   </div>

@@ -43,6 +43,7 @@ const tab = computed(() => (oldIndex.value > newIndex.value ? "0%" : "-100%"))
     resizable
     :max-size="34"
     :default-size="28"
+    :min-size="16"
     :collapsed-size="8"
     rail
     :ui="{
@@ -68,6 +69,7 @@ const tab = computed(() => (oldIndex.value > newIndex.value ? "0%" : "-100%"))
             :key="tabModel"
             class="inset-0 size-full shrink-0 bg-p0"
             layout-id="sidebar"
+            layout="size"
             :initial="{
               opacity: 0,
               transitionDelay: 0.15,

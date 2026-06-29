@@ -21,7 +21,7 @@
 }
 
 /* Element-level data states */
-@custom-variant open (&[data-state="open"],&[data-open="true"] );
+@custom-variant open (&[data-state="open"], &[data-open="true"], &[data-state="instant-open"], &[data-state="delayed-open"] );
 @custom-variant hover-open (&[data-state="open"]);
 @custom-variant closed (&[data-state="closed"]);
 @custom-variant hover-closed (&[data-state="closed"]);
@@ -63,3 +63,8 @@
       &[data-state="unchecked"],
       &[data-state="closed"]
    );
+
+@custom-variant left (&[data-side="left"]);
+@custom-variant right (&[data-side="right"]);
+@custom-variant top (&[data-side="top"]);
+@custom-variant bottom (&[data-side="bottom"]);

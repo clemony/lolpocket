@@ -84,13 +84,15 @@ const arrowProps = computed(() =>
 const disabled = computed(
   () => !(props.text || !!slots.content) || props.disabled
 )
+
+const open = shallowRef<boolean>(false)
 </script>
 
 <template>
   <TooltipRoot
-    v-slot="{ open }"
-    :disable-closing-trigger
     v-bind="forwarded"
+    v-model:open="open"
+    :disable-closing-trigger
     :disabled>
     <TooltipTrigger
       v-if="!!slots.default || !!props.reference"
@@ -107,14 +109,15 @@ const disabled = computed(
         data-slot="content"
         :class="
           cn(
-            'group/tt pointer-events-auto isolate z-[677] inline-flex min-h-7.5 cursor-default items-center gap-1 rounded-lg bg-p0/30 p-0 align-baseline text-sm font-medium text-p0 shadow-none ring ring-p5/70 backdrop-blur-[18px] backdrop-saturate-150 select-none',
+            'group/tt pointer-events-auto isolate z-[677] inline-flex min-h-7.5 origin-(--reka-tooltip-content-transform-origin) cursor-default items-center gap-1 rounded-lg bg-p0/30 p-0 align-baseline text-sm font-medium text-p0 shadow-none ring ring-p5/30 backdrop-saturate-150 select-none before:backdrop-blur-[18px]',
+            'motion-reduce:animate-none motion-reduce:transition-none',
             props.ui?.content
           )
         ">
         <div
           :class="
             cn(
-              'relative z-1 inline-flex h-7.5 min-h-7.5 origin-(--reka-tooltip-content-transform-origin) items-center gap-1 rounded-lg px-3 py-1.5 transition-[opacity,transform] duration-110 ease-out group-data-[state=closed]/tt:scale-95 group-data-[state=closed]/tt:opacity-0 group-data-[state=delayed-open]/tt:scale-100 group-data-[state=delayed-open]/tt:opacity-100 motion-reduce:transform-none motion-reduce:transition-none',
+              'relative z-1 inline-flex h-7.5 min-h-7.5 origin-(--reka-tooltip-content-transform-origin) items-center gap-1 rounded-lg px-3 py-1.5',
               props.ui?.surface
             )
           ">

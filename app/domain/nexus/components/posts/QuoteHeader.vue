@@ -4,7 +4,7 @@ const { title } = defineProps<{
 }>()
 
 const fontClass =
-  "h-max w-full overflow-hidden   pb-1 font-serif text-6xl leading-9 font-medium text-wrap text-nc"
+  "h-max w-full overflow-hidden   pb-1 font-display text-6xl leading-9 font-medium text-wrap text-nc"
 </script>
 
 <template>

@@ -64,7 +64,7 @@ const rune = computed(() => {
         <div
           id="runeStats"
           :key="`${rune.name}3`"
-          class="mt-1 text-justify font-serif text-[0.76rem] whitespace-pre-line first-letter:float-left first-letter:mr-1.5 first-letter:text-4xl first-letter:font-bold first-line:font-bold first-line:tracking-widest first-line:uppercase">
+          class="font-display mt-1 text-justify text-[0.76rem] whitespace-pre-line first-letter:float-left first-letter:mr-1.5 first-letter:text-4xl first-letter:font-bold first-line:font-bold first-line:tracking-widest first-line:uppercase">
           {{ rune.stats }}
         </div>
       </div>

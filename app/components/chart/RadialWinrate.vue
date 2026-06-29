@@ -24,7 +24,7 @@ const {
   size?: number
   color?: string
   ui?: Record<string, HTMLAttributes["class"]>
-  tooltip?: TooltipProps
+  tooltip?: TooltipProps | null
   winrate?: boolean
   label?: LabelOptions
 }>()
@@ -126,46 +126,33 @@ const wr = computed(() => {
       </text>
     </svg>
     <!-- PROGRESS BAR -->
-    <Tooltip
-      :flip="false"
-      :pin="true"
-      interactive
-      arrow
-      as-child
-      v-bind="tooltip"
-      :disabled="!tooltip">
-      <div
-        v-motion="{
-          whileHover: {
-            scale: '101%',
-            filter: 'brightness(114%)',
-          },
-          transition: {
-            type: 'spring',
-            bounce: 0.2,
-            duration: 0.6,
-          },
-        }"
-        :class="cn('radial-progress', ui?.progress)"
-        :style="{
-          '--value': wr || 0,
-          '--size': sizing,
-          scale: '100%',
-          '--thickness': `calc(${thickness} * 1px)`,
-          filter: 'brightness(100%)',
-          color: color
-            ? `var(--color-${color})`
-            : wr
-              ? `var(--color-${winrateColor(wr)})`
-              : 'var(--color-p3)',
-        }"
-        :aria-valuenow="wr || 0"
-        role="progressbar" />
-
-      <template #content>
-        <slot name="content" />
-      </template>
-    </Tooltip>
+    <div
+      v-motion="{
+        whileHover: {
+          scale: '102%',
+          filter: 'brightness(114%)',
+        },
+        transition: {
+          type: 'spring',
+          bounce: 0.2,
+          duration: 0.6,
+        },
+      }"
+      :class="cn('radial-progress hover:brightness-114', ui?.progress)"
+      :style="{
+        '--value': wr || 0,
+        '--size': sizing,
+        scale: '100%',
+        '--thickness': `calc(${thickness} * 1px)`,
+        filter: 'brightness(100%)',
+        color: color
+          ? `var(--color-${color})`
+          : wr
+            ? `var(--color-${winrateColor(wr)})`
+            : 'var(--color-p3)',
+      }"
+      :aria-valuenow="wr || 0"
+      role="progressbar" />
 
     <!-- CENTER LABEL -->
     <span
@@ -179,7 +166,7 @@ const wr = computed(() => {
           ui?.label
         )
       ">
-      {{ label?.text || wr || 0 }}
+      {{ label?.text || wr || "" }}
     </span>
   </div>
 </template>

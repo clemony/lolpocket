@@ -10,6 +10,30 @@ export const themeAccentOptions = [
     champion: "Zed",
   },
   {
+    value: "onslaught",
+    label: "Onslaught",
+    description: "Blood is the wine of victory.",
+    champion: "Sion",
+  },
+  {
+    value: "cask",
+    label: "Cask",
+    description: "Need some grog...",
+    champion: "Gragas",
+  },
+  {
+    value: "spark",
+    label: "Spark",
+    description: "Let's light it up!",
+    champion: "Lux",
+  },
+  {
+    value: "legends",
+    label: "Legends",
+    description: "Legends never die.",
+    champion: "",
+  },
+  {
     value: "diminuendo",
     label: "Diminuendo",
     description: "Curtains up. I'm ready.",
@@ -38,30 +62,6 @@ export const themeAccentOptions = [
     label: "Encore",
     description: "Sit down and listen up!",
     champion: "Seraphine",
-  },
-  {
-    value: "onslaught",
-    label: "Onslaught",
-    description: "Blood is the wine of victory.",
-    champion: "Sion",
-  },
-  {
-    value: "cask",
-    label: "Cask",
-    description: "Need some grog...",
-    champion: "Gragas",
-  },
-  {
-    value: "spark",
-    label: "Spark",
-    description: "Let's light it up!",
-    champion: "Lux",
-  },
-  {
-    value: "legends",
-    label: "Legends",
-    description: "Legends never die.",
-    champion: "",
   },
 ] as const
 

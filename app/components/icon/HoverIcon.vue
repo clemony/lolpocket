@@ -105,6 +105,11 @@ const types: Record<DomainType, ResolvedType> = {
     src: getSummonerIcon(summoner?.icon) ?? "",
     props: { summoner },
   },
+  player: {
+    label: champNameById(Number(id)) ?? "",
+    src: `/img/champion/${id}.webp`,
+    component: undefined,
+  },
 }
 
 const item = computed<ResolvedType>(() => safeObject(types[type as DomainType]))

@@ -42,7 +42,7 @@ const list = computed(() => [...(champions.value?.values?.() ?? [])])
       root: 'min-h-max w-full rounded-5xl! border-p2 bg-p0 shadow-sm ring-0! inset-ring-0 shadow-black/4 drop-shadow-none has-focus-visible:outline-0!',
       content: 'h-max max-h-100',
       group: 'flex flex-col gap-y-1',
-      item: 'grid! w-full max-w-full shrink-0 grid-flow-col grid-cols-[30px_0.8fr_1fr_0.6fr]! justify-start gap-3 overflow-hidden rounded-xl p-3 duration-0! checked:bg-(--account-color)/60 checked:ring checked:ring-pc/60 hover:bg-(--account-color)/30! data-highlighted:not-data-disabled:before:bg-(--account-color)/20!',
+      item: 'grid! w-full max-w-full shrink-0 grid-flow-col grid-cols-[30px_0.8fr_1fr_0.6fr]! justify-start gap-3 overflow-hidden rounded-4xl! p-3 duration-0! checked:bg-(--account-color)/60 checked:ring checked:ring-pc/60 hover:bg-(--account-color)/30! data-highlighted:not-data-disabled:before:bg-(--account-color)/20!',
     }"
     :items="list"
     :multiple="false"
@@ -91,7 +91,7 @@ const list = computed(() => [...(champions.value?.values?.() ?? [])])
       <div
         v-for="i in 5"
         :key="i"
-        class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost">
+        class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center btn-ghost py-1.5 opacity-60">
         <LazyUSkeleton class="size-8.5 rounded-full" />
 
         <LazyUSkeleton class="h-9 w-full" />

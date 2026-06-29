@@ -47,7 +47,7 @@ const selectedSpell = computed(
             label="{ content: spell.name, theme: 'neutral' }"
             class="size-fit">
             <label
-              class="btn size-27 cursor-pointer! px-2.5 py-2 btn-ghost hover:border-p3 hover:bg-p2 has-checked:border-p3 has-checked:bg-p3/70 has-checked:shadow-sm">
+              class="btn size-27 cursor-pointer! btn-ghost px-2.5 py-2 hover:border-p3 hover:bg-p2 has-checked:border-p3 has-checked:bg-p3/70 has-checked:shadow-sm">
               <img
                 class="peer-checked:borderneutral/90 size-22 rounded-lg border border-p3 shadow-sm inset-shadow-sm shadow-black/20"
                 :alt="selectedSpell.name.toString()"
@@ -66,7 +66,7 @@ const selectedSpell = computed(
           v-if="selectedSpell.description"
           :key="selectedSpell.name"
           class="pr-3 pl-4.5">
-          <p class="font-serif text-lg leading-9 drop-shadow-2xs">
+          <p class="font-display text-lg leading-9 drop-shadow-2xs">
             {{ selectedSpell.description }}
           </p>
 
