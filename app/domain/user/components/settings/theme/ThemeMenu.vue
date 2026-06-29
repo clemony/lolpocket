@@ -5,18 +5,11 @@ import { accountUpdate } from "~/domain/user/composables/accountUpdate"
 import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
 import {
   getThemeAccentOption,
-  thimport type { PopoverProps } from "@nuxt/ui"
-import { accountUpdate } from "~/domain/user/composables/accountUpdate"
-import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
-import {
-  getThemeAccentOption,
   themeAccentOptions
 } from "~/domain/user/utils/theme/themeAccent"
 import {
-  colorModeIconClass,
   colorModes
 } from "~/domain/user/utils/theme/themeBase"
-/user/utils/theme/themeBase"
 
 const props = defineProps<{
   ui?: {

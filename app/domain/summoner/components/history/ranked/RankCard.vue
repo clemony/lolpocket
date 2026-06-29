@@ -76,8 +76,7 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
         </div>
       </div>
 
-      <!--"
-dfdfdffdfd
+      <!--
   CHART -->
       <RadialWinrate
         v-if="entry"
