@@ -1,11 +1,8 @@
 import {
   getThemeAccentOption,
-  themeAccentOptions
+  themeAccentOptions,
 } from "~/domain/user/utils/theme/themeAccent"
-import {
-  colorModeIconClass,
-  colorModes
-} from "~/domain/user/utils/theme/themeBase"
+import { colorModes, themeIconClass } from "~/domain/user/utils/theme/themeBase"
 
 export const themeMenu = () => {
   const themePreference = useThemePreference()
@@ -26,8 +23,8 @@ export const themeMenu = () => {
         "relative h-10 rounded-xl p-0!",
         accent.value === currentAccent.value.value ? "pointer-events-none" : ""
       ),
-      label: "capitalize"
-    }
+      label: "capitalize",
+    },
   }))
 
   const modeItems = colorModes.map((mode) => ({
@@ -42,12 +39,12 @@ export const themeMenu = () => {
         "h-14 rounded-xl p-1"
         //mode === preference ? "pointer-events-none" : ""
       ),
-      leadingIcon: colorModeIconClass[mode],
-      label: "capitalize"
-    }
+      leadingIcon: themeIconClass[mode],
+      label: "capitalize",
+    },
   }))
   return {
     theme: modeItems,
-    accent: accentItems
+    accent: accentItems,
   }
 }

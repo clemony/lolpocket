@@ -20,8 +20,9 @@ const pingColor = computed<PingColor>(
   () => (props.summoner?.color ?? "diminuendo") as PingColor
 )
 // todo match status hook this up this is a good comment
-const matchStatus = shallowRef<boolean>(true)
 function refreshMatchStatus() {}
+
+const { matchStatus } = storeToRefs(sSession())
 </script>
 
 <template>

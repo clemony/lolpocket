@@ -1,5 +1,11 @@
 <script lang="ts" setup>
-import type { PopoverProps } from "@nuxt/ui"
+import { motion } from "motion-v"
+
+import { accountUpdate } from "~/domain/user/composables/accountUpdate"
+import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
+import {
+  getThemeAccentOption,
+  thimport type { PopoverProps } from "@nuxt/ui"
 import { accountUpdate } from "~/domain/user/composables/accountUpdate"
 import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
 import {
@@ -10,14 +16,15 @@ import {
   colorModeIconClass,
   colorModes
 } from "~/domain/user/utils/theme/themeBase"
+/user/utils/theme/themeBase"
 
 const props = defineProps<{
-  button: ButtonPropsExt
-  popover: PopoverProps
+  ui?: {
+    root?: HTMLAttributes["class"]
+  }
 }>()
 
-const { account: acc, settings: sett } = storeToRefs(user())
-const account = computed(() => safeObject(acc.value))
+const { settings: sett } = storeToRefs(user())
 const settings = computed(() => safeObject(sett.value))
 
 const themePreference = useThemePreference()
@@ -25,6 +32,7 @@ const systemTheme = useSystemThemeValue()
 
 const themeAccent = useThemeAccentPreference()
 const currentAccent = computed(() => getThemeAccentOption(themeAccent.value))
+const hoveredTheme = ref<string | null>(null)
 
 const accentItems = themeAccentOptions.map((accent) => ({
   value: accent.value,
@@ -36,8 +44,8 @@ const accentItems = themeAccentOptions.map((accent) => ({
       "relative h-10 rounded-xl p-0!",
       accent.value === currentAccent.value.value ? "pointer-events-none" : ""
     ),
-    label: "capitalize"
-  }
+    label: "capitalize",
+  },
 }))
 
 const themeItems = colorModes.map((theme) => ({
@@ -165,8 +173,6 @@ function setAccent(accent?: string) {
       }">
       <template #default="{ item }">
         <UTooltip
-          v-for="(item, i) in accentItems"
-          :key="i"
           as-child
           disable-hoverable-content
           :text="item.label"
@@ -193,24 +199,17 @@ function setAccent(accent?: string) {
               @click="setAccent(item.value)" />
           </div>
           <template #content>
-            <div class="p-1">
+            <div class="inline-flex items-center gap-1">
+              <UAvatar
+                icon="i-riot"
+                :ui="{
+                  root: 'bg-n3',
+                  icon: 'size-3.5 text-nc',
+                }"
+                :src="`/img/champion/${champIdByName(item.champion)}.webp`"
+                size="2xs" />
               <div class="text-sm font-semibold text-nc">
                 {{ item.label }}
-              </div>
-              <p class="my-1 text-xs font-normal! opacity-70">
-                "{{ item.description }}"
-              </p>
-              <div class="mb-1 flex items-center justify-end gap-2 text-end">
-                <span class="text-xs font-normal! italic opacity-70">
-                  —{{ item.champion }}
-                </span>
-                <UAvatar
-                  icon="i-riot"
-                  :ui="{
-                    icon: 'size-3.5 text-nc'
-                  }"
-                  :src="`/img/champion/${champIdByName(item.champion)}.webp`"
-                  size="2xs" />
               </div>
             </div>
           </template>

@@ -1,8 +1,11 @@
 <script lang="ts" setup>
+import { PopoverArrow } from "reka-ui"
 import { getSummonerIcon } from "~/domain/utils/img"
+import { asChipColor } from "~/types/typeAssert"
 
 const emit = defineEmits(["update:sidebar"])
-const { settings, hotkeys, account, summoner } = storeToRefs(user())
+const { settings, hotkeys, account, matchStatus, summoner } =
+  storeToRefs(user())
 const query = defineModel<string | undefined>("query", { default: "" })
 const sidebar = shallowRef<HTMLElement>()
 const accountOpen = shallowRef<boolean>(false)
@@ -15,9 +18,7 @@ const accountOpen = shallowRef<boolean>(false)
     class="flex h-13 w-full shrink-0 justify-center gap-4 px-px">
     <UPopover
       v-model:open="accountOpen"
-      arrow
       :ui="{
-        arrow: '-translate-x-3',
         content:
           'w-[calc(var(--reka-popper-anchor-width)+0.7rem)] min-w-64 -translate-x-1.5 rounded-5xl p-0',
       }"
@@ -75,6 +76,9 @@ const accountOpen = shallowRef<boolean>(false)
                 {{ summoner?.tag }}
               </span>
             </div>
+            <!--<div class="text-start text-xs! leading-none text-n5">
+              {{ matchStatus ? "In Game" : "afk" }}
+            </div>-->
           </div>
           <Icon
             name="i-up-down"

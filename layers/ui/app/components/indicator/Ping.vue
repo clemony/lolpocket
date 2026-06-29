@@ -35,7 +35,10 @@ const size = computed(() => {
 <template>
   <UChip
     v-bind="delegated"
-    :ui="{ ...props.ui, base: cn('ring-0', props.ui?.base) }">
+    :ui="{
+      root: cn('relative', props.ui?.root),
+      base: cn('ring-0', props.ui?.base),
+    }">
     <template #content>
       <motion.div
         :style="props.motion"
