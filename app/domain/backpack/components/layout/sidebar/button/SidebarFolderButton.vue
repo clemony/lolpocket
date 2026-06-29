@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { editFolderIcon } from "~/domain/backpack/utils/folder/editFolder"
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 
 const props = defineProps<{
@@ -19,8 +19,7 @@ const button = computed(() => toValue(props.folder.button))
 const editing = shallowRef<boolean>(false)
 const userStore = user()
 
-function handleEdit(event: string | undefined) {
-  if (!event) return
+function handleEdit(event: string) {
   userStore.updateFolderName(item.value.id, event)
   editing.value = false
 }
@@ -78,7 +77,7 @@ const { sidebarFolderRefs } = storeToRefs(pocketStore())
               base: 'anchor max-w-9 shadow-none drop-shadow-none hover:bg-p0! hover:inset-shadow-xs disabled:bg-transparent! disabled:inset-ring-0!',
               leadingIcon: 'trailing-icon mx-0!',
               trailingIcon:
-                'group-disabled/btn:opacity-100 hover:text-nc hover:opacity-100',
+                'group-disabled/btn:opacity-100 hover:text-nc hover:opacity-100'
             }"
             @click.stop.prevent="
               sidebarFolderRefs[item.id] = !sidebarFolderRefs[item.id]

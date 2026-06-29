@@ -17,8 +17,7 @@ const store = pocketStore()
 const editing = shallowRef<boolean>(false)
 const button = computed(() => item.value.button?.value)
 
-function handleEdit(event: string | undefined) {
-  if (!event) return
+function handleEdit(event: string) {
   store.updatePocketName(props.item.key, event)
   editing.value = false
 }

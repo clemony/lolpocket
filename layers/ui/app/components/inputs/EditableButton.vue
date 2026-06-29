@@ -25,8 +25,8 @@ const input = computed(() => element.value?.input)
 
 const { focused } = useFocus(input)
 
-const modelValue = defineModel<string | undefined>("modelValue", {
-  default: "",
+const modelValue = defineModel("modelValue", {
+  default: ""
 })
 
 function randomizeLabel() {
@@ -62,7 +62,7 @@ onClickOutside(element, (event: MouseEvent) => precheck(event))
 onKeyStroke("escape", (e) => precheck(e))
 onKeyDown("enter", (e) => precheck(e))
 defineExpose({
-  modelValue: readonly(computed(() => modelValue.value)),
+  modelValue: readonly(computed(() => modelValue.value))
 })
 </script>
 
@@ -76,7 +76,7 @@ defineExpose({
     <template #trailing>
       <div class="flex w-fit! shrink-0 items-center gap-px">
         <LazyInputClear
-          v-if="modelValue && modelValue.length"
+          v-if="modelValue.length"
           @pointerdown.prevent.stop
           @clear-input="modelValue = ''" />
 
@@ -88,7 +88,7 @@ defineExpose({
             color="neutral"
             :ui="{
               base: 'max-size-7! size-7! max-w-7! min-w-7! rounded-md',
-              leadingIcon: 'text-nc!',
+              leadingIcon: 'text-nc!'
             }"
             @pointerdown.prevent.stop
             @click.stop.prevent="randomizeLabel()" />
@@ -101,7 +101,7 @@ defineExpose({
             v-bind="action"
             size="xs"
             :ui="{
-              base: 'max-size-6! size-6! max-w-6! min-w-6! rounded-sm',
+              base: 'max-size-6! size-6! max-w-6! min-w-6! rounded-sm'
             }"
             @pointerdown.prevent.stop
             @click.stop.prevent="action.onClick">

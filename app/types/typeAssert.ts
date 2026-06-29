@@ -40,9 +40,6 @@ export function asString(value: unknown) {
 export const asChipColor = (color: string): ChipProps["color"] =>
   color as ChipProps["color"]
 
-export const asChipColor = (color: string): ChipProps["color"] =>
-  color as ChipProps["color"]
-
 export function asItem(value: any): Item {
   return value as Item
 }

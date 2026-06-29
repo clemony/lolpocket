@@ -5,7 +5,7 @@ const {
   items,
   ui,
   modelValue: mv,
-  multiple = true,
+  multiple = true
 } = defineProps<{
   items: CheckboxItem[] | undefined
   ui?: Record<string, string>
@@ -20,10 +20,8 @@ watch(
   }
 )
 
-const modelValue = defineModel<
-  (string | (() => object) | undefined)[] | undefined
->("modelValue", {
-  default: () => [],
+const modelValue = defineModel<string[] | undefined>("modelValue", {
+  default: []
 })
 </script>
 

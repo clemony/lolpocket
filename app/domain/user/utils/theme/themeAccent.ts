@@ -4,7 +4,7 @@ export const defaultThemeAccent = "diminuendo"
 
 export const themeAccentOptions = [
   {
-    value: "n3",
+    value: "shadow",
     label: "Shadow",
     description: "Balance is a fool's master.",
     champion: "Zed",
