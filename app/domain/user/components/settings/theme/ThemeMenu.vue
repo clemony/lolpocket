@@ -221,5 +221,3 @@ function setAccent(accent?: string) {
 </template>
   </UPopover>
 </template>
-  </UPopover>
-</template>
