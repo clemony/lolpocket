@@ -117,7 +117,9 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
                 {{ entry?.tier }}
                 {{ entry?.division }}
               </span>
-              <template v-else>{{ (entry?.win || 0) + (entry?.loss || 0) }} played</template>
+              <template v-else
+                >{{ (entry?.win || 0) + (entry?.loss || 0) }} played</template
+              >
             </span>
             <!-- LP -->
             <span v-if="entry?.lp" class="text-3xs text-pc/60 tabular-nums">
@@ -135,10 +137,14 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
           </h2>
           <div
             class="flex flex-col items-center gap-1 text-3xs leading-none font-medium tabular-nums">
-            <span v-if="entry?.tier">{{ (entry?.win || 0) + (entry?.loss || 0) }} played</span>
-            <span class="text-pc/60">{{ entry?.win || 0 }}&hairsp;W&nbsp;{{
-              entry?.loss || 0
-            }}&hairsp;L</span>
+            <span v-if="entry?.tier"
+              >{{ (entry?.win || 0) + (entry?.loss || 0) }} played</span
+            >
+            <span class="text-pc/60"
+              >{{ entry?.win || 0 }}&hairsp;W&nbsp;{{
+                entry?.loss || 0
+              }}&hairsp;L</span
+            >
           </div>
         </div>
       </div>
