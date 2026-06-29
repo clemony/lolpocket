@@ -93,11 +93,11 @@ const accountOpen = shallowRef<boolean>(false)
             class="absolute size-9.5 text-p0" />
         </div>
         <!--i-fluent-caret-up-12-filled-->
-        <ThemeMenu
+        <!--        <ThemeMenu
           :ui="{
             root: 'w-full max-w-full overflow-hidden',
             themeItem: '',
-          }" />
+          }" />-->
       </template>
     </UPopover>
   </div>

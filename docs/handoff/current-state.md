@@ -16,7 +16,7 @@ Keep it short, current, and biased toward what the next session needs to know.
 - The server-side Riot request queue was refactored to remove global-scope timers for Cloudflare Pages compatibility.
 - Summoner preview/search cache now has D1 schema and read-through server helpers keyed by PUUID, with `SUMMONER_CACHE_DB` as the Pages binding name and `SUMMONER_CACHE_D1_REMOTE_DEV=1` as the opt-in local dev remote-D1 path.
 - Riot match history now projects raw match DTOs into rich client `MatchData` plus global D1 aggregate tallies, with `MATCH_ANALYTICS_DB` as the optional Pages binding, `MATCH_ANALYTICS_D1_REMOTE_DEV=1` as the opt-in local dev remote-D1 path, and `migrations/0002_riot_match_analytics.sql` defining a match ledger plus champion, ally, enemy, and item tally tables.
-- Optional NA match analytics gathering now exists as Nitro task `riot:match-analytics:gather-na`; `pnpm worker:build` emits `.output/server/wrangler.json` with both D1 bindings and `triggers.crons = ["*/5 * * * *"]`, while `CF_PAGES=1 pnpm build` stays on the Pages artifact path. `SUMMONER_CACHE_DB` owns both per-PUUID scan state and the gatherer lock/backoff row.
+- Optional NA match analytics gathering now runs from the dedicated `workers/match-analytics-gather` Worker. `pnpm worker:build` generates an ignored `.wrangler/match-analytics/wrangler.jsonc` from D1 env vars and dry-runs Wrangler; `pnpm worker:deploy` deploys that small Worker without building the Nuxt/Nitro server. `SUMMONER_CACHE_DB` owns both per-PUUID scan state and the gatherer lock/backoff row.
 - Summoner route resolution treats `/_r` as an internal resolver prefix, supports short `/_r/:puuid` compatibility redirects, and builds match scoreboard links as canonical `/:region/:name_tag` slugs.
 - Summoner route entry now hydrates the public Supabase account cache by PUUID via `/api/supabase/account/public`, so profiles can show lolpocket account metadata when it exists.
 - Local Zodiak font wiring was cleaned up to use self-hosted files from `layers/ui/public/fonts/Zodiak`.
@@ -62,7 +62,7 @@ Keep it short, current, and biased toward what the next session needs to know.
 ## Next Good Starting Points
 
 - Manually deploy the latest verified Pages build and confirm the global-scope worker error is gone in the live runtime.
-- Apply `migrations/0003_summoner_match_scan_state.sql` and `migrations/0004_summoner_match_gather_control.sql` to `SUMMONER_CACHE_DB` before deploying the cron-enabled Worker artifact with `pnpm worker:deploy`.
+- Apply `migrations/0003_summoner_match_scan_state.sql` and `migrations/0004_summoner_match_gather_control.sql` to `SUMMONER_CACHE_DB`, then run `pnpm worker:secret:riot` once before deploying the dedicated cron Worker with `pnpm worker:deploy`.
 - Keep an eye on sidebar popover placement in live UI after further modal sizing changes.
 
 ## Update Format

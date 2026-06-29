@@ -7,11 +7,6 @@ const isCFPages = process.env.CF_PAGES === "1"
 const nitroPreset = isCFPages ? "cloudflare_pages" : "cloudflare_module"
 
 const isProduction = process.env.NODE_ENV === "production"
-const matchAnalyticsGatherCron = "*/5 * * * *"
-const matchAnalyticsGatherTask = "riot:match-analytics:gather-na"
-const enableMatchAnalyticsCron =
-  !isCFPages && process.env.MATCH_ANALYTICS_CRON === "1"
-
 const summonerCacheD1DatabaseId = process.env.SUMMONER_CACHE_D1_DATABASE_ID
 
 const summonerCacheD1PreviewDatabaseId =
@@ -52,13 +47,6 @@ const cloudflareWranglerConfig = {
   ...(d1Databases.length
     ? {
         d1_databases: d1Databases,
-      }
-    : {}),
-  ...(enableMatchAnalyticsCron
-    ? {
-        triggers: {
-          crons: [matchAnalyticsGatherCron],
-        },
       }
     : {}),
 }
@@ -249,16 +237,6 @@ export default defineNuxtConfig({
           }
         : {}),
     },
-    ...(enableMatchAnalyticsCron
-      ? {
-          experimental: {
-            tasks: true,
-          },
-          scheduledTasks: {
-            [matchAnalyticsGatherCron]: matchAnalyticsGatherTask,
-          },
-        }
-      : {}),
     externals: {
       external: ["sharp"],
     },

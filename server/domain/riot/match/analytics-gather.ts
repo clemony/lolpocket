@@ -3,15 +3,12 @@ import type {
   D1DatabaseLike,
   D1PreparedStatementLike
 } from "../../d1/summoner-cache"
-import { upsertCachedMatchParticipants } from "../../d1/summoner-cache"
-import { idsByPuuid } from "./idsByPuuid"
-import { matchById } from "./matchById"
-import {
-  persistMatchAnalytics,
-  toMatchAnalyticsTallyProjection
+import type {
+  MatchAnalyticsPersistResult,
+  MatchAnalyticsTallyProjection
 } from "./analytics"
-import { isRiotRateLimitError } from "../../../api/riot/fetch"
-import { transformMatchData } from "./transformMatchData"
+import type { RiotFetchOptions } from "../fetch"
+import { isRiotRateLimitError } from "../fetch"
 
 const MAX_D1_BOUND_PARAMETERS = 100
 
@@ -27,8 +24,7 @@ export const MATCH_ANALYTICS_GATHER_ERROR_COOLDOWN = 1000 * 60 * 15
 export const MATCH_ANALYTICS_GATHER_LOCK_TTL = 1000 * 60 * 10
 
 type D1AllResult<T> = { results?: T[] } | T[]
-type MatchAnalyticsDb = Parameters<typeof persistMatchAnalytics>[0]
-type MatchAnalyticsProjection = ReturnType<typeof toMatchAnalyticsTallyProjection>
+type MatchAnalyticsDb = D1DatabaseLike | null
 
 interface D1SelectableStatement extends D1PreparedStatementLike {
   all: <T = unknown>() => Promise<D1AllResult<T>>
@@ -78,17 +74,37 @@ export interface MatchAnalyticsGatherResult {
 }
 
 export interface MatchAnalyticsGatherDeps {
-  idsByPuuid: typeof idsByPuuid
-  matchById: typeof matchById
-  persistAnalytics: typeof persistMatchAnalytics
-  toProjection: typeof toMatchAnalyticsTallyProjection
-  transformMatchData: typeof transformMatchData
-  upsertParticipants: typeof upsertCachedMatchParticipants
+  idsByPuuid: (options: {
+    count: number
+    fetchOptions?: RiotFetchOptions
+    puuid: string
+    queue?: string | number
+    region: string
+    start: number
+  }) => Promise<string[]>
+  matchById: (
+    matchId: string,
+    region: string,
+    fetchOptions?: RiotFetchOptions
+  ) => Promise<unknown | null>
+  persistAnalytics: (
+    db: MatchAnalyticsDb,
+    projections: MatchAnalyticsTallyProjection[]
+  ) => Promise<MatchAnalyticsPersistResult>
+  toProjection: (
+    rawMatch: unknown,
+    clientMatch: MatchData
+  ) => MatchAnalyticsTallyProjection
+  transformMatchData: (rawMatch: unknown) => MatchData
+  upsertParticipants: (
+    db: D1DatabaseLike | null,
+    matches: MatchData[]
+  ) => Promise<void>
 }
 
 export interface MatchAnalyticsGatherOptions {
   analyticsDb: MatchAnalyticsDb
-  deps?: Partial<MatchAnalyticsGatherDeps>
+  deps: MatchAnalyticsGatherDeps
   matchCount?: number
   lockOwner?: string
   lockTtlMs?: number
@@ -118,15 +134,6 @@ interface MatchAnalyticsGatherControlRow {
   locked_until: number
   riot_backoff_until: number
   updated_at: number
-}
-
-const defaultDeps: MatchAnalyticsGatherDeps = {
-  idsByPuuid,
-  matchById,
-  persistAnalytics: persistMatchAnalytics,
-  toProjection: toMatchAnalyticsTallyProjection,
-  transformMatchData,
-  upsertParticipants: upsertCachedMatchParticipants
 }
 
 function preparedAll<T>(statement: D1PreparedStatementLike) {
@@ -455,7 +462,7 @@ export async function gatherNaMatchAnalytics(
   const lockTtlMs = options.lockTtlMs ?? MATCH_ANALYTICS_GATHER_LOCK_TTL
   const queueIds = options.queueIds ?? MATCH_ANALYTICS_GATHER_QUEUES
   const matchCount = options.matchCount ?? MATCH_ANALYTICS_GATHER_MATCH_COUNT
-  const deps = { ...defaultDeps, ...options.deps }
+  const deps = options.deps
   const result: MatchAnalyticsGatherResult = {
     failedSeeds: 0,
     fetchedMatches: 0,
@@ -546,7 +553,7 @@ export async function gatherNaMatchAnalytics(
         }
 
         const clientMatches: MatchData[] = []
-        const projections: MatchAnalyticsProjection[] = []
+        const projections: MatchAnalyticsTallyProjection[] = []
 
         for (const matchId of unprocessedMatchIds) {
           const rawMatch = await deps.matchById(matchId, seed.region, {
