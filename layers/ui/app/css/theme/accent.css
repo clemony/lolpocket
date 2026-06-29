@@ -1,6 +1,3 @@
-@import "../color/colors.css";
-@import "./base.css";
-
 @theme {
   --color-insp-50: oklch(0.973 0.013 202.79);
   --color-insp-100: oklch(0.945 0.025 205.74);
@@ -61,36 +58,6 @@
   --color-pre-800: oklch(0.362 0.051 82.42);
   --color-pre-900: oklch(0.25 0.035 82.06);
   --color-pre-950: oklch(0.187 0.027 83.08);
-
-  --color-shadow: var(--primary-800);
-  --color-shadow-contrast: var(--primary-350);
-
-  --color-diminuendo: var(--color-insp-400);
-  --color-diminuendo-contrast: var(--color-insp-200);
-
-  --color-flow: var(--color-hsp);
-  --color-flow-contrast: var(--color-enchanter);
-
-  --color-contaminate: var(--color-res-300);
-  --color-contaminate-contrast: var(--color-hp);
-
-  --color-whimsy: var(--color-sorc);
-  --color-whimsy-contrast: var(--color-sorc-300);
-
-  --color-cask: var(--color-fighter);
-  --color-cask-contrast: var(--color-apen);
-
-  --color-onslaught: var(--color-dom-400);
-  --color-onslaught-contrast: var(--color-dom-300);
-
-  --color-spark: var(--color-pre-400);
-  --color-spark-contrast: var(--color-pre-200);
-
-  --color-encore: var(--color-onhit);
-  --color-encore-contrast: var(--color-burst);
-
-  --color-legends: var(--color-warden);
-  --color-legends-contrast: var(--color-pre-300);
 }
 
 :root,
@@ -114,6 +81,36 @@
   --ui-sorc-offset: var(--color-sorc-500);
   --ui-dom-offset: var(--color-dom-500);
   --ui-pre-offset: var(--color-pre-600);
+
+  --ui-accent: var(--color-insp);
+  --ui-accent-content: var(--color-insp-200);
+
+  --ui-diminuendo: var(--ui-insp);
+  --ui-diminuendo-contrast: var(--color-insp-200);
+
+  --ui-flow: var(--color-hsp);
+  --ui-flow-contrast: var(--color-enchanter);
+
+  --ui-contaminate: var(--color-res-300);
+  --ui-contaminate-contrast: var(--color-hp);
+
+  --ui-whimsy: var(--ui-sorc);
+  --ui-whimsy-contrast: var(--color-sorc-300);
+
+  --ui-cask: var(--color-fighter);
+  --ui-cask-contrast: var(--color-apen);
+
+  --ui-onslaught: var(--ui-dom);
+  --ui-onslaught-contrast: var(--color-dom-300);
+
+  --ui-spark: var(--ui-pre);
+  --ui-spark-contrast: var(--color-pre-200);
+
+  --ui-encore: var(--color-onhit);
+  --ui-encore-contrast: var(--color-burst);
+
+  --ui-legends: var(--color-warden);
+  --ui-legends-contrast: var(--color-pre-300);
 }
 
 .dim,
@@ -128,9 +125,79 @@
   --ui-dom: var(--color-dom-500);
   --ui-pre: var(--color-pre-500);
   --ui-legendary: var(--color-pre-400);
+
+  --ui-accent: var(--color-insp);
+  --ui-accent-content: var(--color-insp-200);
+}
+
+[data-accent="diminuendo"] {
+  --ui-accent: var(--color-diminuendo);
+  --ui-accent-content: var(--ui-insp-content);
+}
+
+[data-accent="flow"] {
+  --ui-accent: var(--color-res);
+  --ui-accent-content: var(--ui-insp);
+}
+
+[data-accent="contaminate"] {
+  --ui-accent: var(--color-res);
+  --ui-accent-content: var(--color-hp);
+}
+
+[data-accent="whimsy"] {
+  --ui-accent: var(--color-ap);
+  --ui-accent-content: var(--ui-master);
+}
+
+[data-accent="onslaught"] {
+  --ui-accent: var(--color-fighter);
+  --ui-accent-content: var(--color-apen);
+}
+
+[data-accent="spark"] {
+  --ui-accent: var(--color-pre);
+  --ui-accent-content: var(--ui-pre-200);
+}
+
+[data-accent="encore"] {
+  --ui-accent: var(--color-onhit);
+  --ui-accent-content: var(--color-burst);
 }
 
 @theme inline {
+  --color-shadow: var(--color-n2);
+  --color-shadow-contrast: var(--color-n5);
+
+  --color-diminuendo: var(--ui-insp);
+  --color-diminuendo-contrast: var(--color-insp-200);
+
+  --color-flow: var(--color-hsp);
+  --color-flow-contrast: var(--color-enchanter);
+
+  --color-contaminate: var(--color-res-300);
+  --color-contaminate-contrast: var(--color-hp);
+
+  --color-whimsy: var(--ui-sorc);
+  --color-whimsy-contrast: var(--color-sorc-300);
+
+  --color-cask: var(--color-fighter);
+  --color-cask-contrast: var(--color-apen);
+
+  --color-onslaught: var(--ui-dom);
+  --color-onslaught-contrast: var(--color-dom-300);
+
+  --color-spark: var(--ui-pre);
+  --color-spark-contrast: var(--color-pre-200);
+
+  --color-encore: var(--color-onhit);
+  --color-encore-contrast: var(--color-burst);
+
+  --color-legends: var(--color-warden);
+  --color-legends-contrast: var(--color-pre-300);
+
+  --color-legendary: var(--ui-legendary);
+
   --color-info: var(--ui-sorc);
   --color-success: var(--ui-res);
   --color-warning: var(--ui-pre);
@@ -147,6 +214,9 @@
   --color-sorc-offset: var(--ui-sorc-offset);
   --color-dom-offset: var(--ui-dom-offset);
   --color-pre-offset: var(--ui-pre-offset);
+
+  --color-accent: var(--ui-accent);
+  --color-accent-content: var(--ui-accent-content);
 
   --color-win: var(--ui-win);
   --color-lp: var(--ui-lp);

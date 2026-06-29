@@ -37,9 +37,6 @@ export function asString(value: unknown) {
   return typeof value === "string" ? value : undefined
 }
 
-export const asChipColor = (color: string): ChipProps["color"] =>
-  color as ChipProps["color"]
-
 export function asItem(value: any): Item {
   return value as Item
 }

@@ -60,9 +60,6 @@ export const user = defineStore(
       localSettings.value.sidebar_sort_method = method
     }
 
-    const matchStatus = ref<boolean>(true)
-    function updateMatchStatus() {}
-
     const hotkeys = ref({
       search: ["meta", "k"],
       subSearch: ["meta", "shift", "k"],
@@ -76,6 +73,19 @@ export const user = defineStore(
       account.value = getEmptyAccount() as unknown as Account
       summoner.value = undefined
       setInbox()
+    }
+
+    function migrateAccountSplashUrlToSkinKey() {
+      if (!account.value || account.value.skin) return null
+
+      const { splash, ...nextAccount } = account.value as Account & {
+        splash?: string
+      }
+      const skin = splash ? skinKeyFromUrl(splash) : null
+      if (!skin) return null
+
+      account.value = { ...nextAccount, skin }
+      return skin
     }
 
     function createEmptyInbox(): Inbox {
@@ -279,8 +289,7 @@ export const user = defineStore(
       summoner,
       account,
       localSettings,
-      matchStatus,
-      updateMatchStatus,
+      migrateAccountSplashUrlToSkinKey,
       clearAccount,
       inbox,
       setInbox,

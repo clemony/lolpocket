@@ -2,7 +2,7 @@
 import type {
   ContextMenuEmits,
   ContextMenuItem,
-  ContextMenuProps,
+  ContextMenuProps
 } from "@nuxt/ui"
 import { useForwardPropsEmits } from "reka-ui"
 
@@ -10,14 +10,14 @@ import {
   collapseAllItem,
   deleteItem,
   openItem,
-  separatorItem,
+  separatorItem
 } from "~/domain/app/utils/menuItems"
 import { useSortMenu } from "~/domain/backpack/utils/folder/sortMenu"
 import { pocketSidebarContextUi } from "~/domain/backpack/utils/folder/ui"
 import { duplicatePocket } from "~/domain/pocket/utils/manage/duplicate"
 
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 
 const props = defineProps<
@@ -53,13 +53,13 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
         icon: "i-ui-restore",
 
         ui: {
-          itemLeadingIcon: "scale-120",
+          itemLeadingIcon: "scale-120"
         },
         onSelect() {
           p.location = "folders"
           p.trashed_at = undefined
-        },
-      },
+        }
+      }
     ]
 
   return [
@@ -67,8 +67,8 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
       label: pinned ? "Unpin" : "Pin",
       icon: pinned ? "i-unpin" : "i-pin",
       ui: {
-        itemLeadingIcon: "**:stroke-[2.1] ",
-      },
+        itemLeadingIcon: "**:stroke-[2.1] "
+      }
     },
 
     openItem(p.label ?? "", p.key, "pocket"),
@@ -78,14 +78,14 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
       icon: "i-lucide-text-cursor-input",
       onSelect() {
         emit("toggleEdit", true)
-      },
+      }
     },
     {
       label: "Duplicate",
       icon: "i-lucide-copy",
       onSelect() {
         duplicatePocket(p as Pocket)
-      },
+      }
     },
     separatorItem,
     ...computed(() =>
@@ -95,17 +95,17 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
       ? {
           label: "Move to...",
           icon: "i-folder-to",
-          children: settings.value.folders.map((f: Folder) => ({
+          children: settings.value.folders.map((f) => ({
             label: f.label,
             onSelect() {
               p.location = f.id
-            },
-          })),
+            }
+          }))
         }
       : {},
     sortMenu.value,
     separatorItem,
-    deleteItem(p.key, "pocket"),
+    deleteItem(p.key, "pocket")
   ].filter(Boolean)
 })
 </script>
@@ -119,7 +119,7 @@ const pocketActions = computed<ContextMenuItem[] | null>(() => {
     :ui="pocketSidebarContextUi"
     :content="{
       ...props?.content,
-      onCloseAutoFocus: (event: Event) => event.preventDefault(),
+      onCloseAutoFocus: (event: Event) => event.preventDefault()
     }"
     @update:open="
       (e: boolean) =>
