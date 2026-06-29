@@ -1,14 +1,14 @@
 import type { MatchData } from "../../../../shared/types"
 import type {
   D1DatabaseLike,
-  D1PreparedStatementLike
+  D1PreparedStatementLike,
 } from "../../d1/summoner-cache"
-import type {
-  MatchAnalyticsPersistResult,
-  MatchAnalyticsTallyProjection
-} from "./analytics"
 import type { RiotFetchOptions } from "../fetch"
 import { isRiotRateLimitError } from "../fetch"
+import type {
+  MatchAnalyticsPersistResult,
+  MatchAnalyticsTallyProjection,
+} from "./analytics"
 
 const MAX_D1_BOUND_PARAMETERS = 100
 
@@ -166,7 +166,9 @@ function matchAnalyticsGatherControlId(region: string) {
 }
 
 function createLockOwner(now: number) {
-  return globalThis.crypto?.randomUUID?.() ?? `${MATCH_ANALYTICS_GATHER_TASK}:${now}`
+  return (
+    globalThis.crypto?.randomUUID?.() ?? `${MATCH_ANALYTICS_GATHER_TASK}:${now}`
+  )
 }
 
 function d1Changes(result: unknown) {
@@ -197,10 +199,7 @@ async function ensureMatchAnalyticsGatherControlRow(
     .run()
 }
 
-async function getMatchAnalyticsGatherControl(
-  db: D1DatabaseLike,
-  id: string
-) {
+async function getMatchAnalyticsGatherControl(db: D1DatabaseLike, id: string) {
   const rows = await allRows<MatchAnalyticsGatherControlRow>(
     db
       .prepare(
@@ -368,11 +367,11 @@ export async function listDueMatchAnalyticsSeeds(
       .bind(region, region, region, now, limit)
   )
 
-  return rows.map(row => ({
+  return rows.map((row) => ({
     lastScannedAt: row.last_scanned_at,
     nextScanAfter: row.next_scan_after,
     puuid: row.puuid,
-    region: row.region ?? region
+    region: row.region ?? region,
   }))
 }
 
@@ -404,7 +403,7 @@ export async function filterUnprocessedMatchIds(
     }
   }
 
-  return uniqueIds.filter(matchId => !doneIds.has(matchId))
+  return uniqueIds.filter((matchId) => !doneIds.has(matchId))
 }
 
 export async function markMatchAnalyticsSeedScanned(
@@ -470,7 +469,7 @@ export async function gatherNaMatchAnalytics(
     scannedSeeds: 0,
     skippedMatches: 0,
     status: "empty",
-    totalMatchIds: 0
+    totalMatchIds: 0,
   }
 
   if (!summonerDb || !analyticsDb) {
@@ -482,7 +481,7 @@ export async function gatherNaMatchAnalytics(
     id: controlId,
     lockOwner,
     now,
-    ttlMs: lockTtlMs
+    ttlMs: lockTtlMs,
   })
 
   if (!lockAcquired) {
@@ -494,11 +493,11 @@ export async function gatherNaMatchAnalytics(
   let lockReleaseError: string | null = null
 
   try {
-    const controlRow = await getMatchAnalyticsGatherControl(summonerDb, controlId)
-    if (
-      controlRow?.riot_backoff_until &&
-      controlRow.riot_backoff_until > now
-    ) {
+    const controlRow = await getMatchAnalyticsGatherControl(
+      summonerDb,
+      controlId
+    )
+    if (controlRow?.riot_backoff_until && controlRow.riot_backoff_until > now) {
       result.status = "rate_limited"
       result.nextRunAfter = controlRow.riot_backoff_until
       lockReleaseStatus = "rate_limited"
@@ -509,7 +508,7 @@ export async function gatherNaMatchAnalytics(
     const seeds = await listDueMatchAnalyticsSeeds(summonerDb, {
       limit: options.seedLimit,
       now,
-      region
+      region,
     })
 
     if (!seeds.length) {
@@ -523,14 +522,14 @@ export async function gatherNaMatchAnalytics(
 
       try {
         const idsByQueue = await Promise.all(
-          queueIds.map(queue =>
+          queueIds.map((queue) =>
             deps.idsByPuuid({
               count: matchCount,
               fetchOptions: { retryOnRateLimit: false },
               puuid: seed.puuid,
               queue,
               region: seed.region,
-              start: 0
+              start: 0,
             })
           )
         )
@@ -547,7 +546,7 @@ export async function gatherNaMatchAnalytics(
           await markMatchAnalyticsSeedScanned(summonerDb, seed, {
             cooldownMs: MATCH_ANALYTICS_GATHER_EMPTY_COOLDOWN,
             now,
-            status: "empty"
+            status: "empty",
           })
           continue
         }
@@ -557,7 +556,7 @@ export async function gatherNaMatchAnalytics(
 
         for (const matchId of unprocessedMatchIds) {
           const rawMatch = await deps.matchById(matchId, seed.region, {
-            retryOnRateLimit: false
+            retryOnRateLimit: false,
           })
           if (!rawMatch) continue
 
@@ -569,7 +568,10 @@ export async function gatherNaMatchAnalytics(
         result.fetchedMatches += clientMatches.length
 
         if (projections.length) {
-          const persisted = await deps.persistAnalytics(analyticsDb, projections)
+          const persisted = await deps.persistAnalytics(
+            analyticsDb,
+            projections
+          )
           result.persistedMatches += persisted.persistedMatches
           await deps.upsertParticipants(summonerDb, clientMatches)
         }
@@ -580,7 +582,7 @@ export async function gatherNaMatchAnalytics(
               ? MATCH_ANALYTICS_GATHER_SUCCESS_COOLDOWN
               : MATCH_ANALYTICS_GATHER_EMPTY_COOLDOWN,
           now,
-          status: projections.length > 0 ? "success" : "empty"
+          status: projections.length > 0 ? "success" : "empty",
         })
       } catch (err) {
         if (isRiotRateLimitError(err)) {
@@ -592,13 +594,13 @@ export async function gatherNaMatchAnalytics(
             error: err.message,
             id: controlId,
             now,
-            until: result.nextRunAfter
+            until: result.nextRunAfter,
           })
           await markMatchAnalyticsSeedScanned(summonerDb, seed, {
             cooldownMs: err.retryAfterMs,
             error: err.message,
             now,
-            status: "error"
+            status: "error",
           })
           return result
         }
@@ -609,7 +611,7 @@ export async function gatherNaMatchAnalytics(
           cooldownMs: MATCH_ANALYTICS_GATHER_ERROR_COOLDOWN,
           error: errorMessage(err).slice(0, 500),
           now,
-          status: "error"
+          status: "error",
         })
       }
     }
@@ -623,7 +625,8 @@ export async function gatherNaMatchAnalytics(
     }
 
     lockReleaseStatus = result.status
-    lockReleaseError = result.status === "error" ? "All scanned seeds failed" : null
+    lockReleaseError =
+      result.status === "error" ? "All scanned seeds failed" : null
     return result
   } finally {
     await releaseMatchAnalyticsGatherLock(summonerDb, {
@@ -631,7 +634,7 @@ export async function gatherNaMatchAnalytics(
       id: controlId,
       lockOwner,
       now,
-      status: lockReleaseStatus
+      status: lockReleaseStatus,
     })
   }
 }

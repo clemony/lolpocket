@@ -6,6 +6,24 @@ export {
 } from "../../domain/riot/fetch"
 import { RiotRateLimitError, type RiotFetchOptions } from "../../domain/riot/fetch"
 
+export interface RiotFetchOptions {
+  retryOnRateLimit?: boolean
+}
+
+export class RiotRateLimitError extends Error {
+  retryAfterMs: number
+
+  constructor(retryAfterMs: number) {
+    super(`Riot rate limited; retry after ${Math.ceil(retryAfterMs / 1000)}s`)
+    this.name = "RiotRateLimitError"
+    this.retryAfterMs = retryAfterMs
+  }
+}
+
+export function isRiotRateLimitError(err: unknown): err is RiotRateLimitError {
+  return err instanceof RiotRateLimitError
+}
+
 function getRiotApiKey() {
   const config = useRuntimeConfig()
   const riotApiKey = config.RIOT_API_KEY
