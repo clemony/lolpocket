@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { mapPositions } from "#shared/constants/misc/positions"
+import { teamPositions } from "#shared/constants/misc/positions"
 import type { ButtonProps } from "@nuxt/ui"
 import { SelectTrigger } from "reka-ui"
 
@@ -69,7 +69,7 @@ onMounted(() => {
       <SelectGroup>
         <SelectLabel>Select main position</SelectLabel>
         <SelectItem
-          v-for="position in mapPositions"
+          v-for="position in teamPositions"
           :key="position.label"
           :value="position.label">
           <PositionBadge :position="position.label" active />

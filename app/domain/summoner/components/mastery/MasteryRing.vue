@@ -36,7 +36,7 @@ const mastery = computed(() =>
   <div
     :class="
       cn(
-        'mastery-ring mastery-gradient relative inline-block -rotate-90 rounded-full bg-p2',
+        'mastery-ring gradient relative inline-block -rotate-90 rounded-full bg-p2',
         props.class
       )
     "
@@ -44,8 +44,8 @@ const mastery = computed(() =>
     <div class="absolute inset-0 scale-100 rounded-full border border-p3" />
     <!-- GRADIENT RING (rotates around the arc mask) -->
     <div
-      class="mastery-gradient-progress repeat-infinite absolute inset-0 animate-spin overflow-hidden rounded-full ring [animation-duration:2.5s]"
-      :data-mastery="mastery"
+      class="gradient-progress repeat-infinite absolute inset-0 animate-spin overflow-hidden rounded-full ring [animation-duration:2.5s]"
+      :data-level="mastery"
       :style="{
         animationDuration: `${speed}s`,
         mask: `url(#arc-mask-${_uid})`,
@@ -102,5 +102,5 @@ const mastery = computed(() =>
 </template>
 
 <style scoped>
-@import "#layers/ui/app/assets/css/components/mastery-progress.css";
+@import "#layers/ui/app/css/color/prism-gradients.css";
 </style>

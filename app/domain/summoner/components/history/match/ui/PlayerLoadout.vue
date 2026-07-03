@@ -9,58 +9,76 @@ const { match, player } = defineProps<{
 </script>
 
 <template>
-  <div
-    class="relative flex size-max shrink-0 flex-col justify-center pr-4 pl-6">
-    <!-- champ image -->
-    <div class="">
-      <HoverAvatar
+  <!-- champ image -->
+  <div>
+    <div
+      class="group/avatar-set relative grid size-max min-w-[100px] place-items-center">
+      <HoverIcon
+        :id="player?.championId"
+        type="champion"
         :tooltip="{
-          text: `${champNameById(player?.championId)} icon`,
-          content: { side: 'top' },
-          arrow: true,
           followCursor: false,
+          arrow: true,
+
+          content: {
+            side: 'top',
+            sideOffset: 6,
+          },
         }"
-        :alt="`${champNameById(player?.championId)} icon`"
-        :src="`/img/champion/${player?.championId}.webp`"
         :ui="{
-          root: 'after;border! after;border-b-2! after;border-p3 after;border-b-p4 after;inset-ring! after;inset-ring-pc after;size-full after;absolute after;z-1 after;inset-0 relative z-0 size-19 shrink-0 shadow-sm drop-shadow-sm',
-          image: 'size-full',
+          root: 'z-0 size-19 transition-transform duration-400 ease-spring group-hover/avatar-set:scale-108',
+          image:
+            'relative z-0 size-full shrink-0 shadow-sm shadow-black/4 drop-shadow-sm',
         }" />
+      <!-- runes -->
+      <PlayerRunes class="absolute -top-1 left-0.5 z-2" :player />
     </div>
-
-    <!-- runes -->
-    <PlayerRunes class="absolute left-0 z-2 -translate-x-13" :player />
   </div>
-
-  <div class="relative flex flex-col items-center gap-2">
+  <div class="relative flex flex-col gap-2">
     <div class="flex w-full items-center justify-between">
       <div class="flex flex-col">
         <KDA
           class="text-start text-lg leading-none font-bold"
           :stats="player.stats" />
-        <PlayerCardStats :match :player />
+        <div class="flex gap-1">
+          <PlayerCardStats :match :player />
+          <!--  spells -->
+          <!--        <PlayerSpells :player class="translate-y-0.5 gap-0.5" size="3xs" />-->
+        </div>
       </div>
       <div class="flex items-center gap-1 self-end">
         <HoverIcon
           v-if="match.mapId === 11"
-          :id="player.items.role"
+          :id="player.items?.role"
           type="item"
+          :tooltip="{
+            followCursor: false,
+            arrow: true,
+
+            content: {
+              side: 'top',
+              sideOffset: 6,
+            },
+          }"
           :map="match.mapId"
           size="md"
-          :ui="{
-            root: 'rounded-full',
-          }"
           @click.stop />
 
         <HoverIcon
           v-if="match.mapId === 11"
           :id="player.items?.trinket"
           type="item"
+          :tooltip="{
+            followCursor: false,
+            arrow: true,
+
+            content: {
+              side: 'top',
+              sideOffset: 6,
+            },
+          }"
           :map="match.mapId"
           size="md"
-          :ui="{
-            root: 'rounded-full',
-          }"
           @click.stop />
       </div>
     </div>
@@ -69,22 +87,20 @@ const { match, player } = defineProps<{
         v-for="(item, i) in player.items.slots"
         :id="item"
         :key="`${item}${i}`"
+        :tooltip="{
+          followCursor: false,
+          arrow: true,
+
+          content: {
+            side: 'bottom',
+            sideOffset: 6,
+          },
+        }"
         type="item"
         :map="match.mapId"
         size="xl"
-        :ui="{
-          root: 'rounded-full',
-        }"
         :disabled="!item || item === 0"
         @click.stop />
     </div>
-    <!--  spells -->
-    <PlayerSpells
-      :player
-      class="gap-1.5 self-start"
-      size="xs"
-      :ui="{
-        root: cn(''),
-      }" />
   </div>
 </template>

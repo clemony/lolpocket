@@ -8,13 +8,19 @@ import {
   LazySpellTooltip,
   MatchStatus,
 } from "#components"
-import type { AvatarPropsExt, DomainType, TooltipPropsExt } from "#shared/types"
+import type {
+  AvatarPropsExt,
+  ChampionWinrate,
+  DomainType,
+  TooltipPropsExt,
+} from "#shared/types"
+import type { AvatarProps } from "@nuxt/ui"
 
 import { getSummonerIcon } from "~/domain/utils/img"
 import type { IconProps } from "~/types/ui.types"
 
 interface ResolvedType {
-  label?: string
+  text?: string
   static?: boolean
   src?: string
   component?: Record<string, Component>
@@ -24,131 +30,135 @@ interface ResolvedType {
   props?: Partial<Record<keyof IconProps, IconProps[keyof IconProps]>>
 }
 
-const {
-  tooltip = {
-    pin: true,
-    interactive: true,
+const props = withDefaults(
+  defineProps<
+    AvatarProps & {
+      id?: string | number
+      type?: DomainType
+      effects?: boolean
+      map?: string | number
+      k?: string
+      summoner?: Summoner
+      winrates?: ChampionWinrate[]
+      tooltip?: TooltipPropsExt
+    }
+  >(),
+  {
     effects: true,
-    disabled: false,
-  },
-  avatar,
-  summoner,
-  type,
-  map,
-  id,
-  k,
-  winrates,
-  style,
-} = defineProps<IconProps>()
+  }
+)
 
-const tt = computed<TooltipPropsExt>(() => safeObject(tooltip))
-const ap = computed<AvatarPropsExt>(() => safeObject(avatar))
-
-const invisibleBg = {
-  root: "bg-transparent shadow-none ring-0 inset-shadow-none noise-0",
-
-  image:
-    "bg-transparent drop-shadow-sm shadow-none ring-0 inset-shadow-none noise-0",
-}
+const delegated = reactiveOmit(
+  props,
+  "class",
+  "tooltip",
+  "id",
+  "type",
+  "effects",
+  "map",
+  "k",
+  "summoner",
+  "winrates"
+)
 
 const types: Record<DomainType, ResolvedType> = {
   rune: {
-    label: runeNameById(Number(id)) ?? "",
+    text: runeNameById(Number(props.id)) ?? "",
     component: LazyRuneTooltip,
-    src: `/img/rune/${id}.webp`,
+    src: `/img/rune/${props.id}.webp`,
   },
   item: {
-    label: itemNameById(Number(id)) ?? "",
+    text: itemNameById(Number(props.id)) ?? "",
     component: LazyItemTooltip,
-    src: `/img/item/${id}.webp`,
-    props: { map },
+    src: `/img/item/${props.id}.webp`,
+    props: { map: props?.map },
   },
   champion: {
-    label: champNameById(Number(id)) ?? "",
-    src: `/img/champion/${id}.webp`,
+    text: champNameById(Number(props.id)) ?? "",
+    src: `/img/champion/${props.id}.webp`,
     component: LazyChampionWinrateTooltip,
-    props: { winrates, k },
+    props: { winrates: props?.winrates, k: props?.k },
   },
   spell: {
-    label: spellNameById(Number(id)) ?? "",
+    text: spellNameById(Number(props.id)) ?? "",
     component: LazySpellTooltip,
-    src: `/img/spell/${id}.webp`,
+    src: `/img/spell/${props.id}.webp`,
   },
   ability: {
-    label: abilityNameById(String(id)) ?? "",
+    text: abilityNameById(String(props.id)) ?? "",
     component: LazyAbilityTooltip,
-    src: `/img/ability/${id}.webp`,
+    src: `/img/ability/${props.id}.webp`,
   },
   path: {
-    label: pathNameById(Number(id)) ?? "",
+    text: pathNameById(Number(props.id)) ?? "",
     component: undefined,
-    src: `/img/path/${id}.webp`,
-    avatar: { ui: invisibleBg, round: true },
+    src: `/img/path/${props.id}.webp`,
   },
   keystone: {
-    label: runeNameById(Number(id)) ?? "",
+    text: runeNameById(Number(props.id)) ?? "",
     component: LazyRuneTooltip,
-    src: `/img/rune/${id}.webp`,
-    avatar: { ui: invisibleBg, round: true },
+    src: `/img/rune/${props.id}.webp`,
   },
   status: {
-    label: summoner?.name ?? "",
+    text: props.summoner?.name ?? "",
     component: undefined,
     pin: false,
-    src: getSummonerIcon(summoner?.icon) ?? "",
-    props: { summoner },
+    src: getSummonerIcon(props.summoner?.icon) ?? "",
+    props: { summoner: props?.summoner },
   },
   summoner: {
-    label: summoner?.name ?? "",
+    text: props.summoner?.name ?? "",
     pin: false,
     component: undefined,
-    src: getSummonerIcon(summoner?.icon) ?? "",
-    props: { summoner },
+    src: getSummonerIcon(props.summoner?.icon) ?? "",
+    props: { summoner: props?.summoner },
   },
   player: {
-    label: champNameById(Number(id)) ?? "",
-    src: `/img/champion/${id}.webp`,
+    text: champNameById(Number(props.id)) ?? "",
+    src: `/img/champion/${props.id}.webp`,
     component: undefined,
   },
 }
 
-const item = computed<ResolvedType>(() => safeObject(types[type as DomainType]))
+const item = computed<ResolvedType>(() =>
+  safeObject(types[props.type as DomainType])
+)
 
 /* const resolved = computed<ResolvedType>(() => ({
   ...item.value,
   ...item.value[variant || "default"]
 })) */
-const mergedTooltip = computed<TooltipPropsExt>(() => ({
-  ...tt.value,
-  label: tt.value.label ?? item.value.label,
-  pin: item.value.pin ?? tt.value.pin,
-  disabled: item.value.disabled ?? tt.value.disabled,
-}))
 </script>
 
 <template>
-  <Avatar
-    :style
-    v-bind="{
-      tooltip: mergedTooltip,
-      ...ap,
-      ...item.avatar,
-      src: ap.src ?? item.src,
-      ui: {
-        root: cn(
-          { 'hover-3d': ap.effects !== false },
-          item?.avatar?.ui?.root,
-          ap.ui?.root
-        ),
-        image: cn(item?.avatar?.ui?.image, ap.ui?.image),
-      },
+  <Tooltip
+    v-bind="props.tooltip"
+    :avatar="{
+      src: item.src,
+      alt: item.text,
     }"
-    @click.stop>
-    <template v-if="ap.effects !== false">
-      <div v-for="i in 8" :key="i" />
-    </template>
-    <template v-if="item.component" #content>
-      <component :is="item.component" :id v-bind="item.props" />
-    </template>
-  </Avatar>
+    :disabled="props.tooltip?.disabled"
+    :text="item.text">
+    <UAvatar
+      v-bind="delegated"
+      :src="item?.src"
+      :ui="{
+        root: cn(
+          {
+            'hover:scale-105  transition-transform duration-300 ease-spring':
+              props.effects !== false,
+          },
+          props.ui?.root
+        ),
+        image: cn('', props.ui?.image),
+      }"
+      @click.stop>
+      <!--  <template v-if="ap.effects !== false">
+        <div v-for="i in 8" :key="i" />
+      </template>
+      <template v-if="item.component" #content>
+        <component :is="item.component" :props.id v-bind="item.props" />
+      </template>-->
+    </UAvatar>
+  </Tooltip>
 </template>

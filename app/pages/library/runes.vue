@@ -28,7 +28,7 @@ const selectedRune = ref<number | null>(null)
       <CloseButton
         class="absolute top-0 right-0 shadow-none! btn-ghost"
         tip="Close"
-        @click="selectedRune = null" />
+        @click="void (selectedRune = null)" />
     </div>
 
     <div class="z-1 order-first flex w-114 max-w-114 flex-col gap-8" group>

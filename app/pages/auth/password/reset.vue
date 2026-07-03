@@ -62,7 +62,7 @@ function handleReset() {
               as="a"
               size="lg"
               hover="link"
-              @click="navigateTo('/login')">
+              @click="void navigateTo('/login')">
               Remembered it? Log in
             </button>
           </div>

@@ -24,7 +24,7 @@ const {
   invert = false,
   maskKey,
   label,
-  maskSize = 86
+  maskSize = 86,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   invert?: boolean
@@ -53,7 +53,7 @@ const maskSvg: Record<string, string> = {
   11: map11Svg,
   12: map12Svg,
   21: map21Svg,
-  30: map30Svg
+  30: map30Svg,
 }
 
 const maskStyle = computed(() => {
@@ -64,25 +64,12 @@ const maskStyle = computed(() => {
 </script>
 
 <template>
-  <Tooltip
-    as-child
-    :ui="{
-      content: 'inline-flex! h-auto! align-baseline capitalize'
-    }"
-    :disabled="!label || !maskKey"
-    :icon="`i-lp-${maskKey}`"
-    :label="label || '???'">
-    <div
-      :style="maskStyle"
-      :class="
-        cn(
-          'size-4 bg-white/40 drop-shadow-sm drop-shadow-black/20 backdrop-blur-md',
-          className
-        )
-      " />
-
-    <template #content>
-      <slot />
-    </template>
-  </Tooltip>
+  <div
+    :style="maskStyle"
+    :class="
+      cn(
+        'size-4 bg-white/40 drop-shadow-sm drop-shadow-black/20 backdrop-blur-md',
+        className
+      )
+    " />
 </template>

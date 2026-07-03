@@ -26,7 +26,7 @@ const { scrollY } = useScrollInject()
           'tabs-lg group/tab pointer-events-auto tabs-lift relative tabs flex w-max min-w-22 grow origin-bottom cursor-pointer items-start self-end border-b-0! transition-none *:pointer-events-none'
         )
       "
-      @click="navigateTo(targetRoutes[String(item.name)])">
+      @click="void navigateTo(targetRoutes[String(item.name)])">
       <FakeTab />
 
       <div

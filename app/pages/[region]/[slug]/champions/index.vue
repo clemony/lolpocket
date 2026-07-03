@@ -130,7 +130,7 @@ watch(
             label:
               'text-5xl font-bold! drop-shadow-2xs group-hover/btn:no-underline!',
           }"
-          @click="toggleOpen()">
+          @click="void toggleOpen()">
           <template #trailing>
             <UButton
               size="sm"

@@ -39,7 +39,7 @@ const {
     <div class="flex-col" @click.stop>
       <button
         class="inline-flex cursor-pointer space-y-0.5 align-bottom hover:*:first:underline"
-        @click="author?.puuid && navigateTo(buildSummonerRootPath(author))">
+        @click="void (author?.puuid && navigateTo(buildSummonerRootPath(author)))">
         <span
           :class="
             cn('inline text-lg! leading-none font-semibold', {

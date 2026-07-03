@@ -25,13 +25,12 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
 <template>
   <UTooltip
     as="label"
-    arrow
     :disable-hoverable-content="true"
-    :content="{ side: 'left' }"
+    :content="{ side: 'top' }"
     :ui="{
-      arrow: 'h-1.5! w-2! fill-overlay stroke-p3',
+      arrow: 'h-2! w-4! fill-overlay stroke-p3',
       content:
-        'pointer-events-none z-1 grid h-max! w-full justify-center rounded-4xl bg-overlay text-pc shadow-none! ring-p2 drop-shadow-md before:absolute before:inset-0 before:z-0 before:size-full before:-scale-y-100 before:rounded-4xl before:shadow-sm before:shadow-black/5',
+        'pointer-events-none z-1 grid h-max! justify-center rounded-4xl bg-overlay px-10 text-pc shadow-lg! ring-p2 drop-shadow-md before:absolute before:inset-0 before:z-0 before:size-full before:-scale-y-100 before:rounded-4xl before:shadow-sm before:shadow-black/5',
     }">
     <div
       :style="{
@@ -40,7 +39,7 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
       }"
       :class="
         cn(
-          'group/rank relative z-1 grid aspect-square max-h-fit w-full place-items-center rounded-full',
+          'group/rank relative z-3 grid aspect-square w-full place-items-center rounded-full',
           className
         )
       ">
@@ -72,16 +71,24 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
           {{ entry?.label && entry?.label.replace("/", "&thinsp;/&thinsp;") }}
           <Icon
             name="i-info"
-            class="inline size-3.5 -translate-y-[0.5px] rounded-full text-(--color-rank)! antialiased opacity-60 group-hover/rank:opacity-100" />
+            :class="
+              cn(
+                'inline size-3.5 -translate-y-[1px] rounded-full antialiased opacity-60 **:text-(--color-rank)! group-hover/rank:opacity-80',
+                {
+                  'text-pc/30': !entry?.tier,
+                }
+              )
+            " />
         </div>
       </div>
 
       <!--
-  CHART -->
+    CHART -->
       <RadialWinrate
         v-if="entry"
         :winrate="false"
         :thickness="11"
+        size="100%"
         :entry="asEntry(entry)"
         :aria-label="`Winrate for ${entry?.tier?.toLowerCase()}`"
         :color="entry?.tier?.toLowerCase()"
@@ -97,7 +104,6 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
         }">
       </RadialWinrate>
     </div>
-
     <template #content>
       <div class="grid place-items-center">
         <div
@@ -130,7 +136,7 @@ function asEntry(entry: RankedEntry | Partial<RankedEntry>): RankedEntry {
           <h2
             :class="
               cn('justify-self-center text-center leading-none', {
-                'text-xl': !entry?.tier,
+                'font-mono text-xl font-semibold': !entry?.tier,
               })
             ">
             {{ wr && entry?.tier ? `${wr}%` : "Unranked" }}

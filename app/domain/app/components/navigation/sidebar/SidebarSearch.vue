@@ -125,6 +125,10 @@ function onClick(item: SidebarSearchEntry) {
   if (item.to) navigateTo(item.to)
   else emit("openPopover", item)
 }
+
+function selectGroup(label: string) {
+  query.value = label
+}
 </script>
 
 <template>
@@ -263,7 +267,7 @@ function onClick(item: SidebarSearchEntry) {
                 }"
                 variant="ghost"
                 as="li"
-                @click="query = item.label">
+                @click="selectGroup(item.label)">
                 <UUser
                   size="sm"
                   :ui="{

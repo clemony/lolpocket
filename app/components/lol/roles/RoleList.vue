@@ -59,7 +59,7 @@ function handleReset() {
       type="checkbox"
       name="positions"
       aria-label="x"
-      @click="pocketPositions = []" />
+      @click="void (pocketPositions = [])" />
 
     <label
       v-for="position in sortedPositions"

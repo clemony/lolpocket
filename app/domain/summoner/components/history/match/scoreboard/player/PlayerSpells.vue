@@ -5,7 +5,7 @@ const {
   class: className,
   player,
   ui,
-  size = "sm",
+  size = "2xs",
 } = defineProps<{
   player: Player
   class?: HTMLAttributes["class"]
@@ -18,21 +18,21 @@ const {
   <div
     :class="
       cn(
-        'pointer-events-none relative z-auto flex shrink-0 items-center *:pointer-events-auto',
+        'pointer-events-none relative z-1 flex shrink-0 items-center *:pointer-events-auto',
         className
       )
     ">
-    <HoverAvatar
-      v-for="spell in player?.spells.toReversed()"
-      :key="spell"
-      :src="`/img/spell/${spell}.webp`"
-      :size
-      :avatar="{
-        ui: {
-          root: cn('z-2', ui?.root),
-          image: cn('', ui?.image),
-        },
-      }"
-      type="spell" />
+    <Tooltip :text="String('hi')">
+      <UAvatar
+        v-for="spell in player?.spells"
+        :key="spell"
+        :src="`/img/spell/${spell}.webp`"
+        :size
+        :ui="{
+          root: cn('z-0', ui?.root),
+          image: cn('z-1 ring-2! ring-p0!', ui?.image),
+        }"
+        type="spell" />
+    </Tooltip>
   </div>
 </template>

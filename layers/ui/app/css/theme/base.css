@@ -79,6 +79,12 @@
   --ui-nc: var(--primary-300);
 
   --ui-epic: var(--nord-500);
+
+  --color-shadow: var(--primary-700);
+  --color-shadow-contrast: var(--primary-300);
+
+  --color-steel: var(--primary-300);
+  --color-steel-contrast: var(--primary-700);
 }
 
 .dark,

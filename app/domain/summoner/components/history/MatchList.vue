@@ -2,7 +2,7 @@
 import type { VirtualItem } from "@tanstack/vue-virtual"
 import { useVirtualizer } from "@tanstack/vue-virtual"
 import type { ComponentPublicInstance } from "vue"
-import { useProfileScrollBody } from "~/domain/summoner/composables/useProfileScrollBody"
+import { useProfileScrollBody } from "~/domain/summoner/composables/useProfileScroll"
 import {
   getElementScrollMargin,
   getVirtualItemTransform,
@@ -115,7 +115,7 @@ onMounted(() => {
       icon="reset"
       class="w-full"
       :title="loadMessage"
-      @click="loadMessage = ''" />
+      @click="void (loadMessage = '')" />
  -->
     <!-- loading skeleton -->
     <div v-if="loading" class="flex w-full flex-col gap-8">

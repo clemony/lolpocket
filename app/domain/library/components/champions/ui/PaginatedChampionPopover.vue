@@ -96,7 +96,7 @@ watch(
           class="absolute top-3 right-2 btn-square size-6 shrink-0 opacity-100 group-has-placeholder-shown/txt:opacity-0"
           variant="ghost"
           size="sm"
-          @click="searchQuery = ''">
+          @click="void (searchQuery = '')">
           <icon class="size-4 **:stroke-[1.5]" name="x-sm" />
         </UButton>
       </div>
@@ -147,7 +147,7 @@ watch(
             :key="champion"
             class="hover-ring aspect-square h-auto w-full cursor-pointer rounded-lg"
             as="label"
-            @click="open = false">
+            @click="void (open = false)">
             <input
               v-model="pocket._champion"
               class="peer hidden"

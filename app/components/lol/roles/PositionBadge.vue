@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import type { MapPosition } from "#shared/constants/misc/positions"
-import { mapPositions } from "#shared/constants/misc/positions"
+import type { TeamPosition } from "#shared/constants/misc/positions"
+import { teamPositions } from "#shared/constants/misc/positions"
 import type { ButtonProps } from "@nuxt/ui"
 
 const {
   class: className,
   position: pos,
-  size = "xs"
+  size = "xs",
 } = defineProps<{
   class?: HTMLAttributes["class"]
-  position: MapPosition | string | null
+  position: TeamPosition | string | null
   noLabel?: boolean
   size?: ButtonProps["size"]
   active?: boolean
@@ -20,7 +20,7 @@ console.log("🌱 - p:", pos)
 const position = computed(() => {
   if (typeof pos !== "string") return pos
 
-  return mapPositions.find((p) => p.label === String(pos))
+  return teamPositions[pos]
 })
 </script>
 
@@ -38,15 +38,15 @@ const position = computed(() => {
             active ||
             (champFilter().filters.position &&
               champFilter().filters.position === position.label),
-          'pr-3': active && clear
+          'pr-3': active && clear,
         },
         className
       )
     "
     :style="{
-      backgroundColor: `${(champFilter().filters.position && champFilter().filters.position === position.label) || active ? position.color : 'transparent'}`
+      backgroundColor: `${(champFilter().filters.position && champFilter().filters.position === position.label) || active ? position.color : 'transparent'}`,
     }">
-    <RoleIcon class="text-white" :position="position.label" />
+    <Icon class="text-white" :name="`i-lp-${position?.label.toLowerCase()}`" />
     <slot>
       {{ position.label }}
     </slot>

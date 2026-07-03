@@ -29,6 +29,10 @@ function closeModal() {
 const textOpen = shallowRef<boolean>(false)
 const openPost = useToggle(textOpen)
 
+function toggleTextPost() {
+  openPost()
+}
+
 const style = computed(() => ({
   aspectRatio:
     currentPost.value?.video_width && currentPost.value?.video_height
@@ -186,7 +190,7 @@ const videoComponent = computed(() => {
             }"
             color="neutral"
             :label="!textOpen ? 'Read Post...' : 'Collapse Post'"
-            @click="openPost()" />
+            @click="toggleTextPost" />
         </div>
       </div>
     </template>

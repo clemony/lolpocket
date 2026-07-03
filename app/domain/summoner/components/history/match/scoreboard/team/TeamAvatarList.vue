@@ -7,30 +7,34 @@ const { team } = defineProps<{
 </script>
 
 <template>
-  <div class="grid auto-rows-fr items-center">
+  <div class="grid w-full auto-rows-fr items-center">
     <button
       v-for="player in team"
       :key="player.puuid"
-      class="group/player relative inline-flex max-w-34 basis-1/2 cursor-pointer items-center justify-start gap-1 truncate py-px pr-1 align-baseline text-xs font-medium **:pointer-events-none"
+      class="group/p relative inline-flex w-full cursor-pointer items-center justify-start gap-1 truncate py-px pr-1 align-baseline text-xs font-medium **:pointer-events-none"
       @click.stop="
         navigateTo(`/${match.regionId}/${player.name}_${player.tag}`)
       ">
-      <div class="grid size-5 place-items-center rounded-full bg-n2">
+      <div class="grid size-5 shrink-0 place-items-center rounded-full bg-n2">
         <Icon
           name="i-link"
           class="absolute z-0 size-4 text-nc saturate-90 **:stroke-[10%]!" />
-        <HoverAvatar
-          as="button"
-          :src="`/img/champion/${player?.championId}.webp`"
-          size="2xs"
-          :ui="{
-            root: 'z-1 m-0! shrink-0 translate-0! place-self-center border-0! bg-transparent p-0! transition-opacity duration-200 group-hover/player:opacity-0',
-            image: 'drop-shadow-sm',
-            icon: 'block!',
-          }" />
+
+        <div
+          class="absolute grid aspect-square size-5 shrink-0 place-items-center place-self-center transition-opacity duration-200 ease-spring group-hover/p:opacity-0!">
+          <HoverAvatar
+            as="button"
+            :src="`/img/champion/${player?.championId}.webp`"
+            size="2xs"
+            :ui="{
+              root: 'size-full! shrink-0 border-0!',
+              image: 'drop-shadow-sm',
+              icon: 'block!',
+            }" />
+        </div>
       </div>
       <span
-        class="max-w-full grow truncate text-start font-medium group-hover/player:underline"
+        class="pointer-events-none max-w-full grow truncate text-start font-medium group-hover/p:underline"
         >{{ player.name }} #{{ player.tag }}</span
       >
     </button>

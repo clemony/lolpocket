@@ -17,7 +17,7 @@ const {
     :class="cn('', className)"
     :variant="variant"
     :size="size"
-    @click="session().blockDialog = true">
+    @click="void (session().blockDialog = true)">
     <icon class="" name="lucide:ban" />
     <span>
       <slot />

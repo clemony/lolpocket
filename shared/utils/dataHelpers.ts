@@ -87,7 +87,7 @@ export function pathColorByName(name: string) {
   return pathToColor[name]
 }
 
-export function pathNameById(id: number) {
+export function pathNameById(id: number): string | undefined {
   return pathIndex[id]?.name
 }
 

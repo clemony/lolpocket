@@ -33,12 +33,24 @@ const hoveredTheme = ref<string | null>(null)
 const accentItems = themeAccentOptions.map((accent) => ({
   value: accent.value,
   label: accent.label,
-  champion: accent.champion,
+  champion: accent?.champion,
   description: accent.description,
+  onClick(e: MouseEvent): void | Promise<void> {
+    e.preventDefault()
+    e.stopPropagation()
+    accountUpdate(
+      { color: accent.value || undefined },
+      {
+        message: "Your accent color has been updated and is ready to show off!",
+      }
+    )
+  },
   ui: {
     base: cn(
-      "relative h-10 rounded-xl p-0!",
-      accent.value === currentAccent.value.value ? "pointer-events-none" : ""
+      "relative h-10 rounded-xl bg-(--color-accent)! p-0! inset-shadow-xs inset-ring-pc/8 hover:bg-(--color-accent)! hover:brightness-110",
+      accent.value === currentAccent.value?.value
+        ? "pointer-events-none inset-ring-pc/60 outline -outline-offset-2 outline-pc/60"
+        : ""
     ),
     label: "capitalize",
   },
@@ -114,16 +126,90 @@ function setTheme(theme?: string) {
     { message: "Your theme has been updated!" }
   )
 }
-function setAccent(accent?: string) {
-  accountUpdate(
-    { color: accent || undefined },
-    { message: "Your accent color has been updated and is ready to show off!" }
+
+const container = useTemplateRef<HTMLElement>("container")
+const { width } = useElementBounding(container)
+const open = shallowRef<boolean>(false)
+
+const accentItemWidth = 30
+const accentGap = 6
+const accentInlinePadding = 16
+const moreTriggerWidth = 30
+
+const visibleAccentCount = computed(() => {
+  if (!width.value) return accentItems.length
+
+  const allItemsWidth =
+    accentItems.length * accentItemWidth +
+    (accentItems.length - 1) * accentGap +
+    accentInlinePadding
+
+  if (width.value >= allItemsWidth) return accentItems.length
+
+  const reservedOverflowWidth = moreTriggerWidth + accentGap
+  const availableWidth = Math.max(
+    0,
+    width.value - accentInlinePadding - reservedOverflowWidth
   )
-}
+  const itemSlotWidth = accentItemWidth + accentGap
+
+  return Math.max(
+    1,
+    Math.min(
+      accentItems.length - 1,
+      Math.floor((availableWidth + accentGap) / itemSlotWidth)
+    )
+  )
+})
+
+const accents = computed(() => {
+  const triggerCount = visibleAccentCount.value
+  const hasOverflow = triggerCount < accentItems.length
+
+  return {
+    trigger: [
+      ...accentItems.slice(0, triggerCount),
+      ...(hasOverflow
+        ? [
+            {
+              value: "empty",
+              label: undefined,
+              ui: {
+                base: "opacity-0 pointer-events-none! min-w-0! shrink! invisible grow",
+              },
+            },
+            {
+              value: "more",
+              icon: open.value ? "i-down" : "i-more",
+              label: "More",
+              onClick(e: MouseEvent) {
+                e.preventDefault()
+                e.stopPropagation()
+                open.value = !open.value
+              },
+              ui: {
+                base: "-ml-2 inset-ring-0 shadow-none! fx-0! inset-shadow-none! drop-shadow-none! bg-transparent",
+              },
+            },
+          ]
+        : []),
+    ],
+    content: hasOverflow ? accentItems.slice(triggerCount) : [],
+  }
+})
+
+watch(
+  () => visibleAccentCount.value === accentItems.length,
+  (allAccentsFit) => {
+    if (allAccentsFit) {
+      open.value = false
+    }
+  }
+)
 </script>
 
 <template>
-  <div :class="cn('w-full py-2', props.ui?.root)">
+  <div ref="container" :class="cn('w-full py-2', props.ui?.root)">
     <h6 :class="cn('flex h-8 items-center px-3 opacity-50', props.ui?.label)">
       Theme
     </h6>
@@ -199,64 +285,35 @@ function setAccent(accent?: string) {
       </LayoutGroup>
     </div>
     <Separator class="mt-4 mb-2" />
-    <h6 :class="cn('flex h-8 items-center px-3 opacity-50', props.ui?.label)">
-      Accent
-    </h6>
-    <UScrollArea
-      :items="accentItems"
-      orientation="horizontal"
-      :ui="{
-        root: 'w-full max-w-full scrollbar-none mask-x-from-98% mask-x-to-100% pb-1',
-        item: 'last:mr-13',
-        viewport: cn(
-          'flex w-full flex-nowrap items-center gap-1.5 px-3 py-0.5',
-          props.ui?.accent
-        ),
-      }">
-      <template #default="{ item }">
-        <UTooltip
-          as-child
-          disable-hoverable-content
-          :text="item.label"
-          arrow
-          :ui="{ content: 'h-max! rounded-2xl' }"
-          :content="{ side: 'top', sideOffset: 2 }">
-          <div
-            :style="{
-              '--color-accent': `var(--color-${item.value})`,
-            }">
-            <UButton
-              :icon="item.value === themeAccent ? 'i-tick' : ''"
-              :ui="{
-                base: cn(
-                  'absolute aspect-square size-8 justify-center rounded-full bg-(--color-accent)! inset-shadow-xs inset-ring-pc/8 transition-transform duration-300 ease-spring hover:scale-110 hover:bg-(--color-accent)! hover:inset-ring-(--color-accent) hover:brightness-110',
-                  {
-                    'inset-ring-pc/60 outline outline-pc/60 -outline-offset-2':
-                      item.value === themeAccent,
-                  },
-                  props.ui?.accentItem
-                ),
-                leadingIcon: 'text-pc **:stroke-[12%]!',
-              }"
-              @click="setAccent(item.value)" />
-          </div>
-          <template #content>
-            <div class="inline-flex items-center gap-1">
-              <UAvatar
-                icon="i-riot"
-                :ui="{
-                  root: 'bg-n3',
-                  icon: 'size-3.5 text-nc',
-                }"
-                :src="`/img/champion/${champIdByName(item.champion)}.webp`"
-                size="2xs" />
-              <div class="text-sm font-semibold text-nc">
-                {{ item.label }}
-              </div>
-            </div>
-          </template>
-        </UTooltip>
-      </template>
-    </UScrollArea>
+    <div class="w-full pr-2 pl-2.5">
+      <h6 :class="cn('flex h-8 items-center opacity-50', props.ui?.label)">
+        Accent
+      </h6>
+      <UCollapsible
+        v-model:open="open"
+        :ui="{
+          root: 'w-full',
+          content: cn(
+            'flex items-center gap-1.5 px-px py-0.5',
+            props.ui?.accent
+          ),
+        }">
+        <div
+          class="pointer-events-none flex w-full max-w-full items-center gap-1.5 overflow-hidden px-px py-0.5 **:pointer-events-auto">
+          <AccentIndicator
+            v-for="item in accents.trigger"
+            :key="item.value"
+            :item="item" />
+        </div>
+
+        <template #content>
+          <AccentIndicator
+            v-for="item in accents.content"
+            :key="item.value"
+            :open
+            :item="item" />
+        </template>
+      </UCollapsible>
+    </div>
   </div>
 </template>

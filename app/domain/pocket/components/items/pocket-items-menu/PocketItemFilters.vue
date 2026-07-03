@@ -4,6 +4,14 @@ import { newItemSet } from "~/domain/pocket/utils/manage/addPocketModules"
 const route = useRoute()
 const store = pocketStore()
 const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
+
+function addItemSet() {
+  pocket.value?.items?.push(newItemSet())
+}
+
+function clearRankFilter() {
+  is().filters.rank = ""
+}
 </script>
 
 <template>
@@ -13,7 +21,7 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
         class="pr-4"
         color="neutral"
         size="lg"
-        @click="pocket?.items?.push(newItemSet())">
+        @click="addItemSet">
         <icon class="size-4.5" name="add" />
         Set
       </UButton>
@@ -29,7 +37,7 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
         color="neutral"
         hover="btn"
         size="sm"
-        @click="is().filters.rank = ''">
+        @click="clearRankFilter">
         {{ is().filters.rank }}
         <icon class="size-4 **:stroke-[2.1]" name="x" />
       </UButton>
@@ -49,7 +57,7 @@ const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
         clear
         active
         :stat
-        @click="is().filters.stats.splice(i, 1)" />
+        @click="void is().filters.stats.splice(i, 1)" />
     </template>
   </UDashboardToolbar>
 </template>

@@ -48,8 +48,8 @@ const tab = computed(() => (oldIndex.value > newIndex.value ? "0%" : "-100%"))
     rail
     :ui="{
       handle: 'w-12',
-      root: '@container gap-8 divide-none overflow-hidden bg-p1 p-0 py-12 pl-11 shadow-none ring-0',
-      body: 'relative overflow-hidden rounded-6xl bg-p0 p-0! ring ring-p2',
+      root: '@container max-h-max gap-8 divide-none overflow-hidden bg-p1 p-0 py-12 pl-11 shadow-none ring-0',
+      body: 'relative max-h-max overflow-hidden rounded-6xl bg-p0 p-0! ring ring-p2',
       header: 'flex h-fit items-center py-0 pr-1 pl-0',
       footer: 'p-0!',
       //rail: 'mask-y-from-80% mask-y-to-100%',

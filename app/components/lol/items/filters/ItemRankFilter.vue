@@ -26,10 +26,18 @@ function handleUpdate() {
     // is().itemGridApi.refreshCells()
   }
 }
+
+function reset() {
+  is().filters.rank = ""
+}
+
+function clearActiveRank(rank: string) {
+  if (is().filters.rank === rank) is().filters.rank = ""
+}
 </script>
 
 <template>
-  <TransitionSlide
+  <div
     group
     :class="
       cn('relative z-1 flex w-full flex-wrap items-center gap-3', className)
@@ -39,7 +47,7 @@ function handleUpdate() {
       class="order-first hover:*:opacity-100"
       :color
       size="sm"
-      @click="is().filters.rank = ''">
+      @click="reset()">
       <icon class="size-4" name="x" />
     </UButton>
 
@@ -54,7 +62,7 @@ function handleUpdate() {
           'order-1': is().filters.rank === rank,
         })
       "
-      @click="is().filters.rank === rank ? (is().filters.rank = '') : null">
+      @click="clearActiveRank(rank)">
       <input
         v-model="is().filters.rank"
         class="peer absolute hidden"
@@ -63,5 +71,5 @@ function handleUpdate() {
         name="item-types" />
       {{ rank }}
     </Label>
-  </TransitionSlide>
+  </div>
 </template>

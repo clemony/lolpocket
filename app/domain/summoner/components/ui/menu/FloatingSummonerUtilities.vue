@@ -26,7 +26,7 @@ const isSummoner = computed(() => {
     data-type="Profile Settings"
     size="xl"
     hover="neutral"
-    @click="open = true">
+    @click="void (open = true)">
     <Icon class="**:stroke-[1.7]" name="gear" />
   </UButton>
   <Teleport to="body">

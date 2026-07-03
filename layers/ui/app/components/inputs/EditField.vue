@@ -8,6 +8,14 @@ const editing = ref<boolean>(false)
 const edit = useToggle(editing)
 const triggerRef = useTemplateRef<HTMLElement>("triggerRef")
 onClickOutside(triggerRef, () => (editing.value = false))
+
+function startEditing() {
+  edit()
+}
+
+function stopEditing() {
+  editing.value = false
+}
 </script>
 
 <template>
@@ -29,7 +37,7 @@ onClickOutside(triggerRef, () => (editing.value = false))
           className
         )
       "
-      @click="edit()">
+      @click="startEditing">
       <slot />
     </button>
     <template v-else>
@@ -53,7 +61,7 @@ onClickOutside(triggerRef, () => (editing.value = false))
             :ui="{ leadingIcon: 'opacity-70 **:stroke-[2.2]!' }"
             color="neutral"
             icon="i-trash"
-            @click="editing = false" />
+            @click="stopEditing" />
         </Tooltip>
 
         <Tooltip label="Save">
@@ -66,7 +74,7 @@ onClickOutside(triggerRef, () => (editing.value = false))
               leadingIcon: 'scale-98 opacity-70 **:stroke-[1.8]'
             }"
             icon="i-ci-save"
-            @click="editing = false" />
+            @click="stopEditing" />
         </Tooltip>
       </template>
     </div>

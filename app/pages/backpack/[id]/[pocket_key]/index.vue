@@ -55,7 +55,7 @@ watch(
               @click="fetchThread(pocket.key)">
               fetch comments
             </UButton>
-            <UButton @click="threads().threads = {}">
+            <UButton @click="void (threads().threads = {})">
               clear comments
             </UButton>
 

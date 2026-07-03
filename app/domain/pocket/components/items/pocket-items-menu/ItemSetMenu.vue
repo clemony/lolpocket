@@ -12,16 +12,30 @@ const props = defineProps<{
 }>()
 
 const pocket = computed(() => props.pocket)
+
+function duplicateSet() {
+  if (props.set && props.pocket) {
+    duplicateItemSet(props.set, props.pocket.key)
+  }
+}
+
+function copySetToPocket(friendlyPocket: Pocket) {
+  if (props.set) copyItemSetToPocket(friendlyPocket, props.set)
+}
+
+function resetSetItems() {
+  if (props.set) resetItems(props.set)
+}
+
+function deleteSet() {
+  if (props.set && props.pocket) deleteItemSet(props.pocket, props.set)
+}
+
+function createPocketWithSet() {}
 </script>
 
 <template>
-  <UButton
-    class=""
-    @click="
-      props.set && props.pocket
-        ? duplicateItemSet(props.set, props.pocket.key)
-        : null
-    ">
+  <UButton class="" @click="duplicateSet">
     <icon name="copy" />
     Duplicate
   </UButton>
@@ -51,9 +65,7 @@ const pocket = computed(() => props.pocket)
           )"
           :key="friendlyPocket.key"
           class="w-full"
-          @click="
-            props.set ? copyItemSetToPocket(friendlyPocket, props.set) : null
-          ">
+          @click="copySetToPocket(friendlyPocket)">
           <PocketIcon class="size-6 rounded-full" :pocket size="sm" />
           <span class="truncate">
             {{ friendlyPocket.label }}
@@ -63,20 +75,19 @@ const pocket = computed(() => props.pocket)
     </template>
   </UPopover>
 
-  <UButton @click="''">
+  <UButton @click="createPocketWithSet">
     <icon name="panel-dash" />
     New Pocket with Set
   </UButton>
 
   <USeparator />
 
-  <UButton @click="props.set ? resetItems(props.set) : null">
+  <UButton @click="resetSetItems">
     <icon name="reset" />
     Reset Items
   </UButton>
 
-  <UButton
-    @click="props.set && pocket ? deleteItemSet(pocket, props.set) : null">
+  <UButton @click="deleteSet">
     <icon name="trash" />
     Delete Set
   </UButton>

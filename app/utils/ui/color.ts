@@ -28,7 +28,7 @@ export const tierText: Record<string, string> = {
   A: "text-mr",
   B: "text-platinum",
   C: "text-tiny-carrot",
-  D: "text-dom"
+  D: "text-dom",
 }
 
 export const tierBg: Record<string, string> = {
@@ -37,7 +37,7 @@ export const tierBg: Record<string, string> = {
   A: "bg-sorc",
   B: "bg-win",
   C: "bg-silver",
-  D: "bg-bronze"
+  D: "bg-bronze",
 }
 
 export const twText: Record<string, string> = {
@@ -55,7 +55,7 @@ export const twText: Record<string, string> = {
   primary: "text-n5",
   riot: "text-neutral/90",
   google: "text-google",
-  discord: "text-discord"
+  discord: "text-discord",
 }
 
 export const twBg: Record<string, string> = {
@@ -70,6 +70,11 @@ export const twBg: Record<string, string> = {
   pre: "bg-pre",
   res: "bg-res",
   dom: "bg-dom",
+  Inspiration: "bg-insp",
+  Sorcery: "bg-sorc",
+  Precision: "bg-pre",
+  Resolve: "bg-res",
+  Domination: "bg-dom",
   shadow: "bg-n2",
   encore: "bg-encore",
   contaminate: "bg-contaminate",
@@ -94,7 +99,7 @@ export const twBg: Record<string, string> = {
   marksman: "bg-pre",
   assassin: "bg-dom",
   tank: "bg-res",
-  enchanter: "bg-insp"
+  enchanter: "bg-insp",
 }
 
 export const twBg90: Record<string, string> = {
@@ -108,10 +113,15 @@ export const twBg90: Record<string, string> = {
   marksman: "bg-pre/90",
   assassin: "bg-dom/90",
   tank: "bg-res/90",
-  enchanter: "bg-insp/90"
+  enchanter: "bg-insp/90",
 }
 
 export const twBg80: Record<string, string> = {
+  Inspiration: "bg-insp/80",
+  Sorcery: "bg-sorc/80",
+  Precision: "bg-pre/80",
+  Resolve: "bg-res/80",
+  Domination: "bg-dom/80",
   support: "bg-insp/80",
   mid: "bg-sorc/80",
   jungle: "bg-res/80",
@@ -122,7 +132,7 @@ export const twBg80: Record<string, string> = {
   marksman: "bg-pre/80",
   assassin: "bg-dom/80",
   tank: "bg-res/80",
-  enchanter: "bg-insp/80"
+  enchanter: "bg-insp/80",
 }
 
 export const twBorder: Record<string, string> = {
@@ -136,7 +146,7 @@ export const twBorder: Record<string, string> = {
   sorc: "border-sorc",
   pre: "border-pre",
   res: "border-res",
-  dom: "border-dom"
+  dom: "border-dom",
 }
 
 export const twBorder40: Record<string, string> = {
@@ -150,7 +160,7 @@ export const twBorder40: Record<string, string> = {
   sorc: "border-sorc/40",
   pre: "border-pre/40",
   res: "border-res/40",
-  dom: "border-dom/40"
+  dom: "border-dom/40",
 }
 
 export const twRing: Record<string, string> = {
@@ -181,7 +191,7 @@ export const twRing: Record<string, string> = {
   "sorc-200": "ring-sorc-200",
   "pre-200": "ring-pre-200",
   "res-200": "ring-res-200",
-  "dom-200": "ring-dom-200"
+  "dom-200": "ring-dom-200",
 }
 
 export const twRingOffset: Record<string, string> = {
@@ -201,7 +211,7 @@ export const twRingOffset: Record<string, string> = {
   "sorc-50": "ring-offset-sorc-50",
   "pre-50": "ring-offset-pre-50",
   "res-50": "ring-offset-res-50",
-  "dom-50": "ring-offset-dom-50"
+  "dom-50": "ring-offset-dom-50",
 }
 
 export const twDropShadow: Record<string, string> = {
@@ -212,7 +222,7 @@ export const twDropShadow: Record<string, string> = {
   dom: "drop-shadow-(--color-dom-700)",
   primary: "drop-shadow-p1",
   base: "drop-shadow-p0",
-  secondary: "drop-shadow-p2"
+  secondary: "drop-shadow-p2",
 }
 
 export const twTextShadow: Record<string, string> = {
@@ -223,5 +233,5 @@ export const twTextShadow: Record<string, string> = {
   dom: "text-shadow-(--color-dom-700)",
   primary: "text-shadow-p1",
   base: "text-shadow-p0",
-  secondary: "text-shadow-p2"
+  secondary: "text-shadow-p2",
 }

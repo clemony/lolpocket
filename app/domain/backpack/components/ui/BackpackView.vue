@@ -51,6 +51,10 @@ watch(
 )
 
 const isTab = computed(() => props.type === ("tab" as TypeVariant))
+
+function toggleBackpackView() {
+  view.value = view.value === "table" ? "gallery" : "table"
+}
 </script>
 
 <template>
@@ -93,5 +97,5 @@ const isTab = computed(() => props.type === ("tab" as TypeVariant))
       leadingIcon: '**:stroke-[2]'
     }"
     :icon="view === 'table' ? 'i-square-list' : 'i-gallery'"
-    @click="view = view === 'table' ? 'gallery' : 'table'" />
+    @click="toggleBackpackView" />
 </template>

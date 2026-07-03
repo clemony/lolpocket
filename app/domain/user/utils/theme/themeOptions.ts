@@ -21,7 +21,7 @@ export const themeMenu = () => {
     ui: {
       base: cn(
         "relative h-10 rounded-xl p-0!",
-        accent.value === currentAccent.value.value ? "pointer-events-none" : ""
+        accent.value === currentAccent.value?.value ? "pointer-events-none" : ""
       ),
       label: "capitalize",
     },

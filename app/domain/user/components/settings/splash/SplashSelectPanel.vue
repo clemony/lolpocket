@@ -167,7 +167,7 @@ const utils = [
               }"
               :variant="selectedChampion ? 'soft' : 'ghost'"
               icon="i-arrow-left"
-              @click="selectedChampion = null" />
+              @click="void (selectedChampion = null)" />
           </UTooltip> -->
 
           <!-- BOX -->
@@ -193,7 +193,7 @@ const utils = [
               trailing: ''
             }"
             size="lg"
-            @click="selectedChampion && selectedChampion !== '' ? reset() : ''">
+            @click="void (selectedChampion && selectedChampion !== '' ? reset() : '')">
             <template #trailing>
               <InputClear
                 v-if="searchQuery"
@@ -234,7 +234,7 @@ const utils = [
             :key="item.key"
             :value="item.key ?? ''"
             class="flex size-24 grow cursor-pointer items-center justify-center"
-            @click="searchQuery = item.name ?? ''">
+            @click="void (searchQuery = item.name ?? '')">
             <Champion
               :id="item.id"
               side="bottom"

@@ -1,14 +1,40 @@
 <script setup lang="ts">
+import type { AvatarProps, TooltipProps } from "@nuxt/ui"
+import type { AsTag } from "reka-ui"
 import { Primitive } from "reka-ui"
 
-const props = withDefaults(defineProps<TooltipPropsExt>(), {
-  followCursor: true,
-})
+const props = withDefaults(
+  defineProps<
+    TooltipProps & {
+      followCursor?: boolean
+      avatar?: AvatarProps
+      icon?: string
+      as?: string | AsTag
+      trailingIcon?: string
+      ui?: TooltipProps["ui"] & {
+        trailingIcon?: HTMLAttributes["class"]
+        leadingIcon?: HTMLAttributes["class"]
+      }
+    }
+  >(),
+  {
+    followCursor: false,
+  }
+)
 
 const open = ref(false)
 const anchor = ref({ x: 0, y: 0 })
+const triggerRef = ref<unknown>(null)
 
-const reference = computed(() => ({
+function resolveElement(target: unknown): Element | null {
+  if (target instanceof Element) return target
+  if (!target || typeof target !== "object") return null
+
+  const candidate = (target as { $el?: unknown }).$el
+  return candidate instanceof Element ? candidate : null
+}
+
+const pointerReference = computed(() => ({
   getBoundingClientRect: () =>
     ({
       width: 0,
@@ -19,6 +45,19 @@ const reference = computed(() => ({
       bottom: anchor.value.y,
       ...anchor.value,
     }) as DOMRect,
+}))
+const reference = computed(() =>
+  props.followCursor
+    ? pointerReference.value
+    : (resolveElement(triggerRef.value) ?? undefined)
+)
+
+const contentProps = computed(() => ({
+  ...props.content,
+  updatePositionStrategy: props.followCursor
+    ? ("always" as const)
+    : ("optimized" as const),
+  sideOffset: props.content?.sideOffset ?? 10,
 }))
 
 function handleMove(ev: PointerEvent) {
@@ -34,19 +73,19 @@ const delegated = reactiveOmit(props, "class", "avatar", "icon", "trailingIcon")
     v-bind="delegated"
     :open="open"
     :reference="reference"
+    :disabled="props.disabled"
+    :portal="props.portal ?? 'body'"
     :ui="{
       ...props.ui,
+      content: cn('z-999', props.ui?.content),
       arrow: cn(
         'group-top/tt:h-1 group-top/tt:w-2! group-bottom/tt:h-1 group-bottom/tt:w-2',
         props.ui?.arrow
       ),
     }"
-    :content="{
-      ...props.content,
-      updatePositionStrategy: 'always',
-      sideOffset: props.content?.sideOffset ?? 10,
-    }">
+    :content="contentProps">
     <Primitive
+      ref="triggerRef"
       :as="props?.as"
       as-child
       :class="props?.class"

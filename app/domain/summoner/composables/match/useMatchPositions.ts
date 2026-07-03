@@ -1,5 +1,5 @@
 import { matchPositionKey } from "~/domain/summoner/stats/helpers/normalizePosition"
-import { mapPositions } from "~~/shared/constants/misc/positions"
+import { teamPositions } from "~~/shared/constants/misc/positions"
 
 //
 export interface PositionStats {
@@ -42,7 +42,7 @@ export function useMatchPositions(
       return {
         label: position,
         games,
-        position,
+        position: position.replace("middle", "mid").replace("bottom", "bot"),
         winrate: games === 0 ? 0 : (wins / games) * 100,
         wins,
         icon: `i-lp-${position.toLowerCase().replace("middle", "mid").replace("bottom", "bot")}`,

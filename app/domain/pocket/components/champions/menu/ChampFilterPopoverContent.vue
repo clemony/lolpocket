@@ -25,7 +25,7 @@ const { filters } = storeToRefs(champFilter())
               size="xs"
               class="size-6"
               variant="outline"
-              @click="filters.role = []">
+              @click="void (filters.role = [])">
               <icon class="size-4" name="x" />
             </UButton>
           </Label>
@@ -41,7 +41,7 @@ const { filters } = storeToRefs(champFilter())
                 size="xs"
                 class="size-6"
                 variant="outline"
-                @click="filters.position = 'all'">
+                @click="void (filters.position = 'all')">
                 <icon class="size-4" name="x" />
               </UButton>
             </Label>
@@ -52,11 +52,11 @@ const { filters } = storeToRefs(champFilter())
                 size="xs"
                 class="size-6"
                 variant="outline"
-                @click="filters.resource = null">
+                @click="void (filters.resource = null)">
                 <icon class="size-4" name="x" />
               </UButton>
             </Label>
-            <MapPositionFilter />
+            <TeamPositionFilter />
             <ChampionResourceFilter />
           </div>
         </div>

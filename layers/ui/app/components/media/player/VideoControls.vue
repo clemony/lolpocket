@@ -51,6 +51,18 @@ function updateVolume(value: number | number[] | undefined) {
   const next = Array.isArray(value) ? value[0] : value
   if (typeof next === "number") state.value?.setVolume(next)
 }
+
+function togglePlay() {
+  state.value?.togglePlay()
+}
+
+function toggleMute() {
+  state.value?.toggleMute()
+}
+
+function togglePictureInPicture() {
+  void state.value?.togglePictureInPicture()
+}
 </script>
 
 <template>
@@ -66,7 +78,7 @@ function updateVolume(value: number | number[] | undefined) {
     <button
       role="toggle"
       class="pointer-events-auto grid size-full grow cursor-pointer place-items-center"
-      @click="state?.togglePlay()">
+      @click="togglePlay">
       <Spinner v-if="waiting" class="absolute z-1 size-10 text-nc/80" />
       <Icon
         v-else
@@ -85,7 +97,7 @@ function updateVolume(value: number | number[] | undefined) {
       <UButton
         v-bind="button"
         :icon="playing ? 'i-ion-md-pause' : 'i-ion-play'"
-        @click="state?.togglePlay()" />
+        @click="togglePlay" />
       <div class="mr-8 ml-6 flex grow items-center gap-2">
         <USlider
           :ui="{
@@ -157,14 +169,14 @@ function updateVolume(value: number | number[] | undefined) {
               leadingIcon: 'scale-120'
             }"
             icon="i-ion-md-volume-off"
-            @click="state?.toggleMute()" />
+            @click="toggleMute" />
         </template>
       </UPopover>
       <UButton
         v-if="supportsPictureInPicture"
         v-bind="button"
         icon="i-ri-picture-in-picture-fill"
-        @click="state?.togglePictureInPicture()" />
+        @click="togglePictureInPicture" />
       <UButton v-bind="button" icon="i-lucide-maximize" />
     </div>
   </div>

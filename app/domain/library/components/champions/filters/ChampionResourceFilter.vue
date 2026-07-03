@@ -13,6 +13,10 @@ const {
   size?: ButtonProps["size"][]
   variant?: ButtonProps["variant"]
 }>()
+
+function clearResourceFilter() {
+  champFilter().filters.resource = null
+}
 </script>
 
 <template>
@@ -34,7 +38,7 @@ const {
           :variant
           square
           size="sm"
-          @click="champFilter().filters.resource = null">
+          @click="clearResourceFilter">
           <icon class="size-4" name="x" />
         </UButton>
 

@@ -102,7 +102,7 @@ function handlePointerDown() {
         size="xs"
         aria-label="Close"
         :aria-describedby="`Close ${data?.data.value?.name} info dialog.`"
-        @click.stop.prevent="open = false" />
+        @click.stop.prevent="void (open = false)" />
       <component
         :is="cardComponent"
         v-if="data.status.value === 'success' && data"

@@ -17,7 +17,7 @@ const isOpen = ref(false)
   <UCard
     color="primary"
     :ui="{
-      body: 'flex grow rounded-5xl! p-0! ring-pc/8',
+      body: 'flex grow rounded-6xl! p-0! ring-pc/8',
       root: 'shadow-black/4',
     }"
     as-child>
@@ -46,14 +46,17 @@ const isOpen = ref(false)
           ),
         }">
         <div
-          class="flex grow items-center justify-between gap-4 text-sm text-pc">
-          <PlayerLoadout :match :player />
+          class="grid grow grid-cols-2 items-center justify-between gap-4 text-sm text-pc">
+          <div class="grid w-full grid-cols-[1fr_2fr] place-items-center pr-2">
+            <PlayerLoadout :match :player />
+          </div>
 
-          <Grow />
-          <TeamsCardOverview :match />
-          <MatchInfo :match :player />
+          <div class="grid w-full grid-cols-[2fr_1fr] items-center gap-4 pl-6">
+            <TeamsCardOverview :match />
+            <MatchInfo :match :player />
+          </div>
         </div>
-        <div class="absolute bottom-1 rounded-full px-2.5">
+        <div class="absolute bottom-1 mx-auto rounded-full px-2.5">
           <Icon
             name="i-up"
             class="transition-rotate size-5 text-(--status)! group-open/collapse:-rotate-180" />

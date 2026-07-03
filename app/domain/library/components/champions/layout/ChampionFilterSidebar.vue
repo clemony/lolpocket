@@ -150,7 +150,7 @@ const attackStep = ref<StepperItem[]>([
             :id="`attack-${v}`"
             :ui="{ base: '' }"
             :label="v"
-            @click="filters.attackType = k as AttackKey" />
+            @click="void (filters.attackType = k as AttackKey)" />
         </label> -->
       </div>
 

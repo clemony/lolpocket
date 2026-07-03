@@ -25,8 +25,8 @@ const queueModel = computed({
       list: 'z-1 border border-(--account-dark)/6 bg-(--account-color)/30 ring-0 inset-shadow-(--account-dark)/20',
       indicator: cn('bg-(--account-color) inset-ring-(--account-dark)/20'),
       label:
-        'group-active/trigger:font-semibold group-active/trigger:text-white! group-active/trigger:text-shadow-[0px_1px_1px_--alpha(var(--account-dark)_/_50%)]',
-      trigger: cn('text-pc opacity-100', props?.ui?.trigger),
+        'shiny-tab-label bg-clip-text group-hover/trigger:font-semibold group-active/trigger:font-semibold group-active/trigger:text-white!',
+      trigger: cn('opacity-100', props?.ui?.trigger),
     }"
     :default-value="0"
     :items="asTabsItems(queues)" />

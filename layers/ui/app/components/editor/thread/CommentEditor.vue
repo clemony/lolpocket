@@ -100,7 +100,7 @@ onMounted(() => {
           :disabled="!editor?.can()?.undo()"
           square
           size="xs"
-          @click="editor?.commands.undo()">
+          @click="void editor?.commands.undo()">
           <icon
             class="size-4 opacity-60 group-hover/button:opacity-100"
             name="lucide:undo" />
@@ -112,7 +112,7 @@ onMounted(() => {
           :disabled="!editor?.can()?.redo()"
           square
           size="xs"
-          @click="editor?.commands.redo()">
+          @click="void editor?.commands.redo()">
           <icon
             class="size-4 opacity-60 group-hover/button:opacity-100"
             name="lucide:redo" />

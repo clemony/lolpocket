@@ -6,7 +6,7 @@ export const tabsTheme = defineUiTheme({
       "absolute shrink-0 grow transform-gpu transition-transform duration-200 will-change-transform",
     list: "group/list relative flex rounded-xl p-1 inset-ring-0 inset-shadow-black/3 group-active:inset-ring-0",
     trigger:
-      "group/trigger relative inline-flex min-w-0 shrink-0 grow cursor-pointer items-center rounded-lg text-sm font-medium disabled:cursor-not-allowed disabled:opacity-30",
+      "group/trigger relative inline-flex min-w-0 shrink-0 grow cursor-pointer items-center rounded-lg text-sm font-medium active:pointer-events-none disabled:cursor-not-allowed disabled:opacity-30",
 
     root: "group/tabs flex items-center gap-0 inset-ring-0",
     leadingIcon: "shrink-0",

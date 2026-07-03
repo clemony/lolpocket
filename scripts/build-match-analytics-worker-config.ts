@@ -1,14 +1,33 @@
 import { mkdir, writeFile } from "node:fs/promises"
 import { dirname, resolve } from "node:path"
+import { loadEnvFile } from "node:process"
 
 const configPath = resolve(".wrangler/match-analytics/wrangler.jsonc")
 const compatibilityDate = "2026-06-29"
-const cron = process.env.MATCH_ANALYTICS_GATHER_CRON ?? "*/5 * * * *"
+const defaultCron = "*/5 * * * *"
+const disabledCronValues = new Set([
+  "0",
+  "disable",
+  "disabled",
+  "false",
+  "none",
+  "off",
+])
+
+try {
+  loadEnvFile(".env")
+} catch (err) {
+  if ((err as NodeJS.ErrnoException).code !== "ENOENT") {
+    throw err
+  }
+}
 
 function requiredEnv(name: string) {
   const value = process.env[name]?.trim()
   if (!value) {
-    throw new Error(`${name} is required to build the match analytics Worker config`)
+    throw new Error(
+      `${name} is required to build the match analytics Worker config`
+    )
   }
 
   return value
@@ -17,6 +36,13 @@ function requiredEnv(name: string) {
 function optionalEnv(name: string) {
   const value = process.env[name]?.trim()
   return value || undefined
+}
+
+function cronTriggers() {
+  const cron = optionalEnv("MATCH_ANALYTICS_GATHER_CRON")
+  if (!cron) return [defaultCron]
+
+  return disabledCronValues.has(cron.toLocaleLowerCase()) ? [] : [cron]
 }
 
 function d1Binding(options: {
@@ -32,7 +58,7 @@ function d1Binding(options: {
     binding: options.binding,
     database_name: optionalEnv(options.nameEnv) ?? options.defaultName,
     database_id: requiredEnv(options.idEnv),
-    ...(previewDatabaseId ? { preview_database_id: previewDatabaseId } : {})
+    ...(previewDatabaseId ? { preview_database_id: previewDatabaseId } : {}),
   }
 }
 
@@ -42,7 +68,7 @@ function workerVars() {
 
   return {
     ...(seedLimit ? { MATCH_ANALYTICS_SEED_LIMIT: seedLimit } : {}),
-    ...(matchCount ? { MATCH_ANALYTICS_MATCH_COUNT: matchCount } : {})
+    ...(matchCount ? { MATCH_ANALYTICS_MATCH_COUNT: matchCount } : {}),
   }
 }
 
@@ -60,10 +86,10 @@ async function main() {
     compatibility_date: compatibilityDate,
     compatibility_flags: ["nodejs_compat"],
     observability: {
-      enabled: true
+      enabled: true,
     },
     triggers: {
-      crons: [cron]
+      crons: cronTriggers(),
     },
     d1_databases: [
       d1Binding({
@@ -71,17 +97,17 @@ async function main() {
         defaultName: "lolpocket-summoner-cache",
         idEnv: "SUMMONER_CACHE_D1_DATABASE_ID",
         nameEnv: "SUMMONER_CACHE_D1_DATABASE_NAME",
-        previewIdEnv: "SUMMONER_CACHE_D1_PREVIEW_DATABASE_ID"
+        previewIdEnv: "SUMMONER_CACHE_D1_PREVIEW_DATABASE_ID",
       }),
       d1Binding({
         binding: "MATCH_ANALYTICS_DB",
         defaultName: "lolpocket-match-analytics",
         idEnv: "MATCH_ANALYTICS_D1_DATABASE_ID",
         nameEnv: "MATCH_ANALYTICS_D1_DATABASE_NAME",
-        previewIdEnv: "MATCH_ANALYTICS_D1_PREVIEW_DATABASE_ID"
-      })
+        previewIdEnv: "MATCH_ANALYTICS_D1_PREVIEW_DATABASE_ID",
+      }),
     ],
-    ...(Object.keys(vars).length ? { vars } : {})
+    ...(Object.keys(vars).length ? { vars } : {}),
   }
 
   await mkdir(dirname(configPath), { recursive: true })
@@ -89,7 +115,7 @@ async function main() {
   console.log(`Wrote ${configPath}`)
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error(err instanceof Error ? err.message : err)
   process.exit(1)
 })

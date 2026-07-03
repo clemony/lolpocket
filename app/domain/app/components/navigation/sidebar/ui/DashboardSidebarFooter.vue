@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { PopoverArrow } from "reka-ui"
+import { useSignInOrOut } from "~/domain/user/composables/useSignInOrOut"
 import { getSummonerIcon } from "~/domain/utils/img"
 import { asChipColor } from "~/types/typeAssert"
 
@@ -9,6 +9,10 @@ const { settings, hotkeys, account, matchStatus, summoner } =
 const query = defineModel<string | undefined>("query", { default: "" })
 const sidebar = shallowRef<HTMLElement>()
 const accountOpen = shallowRef<boolean>(false)
+
+const accountState = useSignInOrOut(() => {
+  accountOpen.value = false
+})
 </script>
 
 <template>
@@ -20,7 +24,7 @@ const accountOpen = shallowRef<boolean>(false)
       v-model:open="accountOpen"
       :ui="{
         content:
-          'w-[calc(var(--reka-popper-anchor-width)+0.7rem)] min-w-64 -translate-x-1.5 rounded-5xl p-0',
+          'w-[calc(var(--reka-popper-anchor-width)+0.7rem)] min-w-74 -translate-x-1.5 rounded-5xl px-0 pt-0 pb-2',
       }"
       :content="{
         align: 'start',
@@ -96,12 +100,36 @@ const accountOpen = shallowRef<boolean>(false)
             name="i-fluent-caret-up-12-filled"
             class="absolute size-9.5 text-p0" />
         </div>
-        <!--i-fluent-caret-up-12-filled-->
         <ThemeMenu
           :ui="{
             root: 'w-full max-w-full overflow-hidden',
-            themeItem: '',
           }" />
+
+        <USeparator class="mt-4 mb-2" />
+        <div class="w-full px-1">
+          <UButton
+            block
+            variant="ghost"
+            size="lg"
+            :icon="accountState.icon"
+            :ui="{ ...accountState?.ui, label: 'text-md! font-semibold' }"
+            :label="accountState.label"
+            @click="accountState.action">
+            <template #trailing>
+              <div
+                class="flex items-center -space-x-px opacity-80 group-hover/btn:opacity-100">
+                <UKbd
+                  v-for="kbd in accountState.kbds"
+                  :key="String(kbd)"
+                  size="lg"
+                  square
+                  variant="ghost"
+                  color="base"
+                  :value="kbd" />
+              </div>
+            </template>
+          </UButton>
+        </div>
       </template>
     </UPopover>
   </div>

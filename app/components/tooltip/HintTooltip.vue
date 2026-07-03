@@ -76,7 +76,7 @@ const open = shallowRef<boolean>(false)
       ),
       text: cn('break-spaces w-fit text-pretty', tooltipProps.ui?.text),
     }"
-    @click="open = true">
+    @click="void (open = true)">
     <slot>
       <UButton v-bind="button" :icon="icons[props.type]" :ui="btnUi" />
     </slot>

@@ -14,19 +14,20 @@ const { settings, hotkeys, account, summoner } = storeToRefs(user())
 <template>
   <UDashboardGroup
     unit="rem"
-    class="flex max-h-screen min-h-screen flex-1 grow justify-center bg-p1 pr-12">
+    class="flex max-h-screen min-h-screen flex-1 grow justify-center bg-p1">
     <DashboardSidebar />
     <!-- page -->
     <UDashboardPanel
       resizable
       :ui="{
-        root: 'inset-0 flex flex-1 grow flex-row-reverse p-0',
+        root: 'inset-0 flex flex-1 grow p-0',
         body: cn(
           'relative flex h-screen w-full shrink-0 flex-col gap-0! overflow-hidden py-0!'
         ),
       }">
       <template #body>
-        <div class="absolute inset-0 z-auto size-full overflow-y-auto">
+        <div
+          class="absolute inset-0 z-auto mx-auto size-full overflow-y-auto pr-12">
           <slot name="header" />
 
           <slot />

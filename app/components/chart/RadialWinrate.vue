@@ -13,6 +13,7 @@ const {
   thickness = 3,
   color,
   size = 32,
+  hoverScaling = "102%",
   winrate = true,
 } = defineProps<{
   champion?: ChampionStats
@@ -21,8 +22,9 @@ const {
   entry?: RankedEntry
   thickness?: number
   hideZero?: boolean
-  size?: number
+  size?: number | string
   color?: string
+  hoverScaling?: string
   ui?: Record<string, HTMLAttributes["class"]>
   tooltip?: TooltipProps | null
   winrate?: boolean
@@ -51,10 +53,8 @@ const labelProps = computed(() => ({
   id: arcId,
 }))
 
-const arcPath = computed(() =>
-  getWinrateArc(size, labelProps.value.id, label?.radius)
-)
-const sizing = computed(() => arcPath.value.sizing)
+const arcPath = computed(() => getWinrateArc(size, label?.radius))
+const sizing = computed(() => arcPath.value?.sizing || size)
 
 const obj = computed(() => {
   return (
@@ -103,10 +103,10 @@ const wr = computed(() => {
         height: sizing,
         ...label?.style,
       }"
-      :viewBox="arcPath.viewBox"
+      viewBox="0 0 24 24"
       aria-hidden="true">
       <defs>
-        <path :id="arcPath.id" :d="arcPath.path" />
+        <path :id="`winrate-arc-${size}`" :d="arcPath.path" />
       </defs>
 
       <text
@@ -116,7 +116,7 @@ const wr = computed(() => {
         fill="currentColor"
         :class="cn('font-medium tracking-wide', label?.ui?.label)">
         <textPath
-          :href="`#${arcPath.id}`"
+          :href="`#${labelProps.id}`"
           :startOffset="
             label?.offset !== undefined ? `${label?.offset}%` : '50%'
           "
@@ -129,8 +129,7 @@ const wr = computed(() => {
     <div
       v-motion="{
         whileHover: {
-          scale: '102%',
-          filter: 'brightness(114%)',
+          scale: hoverScaling,
         },
         transition: {
           type: 'spring',
@@ -144,7 +143,6 @@ const wr = computed(() => {
         '--size': sizing,
         scale: '100%',
         '--thickness': `calc(${thickness} * 1px)`,
-        filter: 'brightness(100%)',
         color: color
           ? `var(--color-${color})`
           : wr

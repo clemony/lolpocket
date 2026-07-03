@@ -52,7 +52,7 @@ const searchOpen = shallowRef<boolean>(false)
                   : 'i-left-to-line'
               "
               square
-              @click="toggleLeft()" />
+              @click="void toggleLeft()" />
           </UTooltip>
         </span>
         <Icon name="i-slash" class="-mr-1 -ml-3 size-5 opacity-50" />

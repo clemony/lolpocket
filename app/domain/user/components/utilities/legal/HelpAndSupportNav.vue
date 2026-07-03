@@ -29,7 +29,7 @@ const nav = computed<RouteRecordRaw[]>(
         v-for="route in nav"
         :key="route.name"
         :to="route"
-        @click="close()" />
+        @click="void close()" />
     </CollapsibleContent>
   </Collapsible>
 </template>

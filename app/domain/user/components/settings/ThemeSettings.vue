@@ -38,9 +38,12 @@ function handleChange(theme: string) {
             :key="accent.value"
             :data-theme="mode"
             :data-accent="accent.value"
+            :icon="accent?.icon ? accent?.icon : ''"
             :avatar="{
-              src: `/img/champion/${champIdByName(accent.champion)}.webp`,
-              size: 'lg'
+              src: accent?.champion
+                ? `/img/champion/${champIdByName(accent?.champion)}.webp`
+                : '',
+              size: 'lg',
             }"
             color="base"
             :ui="{
@@ -51,10 +54,10 @@ function handleChange(theme: string) {
                   : '',
                 twBg[accent.value]
               ),
-              label: 'font-bold text-white'
+              label: 'font-bold text-white',
             }"
             :label="accent.label"
-            @click="themeAccent = accent.value">
+            @click="void (themeAccent = accent.value)">
             <!--      <template #leading>
             <span class="size-3 rounded-full bg-accent" />
           </template> -->

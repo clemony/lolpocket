@@ -16,6 +16,10 @@ watch(items, (newItemSets) => {
   }
 })
 
+function addItemSet() {
+  pocket.value.items?.push(newItemSet())
+}
+
 /* function updateChildIndex(evt) {
   const { oldIndex, newIndex } = evt
 
@@ -54,7 +58,7 @@ watch(items, (newItemSets) => {
     <UButton
       class="h-22 w-full rounded-xl border-p3/40"
       variant="outline"
-      @click="pocket.items?.push(newItemSet())">
+      @click="addItemSet">
       <icon class="transition-opacity duration-200" name="add" />
     </UButton>
   </div>

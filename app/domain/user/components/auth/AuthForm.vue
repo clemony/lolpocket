@@ -93,7 +93,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
               :aria-label="show ? 'Hide password' : 'Show password'"
               :aria-pressed="show"
               aria-controls="password"
-              @click="show = !show" />
+              @click="void (show = !show)" />
             <LazyInputClear
               v-if="state.password"
               @clear-input="state.password = ''" />

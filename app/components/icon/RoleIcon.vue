@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { MapPosition } from "#shared/constants/misc/positions"
-import { mapPositions } from "#shared/constants/misc/positions"
+import type { TeamPosition } from "#shared/constants/misc/positions"
+import { teamPositions } from "#shared/constants/misc/positions"
 
 const { class: className, position: pos } = defineProps<{
   class?: HTMLAttributes["class"]
-  position: MapPosition | string | null
+  position: TeamPosition | string | null
 }>()
 
 const position = computed(() => {
   if (typeof pos !== "string") return pos
 
-  return mapPositions.find((p) => p.label === String(pos))
+  return teamPositions[String(pos)]
 })
 </script>
 

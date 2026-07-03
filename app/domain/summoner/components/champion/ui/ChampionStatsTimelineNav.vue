@@ -41,7 +41,7 @@ const prev = computed(() => {
         )
       "
       size="12"
-      @click="section = `#${item.id}`"
+      @click="void (section = `#${item.id}`)"
     >
       <Icons
         name="right"

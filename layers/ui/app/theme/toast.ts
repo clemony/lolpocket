@@ -6,47 +6,53 @@ export const toastTheme = defineUiTheme({
     actions: "flex shrink-0 gap-1.5",
     avatar: "shrink-0",
     avatarSize: "2xl",
-    close: "absolute top-3 right-3 size-6 p-0 [&_svg]:size-4",
+    close:
+      "absolute top-3 right-3 size-6 p-0 **:stroke-[11%]! [&_svg]:size-4 group-hover:[&_svg]:**:stroke-[12%]!",
     description: "text-sm",
-    icon: "size-5 shrink-0",
+    icon: "size-5 shrink-0 **:stroke-[11%]!",
     progress: "absolute inset-x-0 bottom-0",
     root: "group relative flex h-max max-h-max flex-col gap-2.5 overflow-hidden rounded-lg p-4 shadow-lg ring backdrop-blur-lg focus:outline-none data-[state=closed]:animate-[slide-out-to-right_200ms_ease-in-out] data-[state=open]:animate-[slide-in-from-right_200ms_ease-in-out]",
-    wrapper: "flex w-full flex-1 flex-col"
+    wrapper: "flex w-full flex-1 flex-col",
   },
   variants: {
     color: {
       base: {
         description: "text-pc",
         icon: "text-pc",
-        root: "bg-p0/90 ring-p3/70 focus-visible:ring-2 focus-visible:ring-pc/60 focus-visible:ring-inset"
+        root: "bg-p0/90 ring-p3/70 focus-visible:ring-2 focus-visible:ring-pc/60 focus-visible:ring-inset",
       },
 
       neutral: {
         description: "text-nc",
         icon: "text-nc",
         title: "text-nc",
-        root: "bg-neutral/90 ring-n2/50 backdrop-blur-lg focus-visible:ring focus-visible:ring-nc focus-visible:ring-inset"
+        root: "bg-neutral/90 ring-n2/50 backdrop-blur-md focus-visible:ring focus-visible:ring-nc focus-visible:ring-inset",
       },
-      dom: {}
+      dom: {
+        description: "text-nc",
+        icon: "text-nc",
+        title: "text-nc",
+        root: "bg-[color-mix(in_oklab,_var(--ui-dom)_80%,black_15%)] ring-dom/50 backdrop-blur-md backdrop-saturate-300 focus-visible:ring focus-visible:ring-dom focus-visible:ring-inset",
+      },
     },
     orientation: {
       horizontal: {
-        root: "data-[state=open]:animate-in data-[state=open]:slide-in-from-top! data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top! inset-x-0 m-0! -mt-[0px]! -mb-[16px] h-(--ui-header-height)! max-h-(--ui-header-height)! min-h-(--ui-header-height)! w-full origin-top! flex-row! items-center! justify-center gap-3! rounded-none p-0! ring-1",
+        root: "data-[state=open]:animate-in data-[state=open]:slide-in-from-top! data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top! inset-x-0 m-0! -mt-[0px]! -mb-[16px] h-18! max-h-18! min-h-18! w-full origin-top! flex-row! items-center! justify-center gap-3! rounded-none p-0! ring-1",
         wrapper:
-          "inline-flex! max-w-(--ui-container) flex-row! items-center! gap-4 pb-1 align-baseline",
+          "inline-flex! flex-row! items-center! gap-4 pb-1 align-baseline",
         title:
           "m-0! inline self-end! p-0! align-baseline text-md leading-none!",
         description: "inline align-baseline text-md! leading-none",
         icon: "ml-18! inline",
         actions: "absolute right-11 justify-end justify-self-end",
         close:
-          "-top-0 right-3.25 order-last block self-center text-nc **:text-nc [&_svg]:size-5 [&_svg]:**:stroke-[1.6] group-hover:[&_svg]:**:stroke-[2.1]"
-      }
-    }
+          "relative! top-0! right-3.25 order-last block self-center text-nc **:text-nc [&_svg]:size-5 [&_svg]:**:stroke-[1.6] group-hover:[&_svg]:**:stroke-[2.1]",
+      },
+    },
   },
   defaultVariants: {
-    color: "neutral"
-  }
+    color: "neutral",
+  },
 })
 
 export default toastTheme

@@ -28,6 +28,10 @@ whenever(subSearchPressed, () => {
   focused.value = true
 })
 
+function clearSearchTerm() {
+  searchTerm.value = ""
+}
+
 /* function closeSearch() {
   focused.value = false
   toggleSearch(false)
@@ -74,7 +78,7 @@ function handleClear() {
               }"
               icon="i-search">
               <template #trailing>
-                <LazyInputClear v-if="searchTerm" @click="searchTerm = ''" />
+                <LazyInputClear v-if="searchTerm" @click="clearSearchTerm" />
                 <span v-else />
               </template>
             </UInput>

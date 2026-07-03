@@ -1,14 +1,8 @@
-import { description } from "valibot"
+import type { StyleValue } from "vue"
 
 export const defaultThemeAccent = "diminuendo"
 
-export const themeAccentOptions = [
-  {
-    value: "shadow",
-    label: "Shadow",
-    description: "Balance is a fool's master.",
-    champion: "Zed",
-  },
+export const themeAccentOptions: AccentItem[] = [
   {
     value: "onslaught",
     label: "Onslaught",
@@ -30,8 +24,9 @@ export const themeAccentOptions = [
   {
     value: "legends",
     label: "Legends",
-    description: "Legends never die.",
-    champion: "",
+    champion: undefined,
+    description: "Peak.",
+    icon: "i-lp-riot",
   },
   {
     value: "diminuendo",
@@ -46,12 +41,6 @@ export const themeAccentOptions = [
     champion: "Nami",
   },
   {
-    value: "contaminate",
-    label: "Contaminate",
-    description: "Aged like a fine egg.",
-    champion: "Twitch",
-  },
-  {
     value: "whimsy",
     label: "Whimsy",
     description: "Yup, that tasted purple.",
@@ -63,10 +52,41 @@ export const themeAccentOptions = [
     description: "Sit down and listen up!",
     champion: "Seraphine",
   },
+  {
+    value: "steel",
+    label: "Steel",
+    description: "Elegance never goes out of fashion.",
+    champion: "Camille",
+  },
+  {
+    value: "shadow",
+    label: "Shadow",
+    description: "Balance is a fool's master.",
+    champion: "Zed",
+  },
+  {
+    value: "contaminate",
+    label: "Contaminate",
+    description: "Aged like a fine egg.",
+    champion: "Twitch",
+  },
 ] as const
 
 export type ThemeAccent = (typeof themeAccentOptions)[number]["value"]
 
+export interface AccentItem {
+  value: string
+  label?: string
+  champion?: string
+  icon?: string
+  style?: StyleValue[]
+  description?: string
+  onClick?: (e: MouseEvent) => void
+  ui?: {
+    base?: HTMLAttributes["class"]
+    label?: HTMLAttributes["class"]
+  }
+}
 export function normalizeThemeAccent(value?: string): ThemeAccent {
   return (
     themeAccentOptions.find((accent) => accent.value === value)?.value ??

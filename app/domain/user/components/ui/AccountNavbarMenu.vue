@@ -23,6 +23,10 @@ const themeModel = computed({
     if (settings) settings.theme = value
   }
 })
+
+function goTo(path: string) {
+  void navigateTo(path)
+}
 </script>
 
 <template>
@@ -75,12 +79,12 @@ const themeModel = computed({
       <UButton
         v-if="user().account?.uuid"
         class="h-10"
-        @click="navigateTo('/settings/account')">
+        @click="goTo('/settings/account')">
         <icon name="at" />
         Account
       </UButton>
 
-      <UButton class="h-10" @click="navigateTo('/settings')">
+      <UButton class="h-10" @click="goTo('/settings')">
         <icon name="gear" />
         Settings
       </UButton>
@@ -102,7 +106,7 @@ const themeModel = computed({
         Log out
       </UButton>
 
-      <UButton v-else @click="navigateTo('/login')">
+      <UButton v-else @click="goTo('/login')">
         <icon name="log-in" />
         Log in
       </UButton>

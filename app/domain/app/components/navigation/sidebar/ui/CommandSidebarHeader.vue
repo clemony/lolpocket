@@ -58,7 +58,6 @@ const buttonProps: ButtonProps = {
           :to="buildSummonerRootPath(summoner)"
           :summoner="summoner"
           :avatar="{
-            round: true,
             ui: { root: 'cursor-pointer size-21 rounded-full!' },
           }" />
       </Ping>
@@ -68,7 +67,7 @@ const buttonProps: ButtonProps = {
       <h1
         :class="
           cn(
-            'font-display -translate-y-1 text-4xl leading-none font-black! normal-case! drop-shadow-2xs!',
+            '-translate-y-1 font-display text-4xl leading-none font-black! normal-case! drop-shadow-2xs!',
             twDropShadow[color]
           )
         ">

@@ -144,7 +144,7 @@ const filterItems = computed<DropdownMenuItem & { trailingIcon?: string }[]>(
             }"
             icon="i-erase"
             size="xs"
-            @click="is().filters.stats = []" />
+            @click="void (is().filters.stats = [])" />
         </UTooltip>
         <Icon
           v-else-if="item.trailingIcon"

@@ -72,10 +72,10 @@ const listbox = useTemplateRef<HTMLElement & { div: HTMLDivElement }>("listbox")
     :highlight-on-hover="false"
     value-key="puuid"
     :ui="{
-      root: 'flex max-h-100 min-h-max grow rounded-5xl! border-p2 bg-p0/98 shadow-sm ring-0! inset-ring-0 shadow-black/4 drop-shadow-none has-focus-visible:outline-0!',
-      content: 'h-max max-h-100 grow',
+      root: 'min-h-max w-full rounded-5xl! border-p2 bg-p0 shadow-sm ring-0! inset-ring-0 shadow-black/4 drop-shadow-none has-focus-visible:outline-0!',
+      content: 'h-max max-h-100',
       group: 'flex flex-col gap-y-1',
-      item: 'flex w-full shrink-0 grow cursor-pointer overflow-hidden rounded-4xl! p-0! duration-0! checked:bg-(--account-color)/60 checked:ring checked:ring-pc/60 hover:bg-(--account-color)/30! data-highlighted:not-data-disabled:before:bg-(--account-color)/20!',
+      item: 'group w-full p-0! data-highlighted:before:bg-transparent!',
     }"
     :items="list"
     :multiple="false"
@@ -83,13 +83,13 @@ const listbox = useTemplateRef<HTMLElement & { div: HTMLDivElement }>("listbox")
     <template #item="{ item }">
       <LazyUTooltip
         :disable-hoverable-content="true"
-        :content="{ side: 'top' }"
+        :content="{ side: 'top', sideOffset: 8 }"
         :ui="{
           content:
-            'bg-overlay z-1 h-max! w-(--reka-popper-anchor-width) rounded-4xl text-pc shadow-none! ring-p2 drop-shadow-md before:absolute before:inset-0 before:z-0 before:size-full before:-scale-y-100 before:rounded-4xl before:shadow-sm before:shadow-black/5',
+            'z-1 h-max! w-(--reka-popper-anchor-width) rounded-4xl bg-overlay text-pc shadow-lg ring-p2 drop-shadow-md before:absolute before:inset-0 before:z-0 before:size-full before:-scale-y-100 before:rounded-4xl before:shadow-sm before:shadow-black/5',
         }">
         <div
-          class="flex w-full max-w-full grow flex-nowrap justify-start gap-3 p-3">
+          class="flex w-full max-w-full grow flex-nowrap justify-start gap-3 rounded-4xl! p-3 duration-0! group-checked:bg-(--account-color)/60 group-checked:ring group-checked:ring-pc/60 group-hover:bg-(--account-color)/30! group-data-highlighted:not-data-disabled:before:bg-(--account-color)/20!">
           <div class="relative size-min shrink-0">
             <UAvatar
               size="xl"

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps, TooltipProps } from "@nuxt/ui"
+import { Primitive } from "reka-ui"
 
 const props = withDefaults(
   defineProps<
@@ -15,7 +16,7 @@ const props = withDefaults(
   {
     align: "end",
     alignOffset: -14,
-    side: "bottom"
+    side: "bottom",
   }
 )
 
@@ -43,7 +44,7 @@ function toasty() {
     color: "neutral",
     orientation: "horizontal",
     title: loadMessage.value ?? "Error loading matches!",
-    icon: "x"
+    icon: "x",
   })
 }
 async function loadNew() {
@@ -70,7 +71,7 @@ const tip = computed(() => {
 </script>
 
 <template>
-  <button @click="loadNew()">
+  <Primitive as-child @click="loadNew()">
     <slot
       v-bind="props"
       :text="tip ?? null"
@@ -78,13 +79,12 @@ const tip = computed(() => {
         side: props.side,
         align: props.align,
         alignOffset: props.alignOffset,
-        sideOffset: props.sideOffset
+        sideOffset: props.sideOffset,
       }"
       :is-loading="loading"
       :cooldown="cooldown"
       :cooldown-ms="cooldownMs"
       :disabled="isDisabled"
-      :time-remaining="timeRemaining">
-    </slot>
-  </button>
+      :time-remaining="timeRemaining" />
+  </Primitive>
 </template>

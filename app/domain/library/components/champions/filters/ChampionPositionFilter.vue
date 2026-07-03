@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import type { ButtonProps } from "@nuxt/ui"
-import { mapPositions } from "~~/shared/constants/misc/positions"
+import { teamPositions } from "~~/shared/constants/misc/positions"
 
 const {
   variant = "ghost",
   class: className,
-  clear = false
+  clear = false,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   clear?: boolean
   variant?: ButtonProps["variant"]
 }>()
+
+function clearPositionFilter() {
+  champFilter().filters.position = ""
+}
 </script>
 
 <template>
@@ -24,12 +28,14 @@ const {
         :variant
         square
         size="sm"
-        @click="champFilter().filters.position = ''">
+        @click="clearPositionFilter">
         <icon class="size-4" name="x" />
       </UButton>
 
       <BaseListboxItem
-        v-for="position in mapPositions.filter((p) => p.label !== 'All')"
+        v-for="position in Object.values(teamPositions).filter(
+          (p) => p.label !== 'All'
+        )"
         :key="position.label"
         class="bg-transparent fx-0"
         :value="position.label"

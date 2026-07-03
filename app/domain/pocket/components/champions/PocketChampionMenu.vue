@@ -16,13 +16,21 @@ const pocketChampions = computed({
   }
 })
 const name = computed(() => champNameByKey(k))
+
+function openChampionProfile() {
+  void navigateTo(`/champions/${k}`)
+}
+
+function setMainChampion() {
+  pocket.value._champion = k
+}
 </script>
 
 <template>
   <PopoverContent
     class="pointer-events-auto -mx-2 w-50 rounded-lg p-0 pb-0.5"
     align="start">
-    <UButton class="hover:bg-p3/60" @click="navigateTo(`/champions/${k}`)">
+    <UButton class="hover:bg-p3/60" @click="openChampionProfile">
       <span class="relative grid size-4.5 place-items-center">
         <Champion class="absolute size-5.5" :k />
       </span>
@@ -48,7 +56,7 @@ const name = computed(() => champNameByKey(k))
     <UButton
       as="label"
       :class="cn('disabled hover:bg-p3/60 has-disabled:opacity-100')"
-      @click="pocket._champion = k">
+      @click="setMainChampion">
       <icon
         name="star"
         :class="

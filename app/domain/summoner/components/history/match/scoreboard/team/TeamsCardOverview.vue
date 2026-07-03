@@ -5,7 +5,7 @@ const { match } = defineProps<{
 </script>
 
 <template>
-  <div class="grid grid-cols-2">
+  <div class="grid w-full grid-cols-2">
     <TeamAvatarList
       :match
       :team="match.participants.filter((p) => p.teamId === 100)" />

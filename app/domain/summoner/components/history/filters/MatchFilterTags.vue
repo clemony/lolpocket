@@ -10,7 +10,7 @@ const { class: className, summoner } = defineProps<{
 <template>
   <div>
     <!--     <ListboxGroupLabel>
-      <FilterLabel v-model="ms().filter.ally" :active="ms().filter.ally !== null" @click="ms().filter.ally = null">
+      <FilterLabel v-model="ms().filter.ally" :active="ms().filter.ally !== null" @click="void (ms().filter.ally = null)">
         {{ ms().filter.ally !== null ? ms().filter.ally : 'Teammates' }}
       </FilterLabel>
     </ListboxGroupLabel> -->
@@ -18,7 +18,7 @@ const { class: className, summoner } = defineProps<{
     <!--     <FilterLabel
       v-model="ms().filter.role"
       :active="ms().filter.role !== 'ALL'"
-      @click="ms().filter.role = 'ALL'">
+      @click="void (ms().filter.role = 'ALL')">
       {{ ms().filter.role !== 'ALL' ? roleStats.find(r => r.role===ms.filter.role).name : 'Position' }}
     </FilterLabel> -->
   </div>

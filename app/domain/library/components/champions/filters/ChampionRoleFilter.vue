@@ -32,7 +32,7 @@ const {
           class="order-first hover:*:opacity-100"
           :variant
           size="sm"
-          @click="champFilter().filters.role = []">
+          @click="void (champFilter().filters.role = [])">
           <icon class="size-4" name="x" />
         </UButton>
 

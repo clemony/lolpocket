@@ -29,13 +29,13 @@ const list = computed(() => [...(champions.value?.values?.() ?? [])])
         base: 'text-sm grow',
       },
       trailingIcon: h(MatchFilterFilters, {
-        label: 'Filter Allies',
+        label: 'Filter Champions',
         onClick() {
           open = !open
         },
       }),
     }"
-    :filter-fields="['name', 'tag']"
+    :filter-fields="['championName']"
     :highlight-on-hover="false"
     value-key="championId"
     :ui="{

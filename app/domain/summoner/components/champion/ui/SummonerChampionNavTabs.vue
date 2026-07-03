@@ -37,7 +37,7 @@ function isActive(path: string) {
       v-for="(item, i) in items"
       :key="i"
       :active="isActive(item.path)"
-      @click="navigateTo(`${routeRoot}${item.path}`)">
+      @click="void navigateTo(`${routeRoot}${item.path}`)">
       <Icon
         v-if="isChampionDetail && item.path === '/champions'"
         class="absolute -left-6 size-3.75 **:stroke-[2.4]"

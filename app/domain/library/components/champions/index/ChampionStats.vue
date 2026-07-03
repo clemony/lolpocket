@@ -175,7 +175,7 @@ const filteredStats = computed(() => {
               v-for="i in 18"
               :key="i"
               class="relative grid size-full cursor-pointer transition-all duration-200 hover:**:font-bold hover:**:opacity-100"
-              @click="level[0] = i">
+              @click="void (level[0] = i)">
               <div
                 :class="cn('absolute grid self-start!')"
                 :style="{

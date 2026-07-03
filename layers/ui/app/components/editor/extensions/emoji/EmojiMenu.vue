@@ -200,7 +200,7 @@ watch(
             :key="index"
             :item
             :index
-            @click="editor?.chain().focus().setEmoji(item.name).run()"
+            @click="void editor?.chain().focus().setEmoji(item.name).run()"
             @mousedown.prevent="selectedIndex = index" />
         </div>
       </TransitionSlide>

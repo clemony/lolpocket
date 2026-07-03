@@ -1,3 +1,33 @@
+@theme {
+  --animate-text-glimmer: text-glimmer 650ms ease-out 1;
+  --animate-heartbeat: heartbeat 0.6s ease-in-out;
+
+  --animate-heartbeat-sm: heartbeat 0.6s ease-in-out;
+
+  --animate-click: click 100ms ease-in-out;
+  --animate-click-sm: click-sm 100ms ease-in-out;
+
+  --animate-shift-toward-top-enter: shift-toward-top-enter 120ms
+    var(--ease-in-quint);
+  --animate-shift-toward-top-exit: shift-toward-top-exit 140ms
+    var(--ease-in-quint);
+
+  --animate-shift-toward-bottom-enter: shift-toward-bottom-enter 120ms
+    var(--ease-in-quint);
+  --animate-shift-toward-bottom-exit: shift-toward-bottom-exit 140ms
+    var(--ease-in-quint);
+
+  --animate-shift-toward-left-enter: shift-toward-left-enter 120ms
+    var(--ease-in-quint);
+  --animate-shift-toward-left-exit: shift-toward-left-exit 140ms
+    var(--ease-in-quint);
+
+  --animate-shift-toward-right-enter: shift-toward-right-enter 120ms
+    var(--ease-in-quint);
+  --animate-shift-toward-right-exit: shift-toward-right-exit 140ms
+    var(--ease-in-quint);
+}
+
 @-webkit-keyframes blink-1 {
   0% {
     opacity: 1;
@@ -183,5 +213,14 @@
   }
   25% {
     transform: scale(0.94);
+  }
+}
+
+@keyframes text-glimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }

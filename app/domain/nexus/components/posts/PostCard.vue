@@ -28,6 +28,10 @@ function openPost(e: PostType, index?: number) {
     emit("openPatchPost", post.value.post as PatchNotesMeta)
   else return null
 }
+
+function handlePostClick() {
+  openPost(post.value.post, index)
+}
 </script>
 
 <template>
@@ -78,7 +82,7 @@ function openPost(e: PostType, index?: number) {
       src: (toValue(post).image as Partial<ImgHTMLAttributes>)?.src,
       preset: 'card'
     }"
-    @click.stop.prevent="openPost(post.value.post, index)">
+    @click.stop.prevent="handlePostClick">
     <template v-if="toValue(post).variantHeader?.isVariant" #header>
       <component
         :is="toValue(post).variantHeader?.component"

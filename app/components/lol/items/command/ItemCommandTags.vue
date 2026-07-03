@@ -23,7 +23,7 @@ const searchInput = ref<string[]>([])
       v-if="filters.tags && filters.tags !== null"
       class="f btn mt-4 gap-2 rounded-md bg-p2/97 text-sm! font-normal! btn-xs"
       :appear="false"
-      @click="filters.tags = []">
+      @click="void (filters.tags = [])">
       {{ filters.tags }}
 
       <icon name="x-sm" />

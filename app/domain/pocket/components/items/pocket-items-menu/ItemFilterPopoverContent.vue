@@ -26,7 +26,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
             class="absolute top-7 right-6 size-6"
             variant="outline"
             square
-            @click="is().filters.stats.length = 0">
+            @click="void (is().filters.stats.length = 0)">
             <icon class="size-4" name="x" />
           </UButton>
           <ItemStatsList
@@ -46,7 +46,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
                 class="size-6"
                 variant="outline"
                 square
-                @click="is().filters.rank = ''">
+                @click="void (is().filters.rank = '')">
                 <icon class="size-4" name="x" />
               </UButton>
             </Label>
@@ -57,7 +57,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
                 class="size-6"
                 variant="outline"
                 square
-                @click="is().filters.tags = ''">
+                @click="void (is().filters.tags = '')">
                 <icon class="size-4" name="x" />
               </UButton>
             </Label>
