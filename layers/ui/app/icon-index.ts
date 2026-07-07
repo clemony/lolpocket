@@ -40,7 +40,7 @@ export const icon = {
     "swap-right": "tdesign:swap-right", //i-tdesign-swap-right
     "swap-left": "tdesign:swap-left", //i-tdesign-swap-left
     refresh: "lucide:refresh-ccw", //'i-refresh'
-    reset: "lucide:rotate-ccw", //'i-reset'
+    reload: "radix-icons:reload", //'i-reset'i-radix-icons-reload
     download: "lucide:download", //'i-download'
     export: "lucide:upload", //'i-export'
     share: "lucide:share", //'i-share'
@@ -193,8 +193,8 @@ export const icon = {
     "circle-big-dot": "clarity:dot-circle-line", //'i-circle-big-dot'
     "circle-dot": "lucide:circle-dot", //'i-circle-dot'
     dot: "lucide:dot", //'i-dot'
-    heart: "proicons:heart", //'i-proicons-heart'
-    "heart-fill": "teenyicons:heart-solid", //'i-heart-fill'
+    heart: "streamline:heart", //"i-streamline-heart'i-proicons-heart'
+    "heart-fill": "streamline:heart-solid", //'i-heart-fill'
     "heart-sm": "teenyicons:heart-small-solid", //'i-heart-sm'
     "heart-sm-outline": "teenyicons:heart-small-outline", //'i-heart-sm-outline'
     activity: "lucide:activity", //i-lucide-activity

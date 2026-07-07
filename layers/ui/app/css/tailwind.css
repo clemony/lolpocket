@@ -19,7 +19,7 @@
   }
 
   * {
-    @apply border-p3 decoration-from-font underline-offset-2 antialiased;
+    @apply border-p3 tabular-nums decoration-from-font underline-offset-2 antialiased;
   }
 
   img,

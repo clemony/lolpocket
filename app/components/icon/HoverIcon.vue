@@ -35,7 +35,8 @@ const props = withDefaults(
     AvatarProps & {
       id?: string | number
       type?: DomainType
-      effects?: boolean
+      scale?: boolean
+      shine?: boolean
       map?: string | number
       k?: string
       summoner?: Summoner
@@ -44,7 +45,8 @@ const props = withDefaults(
     }
   >(),
   {
-    effects: true,
+    scale: true,
+    shine: true,
   }
 )
 
@@ -54,7 +56,8 @@ const delegated = reactiveOmit(
   "tooltip",
   "id",
   "type",
-  "effects",
+  "scale",
+  "shine",
   "map",
   "k",
   "summoner",
@@ -133,6 +136,7 @@ const item = computed<ResolvedType>(() =>
 <template>
   <Tooltip
     v-bind="props.tooltip"
+    :arrow="props.tooltip?.arrow || true"
     :avatar="{
       src: item.src,
       alt: item.text,
@@ -144,21 +148,21 @@ const item = computed<ResolvedType>(() =>
       :src="item?.src"
       :ui="{
         root: cn(
+          'transition-transform duration-300 ease-spring',
           {
-            'hover:scale-105  transition-transform duration-300 ease-spring':
-              props.effects !== false,
+            'hover:scale-108': props.scale !== false,
+            'hover:brightness-115 ': props.shine,
           },
           props.ui?.root
         ),
         image: cn('', props.ui?.image),
       }"
-      @click.stop>
-      <!--  <template v-if="ap.effects !== false">
-        <div v-for="i in 8" :key="i" />
-      </template>
-      <template v-if="item.component" #content>
-        <component :is="item.component" :props.id v-bind="item.props" />
-      </template>-->
-    </UAvatar>
+      @click.stop />
+    <!--  <template v-if="ap.effects !== false">
+          <div v-for="i in 8" :key="i" />
+        </template>
+        <template v-if="item.component" #content>
+          <component :is="item.component" :props.id v-bind="item.props" />
+        </template>-->
   </Tooltip>
 </template>

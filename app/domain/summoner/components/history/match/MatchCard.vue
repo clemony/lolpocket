@@ -15,10 +15,12 @@ const isOpen = ref(false)
 
 <template>
   <UCard
-    color="primary"
+    :style="{
+      '--status': `var(--color-${player?.win === 'remake' ? 'p3' : player?.win === true ? 'insp' : 'dom'})`,
+    }"
     :ui="{
-      body: 'flex grow rounded-6xl! p-0! ring-pc/8',
-      root: 'shadow-black/4',
+      body: 'flex grow rounded-6xl! bg-linear-to-l from-(--status)/80 to-transparent to-63% bg-cover bg-clip-padding p-0! ring-pc/8',
+      root: 'shadow-black/3',
     }"
     as-child>
     <UCollapsible
@@ -26,40 +28,27 @@ const isOpen = ref(false)
       v-model:open="isOpen"
       :ui="{
         root: 'relative min-w-134 grow cursor-pointer',
-        content: 'bg-p0',
+        content: 'bg-transparent',
       }">
       <UButton
-        :style="{
-          '--status': `var(--color-${player?.win === 'remake' ? 'p3' : player?.win === true ? 'insp' : 'dom'})`,
-        }"
         block
         color="transparent"
         :ui="{
-          base: cn(
-            'relative bg-linear-to-l from-(--status)/80 to-transparent to-63% bg-cover bg-clip-padding **:select-none',
-            //
-            'pointer-events-auto relative z-2 h-40! min-h-36! grow pr-4 pl-5 shadow-none ring-0! fx-0 open:rounded-b-none hover:ring-0 data-[state=open]:border-b-0!',
-            //
-            //'after:to-(--status)/80',
-            //
-            'before:y-0 before:pointer-events-none before:absolute before:right-0 before:z-3 before:h-full before:w-3/4 before:rounded-5xl before:border-x before:border-t-0 before:border-b-2 before:border-pc/30 before:mask-l-from-0 before:opacity-40 before:mix-blend-darken before:shadow-sm before:shadow-black'
-          ),
+          base: 'text-p pointer-events-auto relative z-2 h-40! min-h-36! grow justify-between gap-2 pr-4 pl-3 text-sm shadow-none ring-0! fx-0 **:select-none open:rounded-b-none hover:ring-0',
         }">
         <div
-          class="grid grow grid-cols-2 items-center justify-between gap-4 text-sm text-pc">
-          <div class="grid w-full grid-cols-[1fr_2fr] place-items-center pr-2">
-            <PlayerLoadout :match :player />
-          </div>
-
-          <div class="grid w-full grid-cols-[2fr_1fr] items-center gap-4 pl-6">
-            <TeamsCardOverview :match />
-            <MatchInfo :match :player />
-          </div>
-        </div>
-        <div class="absolute bottom-1 mx-auto rounded-full px-2.5">
+          class="relative grid h-[93%] w-7 place-items-center rounded-xl bg-(--status)/20 backdrop-blur-md duration-300 ease-spring group-hover/collapse:bg-(--status)/90">
           <Icon
-            name="i-up"
-            class="transition-rotate size-5 text-(--status)! group-open/collapse:-rotate-180" />
+            name="i-right"
+            class="transition-rotate absolute size-5 text-white drop-shadow-xs duration-300 ease-spring-soft **:stroke-[11%] group-open/collapse:rotate-90" />
+        </div>
+        <div class="flex items-center px-3">
+          <PlayerLoadout :match :player />
+        </div>
+
+        <div class="flex items-center gap-2 pl-3">
+          <TeamsCardOverview :match />
+          <MatchInfo :match :player />
         </div>
       </UButton>
 

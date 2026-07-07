@@ -129,7 +129,21 @@ variables:
 - optional `MATCH_ANALYTICS_MATCH_COUNT`
 - optional `MATCH_ANALYTICS_GATHER_CRON`
 
+The config generator loads local `.env` automatically, and inline shell values
+still override `.env` values for one-off deploys.
+
 The generated config includes `triggers.crons = ["*/5 * * * *"]` by default.
+To remove the deployed cron trigger without deleting the Worker, deploy once
+with a disabled cron value:
+
+```bash
+MATCH_ANALYTICS_GATHER_CRON=off pnpm worker:deploy
+```
+
+`off`, `none`, `disabled`, `disable`, `false`, and `0` all generate
+`triggers.crons = []`. Keep the `triggers.crons` array present; omitting the
+field leaves previously deployed cron triggers in place.
+
 Deploy after both D1 bindings are configured and after applying
 `migrations/0003_summoner_match_scan_state.sql` and
 `migrations/0004_summoner_match_gather_control.sql` to `SUMMONER_CACHE_DB`.

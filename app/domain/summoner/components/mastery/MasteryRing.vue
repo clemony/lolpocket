@@ -36,12 +36,11 @@ const mastery = computed(() =>
   <div
     :class="
       cn(
-        'mastery-ring gradient relative inline-block -rotate-90 rounded-full bg-p2',
+        'mastery-ring gradient relative grid -rotate-90 place-items-center rounded-full bg-p2',
         props.class
       )
     "
     :style="{ width: `${size}px`, height: `${size}px` }">
-    <div class="absolute inset-0 scale-100 rounded-full border border-p3" />
     <!-- GRADIENT RING (rotates around the arc mask) -->
     <div
       class="gradient-progress repeat-infinite absolute inset-0 animate-spin overflow-hidden rounded-full ring [animation-duration:2.5s]"

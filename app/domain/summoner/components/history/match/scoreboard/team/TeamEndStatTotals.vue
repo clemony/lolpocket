@@ -57,13 +57,13 @@ const { class: className, team } = defineProps<{
         v-if="team.gold"
         :class="
           cn(
-            'inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold'
+            'inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold tabular-nums'
           )
         ">
         <Icon
-          name="lol:gold"
+          name="i-lp-gold"
           :class="
-            cn('inline size-4 ds-2xs', {
+            cn('inline size-4 tabular-nums ds-2xs', {
               'text-insp! brightness-80 saturate-125': team.teamId === 100,
               'text-dom! brightness-90': team.teamId === 200,
             })

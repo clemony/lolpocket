@@ -53,7 +53,7 @@ const chart = computed(() => ({
         :src="`/img/champion/${item.bestPair?.[0]?.championId}.webp`"
         size="3xl"
         icon="i-lol-champ" />
-      <div class="flex flex-col justify-center gap-0.75">
+      <div class="flex flex-col justify-center gap-0.75 tabular-nums">
         <div
           class="inline-flex items-center font-display text-3xl leading-none font-bold">
           {{ item.name }}

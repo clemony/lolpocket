@@ -43,7 +43,7 @@ const timeline: PlayerTimeline | null = await getTimeline(
 </script>
 
 <template>
-  <div class="relative h-205 w-full p-0 text-sm **:select-none">
+  <div class="relative h-max w-full p-0 text-sm **:select-none">
     <!--    <TabsRoot
       v-model:model-value="modelValue"
       class="p-0 drop-shadow-[1px_-1px_0_color-mix(in_lch,var(--color-p3)_70%,transparent_30%)]">
@@ -61,11 +61,13 @@ const timeline: PlayerTimeline | null = await getTimeline(
     <UTabs
       v-model:model-value="modelValue"
       value-key="label"
-      size="sm"
+      variant="lift"
+      size="lg"
       :ui="{
-        list: 'h-10! shrink-0 border-2 border-p0 bg-p0/80 shadow-none ring-0 inset-shadow-none backdrop-blur-sm',
-        root: 'mt-2 h-10! shrink-0! px-3 inset-shadow-none',
-        indicator: 'border-1 border-p0 bg-p0/20 ring ring-p0',
+        list: 'justify-end',
+        root: '',
+        indicator: '',
+        content: 'rounded-t-none drop-shadow-[0_-1px_0_var(--color-p2)]!',
       }"
       :items="tabs">
       <template #content="{ item }">

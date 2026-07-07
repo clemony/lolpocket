@@ -2,7 +2,7 @@
 const {
   class: className,
   icon = true,
-  player
+  player,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   player: Player
@@ -11,16 +11,18 @@ const {
 </script>
 
 <template>
-  <Tooltip :ui="{ content: 'h-fit!' }" class="flex items-end place-self-end">
+  <Tooltip :ui="{ content: 'h-fit!' }">
     <UBadge
       icon="i-lp-minion"
+      size="xs"
       :ui="{
-        label: '@min-700:block @max-700:hidden font-semibold',
-        leadingIcon: 'opacity-85'
+        base: 'justify-end gap-1.5 px-1.5! text-end',
+        label: '@min-700:inline-flex @max-700:hidden font-semibold',
+        leadingIcon: 'size-3.5 self-center opacity-85',
       }"
       :label="player.stats.totalCs"
       color="neutral"
-      variant="subtle" />
+      variant="ghost" />
 
     <template #content>
       <div class="grid gap-3 p-0.5 *:leading-5.5">

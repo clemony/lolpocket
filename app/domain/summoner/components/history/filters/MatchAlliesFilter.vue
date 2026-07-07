@@ -117,7 +117,7 @@ const listbox = useTemplateRef<HTMLElement & { div: HTMLDivElement }>("listbox")
           </div>
 
           <div
-            class="inline-flex w-full max-w-full grow gap-1 self-center align-baseline">
+            class="inline-flex w-full max-w-full grow gap-1 self-center align-baseline tabular-nums">
             <span class="truncate text-md! font-semibold text-pc">
               {{ item.name }}
             </span>

@@ -16,14 +16,14 @@ export const sData = defineStore("summonerData", () => {
 
   const { getAllTimelinesForPuuid } = useTimeline()
 
-  const timelines = shallowRef<PlayerTimeline[] | null>([])
+  const timelines = shallowRef<PlayerTimeline[] | undefined>([])
 
   async function getTimelines(): Promise<void> {
     if (!id.value) return
     timelines.value = await getAllTimelinesForPuuid(id.value)
   }
 
-  const mastery = shallowRef<ChampionMastery[] | null>([])
+  const mastery = shallowRef<ChampionMastery[] | undefined>([])
 
   async function getMastery(): Promise<void> {
     if (!id.value || !region.value) return

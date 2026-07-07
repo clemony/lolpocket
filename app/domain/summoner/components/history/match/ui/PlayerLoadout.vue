@@ -10,41 +10,38 @@ const { match, player } = defineProps<{
 
 <template>
   <!-- champ image -->
-  <div>
-    <div
-      class="group/avatar-set relative grid size-max min-w-[100px] place-items-center">
-      <HoverIcon
-        :id="player?.championId"
-        type="champion"
-        :tooltip="{
-          followCursor: false,
-          arrow: true,
+  <div
+    class="group/avatar-set relative grid size-max min-w-[92px] place-items-center">
+    <HoverIcon
+      :id="player?.championId"
+      type="champion"
+      :tooltip="{
+        followCursor: false,
+        arrow: true,
 
-          content: {
-            side: 'top',
-            sideOffset: 6,
-          },
-        }"
-        :ui="{
-          root: 'z-0 size-19 transition-transform duration-400 ease-spring group-hover/avatar-set:scale-108',
-          image:
-            'relative z-0 size-full shrink-0 shadow-sm shadow-black/4 drop-shadow-sm',
-        }" />
-      <!-- runes -->
-      <PlayerRunes class="absolute -top-1 left-0.5 z-2" :player />
-    </div>
+        content: {
+          side: 'top',
+          sideOffset: 6,
+        },
+      }"
+      :ui="{
+        root: 'z-0 size-19 transition-transform duration-400 ease-spring group-hover/avatar-set:scale-108',
+        image:
+          'relative z-0 size-full shrink-0 shadow-sm shadow-black/4 drop-shadow-sm',
+      }" />
+    <!-- runes -->
+    <PlayerRunes class="absolute -top-1 left-0.5 z-2" :player />
   </div>
-  <div class="relative flex flex-col gap-2">
+  <!--  spells -->
+  <!--    <PlayerSpells :player class="translate-y-0.5 gap-0.5" size="xs" />-->
+  <div class="relative flex max-w-[204px] min-w-[204px] flex-col gap-3">
     <div class="flex w-full items-center justify-between">
-      <div class="flex flex-col">
+      <div class="flex flex-col gap-px pl-0.5">
         <KDA
           class="text-start text-lg leading-none font-bold"
           :stats="player.stats" />
-        <div class="flex gap-1">
-          <PlayerCardStats :match :player />
-          <!--  spells -->
-          <!--        <PlayerSpells :player class="translate-y-0.5 gap-0.5" size="3xs" />-->
-        </div>
+
+        <PlayerCardStats :match :player />
       </div>
       <div class="flex items-center gap-1 self-end">
         <HoverIcon
@@ -82,7 +79,9 @@ const { match, player } = defineProps<{
           @click.stop />
       </div>
     </div>
-    <div v-if="player" class="player-items flex shrink-0 items-center gap-1.5">
+    <div
+      v-if="player"
+      class="player-items flex shrink-0 items-center justify-end gap-1.5">
       <HoverIcon
         v-for="(item, i) in player.items.slots"
         :id="item"
@@ -99,6 +98,9 @@ const { match, player } = defineProps<{
         type="item"
         :map="match.mapId"
         size="xl"
+        :ui="{
+          root: 'light:bg-pc/5 light:backdrop-saturate-130',
+        }"
         :disabled="!item || item === 0"
         @click.stop />
     </div>

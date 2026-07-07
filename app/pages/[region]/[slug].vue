@@ -2,6 +2,7 @@
 import type { TabsItem } from "@nuxt/ui"
 import type { SpringOptions } from "motion-v"
 import { motion } from "motion-v"
+import { useFollowSummoner } from "~/domain/summoner/composables/useFollowSummoner"
 import {
   provideProfileScrollBody,
   useProfileScroll,
@@ -18,6 +19,13 @@ definePageMeta({
 const query = shallowRef<string | undefined>(undefined)
 const route = useRoute("summoner-profile")
 const activeRoute = shallowRef<string>(String(route.name))
+
+watch(
+  () => activeRoute.value,
+  (v) => {
+    navigateTo({ name: v })
+  }
+)
 onMounted(() => {
   activeRoute.value = String(route.name)
 })
@@ -49,6 +57,8 @@ const {
   h1Style,
   badgeStyle,
 } = useProfileScroll(body)
+
+const { isFavorite, isSelf, tooltipText, update } = useFollowSummoner(summoner)
 </script>
 
 <template>
@@ -129,15 +139,33 @@ const {
 
               <div
                 class="pointer-evens-auto! flex w-full items-center justify-end gap-4">
+                <Tooltip :content="{ side: 'bottom' }" :text="tooltipText">
+                  <HeartButton
+                    v-if="summoner"
+                    trailing-icon="i-heart-fill"
+                    size="lg"
+                    :ui="{
+                      base: 'relative grid w-15 place-items-center rounded-5xl! drop-shadow-none fx-0!',
+                      leadingIcon: cn(
+                        'absolute size-4.5! group-not-checked/btn:text-pc/60! group-not-checked/btn:group-hover/btn:text-pc!'
+                      ),
+                    }"
+                    variant="outline"
+                    :tooltip-text="tooltipText"
+                    :model-value="isFavorite"
+                    @update:model-value="update($event)" />
+                </Tooltip>
+                <!-- UPDATE SUMMONER -->
                 <UpdateSummoner>
                   <UButton
                     v-if="summoner"
-                    icon="i-reset"
-                    square
+                    icon="i-bytesize-reload"
+                    variant="outline"
                     size="lg"
                     :ui="{
-                      base: 'rounded-5xl bg-(--account-color) px-3 py-2 inset-ring-pc/4 hover:bg-(--account-color)/30!',
-                      leadingIcon: 'text-white/90 hover:text-white',
+                      base: 'relative w-15 overflow-hidden! rounded-5xl! px-5! drop-shadow-none fx-0!',
+                      leadingIcon:
+                        'size-4.5 **:stroke-[10%] group-not-checked/btn:text-pc/60! group-hover/btn:text-pc!',
                     }" />
                 </UpdateSummoner>
                 <!-- ROUTE TABS -->
@@ -145,12 +173,11 @@ const {
                   v-model:model-value="activeRoute"
                   :items="routes"
                   :ui="{
-                    list: 'rounded-5xl border border-(--account-dark)/6 bg-(--account-color)/30 ring-0 inset-shadow-(--account-dark)/20',
+                    list: 'bg-transparent inset-shadow-none inset-ring-0',
                     trigger: 'active:pointer-events-none',
-                    indicator:
-                      'h-10.5 bg-(--account-color) inset-ring-(--account-dark)/20',
+                    indicator: 'h-12 rounded-5xl',
                     label: cn(
-                      'shiny-tab-label bg-clip-text group-hover/trigger:font-semibold group-active/trigger:font-semibold'
+                      'shiny-tab-label bg-clip-text group-hover/trigger:font-semibold group-active/trigger:font-semibold group-active/trigger:text-pc!'
                       //default
                     ),
                   }"
@@ -163,7 +190,7 @@ const {
 
       <div
         ref="body"
-        class="absolute inset-0 z-auto size-full scrollbar-none overflow-y-auto pt-82 pb-12 *:z-0">
+        class="absolute inset-0 z-auto flex size-full scrollbar-none flex-col items-center gap-14 overflow-y-auto pt-82 pr-12 *:z-0">
         <NuxtPage
           v-if="summoner"
           :champion-key
@@ -171,9 +198,8 @@ const {
           :summoner="summoner"
           :style="color" />
 
-        <div
-          class="mx-auto max-w-[1100px] -translate-x-6 overflow-hidden rounded-6xl drop-shadow-sm">
-          <SiteFooterEnd />
+        <div class="mx-auto max-w-[1100px] pb-12">
+          <SiteFooterEnd class="overflow-hidden rounded-6xl drop-shadow-sm" />
         </div>
       </div>
     </NuxtLayout>

@@ -114,7 +114,7 @@
 @layer utilities {
   .rounded-tablist {
     &::before {
-      @apply pointer-events-none absolute inset-x-0 -bottom-12 z-0 h-22 w-full translate-y-9.5 justify-self-center rounded-4xl border-x border-t border-(--ui-border) mask-b-from-31% mask-b-to-30% content-[''];
+      @apply pointer-events-none absolute inset-x-0 -bottom-12 z-0 h-22 w-full translate-y-9.75 justify-self-center rounded-4xl border-x border-t border-(--ui-border) mask-b-from-31% mask-b-to-30% content-[''];
     }
   }
 }

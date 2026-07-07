@@ -47,9 +47,7 @@ const entries = computed(() => [
 </script>
 
 <template>
-  <motion.div
-    ref="body"
-    class="z-auto mx-auto flex max-w-[1100px] grow -translate-x-6">
+  <motion.div ref="body" class="z-auto flex w-full max-w-[1100px] grow">
     <div
       class="@container/filter [container-type:scroll-state] sticky -top-52 flex h-screen max-w-[35%] grow basis-1/4">
       <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->

@@ -2,7 +2,7 @@
 const {
   class: className,
   icon = true,
-  player
+  player,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   player: Player
@@ -12,17 +12,21 @@ const {
 
 <template>
   <Tooltip
+    arrow
+    :content="{ side: 'bottom' }"
     :ui="{ content: 'h-fit!' }"
     class="flex items-start self-start justify-self-end">
     <UBadge
+      size="xs"
       icon="i-lp-gold"
       :ui="{
-        label: '@min-700:block @max-700:hidden font-semibold',
-        leadingIcon: 'text-vanguard/90!'
+        base: 'gap-1.5 px-1.5',
+        label: '@min-700:inline-flex @max-700:hidden font-semibold',
+        leadingIcon: 'self-center text-vanguard!',
       }"
-      :label="`${roundDecimal(player.stats.goldEarned / 1000)}k`"
       color="neutral"
-      variant="subtle" />
+      variant="ghost"
+      :label="`${roundDecimal(player.stats.goldEarned / 1000)}k`" />
 
     <template #content>
       <ul>

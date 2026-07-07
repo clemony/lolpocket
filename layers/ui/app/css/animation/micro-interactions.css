@@ -45,5 +45,5 @@
 }
 
 .shiny-tab-label {
-  @apply from-black via-(--primary-400) to-(--primary-600) bg-size-[500%_100%] bg-no-repeat text-transparent not-group-hover/trigger:not-group-active/trigger:bg-(--primary-500)! group-hover/trigger:animate-text-glimmer group-hover/trigger:bg-linear-to-r group-active/trigger:bg-white motion-reduce:group-hover/trigger:animate-none;
+  @apply from-black via-(--primary-400) to-(--primary-600) bg-size-[500%_100%] bg-no-repeat text-transparent not-group-hover/trigger:not-group-active/trigger:bg-(--primary-500)! group-hover/trigger:animate-text-glimmer group-hover/trigger:bg-linear-to-r motion-reduce:group-hover/trigger:animate-none;
 }

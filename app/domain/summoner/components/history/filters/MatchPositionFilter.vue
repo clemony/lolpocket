@@ -45,12 +45,12 @@ const positionModel = computed({
     :size="props.size"
     :ui="{
       ...props?.ui,
-      root: cn('h-max w-full', props?.ui?.root, props.class),
-      list: 'border border-(--account-dark)/6 bg-(--account-color)/30 ring-0 inset-shadow-(--account-dark)/20',
-      indicator: cn('bg-(--account-color) inset-ring-(--account-dark)/20'),
+
+      list: 'justify-around bg-p0/50 px-0 inset-shadow-sm inset-ring-p2',
+      trigger: 'active:pointer-events-none',
+      indicator:
+        'h-13 rounded-5xl shadow-black/6 inset-ring-p2 drop-shadow-none',
       label: 'hidden',
-      leadingIcon: '',
-      trigger: cn('text-pc! opacity-100', props?.ui?.trigger),
     }"
     :items="positions"
     default-value="all">
@@ -65,7 +65,7 @@ const positionModel = computed({
           :inverted="true"
           :mask-size="100"
           :mask-key="item.position"
-          class="shiny-tab-label size-5.5" />
+          class="shiny-tab-label size-5.5 group-active/trigger:bg-pc!" />
       </Tooltip>
     </template>
   </UTabs>

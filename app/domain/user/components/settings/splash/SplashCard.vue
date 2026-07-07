@@ -21,7 +21,7 @@ interface CardProps {
 const props = withDefaults(defineProps<CardProps>(), {
   alt: " splash",
   as: "div",
-  foil: true
+  foil: true,
 })
 
 const delegated = reactiveOmit(props, "src", "alt", "text", "foil")
@@ -32,21 +32,20 @@ const refElement = ref<HTMLElement | null>(null)
 const state = ref({
   background: { x: 50, y: 50 },
   glare: { x: 50, y: 50 },
-  rotate: { x: 0, y: 0 }
+  rotate: { x: 0, y: 0 },
 })
 
-const foilStyle = computed(
-  (): CSSProperties =>
-    props.syncPerspective || !props.foil
-      ? {}
-      : {
-          "--m-x": `${state.value.glare.x}%`,
-          "--m-y": `${state.value.glare.y}%`,
-          "--r-x": `${state.value.rotate.x}deg`,
-          "--r-y": `${state.value.rotate.y}deg`,
-          "--bg-x": `${state.value.background.x}%`,
-          "--bg-y": `${state.value.background.y}%`
-        }
+const foilStyle = computed((): CSSProperties =>
+  props.syncPerspective || !props.foil
+    ? {}
+    : {
+        "--m-x": `${state.value.glare.x}%`,
+        "--m-y": `${state.value.glare.y}%`,
+        "--r-x": `${state.value.rotate.x}deg`,
+        "--r-y": `${state.value.rotate.y}deg`,
+        "--bg-x": `${state.value.background.x}%`,
+        "--bg-y": `${state.value.background.y}%`,
+      }
 )
 
 function resolveElement(target: unknown): HTMLElement | null {
@@ -65,15 +64,15 @@ function handlePointerMove(event: PointerEvent) {
   if (rect) {
     const position = {
       x: event.clientX - rect.left,
-      y: event.clientY - rect.top
+      y: event.clientY - rect.top,
     }
     const percentage = {
       x: (100 / rect.width) * position.x,
-      y: (100 / rect.height) * position.y
+      y: (100 / rect.height) * position.y,
     }
     const delta = {
       x: percentage.x - 50,
-      y: percentage.y - 50
+      y: percentage.y - 50,
     }
     state.value.background.x = 50 + percentage.x / 4 - 12.5
     state.value.background.y = 50 + percentage.y / 3 - 16.67
@@ -117,7 +116,7 @@ function handlePointerLeave() {
       cn(
         'foil-card container-style relative isolate container transition-transform delay-(--delay) duration-(--duration) ease-(--easing) will-change-transform contain-[layout_style]',
         {
-          'perspective-[600px]': !props.syncPerspective
+          'perspective-[600px]': !props.syncPerspective,
         },
         props.ui?.root
       )
@@ -131,7 +130,7 @@ function handlePointerLeave() {
           'grid h-full overflow-hidden rounded-md border-p4 ring-0 transition-transform delay-(--delay) duration-(--duration) ease-(--easing) will-change-transform group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0]',
           {
             'origin-center transform-[rotateY(var(--r-x))_rotateX(var(--r-y))]':
-              !props.syncPerspective
+              !props.syncPerspective,
           },
           'group/photo',
           props.ui?.container
@@ -148,7 +147,7 @@ function handlePointerLeave() {
               'group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]':
                 !props.syncPerspective,
               'group-hover/hover-card:filter-none group-hover/hover-card:[--duration:200ms] group-hover/hover-card:[--easing:linear] group-hover/hover-card:[--opacity:0.6]':
-                props.syncPerspective && props.foil
+                props.syncPerspective && props.foil,
             }
           )
         ">
@@ -161,7 +160,7 @@ function handlePointerLeave() {
           ">
           <NuxtImg
             v-if="src"
-            :class="cn('z-0 size-full', props.ui?.image)"
+            :class="cn('z-0 size-full scale-130', props.ui?.image)"
             :alt
             :src />
           <slot name="foil" />
@@ -173,6 +172,7 @@ function handlePointerLeave() {
           v-if="props.foil"
           class="background-style will-change-background after:grid-area-[inherit] after:bg-repeat-[inherit] after:bg-attachment-[inherit] after:bg-origin-[inherit] after:bg-clip-[inherit] relative grid size-full opacity-(--opacity) [background-blend-mode:hue_hue_hue_overlay] mix-blend-color-dodge transition-opacity [background:var(--pattern),var(--rainbow),var(--diagonal),var(--shade)] [clip-path:inset(0_0_1px_0_round_var(--radius))] [grid-area:1/1] after:bg-inherit after:bg-size-[var(--foil-size),200%_400%,800%,200%] after:bg-position-[center,0%_var(--bg-y),calc(var(--bg-x)*-1)_calc(var(--bg-y)*-1),var(--bg-x)_var(--bg-y)] after:[background-blend-mode:soft-light,hue,hard-light] after:mix-blend-exclusion after:content-[\'\']" />
       </div>
+      <slot name="container" />
     </div>
     <slot />
   </div>

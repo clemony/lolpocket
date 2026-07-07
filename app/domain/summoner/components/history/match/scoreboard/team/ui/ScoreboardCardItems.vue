@@ -5,7 +5,7 @@ const {
   class: className,
   isSR,
   player,
-  classes
+  classes,
 } = defineProps<{
   player: Player
   isSR: boolean
@@ -24,44 +24,49 @@ const roleItemId = computed(() => {
 <template>
   <!-- items -->
   <div
-    :class="cn('@min-700:px-4 flex w-max items-center gap-4 px-2', className)">
-    <div :class="cn('flex shrink-0 items-center gap-1 self-center')">
+    :class="
+      cn('@min-700:px-4 flex w-max grow items-center gap-4 px-2', className)
+    ">
+    <div :class="cn('flex shrink-0 items-center gap-px self-center')">
       <template v-for="(item, i) in player.items?.slots ?? []" :key="item">
         <template v-if="i < 6">
-          <Item
+          <HoverIcon
             :id="item"
+            type="item"
             :ui="{
-              root: cn('size-7.5 rounded-[0.4rem] ring ring-p4/60', classes)
+              root: cn('z-2 size-7.5! ring-2 ring-p0', classes),
             }" />
         </template>
       </template>
     </div>
-
-    <UAvatarGroup :ui="{ root: 'w-full max-w-16 gap-1', base: 'ring-3' }">
-      <Item
-        :id="player.items?.role ? player.items.role : roleItemId"
+    <div class="flex items-center -space-x-0.5">
+      <HoverIcon
+        v-if="player.items.role"
+        :id="
+          (player.items?.role ? player.items.role : roleItemId || '').toString()
+        "
         :ui="{
-          root: cn('size-7.5 rounded-full', classes),
-          image: cn('img-active bg-p1', {
-            'no-img': !player.items?.role && !isSR,
-            'pointer-events-none brightness-115 contrast-102':
-              !player.items?.role,
-            'brightness-150': player.role === 'support'
-          })
-        }" />
-      <div class="group/ward relative z-1 size-7.5">
-        <Item
+          root: 'size-7.5! ring-2 ring-p0 hover:z-2',
+        }"
+        type="item" />
+      <div class="group/ward relative z-1">
+        <HoverIcon
           :id="player.items?.trinket"
           :ui="{
-            root: cn('size-7.5 rounded-full', classes)
-          }" />
+            root: 'z-2 size-7.5! ring-2 ring-p0',
+          }"
+          type="item" />
         <!-- vision -->
-        <Tooltip as-child :ui="{ content: 'h-max!' }" :side-offset="16">
+        <Tooltip
+          arrow
+          :ui="{ content: 'h-max!' }"
+          :content="{ side: 'top' }"
+          :side-offset="16">
           <UBadge
             color="neutral"
             size="xs"
             :ui="{
-              base: 'transition-scale hover: absolute -top-0.5 -right-1.5 z-2 origin-left gap-0 overflow-visible! rounded-full border-0 bg-neutral px-0.75 py-px text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent! duration-200 group-hover/ward:scale-120 hover:scale-120 hover:ring-2 hover:ring-p0! hover:ring-offset-1 hover:ring-offset-pc'
+              base: 'transition-scale absolute -top-1.5 -right-1.5 z-2 min-w-3 origin-left gap-0 overflow-visible! rounded-full border-0 bg-neutral px-0.75 py-px text-[0.76rem]! font-bold shadow-sm ring-3 ring-transparent! duration-200 group-hover/ward:scale-108 hover:scale-120',
             }">
             {{ player.stats?.visionScore ?? 0 }}
           </UBadge>
@@ -78,6 +83,6 @@ const roleItemId = computed(() => {
           </template>
         </Tooltip>
       </div>
-    </UAvatarGroup>
+    </div>
   </div>
 </template>

@@ -19,13 +19,13 @@ nuxt-build.cpuprofile
 --host
 .notes
 .pnpm-store
+docs/superpowers/plans
 # Node dependencies
 node_modules
 test
 # Logs
 logs
 *.log
-docs
 
 patch
 AGENTS.md
@@ -64,4 +64,3 @@ d1
 # js and js maps
 *.js
 *.js.map
-AGENTS.md

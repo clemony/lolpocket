@@ -40,7 +40,7 @@ export const tabsTheme = defineUiTheme({
         list: "tabs-lift-list tabs-lift z-4! tabs flex h-auto items-center rounded-none border-0! p-0",
         root: "h-auto p-0",
         indicator:
-          "tab-active tab z-2 w-full translate-y-px overflow-visible! rounded-b-none! border-b-0! first:before:[--radius-start:unset]",
+          "tab-active tab z-2 w-full translate-y-0.5 overflow-visible! rounded-b-none! border-b-0! first:before:[--radius-start:unset]",
         leadingIcon:
           "[color:unset] opacity-60 group-hover/trigger:opacity-100 group-data-[state-active]/trigger:opacity-100",
         trigger:

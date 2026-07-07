@@ -25,11 +25,25 @@ const classes =
         }" />
       <MvpBadge :match :player />
     </div>
-    <ScoreboardCardRunes :classes :player />
+    <PlayerRunes
+      class="-space-y-1!"
+      :backdrop="false"
+      :keystone="{
+        size: '2xs',
+        ui: {
+          root: 'z-1 bg-n2!',
+          image: '',
+        },
+      }"
+      :path="{
+        size: '2xs',
+        ui: { root: 'size-5!', image: ' ring-p0 z-3 ring-2!' },
+      }"
+      :player />
   </div>
   <!-- name and tag -->
   <div
-    class="col-start-2 -ml-2 flex h-fit w-30 grow flex-col justify-center gap-0.5 overflow-hidden text-nowrap whitespace-nowrap">
+    class="col-start-2 -ml-2 flex h-fit w-30 grow flex-col justify-center gap-0.5 overflow-hidden text-nowrap whitespace-nowrap tabular-nums">
     <div
       class="inline-flex items-center gap-1 leading-4"
       data-type="player"
@@ -81,15 +95,16 @@ const classes =
   </div>
 
   <div class="col-start-7 flex h-max flex-col items-center">
-    <UAvatarGroup size="2xs" :ui="{ root: 'flex-col space-y-0' }">
-      <Avatar
+    <div class="flex flex-col gap-y-0">
+      <HoverIcon
         v-for="(spell, i) in player?.spells"
+        :id="spell"
         :key="spell"
-        :src="`/img/spell/${spell}.webp`"
+        size="2xs"
+        type="spell"
         :ui="{
-          root: cn('rounded-full', classes),
-          image: 'img-active ring-3 ring-p0',
+          root: cn('z-2 ring-2 ring-p0', classes),
         }" />
-    </UAvatarGroup>
+    </div>
   </div>
 </template>

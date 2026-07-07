@@ -4,7 +4,7 @@ import type { BarStat } from "../team.types"
 const {
   match,
   player,
-  class: className
+  class: className,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   player: Player
@@ -25,8 +25,8 @@ const stats = computed<Record<string, BarStat>>(() => {
       value: player.stats?.totalDamage ?? 0,
       icon: {
         name: "i-lp-scoreboard-sword",
-        class: " scale-116 rotate-180 opacity-100"
-      }
+        class: " scale-116 rotate-180 opacity-100",
+      },
     },
     def: {
       color: "pre",
@@ -38,7 +38,7 @@ const stats = computed<Record<string, BarStat>>(() => {
           .sort((a, b) => b - a)[0] ?? 0,
       tip: "Total Damage Taken by Champions",
       value: player.stats?.totalDamageTaken ?? 0,
-      icon: { name: "i-stat-armor" }
+      icon: { name: "i-stat-armor" },
     },
     heal: {
       color: "insp",
@@ -50,18 +50,18 @@ const stats = computed<Record<string, BarStat>>(() => {
           .sort((a, b) => b - a)[0] ?? 0,
       tip: "Effective Healing & Shielding",
       value: player.stats?.effectiveHealingAndShielding ?? 0,
-      icon: { name: "i-mage-shield-plus", class: "**:stroke-[3.4] " }
-    }
+      icon: { name: "i-mage-shield-plus", class: "**:stroke-[3.4] " },
+    },
   }
 })
 </script>
 
 <template>
-  <Tooltip v-for="stat in stats" :key="stat.color" :label="stat.tip" as-child>
+  <Tooltip v-for="stat in stats" :key="stat.color" :label="stat.tip">
     <div
       :class="
         cn(
-          'relative grid w-full max-w-16 min-w-16 items-center justify-end gap-px rounded-lg p-2',
+          'relative grid min-w-16 items-center gap-0.5 rounded-lg p-2',
           stat.class,
           className
         )
@@ -84,8 +84,8 @@ const stats = computed<Record<string, BarStat>>(() => {
       </div>
       <UProgress
         :ui="{
-          base: 'h-1.25 w-full grow bg-p3',
-          root: 'w-full shrink-0 grow'
+          base: 'h-1.5 w-full! grow bg-p3',
+          root: 'flex w-full! shrink-0 grow -scale-x-100',
         }"
         :color="stat?.color"
         :model-value="roundDecimalToPercent(stat?.value, stat?.max)" />

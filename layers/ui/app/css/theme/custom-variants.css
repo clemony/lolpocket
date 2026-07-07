@@ -14,6 +14,18 @@
   }
 }
 
+@custom-variant scrollable-left {
+  @container scroll-state(scrollable: left) {
+    @slot;
+  }
+}
+
+@custom-variant scrollable-right {
+  @container scroll-state(scrollable: right) {
+    @slot;
+  }
+}
+
 @custom-variant scrollable-bottom {
   @container scroll-state(scrollable: bottom) {
     @slot;
@@ -34,7 +46,9 @@
 @custom-variant droppable (&[data-droppable="true"]);
 @custom-variant targetted (&[data-targetted="true"]);
 
-@custom-variant checked (&[data-state="checked"]);
+@custom-variant checked (&[data-state="checked"], &[data-checked="true"]);
+@custom-variant unchecked (&[data-state="unchecked"], &[data-checked="false"]);
+
 @custom-variant collapsed (&[data-collapsed="true"]);
 @custom-variant expanded (&[data-collapsed="false"]);
 

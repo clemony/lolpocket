@@ -1,38 +1,38 @@
 <script lang="ts" setup>
 const { class: className, team } = defineProps<{
   team: any
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const objs = [
   {
     id: team.elder,
-    name: 'Elder',
+    name: "Elder",
   },
   {
     id: team.baron,
-    name: 'Baron',
+    name: "Baron",
   },
 
   {
     id: team.dragon,
-    name: 'Dragon',
+    name: "Dragon",
   },
   {
     id: team.riftHerald,
-    name: 'Herald',
+    name: "Herald",
   },
   {
     id: team.horde,
-    name: 'Grub',
+    name: "Grub",
   },
   {
     id: team.inhibitor,
-    name: 'Inhibitor',
+    name: "Inhibitor",
   },
   {
     id: team.tower,
-    name: 'Tower',
+    name: "Tower",
   },
 ]
 </script>
@@ -42,13 +42,13 @@ const objs = [
     :class="
       cn(
         'grid shrink-0 auto-cols-fr grid-flow-col justify-center gap-3 **:font-semibold **:text-pc',
-        className,
+        className
       )
     ">
     <div
       v-for="obj in objs"
       :key="obj.name"
-      class="flex w-9 items-center gap-1"
+      class="flex w-9 items-center gap-1 tabular-nums"
       :data-type="`${obj.name} kills`">
       <div class="anchor size-4.5">
         <Img

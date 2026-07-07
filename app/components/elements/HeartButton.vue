@@ -2,61 +2,59 @@
 import type { ButtonProps } from "@nuxt/ui"
 
 defineOptions({
-  inheritAttrs: false
+  inheritAttrs: false,
 })
 
 const props = withDefaults(
   defineProps<
     ButtonProps & {
-      class?: HTMLAttributes["class"]
-      side?: Side
-      checked: boolean
-      tooltipText?: string
+      modelValue?: boolean
     }
   >(),
   {
     variant: "outline",
     size: "sm",
-    side: "bottom"
+    side: "bottom",
   }
 )
 
-const forwarded = reactiveOmit(props, "class", "checked", "tooltipText", "side")
-const checked = defineModel<boolean>("checked")
+const forwarded = reactiveOmit(props, "class", "modelValue")
+const modelValue = defineModel<boolean>("modelValue", { default: false })
 
 onMounted(() => {
-  checked.value = props.checked
+  if (props.modelValue) modelValue.value = props.modelValue
 })
 </script>
 
 <template>
-  <LazyUTooltip :content="{ side }" as-child :text="props.tooltipText">
-    <UButton
-      :data-checked="props.checked"
-      v-bind="forwarded"
-      :icon="
-        props.checked === true
-          ? 'i-streamline-heart-solid'
-          : 'i-streamline-heart'
-      "
-      as="label"
-      :label="props.label"
-      :disabled="props.disabled"
-      :ui="{
-        ...props?.ui,
-        base: cn('', props.ui?.base, {
-          'shadow-none inset-shadow-xs': props.disabled
-        }),
-        label: cn('font-semibold', props.ui?.label),
-        leadingIcon: cn(
-          'size-4! scale-98 **:stroke-[1.5]!',
-          checked && props.color === 'neutral' ? 'light:text-dom-200/90' : '',
-          checked ? 'animate-heartbeat text-dom-400/90!' : 'text-pc',
-          props.ui?.leadingIcon
-        )
-      }">
-      <input type="checkbox" :checked="checked" class="peer absolute hidden" />
-      <span class="font-semibold text-pc!">{{ props.label }}</span>
-    </UButton>
-  </LazyUTooltip>
+  <UButton
+    :data-checked="props.modelValue"
+    v-bind="forwarded"
+    :icon="props.modelValue === true ? 'i-heart-fill' : 'i-heart'"
+    as="label"
+    :label="props.label"
+    :disabled="props.disabled"
+    :ui="{
+      ...props?.ui,
+      base: cn(
+        '',
+        {
+          'shadow-none inset-shadow-xs': props.disabled,
+        },
+        props.ui?.base
+      ),
+      label: cn('font-semibold', props.ui?.label),
+      leadingIcon: cn(
+        'size-4! scale-98 **:stroke-[11%]! group-checked/btn:animate-heartbeat group-checked/btn:text-dom-400/90!',
+        modelValue && props.color === 'neutral' ? 'light:text-dom-200/90' : '',
+        props.ui?.leadingIcon
+      ),
+    }">
+    <input v-model="modelValue" type="checkbox" class="peer absolute hidden" />
+    <slot :model-value>
+      <span v-if="props?.label" class="font-semibold text-pc!">{{
+        props.label
+      }}</span>
+    </slot>
+  </UButton>
 </template>
