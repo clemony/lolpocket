@@ -11,17 +11,16 @@ const dir = computed(() => locales[locale.value].dir)
     :locale="locales[locale]" */
 const userStore = user()
 const threadStore = threads()
-const preferredColorScheme = usePreferredColorScheme()
-const { account, settings } = storeToRefs(userStore)
+const { account } = storeToRefs(userStore)
 const { reportComment } = storeToRefs(threadStore)
+const resolvedTheme = useResolvedThemePreference()
 
 useHead(() => ({
   htmlAttrs: {
     lang: "en",
     dir: "auto",
     "data-accent": account.value?.color ?? "diminuendo",
-    "data-theme":
-      settings.value?.theme ?? preferredColorScheme.value ?? "light",
+    "data-theme": resolvedTheme.value,
   },
   bodyAttrs: {
     class: "group/body",

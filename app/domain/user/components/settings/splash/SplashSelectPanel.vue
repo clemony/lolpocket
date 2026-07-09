@@ -11,7 +11,7 @@ const props = withDefaults(
   }>(),
   {
     title: "Select a custom profile splash.",
-    description: "Glam our profile with a custom skin!"
+    description: "Glam our profile with a custom skin!",
   }
 )
 const emit = defineEmits<{
@@ -30,7 +30,7 @@ watch(
   }
 )
 const search = useSearch(championIndex, searchQuery, {
-  keys: ["name", "key"]
+  keys: ["name", "key"],
 })
 
 const result = computed(() => {
@@ -59,7 +59,7 @@ const btnProps: ButtonProps & { tabindex?: string } = {
   variant: "soft",
   size: "xs",
   tabindex: "-1",
-  square: true
+  square: true,
 }
 
 const toast = useToast()
@@ -84,7 +84,7 @@ function update(skin: Skin) {
     title: "Profile splash successfully updated!",
     color: "neutral",
     orientation: "horizontal",
-    icon: "check-solid"
+    icon: "check-solid",
   })
 }
 
@@ -95,21 +95,21 @@ const utils = [
     onClick: () => {
       emit("updateSkin", null)
       closePanel(null)
-    }
+    },
   },
   {
     label: "Random",
     icon: "i-shuffle",
-    onClick: () => getRandomSplash()
+    onClick: () => getRandomSplash(),
   },
   {
     label: "Close",
     icon: "i-x",
     ui: {
-      leadingIcon: "**:stroke-[2.4] scale-110"
+      leadingIcon: "**:stroke-[2.4] scale-110",
     },
-    onClick: () => closePanel()
-  }
+    onClick: () => closePanel(),
+  },
 ]
 </script>
 
@@ -123,7 +123,7 @@ const utils = [
       header: 'flex h-24 w-full shrink-0 items-center gap-3 border-0 px-1!',
       content:
         '@container size-full max-h-[60vh]! max-w-300 gap-3! rounded-[1.8rem]! bg-neutral/30 px-2.5 py-2 ring-n5/50 backdrop-blur-md',
-      close: 'fixed top-5 right-5 -z-1'
+      close: 'fixed top-5 right-5 -z-1',
     }">
     <slot />
     <template #header>
@@ -142,7 +142,7 @@ const utils = [
                 leadingIcon: cn(
                   'text-nc! opacity-40 **:text-nc!',
                   v?.ui?.leadingIcon
-                )
+                ),
               }"
               :icon="v.icon"
               @click="v.onClick" />
@@ -190,10 +190,12 @@ const utils = [
               ),
 
               base: 'flex min-h-11 max-w-full grow overflow-hidden pl-2! text-center text-nc/80 placeholder:text-n5',
-              trailing: ''
+              trailing: '',
             }"
             size="lg"
-            @click="void (selectedChampion && selectedChampion !== '' ? reset() : '')">
+            @click="
+              void (selectedChampion && selectedChampion !== '' ? reset() : '')
+            ">
             <template #trailing>
               <InputClear
                 v-if="searchQuery"
@@ -201,13 +203,13 @@ const utils = [
                 variant="ghost"
                 :ui="{
                   base: 'opacity-80! **:text-nc group-hover/label:**:text-pc! group-hover/label:group-hover/btn:bg-p5/80!',
-                  label: ''
+                  label: '',
                 }"
                 @clear-input="reset()" />
 
               <div v-else class="flex">
                 <UKbd
-                  v-for="(k, i) in user().hotkeys?.search"
+                  v-for="(k, i) in localStore().hotkeys?.search"
                   :key="i"
                   square
                   variant="subtle"

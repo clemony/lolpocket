@@ -6,12 +6,16 @@ const { orientation } = defineProps<{
   orientation?: "vertical" | "horizontal"
 }>()
 
-const mode = useColorMode()
 const themePreference = useThemePreference()
+const resolvedTheme = useResolvedThemePreference()
 const themeAccent = useThemeAccentPreference()
 
 function handleChange(theme: string) {
-  //themePreference.value = theme
+  themePreference.value = theme
+}
+
+function handleAccentChange(accent: string) {
+  themeAccent.value = accent
 }
 </script>
 
@@ -28,15 +32,19 @@ function handleChange(theme: string) {
 
       <section class="space-y-3">
         <div class="space-y-1">
-          <h3 class="text-xl font-semibold">Accent</h3>
-          <p class="text-sm text-n4">Customize the accent color.</p>
+          <h3 class="text-xl font-semibold">
+            Accent
+          </h3>
+          <p class="text-sm text-n4">
+            Customize the accent color.
+          </p>
         </div>
 
         <div class="flex flex-wrap gap-3">
           <UButton
             v-for="accent in themeAccentOptions"
             :key="accent.value"
-            :data-theme="mode"
+            :data-theme="resolvedTheme"
             :data-accent="accent.value"
             :icon="accent?.icon ? accent?.icon : ''"
             :avatar="{
@@ -57,7 +65,7 @@ function handleChange(theme: string) {
               label: 'font-bold text-white',
             }"
             :label="accent.label"
-            @click="void (themeAccent = accent.value)">
+            @click="handleAccentChange(accent.value)">
             <!--      <template #leading>
             <span class="size-3 rounded-full bg-accent" />
           </template> -->

@@ -9,3 +9,13 @@ export interface IconProps {
   winrates?: ChampionWinrate[]
   style?: CSSStyleValue
 }
+
+export type CarouselEvent = "init" | "reInit" | "select" | "scroll" | "resize"
+export interface CarouselApi {
+  scrollNext: () => void
+  scrollPrev: () => void
+  canScrollNext: () => boolean
+  canScrollPrev: () => boolean
+  off: (event: CarouselEvent, callback: (api?: CarouselApi) => void) => void
+  on: (event: CarouselEvent, callback: (api?: CarouselApi) => void) => void
+}

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { InboxMessage } from "#shared/types"
-import { themes } from "~/domain/about/ui/theme"
+import { colorModes, themeIconClass } from "~/domain/user/utils/theme/themeBase"
 import { useSignOut } from "../../composables/useAuth"
 
 const summoner = computed(() => user().summoner)
@@ -16,13 +16,7 @@ const settings = computed(() => {
     .sort()
 })
 
-const themeModel = computed({
-  get: () => user().settings?.theme ?? "",
-  set: (value) => {
-    const settings = user().settings
-    if (settings) settings.theme = value
-  }
-})
+const themeModel = useThemePreference()
 
 function goTo(path: string) {
   void navigateTo(path)
@@ -90,10 +84,20 @@ function goTo(path: string) {
       </UButton>
 
       <div>
-        <div v-for="(theme, i) in themes" :key="i" :data-theme="theme.name">
+        <div
+          v-for="theme in colorModes"
+          :key="theme"
+          :data-theme="theme === 'system' ? undefined : theme">
           <Label class="relative p-0!" base="btn" size="c-9">
-            <input v-model="themeModel" class="peer hidden" type="" />
-            <Icon class="absolute text-pc" :name="theme.icon" />
+            <input
+              v-model="themeModel"
+              class="peer hidden"
+              type="radio"
+              :value="theme" />
+            <Icon
+              class="absolute text-pc"
+              :class="themeIconClass[theme]"
+              :name="`i-${theme}`" />
           </Label>
         </div>
       </div>
@@ -110,6 +114,6 @@ function goTo(path: string) {
         <icon name="log-in" />
         Log in
       </UButton>
-    </div> </UPopover
-  >>
+    </div>
+  </UPopover>
 </template>

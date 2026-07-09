@@ -1,0 +1,34 @@
+topics:
+  - slug: overview
+    title: Overview
+    description: Entry points and reading paths for the almanac.
+    parents: []
+  - slug: almanac
+    title: Almanac
+    description: How this documentation layer works and when to update it.
+    parents: [overview]
+  - slug: architecture
+    title: Architecture
+    description: Stable system boundaries, ownership, and runtime shape.
+    parents: [overview]
+  - slug: flows
+    title: Flows
+    description: Cross-file, cross-service, and cross-repository behavior.
+    parents: [architecture]
+  - slug: decisions
+    title: Decisions
+    description: Durable choices, constraints, and trade-offs.
+    parents: [overview]
+  - slug: guides
+    title: Guides
+    description: Procedures for maintaining project knowledge.
+    parents: [almanac]
+  - slug: reference
+    title: Reference
+    description: Exact contracts, commands, conventions, and lookup material.
+    parents: [overview]
+  - slug: handoff
+    title: Handoff
+    description: Relationship between current-state notes and durable almanac pages.
+    parents: [almanac]
+

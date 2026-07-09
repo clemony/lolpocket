@@ -6,10 +6,10 @@ import { requireUser } from "../client.supabase"
 
 const RPC_SETTING_KEYS = [
   "locale",
-  "theme",
   "default_role",
   "default_map",
   "pocket_tags",
+  "folders",
   "favorite_pockets",
   "favorite_summoners",
   "blocked_users",
@@ -20,7 +20,8 @@ const RPC_SETTING_KEYS = [
   "ping_pocket_comment",
   "fast_trash_pocket",
   "fast_trash_message",
-  "reduce_motion"
+  "reduce_motion",
+  "muted",
 ] as const satisfies readonly (keyof Settings)[]
 
 export default defineEventHandler(async (event): Promise<Settings> => {
@@ -37,21 +38,21 @@ export default defineEventHandler(async (event): Promise<Settings> => {
   if (unsupportedKeys.length) {
     throw createError({
       statusCode: 400,
-      statusMessage: `Unsupported settings keys: ${unsupportedKeys.join(", ")}`
+      statusMessage: `Unsupported settings keys: ${unsupportedKeys.join(", ")}`,
     })
   }
 
   const parsed = v.safeParse(settingsSchema, {
     ...getEmptySettings(),
     ...requestedSettings,
-    updated: nowInstantString()
+    updated: nowInstantString(),
   })
 
   if (!parsed.success) {
     throw createError({
       statusCode: 400,
       statusMessage: "Invalid settings payload",
-      data: parsed.issues
+      data: parsed.issues,
     })
   }
 
@@ -64,12 +65,12 @@ export default defineEventHandler(async (event): Promise<Settings> => {
   if (!Object.keys(patch).length) {
     throw createError({
       statusCode: 400,
-      statusMessage: "No supported settings updates provided"
+      statusMessage: "No supported settings updates provided",
     })
   }
 
   const { data, error } = await client.rpc("update_settings", {
-    p_patch: patch
+    p_patch: patch,
   })
 
   if (error) {

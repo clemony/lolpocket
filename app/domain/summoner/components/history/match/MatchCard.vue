@@ -19,7 +19,7 @@ const isOpen = ref(false)
       '--status': `var(--color-${player?.win === 'remake' ? 'p3' : player?.win === true ? 'insp' : 'dom'})`,
     }"
     :ui="{
-      body: 'flex grow rounded-6xl! bg-linear-to-l from-(--status)/80 to-transparent to-63% bg-cover bg-clip-padding p-0! ring-pc/8',
+      body: 'flex grow rounded-6xl! bg-linear-to-l from-(--status)/85 to-transparent to-63% bg-cover bg-clip-padding p-0! ring-pc/8',
       root: 'shadow-black/3',
     }"
     as-child>
@@ -34,10 +34,10 @@ const isOpen = ref(false)
         block
         color="transparent"
         :ui="{
-          base: 'text-p pointer-events-auto relative z-2 h-40! min-h-36! grow justify-between gap-2 pr-4 pl-3 text-sm shadow-none ring-0! fx-0 **:select-none open:rounded-b-none hover:ring-0',
+          base: 'pointer-events-auto relative z-2 h-40! min-h-36! grow justify-between gap-2 py-0 pr-4 pl-0 text-sm text-pc shadow-none ring-0! fx-0 **:select-none open:rounded-b-none hover:ring-0',
         }">
         <div
-          class="relative grid h-[93%] w-7 place-items-center rounded-xl bg-(--status)/20 backdrop-blur-md duration-300 ease-spring group-hover/collapse:bg-(--status)/90">
+          class="relative grid h-full w-10 place-items-center rounded-none bg-(--status)/80 duration-300 ease-spring group-hover/collapse:bg-(--status)/90">
           <Icon
             name="i-right"
             class="transition-rotate absolute size-5 text-white drop-shadow-xs duration-300 ease-spring-soft **:stroke-[11%] group-open/collapse:rotate-90" />

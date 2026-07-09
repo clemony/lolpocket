@@ -63,7 +63,7 @@ export const collapseAllItem = (close?: () => void) => {
 }
 
 const handleDelete = async (id: string) => {
-  if (user().localSettings.confirm_folder_delete === false)
+  if (localStore().localSettings.confirm_folder_delete === false)
     return deleteFolder(id)
   else deleteFolderWithConfirm(id)
 }

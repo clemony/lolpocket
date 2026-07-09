@@ -20,6 +20,10 @@ It uses one stable reference file and one mutable working file.
 - `current-state.md` is the mutable snapshot for active work, recent changes, blockers, and next steps.
 - `session-template.md` is the format to copy when the current state needs a clean reset.
 
+The [almanac](../almanac/) holds durable context that is too broad or stable for `current-state.md`.
+Use it for architecture, decisions, cross-repo flows, invariants, and gotchas.
+Keep handoff notes focused on current direction and active status.
+
 ## Source Of Truth
 
 The source of truth is the main app repo:
@@ -45,6 +49,13 @@ Update `workspace-map.md` only when the structure of the project family changes:
 - ownership between repos changes
 - build or deployment responsibilities move
 - a critical command or entry point changes
+
+Update `docs/almanac` when any of these happen:
+
+- a durable workflow or invariant changes
+- a database, deploy, route, or API contract changes
+- a cross-repo flow gains a new ownership boundary
+- a decision should be preserved for future implementation work
 
 ## Suggested Handoff Rhythm
 

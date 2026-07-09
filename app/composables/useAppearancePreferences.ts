@@ -1,9 +1,9 @@
-import { getEmptyAccount, getEmptySettings } from "#shared/schema"
+import { getEmptyAccount } from "#shared/schema"
 import { accountUpdate } from "~/domain/user/composables/accountUpdate"
 import type { ThemeAccent } from "~/domain/user/utils/theme/themeAccent"
 import {
   defaultThemeAccent,
-  normalizeThemeAccent
+  normalizeThemeAccent,
 } from "~/domain/user/utils/theme/themeAccent"
 import { colorModes } from "~/domain/user/utils/theme/themeBase"
 
@@ -16,30 +16,33 @@ export function useSystemThemeValue() {
   return computed(() => (preferred.value === "dark" ? "dark" : "light"))
 }
 
-function ensureUserSettings() {
-  user().settings ??= getEmptySettings() as unknown as Settings
-  return user().settings as Settings
-}
-
 function ensureUserAccount() {
   user().account ??= getEmptyAccount() as unknown as Account
   return user().account as Account
 }
 
 export function useThemePreference() {
-  const colorMode = useColorMode()
-  /*
+  const { theme } = storeToRefs(localStore())
+
   return computed({
-    get: () =>
-      normalizeThemePreference(user().settings?.theme ?? colorMode.preference),
+    get: () => normalizeThemePreference(theme.value),
     set: (value: string) => {
       const preference = normalizeThemePreference(value)
-      const settings = ensureUserSettings()
 
-      settings.theme = preference
-      colorMode.preference = preference
-    }
-  }) */
+      theme.value = preference
+    },
+  })
+}
+
+export function useResolvedThemePreference() {
+  const themePreference = useThemePreference()
+  const systemTheme = useSystemThemeValue()
+
+  return computed(() =>
+    themePreference.value === "system"
+      ? systemTheme.value
+      : themePreference.value
+  )
 }
 
 export function useThemeAccentPreference() {
@@ -55,6 +58,6 @@ export function useThemeAccentPreference() {
 
       if (useSupabaseUser().value)
         void accountUpdate({ color: accent }, { silent: true })
-    }
+    },
   })
 }

@@ -66,7 +66,6 @@ export const folderSchema = v.object({
 export const settingsSchema = v.object({
   locale: v.fallback(v.string(), "en"),
   folders: v.fallback(v.array(folderSchema), []),
-  theme: v.fallback(v.string(), "system"),
   //
   default_role: v.fallback(v.string(), "all"),
   default_map: v.fallback(v.number(), 0),

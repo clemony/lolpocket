@@ -6,7 +6,6 @@ import { colorModes, themeIconClass } from "~/domain/user/utils/theme/themeBase"
 
 export const themeMenu = () => {
   const themePreference = useThemePreference()
-  // const { preference, value: mode } = useColorMode()
   const themeAccent = useThemeAccentPreference()
   const currentAccent = computed(() => getThemeAccentOption(themeAccent.value))
 
@@ -33,11 +32,11 @@ export const themeMenu = () => {
     label: mode,
     type: "radio" as const,
     slot: "theme" as const,
-    //onSelect: () => (themePreference.value = mode),
+    onSelect: () => (themePreference.value = mode),
     ui: {
       base: cn(
-        "h-14 rounded-xl p-1"
-        //mode === preference ? "pointer-events-none" : ""
+        "h-14 rounded-xl p-1",
+        mode === themePreference.value ? "pointer-events-none" : ""
       ),
       leadingIcon: themeIconClass[mode],
       label: "capitalize",

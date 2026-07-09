@@ -47,30 +47,8 @@ export const user = defineStore(
       }
     )
 
-    const localSettings = ref<LocalSettings>({
-      sidebar_sort_folder_first: true,
-      sidebar_sort_method: "date",
-      sidebar_sort_mode: "desc",
-      backpack_group_by: "folder",
-      confirm_folder_delete: true,
-      confirm_pocket_delete: true,
-    })
-
-    function updateSortMethod(method: "date" | "alpha") {
-      localSettings.value.sidebar_sort_method = method
-    }
-
     const matchStatus = ref<boolean>(true)
     function updateMatchStatus() {}
-
-    const hotkeys = ref({
-      search: ["meta", "k"],
-      subSearch: ["meta", "shift", "k"],
-      logIn: ["shift", "meta", "s"],
-      logOut: ["shift", "meta", "q"],
-      open: ["meta", "o"],
-      close: ["meta", "x"],
-    })
 
     function clearAccount() {
       account.value = getEmptyAccount() as unknown as Account
@@ -135,10 +113,6 @@ export const user = defineStore(
             : message
       )
     }
-
-    const keybinds = ref<Record<string, string[]>>({
-      subSearch: ["meta", "shift", "K"],
-    })
 
     /*     FOLDERS */
 
@@ -275,10 +249,8 @@ export const user = defineStore(
 
     return {
       settings,
-      keybinds,
       summoner,
       account,
-      localSettings,
       matchStatus,
       updateMatchStatus,
       clearAccount,
@@ -303,9 +275,7 @@ export const user = defineStore(
       folderKeys,
 
       //
-      updateSortMethod,
       identities,
-      hotkeys,
       map,
       setDefaultFolderName,
     }

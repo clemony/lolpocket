@@ -2,7 +2,7 @@ import type { ContextMenuItem } from "@nuxt/ui"
 import { separatorItem } from "~/domain/app/utils/menuItems"
 
 export function useSortMenu() {
-  const account = user()
+  const account = localStore()
   const { localSettings } = storeToRefs(account)
 
   return computed<ContextMenuItem>(() => {
@@ -11,7 +11,7 @@ export function useSortMenu() {
       icon: "i-tabler-sort-ascending",
       ui: {
         leadingIcon: "scale-120",
-        content: "min-w-48 self-end"
+        content: "min-w-48 self-end",
       },
       children: [
         {
@@ -19,7 +19,7 @@ export function useSortMenu() {
           slot: "radio" as const,
           ui: {
             item: "group/radio",
-            itemLeadingIcon: "**:stroke-[2.4] scale-110"
+            itemLeadingIcon: "**:stroke-[2.4] scale-110",
           },
           label: "Name",
           value: "alpha",
@@ -35,12 +35,12 @@ export function useSortMenu() {
           onSelect($event) {
             $event.preventDefault()
             account.updateSortMethod("alpha")
-          }
+          },
         },
         {
           slot: "radio" as const,
           ui: {
-            itemLeadingIcon: "**:stroke-[2.6] scale-94"
+            itemLeadingIcon: "**:stroke-[2.6] scale-94",
           },
           as: "label",
           for: "sort-radio",
@@ -53,7 +53,7 @@ export function useSortMenu() {
           onSelect($event: Event) {
             $event.preventDefault()
             account.updateSortMethod("date")
-          }
+          },
         },
         separatorItem,
         {
@@ -67,7 +67,7 @@ export function useSortMenu() {
               : "Descending",
 
           ui: {
-            itemLeadingIcon: " rotate-90 **:stroke-[2.6]"
+            itemLeadingIcon: " rotate-90 **:stroke-[2.6]",
           },
           as: "label",
           checked: localSettings.value.sidebar_sort_mode === "asc",
@@ -77,32 +77,32 @@ export function useSortMenu() {
           onSelect($event) {
             $event.preventDefault()
             localSettings.value.sidebar_sort_mode = "asc"
-          }
+          },
         },
         separatorItem,
         {
           label: "Group by",
           type: "label",
           ui: {
-            label: "pb-0!"
-          }
+            label: "pb-0!",
+          },
         },
         {
           label: "Folder",
           icon: "i-folder",
           type: "checkbox",
           ui: {
-            itemLeadingIcon: "**:stroke-[2.3]"
-          }
+            itemLeadingIcon: "**:stroke-[2.3]",
+          },
         },
         {
           label: "Patch",
           icon: "i-lp-riot-circle",
           type: "checkbox",
           ui: {
-            itemLeadingIcon: "scale-102"
-          }
-        }
+            itemLeadingIcon: "scale-102",
+          },
+        },
         /*
         {
           type: "separator"
@@ -128,7 +128,7 @@ export function useSortMenu() {
               !localSettings.value.sidebar_sort_folder_first
           }
         } */
-      ]
+      ],
     }
   })
 }

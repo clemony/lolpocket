@@ -26,7 +26,7 @@ export function deleteFolder(
       ? `${numTrashed.value} pockets were moved to the trash.`
       : "There was nothing in it...",
     orientation: "horizontal",
-    icon: "i-check"
+    icon: "i-check",
   })
 }
 
@@ -37,11 +37,12 @@ export async function deleteFolderWithConfirm(folderId: string | undefined) {
   const confirm = useConfirmModal()
   const confirmed = await confirm({
     title: `Delete "${folder.label}"?`,
-    description: `Are you sure you want to delete "${folder.label}"? All pockets in "${folder.label}" will be moved to the Trash and "${folder.label}" will be gone forever.`
+    description: `Are you sure you want to delete "${folder.label}"? All pockets in "${folder.label}" will be moved to the Trash and "${folder.label}" will be gone forever.`,
   })
 
   if (confirmed.confirmed) {
-    if (confirmed.neverAgain) user().localSettings.confirm_folder_delete = false
+    if (confirmed.neverAgain)
+      localStore().localSettings.confirm_folder_delete = false
     console.log(`Folder "${folder.label}" deleted`)
     deleteFolder(folder.id)
   }

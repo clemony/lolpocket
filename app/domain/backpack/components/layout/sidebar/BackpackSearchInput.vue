@@ -16,7 +16,7 @@ const { focused } = useFocus(
   computed(() => input.value?.inputRef) as MaybeElementRef
 )
 
-const subSearchKeys = computed(() => userStore.hotkeys.subSearch ?? [])
+const subSearchKeys = computed(() => localStore().hotkeys.subSearch ?? [])
 const watchKeys = computed(() => subSearchKeys.value.join("_"))
 const keys = useMagicKeys()
 const subSearchPressed = computed(() => {
@@ -74,7 +74,7 @@ function handleClear() {
                 base: 'w-full bg-p0 px-2',
                 root: 'w-full',
 
-                leadingIcon: '**:stroke-[2.3]'
+                leadingIcon: '**:stroke-[2.3]',
               }"
               icon="i-search">
               <template #trailing>
@@ -92,19 +92,19 @@ function handleClear() {
           :menu="{
             content: {
               align: 'start',
-              side: 'right'
+              side: 'right',
             },
             ui: {
               content: 'w-(--reka-popper-anchor-width) min-w-64',
-              item: 'gap-2.5'
-            }
+              item: 'gap-2.5',
+            },
           }"
           variant="ghost"
           color="primary"
           size="md"
           :ui="{
             base: cn('', {}),
-            leadingIcon: cn('size-4.5 rotate-90 **:stroke-[10%]!')
+            leadingIcon: cn('size-4.5 rotate-90 **:stroke-[10%]!'),
           }" />
       </div>
       <UInputMenu
@@ -120,7 +120,7 @@ function handleClear() {
         :ui="{
           leadingIcon: 'opacity-60',
           base: 'grow rounded-xl px-3 text-sm ring-p3/80',
-          root: 'relative h-13! min-h-13! w-full max-w-full min-w-12 grow p-0!'
+          root: 'relative h-13! min-h-13! w-full max-w-full min-w-12 grow p-0!',
         }">
         <template #trailing>
           <LazyInputClear v-if="searchTerm" size="sm" @clear-input="clear()" />

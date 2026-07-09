@@ -24,10 +24,13 @@ const { match, player } = defineProps<{
           sideOffset: 6,
         },
       }"
+      :style="{
+        '--circle': 'radial-gradient(rgb(0, 0, 0) 99%, transparent)',
+      }"
       :ui="{
         root: 'z-0 size-19 transition-transform duration-400 ease-spring group-hover/avatar-set:scale-108',
         image:
-          'relative z-0 size-full shrink-0 shadow-sm shadow-black/4 drop-shadow-sm',
+          'shrink-0% relative z-0 size-full shadow-sm shadow-black/4 drop-shadow-sm',
       }" />
     <!-- runes -->
     <PlayerRunes class="absolute -top-1 left-0.5 z-2" :player />

@@ -10,6 +10,7 @@ Keep it short, current, and biased toward what the next session needs to know.
 
 ## Recently Touched Areas
 
+- `docs/almanac` now provides a lightweight durable-knowledge skeleton with overview, topics, page template, maintenance guide, and starting sections for architecture, flows, decisions, guides, and reference. `AGENTS.md` and `docs/handoff/README.md` now explain when to use or update it.
 - `@nuxt/ui@4.8.1` is patched via `patches/@nuxt__ui@4.8.1.patch` so Nuxt UI component props accept repo-local custom variant strings again.
 - Cloudflare Pages build configuration now targets the correct Pages preset in `nuxt.config.ts`; the latest `CF_PAGES=1 pnpm build` pass generated `dist/_worker.js` with both D1 bindings in `dist/_worker.js/wrangler.json`.
 - `DEPLOY.md` documents the supported Pages and Worker deploy paths.
@@ -19,6 +20,8 @@ Keep it short, current, and biased toward what the next session needs to know.
 - Optional NA match analytics gathering now runs from the dedicated `workers/match-analytics-gather` Worker. `pnpm worker:build` generates an ignored `.wrangler/match-analytics/wrangler.jsonc` from D1 env vars and dry-runs Wrangler; `pnpm worker:deploy` deploys that small Worker without building the Nuxt/Nitro server. `SUMMONER_CACHE_DB` owns both per-PUUID scan state and the gatherer lock/backoff row.
 - Summoner route resolution treats `/_r` as an internal resolver prefix, supports short `/_r/:puuid` compatibility redirects, and builds match scoreboard links as canonical `/:region/:name_tag` slugs.
 - Summoner route entry now hydrates the public Supabase account cache by PUUID via `/api/supabase/account/public`, so profiles can show lolpocket account metadata when it exists.
+- Live Supabase `public.update_settings(jsonb)` was corrected to update `default_role`, `default_map`, `folders`, and `reduce_motion` against their real columns; the previous function wrote default fields through `theme` and caused `CASE types integer and text cannot be matched` on settings updates.
+- Theme mode preference now lives in persisted `localStore().theme`; app theme selectors use `useThemePreference()`, while Supabase settings no longer expose or accept `theme`.
 - Local Zodiak font wiring was cleaned up to use self-hosted files from `layers/ui/public/fonts/Zodiak`.
 - `useObjectData` now centralizes command reference-card CDN path resolution for item, rune, champion, and ability data, including champion numeric-id to key lookup.
 - Sidebar info popovers now use a fixed 8-slot pool and reuse closed or oldest open slots instead of growing by index.

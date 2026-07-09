@@ -6,7 +6,7 @@ const {
   autofocus = false,
   ui,
   clearVariant = "outline",
-  clearColor = "neutral"
+  clearColor = "neutral",
 } = defineProps<{
   color?: InputProps["color"]
   ui?: InputClearUi
@@ -22,11 +22,11 @@ const innerInput = computed(() => input.value?.inputRef ?? null)
 const keybindItems = [
   {
     label: "Sub page search",
-    kbds: user().keybinds?.subSearch,
+    kbds: localStore().hotkeys?.subSearch,
     onSelect: () => {
       innerInput.value?.focus()
-    }
-  }
+    },
+  },
 ]
 defineShortcuts(extractShortcuts(keybindItems))
 </script>
@@ -50,7 +50,7 @@ defineShortcuts(extractShortcuts(keybindItems))
         color === 'neutral' ? 'text-nc/80' : '',
         ui?.leadingIcon
       ),
-      trailing: ui?.trailing
+      trailing: ui?.trailing,
     }"
     placeholder="Search items...">
     <template #trailing>
@@ -61,7 +61,7 @@ defineShortcuts(extractShortcuts(keybindItems))
         :ui="ui?.clear"
         @clear-input="modelValue = ''" />
       <UKbd
-        v-for="k in user().keybinds?.subSearch"
+        v-for="k in localStore().hotkeys?.subSearch"
         v-else
         :key="k"
         square

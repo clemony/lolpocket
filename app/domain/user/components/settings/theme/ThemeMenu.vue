@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { motion } from "motion-v"
 
-import { accountUpdate } from "~/domain/user/composables/accountUpdate"
-import { settingsUpdate } from "~/domain/user/composables/settingsUpdate"
 import {
   getThemeAccentOption,
   themeAccentOptions,
@@ -20,9 +18,6 @@ const props = defineProps<{
   }
 }>()
 
-const { settings: sett } = storeToRefs(user())
-const settings = computed(() => safeObject(sett.value))
-
 const themePreference = useThemePreference()
 const systemTheme = useSystemThemeValue()
 
@@ -38,12 +33,7 @@ const accentItems = themeAccentOptions.map((accent) => ({
   onClick(e: MouseEvent): void | Promise<void> {
     e.preventDefault()
     e.stopPropagation()
-    accountUpdate(
-      { color: accent.value || undefined },
-      {
-        message: "Your accent color has been updated and is ready to show off!",
-      }
-    )
+    themeAccent.value = accent.value
   },
   ui: {
     base: cn(
@@ -103,7 +93,7 @@ const themeMotionTransition = {
 }
 
 function isThemeActive(theme: string) {
-  return (settings.value.theme ?? "system") === theme
+  return themePreference.value === theme
 }
 
 function getThemeButtonState(theme: string) {
@@ -121,10 +111,7 @@ function clearHoveredTheme(theme: string) {
 }
 
 function setTheme(theme?: string) {
-  settingsUpdate(
-    { theme: theme || undefined },
-    { message: "Your theme has been updated!" }
-  )
+  themePreference.value = theme || "system"
 }
 
 const container = useTemplateRef<HTMLElement>("container")
@@ -209,15 +196,18 @@ watch(
 </script>
 
 <template>
-  <div ref="container" :class="cn('w-full py-2', props.ui?.root)">
-    <h6 :class="cn('flex h-8 items-center px-3 opacity-50', props.ui?.label)">
+  <div ref="container" :class="cn('w-full py-3', props.ui?.root)">
+    <h6
+      :class="
+        cn('flex h-8 items-center px-4 pb-2 opacity-50', props.ui?.label)
+      ">
       Theme
     </h6>
     <div
       layout
       :class="
         cn(
-          'group/theme flex w-full flex-nowrap items-center gap-2 px-3',
+          'group/theme flex w-full flex-nowrap items-center gap-2 px-4',
           props.ui?.theme
         )
       ">
@@ -285,7 +275,7 @@ watch(
       </LayoutGroup>
     </div>
     <Separator class="mt-4 mb-2" />
-    <div class="w-full pr-2 pl-2.5">
+    <div class="w-full pr-3 pl-4">
       <h6 :class="cn('flex h-8 items-center opacity-50', props.ui?.label)">
         Accent
       </h6>

@@ -4,8 +4,8 @@ import { getSummonerIcon } from "~/domain/utils/img"
 import { asChipColor } from "~/types/typeAssert"
 
 const emit = defineEmits(["update:sidebar"])
-const { settings, hotkeys, account, matchStatus, summoner } =
-  storeToRefs(user())
+const { summoner } = storeToRefs(user())
+
 const query = defineModel<string | undefined>("query", { default: "" })
 const sidebar = shallowRef<HTMLElement>()
 const accountOpen = shallowRef<boolean>(false)
@@ -24,7 +24,7 @@ const accountState = useSignInOrOut(() => {
       v-model:open="accountOpen"
       :ui="{
         content:
-          'w-[calc(var(--reka-popper-anchor-width)+0.7rem)] min-w-74 -translate-x-1.5 rounded-5xl px-0 pt-0 pb-2',
+          'w-74 -translate-x-1.5 rounded-4xl px-0 pt-0 pb-2 drop-shadow-md drop-shadow-black/18',
       }"
       :content="{
         align: 'start',
@@ -105,7 +105,7 @@ const accountState = useSignInOrOut(() => {
             root: 'w-full max-w-full overflow-hidden',
           }" />
 
-        <USeparator class="mt-4 mb-2" />
+        <USeparator class="mt-0 mb-2" />
         <div class="w-full px-1">
           <UButton
             block

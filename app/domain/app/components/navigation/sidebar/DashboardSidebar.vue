@@ -3,8 +3,6 @@ import { motion } from "motion-v"
 
 import { sidebarTabItems } from "~/domain/app/constants/sidebar-tabs"
 
-const { settings, hotkeys, account, summoner } = storeToRefs(user())
-
 const collapsed = shallowRef<boolean>(false)
 
 const tabModel = shallowRef<string | undefined>("menu")
@@ -37,7 +35,6 @@ const tab = computed(() => (oldIndex.value > newIndex.value ? "0%" : "-100%"))
   <UDashboardSidebar
     ref="sidebar"
     v-model:collapsed="collapsed"
-    variant="floating"
     side="left"
     collapsible
     resizable
@@ -48,7 +45,7 @@ const tab = computed(() => (oldIndex.value > newIndex.value ? "0%" : "-100%"))
     rail
     :ui="{
       handle: 'w-12',
-      root: '@container max-h-max gap-8 divide-none overflow-hidden bg-p1 p-0 py-12 pl-11 shadow-none ring-0',
+      root: '@container max-h-max gap-8 divide-none overflow-hidden bg-p0 py-12 pr-0! pl-11 shadow-none ring-0',
       body: 'relative max-h-max overflow-hidden rounded-6xl bg-p0 p-0! ring ring-p2',
       header: 'flex h-fit items-center py-0 pr-1 pl-0',
       footer: 'p-0!',
@@ -62,37 +59,9 @@ const tab = computed(() => (oldIndex.value > newIndex.value ? "0%" : "-100%"))
     <div
       ref="el"
       :style="sidebarTabItems[String(tabModel)]?.overlay ? style : undefined"
-      class="flex size-full scrollbar-none overflow-y-auto px-4! py-0 **:scrollbar-none">
+      class="flex flex-1 scrollbar-none overflow-y-auto px-4! py-0 **:scrollbar-none">
       <SidebarTheme>
-        <AnimatePresence mode="popLayout">
-          <motion.div
-            :key="tabModel"
-            class="inset-0 size-full shrink-0 bg-p0"
-            layout-id="sidebar"
-            layout="size"
-            :initial="{
-              opacity: 0,
-              transitionDelay: 0.15,
-              y: '-0.8rem',
-            }"
-            :animate="{
-              opacity: [0, 1, 1, 1],
-              y: 0,
-            }"
-            :exit="{
-              opacity: [1, 1, 1, 0],
-              y: '0.8rem',
-            }"
-            :transition="{
-              type: 'spring',
-              stiffness: 100,
-              damping: 20,
-              mass: 1.4,
-              duration: 0.15,
-            }">
-            <component :is="sidebarTabItems[String(tabModel)]?.component" />
-          </motion.div>
-        </AnimatePresence>
+        <component :is="sidebarTabItems[String(tabModel)]?.component" />
       </SidebarTheme>
     </div>
     <template #footer>

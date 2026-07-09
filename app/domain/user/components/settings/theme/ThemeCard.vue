@@ -9,6 +9,7 @@ const emit = defineEmits<{
   select: [mode: string]
 }>()
 const systemTheme = useSystemThemeValue()
+const themePreference = useThemePreference()
 const themeAccent = useThemeAccentPreference()
 
 const colorChip =
@@ -50,7 +51,7 @@ onKeyDown("enter", (e) => complete())
         'group/quote relative flex size-full! h-74 w-66 grow cursor-pointer flex-col items-start justify-center gap-5 overflow-hidden rounded-4xl bg-p0 px-6 text-pc shadow-sm shadow-black/16 drop-shadow-sm select-none hover:ring hover:ring-pc/60',
         {
           'ring-p4 ring-offset-n2 ring-1 ring-offset-3':
-            mode === user().settings?.theme
+            mode === themePreference
         },
         className
       ),

@@ -28,7 +28,6 @@ logs
 *.log
 
 patch
-AGENTS.md
 lolpocket.code-workspace
 
 #notes

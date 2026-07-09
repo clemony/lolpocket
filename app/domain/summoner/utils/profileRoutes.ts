@@ -33,8 +33,10 @@ export function buildSummonerProfileRoutes(): TabsItem[] {
       ...route,
     }))
 
+  const { account } = storeToRefs(sSession())
   const pocketRoute = routeRecords.find(
-    (route) => route.name === "user_id-pockets"
+    (route) =>
+      route.name === `/${account.value?.username}_${account.value?.tag}/pockets`
   )
   if (!pocketRoute) return profileTabs
 

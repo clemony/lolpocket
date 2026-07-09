@@ -8,7 +8,9 @@ export const useFollowSummoner = (summoner: Ref<Summoner | null>) => {
 
   const isFavorite = computed(
     () =>
-      !!settings.value?.favorite_summoners.includes(summoner.value?.puuid ?? "")
+      !!settings.value?.favorite_summoners?.includes(
+        summoner.value?.puuid ?? ""
+      )
   )
 
   const tooltipText = computed(() => {
@@ -33,6 +35,6 @@ export const useFollowSummoner = (summoner: Ref<Summoner | null>) => {
     isSelf,
     isFavorite,
     tooltipText,
-    update: (newValue: boolean) => update(newValue)
+    update: (newValue: boolean) => update(newValue),
   }
 }
