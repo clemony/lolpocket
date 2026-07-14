@@ -1,4 +1,5 @@
 import { normalizeDragLocation } from "~/domain/backpack/utils/dragData"
+import { skinKeyFromUrl } from "#shared/utils/img-url"
 
 export const pocketStore = defineStore(
   "pocketStore",
@@ -13,10 +14,19 @@ export const pocketStore = defineStore(
 
     function map() {
       if (!pockets.value) return
-      pockets.value = pockets.value.map((f) => ({
-        ...f,
-        location: normalizeDragLocation(f.location, "folders")
-      }))
+      pockets.value = pockets.value.map((entry) => {
+        const legacyPocket = entry as Pocket & { skin?: string | null }
+        const { skin, ...pocket } = legacyPocket
+        const storedSplash = pocket.splash ?? skin ?? null
+
+        return {
+          ...pocket,
+          splash: storedSplash
+            ? (skinKeyFromUrl(storedSplash) ?? storedSplash)
+            : null,
+          location: normalizeDragLocation(pocket.location, "folders")
+        }
+      })
     }
     const pocketIndexes = computed(() =>
       Object.fromEntries(
@@ -193,6 +203,7 @@ export const pocketStore = defineStore(
   {
     persist: {
       key: "pocketStore",
+      afterHydrate: (ctx) => ctx.store.map(),
       storage: piniaPluginPersistedstate.localStorage()
     }
   }

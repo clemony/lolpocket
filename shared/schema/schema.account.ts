@@ -37,7 +37,7 @@ export const accountSchema = v.object({
   ),
   peer_messages: v.fallback(v.boolean(), false),
   public_pockets: v.nullable(v.array(v.pipe(v.string(), v.uuid()))),
-  skin: v.fallback(v.nullable(v.string()), null),
+  splash: v.fallback(v.nullable(v.string()), null),
   color: v.fallback(v.string(), "insp"),
   updated: v.nullable(
     v.pipe(v.string(), v.isoTimestamp("incorrect date format"))

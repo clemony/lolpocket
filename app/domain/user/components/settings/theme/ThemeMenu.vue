@@ -38,9 +38,7 @@ const accentItems = themeAccentOptions.map((accent) => ({
   ui: {
     base: cn(
       "relative h-10 rounded-xl bg-(--color-accent)! p-0! inset-shadow-xs inset-ring-pc/8 hover:bg-(--color-accent)! hover:brightness-110",
-      accent.value === currentAccent.value?.value
-        ? "pointer-events-none inset-ring-pc/60 outline -outline-offset-2 outline-pc/60"
-        : ""
+      accent.value === currentAccent.value?.value ? "pointer-events-none" : ""
     ),
     label: "capitalize",
   },
@@ -118,81 +116,28 @@ const container = useTemplateRef<HTMLElement>("container")
 const { width } = useElementBounding(container)
 const open = shallowRef<boolean>(false)
 
-const accentItemWidth = 30
-const accentGap = 6
-const accentInlinePadding = 16
-const moreTriggerWidth = 30
-
-const visibleAccentCount = computed(() => {
-  if (!width.value) return accentItems.length
-
-  const allItemsWidth =
-    accentItems.length * accentItemWidth +
-    (accentItems.length - 1) * accentGap +
-    accentInlinePadding
-
-  if (width.value >= allItemsWidth) return accentItems.length
-
-  const reservedOverflowWidth = moreTriggerWidth + accentGap
-  const availableWidth = Math.max(
-    0,
-    width.value - accentInlinePadding - reservedOverflowWidth
-  )
-  const itemSlotWidth = accentItemWidth + accentGap
-
-  return Math.max(
-    1,
-    Math.min(
-      accentItems.length - 1,
-      Math.floor((availableWidth + accentGap) / itemSlotWidth)
-    )
-  )
-})
-
 const accents = computed(() => {
-  const triggerCount = visibleAccentCount.value
-  const hasOverflow = triggerCount < accentItems.length
-
   return {
     trigger: [
-      ...accentItems.slice(0, triggerCount),
-      ...(hasOverflow
-        ? [
-            {
-              value: "empty",
-              label: undefined,
-              ui: {
-                base: "opacity-0 pointer-events-none! min-w-0! shrink! invisible grow",
-              },
-            },
-            {
-              value: "more",
-              icon: open.value ? "i-down" : "i-more",
-              label: "More",
-              onClick(e: MouseEvent) {
-                e.preventDefault()
-                e.stopPropagation()
-                open.value = !open.value
-              },
-              ui: {
-                base: "-ml-2 inset-ring-0 shadow-none! fx-0! inset-shadow-none! drop-shadow-none! bg-transparent",
-              },
-            },
-          ]
-        : []),
+      ...accentItems.slice(0, 5),
+
+      {
+        value: "empty",
+        label: undefined,
+        ui: {
+          base: "opacity-0 pointer-events-none! min-w-0! shrink! invisible grow",
+        },
+      },
     ],
-    content: hasOverflow ? accentItems.slice(triggerCount) : [],
+    content: accentItems.slice(5),
   }
 })
 
-watch(
-  () => visibleAccentCount.value === accentItems.length,
-  (allAccentsFit) => {
-    if (allAccentsFit) {
-      open.value = false
-    }
-  }
-)
+function onClick(e: MouseEvent) {
+  e.preventDefault()
+  e.stopPropagation()
+  open.value = !open.value
+}
 </script>
 
 <template>
@@ -226,11 +171,8 @@ watch(
             :data-theme="item.previewTheme"
             :ui="{
               base: cn(
-                'group-hover:noise x-0 relative h-9! min-w-9! origin-center overflow-hidden rounded-full bg-p0! ring-1! inset-ring-0! ring-p3 group-hover:ring-p4 hover:bg-p0!',
-                {
-                  ' ring-pc/50 outline-1 grow max-w-full! -outline-offset-1 outline-pc/60':
-                    isThemeActive(item.value),
-                },
+                'group-hover:noise relative h-8.5! min-w-8.5! origin-center overflow-hidden rounded-full bg-p0! px-3 ring-1! inset-ring-0! ring-p3 group-hover:ring-p4 hover:bg-p0! light:ring-p4/80',
+
                 props.ui?.themeItem
               ),
               leadingIcon: 'absolute',
@@ -244,10 +186,22 @@ watch(
                 initial="idle"
                 :transition="themeMotionTransition"
                 :animate="isThemeLabelVisible(item.value) ? 'active' : 'idle'"
-                class="relative grid size-full place-items-center">
+                :class="
+                  cn(
+                    'relative grid size-full place-items-center',
+                    isThemeLabelVisible(item.value)
+                      ? 'grow justify-start! text-start'
+                      : ''
+                  )
+                ">
                 <motion.div
                   :class="
-                    cn('absolute flex min-w-0 items-center justify-center')
+                    cn(
+                      'absolute flex min-w-0 items-center justify-center',
+                      isThemeLabelVisible(item.value)
+                        ? 'justify-self-start! text-start'
+                        : 'justify-self-center!'
+                    )
                   ">
                   <Icon
                     :name="item.icon"
@@ -284,7 +238,7 @@ watch(
         :ui="{
           root: 'w-full',
           content: cn(
-            'flex items-center gap-1.5 px-px py-0.5',
+            'flex w-full items-center gap-1.5 px-px py-0.5',
             props.ui?.accent
           ),
         }">
@@ -294,14 +248,24 @@ watch(
             v-for="item in accents.trigger"
             :key="item.value"
             :item="item" />
+
+          <UButton
+            :icon="open ? 'i-down' : 'i-more'"
+            aria-label="More"
+            :ui="{
+              base: 'z-5 -ml-2 size-9! rounded-full bg-transparent shadow-none! inset-shadow-none! inset-ring-0 drop-shadow-none! fx-0!',
+            }"
+            @click="onClick($event)" />
         </div>
 
         <template #content>
-          <AccentIndicator
-            v-for="item in accents.content"
-            :key="item.value"
-            :open
-            :item="item" />
+          <div class="grid w-max grid-cols-5 grid-rows-2 gap-1.5">
+            <AccentIndicator
+              v-for="item in accents.content"
+              :key="item.value"
+              :open
+              :item="item" />
+          </div>
         </template>
       </UCollapsible>
     </div>

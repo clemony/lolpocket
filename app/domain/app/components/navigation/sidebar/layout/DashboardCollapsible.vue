@@ -6,8 +6,7 @@ const props = withDefaults(
   defineProps<
     CollapsibleProps & {
       group:
-        | RouteGroup<ButtonRouteItem>
-        | RouteGroup<RouteGroup<ButtonRouteItem>>
+        RouteGroup<ButtonRouteItem> | RouteGroup<RouteGroup<ButtonRouteItem>>
       description?: boolean
     }
   >(),
@@ -30,14 +29,14 @@ const props = withDefaults(
     <slot>
       <UButton
         size="xl"
-        variant="ghost"
+        variant="link"
         trailing-icon="i-down"
         :label="group.label"
         color="base"
         :ui="{
           leadingIcon: cn('size-4.5', group?.class),
           base: cn(
-            'hover:after:scale-x-full relative h-max! w-full justify-between overflow-visible py-1.5 pr-2! pl-0.5 text-left after:absolute after:bottom-0 after:h-px after:opacity-0 hover:inset-ring-0 hover:after:bg-p4 hover:after:opacity-100 hover:after:transition-transform hover:after:duration-300 hover:after:ease-in-out'
+            'hover:after:scale-x-full relative h-max! w-full justify-between overflow-visible bg-transparent! py-1.5 pr-2! pl-0.5 text-left after:absolute after:bottom-0 after:h-px after:opacity-0 hover:inset-ring-0 hover:after:bg-p4 hover:after:opacity-100 hover:after:transition-transform hover:after:duration-300 hover:after:ease-in-out'
           ),
           label: 'text-md font-semibold group-hover/btn:underline',
           trailingIcon:

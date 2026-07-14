@@ -33,6 +33,10 @@ function handleToggleEdit() {
 }
 
 const { sidebarFolderRefs } = storeToRefs(pocketStore())
+
+function handleClick(id: string) {
+  sidebarFolderRefs.value[id] = !sidebarFolderRefs.value[id]
+}
 </script>
 
 <template>
@@ -80,9 +84,7 @@ const { sidebarFolderRefs } = storeToRefs(pocketStore())
               trailingIcon:
                 'group-disabled/btn:opacity-100 hover:text-nc hover:opacity-100',
             }"
-            @click.stop.prevent="
-              sidebarFolderRefs[item.id] = !sidebarFolderRefs[item.id]
-            " />
+            @click.stop.prevent="handleClick(item.id)" />
         </UFieldGroup>
       </HintTooltip>
     </FolderContextMenu>

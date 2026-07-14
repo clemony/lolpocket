@@ -3,6 +3,9 @@ import { useSignInOrOut } from "~/domain/user/composables/useSignInOrOut"
 import { getSummonerIcon } from "~/domain/utils/img"
 import { asChipColor } from "~/types/typeAssert"
 
+const { collapsed } = defineProps<{
+  collapsed?: boolean
+}>()
 const emit = defineEmits(["update:sidebar"])
 const { summoner } = storeToRefs(user())
 
@@ -61,10 +64,11 @@ const accountState = useSignInOrOut(() => {
             }" />
         </Ping>
         <div
+          v-if="!collapsed"
           :class="
             cn(
-              'relative hidden h-14 w-full items-center justify-start gap-2 overflow-hidden rounded-5xl bg-p0 pr-9 pl-5 text-start ring ring-p2 transition-discrete duration-200 group-hover:ring-pc/60 @max-[139px]:-translate-x-3.5 @max-[139px]:opacity-0 @min-[140px]:flex @min-[140px]:-translate-x-0 @min-[140px]:opacity-100',
-              { 'ring-pc/60': accountOpen }
+              'relative hidden h-14 w-full items-center justify-start gap-2 overflow-hidden rounded-5xl bg-p0/50 pr-9 pl-5 text-start inset-shadow-sm inset-ring inset-ring-p2 transition-discrete duration-200 group-hover:ring-pc/60 @max-[139px]:-translate-x-3.5 @max-[139px]:opacity-0 @min-[140px]:flex @min-[140px]:-translate-x-0 @min-[140px]:opacity-100',
+              { 'ring-pc/60': accountOpen, hidden: collapsed }
             )
           ">
           <div class="min-w-0 overflow-hidden">
@@ -106,13 +110,17 @@ const accountState = useSignInOrOut(() => {
           }" />
 
         <USeparator class="mt-0 mb-2" />
-        <div class="w-full px-1">
+        <div class="w-full px-2">
           <UButton
             block
             variant="ghost"
             size="lg"
             :icon="accountState.icon"
-            :ui="{ ...accountState?.ui, label: 'text-md! font-semibold' }"
+            :ui="{
+              base: 'gap-3 rounded-4xl px-3 shadow-none! drop-shadow-none! fx-0!',
+              leadingIcon: 'scale-90! **:stroke-[11%]!',
+              label: 'text-md! font-semibold',
+            }"
             :label="accountState.label"
             @click="accountState.action">
             <template #trailing>

@@ -12,7 +12,7 @@ const store = pocketStore()
 const pocket = computed(() => store.getPocket(String(route.params.pocket_key)))
 
 const splash = computed(() =>
-  getSplashFromSkinKey(pocket.value?.skin, "uncentered")
+  getSplashFromSkinKey(pocket.value?.splash, "uncentered")
 )
 
 const el = useTemplateRef<HTMLElement>("el")

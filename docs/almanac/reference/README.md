@@ -10,3 +10,4 @@ Use this section for commands, binding names, route conventions, schema summarie
 
 Reference pages should avoid narrative history. Link to decisions or flow pages when readers need the reason behind a contract.
 
+- [Profile splash contract](profile-splash-contract.md)

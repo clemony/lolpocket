@@ -150,7 +150,7 @@ watch(
                   wrapper: 'w-full overflow-hidden'
                 }"
                 :avatar="{
-                  src: getSplashFromSkinKey(row.original?.skin, 'tile'),
+                  src: getSplashFromSkinKey(row.original?.splash, 'tile'),
                   ui: {
                     image: 'scale-180',
                     root: 'overflow-hidden shadow-sm drop-shadow-sm'

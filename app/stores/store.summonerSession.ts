@@ -20,8 +20,8 @@ export const sSession = defineStore("summonerSession", () => {
   })
 
   const splash = computed(() => {
-    if (account.value?.skin)
-      return getSplashFromSkinKey(account.value.skin, "uncentered")
+    if (account.value?.splash)
+      return getSplashFromSkinKey(account.value.splash, "uncentered")
   })
 
   return {

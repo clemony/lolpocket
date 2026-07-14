@@ -22,16 +22,16 @@ export async function resolveSummonerRoute(to: RouteLocationNormalized) {
     session.lastResolvedKey = key
     session.setSummoner(sum)
 
-    try {
-      await publicUsers().ensureByPuuid(sum.puuid)
-    } catch (err) {
-      console.warn(
-        "Public account lookup failed; continuing with summoner data",
-        err
-      )
-    }
-
     if (sum?.puuid) {
+      void publicUsers()
+        .ensureByPuuid(sum.puuid)
+        .catch((err) =>
+          console.warn(
+            "Public account lookup failed; continuing with summoner data",
+            err
+          )
+        )
+
       sMatches().loadFromDB()
       sData().getMastery()
       sData().getTimelines()

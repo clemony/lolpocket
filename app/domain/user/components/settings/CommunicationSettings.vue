@@ -21,47 +21,73 @@ const accountModels = useRefHistory(
 )
 
 const settingsModels = useRefHistory(
-  ref<Record<OptionKey<string>, OptionValue>>(safeObject(settings.value)),
+  ref<Partial<Settings>>(safeObject(settings.value)),
   { deep: true }
 )
 
-watch(
-  () => accountModels.history?.value,
-  (v) => {
-    console.log("💠 - watch - newVal:", v)
-  },
-  { deep: true }
-)
+const communicationSettingKeys = [
+  "ping_new_friend",
+  "ping_new_message",
+  "ping_new_pocket",
+  "ping_delete_pocket"
+] as const satisfies readonly (keyof Settings)[]
+
+const lastSavedSettings = ref("")
+
+function getSettingsPatch(): Partial<Settings> {
+  return Object.fromEntries(
+    communicationSettingKeys.map((key) => [
+      key,
+      settingsModels.source.value[key]
+    ])
+  ) as Partial<Settings>
+}
+
+function serializeSettingsPatch(settings: Partial<Settings>) {
+  return JSON.stringify(settings)
+}
 
 function updateAccount() {
   if (accountModels.history.value.at(0) !== accountModels.history.value.at(-1))
     accountUpdate(accountModels.last.value.snapshot, { silent: true })
 }
 
-function updateSettings() {
-  if (
-    settingsModels.history.value.at(0) !== settingsModels.history.value.at(-1)
+async function updateSettings() {
+  const patch = getSettingsPatch()
+  const serializedPatch = serializeSettingsPatch(patch)
+  if (serializedPatch === lastSavedSettings.value) return
+
+  let updatedSettings: Settings
+  try {
+    updatedSettings = await settingsUpdate(patch, { silent: true })
+  } catch {
+    return
+  }
+
+  lastSavedSettings.value = serializeSettingsPatch(
+    Object.fromEntries(
+      communicationSettingKeys.map((key) => [key, updatedSettings[key]])
+    ) as Partial<Settings>
   )
-    settingsUpdate(settingsModels.last.value.snapshot, { silent: true })
 }
 
 const debounceSettings = useDebounceFn(() => {
-  updateSettings()
+  void updateSettings()
 }, 10000)
 
 const debounceAccount = useDebounceFn(() => {
-  console.log("🥸 - OK:", user().account)
   updateAccount()
 }, 10000)
 
 onBeforeUnmount(() => {
-  updateSettings()
+  void updateSettings()
   updateAccount()
 })
 
 onMounted(() => {
   accountModels.source.value = safeObject(account.value)
   settingsModels.source.value = safeObject(settings.value)
+  lastSavedSettings.value = serializeSettingsPatch(getSettingsPatch())
 })
 
 const switchProps: SwitchProps = {
@@ -113,7 +139,9 @@ const switchProps: SwitchProps = {
               v-bind="switchProps"
               :key="asSwitch(item).label"
               v-model:model-value="
-                settingsModels[asSwitch(item).id as OptionKey<string>]
+                settingsModels.source.value[
+                  asSwitch(item).id as keyof Settings
+                ]
               "
               :description="item.description"
               :label="asSwitch(item).label"

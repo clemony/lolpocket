@@ -13,7 +13,7 @@ export default defineEventHandler(async (event): Promise<Account | null> => {
   const patch = Object.fromEntries(
     Object.entries({
       puuid: body.puuid,
-      skin: body.skin,
+      splash: body.splash,
       username: body.username,
       peer_messages: body.peer_messages,
       public_pockets: body.public_pockets,

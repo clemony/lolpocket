@@ -52,7 +52,7 @@ export function newRandomPocket(options?: {
     label: generateName(),
     ouuid: user().account?.uuid ?? "", // crypto.randomUUID(), //
     uuid: user().account?.uuid ?? "",
-    skin: generateSkinKey(),
+    splash: generateSkinKey(),
 
     //
     _champion: champion,

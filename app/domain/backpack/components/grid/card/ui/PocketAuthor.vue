@@ -23,7 +23,7 @@ const author = computed(() => {
   return {
     username: "nell",
     tag: "nell",
-    skin: computed(() => {
+    splash: computed(() => {
       const skinSets = Object.values(skinIndex)
       const a = skinSets[getRandomInt(skinSets.length)]
       if (!a?.length) return null
@@ -34,7 +34,7 @@ const author = computed(() => {
   } //publicUsers().cache.get(authorId)
 })
 const authorSplash = computed(() =>
-  getSplashFromSkinKey(author.value?.skin, "tile")
+  getSplashFromSkinKey(author.value?.splash, "tile")
 )
 
 const name = computed(() => {

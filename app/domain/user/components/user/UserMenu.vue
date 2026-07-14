@@ -16,7 +16,7 @@ const user = await useSupabaseUser()
 const isAdmin = computed(() => user?.value?.app_metadata?.user_role === "admin")
 const img = useImage()
 const splash = computed(() =>
-  img(getSplashFromSkinKey(props.author?.skin, "uncentered"))
+  img(getSplashFromSkinKey(props.author?.splash, "uncentered"))
 )
 const tag = ref(false)
 </script>

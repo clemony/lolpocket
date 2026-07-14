@@ -28,10 +28,10 @@ const themeAccent = useThemeAccentPreference()
       :icon="item.value === themeAccent ? 'i-tick' : item.icon ? item.icon : ''"
       :ui="{
         base: cn(
-          'aspect-square size-7.5! justify-center rounded-full! transition-transform duration-300 ease-spring hover:scale-110',
+          'aspect-square size-8.5! justify-center rounded-full! transition-transform duration-300 ease-spring hover:scale-110',
           item.ui?.base
         ),
-        leadingIcon: 'text-pc **:stroke-[12%]!',
+        leadingIcon: 'text-white/90 **:stroke-[11%]!',
       }"
       @click="item.onClick" />
 

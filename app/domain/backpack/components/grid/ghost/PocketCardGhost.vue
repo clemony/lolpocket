@@ -32,10 +32,10 @@ function championImage(type: SplashType) {
   return champion.value ? getSplash(String(champion.value), type) : undefined
 }
 const image = computed(() => {
-  if (!pocket.value?.skin && !champion?.value) return null
+  if (!pocket.value?.splash && !champion?.value) return null
   else {
-    return pocket.value?.skin
-      ? getSplashFromSkinKey(pocket.value?.skin, "centered")
+    return pocket.value?.splash
+      ? getSplashFromSkinKey(pocket.value?.splash, "centered")
       : championImage("centered")
   }
 })
@@ -126,7 +126,7 @@ const runes = computed(() => {
                 <UAvatar
                   v-if="
                     position === 'bot' &&
-                    [0, 11, 'all'].includes(pocket?._map ?? 0)
+                      [0, 11, 'all'].includes(pocket?._map ?? 0)
                   "
                   type="item"
                   size="lg"

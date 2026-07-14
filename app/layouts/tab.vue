@@ -24,7 +24,8 @@ const isSummonerRoute = computed(() =>
 )
 const pocketSplash = computed(() => {
   if (!pocket) return ""
-  if (pocket.skin) return getSplashFromSkinKey(pocket.skin, "uncentered")
+  if (pocket.splash)
+    return getSplashFromSkinKey(pocket.splash, "uncentered")
   if (pocket._champion) return getSplash(pocket._champion, "uncentered")
   return ""
 })

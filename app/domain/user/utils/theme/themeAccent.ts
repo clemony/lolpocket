@@ -35,22 +35,16 @@ export const themeAccentOptions: AccentItem[] = [
     champion: "Sona",
   },
   {
-    value: "flow",
-    label: "Flow",
-    description: "Wash them away.",
-    champion: "Nami",
+    value: "encore",
+    label: "Encore",
+    description: "Sit down and listen up!",
+    champion: "Seraphine",
   },
   {
     value: "whimsy",
     label: "Whimsy",
     description: "Yup, that tasted purple.",
     champion: "Lulu",
-  },
-  {
-    value: "encore",
-    label: "Encore",
-    description: "Sit down and listen up!",
-    champion: "Seraphine",
   },
   {
     value: "steel",
@@ -63,6 +57,12 @@ export const themeAccentOptions: AccentItem[] = [
     label: "Shadow",
     description: "Balance is a fool's master.",
     champion: "Zed",
+  },
+  {
+    value: "flow",
+    label: "Flow",
+    description: "Wash them away.",
+    champion: "Nami",
   },
   {
     value: "contaminate",

@@ -7,7 +7,7 @@ const { orientation } = defineProps<{
   orientation?: "vertical" | "horizontal"
 }>()
 
-const currentSkin = computed(() => user().account?.skin ?? null)
+const currentSkin = computed(() => user().account?.splash ?? null)
 const currentSplash = computed(() =>
   currentSkin.value ? getSplashFromSkinKey(currentSkin.value, "tile") : ""
 )
@@ -56,7 +56,7 @@ const splashSelect = overlay.create(LazySplashSelectPanel, {
 
 function handleSkin(e: string | null) {
   const account = user().account
-  if (account) account.skin = e
+  if (account) account.splash = e
 }
 
 async function openSplashSelect() {

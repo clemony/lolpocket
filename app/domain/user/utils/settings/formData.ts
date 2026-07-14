@@ -43,7 +43,7 @@ export async function saveProfile(
   try {
     await accountUpdate(
       {
-        skin: user().account?.skin ?? null,
+        splash: user().account?.splash ?? null,
         title: user().account?.title ?? null
       },
       { silent: true }

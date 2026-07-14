@@ -50,7 +50,7 @@ const mapPocket = (p: Pocket): SortablePocket => {
     button: computed(() => ({
       label: p.label,
       avatar: {
-        src: getSplashFromSkinKey(p.skin, "tile"),
+        src: getSplashFromSkinKey(p.splash, "tile"),
         size: "xs" as AvatarProps["size"]
       }
     })),

@@ -3,18 +3,29 @@ import {
   serializePublicUsersState
 } from "./publicUsers.cache"
 
+const PUBLIC_ACCOUNT_TTL = 10 * 60 * 1000
+const PUBLIC_ACCOUNT_MISS_TTL = 60 * 1000
+
 export const publicUsers = defineStore(
   "public-users",
   () => {
     const cache = ref(new Map<string, Account>())
     const byPuuid = ref(new Map<string, string>())
-    const misses = ref(new Set<string>())
+    const expiresAt = ref(new Map<string, number>())
+    const misses = ref(new Map<string, number>())
     const inflightByPuuid = new Map<string, Promise<Account | null>>()
     const inflightByUuid = new Map<string, Promise<Account | null>>()
 
     const setAccount = (acc: Account | null) => {
       if (!acc?.uuid) return
+
+      const previous = cache.value.get(acc.uuid)
+      if (previous?.puuid && previous.puuid !== acc.puuid) {
+        byPuuid.value.delete(previous.puuid)
+      }
+
       cache.value.set(acc.uuid, acc)
+      expiresAt.value.set(acc.uuid, Date.now() + PUBLIC_ACCOUNT_TTL)
       misses.value.delete(acc.uuid)
 
       if (acc.puuid) {
@@ -23,19 +34,47 @@ export const publicUsers = defineStore(
       }
     }
 
-    const getByUuid = (uuid: string) => cache.value.get(uuid) ?? null
+    const evictAccount = (uuid: string) => {
+      const account = cache.value.get(uuid)
+      cache.value.delete(uuid)
+      expiresAt.value.delete(uuid)
+
+      if (account?.puuid && byPuuid.value.get(account.puuid) === uuid) {
+        byPuuid.value.delete(account.puuid)
+      }
+    }
+
+    const getByUuid = (uuid: string) => {
+      const expires = expiresAt.value.get(uuid) ?? 0
+      if (expires <= Date.now()) {
+        evictAccount(uuid)
+        return null
+      }
+
+      return cache.value.get(uuid) ?? null
+    }
 
     const getByPuuid = (puuid: string) => {
       const uuid = byPuuid.value.get(puuid)
       return uuid ? getByUuid(uuid) : null
     }
 
+    const hasActiveMiss = (id: string) => {
+      const expires = misses.value.get(id) ?? 0
+      if (expires <= Date.now()) {
+        misses.value.delete(id)
+        return false
+      }
+
+      return true
+    }
+
     const markMiss = (id?: string | null) => {
-      if (id) misses.value.add(id)
+      if (id) misses.value.set(id, Date.now() + PUBLIC_ACCOUNT_MISS_TTL)
     }
 
     const ensureByUuid = async (uuid?: string | null) => {
-      if (!uuid || misses.value.has(uuid)) return null
+      if (!uuid || hasActiveMiss(uuid)) return null
 
       const existing = getByUuid(uuid)
       if (existing) return existing
@@ -58,7 +97,7 @@ export const publicUsers = defineStore(
     }
 
     const ensureByPuuid = async (puuid?: string | null) => {
-      if (!puuid || misses.value.has(puuid)) return null
+      if (!puuid || hasActiveMiss(puuid)) return null
 
       const existing = getByPuuid(puuid)
       if (existing) return existing
@@ -83,12 +122,14 @@ export const publicUsers = defineStore(
     const clearAll = () => {
       cache.value.clear()
       byPuuid.value.clear()
+      expiresAt.value.clear()
       misses.value.clear()
-      sessionStorage.removeItem("public-users")
+      if (import.meta.client) sessionStorage.removeItem("public-users")
     }
 
     return {
       byPuuid,
+      expiresAt,
       ensureByPuuid,
       ensureByUuid,
       getByPuuid,

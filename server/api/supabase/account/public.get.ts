@@ -6,11 +6,12 @@ const PUBLIC_ACCOUNT_SELECT = [
   "uuid",
   "puuid",
   "username",
+  "tag",
   "title",
   "created",
   "peer_messages",
   "public_pockets",
-  "skin",
+  "splash",
   "color",
   "updated"
 ].join(",")

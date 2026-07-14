@@ -12,10 +12,7 @@ export const useSignInOrOut = (close?: () => void) => {
   return {
     icon: online.value ? "i-lucide-log-out" : "i-lucide-log-in",
     label: online.value ? "Log out" : "Log in",
-    ui: {
-      base: "px-2 gap-3 shadow-none! drop-shadow-none! fx-0! rounded-4xl",
-      leadingIcon: "scale-90! **:stroke-[11%]!",
-    },
+
     async action() {
       if (close) close()
       if (online.value) {

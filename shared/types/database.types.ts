@@ -22,7 +22,8 @@ export type Database = {
           peer_messages: boolean
           public_pockets: string[] | null
           puuid: string | null
-          skin: string | null
+          splash: string | null
+          tag: string
           title: string | null
           updated: string | null
           username: string | null
@@ -35,7 +36,8 @@ export type Database = {
           peer_messages?: boolean
           public_pockets?: string[] | null
           puuid?: string | null
-          skin?: string | null
+          splash?: string | null
+          tag?: string
           title?: string | null
           updated?: string | null
           username?: string | null
@@ -48,7 +50,8 @@ export type Database = {
           peer_messages?: boolean
           public_pockets?: string[] | null
           puuid?: string | null
-          skin?: string | null
+          splash?: string | null
+          tag?: string
           title?: string | null
           updated?: string | null
           username?: string | null
@@ -285,6 +288,7 @@ export type Database = {
       inbox_messages: {
         Row: {
           archived_at: string | null
+          can_reply: boolean | null
           content: Json
           created_at: string
           deleted_at: string | null
@@ -298,6 +302,7 @@ export type Database = {
         }
         Insert: {
           archived_at?: string | null
+          can_reply?: boolean | null
           content?: Json
           created_at?: string
           deleted_at?: string | null
@@ -311,6 +316,7 @@ export type Database = {
         }
         Update: {
           archived_at?: string | null
+          can_reply?: boolean | null
           content?: Json
           created_at?: string
           deleted_at?: string | null
@@ -398,21 +404,21 @@ export type Database = {
           auth_uid: string
           created_at: string | null
           metadata: Json | null
-          role: string[]
+          role: string | null
           uuid: string
         }
         Insert: {
           auth_uid: string
           created_at?: string | null
           metadata?: Json | null
-          role?: string[]
+          role?: string | null
           uuid?: string
         }
         Update: {
           auth_uid?: string
           created_at?: string | null
           metadata?: Json | null
-          role?: string[]
+          role?: string | null
           uuid?: string
         }
         Relationships: []
@@ -428,17 +434,19 @@ export type Database = {
           comments: boolean
           created: string
           guide: Json | null
-          icon: string | null
           items: Json | null
           key: string
+          label: string | null
           likes: number | null
-          name: string | null
+          okey: string | null
+          order: number | null
           ouuid: string | null
+          position: string | null
+          positions: string[] | null
           public: boolean
-          roles: string[] | null
           runes: Json | null
-          skin: string | null
           spells: Json | null
+          splash: string | null
           tags: string[] | null
           updated: string
           uuid: string
@@ -453,17 +461,19 @@ export type Database = {
           comments?: boolean
           created?: string
           guide?: Json | null
-          icon?: string | null
           items?: Json | null
           key?: string
+          label?: string | null
           likes?: number | null
-          name?: string | null
+          okey?: string | null
+          order?: number | null
           ouuid?: string | null
+          position?: string | null
+          positions?: string[] | null
           public?: boolean
-          roles?: string[] | null
           runes?: Json | null
-          skin?: string | null
           spells?: Json | null
+          splash?: string | null
           tags?: string[] | null
           updated?: string
           uuid: string
@@ -478,17 +488,19 @@ export type Database = {
           comments?: boolean
           created?: string
           guide?: Json | null
-          icon?: string | null
           items?: Json | null
           key?: string
+          label?: string | null
           likes?: number | null
-          name?: string | null
+          okey?: string | null
+          order?: number | null
           ouuid?: string | null
+          position?: string | null
+          positions?: string[] | null
           public?: boolean
-          roles?: string[] | null
           runes?: Json | null
-          skin?: string | null
           spells?: Json | null
+          splash?: string | null
           tags?: string[] | null
           updated?: string
           uuid?: string
@@ -513,6 +525,8 @@ export type Database = {
       settings: {
         Row: {
           blocked_users: string[] | null
+          default_map: number | null
+          default_role: string | null
           fast_trash_message: boolean | null
           fast_trash_pocket: boolean | null
           favorite_pockets: string[] | null
@@ -520,8 +534,8 @@ export type Database = {
           feed_categories: boolean[] | null
           feed_spoiler_safeguard: boolean | null
           feed_spoilers: boolean | null
+          folders: Json | null
           locale: string | null
-          motion: boolean | null
           muted: boolean | null
           once: unknown
           ping_delete_pocket: boolean | null
@@ -530,6 +544,9 @@ export type Database = {
           "ping_new_message:": boolean | null
           ping_new_pocket: boolean
           ping_pocket_comment: boolean | null
+          pinned_pockets: string[] | null
+          pocket_tags: string[] | null
+          reduce_motion: boolean | null
           show_allies: boolean | null
           show_flex: boolean | null
           show_solo: boolean | null
@@ -539,6 +556,8 @@ export type Database = {
         }
         Insert: {
           blocked_users?: string[] | null
+          default_map?: number | null
+          default_role?: string | null
           fast_trash_message?: boolean | null
           fast_trash_pocket?: boolean | null
           favorite_pockets?: string[] | null
@@ -546,8 +565,8 @@ export type Database = {
           feed_categories?: boolean[] | null
           feed_spoiler_safeguard?: boolean | null
           feed_spoilers?: boolean | null
+          folders?: Json | null
           locale?: string | null
-          motion?: boolean | null
           muted?: boolean | null
           once?: unknown
           ping_delete_pocket?: boolean | null
@@ -556,6 +575,9 @@ export type Database = {
           "ping_new_message:"?: boolean | null
           ping_new_pocket?: boolean
           ping_pocket_comment?: boolean | null
+          pinned_pockets?: string[] | null
+          pocket_tags?: string[] | null
+          reduce_motion?: boolean | null
           show_allies?: boolean | null
           show_flex?: boolean | null
           show_solo?: boolean | null
@@ -565,6 +587,8 @@ export type Database = {
         }
         Update: {
           blocked_users?: string[] | null
+          default_map?: number | null
+          default_role?: string | null
           fast_trash_message?: boolean | null
           fast_trash_pocket?: boolean | null
           favorite_pockets?: string[] | null
@@ -572,8 +596,8 @@ export type Database = {
           feed_categories?: boolean[] | null
           feed_spoiler_safeguard?: boolean | null
           feed_spoilers?: boolean | null
+          folders?: Json | null
           locale?: string | null
-          motion?: boolean | null
           muted?: boolean | null
           once?: unknown
           ping_delete_pocket?: boolean | null
@@ -582,6 +606,9 @@ export type Database = {
           "ping_new_message:"?: boolean | null
           ping_new_pocket?: boolean
           ping_pocket_comment?: boolean | null
+          pinned_pockets?: string[] | null
+          pocket_tags?: string[] | null
+          reduce_motion?: boolean | null
           show_allies?: boolean | null
           show_flex?: boolean | null
           show_solo?: boolean | null
@@ -633,6 +660,7 @@ export type Database = {
           isSetofReturn: false
         }
       }
+      custom_access_token_hook: { Args: { event: Json }; Returns: Json }
       dismiss_inbox_notification: {
         Args: { p_notification_id: string }
         Returns: {
@@ -761,7 +789,8 @@ export type Database = {
           peer_messages: boolean
           public_pockets: string[] | null
           puuid: string | null
-          skin: string | null
+          splash: string | null
+          tag: string
           title: string | null
           updated: string | null
           username: string | null
@@ -800,6 +829,8 @@ export type Database = {
         Args: { p_patch: Json }
         Returns: {
           blocked_users: string[] | null
+          default_map: number | null
+          default_role: string | null
           fast_trash_message: boolean | null
           fast_trash_pocket: boolean | null
           favorite_pockets: string[] | null
@@ -807,8 +838,8 @@ export type Database = {
           feed_categories: boolean[] | null
           feed_spoiler_safeguard: boolean | null
           feed_spoilers: boolean | null
+          folders: Json | null
           locale: string | null
-          motion: boolean | null
           muted: boolean | null
           once: unknown
           ping_delete_pocket: boolean | null
@@ -817,6 +848,9 @@ export type Database = {
           "ping_new_message:": boolean | null
           ping_new_pocket: boolean
           ping_pocket_comment: boolean | null
+          pinned_pockets: string[] | null
+          pocket_tags: string[] | null
+          reduce_motion: boolean | null
           show_allies: boolean | null
           show_flex: boolean | null
           show_solo: boolean | null

@@ -77,5 +77,12 @@ export default defineEventHandler(async (event): Promise<Settings> => {
     throw createError({ statusCode: 500, statusMessage: error.message })
   }
 
+  if (!data || typeof data !== "object" || Array.isArray(data)) {
+    throw createError({
+      statusCode: 502,
+      statusMessage: "Invalid settings response",
+    })
+  }
+
   return data as Settings
 })

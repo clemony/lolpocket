@@ -55,5 +55,6 @@ Be operationally concise.
 - Direct Worker deploy flow: `pnpm deploy`
 - Dedicated NA match analytics Worker flow: `pnpm worker:config` regenerates config, `pnpm worker:build` dry-runs the Worker bundle, and `pnpm worker:deploy` deploys it
 - Before the first NA match analytics Worker deploy, run `pnpm worker:secret:riot` once to set `RIOT_API_KEY`
+- To disable the deployed NA match analytics cron trigger without deleting the Worker, run `MATCH_ANALYTICS_GATHER_CRON=off pnpm worker:deploy`
 - Verify generated deploy artifacts when deploy settings change: `dist/_worker.js/wrangler.json` for Pages builds and `.wrangler/match-analytics/wrangler.jsonc` for the dedicated cron Worker
 - For Pages-linked local D1 testing, `docs/DEPLOY.md` documents the `SUMMONER_CACHE_D1_REMOTE_DEV=1` and `MATCH_ANALYTICS_D1_REMOTE_DEV=1` workflows plus the current `SUMMONER_CACHE_DB` / `MATCH_ANALYTICS_DB` bindings.

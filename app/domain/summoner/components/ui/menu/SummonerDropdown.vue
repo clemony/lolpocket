@@ -6,7 +6,7 @@ const {
 
   class: className,
 
-  size
+  size,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   size?: ButtonProps["size"]
@@ -27,28 +27,34 @@ function handleBlock() {
 </script>
 
 <template>
-  <UPopover v-if="summoner" mode="hover" :content="{ sideOffset: 4 }">
-    <UButton
-      size="md"
-      color="base"
-      variant="ghost"
-      :ui="{
-        base: 'w-74 justify-between rounded-lg px-4 hover:bg-p0/70'
-      }">
-      <span class="inline-flex items-center gap-2 align-baseline">
-        <h1 class="truncate text-xl font-bold">
-          {{ summoner?.name }}
-        </h1>
+  <UPopover
+    v-if="summoner"
+    mode="hover"
+    :content="{ sideOffset: 6, align: 'start' }"
+    :ui="{ content: 'w-(--reka-popper-anchor-width) rounded-4xl' }">
+    <slot>
+      <UButton
+        size="md"
+        color="base"
+        variant="ghost"
+        :ui="{
+          base: 'w-74 justify-between overflow-hidden rounded-lg px-4 hover:bg-p0/70',
+        }">
+        <span class="inline-flex items-center gap-2 align-baseline">
+          <h1 class="truncate text-xl font-bold">
+            {{ summoner?.name }}
+          </h1>
 
-        <SummonerId type="tag" class="truncate font-medium" :summoner />
-      </span>
-      <LazySummonerIcon
-        class="ml-2 size-7! rounded-full shadow-sm drop-shadow-sm"
-        :summoner />
-    </UButton>
+          <SummonerId type="tag" class="font-medium" :summoner />
+        </span>
+        <LazySummonerIcon
+          class="ml-2 size-7! rounded-full shadow-sm drop-shadow-sm"
+          :summoner />
+      </UButton>
+    </slot>
     <template #content>
       <SummonerCard />
     </template>
-  </UPopover>>
+  </UPopover>
   <LazyBlockDialog v-if="summoner" :summoner="summoner" />
 </template>

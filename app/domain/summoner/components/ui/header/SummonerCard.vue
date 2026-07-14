@@ -21,7 +21,7 @@ console.log("🥸 - top:", top)
 </script>
 
 <template>
-  <div v-if="summoner" class="w-74! p-0!">
+  <div v-if="summoner" class="w-full overflow-hidden rounded-4xl p-0!">
     <div
       :style="{
         background: `url(${img(bg)})`,
@@ -29,60 +29,43 @@ console.log("🥸 - top:", top)
         backgroundPositionY: '15%',
         backgroundRepeat: 'no-repeat',
       }"
-      class="relative z-0 mb-10 h-22 w-full overflow-hidden rounded-t-lg"
-      :alt="`${summoner?.name}'s Splash`">
-      <UBadge
-        class="absolute top-2 right-2 gap-0 rounded-lg border-none bg-p0/50 pl-1.5 text-2xs! font-semibold! text-pc/70 backdrop-blur-lg"
-        size="sm">
-        <span class="relative grid size-3 place-items-center">
-          <Icon
-            class="absolute size-4.25! shrink-0 -translate-y-0.5 **:stroke-[3.8] **:text-pc/70!"
-            name="up" />
+      class="relative z-0 mb-10 h-22 w-full mask-b-to-90% contrast-110 grayscale"
+      :alt="`${summoner?.name}'s Splash`"></div>
 
-          <Icon
-            class="absolute size-3.5! shrink-0 translate-y-0.5 **:stroke-[2.8] **:text-pc/70!"
-            name="up" />
-        </span>
-        {{ summoner?.level }}
-      </UBadge>
-    </div>
+    <div class="absolute top-8 flex w-full flex-col items-center gap-0.5 px-2">
+      <HoverIcon
+        :tooltip="{ disabled: true }"
+        type="summoner"
+        size="6xl"
+        :summoner />
 
-    <div class="absolute top-8 flex h-24 w-full items-end px-2">
-      <div class="grid size-20 place-items-center rounded-full bg-p0 p-1.5">
-        <SummonerIcon class="size-full rounded-full" :summoner />
-      </div>
-
-      <div class="inline items-center gap-3 px-2 pb-2 align-baseline">
-        <span
-          class="font-display text-3xl! leading-6 font-black drop-shadow-2xs">
+      <div class="flex flex-col items-center gap-1">
+        <span class="font-display text-3xl! leading-none font-bold">
           {{ summoner?.name || "Summoner" }}
         </span>
-        <span v-if="summoner?.tag" class="ml-2 leading-6">
-          <Icon class="-mt-1 -mr-px inline size-3.5" name="hash" />
+        <span
+          v-if="summoner?.tag"
+          class="inline-flex items-center align-middle text-xs leading-none">
+          <Icon class="inline size-3" name="i-hash" />
           {{ summoner?.tag }}
         </span>
       </div>
     </div>
 
     <div class="w-full px-3 py-2">
-      <!--
       <div class="grid grid-cols-2 gap-2.5">
-        <RankCardMini title="Solo/Duo" :entry="summoner?.ranked?.solo" />
+        <RankCardMini title="Solo" :entry="summoner?.ranked?.solo" />
 
         <RankCardMini title="Flex" :entry="summoner?.ranked?.flex" />
-      </div> -->
-      <div class="grid w-full grid-cols-3 place-items-center">
-        <div
+      </div>
+      <div class="flex w-full items-center">
+        <HoverIcon
           v-for="(c, i) in top"
+          :id="c.championId"
           :key="i"
-          class="flex w-full flex-col items-center -space-y-2">
-          <Champion :id="c.championId" class="rounded-full" />
-          <span
-            class="badge border-none bg-neutral/80 px-1.5 badge-sm text-2xs font-semibold text-nc! badge-neutral">
-            <Icon class="size-3.5 **:text-nc!" name="lol:mastery" />
-            {{ c.level }}
-          </span>
-        </div>
+          type="champion"
+          size="xl"
+          class="" />
       </div>
     </div>
     <Separator class="bg-p3" />

@@ -3,10 +3,10 @@ import type { DropdownMenuItem } from "@nuxt/ui"
 export const colorModes: string[] = ["system", "light", "dim", "dark"]
 
 export const themeIconClass: Record<string, string> = {
-  dark: "scale-90 **:stroke-[2.3]",
-  dim: "scale-120 **:stroke-[1.8]",
-  light: "scale-120 **:stroke-[1.9] translate-x-px",
-  system: "scale-90 **:stroke-[2.6]",
+  dark: "scale-90 **:stroke-[10%]!",
+  dim: "scale-120 **:stroke-[7%]!",
+  light: "scale-120 **:stroke-[9%]! translate-x-px",
+  system: "scale-90 **:stroke-[10%]!",
 }
 
 export interface QuoteData {

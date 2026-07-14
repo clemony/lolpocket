@@ -13,9 +13,10 @@ export async function settingsUpdate(
       headers: useRequestHeaders(["cookie"]),
       method: "POST"
     })
-    console.log("🥸 - settingsUpdate - data:", data)
 
-    if (data && typeof data === "object") user().settings = data
+    const store = user()
+    if (store.settings) Object.assign(store.settings, data)
+    else store.settings = data
 
     if (!options.silent) {
       const toast = useToast()
@@ -29,7 +30,7 @@ export async function settingsUpdate(
         icon: "i-check-fill"
       })
     }
-    return data
+    return store.settings
   } catch (error) {
     console.error("Failed to update settings", error)
     sendErrorToast()

@@ -87,7 +87,7 @@ export const pocketSchema = v.object({
 
   //
   guide: v.nullable(v.array(v.string())),
-  skin: v.fallback(v.nullable(v.string()), null),
+  splash: v.fallback(v.nullable(v.string()), null),
 
   // main picks
   _champion: v.optional(v.string("champion key not a string")),

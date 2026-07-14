@@ -79,9 +79,21 @@ export function parseSkinKey(
   if (!skinKey) return null
 
   const [championKey, skinId, skinSlug, ...rest] = skinKey.split(":")
-  if (!championKey || !skinId || !skinSlug || rest.length) return null
+  if (!championKey || !skinId || rest.length) return null
 
-  return { championKey, skinId: normalizeSkinId(skinId), skinSlug }
+  const normalizedSkinId = normalizeSkinId(skinId)
+  const matchingSkin = skinIndex[championKey]?.find(
+    (skin) => normalizeSkinId(skin.id) === normalizedSkinId
+  )
+  const resolvedSlug =
+    skinSlug || (matchingSkin ? skinNameSlug(matchingSkin.name) : undefined)
+  if (!resolvedSlug) return null
+
+  return {
+    championKey,
+    skinId: normalizedSkinId,
+    skinSlug: resolvedSlug
+  }
 }
 
 export function getSkinFromKey(

@@ -291,7 +291,7 @@ const listRows = computed(() =>
     .map((p) => ({
       label: p.label,
       avatar: {
-        src: p.skin ? getSplash(p.skin, "tile") : undefined
+        src: p.splash ? getSplash(p.splash, "tile") : undefined
       },
       value: p.key,
       onSelect() {

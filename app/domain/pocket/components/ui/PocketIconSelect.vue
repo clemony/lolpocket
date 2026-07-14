@@ -20,8 +20,8 @@ const props = withDefaults(
 // todo uimodal
 const delegated = reactiveOmit(props, "class", "pocket")
 const src = computed(() =>
-  props.pocket.skin
-    ? getSplashFromSkinKey(props.pocket.skin, "tile")
+  props.pocket.splash
+    ? getSplashFromSkinKey(props.pocket.splash, "tile")
     : props.pocket._champion
       ? getSplash(props.pocket._champion, "tile")
       : ""

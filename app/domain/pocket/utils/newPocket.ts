@@ -25,7 +25,7 @@ export async function newPocket(options?: {
 
     // info
     guide: [],
-    skin: null,
+    splash: null,
 
     //
     _role: "all" as RoleKey,

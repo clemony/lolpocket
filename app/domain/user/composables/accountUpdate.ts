@@ -18,11 +18,13 @@ export async function accountUpdate(
 
     if (!data) return user().account
 
-    user().account = {
+    const updatedAccount = {
       ...(getEmptyAccount() as unknown as Account),
       ...(user().account ?? {}),
       ...data
     }
+    user().account = updatedAccount
+    publicUsers().setAccount(updatedAccount)
 
     if (!options.silent) {
       const toast = useToast()
@@ -35,7 +37,7 @@ export async function accountUpdate(
         icon: "i-check-fill"
       })
     }
-    return user().account
+    return updatedAccount
   } catch (error) {
     console.error("Failed to update account", error)
     sendErrorToast()

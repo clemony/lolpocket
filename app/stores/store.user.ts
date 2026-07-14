@@ -18,6 +18,21 @@ export const user = defineStore(
 
     const { cache } = storeToRefs(summonerStore())
     function map() {
+      if (account.value) {
+        const legacyAccount = account.value as Account & {
+          skin?: string | null
+        }
+        const { skin, ...currentAccount } = legacyAccount
+        const storedSplash = currentAccount.splash ?? skin ?? null
+
+        account.value = {
+          ...currentAccount,
+          splash: storedSplash
+            ? (skinKeyFromUrl(storedSplash) ?? storedSplash)
+            : null
+        }
+      }
+
       if (!settings.value?.folders) return
       settings.value.folders = settings.value?.folders.map((f) =>
         f.location === "backpack" || !f.location
@@ -283,6 +298,7 @@ export const user = defineStore(
   {
     persist: {
       key: "accountStore",
+      afterHydrate: (ctx) => ctx.store.map(),
       storage: piniaPluginPersistedstate.localStorage(),
     },
   }

@@ -18,7 +18,7 @@ export interface CommentData extends CommentSchema {
 export interface User {
   puuid: UUID
   username: string
-  skin: string | null
+  splash: string | null
 }
 
 export interface IndexGroup {
