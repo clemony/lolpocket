@@ -54,7 +54,11 @@ Be operationally concise.
 - Cloudflare Pages manual flow: `pnpm pages:build` then `pnpm pages:deploy`
 - Direct Worker deploy flow: `pnpm deploy`
 - Dedicated NA match analytics Worker flow: `pnpm worker:config` regenerates config, `pnpm worker:build` dry-runs the Worker bundle, and `pnpm worker:deploy` deploys it
+- Apply D1 migrations before relying on deploy bindings: `migrations/0002_riot_match_analytics.sql` for `MATCH_ANALYTICS_DB`, plus `migrations/0003_summoner_match_scan_state.sql` and `migrations/0004_summoner_match_gather_control.sql` for `SUMMONER_CACHE_DB`
 - Before the first NA match analytics Worker deploy, run `pnpm worker:secret:riot` once to set `RIOT_API_KEY`
+- `pnpm worker:config`, `pnpm worker:build`, `pnpm worker:deploy`, and `pnpm worker:secret:riot` load local `.env`; inline env vars still override for one-off runs
+- `pnpm worker:config` requires `SUMMONER_CACHE_D1_DATABASE_ID` and `MATCH_ANALYTICS_D1_DATABASE_ID`; optional Worker config env vars include the matching database names/preview IDs plus `MATCH_ANALYTICS_WORKER_NAME`, `MATCH_ANALYTICS_SEED_LIMIT`, `MATCH_ANALYTICS_MATCH_COUNT`, and `MATCH_ANALYTICS_GATHER_CRON`
 - To disable the deployed NA match analytics cron trigger without deleting the Worker, run `MATCH_ANALYTICS_GATHER_CRON=off pnpm worker:deploy`
 - Verify generated deploy artifacts when deploy settings change: `dist/_worker.js/wrangler.json` for Pages builds and `.wrangler/match-analytics/wrangler.jsonc` for the dedicated cron Worker
 - For Pages-linked local D1 testing, `docs/DEPLOY.md` documents the `SUMMONER_CACHE_D1_REMOTE_DEV=1` and `MATCH_ANALYTICS_D1_REMOTE_DEV=1` workflows plus the current `SUMMONER_CACHE_DB` / `MATCH_ANALYTICS_DB` bindings.
+- If Wrangler is logged into multiple Cloudflare accounts, set `CLOUDFLARE_ACCOUNT_ID` for remote D1 dev or match analytics Worker commands.

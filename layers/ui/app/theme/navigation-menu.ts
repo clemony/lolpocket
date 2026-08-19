@@ -16,7 +16,7 @@ export const navigationMenuTheme = defineUiTheme({
       "z-60 bg-p0/50! p-0! backdrop-blur-md! supports-[backdrop-filter]:bg-p0/35!",
     indicator:
       "absolute bottom-0 z-[2] flex h-2.5 w-(--reka-navigation-menu-indicator-size) translate-x-(--reka-navigation-menu-indicator-position) items-end justify-center overflow-hidden transition-[translate,width] duration-100 data-[state=hidden]:animate-[fade-out_75ms_ease-in] data-[state=hidden]:opacity-0 data-[state=visible]:animate-[fade-in_75ms_ease-out]",
-    item: "group relative flex h-8 items-center text-sm font-medium text-pc",
+    item: "group relative items-center text-sm font-medium text-pc",
     label:
       "flex h-8 w-full items-center gap-1.5 px-3.5 py-1.5 text-sm/5 font-semibold text-pc",
     link: "group relative flex h-8 w-full items-center gap-1.5 px-3.5 text-sm font-medium text-pc before:absolute before:z-[-1] before:rounded-lg focus:outline-none focus-visible:outline-none focus-visible:before:ring-2 focus-visible:before:ring-inset dark:focus-visible:outline-none",
@@ -24,14 +24,14 @@ export const navigationMenuTheme = defineUiTheme({
     linkLabelExternalIcon: "inline-block size-3 align-top text-n5",
     linkLeadingAvatar: "shrink-0 transition-opacity duration-200",
     linkLeadingAvatarSize: "xs",
-    linkLeadingIcon: "size-5 shrink-0 text-pc **:text-pc",
+    linkLeadingIcon: "size-4.5 shrink-0 text-pc **:text-pc",
     linkTrailing: "group ms-auto ml-0.5 inline-flex items-center gap-1.5",
     linkTrailingBadge: "shrink-0",
     linkTrailingBadgeSize: "sm",
     linkTrailingIcon:
       "size-4 shrink-0 transform transition-transform duration-150 group-data-[state=open]:scale-y-100",
     list: "isolate h-10 min-w-0 self-center",
-    root: "relative flex gap-1.5 [&>div]:min-w-0",
+    root: "relative gap-1.5 [&>div]:min-w-0",
     separator: "h-px bg-p3 px-2",
     viewport:
       "relative z-[1] h-(--reka-navigation-menu-viewport-height) w-(--reka-navigation-menu-viewport-width) origin-[top_center] overflow-hidden rounded-lg bg-p0/70 p-0 shadow-lg ring ring-default transition-[width,height,left] duration-200 data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",

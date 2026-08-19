@@ -11,10 +11,10 @@ export default defineAppConfig({
     colors: uiColors,
 
     icons: {
-      chevronDown: "i-lucide-chevrons-up-down",
+      chevronDown: "i-lucide-chevron-up",
       check: "i-lucide-check",
       external: "i-lucide-external-link",
-      loading: "i-mingcute-loading-fill"
-    }
-  }
+      loading: "i-mingcute-loading-fill",
+    },
+  },
 })

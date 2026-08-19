@@ -29,7 +29,7 @@ export const routeStore = defineStore(
           label: "Base",
           description:
             "A one stop shop for the latest League news and data highlights",
-          items: routes.nexus,
+          children: routes.nexus,
         },
         tools: {
           id: "tools",
@@ -37,21 +37,21 @@ export const routeStore = defineStore(
           label: "Tools",
           description:
             "Lolpocket utilities great to have handy. Share a pocket card or theorycraft.",
-          items: routes.tools,
+          children: routes.tools,
         },
         backpack: {
           id: "backpack",
           value: "Backpack-command",
           label: "Backpack",
           description: "Hold your pockets.",
-          items: routes.backpack,
+          children: routes.backpack,
         },
         library: {
           id: "library",
           value: "Library-command",
           label: "Library",
           description: "Browse and filter complete data.",
-          items: routes.library?.map((r) => routeItem(r)),
+          children: routes.library?.map((r) => routeItem(r)),
         },
         docs: {
           value: "docs-command",
@@ -60,7 +60,7 @@ export const routeStore = defineStore(
           label: "Docs",
           description: "Get help.",
           trailingIcon: "i-up",
-          items: routes.docs,
+          children: routes.docs,
         },
         settings: {
           value: "settings-command",
@@ -72,7 +72,7 @@ export const routeStore = defineStore(
           label: "Settings",
           description: "Other external tools worthy of your backpack.",
           trailingIcon: "i-up",
-          items: routes.settings,
+          children: routes.settings,
         },
         external: {
           value: "External-command",
@@ -81,7 +81,7 @@ export const routeStore = defineStore(
           description: "Other external tools worthy of your backpack.",
           trailingIcon: "i-up",
           icon: "i-external",
-          items: externalResources.map((r) => ({
+          children: externalResources.map((r) => ({
             ...r,
             id: r?.label,
             value: r?.label,

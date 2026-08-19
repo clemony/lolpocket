@@ -52,10 +52,9 @@ watch(
     :ui="{
       root: '[--sidebar-width-icon:4rem] [--sidebar-width:24rem]',
       inner:
-        'group/sidebar gap-8 divide-none rounded-6xl group-collapsed/sidebar:max-w-(--sidebar-width-icon)!',
-      container:
-        '@container h-screen max-h-screen px-4 py-1.5 group-collapsed/sidebar:px-3!',
-      body: 'relative max-h-max overflow-hidden rounded-6xl p-0!',
+        'group/sidebar gap-8 divide-none group-collapsed/sidebar:max-w-(--sidebar-width-icon)!',
+      container: '@container px-4 py-1.5 group-collapsed/sidebar:px-3!',
+      body: 'relative rounded-6xl p-0!',
       header: 'flex h-fit items-center p-0!',
       footer: 'px-0!',
       rail: 'mask-y-from-80% mask-y-to-100%',

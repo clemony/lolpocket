@@ -7,7 +7,7 @@ import type {
   ContextMenuItem,
   DropdownMenuItem,
   PageLink,
-  TabsItem
+  TabsItem,
 } from "@nuxt/ui"
 import type { HTMLAttributes } from "vue"
 
@@ -86,6 +86,7 @@ export interface RouteGroup<T> {
   keys?: string[]
   highlight?: boolean
   items?: T[]
+  children?: T[]
   action?: T
   ui?: Record<string, unknown>
 }
